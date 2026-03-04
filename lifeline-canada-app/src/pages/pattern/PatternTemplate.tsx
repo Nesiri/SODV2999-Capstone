@@ -1,21 +1,500 @@
-import { useParams, useNavigate, Link } from 'react-router-dom';
-import { patternData } from './patternData';
+import React from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { patternData } from "./patternData";
+
+type ResourceItem = {
+  title: string;
+  description?: string;
+  href?: string;
+  tags?: string[];
+  icon?: string;
+  meta?: string;
+  image?: string;
+  youtubeId?: string;
+  embed?: boolean;
+};
+
+type Page = {
+  title: string;
+  description: string;
+  category: string;
+  icon?: string;
+  color?: string;
+  heroImage?: string;
+  sections?: { heading: string; items: string[] }[];
+  resources?: {
+    heading: string;
+    items: ResourceItem[];
+  };
+};
+
+function splitGradient(grad?: string) {
+  const g = (grad || "from-violet-500 to-fuchsia-500")
+    .replace("bg-gradient-to-r", "")
+    .trim();
+  const from = (g.match(/from-[\w-]+/)?.[0] || "from-violet-500").replace(
+    "from-",
+    ""
+  );
+  const to = (g.match(/to-[\w-]+/)?.[0] || "to-fuchsia-500").replace("to-", "");
+  return { from, to };
+}
+
+function cx(...s: Array<string | false | undefined | null>) {
+  return s.filter(Boolean).join(" ");
+}
+
+function Card({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div
+      className={cx(
+        "rounded-2xl border border-slate-200/70 bg-white/80 shadow-[0_10px_30px_-15px_rgba(2,6,23,0.25)] backdrop-blur",
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
+}
+
+function Pill({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <span
+      className={cx(
+        "inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/70 px-3 py-1 text-xs font-medium text-slate-700",
+        className
+      )}
+    >
+      {children}
+    </span>
+  );
+}
+
+function IconBadge({
+  children,
+  from,
+  to,
+}: {
+  children: React.ReactNode;
+  from: string;
+  to: string;
+}) {
+  return (
+    <div
+      className={cx(
+        "grid h-10 w-10 place-items-center rounded-2xl text-white shadow-sm",
+        "bg-gradient-to-br",
+        `from-${from}`,
+        `to-${to}`
+      )}
+    >
+      {children}
+    </div>
+  );
+}
+
+function getYouTubeId(input?: string) {
+  if (!input) return undefined;
+  const s = input.trim();
+
+  if (/^[a-zA-Z0-9_-]{11}$/.test(s)) return s;
+
+  try {
+    const url = new URL(s);
+    if (url.hostname.includes("youtu.be")) {
+      const id = url.pathname.replace("/", "");
+      return /^[a-zA-Z0-9_-]{11}$/.test(id) ? id : undefined;
+    }
+    if (url.hostname.includes("youtube.com")) {
+      const v = url.searchParams.get("v");
+      if (v && /^[a-zA-Z0-9_-]{11}$/.test(v)) return v;
+
+      const path = url.pathname.split("/").filter(Boolean);
+      const embedIdx = path.indexOf("embed");
+      if (embedIdx >= 0 && path[embedIdx + 1]) {
+        const id = path[embedIdx + 1];
+        return /^[a-zA-Z0-9_-]{11}$/.test(id) ? id : undefined;
+      }
+    }
+  } catch {
+    return undefined;
+  }
+
+  const m = s.match(/(?:v=|\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+  return m?.[1];
+}
+
+function Hero({
+  page,
+  onBack,
+  from,
+  to,
+}: {
+  page: Page;
+  onBack: () => void;
+  from: string;
+  to: string;
+}) {
+  const [ok, setOk] = React.useState(true);
+
+  return (
+    <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_30px_60px_-40px_rgba(2,6,23,0.55)]">
+      <div className="absolute inset-0">
+        <div
+          className={cx(
+            "absolute -top-32 -left-32 h-72 w-72 rounded-full blur-3xl opacity-40",
+            "bg-gradient-to-br",
+            `from-${from}`,
+            `to-${to}`
+          )}
+        />
+        <div className="absolute -bottom-44 -right-40 h-80 w-80 rounded-full bg-gradient-to-br from-sky-400 to-emerald-400 blur-3xl opacity-25" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(255,255,255,0.8),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_30%,rgba(255,255,255,0.6),transparent_55%)]" />
+      </div>
+
+      <div className="relative grid gap-8 p-8 md:grid-cols-12 md:p-10">
+        <div className="md:col-span-7">
+          <div className="flex flex-wrap items-center gap-2">
+            <Pill>
+              <span className="opacity-80">{page.category}</span>
+            </Pill>
+            <Pill className="gap-2">
+              <span className="text-base">{page.icon || "✨"}</span>
+              <span className="opacity-80">Pattern Interrupt</span>
+            </Pill>
+          </div>
+
+          <h1 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-5xl">
+            {page.title}
+          </h1>
+
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg">
+            {page.description}
+          </p>
+
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <button
+              onClick={onBack}
+              className={cx(
+                "inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-95",
+                "bg-gradient-to-r",
+                `from-${from}`,
+                `to-${to}`
+              )}
+            >
+              ← Back
+            </button>
+
+            <a
+              href="#start"
+              className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white/80 px-4 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-white"
+            >
+              Start here ↓
+            </a>
+          </div>
+
+          <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div className="rounded-2xl border border-slate-200 bg-white/70 px-4 py-3">
+              <p className="text-xs font-medium text-slate-500">Time</p>
+              <p className="mt-1 text-sm font-semibold text-slate-900">
+                5–10 min
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white/70 px-4 py-3">
+              <p className="text-xs font-medium text-slate-500">Effort</p>
+              <p className="mt-1 text-sm font-semibold text-slate-900">Low</p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white/70 px-4 py-3">
+              <p className="text-xs font-medium text-slate-500">Best for</p>
+              <p className="mt-1 text-sm font-semibold text-slate-900">
+                Reset
+              </p>
+            </div>
+            <div className="rounded-2xl border border-slate-200 bg-white/70 px-4 py-3">
+              <p className="text-xs font-medium text-slate-500">Try</p>
+              <p className="mt-1 text-sm font-semibold text-slate-900">1 idea</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="md:col-span-5">
+          <div className="relative h-64 overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm md:h-full">
+            {page.heroImage && ok ? (
+              <img
+                src={page.heroImage}
+                alt={page.title}
+                className="h-full w-full object-cover"
+                loading="lazy"
+                onError={() => setOk(false)}
+              />
+            ) : (
+              <div className="grid h-full w-full place-items-center bg-gradient-to-br from-slate-50 to-slate-100 p-8">
+                <div className="text-center">
+                  <div
+                    className={cx(
+                      "mx-auto grid h-14 w-14 place-items-center rounded-2xl text-2xl text-white shadow-sm",
+                      "bg-gradient-to-br",
+                      `from-${from}`,
+                      `to-${to}`
+                    )}
+                  >
+                    {page.icon || "✨"}
+                  </div>
+                  <p className="mt-4 text-sm text-slate-600">
+                    Add a hero image to make this page feel more alive.
+                  </p>
+                  <p className="mt-1 text-xs text-slate-500">
+                    Set <code className="rounded bg-white px-1">heroImage</code>{" "}
+                    in patternData.
+                  </p>
+                </div>
+              </div>
+            )}
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Section({
+  index,
+  heading,
+  items,
+  from,
+  to,
+}: {
+  index: number;
+  heading: string;
+  items: string[];
+  from: string;
+  to: string;
+}) {
+  const isLong = items.length >= 12;
+
+  return (
+    <div className="scroll-mt-24" id={index === 0 ? "start" : undefined}>
+      <div className="flex items-start justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <IconBadge from={from} to={to}>
+            {index + 1}
+          </IconBadge>
+          <div>
+            <h2 className="text-xl font-semibold text-slate-900 md:text-2xl">
+              {heading}
+            </h2>
+            <div
+              className={cx(
+                "mt-2 h-1 w-28 rounded-full bg-gradient-to-r",
+                `from-${from}`,
+                `to-${to}`
+              )}
+            />
+          </div>
+        </div>
+      </div>
+
+      <Card className="mt-5 overflow-hidden">
+        {isLong ? (
+          <div className="p-6 md:p-7">
+            <ol className="list-decimal space-y-3 pl-5 md:columns-2 md:gap-12">
+              {items.map((t, i) => (
+                <li
+                  key={i}
+                  className="break-inside-avoid text-[15px] leading-relaxed text-slate-700"
+                >
+                  {t}
+                </li>
+              ))}
+            </ol>
+          </div>
+        ) : (
+          <div className="p-5 md:p-6">
+            <div className="grid gap-3">
+              {items.map((t, i) => (
+                <div
+                  key={i}
+                  className="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-[15px] leading-relaxed text-slate-700 shadow-sm"
+                >
+                  {t}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </Card>
+    </div>
+  );
+}
+
+function ResourceGrid({
+  heading,
+  items,
+  from,
+  to,
+}: {
+  heading: string;
+  items: ResourceItem[];
+  from: string;
+  to: string;
+}) {
+  if (!items || items.length === 0) return null;
+
+  return (
+    <div>
+      <div className="flex items-end justify-between gap-4">
+        <div>
+          <h2 className="text-xl font-semibold text-slate-900 md:text-2xl">
+            {heading}
+          </h2>
+          <p className="mt-2 text-sm text-slate-600">
+            Pick one video. Watch it fully. Stop when it ends.
+          </p>
+        </div>
+
+        <Pill className="hidden md:inline-flex">Professional layout ✨</Pill>
+      </div>
+
+      <div className="mt-6 grid gap-6 md:grid-cols-3">
+        {items.map((r, idx) => {
+          const youtubeId = r.youtubeId || getYouTubeId(r.href);
+          const canEmbed = Boolean(r.embed && youtubeId);
+
+          return (
+            <div key={idx} className="group block rounded-3xl transition">
+              <Card className="overflow-hidden transition group-hover:shadow-[0_25px_60px_-40px_rgba(2,6,23,0.65)]">
+                <div className="relative w-full overflow-hidden bg-slate-100">
+                  {canEmbed ? (
+                    <div className="aspect-video w-full">
+                      <iframe
+                        className="h-full w-full"
+                        src={`https://www.youtube.com/embed/${youtubeId}`}
+                        title={r.title}
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      />
+                    </div>
+                  ) : r.image ? (
+                    <img
+                      src={r.image}
+                      alt={r.title}
+                      className="h-40 w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+                      loading="lazy"
+                    />
+                  ) : youtubeId ? (
+                    <img
+                      src={`https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`}
+                      alt={r.title}
+                      className="h-40 w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="grid h-40 w-full place-items-center">
+                      <div
+                        className={cx(
+                          "grid h-12 w-12 place-items-center rounded-2xl text-white shadow-sm",
+                          "bg-gradient-to-br",
+                          `from-${from}`,
+                          `to-${to}`
+                        )}
+                      >
+                        {r.icon || "▶️"}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <div className="p-5">
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="text-base font-semibold text-slate-900">
+                      {r.title}
+                    </h3>
+
+                    {r.meta && (
+                      <span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">
+                        {r.meta}
+                      </span>
+                    )}
+                  </div>
+
+                  {r.description && (
+                    <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                      {r.description}
+                    </p>
+                  )}
+
+                  {r.tags && r.tags.length > 0 && (
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {r.tags.map((t, i) => (
+                        <span
+                          key={i}
+                          className="rounded-full border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-700"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  {r.href && (
+                    <div className="mt-4 flex items-center justify-between">
+                      <span className="text-sm text-slate-500">
+                        Opens in new tab
+                      </span>
+                      <a
+                        href={r.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={cx(
+                          "text-sm font-semibold bg-clip-text text-transparent",
+                          "bg-gradient-to-r",
+                          `from-${from}`,
+                          `to-${to}`
+                        )}
+                      >
+                        Open →
+                      </a>
+                    </div>
+                  )}
+                </div>
+              </Card>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 
 export default function PatternTemplate() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
 
-  const page = slug ? patternData[slug] : undefined;
+  const page = slug ? ((patternData as any)[slug] as Page) : undefined;
 
   if (!page) {
     return (
       <div className="mx-auto max-w-5xl px-6 py-20">
         <h1 className="text-3xl font-bold">Not Found</h1>
-        <p className="mt-4 text-slate-600">
-          No content available for this page.
-        </p>
+        <p className="mt-4 text-slate-600">No content available for this page.</p>
         <button
-          onClick={() => navigate('/pattern')}
+          onClick={() => navigate("/pattern")}
           className="mt-6 rounded-lg bg-slate-900 px-4 py-2 text-white"
         >
           Back to Pattern Interrupts
@@ -24,95 +503,266 @@ export default function PatternTemplate() {
     );
   }
 
-  const exploreMore = Object.entries(patternData)
+  const { from, to } = splitGradient(page.color);
+
+  const exploreMore = Object.entries(patternData as any)
     .filter(([key]) => key !== slug)
     .slice(0, 6);
 
+  const isComedy = slug === "comedy";
+  const isInspiring = slug === "inspiring-videos";
+
   return (
-    <div className="mx-auto max-w-6xl px-6 py-10">
-      
-      {/* Breadcrumb */}
-      <div className="mb-6 text-sm text-slate-500">
-        <Link to="/pattern" className="text-blue-600 hover:underline">
-          Pattern Interrupts
-        </Link>{' '}
-        / {page.title}
-      </div>
+    <div className="min-h-screen bg-[radial-gradient(circle_at_20%_0%,rgba(168,85,247,0.12),transparent_40%),radial-gradient(circle_at_80%_10%,rgba(59,130,246,0.10),transparent_45%),radial-gradient(circle_at_55%_100%,rgba(16,185,129,0.08),transparent_45%)]">
+      <div className="mx-auto max-w-6xl px-6 py-10">
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+          <div className="text-sm text-slate-500">
+            <Link to="/pattern" className="text-blue-600 hover:underline">
+              Pattern Interrupts
+            </Link>{" "}
+            <span className="text-slate-400">/</span>{" "}
+            <span className="text-slate-700">{page.title}</span>
+          </div>
 
-      {/* Hero */}
-      <div className="rounded-2xl bg-gradient-to-r from-slate-900 to-indigo-800 p-10 text-white shadow-lg">
-        <p className="text-xs uppercase tracking-widest text-slate-300">
-          Pattern Interrupts
-        </p>
-
-        <h1 className="mt-2 text-4xl font-bold">{page.title}</h1>
-
-        <p className="mt-4 max-w-2xl text-slate-200">
-          {page.description}
-        </p>
-
-        <button
-          onClick={() => navigate(-1)}
-          className="mt-6 rounded-lg bg-white px-4 py-2 text-sm font-medium text-slate-900 transition hover:opacity-90"
-        >
-          Back
-        </button>
-      </div>
-
-      {/* Content Sections */}
-      {page.sections && (
-        <div className="mt-10 space-y-10">
-          {page.sections.map((section, index) => (
-            <div key={index}>
-              <h2 className="text-xl font-semibold text-slate-900">
-                {section.heading}
-              </h2>
-
-              <div className="mt-4 space-y-3">
-                {section.items.map((item, i) => (
-                  <div
-                    key={i}
-                    className="rounded-xl bg-slate-100 p-4 text-slate-700 shadow-sm"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {/* Explore More */}
-      <div className="mt-16">
-        <div className="flex items-center justify-between">
-          <h3 className="text-lg font-semibold text-slate-900">
-            Explore More
-          </h3>
-          <Link
-            to="/pattern"
-            className="text-sm text-blue-600 hover:underline"
-          >
-            View all
-          </Link>
-        </div>
-
-        <div className="mt-6 grid gap-6 md:grid-cols-3">
-          {exploreMore.map(([key, value]) => (
-            <Link
-              key={key}
-              to={`/pattern/${key}`}
-              className="group rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md"
+          <div className="flex items-center gap-2">
+            <a
+              href="#extras"
+              className="rounded-xl border border-slate-200 bg-white/80 px-3 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-white"
             >
-              <div className="text-2xl">{value.icon}</div>
-              <h4 className="mt-3 font-semibold text-slate-900 group-hover:text-indigo-600">
-                {value.title}
-              </h4>
-              <p className="mt-1 text-sm text-slate-500">
-                {value.description}
-              </p>
-            </Link>
+              Helpful extras
+            </a>
+            <a
+              href="#more"
+              className="rounded-xl border border-slate-200 bg-white/80 px-3 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-white"
+            >
+              Explore more
+            </a>
+          </div>
+        </div>
+
+        <Hero page={page} onBack={() => navigate(-1)} from={from} to={to} />
+
+        <div className="mt-10 grid gap-10">
+          {page.sections?.map((s, i) => (
+            <Section
+              key={`${s.heading}-${i}`}
+              index={i}
+              heading={s.heading}
+              items={s.items}
+              from={from}
+              to={to}
+            />
           ))}
+
+          {isInspiring && (
+            <div className="mx-auto max-w-6xl">
+              <Card className="p-6 md:p-10">
+                <div className="grid items-start gap-10 md:grid-cols-2">
+                  <div>
+                    <h2 className="text-3xl font-semibold text-slate-900 mb-3">
+                      Inspiring Videos
+                    </h2>
+                    <div
+                      className={cx(
+                        "mb-6 h-1 w-24 rounded-full bg-gradient-to-r",
+                        `from-${from}`,
+                        `to-${to}`
+                      )}
+                    />
+                    <p className="text-slate-700 leading-7 text-[15.5px] mb-4">
+                      There is so much positive mental health content to choose
+                      from on YouTube. Searching for “Inspiration” or “Inspiring
+                      Videos” can bring up powerful stories, speeches, and
+                      moments that help you reset your mindset and feel more
+                      hopeful.
+                    </p>
+                    <p className="text-slate-700 leading-7 text-[15.5px]">
+                      Here are a few to get you started. Many of these videos
+                      will recommend more like this afterwards — if you get lost,
+                      come back here anytime and pick one more.
+                    </p>
+                  </div>
+
+                  <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-md">
+                    <img
+                      src={page.heroImage || "/images/pattern/inspiring-videos-hero.jpg"}
+                      alt="Inspiring videos"
+                      className="h-[260px] w-full object-cover md:h-[300px]"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </Card>
+            </div>
+          )}
+
+          {page.resources && (
+            <div id="extras" className="scroll-mt-24">
+              <ResourceGrid
+                heading={page.resources.heading}
+                items={page.resources.items}
+                from={from}
+                to={to}
+              />
+            </div>
+          )}
+
+          {isComedy && (
+            <div className="mt-16 max-w-5xl mx-auto space-y-10">
+              <Card className="p-6 md:p-10">
+                <div className="space-y-14">
+                  <section className="grid md:grid-cols-2 gap-10 items-start">
+                    <div>
+                      <h2 className="text-3xl font-semibold text-slate-900 mb-3">
+                        Humor and Mental Health
+                      </h2>
+                      <div
+                        className={cx(
+                          "mb-6 h-1 w-24 rounded-full bg-gradient-to-r",
+                          `from-${from}`,
+                          `to-${to}`
+                        )}
+                      />
+
+                      <p className="text-slate-700 leading-7 text-[15.5px] mb-4">
+                        Having a good sense of humor can provide both short-term
+                        and long-term benefits for mental health. Laughter triggers
+                        the release of endorphins — natural chemicals in the brain
+                        that promote feelings of happiness and relaxation. These
+                        positive responses can help reduce stress, lower tension,
+                        and improve overall mood.
+                      </p>
+
+                      <p className="text-slate-700 leading-7 text-[15.5px]">
+                        Over time, humor can also strengthen social relationships
+                        and improve emotional resilience. Sharing laughter with
+                        others builds connection and creates a sense of belonging.
+                        In difficult moments, humor can help people reframe
+                        challenges, making stressful situations feel more manageable
+                        and less overwhelming.
+                      </p>
+                    </div>
+
+                    <img
+                      src="/images/resources/comedy-share.jpg"
+                      alt="People laughing together"
+                      className="w-full h-[280px] object-cover rounded-2xl shadow-md border border-slate-200"
+                      loading="lazy"
+                    />
+                  </section>
+
+                  <section className="grid md:grid-cols-2 gap-10 items-start">
+                    <div>
+                      <h2 className="text-3xl font-semibold text-slate-900 mb-3">
+                        Tips to Improve Your Sense of Humor
+                      </h2>
+                      <div
+                        className={cx(
+                          "mb-6 h-1 w-24 rounded-full bg-gradient-to-r",
+                          `from-${from}`,
+                          `to-${to}`
+                        )}
+                      />
+
+                      <p className="text-slate-700 leading-7 text-[15.5px] mb-4">
+                        Developing a healthy sense of humor does not mean forcing
+                        jokes or constantly trying to be funny. It often starts
+                        with noticing the lighter moments in everyday life and
+                        allowing yourself to enjoy them. Humor can help shift
+                        perspective and make difficult days feel a little easier.
+                      </p>
+
+                      <ul className="list-disc pl-5 space-y-2 text-slate-700 leading-7 text-[15.5px]">
+                        <li>
+                          Watch short comedy clips or stand-up shows that make you
+                          laugh.
+                        </li>
+                        <li>Spend time with people who enjoy humor and positivity.</li>
+                        <li>Take breaks from stress by doing something lighthearted.</li>
+                        <li>Share funny moments or stories with friends and family.</li>
+                      </ul>
+                    </div>
+
+                    <img
+                      src="/images/resources/comedy-playlist.jpg"
+                      alt="Friends laughing"
+                      className="w-full h-[280px] object-cover rounded-2xl shadow-md border border-slate-200"
+                      loading="lazy"
+                    />
+                  </section>
+                </div>
+              </Card>
+            </div>
+          )}
+
+          <div id="more" className="scroll-mt-24">
+            <div className="flex items-center justify-between">
+              <h3 className="text-xl font-semibold text-slate-900 md:text-2xl">
+                Explore more
+              </h3>
+              <Link
+                to="/pattern"
+                className="text-sm text-blue-600 hover:underline"
+              >
+                View all
+              </Link>
+            </div>
+
+            <div className="mt-6 grid gap-6 md:grid-cols-3">
+              {exploreMore.map(([key, value]: any) => (
+                <Link key={key} to={`/pattern/${key}`} className="group block">
+                  <Card className="p-6 transition group-hover:shadow-[0_25px_60px_-40px_rgba(2,6,23,0.65)]">
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="text-2xl">{value.icon}</div>
+                      <span
+                        className={cx(
+                          "rounded-full px-3 py-1 text-xs font-semibold text-white",
+                          "bg-gradient-to-r",
+                          `from-${from}`,
+                          `to-${to}`
+                        )}
+                      >
+                        Open
+                      </span>
+                    </div>
+                    <h4 className="mt-4 text-base font-semibold text-slate-900">
+                      {value.title}
+                    </h4>
+                    <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                      {value.description}
+                    </p>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-2">
+            <Card className="p-6 md:p-7">
+              <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                <div>
+                  <h4 className="text-base font-semibold text-slate-900">
+                    Quick reminder
+                  </h4>
+                  <p className="mt-1 text-sm text-slate-600">
+                    Don’t try all 30. Pick 1–2, do them once, and repeat what works.
+                  </p>
+                </div>
+
+                <a
+                  href="#start"
+                  className={cx(
+                    "inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-95",
+                    "bg-gradient-to-r",
+                    `from-${from}`,
+                    `to-${to}`
+                  )}
+                >
+                  Back to top ↑
+                </a>
+              </div>
+            </Card>
+          </div>
         </div>
       </div>
     </div>
