@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 const CrisisSupportBanner: React.FC = () => {
   const [time, setTime] = useState(new Date());
@@ -7,15 +7,15 @@ const CrisisSupportBanner: React.FC = () => {
   // Live time update for the banner
   useEffect(() => {
     const timer = setInterval(() => setTime(new Date()), 1000);
-    
+
     // Check if mobile
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    
+
     return () => {
       clearInterval(timer);
       window.removeEventListener('resize', checkMobile);
@@ -119,7 +119,9 @@ const CrisisSupportBanner: React.FC = () => {
               <span className="relative inline-flex rounded-full h-2 w-2 md:h-3 md:w-3 bg-green-500"></span>
             </span>
             <span className="text-white/90 text-xs md:text-sm font-medium">
-              {isMobile ? "24/7 Support" : `Crisis Support Available 24/7 • ${time.toLocaleTimeString()}`}
+              {isMobile
+                ? '24/7 Support'
+                : `Crisis Support Available 24/7 • ${time.toLocaleTimeString()}`}
             </span>
           </div>
 
@@ -134,7 +136,7 @@ const CrisisSupportBanner: React.FC = () => {
 
           {/* Main heading - responsive text sizes */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight px-2">
-            In Crisis? Reach Out{" "}
+            In Crisis? Reach Out{' '}
             <span className="relative inline-block">
               <span className="relative z-10 bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent bg-clip-text">
                 Now
@@ -147,12 +149,16 @@ const CrisisSupportBanner: React.FC = () => {
           <div className="relative mb-6 md:mb-8">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-pink-600/30 blur-3xl"></div>
             <div className="relative flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4">
-              <span className="text-white/90 text-base md:text-xl lg:text-2xl">Call or Text</span>
-              <a 
-                href="tel:988" 
+              <span className="text-white/90 text-base md:text-xl lg:text-2xl">
+                Call or Text
+              </span>
+              <a
+                href="tel:988"
                 className="group relative inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-xl md:rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300"
               >
-                <span className="text-2xl md:text-3xl lg:text-5xl font-black text-white drop-shadow-lg">988</span>
+                <span className="text-2xl md:text-3xl lg:text-5xl font-black text-white drop-shadow-lg">
+                  988
+                </span>
                 <span className="absolute -top-2 -right-2 flex h-4 w-4 md:h-6 md:w-6">
                   <span className="crisis-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-4 w-4 md:h-6 md:w-6 bg-white"></span>
@@ -163,27 +169,44 @@ const CrisisSupportBanner: React.FC = () => {
           </div>
 
           <p className="text-white/80 text-sm md:text-base lg:text-xl mb-6 md:mb-8 max-w-2xl mx-auto font-light px-4">
-            Canada's new suicide prevention lifeline — free, confidential, available 24/7
+            Canada's new suicide prevention lifeline — free, confidential,
+            available 24/7
           </p>
 
           {/* Emergency 911 section - mobile optimized */}
           <div className="relative mb-8 md:mb-12 p-6 md:p-8 bg-white/5 crisis-backdrop-blur-md rounded-2xl md:rounded-3xl border border-white/10 max-w-3xl mx-4 md:mx-auto">
             <div className="absolute -top-2 md:-top-3 left-1/2 transform -translate-x-1/2 px-3 md:px-4 py-0.5 md:py-1 bg-gradient-to-r from-red-500 to-pink-500 rounded-full">
-              <span className="text-white text-[10px] md:text-xs font-bold uppercase tracking-wider">Emergency</span>
+              <span className="text-white text-[10px] md:text-xs font-bold uppercase tracking-wider">
+                Emergency
+              </span>
             </div>
-            
+
             <h3 className="text-base md:text-xl lg:text-2xl text-white/90 mb-3 md:mb-4 font-light">
               If you or someone you know is in immediate danger,
             </h3>
-            
-            <a 
-              href="tel:911" 
+
+            <a
+              href="tel:911"
               className="inline-flex items-center gap-3 md:gap-4 px-6 md:px-10 py-3 md:py-5 bg-gradient-to-r from-red-600 to-pink-600 rounded-xl md:rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 group"
             >
-              <span className="text-2xl md:text-4xl lg:text-5xl font-black text-white drop-shadow-lg">911</span>
-              <span className="text-white/90 text-sm md:text-base lg:text-lg font-medium">Call Immediately</span>
-              <svg className="w-4 h-4 md:w-6 md:h-6 text-white group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              <span className="text-2xl md:text-4xl lg:text-5xl font-black text-white drop-shadow-lg">
+                911
+              </span>
+              <span className="text-white/90 text-sm md:text-base lg:text-lg font-medium">
+                Call Immediately
+              </span>
+              <svg
+                className="w-4 h-4 md:w-6 md:h-6 text-white group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
               </svg>
             </a>
           </div>
@@ -193,16 +216,36 @@ const CrisisSupportBanner: React.FC = () => {
             <p className="text-white/70 text-xs md:text-sm lg:text-base">
               Need local crisis support? Browse our directory
             </p>
-            
+
             <button className="group relative px-6 md:px-8 py-3 md:py-4 bg-white/10 crisis-backdrop-blur-md rounded-xl md:rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 overflow-hidden w-full sm:w-auto">
               <span className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               <span className="relative flex items-center justify-center gap-2 text-blue-300 text-sm md:text-base font-semibold">
-                <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                <svg
+                  className="w-4 h-4 md:w-5 md:h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                  />
                 </svg>
                 <span className="truncate">SUPPORT SERVICES DIRECTORY</span>
-                <svg className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <svg
+                  className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </span>
             </button>
@@ -211,20 +254,50 @@ const CrisisSupportBanner: React.FC = () => {
           {/* Trust indicators - mobile optimized */}
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 mt-8 md:mt-12">
             <div className="flex items-center gap-1.5 md:gap-2 text-white/60 text-[10px] md:text-xs lg:text-sm">
-              <svg className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              <svg
+                className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
               </svg>
               <span>100% Confidential</span>
             </div>
             <div className="flex items-center gap-1.5 md:gap-2 text-white/60 text-[10px] md:text-xs lg:text-sm">
-              <svg className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <svg
+                className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
               </svg>
               <span>24/7 Availability</span>
             </div>
             <div className="flex items-center gap-1.5 md:gap-2 text-white/60 text-[10px] md:text-xs lg:text-sm">
-              <svg className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" />
+              <svg
+                className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"
+                />
               </svg>
               <span>Free Service</span>
             </div>

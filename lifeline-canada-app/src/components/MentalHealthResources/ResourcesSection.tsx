@@ -1,7 +1,15 @@
 // components/ResourcesSection.tsx
-import  { useEffect, useRef } from 'react';
-import { Phone, Heart, Shield, ArrowRight, AlertCircle, Sparkles, ExternalLink } from 'lucide-react';
-import resourceImg from "../../assets/Signposts-800x604.jpg";
+import { useEffect, useRef } from 'react';
+import {
+  Phone,
+  Heart,
+  Shield,
+  ArrowRight,
+  AlertCircle,
+  Sparkles,
+  ExternalLink,
+} from 'lucide-react';
+import resourceImg from '../../assets/Signposts-800x604.jpg';
 
 const ResourcesSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -39,12 +47,11 @@ const ResourcesSection = () => {
       <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-purple-300/20 to-pink-300/20 rounded-full blur-xl animate-float hidden md:block"></div>
       <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-br from-blue-300/20 to-cyan-300/20 rounded-full blur-xl animate-float-delayed hidden md:block"></div>
 
-      <div 
+      <div
         ref={sectionRef}
         className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10 md:pt-12 lg:pt-16 pb-12 sm:pb-16 md:pb-20 lg:pb-32 opacity-0 translate-y-10 transition-all duration-1000 ease-out"
       >
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-start">
-          
           {/* Left Content - Order changes on mobile */}
           <div className="space-y-4 sm:space-y-6 md:space-y-8 order-2 lg:order-1 w-full">
             {/* Animated Badge */}
@@ -68,7 +75,10 @@ const ResourcesSection = () => {
             {/* Content Cards - Adjusted padding for mobile */}
             <div className="space-y-4 sm:space-y-5 md:space-y-6">
               {/* Crisis Alert Card */}
-              <div className="group relative bg-white/70 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/50 hover:border-purple-200 animate-slideInUp" style={{ animationDelay: '0.1s' }}>
+              <div
+                className="group relative bg-white/70 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/50 hover:border-purple-200 animate-slideInUp"
+                style={{ animationDelay: '0.1s' }}
+              >
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600/5 to-pink-600/5 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative flex flex-col sm:flex-row items-start gap-3 sm:gap-4 md:gap-5">
                   <div className="flex-shrink-0">
@@ -93,10 +103,12 @@ const ResourcesSection = () => {
                     </p>
                     <p className="text-xs sm:text-sm md:text-base text-gray-600">
                       If you or someone you know is in immediate danger,{' '}
-                      <span className="font-bold text-red-600">call 911 right now</span>
+                      <span className="font-bold text-red-600">
+                        call 911 right now
+                      </span>
                     </p>
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       className="inline-flex items-center gap-1 sm:gap-2 mt-2 sm:mt-3 md:mt-4 text-sm sm:text-base text-purple-700 font-medium group-hover:gap-2 sm:group-hover:gap-3 transition-all"
                     >
                       Find local crisis support
@@ -107,7 +119,10 @@ const ResourcesSection = () => {
               </div>
 
               {/* Information Card */}
-              <div className="bg-white/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8 shadow-lg border border-gray-100 hover:border-purple-100 transition-all duration-300 animate-slideInUp" style={{ animationDelay: '0.2s' }}>
+              <div
+                className="bg-white/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8 shadow-lg border border-gray-100 hover:border-purple-100 transition-all duration-300 animate-slideInUp"
+                style={{ animationDelay: '0.2s' }}
+              >
                 <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
                   <div className="flex-shrink-0">
                     <div className="bg-gradient-to-br from-purple-500 to-pink-500 p-2 sm:p-2.5 md:p-3 rounded-lg sm:rounded-xl shadow-md">
@@ -116,16 +131,19 @@ const ResourcesSection = () => {
                   </div>
                   <div>
                     <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed">
-                      This site provides information about anxiety, depression and suicide. 
-                      Online resources alone are not a substitute for professional medical 
-                      advice, diagnosis or treatment.
+                      This site provides information about anxiety, depression
+                      and suicide. Online resources alone are not a substitute
+                      for professional medical advice, diagnosis or treatment.
                     </p>
                   </div>
                 </div>
               </div>
 
               {/* Important Note Card */}
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8 shadow-lg border border-purple-100 animate-slideInUp" style={{ animationDelay: '0.3s' }}>
+              <div
+                className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8 shadow-lg border border-purple-100 animate-slideInUp"
+                style={{ animationDelay: '0.3s' }}
+              >
                 <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
                   <div className="flex-shrink-0">
                     <div className="bg-gradient-to-br from-purple-600 to-pink-600 p-2 sm:p-2.5 md:p-3 rounded-lg sm:rounded-xl shadow-md">
@@ -133,24 +151,32 @@ const ResourcesSection = () => {
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-bold text-sm sm:text-base md:text-lg text-gray-900 mb-1 sm:mb-2">Important</h4>
+                    <h4 className="font-bold text-sm sm:text-base md:text-lg text-gray-900 mb-1 sm:mb-2">
+                      Important
+                    </h4>
                     <p className="text-xs sm:text-sm md:text-base text-gray-700">
-                      Seek the advice of an appropriately qualified healthcare professional 
-                      before making decisions about your circumstances.
+                      Seek the advice of an appropriately qualified healthcare
+                      professional before making decisions about your
+                      circumstances.
                     </p>
                   </div>
                 </div>
               </div>
 
               {/* Footer Note */}
-              <div className="pt-4 sm:pt-5 md:pt-6 animate-slideInUp" style={{ animationDelay: '0.4s' }}>
+              <div
+                className="pt-4 sm:pt-5 md:pt-6 animate-slideInUp"
+                style={{ animationDelay: '0.4s' }}
+              >
                 <div className="flex items-start gap-2 sm:gap-3 text-xs sm:text-sm text-gray-500 bg-gray-50/80 p-3 sm:p-4 md:p-5 rounded-lg sm:rounded-xl border border-gray-200">
                   <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0 mt-0.5 text-gray-400" />
                   <p className="italic leading-relaxed">
-                    The guides, tool kits and resources throughout this site represent a compilation 
-                    of curated suicide prevention resources from various sources around the world. 
-                    When clicking 3rd party links, you will be redirected to websites not affiliated 
-                    with, but supported by The LifeLine Canada Foundation.
+                    The guides, tool kits and resources throughout this site
+                    represent a compilation of curated suicide prevention
+                    resources from various sources around the world. When
+                    clicking 3rd party links, you will be redirected to websites
+                    not affiliated with, but supported by The LifeLine Canada
+                    Foundation.
                   </p>
                 </div>
               </div>
@@ -158,11 +184,14 @@ const ResourcesSection = () => {
           </div>
 
           {/* Right Image - Order changes on mobile */}
-          <div className="relative animate-slideInRight w-full order-1 lg:order-2 -mt-8 sm:-mt-6 md:-mt-4 lg:mt-0" style={{ animationDelay: '0.3s' }}>
+          <div
+            className="relative animate-slideInRight w-full order-1 lg:order-2 -mt-8 sm:-mt-6 md:-mt-4 lg:mt-0"
+            style={{ animationDelay: '0.3s' }}
+          >
             {/* Decorative elements - Hidden on mobile */}
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-3xl hidden md:block"></div>
             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl hidden md:block"></div>
-            
+
             {/* Main image container with 3D hover effect */}
             <div className="relative group perspective max-w-sm sm:max-w-md md:max-w-lg lg:max-w-none mx-auto">
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition-opacity duration-500"></div>
@@ -173,11 +202,12 @@ const ResourcesSection = () => {
                   alt="Mental health resource directions sign"
                   className="relative w-full rounded-2xl sm:rounded-3xl shadow-2xl border-2 sm:border-4 border-white/50 group-hover:border-white/80 transition-all duration-500"
                 />
-                
+
                 {/* Floating caption - Hidden on mobile */}
                 <div className="absolute -bottom-6 -right-6 bg-white/90 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl shadow-xl border border-purple-100 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 hidden md:block">
                   <p className="text-xs sm:text-sm font-medium text-gray-700">
-                    <span className="text-purple-600">✓</span> Verified Resources
+                    <span className="text-purple-600">✓</span> Verified
+                    Resources
                   </p>
                 </div>
               </div>
@@ -187,13 +217,21 @@ const ResourcesSection = () => {
             <div className="absolute -left-2 sm:-left-4 md:-left-6 lg:-left-8 bottom-8 sm:bottom-12 md:bottom-16 bg-white/90 backdrop-blur-sm px-3 sm:px-4 md:px-5 lg:px-6 py-2 sm:py-3 md:py-4 rounded-lg sm:rounded-xl md:rounded-2xl shadow-xl border border-purple-100">
               <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
                 <div className="text-center">
-                  <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">24/7</div>
-                  <div className="text-[10px] sm:text-xs text-gray-500">Support</div>
+                  <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                    24/7
+                  </div>
+                  <div className="text-[10px] sm:text-xs text-gray-500">
+                    Support
+                  </div>
                 </div>
                 <div className="w-px h-4 sm:h-5 md:h-6 lg:h-8 bg-gray-200"></div>
                 <div className="text-center">
-                  <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">988</div>
-                  <div className="text-[10px] sm:text-xs text-gray-500">Hotline</div>
+                  <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                    988
+                  </div>
+                  <div className="text-[10px] sm:text-xs text-gray-500">
+                    Hotline
+                  </div>
                 </div>
               </div>
             </div>

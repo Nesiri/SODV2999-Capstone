@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { type MediaCard } from "../../constants/patternInterruptCards";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { type MediaCard } from '../../constants/patternInterruptCards';
 
 interface MediaCardsSectionProps {
   cards: MediaCard[];
@@ -16,17 +16,42 @@ const PLAYABLE_CATEGORIES = ['videos', 'music', 'movies', 'entertainment'];
 const getCategoryIcon = (category: string = '') => {
   if (PLAYABLE_CATEGORIES.includes(category)) {
     return (
-      <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <svg
+        className="w-5 h-5 text-purple-600"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
       </svg>
     );
   }
-  
+
   // Default icon for non-playable categories
   return (
-    <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+    <svg
+      className="w-5 h-5 text-purple-600"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+      />
     </svg>
   );
 };
@@ -35,52 +60,72 @@ const getCategoryIcon = (category: string = '') => {
 const getHoverOverlayIcon = (category: string = '') => {
   if (PLAYABLE_CATEGORIES.includes(category)) {
     return (
-      <svg className="w-8 h-8 text-purple-600 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
+      <svg
+        className="w-8 h-8 text-purple-600 translate-x-0.5"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
         <path d="M8 5v14l11-7z" />
       </svg>
     );
   }
-  
+
   // Book/read icon for books and similar categories
   if (category === 'books') {
     return (
-      <svg className="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+      <svg
+        className="w-8 h-8 text-purple-600"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
         <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
       </svg>
     );
   }
-  
+
   // Image/gallery icon
   if (category === 'gallery') {
     return (
-      <svg className="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+      <svg
+        className="w-8 h-8 text-purple-600"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
         <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
       </svg>
     );
   }
-  
+
   // Heart icon for kindness, mood etc
   if (category === 'kindness' || category === 'mood') {
     return (
-      <svg className="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+      <svg
+        className="w-8 h-8 text-purple-600"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
         <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
       </svg>
     );
   }
-  
+
   // Default explore icon
   return (
-    <svg className="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+    <svg
+      className="w-8 h-8 text-purple-600"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+    >
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
     </svg>
   );
 };
 
-const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({ 
-  cards, 
-  title = "Pattern Interrupt Media Library",
-  description = "Explore our collection of uplifting content designed to help you break negative patterns and improve your mental well-being.",
-  basePath = "/pattern-interrupt"
+const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
+  cards,
+  title = 'Pattern Interrupt Media Library',
+  description = 'Explore our collection of uplifting content designed to help you break negative patterns and improve your mental well-being.',
+  basePath = '/pattern-interrupt',
 }) => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
@@ -100,12 +145,15 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
         <div className="absolute top-20 left-20 w-72 h-72 bg-purple-200/30 rounded-full blur-3xl animate-pulse-slow" />
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-pink-200/30 rounded-full blur-3xl animate-pulse-slower" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-200/20 rounded-full blur-3xl animate-pulse" />
-        
-        <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgb(147 51 234 / 0.1) 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
-        }} />
-        
+
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgb(147 51 234 / 0.1) 1px, transparent 0)`,
+            backgroundSize: '40px 40px',
+          }}
+        />
+
         {[...Array(20)].map((_, i) => (
           <div
             key={i}
@@ -128,7 +176,9 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
             </span>
-            <span className="text-sm font-medium text-purple-700">Break the Pattern</span>
+            <span className="text-sm font-medium text-purple-700">
+              Break the Pattern
+            </span>
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
@@ -147,8 +197,9 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {cards.map((card, index) => {
-            const cardPath = card.path || `${basePath}/${generateSlug(card.title)}`;
-            
+            const cardPath =
+              card.path || `${basePath}/${generateSlug(card.title)}`;
+
             return (
               <Link
                 key={card.id}
@@ -160,7 +211,8 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
                   animationDelay: `${index * 100}ms`,
                 }}
               >
-                <div className={`
+                <div
+                  className={`
                   relative w-full max-w-[320px] mx-auto bg-white/80 backdrop-blur-sm rounded-2xl 
                   shadow-xl hover:shadow-2xl 
                   transition-all duration-500 ease-out
@@ -168,7 +220,8 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
                   border border-white/50
                   overflow-hidden
                   ${hoveredId === card.id ? 'ring-4 ring-purple-500/30' : ''}
-                `}>
+                `}
+                >
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 via-pink-600/0 to-rose-600/0 group-hover:from-purple-600/10 group-hover:via-pink-600/10 group-hover:to-rose-600/10 transition-all duration-500" />
 
                   {/* Image Container */}
@@ -178,7 +231,11 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
                     )}
 
                     <img
-                      src={card.image.startsWith('/') ? card.image : `/${card.image}`}
+                      src={
+                        card.image.startsWith('/')
+                          ? card.image
+                          : `/${card.image}`
+                      }
                       alt={card.title}
                       className={`
                         absolute inset-0 w-full h-full object-cover
@@ -186,9 +243,12 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
                         group-hover:scale-110 group-hover:rotate-1
                         ${loadedImages.has(card.id) ? 'opacity-100' : 'opacity-0'}
                       `}
-                      onLoad={() => setLoadedImages(prev => new Set(prev).add(card.id))}
+                      onLoad={() =>
+                        setLoadedImages((prev) => new Set(prev).add(card.id))
+                      }
                       onError={(e) => {
-                        e.currentTarget.src = 'https://via.placeholder.com/400x300?text=💚+Mental+Wellness';
+                        e.currentTarget.src =
+                          'https://via.placeholder.com/400x300?text=💚+Mental+Wellness';
                       }}
                     />
 
@@ -219,7 +279,7 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
                     <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-300">
                       {card.title}
                     </h3>
-                    
+
                     <div className="w-12 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-3 transform origin-left group-hover:scale-x-150 transition-transform duration-300" />
 
                     <div className="flex items-center justify-between text-sm mt-auto">
@@ -228,8 +288,18 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
                       </span>
                       <span className="text-purple-600 font-semibold flex items-center gap-1">
                         Explore
-                        <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        <svg
+                          className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
                         </svg>
                       </span>
                     </div>
@@ -251,13 +321,23 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
         {/* View All Button */}
         <div className="text-center mt-16">
           <Link
-            to='/resources'
+            to="/resources"
             className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-2xl overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-2xl active:scale-95 no-underline"
           >
             <span className="relative z-10 flex items-center gap-2">
               View All Resources
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <svg
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
               </svg>
             </span>
             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />

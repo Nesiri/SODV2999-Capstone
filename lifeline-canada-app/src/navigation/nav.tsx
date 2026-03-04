@@ -298,10 +298,25 @@ export const dropdownNavLinks = [
     icon: React.createElement(Shield, { className: 'w-4 h-4' }),
   },
   {
-    name: 'Contact',
-    path: '/contact',
-    icon: '✉️',
-  },
+  name: 'Contact',
+  path: '/contact',
+  icon: '✉️',   // Phone contact
+},
+{
+  name: 'Email Support',
+  path: '/email-support',
+  icon: '✉️',   // Email
+},
+{
+  name: 'EN/FR',
+  path: '/english-french',
+  icon: '🌐',   // Language / Global
+},
+{
+  name: 'Site Map',
+  path: '/site-map',
+  icon: '🗺️',   // Map
+},
 ];
 
 /* =========================

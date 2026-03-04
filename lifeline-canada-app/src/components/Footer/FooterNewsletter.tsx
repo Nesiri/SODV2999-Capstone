@@ -71,50 +71,50 @@ export default function FooterNewsletter() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
             {/* Left Content */}
-           <div className="text-center lg:text-left">
-  {/* Header Card */}
-  <div className="flex flex-col items-center gap-2 mb-4 p-3 bg-gradient-to-r from-blue-800/20 to-indigo-800/20 rounded-xl backdrop-blur-sm border border-blue-700/30 w-full">
-    {/* Icon and Title Row */}
-    <div className="flex items-center gap-2 w-full justify-center">
-      <div className="p-2 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg shadow-lg shrink-0">
-        <Send className="text-white" size={18} />
-      </div>
-      <div className="flex items-center gap-1">
-        <h3 className="text-lg font-bold bg-gradient-to-r from-white via-blue-100 to-indigo-100 bg-clip-text text-transparent">
-          Stay Connected
-        </h3>
-        <Sparkles className="w-4 h-4 text-yellow-400 animate-spin-slow" />
-      </div>
-    </div>
-    
-    {/* Subtitle */}
-    <p className="text-blue-200 text-xs">
-      Join{' '}
-      <span className="font-semibold bg-gradient-to-r from-blue-400 via-purple-300 to-green-400 bg-clip-text text-transparent">
-        Our
-      </span>{' '}
-      Newsletter
-    </p>
-  </div>
+            <div className="text-center lg:text-left">
+              {/* Header Card */}
+              <div className="flex flex-col items-center gap-2 mb-4 p-3 bg-gradient-to-r from-blue-800/20 to-indigo-800/20 rounded-xl backdrop-blur-sm border border-blue-700/30 w-full">
+                {/* Icon and Title Row */}
+                <div className="flex items-center gap-2 w-full justify-center">
+                  <div className="p-2 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg shadow-lg shrink-0">
+                    <Send className="text-white" size={18} />
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <h3 className="text-lg font-bold bg-gradient-to-r from-white via-blue-100 to-indigo-100 bg-clip-text text-transparent">
+                      Stay Connected
+                    </h3>
+                    <Sparkles className="w-4 h-4 text-yellow-400 animate-spin-slow" />
+                  </div>
+                </div>
 
-  {/* Description */}
-  <p className="text-blue-200 text-xs sm:text-sm max-w-lg mx-auto lg:mx-0 leading-relaxed px-2">
-    Receive exclusive mental health resources, inspiring stories, and community updates directly to your inbox.
-    
-    {/* Features - Vertical on mobile, horizontal on larger screens */}
-    <span className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 mt-3">
-      <span className="text-[10px] sm:text-xs text-blue-300 bg-blue-900/30 px-3 py-1.5 rounded-full w-full sm:w-auto text-center">
-        🎁 Monthly giveaways
-      </span>
-      <span className="text-[10px] sm:text-xs text-blue-300 bg-blue-900/30 px-3 py-1.5 rounded-full w-full sm:w-auto text-center">
-        📚 Free e-books
-      </span>
-      <span className="text-[10px] sm:text-xs text-blue-300 bg-blue-900/30 px-3 py-1.5 rounded-full w-full sm:w-auto text-center">
-        🧠 Expert insights
-      </span>
-    </span>
-  </p>
-</div>
+                {/* Subtitle */}
+                <p className="text-blue-200 text-xs">
+                  Join{' '}
+                  <span className="font-semibold bg-gradient-to-r from-blue-400 via-purple-300 to-green-400 bg-clip-text text-transparent">
+                    Our
+                  </span>{' '}
+                  Newsletter
+                </p>
+              </div>
+
+              {/* Description */}
+              <p className="text-blue-200 text-xs sm:text-sm max-w-lg mx-auto lg:mx-0 leading-relaxed px-2">
+                Receive exclusive mental health resources, inspiring stories,
+                and community updates directly to your inbox.
+                {/* Features - Vertical on mobile, horizontal on larger screens */}
+                <span className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 mt-3">
+                  <span className="text-[10px] sm:text-xs text-blue-300 bg-blue-900/30 px-3 py-1.5 rounded-full w-full sm:w-auto text-center">
+                    🎁 Monthly giveaways
+                  </span>
+                  <span className="text-[10px] sm:text-xs text-blue-300 bg-blue-900/30 px-3 py-1.5 rounded-full w-full sm:w-auto text-center">
+                    📚 Free e-books
+                  </span>
+                  <span className="text-[10px] sm:text-xs text-blue-300 bg-blue-900/30 px-3 py-1.5 rounded-full w-full sm:w-auto text-center">
+                    🧠 Expert insights
+                  </span>
+                </span>
+              </p>
+            </div>
 
             {/* Email Form with Google reCAPTCHA */}
             <div className="w-full lg:w-auto">
@@ -217,7 +217,6 @@ export default function FooterNewsletter() {
                   </div>
                 )}
               </form>
-             
             </div>
           </div>
         </div>

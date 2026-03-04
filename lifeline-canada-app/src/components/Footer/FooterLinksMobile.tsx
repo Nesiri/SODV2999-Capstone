@@ -5,7 +5,7 @@ import { AlertCircle, Zap } from 'lucide-react';
 import {
   resourceCategories,
   patternInterrupts,
-  dropdownNavLinks
+  dropdownNavLinks,
 } from '../../navigation/nav';
 
 export default function FooterLinksMobile() {
@@ -17,13 +17,14 @@ export default function FooterLinksMobile() {
   return (
     <div className="max-w-7xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 justify-items-center">
-        
         {/* Column 1: Emergency & More */}
         <div className="w-full max-w-xs text-center md:text-left">
           <div className="space-y-8">
             {/* Emergency */}
             <div>
-              <h3 className="text-lg font-semibold text-white mb-3">Emergency</h3>
+              <h3 className="text-lg font-semibold text-white mb-3">
+                Emergency
+              </h3>
               <div className="flex justify-center md:justify-start">
                 <Link
                   to="/in-crisis"
@@ -81,7 +82,9 @@ export default function FooterLinksMobile() {
           <div className="space-y-5">
             {resourcesColumn1.map((category) => (
               <div key={category.category}>
-                <h4 className="text-sm font-medium text-gray-300 mb-2">{category.category}</h4>
+                <h4 className="text-sm font-medium text-gray-300 mb-2">
+                  {category.category}
+                </h4>
                 <ul className="space-y-1.5">
                   {category.links.map((link) => (
                     <li key={link.path}>
@@ -101,11 +104,15 @@ export default function FooterLinksMobile() {
 
         {/* Column 3: Resources (Part 2) */}
         <div className="hidden md:block w-full max-w-xs text-center md:text-left">
-          <h3 className="text-lg font-semibold text-white mb-4 opacity-0 pointer-events-none">Resources</h3>
+          <h3 className="text-lg font-semibold text-white mb-4 opacity-0 pointer-events-none">
+            Resources
+          </h3>
           <div className="space-y-5">
             {resourcesColumn2.map((category) => (
               <div key={category.category}>
-                <h4 className="text-sm font-medium text-gray-300 mb-2">{category.category}</h4>
+                <h4 className="text-sm font-medium text-gray-300 mb-2">
+                  {category.category}
+                </h4>
                 <ul className="space-y-1.5">
                   {category.links.map((link) => (
                     <li key={link.path}>
@@ -125,11 +132,15 @@ export default function FooterLinksMobile() {
 
         {/* Column 4: Pattern Interrupts */}
         <div className="w-full max-w-xs text-center md:text-left">
-          <h3 className="text-lg font-semibold text-white mb-4">Pattern Interrupts</h3>
+          <h3 className="text-lg font-semibold text-white mb-4">
+            Pattern Interrupts
+          </h3>
           <div className="space-y-5">
             {patternInterrupts.map((category) => (
               <div key={category.category}>
-                <h4 className="text-sm font-medium text-gray-300 mb-2">{category.category}</h4>
+                <h4 className="text-sm font-medium text-gray-300 mb-2">
+                  {category.category}
+                </h4>
                 <ul className="space-y-1.5">
                   {category.links.map((link) => (
                     <li key={link.path}>

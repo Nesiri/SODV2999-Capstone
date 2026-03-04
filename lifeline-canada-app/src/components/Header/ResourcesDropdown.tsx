@@ -20,7 +20,7 @@ interface CategoryGroup {
 interface ResourcesDropdownProps {
   resourceLinks: ResourceLink[];
   triggerText: string;
-  triggerPath: string;  // New prop
+  triggerPath: string; // New prop
   emergency?: boolean;
   icon?: React.ReactNode;
   className?: string;
@@ -37,7 +37,7 @@ export default function ResourcesDropdown({
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
-    const navigate = useNavigate();  // Add useNavigate hook
+  const navigate = useNavigate(); // Add useNavigate hook
 
   // Group links by category
   const groupedByCategory: CategoryGroup[] = resourceLinks.reduce(
@@ -66,14 +66,14 @@ export default function ResourcesDropdown({
     }
   };
 
-    const handleButtonClick = () => {
+  const handleButtonClick = () => {
     // If dropdown is open, close it and navigate
     if (isOpen) {
       setIsOpen(false);
       setActiveCategory(null);
     }
     // Navigate to triggerPath
-   // alert(`Navigating to ${triggerPath}`); // Debug alert
+    // alert(`Navigating to ${triggerPath}`); // Debug alert
     navigate(triggerPath);
   };
 
@@ -94,7 +94,7 @@ export default function ResourcesDropdown({
             setActiveCategory(groupedByCategory[0]?.category || null);
           }
         }}
-        onClick={handleButtonClick}  // Updated click handler
+        onClick={handleButtonClick} // Updated click handler
         className={`
           relative flex items-center px-4 py-2 font-medium 
           transition-colors duration-200 focus:outline-none

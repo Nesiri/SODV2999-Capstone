@@ -5,7 +5,7 @@ import { AlertCircle, Zap } from 'lucide-react';
 import {
   resourceCategories,
   patternInterrupts,
-  dropdownNavLinks
+  dropdownNavLinks,
 } from '../../navigation/nav';
 
 export default function FooterLinksDesktop() {
@@ -75,7 +75,9 @@ export default function FooterLinksDesktop() {
         <div className="flex flex-col space-y-4">
           {resourcesColumn1.map((category) => (
             <div key={category.category} className="flex flex-col">
-              <span className="text-gray-300 font-medium mb-1">{category.category}</span>
+              <span className="text-gray-300 font-medium mb-1">
+                {category.category}
+              </span>
               <div className="ml-2 flex flex-col space-y-1">
                 {category.links.map((link) => (
                   <Link
@@ -94,11 +96,15 @@ export default function FooterLinksDesktop() {
 
       {/* Third Column - Resources Part 2 */}
       <div className="flex flex-col">
-        <h3 className="text-lg font-bold text-white mb-4 opacity-0 pointer-events-none">Resources</h3>
+        <h3 className="text-lg font-bold text-white mb-4 opacity-0 pointer-events-none">
+          Resources
+        </h3>
         <div className="flex flex-col space-y-4">
           {resourcesColumn2.map((category) => (
             <div key={category.category} className="flex flex-col">
-              <span className="text-gray-300 font-medium mb-1">{category.category}</span>
+              <span className="text-gray-300 font-medium mb-1">
+                {category.category}
+              </span>
               <div className="ml-2 flex flex-col space-y-1">
                 {category.links.map((link) => (
                   <Link
@@ -117,11 +123,15 @@ export default function FooterLinksDesktop() {
 
       {/* Fourth Column - Pattern Interrupts */}
       <div className="flex flex-col">
-        <h3 className="text-lg font-bold text-white mb-4">Pattern Interrupts</h3>
+        <h3 className="text-lg font-bold text-white mb-4">
+          Pattern Interrupts
+        </h3>
         <div className="flex flex-col space-y-4">
           {patternInterrupts.map((category) => (
             <div key={category.category} className="flex flex-col">
-              <span className="text-gray-300 font-medium mb-1">{category.category}</span>
+              <span className="text-gray-300 font-medium mb-1">
+                {category.category}
+              </span>
               <div className="ml-2 flex flex-col space-y-1">
                 {category.links.map((link) => (
                   <Link

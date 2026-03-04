@@ -66,26 +66,34 @@ export default function MoreDropdown({
             aria-hidden="true"
           />
 
-          {/* Dropdown menu */}
-          <div
-            className="absolute right-0 mt-2 w-56 bg-gradient-to-br from-white via-gray-500/30 to-white shadow-xl border border-gray-200 z-50 py-2 animate-in slide-in-from-top-5 fade-in duration-200"
-            role="menu"
-            aria-orientation="vertical"
-            aria-labelledby="more-menu-button"
-          >
-            {dropdownLinks.map((link) => (
+          {/* Dropdown menu - Layer 1: Background */}
+          <div className="absolute right-0 mt-2 w-56 z-50">
+            {/* Layer 1: Base background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-pink-200 via-gray-500/30 to-white rounded-lg shadow-xl border border-gray-200" />
+
+            {/* Layer 2: Content container with solid background to block transparency */}
+            <div className="relative bg-gradient-to-br from-pink-100 via-gray-100 to-white  backdrop-blur-sm rounded-lg overflow-hidden animate-in slide-in-from-top-5 fade-in duration-200">
               <div
-                key={link.path}
-                className="px-4 py-2 hover:bg-gray-50 transition-colors duration-150"
-                role="menuitem"
+                className="py-1"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="more-menu-button"
               >
-                <NavLink
-                  link={link}
-                  onClick={handleLinkClick}
-                  className="block text-gray-700 hover:text-blue-600 transition-colors duration-150"
-                />
+                {dropdownLinks.map((link) => (
+                  <div
+                    key={link.path}
+                    className="px-4 py-2 hover:bg-gray-50 transition-colors duration-150 cursor-pointer"
+                    role="menuitem"
+                  >
+                    <NavLink
+                      link={link}
+                      onClick={handleLinkClick}
+                      className="block text-gray-700 hover:text-blue-600 transition-colors duration-150"
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </>
       )}

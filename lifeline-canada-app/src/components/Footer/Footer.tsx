@@ -1,4 +1,3 @@
-
 import FooterNewsletter from './FooterNewsletter';
 import FooterContactInfo from './FooterContactInfo';
 import FooterLinksDesktop from './FooterLinksDesktop';
@@ -7,8 +6,6 @@ import FooterBottomBar from './FooterBottomBar';
 import FooterLogo from './FooterLogo';
 
 export default function Footer() {
-
-
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-950 to-blue-950 text-white overflow-hidden">
       {/* Newsletter Section */}
@@ -35,9 +32,7 @@ export default function Footer() {
 
           {/* Mobile Links */}
           <div className="lg:hidden">
-            <FooterLinksMobile
-            
-            />
+            <FooterLinksMobile />
           </div>
         </div>
       </div>

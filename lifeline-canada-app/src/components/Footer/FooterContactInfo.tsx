@@ -44,7 +44,9 @@ function ContactInfo({
           {icon}
         </div>
         <div>
-          <h4 className="text-sm sm:text-base font-semibold text-blue-100">{title}</h4>
+          <h4 className="text-sm sm:text-base font-semibold text-blue-100">
+            {title}
+          </h4>
           {emergency && (
             <span className="text-xs bg-red-500/20 text-red-300 px-2 py-0.5 sm:py-1 rounded-full">
               Emergency
@@ -52,15 +54,15 @@ function ContactInfo({
           )}
         </div>
       </div>
-      
+
       <div className="relative">
-        <p 
+        <p
           className={`text-lg sm:text-xl font-bold text-white mb-1 group-hover:text-blue-100 transition-colors break-words ${isEmail ? 'cursor-pointer hover:underline' : ''}`}
           onClick={isEmail ? handleEmailClick : undefined}
         >
           {value}
         </p>
-        
+
         {isEmail && (
           <span
             onClick={handleCopyClick}
@@ -74,14 +76,14 @@ function ContactInfo({
           </span>
         )}
       </div>
-      
+
       {/* Copy success message */}
       {showCopySuccess && (
         <div className="text-xs text-green-400 animate-in fade-in mt-1">
           Email copied to clipboard!
         </div>
       )}
-      
+
       <p className="text-xs sm:text-sm text-blue-300">{subtitle}</p>
     </div>
   );
@@ -91,10 +93,10 @@ export default function FooterContactInfo() {
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const handleCopyEmail = () => {
-    const email = "support@thelifelinecanada.org";
+    const email = 'support@thelifelinecanada.org';
     navigator.clipboard.writeText(email);
     setCopiedEmail(true);
-    
+
     // Reset after 2 seconds
     setTimeout(() => {
       setCopiedEmail(false);

@@ -1,9 +1,9 @@
-import AboutUs from "../components/Home/AboutUs";
+import AboutUs from '../components/Home/AboutUs';
 
 function AboutPage() {
   return (
     <>
-    <AboutUs />
+      <AboutUs />
     </>
   );
 }
