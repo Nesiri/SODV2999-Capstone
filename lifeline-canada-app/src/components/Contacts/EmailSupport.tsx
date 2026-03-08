@@ -1,6 +1,6 @@
-import React from "react";
-import { Heart, ExternalLink } from "lucide-react";
-import EmailImage from "../../assets/Email.jpg"
+import React from 'react';
+import { Heart, ExternalLink } from 'lucide-react';
+import EmailImage from '../../assets/Email.jpg';
 const EmailSupport: React.FC = () => {
   return (
     <section className="relative w-full bg-gradient-to-br from-white via-purple-50 to-pink-50 py-24 px-6 overflow-hidden">
@@ -23,7 +23,6 @@ const EmailSupport: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
           {/* LEFT CONTENT */}
           <div className="space-y-8 animate-slideInLeft">
             <h1 className="text-5xl md:text-6xl font-serif font-bold">
@@ -39,18 +38,22 @@ const EmailSupport: React.FC = () => {
 
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 leading-relaxed">
-                <span className="font-semibold text-purple-700">The LifeLine Canada Foundation (TLC)</span> is a registered non-profit
-                committed to the prevention of suicide and positive mental health
-                in Canada and Worldwide and has made work in this area a top
-                priority. We envision a country where suicide is a rare event,
-                where people are nurtured and supported, where individuals and
-                families are aware of the risk factors for suicide and actively
-                seek help from accessible, effective community resources.
+                <span className="font-semibold text-purple-700">
+                  The LifeLine Canada Foundation (TLC)
+                </span>{' '}
+                is a registered non-profit committed to the prevention of
+                suicide and positive mental health in Canada and Worldwide and
+                has made work in this area a top priority. We envision a country
+                where suicide is a rare event, where people are nurtured and
+                supported, where individuals and families are aware of the risk
+                factors for suicide and actively seek help from accessible,
+                effective community resources.
               </p>
 
               <div className="bg-purple-50/50 p-6 rounded-2xl border border-purple-100 my-8">
                 <p className="text-gray-700 mb-2 font-medium">
-                  For complete details of TLC's Companion Paws program and process see
+                  For complete details of TLC's Companion Paws program and
+                  process see
                 </p>
                 <a
                   href="https://companionpaws.ca"
@@ -65,7 +68,9 @@ const EmailSupport: React.FC = () => {
 
               <div className="bg-pink-50/50 p-6 rounded-2xl border border-pink-100">
                 <p className="text-gray-700">
-                  <span className="italic text-pink-600">Non-crisis</span> questions and comments or to contact The LifeLine Canada Foundation about collaborating please{' '}
+                  <span className="italic text-pink-600">Non-crisis</span>{' '}
+                  questions and comments or to contact The LifeLine Canada
+                  Foundation about collaborating please{' '}
                   <a
                     href="/contact"
                     className="inline-flex items-center gap-1 text-purple-700 hover:text-purple-900 font-semibold underline decoration-2 decoration-purple-300 hover:decoration-purple-500 transition-all"
@@ -83,21 +88,20 @@ const EmailSupport: React.FC = () => {
             <div className="relative group">
               {/* Background glow effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-[2rem] blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-              
+
               {/* Main icon container */}
               <div className="relative bg-white p-12 rounded-[2rem] shadow-2xl border border-white/50 backdrop-blur-sm transform group-hover:scale-105 transition-all duration-500 group-hover:rotate-2">
-               <img src={EmailImage}/>
+                <img src={EmailImage} />
                 {/* Decorative elements */}
                 <div className="absolute -top-4 -right-4 w-20 h-20 bg-purple-100 rounded-full -z-10 group-hover:scale-110 transition-transform duration-500"></div>
                 <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-pink-100 rounded-full -z-10 group-hover:scale-110 transition-transform duration-500 delay-100"></div>
-                
+
                 {/* Small floating hearts */}
                 <Heart className="absolute -top-2 -right-2 w-6 h-6 text-pink-300 fill-pink-300 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:translate-y-[-5px]" />
                 <Heart className="absolute bottom-0 -left-6 w-4 h-4 text-purple-300 fill-purple-300 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200 transform group-hover:translate-x-[5px]" />
               </div>
             </div>
           </div>
-
         </div>
 
         {/* Bottom wave decoration */}

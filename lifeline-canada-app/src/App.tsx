@@ -29,12 +29,21 @@ export default function App() {
           <Route path="/in-crisis" element={<CrisisSupportPage />} />
           <Route path="/get-involved" element={<VolunteerPage />} />
           <Route path="/contribute" element={<ContributionPage />} />
-        
-         <Route path="/contact" element={<ContactPage mode="contact" />} />
-         <Route path="/email-support" element={<ContactPage mode="email-support" />} />
-         <Route path="/site-map" element={<SiteMapPage/>} />
-           <Route path="/canadian-crisis-centres" element={<CanadaCrisisCenterPage/>} />
-           <Route path ="/british-columbia-crisis-centres" element={<BCCrisisCenterPage/>}/>
+
+          <Route path="/contact" element={<ContactPage mode="contact" />} />
+          <Route
+            path="/email-support"
+            element={<ContactPage mode="email-support" />}
+          />
+          <Route path="/site-map" element={<SiteMapPage />} />
+          <Route
+            path="/canadian-crisis-centres"
+            element={<CanadaCrisisCenterPage />}
+          />
+          <Route
+            path="/british-columbia-crisis-centres"
+            element={<BCCrisisCenterPage />}
+          />
         </Route>
       </Routes>
     </>

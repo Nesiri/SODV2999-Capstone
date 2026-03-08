@@ -6,7 +6,6 @@ import {
   Send,
   CheckCircle,
   User,
-
 } from 'lucide-react';
 import ReCAPTCHA from 'react-google-recaptcha';
 
@@ -39,7 +38,6 @@ export default function Newsletter() {
     e.preventDefault();
 
     if (!captchaVerified) {
-      
       return;
     }
 
@@ -59,7 +57,7 @@ export default function Newsletter() {
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg%20width=%2260%22%20height=%2260%22%20viewBox=%220%200%2060%2060%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg%20fill=%22none%22%20fill-rule=%22evenodd%22%3E%3Cg%20fill=%22%239C92AC%22%20fill-opacity=%220.03%22%3E%3Cpath%20d=%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        
+
         {/* Gradient orbs */}
         <div className="absolute top-20 -left-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 -right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -71,10 +69,11 @@ export default function Newsletter() {
           {/* Section Header */}
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 mb-4">
-          
-              <span className="text-sm text-white/80">Never miss an update</span>
+              <span className="text-sm text-white/80">
+                Never miss an update
+              </span>
             </div>
-            
+
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Join Our Newsletter
@@ -86,22 +85,25 @@ export default function Newsletter() {
           <div className="relative group">
             {/* Glow effect */}
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition duration-500"></div>
-            
+
             <div className="relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 p-8 lg:p-10">
-              
               {/* Newsletter Subscription Title */}
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 rounded-full border border-blue-500/30">
                   <Send className="w-4 h-4 text-blue-400" />
-                  <h3 className="text-lg font-semibold text-white">Newsletter Subscription</h3>
+                  <h3 className="text-lg font-semibold text-white">
+                    Newsletter Subscription
+                  </h3>
                 </div>
               </div>
-              
+
               {/* reCAPTCHA Section */}
               <div className="bg-white/5 rounded-xl p-6 border border-white/5 mb-6">
                 <div className="flex items-center gap-2 mb-4">
                   <Shield className="w-5 h-5 text-blue-400" />
-                  <span className="text-sm font-medium text-white">Security Verification</span>
+                  <span className="text-sm font-medium text-white">
+                    Security Verification
+                  </span>
                   {captchaVerified && (
                     <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full ml-auto">
                       Verified ✓
@@ -136,7 +138,9 @@ export default function Newsletter() {
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder={captchaVerified ? "Your name" : "Verify reCAPTCHA first"}
+                    placeholder={
+                      captchaVerified ? 'Your name' : 'Verify reCAPTCHA first'
+                    }
                     required
                     disabled={!captchaVerified}
                     className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
@@ -150,7 +154,11 @@ export default function Newsletter() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder={captchaVerified ? "your.email@example.com" : "Verify reCAPTCHA first"}
+                    placeholder={
+                      captchaVerified
+                        ? 'your.email@example.com'
+                        : 'Verify reCAPTCHA first'
+                    }
                     required
                     disabled={!captchaVerified}
                     className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
@@ -158,27 +166,28 @@ export default function Newsletter() {
                 </div>
 
                 {/* Subscribe Button - Below the form */}
-              
-                  <button
-                    type="submit"
-                    disabled={isEmailSubmitted}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                    className="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl text-lg font-semibold transition-all flex items-center justify-center gap-3 disabled:opacity-50 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                  >
-                    {isEmailSubmitted ? 'Sent!' : 'Subscribe to Newsletter'}
-                    <ArrowRight className={`w-5 h-5 transition-transform ${isHovered ? 'translate-x-1' : ''}`} />
-                  </button>
-      
+
+                <button
+                  type="submit"
+                  disabled={isEmailSubmitted}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  className="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl text-lg font-semibold transition-all flex items-center justify-center gap-3 disabled:opacity-50 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                >
+                  {isEmailSubmitted ? 'Sent!' : 'Subscribe to Newsletter'}
+                  <ArrowRight
+                    className={`w-5 h-5 transition-transform ${isHovered ? 'translate-x-1' : ''}`}
+                  />
+                </button>
 
                 {isEmailSubmitted && (
                   <div className="flex items-center gap-2 text-green-400 bg-green-400/10 p-4 rounded-lg animate-fadeIn">
                     <CheckCircle className="w-5 h-5" />
-                    <span className="text-sm">Thanks {name || 'for subscribing'}! Check your inbox.</span>
+                    <span className="text-sm">
+                      Thanks {name || 'for subscribing'}! Check your inbox.
+                    </span>
                   </div>
                 )}
-
-                
               </form>
 
               {/* Decorative Elements */}

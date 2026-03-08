@@ -1,103 +1,94 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const centres = [
   {
-    title: "BC Interior Crisis Line Network",
-    image: "/assets/CanadaCenter_image/BC/IntCrisisLine-1024x301.png",
-    path: "https://www.interiorcrisisline.com/",
-    lines: [
-      "Crisis Line: 1-888-353-CARE (2273)",
-      "Serving BC Interior Region",
-    ],
+    title: 'BC Interior Crisis Line Network',
+    image: '/assets/CanadaCenter_image/BC/IntCrisisLine-1024x301.png',
+    path: 'https://www.interiorcrisisline.com/',
+    lines: ['Crisis Line: 1-888-353-CARE (2273)', 'Serving BC Interior Region'],
   },
   {
     title:
-      "Crisis Prevention, Intervention & Information Centre for Northern BC",
-    image: "/assets/CanadaCenter_image/BC/crisisPrevInterv-400x89.jpg",
-    path: "https://crisis-centre.ca/",
+      'Crisis Prevention, Intervention & Information Centre for Northern BC',
+    image: '/assets/CanadaCenter_image/BC/crisisPrevInterv-400x89.jpg',
+    path: 'https://crisis-centre.ca/',
     lines: [
-      "24/7 Crisis Line: 1-888-562-1214",
-      "Youth: 1-888-564-8336 4-10 pm",
-      "Youth Text: 250-564-8336 4-10 pm",
+      '24/7 Crisis Line: 1-888-562-1214',
+      'Youth: 1-888-564-8336 4-10 pm',
+      'Youth Text: 250-564-8336 4-10 pm',
     ],
   },
   {
-    title: "Suicide Attempt Follow-up, Education & Research",
-    image: "/assets/CanadaCenter_image/BC/VanCoastalHealth-400x146.png",
-    path: "https://www.vch.ca/en/location-service/access-and-assessment-centre-aac-vancouver-general-hospital#short-description--6731",
+    title: 'Suicide Attempt Follow-up, Education & Research',
+    image: '/assets/CanadaCenter_image/BC/VanCoastalHealth-400x146.png',
+    path: 'https://www.vch.ca/en/location-service/access-and-assessment-centre-aac-vancouver-general-hospital#short-description--6731',
+    lines: ['Call: 604-675-3985', '8:30 am-4:30 pm Mon-Fri'],
+  },
+  {
+    title: 'Fraser Health Crisis Line Options Community Service',
+    image: '/assets/CanadaCenter_image/BC/Options-400x79.png',
+    path: 'https://www.vch.ca/en/location-service/access-and-assessment-centre-aac-vancouver-general-hospital#short-description--6731',
+    lines: ['Crisis 24 hrs: 1-877-820-7444', 'Serves Fraser Health region'],
+  },
+  {
+    title: 'Vancouver Island Crisis Society',
+    image: '/assets/CanadaCenter_image/BC/VancIslCrisisSoc-400x106.jpg',
+    path: 'https://www.vicrisis.ca/',
     lines: [
-      "Call: 604-675-3985",
-      "8:30 am-4:30 pm Mon-Fri",
+      'Call: 1-888-494-3888 24/7',
+      'Text: 250-800-3806 6-10 pm',
+      'Chat from 6-10 pm',
     ],
   },
   {
-    title: "Fraser Health Crisis Line Options Community Service",
-    image: "/assets/CanadaCenter_image/BC/Options-400x79.png",
-    path: "https://www.vch.ca/en/location-service/access-and-assessment-centre-aac-vancouver-general-hospital#short-description--6731",
+    title: 'Vancouver Child & Youth Mental Health Referral',
+    image: '/assets/CanadaCenter_image/BC/youth-group-400x267.jpg',
+    path: '#',
+    lines: ['Mental Health Clinic', 'Vancouver BC', 'Call: 604-709-4111'],
+  },
+  {
+    title: 'Burnaby Mental Health & Addictions',
+    image:
+      '/assets/CanadaCenter_image/BC/Screen-Shot-2023-06-14-at-1.25.17-PM-400x161.png',
+    path: 'https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-mental-health-centre',
+    lines: ['Intake: 604-453-1900'],
+  },
+  {
+    title: 'North Island Crisis & Counselling Centre Society',
+    image: '/assets/CanadaCenter_image/BC/NorthIsland-1.jpg',
+    path: 'https://nicccs.org/',
+    lines: ['Call: 250-949-6033 24 hrs'],
+  },
+  {
+    title: 'Central Fraser Valley Telecare Crisis Line',
+    image:
+      '/assets/CanadaCenter_image/BC/TelecareCrisisCaringlinewide-349w-300x112.webp',
+    path: 'https://www.telecarebc.com/',
+    lines: ['Crisis 24 hrs: 604-852-9099'],
+  },
+  {
+    title: 'Crisis Intervention & Suicide Prevention Centre of BC',
+    image:
+      '/assets/CanadaCenter_image/BC/Crisis_Intervention_Suicide_Prevention_Centre.png',
+    path: 'https://www.youthinbc.com/',
     lines: [
-      "Crisis 24 hrs: 1-877-820-7444",
-      "Serves Fraser Health region",
+      'Crisis 24 hrs: 604-872-3311',
+      'Crisis 24 hrs TTY: 604-872-0113',
+      'Youth online chat: Youthinbc.com',
+      'Van, North & West Van, Bowen Island, Burnaby',
     ],
   },
   {
-    title: "Vancouver Island Crisis Society",
-    image: "/assets/CanadaCenter_image/BC/VancIslCrisisSoc-400x106.jpg",
-    path: "https://www.vicrisis.ca/",
+    title: 'CHIMO Services Crisis Intervention Program',
+    image:
+      '/assets/CanadaCenter_image/BC/Screen-Shot-2023-06-15-at-11.06.55-AM-400x169.png',
+    path: 'https://chimoservices.com/',
     lines: [
-      "Call: 1-888-494-3888 24/7",
-      "Text: 250-800-3806 6-10 pm",
-      "Chat from 6-10 pm",
-    ],
-  },
-  {
-    title: "Vancouver Child & Youth Mental Health Referral",
-    image: "/assets/CanadaCenter_image/BC/youth-group-400x267.jpg",
-    path: "#",
-    lines: [
-      "Mental Health Clinic",
-      "Vancouver BC",
-      "Call: 604-709-4111",
-    ],
-  },
-  {
-    title: "Burnaby Mental Health & Addictions",
-    image: "/assets/CanadaCenter_image/BC/Screen-Shot-2023-06-14-at-1.25.17-PM-400x161.png",
-    path: "https://www.fraserhealth.ca/Service-Directory/Locations/Burnaby/burnaby-mental-health-centre",
-    lines: ["Intake: 604-453-1900"],
-  },
-  {
-    title: "North Island Crisis & Counselling Centre Society",
-    image: "/assets/CanadaCenter_image/BC/NorthIsland-1.jpg",
-    path: "https://nicccs.org/",
-    lines: ["Call: 250-949-6033 24 hrs"],
-  },
-  {
-    title: "Central Fraser Valley Telecare Crisis Line",
-    image: "/assets/CanadaCenter_image/BC/TelecareCrisisCaringlinewide-349w-300x112.webp",
-    path: "https://www.telecarebc.com/",
-    lines: ["Crisis 24 hrs: 604-852-9099"],
-  },
-  {
-    title: "Crisis Intervention & Suicide Prevention Centre of BC",
-    image: "/assets/CanadaCenter_image/BC/Crisis_Intervention_Suicide_Prevention_Centre.png",
-    path: "https://www.youthinbc.com/",
-    lines: [
-      "Crisis 24 hrs: 604-872-3311",
-      "Crisis 24 hrs TTY: 604-872-0113",
-      "Youth online chat: Youthinbc.com",
-      "Van, North & West Van, Bowen Island, Burnaby",
-    ],
-  },
-  {
-    title: "CHIMO Services Crisis Intervention Program",
-    image: "/assets/CanadaCenter_image/BC/Screen-Shot-2023-06-15-at-11.06.55-AM-400x169.png",
-    path: "https://chimoservices.com/",
-    lines: [
-      "Crisis: 604-279-7070",
-      "8-12 am 7 days",
-      "Live Chat Thurs 4-10 pm",
-      "Richmond, South Delta, Ladner, Tsawwassen",
+      'Crisis: 604-279-7070',
+      '8-12 am 7 days',
+      'Live Chat Thurs 4-10 pm',
+      'Richmond, South Delta, Ladner, Tsawwassen',
     ],
   },
 ];
@@ -109,19 +100,17 @@ const BCRegionalCrisisCentres: React.FC = () => {
       <div className="absolute top-0 left-0 w-96 h-96 bg-white/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-6xl max-h-96 bg-gradient-to-r from-transparent via-white/10 to-transparent blur-3xl"></div>
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          
-          
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-serif bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 bg-clip-text text-transparent px-4">
             British Columbia
             <span className="block text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 bg-clip-text text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mt-2">
               Crisis Support Centres
             </span>
           </h1>
-          
+
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600/50 via-pink-600/50 to-purple-600/50 rounded-full mx-auto mt-6"></div>
         </div>
 
@@ -136,7 +125,7 @@ const BCRegionalCrisisCentres: React.FC = () => {
               >
                 {/* Gradient top bar */}
                 <div className="h-2 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600"></div>
-                
+
                 {/* Image Container */}
                 <div className="relative h-48 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition duration-500"></div>
@@ -146,27 +135,36 @@ const BCRegionalCrisisCentres: React.FC = () => {
                     className="w-full h-full object-cover transform group-hover:scale-110 transition duration-700"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
-                      target.src = "https://via.placeholder.com/400x200/4a6fa5/ffffff?text=Crisis+Centre";
+                      target.src =
+                        'https://via.placeholder.com/400x200/4a6fa5/ffffff?text=Crisis+Centre';
                     }}
                   />
-                  
+
                   {/* Title overlay on image */}
                   <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
                     <h3 className="text-white font-bold text-lg leading-tight line-clamp-2 group-hover:translate-x-1 transition-transform">
                       {centre.title}
                     </h3>
                   </div>
-                  
+
                   {/* Arrow indicator */}
                   <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1 z-20">
-                    <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <svg
+                      className="w-4 h-4 text-purple-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
                     </svg>
                   </div>
-
-                 
                 </div>
-                
+
                 {/* Hover shine effect */}
                 <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000"></div>
               </Link>
@@ -175,21 +173,35 @@ const BCRegionalCrisisCentres: React.FC = () => {
               <div className="mt-5 p-5 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 hover:shadow-xl transition-all duration-300 flex-1">
                 <div className="space-y-2.5">
                   {centre.lines.map((line, i) => {
-                    const isMainNumber = line.toLowerCase().includes('crisis') || line.toLowerCase().includes('call:');
-                    const isHours = line.toLowerCase().includes('am') || line.toLowerCase().includes('pm') || line.toLowerCase().includes('24');
-                    const isLocation = line.includes('Serving') || line.includes('Vancouver') || line.includes('Richmond');
-                    
-                    let bgColor = "bg-gray-50/50";
-                    if (isMainNumber) bgColor = "bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500";
-                    else if (isHours) bgColor = "bg-blue-50/50 border border-blue-100";
-                    else if (isLocation) bgColor = "bg-emerald-50/50 border border-emerald-100";
-                    
+                    const isMainNumber =
+                      line.toLowerCase().includes('crisis') ||
+                      line.toLowerCase().includes('call:');
+                    const isHours =
+                      line.toLowerCase().includes('am') ||
+                      line.toLowerCase().includes('pm') ||
+                      line.toLowerCase().includes('24');
+                    const isLocation =
+                      line.includes('Serving') ||
+                      line.includes('Vancouver') ||
+                      line.includes('Richmond');
+
+                    let bgColor = 'bg-gray-50/50';
+                    if (isMainNumber)
+                      bgColor =
+                        'bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500';
+                    else if (isHours)
+                      bgColor = 'bg-blue-50/50 border border-blue-100';
+                    else if (isLocation)
+                      bgColor = 'bg-emerald-50/50 border border-emerald-100';
+
                     return (
                       <div
                         key={i}
                         className={`${bgColor} text-sm p-3 rounded-lg transition-all duration-300 hover:shadow-md`}
                       >
-                        <p className={`${isMainNumber ? 'font-semibold text-purple-800' : 'text-gray-700'} leading-relaxed flex items-start gap-2`}>
+                        <p
+                          className={`${isMainNumber ? 'font-semibold text-purple-800' : 'text-gray-700'} leading-relaxed flex items-start gap-2`}
+                        >
                           {isMainNumber && (
                             <span className="text-purple-500 mt-0.5">📞</span>
                           )}
@@ -205,8 +217,6 @@ const BCRegionalCrisisCentres: React.FC = () => {
                     );
                   })}
                 </div>
-                
-               
               </div>
             </div>
           ))}

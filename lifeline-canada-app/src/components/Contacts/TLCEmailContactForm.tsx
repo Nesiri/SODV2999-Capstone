@@ -1,10 +1,10 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { Heart, Mail, MapPin, Send } from 'lucide-react';
 type MyType = {
   title: string;
   subtitle: string;
 };
-const TLCEmailContactForm= ({title,subtitle}:MyType) => {
+const TLCEmailContactForm = ({ title, subtitle }: MyType) => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -46,11 +46,11 @@ const TLCEmailContactForm= ({title,subtitle}:MyType) => {
 
           <h1 className="text-5xl md:text-6xl font-black mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-700 via-purple-600 to-blue-700">
-              {title?.substring(0,13)}
-            </span> 
+              {title?.substring(0, 13)}
+            </span>
             <br />
             <span className="text-gray-800 relative">
-                {title?.substring(13,title?.length)}
+              {title?.substring(13, title?.length)}
               <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full"></span>
             </span>
           </h1>
@@ -116,7 +116,7 @@ const TLCEmailContactForm= ({title,subtitle}:MyType) => {
               <div className="space-y-2">
                 <label className="text-sm font-semibold text-gray-700 flex items-center gap-2">
                   <span className="w-1 h-5 bg-gradient-to-b from-pink-400 to-purple-400 rounded-full"></span>
-                {subtitle}
+                  {subtitle}
                 </label>
                 <textarea
                   name="message"

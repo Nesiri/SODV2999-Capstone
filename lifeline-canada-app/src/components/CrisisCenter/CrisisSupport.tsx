@@ -87,8 +87,6 @@ const CrisisSupport: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
-              
               </div>
             </div>
           </div>

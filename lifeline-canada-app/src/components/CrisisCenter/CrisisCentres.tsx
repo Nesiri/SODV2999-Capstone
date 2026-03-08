@@ -28,7 +28,6 @@ const crisisData = [
   },
 ];
 
-
 // Simple seeded random function for stable values
 const seededRandom = (seed: number) => {
   const x = Math.sin(seed) * 10000;

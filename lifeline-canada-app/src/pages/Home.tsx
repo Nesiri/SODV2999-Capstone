@@ -21,7 +21,7 @@ const Home: React.FC = () => {
       <div className="w-full">
         <HomepageCallToAction />
       </div>
-      <Newsletter/>
+      <Newsletter />
     </div>
   );
 };

@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 type Province = {
   name: string;
@@ -8,19 +8,71 @@ type Province = {
 };
 
 const provinces: Province[] = [
-  { name: "British Columbia", image: "/assets/flags/bcth_1024x1024-300x149.webp", path: "/british-columbia-crisis-centres" },
-  { name: "Alberta", image: "/assets/flags/alth_1024x1024-300x149.webp", path: "/alberta" },
-  { name: "Saskatchewan", image: "/assets/flags/sath_1024x1024-300x149.webp", path: "/saskatchewan" },
-  { name: "Manitoba", image: "/assets/flags/math_grande-300x147.webp", path: "/manitoba" },
-  { name: "Ontario", image: "/assets/flags/onth_grande-300x149.webp", path: "/ontario" },
-  { name: "Quebec", image: "/assets/flags/quth_1024x1024-300x149.webp", path: "/quebec" },
-  { name: "New Brunswick", image: "/assets/flags/nbth_1024x1024-300x147.webp", path: "/new-brunswick" },
-  { name: "Newfoundland and Labrador", image: "/assets/flags/nfth_1024x1024-300x148.webp", path: "/newfoundland" },
-  { name: "Nova Scotia", image: "/assets/flags/nsth_1024x1024-300x151.webp", path: "/nova-scotia" },
-  { name: "Prince Edward Island", image: "/assets/flags/peith_1024x1024-300x150.webp", path: "/pei" },
-  { name: "Yukon", image: "/assets/flags/yuth_1024x1024-e1687406771897-300x149.webp", path: "/yukon" },
-  { name: "Nunavut", image: "/assets/flags/nuth_1024x1024-300x150.webp", path: "/nunavut" },
-  { name: "Northwest Territories", image: "/assets/flags/nwth_1024x1024-300x149.webp", path: "/nwt" },
+  {
+    name: 'British Columbia',
+    image: '/assets/flags/bcth_1024x1024-300x149.webp',
+    path: '/british-columbia-crisis-centres',
+  },
+  {
+    name: 'Alberta',
+    image: '/assets/flags/alth_1024x1024-300x149.webp',
+    path: '/alberta',
+  },
+  {
+    name: 'Saskatchewan',
+    image: '/assets/flags/sath_1024x1024-300x149.webp',
+    path: '/saskatchewan',
+  },
+  {
+    name: 'Manitoba',
+    image: '/assets/flags/math_grande-300x147.webp',
+    path: '/manitoba',
+  },
+  {
+    name: 'Ontario',
+    image: '/assets/flags/onth_grande-300x149.webp',
+    path: '/ontario',
+  },
+  {
+    name: 'Quebec',
+    image: '/assets/flags/quth_1024x1024-300x149.webp',
+    path: '/quebec',
+  },
+  {
+    name: 'New Brunswick',
+    image: '/assets/flags/nbth_1024x1024-300x147.webp',
+    path: '/new-brunswick',
+  },
+  {
+    name: 'Newfoundland and Labrador',
+    image: '/assets/flags/nfth_1024x1024-300x148.webp',
+    path: '/newfoundland',
+  },
+  {
+    name: 'Nova Scotia',
+    image: '/assets/flags/nsth_1024x1024-300x151.webp',
+    path: '/nova-scotia',
+  },
+  {
+    name: 'Prince Edward Island',
+    image: '/assets/flags/peith_1024x1024-300x150.webp',
+    path: '/pei',
+  },
+  {
+    name: 'Yukon',
+    image: '/assets/flags/yuth_1024x1024-e1687406771897-300x149.webp',
+    path: '/yukon',
+  },
+  {
+    name: 'Nunavut',
+    image: '/assets/flags/nuth_1024x1024-300x150.webp',
+    path: '/nunavut',
+  },
+  {
+    name: 'Northwest Territories',
+    image: '/assets/flags/nwth_1024x1024-300x149.webp',
+    path: '/nwt',
+  },
 ];
 
 const ProvincialCrisisCentres: React.FC = () => {
@@ -28,18 +80,20 @@ const ProvincialCrisisCentres: React.FC = () => {
     <section className="relative w-full bg-gradient-to-br from-[#F0F5FA] via-[#E8F0F7] to-[#E0EAF2] py-24 overflow-hidden">
       {/* Modern geometric pattern overlay */}
       <div className="absolute inset-0 opacity-[0.02]">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L55 30 L30 55 L5 30 Z' fill='none' stroke='%238B9EB0' stroke-width='0.5'/%3E%3C/svg%3E")`,
-          backgroundSize: '60px 60px'
-        }}></div>
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L55 30 L30 55 L5 30 Z' fill='none' stroke='%238B9EB0' stroke-width='0.5'/%3E%3C/svg%3E")`,
+            backgroundSize: '60px 60px',
+          }}
+        ></div>
       </div>
-      
+
       {/* Soft luminous gradients */}
       <div className="absolute top-20 -left-20 w-[500px] h-[500px] bg-[#A6C1D9]/20 rounded-full blur-[120px]"></div>
       <div className="absolute bottom-20 -right-20 w-[500px] h-[500px] bg-[#D4B8C5]/20 rounded-full blur-[120px]"></div>
-      
+
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-        
         {/* Section header with elegant typography */}
         <div className="text-center mb-16">
           <span className="text-xs tracking-[0.3em] text-[#7C9EB2] uppercase font-light block mb-4">
@@ -62,14 +116,13 @@ const ProvincialCrisisCentres: React.FC = () => {
               key={province.name}
               to={province.path}
               className="group relative transform hover:-translate-y-2 transition-all duration-500"
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: 'none' }}
             >
               {/* Card shadow layers */}
               <div className="absolute -inset-2 bg-gradient-to-r from-[#B18F9E]/20 to-[#7C9EB2]/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
+
               {/* Main card */}
               <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-white/60 hover:border-white/80 transition-all duration-300">
-                
                 {/* Image container with modern frame */}
                 <div className="relative rounded-xl overflow-hidden mb-4">
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1F3A4F]/30 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -95,8 +148,6 @@ const ProvincialCrisisCentres: React.FC = () => {
             </Link>
           ))}
         </div>
-
-       
       </div>
     </section>
   );

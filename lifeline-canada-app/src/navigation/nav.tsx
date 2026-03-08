@@ -1,4 +1,4 @@
-import { Users, AlertCircle, Zap, } from 'lucide-react';
+import { Users, AlertCircle, Zap } from 'lucide-react';
 import React from 'react';
 
 /* =========================
@@ -294,25 +294,25 @@ export const dropdownNavLinks = [
   },
 
   {
-  name: 'Contact',
-  path: '/contact',
-  icon: '✉️',   // Phone contact
-},
-{
-  name: 'Email Support',
-  path: '/email-support',
-  icon: '✉️',   // Email
-},
-{
-  name: 'EN/FR',
-  path: '#',///english-french
-  icon: '🌐',   // Language / Global
-},
-{
-  name: 'Site Map',
-  path: '/site-map',
-  icon: '🗺️',   // Map
-},
+    name: 'Contact',
+    path: '/contact',
+    icon: '✉️', // Phone contact
+  },
+  {
+    name: 'Email Support',
+    path: '/email-support',
+    icon: '✉️', // Email
+  },
+  {
+    name: 'EN/FR',
+    path: '#', ///english-french
+    icon: '🌐', // Language / Global
+  },
+  {
+    name: 'Site Map',
+    path: '/site-map',
+    icon: '🗺️', // Map
+  },
 ];
 
 /* =========================

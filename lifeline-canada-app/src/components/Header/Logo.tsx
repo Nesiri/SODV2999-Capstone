@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Heart } from 'lucide-react';
+import { Heart, Sparkles, Star } from 'lucide-react';
 
 export default function Logo() {
   return (
@@ -10,15 +10,19 @@ export default function Logo() {
       {/* Soft Hover Glow */}
       <div className="absolute -inset-1 bg-gradient-to-r from-blue-400/10 via-purple-400/10 to-pink-400/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition duration-700"></div>
 
-      {/* Main Heart Only - Now with bright blue and background */}
       <div className="relative bottom-5 sm:bottom-0">
-        <div className="relative">
+        <div className="relative right-2">
           {/* Bright background circle behind heart */}
-          <div className="absolute inset-0 bg-blue-300/30 rounded-full blur-md scale-150"></div>
-          <Heart
-            className="w-14 h-14 sm:w-20 sm:h-20 lg:w-28 lg:h-28 text-blue-600 fill-blue-500 drop-shadow-lg relative z-10"
-            strokeWidth={1.5}
-          />
+
+          {/* Icon */}
+          <div className="relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-2xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 shadow-lg transition-transform duration-300 group-hover:scale-105">
+            <Heart
+              className="text-white w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6"
+              fill="currentColor"
+            />
+            <Sparkles className="absolute -top-1 -right-1 text-yellow-300 w-3 h-3 animate-spin-slow" />
+            <Star className="absolute -bottom-1 -left-1 text-pink-300 w-2 h-2 animate-pulse" />
+          </div>
         </div>
       </div>
 

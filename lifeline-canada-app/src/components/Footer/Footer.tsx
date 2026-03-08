@@ -1,46 +1,65 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { FaFacebookF, FaXTwitter, FaYoutube, FaInstagram } from "react-icons/fa6";
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  FaFacebookF,
+  FaXTwitter,
+  FaYoutube,
+  FaInstagram,
+} from 'react-icons/fa6';
 
 const LEFT_LINKS = [
-  { name: "About Us", path: "/about" },
-  { name: "In Crisis?", path: "/crisis" },
-  { name: "Resources", path: "/resources" },
-  { name: "Pattern Interrupts", path: "/programs/pattern-interrupts" },
-  { name: "The LifeLine App", path: "/programs/app" },
-  { name: "Companion Paws", path: "/programs/companion-paws" },
+  { name: 'About Us', path: '/about' },
+  { name: 'In Crisis?', path: '/crisis' },
+  { name: 'Resources', path: '/resources' },
+  { name: 'Pattern Interrupts', path: '/programs/pattern-interrupts' },
+  { name: 'The LifeLine App', path: '/programs/app' },
+  { name: 'Companion Paws', path: '/programs/companion-paws' },
 ];
 
 const RIGHT_LINKS = [
-  { name: "Contact Us", path: "/contact" },
-  { name: "Support", path: "/support" },
-  { name: "Get Involved", path: "/get-involved" },
-  { name: "Join Our Newsletter", path: "/newsletter" },
-  { name: "Make a Contribution", path: "/donate" },
+  { name: 'Contact Us', path: '/contact' },
+  { name: 'Support', path: '/support' },
+  { name: 'Get Involved', path: '/get-involved' },
+  { name: 'Join Our Newsletter', path: '/newsletter' },
+  { name: 'Make a Contribution', path: '/donate' },
 ];
 
 const SOCIAL_LINKS = [
-  { icon: <FaFacebookF />, url: "https://facebook.com/lifelinecanada", label: "Facebook" },
-  { icon: <FaXTwitter />, url: "https://twitter.com/lifelinecanada", label: "Twitter" },
-  { icon: <FaYoutube />, url: "https://youtube.com/lifelinecanada", label: "YouTube" },
-  { icon: <FaInstagram />, url: "https://instagram.com/lifelinecanada", label: "Instagram" },
+  {
+    icon: <FaFacebookF />,
+    url: 'https://facebook.com/lifelinecanada',
+    label: 'Facebook',
+  },
+  {
+    icon: <FaXTwitter />,
+    url: 'https://twitter.com/lifelinecanada',
+    label: 'Twitter',
+  },
+  {
+    icon: <FaYoutube />,
+    url: 'https://youtube.com/lifelinecanada',
+    label: 'YouTube',
+  },
+  {
+    icon: <FaInstagram />,
+    url: 'https://instagram.com/lifelinecanada',
+    label: 'Instagram',
+  },
 ];
 
 const Footer: React.FC = () => {
   return (
     <footer className="relative w-full bg-gradient-to-b from-[#0a0f1e] via-[#0e1a2b] to-[#1a1f35] text-white pt-14 overflow-hidden">
-      
       {/* Newsletter-style background decorations */}
       <div className="absolute inset-0">
-        <div 
+        <div
           className="absolute top-0 left-0 w-full h-full opacity-10"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.3'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundRepeat: 'repeat'
+            backgroundRepeat: 'repeat',
           }}
         />
-        
+
         {/* Gradient orbs */}
         <div className="absolute top-20 -left-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 -right-20 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -48,10 +67,11 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6 md:px-10">
-
         {/* Left Links */}
         <div className="flex flex-col items-center md:items-start space-y-4 text-base md:text-lg lg:text-xl font-medium">
-          <h3 className="text-sm uppercase tracking-wider text-pink-300/70 font-semibold mb-2">Navigation</h3>
+          <h3 className="text-sm uppercase tracking-wider text-pink-300/70 font-semibold mb-2">
+            Navigation
+          </h3>
           {LEFT_LINKS.map((link, index) => (
             <Link
               key={index}
@@ -66,7 +86,9 @@ const Footer: React.FC = () => {
 
         {/* Social Icons with newsletter-style decoration */}
         <div className="flex flex-col items-center">
-          <h3 className="text-sm uppercase tracking-wider text-pink-300/70 font-semibold mb-6">Connect</h3>
+          <h3 className="text-sm uppercase tracking-wider text-pink-300/70 font-semibold mb-6">
+            Connect
+          </h3>
           <div className="flex justify-center items-start gap-4 md:gap-6">
             {SOCIAL_LINKS.map((item, index) => (
               <a
@@ -89,7 +111,9 @@ const Footer: React.FC = () => {
 
         {/* Right Links */}
         <div className="flex flex-col items-center md:items-end space-y-4 text-base md:text-lg lg:text-xl font-medium">
-          <h3 className="text-sm uppercase tracking-wider text-pink-300/70 font-semibold mb-2">Get Involved</h3>
+          <h3 className="text-sm uppercase tracking-wider text-pink-300/70 font-semibold mb-2">
+            Get Involved
+          </h3>
           {RIGHT_LINKS.map((link, index) => (
             <Link
               key={index}
@@ -101,16 +125,13 @@ const Footer: React.FC = () => {
             </Link>
           ))}
         </div>
-
       </div>
 
       {/* Newsletter-style bottom bar */}
       <div className="relative z-10 border-t border-white/10 mt-14 py-6 text-center">
-        
         <p className="text-sm md:text-base text-white/60 font-medium">
           ©2026 The LifeLine Canada Foundation. All rights reserved.
         </p>
-       
       </div>
 
       <style>{`

@@ -1,10 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CrisisNotice: React.FC = () => {
   return (
     <section className="relative w-full bg-gradient-to-br from-[#1a1a2e66] via-[#2a1b3d66] to-[#16213e4D] py-20 px-4 overflow-hidden">
-      
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl animate-pulse" />
@@ -15,7 +14,6 @@ const CrisisNotice: React.FC = () => {
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-yellow-500 to-red-500 animate-pulse"></div>
 
       <div className="relative max-w-4xl mx-auto z-10 text-center">
-
         {/* Urgency badge */}
         <div className="flex justify-center mb-8 ">
           <div className="inline-flex items-center gap-2 bg-red-500/20 backdrop-blur-sm px-4 py-2 rounded-full border border-red-500/30">
@@ -55,8 +53,10 @@ const CrisisNotice: React.FC = () => {
         </p>
 
         {/* Button */}
-        <Link to="/in-crisis"
-        className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-b from-red-600 to-red-800 text-white px-12 py-4 rounded-2xl font-bold text-xl shadow-2xl shadow-red-900/50 hover:shadow-red-700/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1 overflow-hidden">
+        <Link
+          to="/in-crisis"
+          className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-b from-red-600 to-red-800 text-white px-12 py-4 rounded-2xl font-bold text-xl shadow-2xl shadow-red-900/50 hover:shadow-red-700/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1 overflow-hidden"
+        >
           <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
 
           <span className="relative flex items-center gap-3">
