@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 
 const crisisData = [
   {
@@ -26,7 +27,7 @@ const crisisData = [
     description: 'Find help worldwide',
   },
 ];
-console.log(crisisData);
+
 
 // Simple seeded random function for stable values
 const seededRandom = (seed: number) => {
@@ -155,7 +156,7 @@ const CrisisCentres = () => {
                 </div>
 
                 {/* Content Container */}
-                <div className="relative p-8">
+                <Link to={item.path} className="relative p-8">
                   {/* Image Container */}
                   <div className="relative mb-6">
                     {/* Image wrapper */}
@@ -263,7 +264,7 @@ const CrisisCentres = () => {
                       </span>
                     </button>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           ))}

@@ -1,0 +1,145 @@
+import React from "react";
+
+type CrisisCentre = {
+  name: string;
+  image: string;
+  details?: string[];
+};
+
+const crisisCentres: CrisisCentre[] = [
+  {
+    name: "Talk Suicide Canada",
+    image: "/assets/CanadaCenter_image/talkSuicide.jpg",
+    details: [
+      "Call: 1-833-456-4566",
+      "Toll-Free 24/7",
+      "Text: 45645  4 pm – 12 am EST",
+    ],
+  },
+  {
+    name: "Kids Help Phone",
+    image: "/assets/CanadaCenter_image/kidsHelpPhone-1-400x176.jpg",
+    details: [
+      "Call: 1-800-668-6868",
+      "20 y/o and Younger",
+    ],
+  },
+  {
+    name: "Crisis Text Line",
+    image: "/assets/CanadaCenter_image/crisisTexLine-400x188.jpg",
+    details: [
+      "Text Toll-Free, 24/7",
+      "English: TALK to 686868",
+      "French: TEXTO to 686868",
+    ],
+  },
+  {
+    name: "First Nations Residential Schools",
+    image: "/assets/CanadaCenter_image/FirstNationResSchoolorange-heart-graphic-400x267.jpg",
+    details: [
+      "Call: 1-866-925-4419",
+    ],
+  },
+  {
+    name: "Trans LifeLine",
+    image: "/assets/CanadaCenter_image/Trans-Pride-Flag-400x240.png",
+    details: [
+      "Call: 1-877-330-6366",
+      "All Ages",
+    ],
+  },
+  {
+    name: "First Nations & Inuit Hope for Wellness",
+    image: "/assets/CanadaCenter_image/HopeForWellness-400x119.jpg",
+    details: [
+      "Call: 1-855-242-3310  24/7",
+    ],
+  },
+];
+
+const CanadaNationwide: React.FC = () => {
+  return (
+    <section className="relative w-full bg-gradient-to-br from-[#F8F2F5] via-[#F0E9F0] to-[#E8DFE8] py-24 overflow-hidden">
+      {/* Modern abstract pattern overlay */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='1.5' fill='%23948374' fill-opacity='0.3'/%3E%3Ccircle cx='20' cy='20' r='1' fill='%23948374' fill-opacity='0.2'/%3E%3Ccircle cx='60' cy='60' r='1' fill='%23948374' fill-opacity='0.2'/%3E%3C/svg%3E")`,
+          backgroundSize: '80px 80px'
+        }}></div>
+      </div>
+      
+      {/* Soft luminous gradients */}
+      <div className="absolute top-20 -left-20 w-[400px] h-[400px] bg-[#D4C1C1]/20 rounded-full blur-[100px]"></div>
+      <div className="absolute bottom-20 -right-20 w-[400px] h-[400px] bg-[#C1B1A1]/20 rounded-full blur-[100px]"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Section header with elegant typography */}
+        <div className="text-center mb-16">
+          <span className="text-xs tracking-[0.3em] text-[#B28B8B] uppercase font-light block mb-4">
+            — You Are Not Alone —
+          </span>
+          <h1 className="text-5xl lg:text-6xl font-serif text-[#2A3B3C] leading-[1.1] mb-4">
+            Canada Nationwide
+            <span className="block text-[#C89F9F]">Crisis Centres</span>
+          </h1>
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#C89F9F] to-transparent mx-auto"></div>
+        </div>
+
+        {/* Modern card grid - HORIZONTAL RECTANGLES */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+          {crisisCentres.map((centre, index) => (
+            <div
+              key={index}
+              className="group relative transform hover:-translate-y-2 transition-all duration-500"
+            >
+              {/* Card shadow layers */}
+              <div className="absolute -inset-2 bg-gradient-to-r from-[#C89F9F]/20 to-[#B28B8B]/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              {/* Main card - HORIZONTAL LAYOUT */}
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-6 shadow-xl border border-white/60 hover:border-white/80 transition-all duration-300">
+                
+                {/* Flex row for horizontal layout */}
+                <div className="flex flex-col md:flex-row gap-6">
+                  
+                  {/* Image container - fixed width on desktop */}
+                  <div className="relative rounded-2xl overflow-hidden flex-shrink-0 md:w-48 lg:w-56">
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#2A3B3C]/20 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img
+                      src={centre.image}
+                      alt={centre.name}
+                      className="w-full h-40 md:h-32 lg:h-36 object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+
+                  {/* Content area */}
+                  <div className="flex-grow">
+                    <h2 className="text-xl font-serif text-[#2A3B3C] mb-3 group-hover:text-[#C89F9F] transition-colors duration-300">
+                      {centre.name}
+                    </h2>
+
+                    {/* Details with modern styling */}
+                    <div className="space-y-1.5">
+                      {centre.details?.map((line, i) => (
+                        <div key={i} className="flex items-start gap-2 text-sm">
+                          <span className="text-[#C89F9F] mt-1 flex-shrink-0">✦</span>
+                          <span className="text-[#4A5A5C] font-light leading-relaxed">{line}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Subtle decorative element */}
+                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-[#C89F9F]/30 text-4xl font-serif">❤️</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default CanadaNationwide;

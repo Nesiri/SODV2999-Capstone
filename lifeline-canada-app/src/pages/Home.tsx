@@ -4,6 +4,7 @@ import MentalHealthHero from '../components/Home/MentalHealthHero';
 import MentalHealthResources from '../components/MentalHealthResources/MentalHealthResources';
 import CrisisSupportBanner from '../components/MentalHealthResources/CrisisSupportBanner';
 import CompanionPawsCanada from '../components/CompanyPaws/CompanionPawsCanada';
+import Newsletter from '../components/Home/Newsletter';
 
 const Home: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const Home: React.FC = () => {
       <div className="w-full">
         <HomepageCallToAction />
       </div>
+      <Newsletter/>
     </div>
   );
 };

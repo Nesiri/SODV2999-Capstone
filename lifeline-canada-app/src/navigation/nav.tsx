@@ -1,4 +1,4 @@
-import { Users, AlertCircle, Zap, Shield } from 'lucide-react';
+import { Users, AlertCircle, Zap, } from 'lucide-react';
 import React from 'react';
 
 /* =========================
@@ -34,7 +34,7 @@ export const resourceCategories = [
         color: 'from-purple-400 to-violet-400',
       },
       {
-        name: 'Grief',
+        name: 'Grief Support',
         path: '/resources/grief',
         icon: '💔',
         color: 'from-rose-400 to-pink-400',
@@ -64,7 +64,7 @@ export const resourceCategories = [
         color: 'from-indigo-400 to-blue-400',
       },
       {
-        name: 'E Counselling',
+        name: 'E-Counselling',
         path: '/resources/e-counselling',
         icon: '💬',
         color: 'from-teal-400 to-emerald-400',
@@ -292,11 +292,7 @@ export const dropdownNavLinks = [
     path: '/paws',
     icon: '🐾',
   },
-  {
-    name: 'Support',
-    path: '/support',
-    icon: React.createElement(Shield, { className: 'w-4 h-4' }),
-  },
+
   {
   name: 'Contact',
   path: '/contact',
@@ -309,7 +305,7 @@ export const dropdownNavLinks = [
 },
 {
   name: 'EN/FR',
-  path: '/english-french',
+  path: '#',///english-french
   icon: '🌐',   // Language / Global
 },
 {

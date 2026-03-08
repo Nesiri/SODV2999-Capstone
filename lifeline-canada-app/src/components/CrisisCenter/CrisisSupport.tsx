@@ -3,7 +3,7 @@ import crisisSuportImage from '../../assets/crisis-support.png';
 
 const CrisisSupport: React.FC = () => {
   return (
-    <main className="relative w-full min-h-screen bg-[#fbf7f2] font-sans antialiased overflow-hidden">
+    <main className="relative w-full min-h-screen bg-gradient-to-br from-[#4338ca]/20 via-[#6366f1]/40 to-[#8b5cf6]/30 font-sans antialiased overflow-hidden">
       {/* Minimalist floating orbs */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-[#c7d8d1]/30 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-20 w-80 h-80 bg-[#e6d9ce]/40 rounded-full blur-3xl"></div>
@@ -28,8 +28,8 @@ const CrisisSupport: React.FC = () => {
 
             {/* Crisis information - with FULL original text */}
             <div className="max-w-xl">
-              <div className="bg-white rounded-[2rem] p-10 shadow-[0_50px_40px_-30px_rgba(0,0,0,0.15)] border border-white/80">
-                <p className="text-xl md:text-2xl text-[#3d5663] leading-relaxed">
+              <div className="bg-[#faf5ff] rounded-[2rem] p-10 shadow-[0_50px_40px_-30px_rgba(0,0,0,0.15)] border border-white/80">
+                <p className="text-xl md:text-2xl  leading-relaxed text-[#3b2f7a]">
                   In Crisis? Call or Text{' '}
                   <span className="text-[#1e3b4a] font-medium text-2xl md:text-3xl">
                     988
@@ -51,7 +51,7 @@ const CrisisSupport: React.FC = () => {
 
             {/* Medical disclaimer - FULL original text */}
             <div className="max-w-md">
-              <p className="text-base md:text-lg text-[#8a9ca8] leading-relaxed border-l-2 border-[#dbd2c8] pl-6">
+              <p className="text-base md:text-lg text-[#6b5fa6] leading-relaxed border-l-2 border-[#dbd2c8] pl-6">
                 Seek the advice of an appropriately qualified healthcare
                 professional before making decisions about your circumstances.
               </p>
@@ -88,15 +88,7 @@ const CrisisSupport: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Floating minimal element */}
-                <div className="absolute -bottom-4 -left-4 bg-white px-6 py-4 rounded-2xl shadow-xl border border-white/80">
-                  <div className="flex items-center gap-4">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-xs font-medium text-[#3b4f53] tracking-wide">
-                      AVAILABLE NOW
-                    </span>
-                  </div>
-                </div>
+              
               </div>
             </div>
           </div>
