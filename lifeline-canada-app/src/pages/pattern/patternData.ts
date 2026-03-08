@@ -38,170 +38,875 @@ export type PatternItem = {
 };
 
 export const patternData: Record<string, PatternItem> = {
+  
   "self-management": {
-    title: "Self Management",
-    description: "Tools and strategies to manage emotions, stress, and daily challenges.",
-    category: "Self Help & Tools",
-    icon: "🧘",
-    color: "from-teal-400 to-emerald-400",
-    sections: [
+  title: "Self Management",
+  description:
+    "Self-management is intended to empower individuals in their recovery by providing the skills and confidence they need to take active steps in recognizing and managing their own health problems.",
+  longDescription:
+    "When it comes to your mental health, self-care can help you manage stress, lower your risk of illness, and increase your energy. Even small acts of self-care in your daily life can have a big impact. Below are some strategies, research, information, and resources for self managing stress, emotional pain, depression, anxiety, and suicidal thoughts.",
+  category: "Self Help & Tools",
+  icon: "🧘",
+  color: "from-violet-500 to-fuchsia-500",
+  heroImage: "/images/resources/self-management-hero.jpg",
+  resourceLayout: "list",
+  sections: [
+    {
+      heading: "What self-management means",
+      items: [
+        "Self-management helps you take small, active steps toward caring for your emotional wellbeing.",
+        "It can include coping tools, calming exercises, reflection, support resources, and practical strategies for difficult days.",
+        "You do not need to do everything at once. Start with one resource that feels manageable.",
+      ],
+    },
+    {
+      heading: "How to use this page",
+      items: [
+        "Pick one resource only.",
+        "Spend 5 to 10 minutes exploring it.",
+        "If it feels helpful, save it and come back later.",
+      ],
+    },
+  ],
+  resources: {
+    heading: "Some Great Self Management Links",
+    subheading:
+      "A collection of self-help and coping resources for stress, emotional pain, depression, anxiety, and suicidal thoughts.",
+    items: [
       {
-        heading: "Quick Reset",
-        items: [
-          "Take 5 slow breaths.",
-          "Drink water and sit comfortably.",
-          "Write one thing you can control today.",
-        ],
+        title: "Suicide...Read This First",
+        description:
+          "The original web page written by Martha Ainsworth. A suicide prevention classic, this simple essay has been saving lives on the internet since 1995. As powerful today as when it was first created.",
+        image: "/images/resources/self-management/read-this-first.jpg",
+        meta: "Article",
+        tags: ["Crisis support", "Reading"],
+        kind: "link",
       },
       {
-        heading: "Try This",
-        items: ["Do a 2-minute body scan.", "Set one small goal for the next hour."],
+        title: "Coping & Self-Care",
+        description:
+          "There are many things you can do to help reduce your feelings of stress and emotional pain. This section on coping strategies and dealing with stress will be helpful to you.",
+        image: "/images/resources/self-management/coping-self-care.jpg",
+        meta: "Guide",
+        tags: ["Stress", "Self-care"],
+        kind: "link",
+      },
+      {
+        title: "Coping With Suicidal Thoughts",
+        description:
+          "Coping with Suicidal Thoughts is intended for individuals who are currently experiencing suicidal ideation and/or have had a plan or made an attempt to hurt themselves.",
+        image: "/images/resources/self-management/coping-with-suicidal-thoughts.jpg",
+        meta: "Workbook",
+        tags: ["Safety", "Support"],
+        kind: "link",
+      },
+      {
+        title: "Get Self-Help – Coping with Suicidal Thoughts",
+        description:
+          "This website provides CBT self-help and therapy resources, including worksheets and information sheets and self-help mp3s.",
+        image: "/images/resources/self-management/getselfhelp.jpg",
+        meta: "CBT Tools",
+        tags: ["CBT", "Worksheets"],
+        kind: "link",
+      },
+      {
+        title: "NowMattersNow",
+        description:
+          "Here we offer strategies to survive and build more manageable and meaningful lives.",
+        image: "/images/resources/self-management/now-matters-now.jpg",
+        meta: "Tools",
+        tags: ["Skills", "Hope"],
+        kind: "link",
+      },
+      {
+        title: "Reasons to go on Living",
+        description:
+          "Canadian research project archiving suicide attempt stories along with why the survivor is now glad to be alive.",
+        image: "/images/resources/self-management/reasons-to-go-on-living.jpg",
+        meta: "Stories",
+        tags: ["Hope", "Recovery"],
+        kind: "link",
+      },
+      {
+        title: "Reasons for Staying Alive",
+        description:
+          "Grassroots reasons for staying alive when you are considering suicide.",
+        image: "/images/resources/self-management/reasons-for-staying-alive.jpg",
+        meta: "Support",
+        tags: ["Hope", "Encouragement"],
+        kind: "link",
+      },
+      {
+        title: "Wellness Workshop",
+        description:
+          "The Wellness Workshop online is a resource to help you on your personal journey to mental health wellness. The workshop is for everyone and is designed to give you tools to both improve your mental wellness and to maintain your wellness.",
+        image: "/images/resources/self-management/wellness-workshop.jpg",
+        meta: "Workshop",
+        tags: ["Wellness", "Tools"],
+        kind: "link",
+      },
+      {
+        title: "Self-help Resources",
+        description:
+          "Mental Health Info in 11 Languages.",
+        image: "/images/resources/self-management/self-help-resources.jpg",
+        meta: "Multilingual",
+        tags: ["Resources", "Information"],
+        kind: "link",
       },
     ],
   },
+},
 
   "coping-mechanisms": {
-    title: "Coping Mechanisms",
-    description: "Healthy techniques to manage difficult emotions and stressful situations.",
-    category: "Self Help & Tools",
-    icon: "🛡️",
-    color: "from-blue-400 to-indigo-400",
-    sections: [
+  title: "Coping Mechanisms",
+  description:
+    "Coping mechanisms are the thoughts and behaviors people use to deal with stress, pain, fear, anxiety, and overwhelming life situations.",
+  longDescription:
+    "Life is filled with challenges, interpersonal conflict, physical and emotional pain, loss, and stress. It does not matter who you are — no one goes through life untouched. Some people also experience significant trauma, abuse, violence, or deep loss. Because of that, many of us develop ways to cope that may help in the moment but hurt us in the long term.\n\nThis page is designed to help you better understand both unhealthy and healthy coping mechanisms. Recovery is not only about noticing patterns that hold you back, but also about replacing them with healthier tools that support your wellbeing, relationships, and future growth.",
+  category: "Self Help & Tools",
+  icon: "🛡️",
+  color: "from-violet-500 to-fuchsia-500",
+  heroImage:
+    "https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?auto=format&fit=crop&w=1600&q=80",
+  resourceLayout: "list",
+  sections: [
+    {
+      heading: "Coping Mechanisms to Aid Your Recovery",
+      items: [
+        "Regardless of your past, what matters most is how you cope now.",
+        "Many of us learn coping habits early in life and repeat them without noticing.",
+        "Some coping patterns reduce pain temporarily, but later increase stress, shame, conflict, or isolation.",
+        "Recovery becomes stronger when you identify harmful patterns and replace them with healthier ones.",
+      ],
+    },
+    {
+      heading: "Common Unhealthy Coping Mechanisms",
+      items: [
+        "Passive-aggressiveness",
+        "Displacement",
+        "Compartmentalization",
+        "Staying ridiculously busy",
+        "Procrastination",
+        "Denial",
+        "Avoidance",
+        "Intellectualization",
+        "Trivialization",
+      ],
+    },
+    {
+      heading: "Common Healthy Coping Mechanisms",
+      items: [
+        "Exercise",
+        "Turning pain into something useful",
+        "Practicing gratitude",
+        "Journaling",
+        "Meditation",
+        "Talking it out",
+        "Deep breathing",
+        "Creating healthy structure and routine",
+      ],
+    },
+  ],
+  resources: {
+    heading: "Healthy coping tools you can try",
+    subheading:
+      "Start with one small action. The goal is not perfection — it is building safer and healthier ways to respond.",
+    items: [
       {
-        heading: "Fast Coping",
-        items: [
-          "Name 5 things you see, 4 you feel, 3 you hear, 2 you smell, 1 you taste.",
-          "Hold ice for 10 seconds (safe, not too long).",
-          "Splash cold water on your face.",
-        ],
+        title: "Exercise",
+        description:
+          "Movement can lower stress, improve mood, release tension, and build confidence. A short walk, stretching session, or workout can help interrupt overwhelming thoughts.",
+        href: "https://www.youtube.com/results?search_query=10+minute+beginner+workout",
+        image:
+          "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80",
+        meta: "Healthy coping",
+        tags: ["Movement", "Stress relief"],
+        kind: "link",
       },
       {
-        heading: "Daily Coping",
-        items: ["Walk for 10 minutes.", "Journal one page.", "Talk to a trusted person."],
+        title: "Turn your pain into something useful",
+        description:
+          "Many people heal by transforming pain into service, creativity, advocacy, volunteering, or supporting others. Giving meaning to pain can reduce hopelessness.",
+        href: "https://www.youtube.com/results?search_query=how+to+turn+pain+into+purpose",
+        image:
+          "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80",
+        meta: "Mindset",
+        tags: ["Purpose", "Healing"],
+        kind: "link",
+      },
+      {
+        title: "Practice gratitude",
+        description:
+          "Gratitude does not erase pain, but it can help your mind notice what is still supportive, meaningful, or steady. Try writing down 3 small things each day.",
+        href: "https://www.youtube.com/results?search_query=gratitude+journal+how+to",
+        image:
+          "https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1200&q=80",
+        meta: "Reflection",
+        tags: ["Mindset", "Daily habit"],
+        kind: "link",
+      },
+      {
+        title: "Journaling",
+        description:
+          "Writing down thoughts and feelings can help you process emotions, notice patterns, and release inner pressure instead of carrying everything mentally.",
+        href: "https://www.youtube.com/results?search_query=mental+health+journaling+prompts",
+        image:
+          "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
+        meta: "Tool",
+        tags: ["Writing", "Clarity"],
+        kind: "link",
+      },
+      {
+        title: "Meditation",
+        description:
+          "Meditation can help calm the nervous system, reduce mental noise, and improve emotional regulation. Even 2 to 5 minutes can make a difference.",
+        href: "https://www.youtube.com/results?search_query=5+minute+guided+meditation",
+        image:
+          "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80",
+        meta: "Calming practice",
+        tags: ["Breathing", "Calm"],
+        kind: "link",
+      },
+      {
+        title: "Talk it out",
+        description:
+          "Sharing what you are carrying with someone safe can reduce isolation and emotional pressure. Support does not need to be perfect to be helpful.",
+        href: "https://www.youtube.com/results?search_query=why+talking+about+feelings+helps",
+        image:
+          "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80",
+        meta: "Connection",
+        tags: ["Support", "Relationships"],
+        kind: "link",
+      },
+      {
+        title: "Deep breathing",
+        description:
+          "Slow breathing helps your body shift out of panic and stress. Try inhaling for 4, holding for 2, and exhaling for 6.",
+        href: "https://www.youtube.com/results?search_query=box+breathing+exercise",
+        image:
+          "https://images.unsplash.com/photo-1474418397713-7ede21d49118?auto=format&fit=crop&w=1200&q=80",
+        meta: "Quick reset",
+        tags: ["Breathwork", "Anxiety relief"],
+        kind: "link",
+      },
+      {
+        title: "Build structure and routine",
+        description:
+          "A simple routine can create safety and momentum. Start with waking up, eating, moving, and resting at more consistent times.",
+        href: "https://www.youtube.com/results?search_query=how+to+build+a+healthy+routine",
+        image:
+          "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1200&q=80",
+        meta: "Daily habit",
+        tags: ["Routine", "Stability"],
+        kind: "link",
       },
     ],
   },
+},
 
-  "interactive-mind": {
-    title: "Interactive Mind",
-    description: "Interactive exercises and activities to improve mental clarity.",
-    category: "Self Help & Tools",
-    icon: "🧩",
-    color: "from-purple-400 to-pink-400",
-    sections: [
+"interactive-mind": {
+  title: "Interactive Mind",
+  description:
+    "Interactive tools, brain games, and simple mental exercises can help sharpen focus, support positive thinking, and gently interrupt stress-heavy thought patterns.",
+  longDescription:
+    "Mental fitness is more than memory games and puzzles — it is also about keeping your mind active, flexible, and engaged in ways that support wellbeing. Interactive tools can help you practice focus, reduce boredom, create positive momentum, and build mental resilience.\n\nWhile digital tools cannot replace human support or therapy, they can be a useful part of a healthy routine. This page brings together interactive apps, puzzles, and exercises that support attention, curiosity, and mental stimulation.",
+  category: "Self Help & Tools",
+  icon: "🧩",
+  color: "from-purple-500 to-pink-500",
+  heroImage:
+    "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80",
+  resourceLayout: "list",
+  sections: [
+    {
+      heading: "Why interactive tools can help",
+      items: [
+        "They can interrupt negative thought loops by redirecting attention.",
+        "They encourage focus, curiosity, and small wins.",
+        "They can be used as a light daily practice for mental stimulation.",
+      ],
+    },
+  ],
+  resources: {
+    heading: "Interactive apps, links, exercises and puzzles",
+    subheading:
+      "Use these tools for stimulation, focus, and small mental resets. Pick one and keep it simple.",
+    items: [
       {
-        heading: "Mental Warm-Up",
-        items: [
-          "Solve a quick puzzle or riddle.",
-          "Write 3 ideas for something you want to improve.",
-          "Do a 30-second focus stare (pick one object).",
-        ],
+        title: "CogniFit — Brain Training",
+        description:
+          "A brain-training app designed to strengthen memory, attention, coordination, and concentration through personalized mental exercises and games.",
+        href: "https://www.cognifit.com/",
+        image:
+          "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+        meta: "App",
+        tags: ["Focus", "Memory"],
+        kind: "link",
       },
       {
-        heading: "Focus Practice",
-        items: ["Set a 10-minute timer and do one task only.", "Turn off notifications for 15 minutes."],
+        title: "Happify",
+        description:
+          "A wellbeing app with guided activities and science-based exercises that support positivity, resilience, stress management, and emotional balance.",
+        href: "https://www.happify.com/",
+        image:
+          "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+        meta: "App",
+        tags: ["Mood", "Resilience"],
+        kind: "link",
+      },
+      {
+        title: "MentalUP — Word Brain Puzzles",
+        description:
+          "Puzzle-based activities that challenge logic, vocabulary, and attention while giving your brain a fun reset from passive scrolling.",
+        href: "https://www.mentalup.co/brain-teasers",
+        image:
+          "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&w=1200&q=80",
+        meta: "Puzzles",
+        tags: ["Logic", "Word games"],
+        kind: "link",
+      },
+      {
+        title: "SharpBrains",
+        description:
+          "A resource hub that explores brain health, mental fitness, and cognitive tools, including brain teasers and educational content.",
+        href: "https://sharpbrains.com/",
+        image:
+          "https://images.unsplash.com/photo-1516534775068-ba3e7458af70?auto=format&fit=crop&w=1200&q=80",
+        meta: "Website",
+        tags: ["Brain health", "Learning"],
+        kind: "link",
+      },
+      {
+        title: "Math and Logic Puzzles",
+        description:
+          "Simple logic and number puzzles that challenge your brain and improve concentration without needing long periods of time.",
+        href: "https://www.mathsisfun.com/puzzles/",
+        image:
+          "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1200&q=80",
+        meta: "Practice",
+        tags: ["Logic", "Problem solving"],
+        kind: "link",
+      },
+      {
+        title: "Braingle",
+        description:
+          "A large collection of brain teasers, riddles, trivia, and puzzles you can use for a quick challenge and mental refresh.",
+        href: "https://www.braingle.com/",
+        image:
+          "https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?auto=format&fit=crop&w=1200&q=80",
+        meta: "Games",
+        tags: ["Trivia", "Puzzles"],
+        kind: "link",
       },
     ],
   },
+},
 
-  "mental-health-apps": {
-    title: "Mental Health Apps",
-    description: "Apps designed to support emotional wellbeing and self-care.",
-    category: "Self Help & Tools",
-    icon: "📱",
-    color: "from-green-400 to-teal-400",
-    sections: [
+"mental-health-apps": {
+  title: "Mental Health Apps",
+  description:
+    "Mental health apps can offer practical support for stress, mood, sleep, mindfulness, journaling, grounding, and crisis planning.",
+  longDescription:
+    "Seeing a therapist or mental health professional regularly is not always possible for everyone. Mobile apps can offer extra support by providing structure, reminders, coping tools, guided exercises, and self-monitoring features that can be used throughout the day.\n\nThese apps are best used as supportive tools rather than replacements for professional care. The goal is to help you find practical resources that make mental health support more accessible, personal, and consistent.",
+  category: "Self Help & Tools",
+  icon: "📱",
+  color: "from-cyan-500 to-blue-500",
+  heroImage:
+    "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1600&q=80",
+  resourceColumns: 4,
+  sections: [
+    {
+      heading: "Apps by category",
+      items: [
+        "Suicide prevention and safety planning",
+        "Mood tracking",
+        "Depression and anxiety support",
+        "Sleep, meditation, and relaxation",
+      ],
+    },
+    {
+      heading: "Regarding apps and privacy",
+      items: [
+        "Read privacy policies before signing up.",
+        "Be careful with apps that collect sensitive health information.",
+        "Use apps as support tools, not as a replacement for emergency or clinical care.",
+      ],
+    },
+  ],
+  resources: {
+    heading: "Helpful mental health apps",
+    subheading:
+      "Choose one category that fits what you need right now — safety, mood, anxiety, or sleep.",
+    items: [
       {
-        heading: "What to Look For",
-        items: ["Mood tracking", "Breathing and grounding tools", "Journaling prompts", "Guided meditation"],
+        title: "Calm Harm",
+        description:
+          "Designed to help people resist or ride out urges related to self-harm through private, guided activities and grounding tools.",
+        href: "https://calmharm.co.uk/",
+        meta: "Suicide prevention",
+        tags: ["Safety", "Grounding"],
+        kind: "link",
       },
       {
-        heading: "Quick Tip",
-        items: ["Try one feature daily for a week (don’t download 10 apps at once)."],
+        title: "notOK",
+        description:
+          "A simple app that helps users quickly reach trusted contacts during overwhelming moments using an easy alert system.",
+        href: "https://www.notokapp.com/",
+        meta: "Crisis support",
+        tags: ["Emergency contact", "Support"],
+        kind: "link",
+      },
+      {
+        title: "Daylio",
+        description:
+          "A popular mood tracking app that helps you log emotions, routines, and habits so you can notice patterns over time.",
+        href: "https://daylio.net/",
+        meta: "Mood tracking",
+        tags: ["Habits", "Mood"],
+        kind: "link",
+      },
+      {
+        title: "Moodfit",
+        description:
+          "Tracks mood, sleep, exercise, mindfulness, and gratitude with a structured dashboard designed to support emotional wellbeing.",
+        href: "https://www.getmoodfit.com/",
+        meta: "Mood tracking",
+        tags: ["Tracking", "Reflection"],
+        kind: "link",
+      },
+      {
+        title: "MindShift CBT",
+        description:
+          "A CBT-based app focused on anxiety, worry, perfectionism, panic, and social anxiety using practical exercises and check-ins.",
+        href: "https://www.anxietycanada.com/resources/mindshift-cbt/",
+        meta: "Depression & anxiety",
+        tags: ["CBT", "Anxiety"],
+        kind: "link",
+      },
+      {
+        title: "Sanvello",
+        description:
+          "Offers guided journeys, journaling, mood tracking, and coping tools for stress, anxiety, and depression support.",
+        href: "https://www.sanvello.com/",
+        meta: "Depression & anxiety",
+        tags: ["Stress", "Support"],
+        kind: "link",
+      },
+      {
+        title: "Insight Timer",
+        description:
+          "A large meditation and sleep app with guided breathing, sleep tracks, and mindfulness sessions for beginners and regular users.",
+        href: "https://insighttimer.com/",
+        meta: "Sleep / meditate / relax",
+        tags: ["Meditation", "Sleep"],
+        kind: "link",
+      },
+      {
+        title: "Smiling Mind",
+        description:
+          "A guided mindfulness app with programs for calm, focus, sleep, and stress regulation for different ages and needs.",
+        href: "https://www.smilingmind.com.au/",
+        meta: "Sleep / meditate / relax",
+        tags: ["Mindfulness", "Calm"],
+        kind: "link",
       },
     ],
   },
+},
 
-  "transform-negative-thoughts": {
-    title: "Transform Negative Thoughts",
-    description: "Learn how to challenge and reframe negative thinking patterns.",
-    category: "Self Help & Tools",
-    icon: "🔄",
-    color: "from-red-400 to-orange-400",
-    sections: [
+"transform-negative-thoughts": {
+  title: "Transform Negative Thoughts",
+  description:
+    "By practicing mindfulness and self-awareness, it becomes possible to identify negative thoughts, challenge them, and gradually replace them with healthier and more balanced thinking patterns.",
+  longDescription:
+    "Negative thoughts can sometimes feel automatic, intense, and believable — especially during stress, anxiety, shame, sadness, or emotional overwhelm. Over time, repeated negative thinking can keep a person stuck in self-doubt, fear, hopelessness, and unhealthy patterns.\n\nThe good news is that thoughts are not fixed truths. They can be observed, questioned, challenged, and transformed. This page is designed to help you understand how negative thought patterns work, how mindfulness can weaken their power, and what practical steps you can take to build healthier thinking habits.\n\nYou do not need to change every thought at once. The goal is not perfection. The goal is to notice patterns, slow them down, and begin choosing responses that are kinder, wiser, and more supportive of your wellbeing.",
+  category: "Self Help & Tools",
+  icon: "🔄",
+  color: "from-rose-500 to-orange-500",
+  heroImage:
+    "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1600&q=80",
+  resourceLayout: "list",
+  sections: [
+    {
+      heading: "Why negative thoughts feel so powerful",
+      items: [
+        "Negative thoughts often feel convincing because they repeat themselves. The more often a thought appears, the more familiar and automatic it becomes.",
+        "Stress, anxiety, loneliness, shame, grief, and exhaustion can make negative thinking stronger and harder to question.",
+        "Many negative thoughts are based on fear rather than fact. They may sound true in the moment, but that does not mean they are accurate.",
+        "When we do not challenge unhealthy thoughts, they can begin shaping mood, confidence, choices, relationships, and our view of the future.",
+      ],
+    },
+    {
+      heading: "Releasing negative thought patterns",
+      items: [
+        "Mindfulness helps you notice your thoughts without immediately believing or obeying them.",
+        "Instead of judging yourself for having a negative thought, pause and simply observe it.",
+        "When you become aware of a thought pattern, you create space between the thought and your reaction.",
+        "That small pause is powerful — it gives you a chance to choose a healthier response.",
+      ],
+    },
+    {
+      heading: "Common unhelpful thinking patterns",
+      items: [
+        "Catastrophizing: assuming the worst possible outcome will happen.",
+        "Overgeneralizing: believing one painful event means everything is bad or always will be.",
+        "Labeling: using harsh words like “I’m useless,” “I’m broken,” or “I’m a failure.”",
+        "Mind-reading: assuming you know what others think of you without real evidence.",
+        "Black-and-white thinking: seeing things as total success or total failure with no middle ground.",
+        "Personalization: blaming yourself for things that may not actually be your fault.",
+      ],
+    },
+    {
+      heading: "Challenging negative thoughts",
+      items: [
+        "Step 1: Recognize that you are having a negative thought or thought pattern.",
+        "Step 2: Pause and mentally say, “Stop,” “This is a thought, not a fact,” or “Let me slow down.”",
+        "Step 3: Challenge the thought with questions like: What evidence do I have? Is there another explanation? Would I say this to someone I love?",
+        "Step 4: Replace the thought with something more balanced, realistic, and kind.",
+        "Example: instead of “I always ruin everything,” try “I made a mistake, but I can learn, repair, and move forward.”",
+      ],
+    },
+    {
+      heading: "Becoming mindful: your action plan",
+      items: [
+        "Imagine how children and animals experience the world — they are often more present, curious, and engaged in the moment.",
+        "Practice bringing gentle curiosity to your thoughts instead of fear or judgment.",
+        "Try yoga, stretching, or mindful movement to connect your attention back to your body.",
+        "Use your breathing as an anchor when your mind feels crowded or fast.",
+        "Return your attention to the present moment again and again. That repetition is part of the practice.",
+      ],
+    },
+    {
+      heading: "Simple mindfulness practices for daily life",
+      items: [
+        "Eat mindfully: notice flavor, texture, smell, and the act of chewing instead of rushing.",
+        "Take a mindful shower: pay attention to the temperature, the water, the scent, and how your body feels.",
+        "Practice mindful listening: hear someone fully without preparing your response while they speak.",
+        "Use grounding through the senses: name 5 things you see, 4 you feel, 3 you hear, 2 you smell, and 1 you taste.",
+        "Pause during the day and ask: What am I thinking right now? Is it helping me or harming me?",
+      ],
+    },
+    {
+      heading: "Suggested actions to interrupt negative thinking",
+      items: [
+        "Go for a walk outside.",
+        "Stretch or do a short yoga video.",
+        "Write in a journal for 5 minutes.",
+        "Message a trusted friend.",
+        "Listen to calming music.",
+        "Take a deep breath and drink water.",
+        "Read something comforting.",
+        "Watch a funny video or movie clip.",
+        "Take a warm shower or bath.",
+        "Do one small task fully and slowly.",
+        "Sit in sunlight or near a window.",
+        "Practice gratitude by naming 3 small things that are okay right now.",
+      ],
+    },
+    {
+      heading: "A healthier replacement mindset",
+      items: [
+        "I can have difficult thoughts without becoming those thoughts.",
+        "I do not need to believe everything my mind says when I am overwhelmed.",
+        "This moment is hard, but it is not permanent.",
+        "I am allowed to slow down and question what feels true.",
+        "Progress comes from practice, not perfection.",
+        "A more balanced thought can be stronger than a louder negative one.",
+      ],
+    },
+  ],
+  resources: {
+    heading: "Practical tools for transforming negative thoughts",
+    subheading:
+      "Use these one at a time. The goal is to practice noticing, slowing down, and responding more wisely.",
+    items: [
       {
-        heading: "Step 1: Catch the Thought",
-        items: ["Notice the negative thought.", "Write it down exactly as it appears."],
+        title: "Thought check worksheet",
+        description:
+          "Write the thought down exactly as it appears. Then ask: Is it true? Is it fully true? What evidence supports it? What evidence does not? What is a more balanced version of this thought?",
+        image:
+          "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
+        meta: "Reflection tool",
+        tags: ["CBT", "Writing", "Awareness"],
+        kind: "link",
       },
       {
-        heading: "Step 2: Challenge It",
-        items: ["Is this 100% true?", "What evidence supports it? What evidence does not?"],
+        title: "Challenge the thought",
+        description:
+          "When a negative thought appears, ask questions like: Is there another way to look at this? What would I say to a friend? Am I assuming the worst? Am I using extreme language?",
+        image:
+          "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+        meta: "Mindset skill",
+        tags: ["Reframing", "Clarity"],
+        kind: "link",
       },
       {
-        heading: "Step 3: Replace It",
-        items: ["Rewrite it in a balanced way.", "Use compassionate self-talk."],
+        title: "Mindfulness reset",
+        description:
+          "Use a short mindfulness break to come back into the present. Sit, breathe slowly, relax your shoulders, and notice what is happening right now instead of what your mind predicts.",
+        image:
+          "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80",
+        meta: "Calming practice",
+        tags: ["Mindfulness", "Breathing"],
+        kind: "link",
+      },
+      {
+        title: "Daily gratitude practice",
+        description:
+          "Gratitude does not deny pain. It helps you notice what is still supportive, meaningful, or beautiful even in difficult seasons.",
+        image:
+          "https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1200&q=80",
+        meta: "Daily habit",
+        tags: ["Gratitude", "Perspective"],
+        kind: "link",
+      },
+      {
+        title: "Action before overthinking",
+        description:
+          "Choose one useful action before your mind spirals further. Send the email, wash your face, step outside, make tea, tidy one small area, or ask for support.",
+        image:
+          "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1200&q=80",
+        meta: "Reset idea",
+        tags: ["Action", "Momentum"],
+        kind: "link",
+      },
+      {
+        title: "Gentle self-talk replacement",
+        description:
+          "Replace harsh self-talk with language that is honest but kind. Example: “I am struggling right now” is healthier than “I am hopeless.”",
+        image:
+          "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
+        meta: "Self-compassion",
+        tags: ["Self-talk", "Healing"],
+        kind: "link",
       },
     ],
   },
-
-  "words-of-wisdom": {
-    title: "Words of Wisdom",
-    description: "Inspiring quotes and reflections to uplift your mindset.",
-    category: "Self Help & Tools",
-    icon: "💭",
-    color: "from-yellow-400 to-amber-400",
-    sections: [
+},
+"words-of-wisdom": {
+  title: "Words of Wisdom",
+  description:
+    "Sometimes a short quote, reflection, or simple reminder can bring comfort, perspective, and strength during difficult moments.",
+  longDescription:
+    "Words alone do not solve everything, but the right sentence at the right time can help you breathe, soften self-judgment, and remember that pain is not permanent. This page offers steady, encouraging reflections that can support hope, patience, and self-kindness.",
+  category: "Self Help & Tools",
+  icon: "💭",
+  color: "from-amber-500 to-yellow-500",
+  heroImage:
+    "https://images.unsplash.com/photo-1510936111840-65e151ad71bb?auto=format&fit=crop&w=1600&q=80",
+  resources: {
+    heading: "Gentle reminders",
+    items: [
       {
-        heading: "Quick Reset",
-        items: ["Read one quote slowly.", "Take 3 deep breaths.", "Write one sentence: What do I need today?"],
+        title: "You do not need to heal all at once.",
+        description:
+          "Progress often happens in small, quiet steps. Resting, pausing, and starting again still count.",
+        tags: ["Healing", "Patience"],
+        icon: "🌱",
+        meta: "Reflection",
+        image:
+          "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=1200&q=80",
       },
       {
-        heading: "Try This",
-        items: ["Pick a quote and repeat it for 30 seconds.", "Share it with someone who needs encouragement."],
+        title: "A hard day is not a hopeless life.",
+        description:
+          "Today may feel heavy, but feelings change. Give yourself time before deciding what this moment means.",
+        tags: ["Hope", "Perspective"],
+        icon: "☀️",
+        meta: "Reminder",
+        image:
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        title: "Speak to yourself like someone worth protecting.",
+        description:
+          "Harsh self-talk increases pain. Compassion creates more room for healing and wiser choices.",
+        tags: ["Self-kindness", "Care"],
+        icon: "🫶",
+        meta: "Self-talk",
+        image:
+          "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        title: "You are allowed to ask for help.",
+        description:
+          "Reaching out is not weakness. Support can be part of recovery, not proof that you failed.",
+        tags: ["Support", "Strength"],
+        icon: "🤝",
+        meta: "Encouragement",
+        image:
+          "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        title: "Try one small good thing today.",
+        description:
+          "Drink water, step outside, message someone, breathe slowly, or rest. Small actions matter more than they look.",
+        tags: ["Action", "Gentle reset"],
+        icon: "✨",
+        meta: "Daily practice",
+        image:
+          "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        title: "Your story is still being written.",
+        description:
+          "This moment is real, but it is not the final chapter. Leave room for change, help, and surprise.",
+        tags: ["Hope", "Future"],
+        icon: "📖",
+        meta: "Perspective",
+        image:
+          "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80",
       },
     ],
   },
+},
 
-  gallery: {
-    title: "Image Gallery",
-    description: "A visual collection of calming and motivational imagery.",
-    category: "Self Help & Tools",
-    icon: "🖼️",
-    color: "from-pink-400 to-rose-400",
-    sections: [
+gallery: {
+  title: "Image Gallery",
+  description:
+    "A visual gallery of calming, hopeful, and grounding images to help you pause, breathe, and reset.",
+  longDescription:
+    "Sometimes words feel like too much. Visuals can offer a softer way to regulate emotions, ground attention, and create a moment of calm. Use this page as a simple reset: choose one image, slow down, and stay with it for a minute.",
+  category: "Self Help & Tools",
+  icon: "🖼️",
+  color: "from-pink-500 to-rose-500",
+  heroImage:
+    "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80",
+  resourceColumns: 3,
+  resources: {
+    heading: "Calming visuals",
+    subheading:
+      "Pick one image and stay with it. Notice color, light, detail, and how your breathing changes.",
+    items: [
       {
-        heading: "How to Use",
-        items: [
-          "Pick one image and focus on it for 30 seconds.",
-          "Notice 3 details you didn’t see at first.",
-          "Match your breathing to a slow count of 4 in / 4 out.",
-        ],
+        title: "Mountain sunrise",
+        description: "A steady visual for grounding and perspective.",
+        image:
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+        tags: ["Nature", "Hope"],
+        meta: "Visual reset",
+      },
+      {
+        title: "Forest path",
+        description: "Use this image to imagine walking somewhere quiet and safe.",
+        image:
+          "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80",
+        tags: ["Grounding", "Calm"],
+        meta: "Nature",
+      },
+      {
+        title: "Ocean horizon",
+        description: "A wide, gentle view that can help slow racing thoughts.",
+        image:
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        tags: ["Breathing", "Space"],
+        meta: "Visual calm",
+      },
+      {
+        title: "Soft clouds",
+        description: "A light image for brief rest and mental softness.",
+        image:
+          "https://images.unsplash.com/photo-1499346030926-9a72daac6c63?auto=format&fit=crop&w=1200&q=80",
+        tags: ["Rest", "Lightness"],
+        meta: "Pause",
+      },
+      {
+        title: "Warm window light",
+        description: "A simple image to create a sense of comfort and stillness.",
+        image:
+          "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+        tags: ["Comfort", "Quiet"],
+        meta: "Home",
+      },
+      {
+        title: "Flowers in bloom",
+        description: "A reminder that growth can return slowly and gently.",
+        image:
+          "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=1200&q=80",
+        tags: ["Growth", "Hope"],
+        meta: "Nature",
       },
     ],
   },
+},
 
-  "acts-of-kindness": {
-    title: "Acts of Kindness",
-    description: "Simple ways to spread positivity and compassion.",
-    category: "Self Help & Tools",
-    icon: "❤️",
-    color: "from-red-400 to-pink-400",
-    sections: [
+"acts-of-kindness": {
+  title: "Acts of Kindness",
+  description:
+    "Simple acts of kindness can improve mood, build connection, and create moments of meaning for both you and other people.",
+  longDescription:
+    "Kindness does not need to be big to matter. A short message, a sincere thank you, checking in on someone, or doing one gentle thing for yourself can shift the emotional tone of a day. Kindness can interrupt isolation, increase connection, and remind you that your actions still matter.\n\nThis page offers easy ways to practice kindness toward others and yourself without pressure or perfection.",
+  category: "Self Help & Tools",
+  icon: "❤️",
+  color: "from-red-500 to-pink-500",
+  heroImage:
+    "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1600&q=80",
+  resources: {
+    heading: "Kindness ideas to try",
+    items: [
       {
-        heading: "Small Acts",
-        items: [
-          "Send a supportive message to someone.",
-          "Hold the door or say thank you.",
-          "Leave a kind review for a small business.",
-        ],
+        title: "Send a supportive text",
+        description:
+          "Message someone with something simple like: “Thinking of you today” or “Hope you’re doing okay.”",
+        tags: ["Connection", "Support"],
+        icon: "💬",
+        meta: "2 min",
+        image:
+          "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
       },
       {
-        heading: "Kindness to Yourself",
-        items: ["Take a break without guilt.", "Eat something nourishing.", "Speak to yourself like a friend."],
+        title: "Say thank you directly",
+        description:
+          "Choose one person and thank them specifically for something they did, even if it was small.",
+        tags: ["Gratitude", "Relationships"],
+        icon: "🙏",
+        meta: "Quick act",
+        image:
+          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        title: "Hold space for someone",
+        description:
+          "Listen without rushing to fix. Being present and gentle can be deeply supportive.",
+        tags: ["Listening", "Care"],
+        icon: "🫂",
+        meta: "Connection",
+        image:
+          "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        title: "Do one kind thing for your future self",
+        description:
+          "Prepare something helpful for tomorrow: water, a clean space, a note, or clothes ready for the morning.",
+        tags: ["Self-care", "Routine"],
+        icon: "🌿",
+        meta: "Self-kindness",
+        image:
+          "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        title: "Leave a positive review or note",
+        description:
+          "Thank a teacher, small business, coworker, or service worker with a kind review or message.",
+        tags: ["Encouragement", "Impact"],
+        icon: "⭐",
+        meta: "Small action",
+        image:
+          "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        title: "Be kind to yourself on purpose",
+        description:
+          "Speak to yourself with patience. Rest without guilt. Eat something nourishing. Lower one expectation today.",
+        tags: ["Self-compassion", "Relief"],
+        icon: "💖",
+        meta: "Important",
+        image:
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
       },
     ],
   },
-
+},
   "improve-mood": {
     title: "Improve Your Mood",
     description:

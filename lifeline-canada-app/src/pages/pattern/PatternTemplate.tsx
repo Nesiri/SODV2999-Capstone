@@ -193,24 +193,6 @@ function Hero({
             </a>
           </div>
 
-          <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <div className="rounded-2xl border border-slate-200 bg-white/70 px-4 py-3">
-              <p className="text-xs font-medium text-slate-500">Time</p>
-              <p className="mt-1 text-sm font-semibold text-slate-900">5–10 min</p>
-            </div>
-            <div className="rounded-2xl border border-slate-200 bg-white/70 px-4 py-3">
-              <p className="text-xs font-medium text-slate-500">Effort</p>
-              <p className="mt-1 text-sm font-semibold text-slate-900">Low</p>
-            </div>
-            <div className="rounded-2xl border border-slate-200 bg-white/70 px-4 py-3">
-              <p className="text-xs font-medium text-slate-500">Best for</p>
-              <p className="mt-1 text-sm font-semibold text-slate-900">Reset</p>
-            </div>
-            <div className="rounded-2xl border border-slate-200 bg-white/70 px-4 py-3">
-              <p className="text-xs font-medium text-slate-500">Try</p>
-              <p className="mt-1 text-sm font-semibold text-slate-900">1 idea</p>
-            </div>
-          </div>
         </div>
 
         <div className="md:col-span-5">
