@@ -37,7 +37,7 @@ const BCCrisisCentres: React.FC = () => {
                   <img
                     src="/assets/flags/bcth_1024x1024-300x149.webp"
                     alt="British Columbia Flag"
-                    className="w-48 xs:w-56 sm:w-64 md:w-72 lg:w-80 xl:w-96 h-auto rounded-xl transform group-hover:scale-110 transition duration-700 ease-out"
+                    className="w-70 xs:w-70 sm:w-80 md:w-96 lg:w-110 xl:w-130 h-auto rounded-xl transform group-hover:scale-110 transition duration-700 ease-out"
                   />
                 </div>
               </div>

@@ -44,30 +44,30 @@ const MentalHealthResources: React.FC = () => {
           <MentalHealthCardsGrid cards={filteredCards} limit={6} />
         </div>
 
-       {/* Show More Button - optimized */}
-<div className="text-center mt-20">
-  <div className="relative inline-flex group">
-    <Link
-      to="/resources"
-      className="relative px-10 py-5 bg-gradient-to-r from-yellow-100 via-purple-100 to-blue-50 text-gray-900 text-xl font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-3"
-    >
-      <span>View More</span>
-      <svg
-        className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2.5}
-          d="M17 8l4 4m0 0l-4 4m4-4H3"
-        />
-      </svg>
-    </Link>
-  </div>
-</div>
+        {/* Show More Button - optimized */}
+        <div className="text-center mt-20">
+          <div className="relative inline-flex group">
+            <Link
+              to="/resources"
+              className="relative px-10 py-5 bg-gradient-to-r from-yellow-100 via-purple-100 to-blue-50 text-gray-900 text-xl font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-3"
+            >
+              <span>View More</span>
+              <svg
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2.5}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
+          </div>
+        </div>
       </div>
 
       {/* Optimized styles - removed heavy animations */}

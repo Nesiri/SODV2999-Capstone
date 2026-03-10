@@ -16,62 +16,62 @@ const provinces: Province[] = [
   {
     name: 'Alberta',
     image: '/assets/flags/alth_1024x1024-300x149.webp',
-    path: '/alberta',
+    path: '/alberta-crisis-centres',
   },
   {
     name: 'Saskatchewan',
     image: '/assets/flags/sath_1024x1024-300x149.webp',
-    path: '/saskatchewan',
+    path: '/saskatchewan-crisis-centres',
   },
   {
     name: 'Manitoba',
     image: '/assets/flags/math_grande-300x147.webp',
-    path: '/manitoba',
+    path: '/manitoba-crisis-centres',
   },
   {
     name: 'Ontario',
     image: '/assets/flags/onth_grande-300x149.webp',
-    path: '/ontario',
+    path: '/ontario-crisis-centres',
   },
   {
     name: 'Quebec',
     image: '/assets/flags/quth_1024x1024-300x149.webp',
-    path: '/quebec',
+    path: '/quebec-crisis-centres',
   },
   {
     name: 'New Brunswick',
     image: '/assets/flags/nbth_1024x1024-300x147.webp',
-    path: '/new-brunswick',
+    path: '/newbrunswick-crisis-centres',
   },
   {
     name: 'Newfoundland and Labrador',
     image: '/assets/flags/nfth_1024x1024-300x148.webp',
-    path: '/newfoundland',
+    path: '/newfoundland-crisis-centres',
   },
   {
     name: 'Nova Scotia',
     image: '/assets/flags/nsth_1024x1024-300x151.webp',
-    path: '/nova-scotia',
+    path: '/nova-scotia-crisis-centres',
   },
   {
     name: 'Prince Edward Island',
     image: '/assets/flags/peith_1024x1024-300x150.webp',
-    path: '/pei',
+    path: '/pei-crisis-centres',
   },
   {
     name: 'Yukon',
     image: '/assets/flags/yuth_1024x1024-e1687406771897-300x149.webp',
-    path: '/yukon',
+    path: '/yukon-crisis-centres',
   },
   {
     name: 'Nunavut',
     image: '/assets/flags/nuth_1024x1024-300x150.webp',
-    path: '/nunavut',
+    path: '/nunavut-crisis-centres',
   },
   {
     name: 'Northwest Territories',
     image: '/assets/flags/nwth_1024x1024-300x149.webp',
-    path: '/nwt',
+    path: '/nwterritories-crisis-centres',
   },
 ];
 

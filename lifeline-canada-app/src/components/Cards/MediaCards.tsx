@@ -122,94 +122,103 @@ const getHoverOverlayIcon = (category: string = '') => {
 };
 
 // OPTIMIZED Image component with lazy loading and async decoding
-const OptimizedCardImage = memo(({ 
-  src, 
-  alt, 
-  onLoad, 
-  isLoaded 
-}: { 
-  src: string; 
-  alt: string; 
-  onLoad: () => void;
-  isLoaded: boolean;
-}) => {
-  return (
-    <>
-      {!isLoaded && (
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-shimmer" />
-      )}
-      <img
-        src={src.startsWith('/') ? src : `/${src}`}
-        alt={alt}
-        loading="lazy"
-        decoding="async"
-      
-        className={`
+const OptimizedCardImage = memo(
+  ({
+    src,
+    alt,
+    onLoad,
+    isLoaded,
+  }: {
+    src: string;
+    alt: string;
+    onLoad: () => void;
+    isLoaded: boolean;
+  }) => {
+    return (
+      <>
+        {!isLoaded && (
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-shimmer" />
+        )}
+        <img
+          src={src.startsWith('/') ? src : `/${src}`}
+          alt={alt}
+          loading="lazy"
+          decoding="async"
+          className={`
           absolute inset-0 w-full h-full object-cover
           transition-all duration-700 ease-out
           group-hover:scale-110 group-hover:rotate-1
           ${isLoaded ? 'opacity-100' : 'opacity-0'}
         `}
-        onLoad={onLoad}
-        onError={(e) => {
-          e.currentTarget.src = 'https://via.placeholder.com/400x300?text=💚+Mental+Wellness';
-        }}
-      />
-    </>
-  );
-});
+          onLoad={onLoad}
+          onError={(e) => {
+            e.currentTarget.src =
+              'https://via.placeholder.com/400x300?text=💚+Mental+Wellness';
+          }}
+        />
+      </>
+    );
+  }
+);
 
 OptimizedCardImage.displayName = 'OptimizedCardImage';
 
 // MEMOIZED CARD COMPONENT - prevents re-renders of other cards
-const MediaCardItem = memo(({ 
-  card, 
-  index, 
-  basePath,
-  isHovered,
-  onHoverStart,
-  onHoverEnd,
-  isImageLoaded,
-  onImageLoad
-}: { 
-  card: MediaCard;
-  index: number;
-  basePath: string;
-  isHovered: boolean;
-  onHoverStart: () => void;
-  onHoverEnd: () => void;
-  isImageLoaded: boolean;
-  onImageLoad: () => void;
-}) => {
-  // Memoize generated slug
-  const cardPath = useMemo(() => {
-    const slug = card.title
-      .toLowerCase()
-      .replace(/[^\w\s]/g, '')
-      .replace(/\s+/g, '-');
-    return card.path || `${basePath}/${slug}`;
-  }, [card.path, card.title, basePath]);
+const MediaCardItem = memo(
+  ({
+    card,
+    index,
+    basePath,
+    isHovered,
+    onHoverStart,
+    onHoverEnd,
+    isImageLoaded,
+    onImageLoad,
+  }: {
+    card: MediaCard;
+    index: number;
+    basePath: string;
+    isHovered: boolean;
+    onHoverStart: () => void;
+    onHoverEnd: () => void;
+    isImageLoaded: boolean;
+    onImageLoad: () => void;
+  }) => {
+    // Memoize generated slug
+    const cardPath = useMemo(() => {
+      const slug = card.title
+        .toLowerCase()
+        .replace(/[^\w\s]/g, '')
+        .replace(/\s+/g, '-');
+      return card.path || `${basePath}/${slug}`;
+    }, [card.path, card.title, basePath]);
 
-  // Memoize category icon
-  const categoryIcon = useMemo(() => getCategoryIcon(card.category), [card.category]);
-  const hoverIcon = useMemo(() => getHoverOverlayIcon(card.category), [card.category]);
+    // Memoize category icon
+    const categoryIcon = useMemo(
+      () => getCategoryIcon(card.category),
+      [card.category]
+    );
+    const hoverIcon = useMemo(
+      () => getHoverOverlayIcon(card.category),
+      [card.category]
+    );
 
-  // Memoize image source
-  const imageSrc = useMemo(() => 
-    card.image.startsWith('/') ? card.image : `/${card.image}`,
-    [card.image]
-  );
+    // Memoize image source
+    const imageSrc = useMemo(
+      () => (card.image.startsWith('/') ? card.image : `/${card.image}`),
+      [card.image]
+    );
 
-  return (
-    <Link
-      to={cardPath}
-      className="group relative block no-underline will-change-transform contain-content"
-      onMouseEnter={onHoverStart}
-      onMouseLeave={onHoverEnd}
-      style={{ animationDelay: `${index * 100}ms` }}
-    >
-      <div
-        className={`
+    return (
+      <Link
+        to={cardPath}
+        className="group relative block no-underline will-change-transform contain-content"
+        onMouseEnter={onHoverStart}
+        onMouseLeave={onHoverEnd}
+        style={{ animationDelay: `${index * 100}ms` }}
+      >
+        <div
+          className={`
           relative w-full max-w-[320px] mx-auto bg-white/80 backdrop-blur-sm rounded-2xl 
           shadow-xl hover:shadow-2xl 
           transition-all duration-500 ease-out
@@ -218,74 +227,75 @@ const MediaCardItem = memo(({
           overflow-hidden
           ${isHovered ? 'ring-4 ring-purple-500/30' : ''}
         `}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 via-pink-600/0 to-rose-600/0 group-hover:from-purple-600/10 group-hover:via-pink-600/10 group-hover:to-rose-600/10 transition-all duration-500" />
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 via-pink-600/0 to-rose-600/0 group-hover:from-purple-600/10 group-hover:via-pink-600/10 group-hover:to-rose-600/10 transition-all duration-500" />
 
-        {/* Image Container */}
-        <div className="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
-          <OptimizedCardImage
-            src={imageSrc}
-            alt={card.title}
-            isLoaded={isImageLoaded}
-            onLoad={onImageLoad}
-          />
+          {/* Image Container */}
+          <div className="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
+            <OptimizedCardImage
+              src={imageSrc}
+              alt={card.title}
+              isLoaded={isImageLoaded}
+              onLoad={onImageLoad}
+            />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-          {/* Category-specific Icon */}
-          <div className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform duration-300">
-            {categoryIcon}
-          </div>
+            {/* Category-specific Icon */}
+            <div className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform duration-300">
+              {categoryIcon}
+            </div>
 
-          {/* Hover Overlay */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-100 scale-90">
-            <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-2xl">
-              {hoverIcon}
+            {/* Hover Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-100 scale-90">
+              <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-2xl">
+                {hoverIcon}
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Content */}
-        <div className="relative p-6 h-[140px] flex flex-col">
-          <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-300">
-            {card.title}
-          </h3>
+          {/* Content */}
+          <div className="relative p-6 h-[140px] flex flex-col">
+            <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-300">
+              {card.title}
+            </h3>
 
-          <div className="w-12 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-3 transform origin-left group-hover:scale-x-150 transition-transform duration-300" />
+            <div className="w-12 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-3 transform origin-left group-hover:scale-x-150 transition-transform duration-300" />
 
-          <div className="flex items-center justify-between text-sm mt-auto">
-            <span className="text-gray-500 capitalize">
-              {card.category?.replace('-', ' ')}
-            </span>
-            <span className="text-purple-600 font-semibold flex items-center gap-1">
-              <svg
-                className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </span>
+            <div className="flex items-center justify-between text-sm mt-auto">
+              <span className="text-gray-500 capitalize">
+                {card.category?.replace('-', ' ')}
+              </span>
+              <span className="text-purple-600 font-semibold flex items-center gap-1">
+                <svg
+                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          {/* Corner accents */}
+          <div className="absolute top-0 left-0 w-12 h-12">
+            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-purple-200/50 rounded-tl-xl group-hover:border-purple-400 transition-colors duration-500" />
+          </div>
+          <div className="absolute bottom-0 right-0 w-12 h-12">
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-pink-200/50 rounded-br-xl group-hover:border-pink-400 transition-colors duration-500" />
           </div>
         </div>
-
-        {/* Corner accents */}
-        <div className="absolute top-0 left-0 w-12 h-12">
-          <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-purple-200/50 rounded-tl-xl group-hover:border-purple-400 transition-colors duration-500" />
-        </div>
-        <div className="absolute bottom-0 right-0 w-12 h-12">
-          <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-pink-200/50 rounded-br-xl group-hover:border-pink-400 transition-colors duration-500" />
-        </div>
-      </div>
-    </Link>
-  );
-});
+      </Link>
+    );
+  }
+);
 
 MediaCardItem.displayName = 'MediaCardItem';
 
@@ -300,11 +310,17 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
 
   // Memoize handlers to prevent function recreation
-  const handleHoverStart = useCallback((id: number) => () => setHoveredId(id), []);
+  const handleHoverStart = useCallback(
+    (id: number) => () => setHoveredId(id),
+    []
+  );
   const handleHoverEnd = useCallback(() => setHoveredId(null), []);
-  const handleImageLoad = useCallback((id: number) => () => {
-    setLoadedImages(prev => new Set(prev).add(id));
-  }, []);
+  const handleImageLoad = useCallback(
+    (id: number) => () => {
+      setLoadedImages((prev) => new Set(prev).add(id));
+    },
+    []
+  );
 
   return (
     <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-purple-50 via-white to-pink-50">
@@ -378,8 +394,6 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
             />
           ))}
         </div>
-
-       
       </div>
 
       {/* CSS Animations */}

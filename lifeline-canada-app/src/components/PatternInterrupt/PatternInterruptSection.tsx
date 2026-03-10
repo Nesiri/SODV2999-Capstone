@@ -200,9 +200,6 @@ const PatternInterruptSection: React.FC = () => {
                 </div>
               </div>
             </div>
-
-            
-           
           </div>
 
           {/* Right Side - Image with Effects */}
