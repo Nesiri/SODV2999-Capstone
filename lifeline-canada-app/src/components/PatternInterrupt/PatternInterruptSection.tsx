@@ -201,42 +201,8 @@ const PatternInterruptSection: React.FC = () => {
               </div>
             </div>
 
-            {/* CTA Button */}
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-amber-500 to-pink-500 rounded-2xl font-semibold text-white overflow-hidden transition-all duration-500 transform-gpu hover:scale-105 hover:shadow-2xl active:scale-95">
-              <span className="relative z-10 flex items-center gap-3">
-                Start Your Journey
-                <svg
-                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </span>
-              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            </button>
-
-            {/* Stats */}
-            <div className="flex gap-8 mt-12">
-              <div>
-                <div className="text-3xl font-bold text-white">85%</div>
-                <div className="text-sm text-white/60">Success Rate</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-white">10k+</div>
-                <div className="text-sm text-white/60">Lives Changed</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-white">24/7</div>
-                <div className="text-sm text-white/60">Support</div>
-              </div>
-            </div>
+            
+           
           </div>
 
           {/* Right Side - Image with Effects */}
@@ -296,7 +262,7 @@ const PatternInterruptSection: React.FC = () => {
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-amber-400 to-pink-400 rounded-full" />
                 <div>
-                  <div className="text-white font-semibold">Sarah Johnson</div>
+                  <div className="text-white font-semibold"></div>
                   <div className="text-white/60 text-sm">
                     Journey of 6 months
                   </div>
