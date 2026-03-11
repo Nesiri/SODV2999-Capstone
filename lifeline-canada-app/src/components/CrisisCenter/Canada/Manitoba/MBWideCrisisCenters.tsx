@@ -7,9 +7,7 @@ const MBWideCrisisCentres: React.FC = () => {
       title: 'Manitoba Suicide Line',
       image: 'assets/CanadaCenter_image/MB/monitoba.png',
       path: 'https://reasontolive.ca/',
-      lines: [
-       '1-877-435-7170'
-      ],
+      lines: ['1-877-435-7170'],
     },
   ];
 
@@ -24,7 +22,7 @@ const MBWideCrisisCentres: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-serif bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 bg-clip-text text-transparent px-4">
-           Manitoba
+            Manitoba
             <span className="block text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 bg-clip-text text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mt-2">
               Province Wide Crisis Centres
             </span>
@@ -91,7 +89,7 @@ const MBWideCrisisCentres: React.FC = () => {
                     <h3 className="text-2xl font-medium text-gray-800 border-b-2 border-purple-500 pb-2 inline-block">
                       {centre.title}
                     </h3>
-                 
+
                     {centre.lines.map((line, i) => {
                       const isMainNumber =
                         line.toLowerCase().includes('crisis') &&
@@ -109,7 +107,9 @@ const MBWideCrisisCentres: React.FC = () => {
                                 : 'hover:bg-white/60'
                           }`}
                         >
-                          <p className="text-gray-700 leading-relaxed">{line}</p>
+                          <p className="text-gray-700 leading-relaxed">
+                            {line}
+                          </p>
                         </div>
                       );
                     })}

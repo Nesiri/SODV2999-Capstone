@@ -5,12 +5,10 @@ const QCWiderCrisisCentres: React.FC = () => {
   const crisisCentres = [
     {
       title1: 'Quebec National Crisis Line',
-      title2:'Centre de prévention du suicide de Québec',
+      title2: 'Centre de prévention du suicide de Québec',
       image: 'assets/CanadaCenter_image/AB/capella.png',
       path: 'https://www.cpsquebec.ca/',
-      lines: [
-        'Crisis 24 Hours : 1-866-APPELLE (277-3553)'
-      ],
+      lines: ['Crisis 24 Hours : 1-866-APPELLE (277-3553)'],
     },
   ];
 
@@ -99,7 +97,6 @@ const QCWiderCrisisCentres: React.FC = () => {
                       const isMainNumber =
                         line.toLowerCase().includes('crisis') &&
                         line.includes(':');
-                   
 
                       return (
                         <div
@@ -110,7 +107,9 @@ const QCWiderCrisisCentres: React.FC = () => {
                               : ''
                           }`}
                         >
-                          <p className="text-gray-700 leading-relaxed">{line}</p>
+                          <p className="text-gray-700 leading-relaxed">
+                            {line}
+                          </p>
                         </div>
                       );
                     })}

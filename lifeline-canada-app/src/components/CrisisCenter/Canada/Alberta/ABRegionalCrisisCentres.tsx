@@ -16,10 +16,7 @@ const centres = [
     title: 'Distress Centre Calgary',
     image: '/assets/CanadaCenter_image/AB/distress_center.png',
     path: 'https://distresscentre.com/',
-    lines: [
-      'Serving Calgary & Area',
-      'Crisis Line: (403) 266-4357 24/7',
-    ],
+    lines: ['Serving Calgary & Area', 'Crisis Line: (403) 266-4357 24/7'],
   },
   {
     title: 'Distress Line of Southwestern Alberta',
@@ -75,10 +72,7 @@ const centres = [
     title: 'Calgary ConnecTeen',
     image: '/assets/CanadaCenter_image/AB/connect_teen.png',
     path: 'https://salvationarmy.ca/you-can-bring-hope/recovery-support/',
-    lines: [
-      'Call: 403-264-8336',
-      'Text: 587-333-2724',
-    ],
+    lines: ['Call: 403-264-8336', 'Text: 587-333-2724'],
   },
 ];
 
@@ -94,7 +88,7 @@ const ABRegionalCrisisCentres: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-serif bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 bg-clip-text text-transparent px-4">
-           Alberta Regional
+            Alberta Regional
             <span className="block text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 bg-clip-text text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mt-2">
               Crisis Support Centres
             </span>

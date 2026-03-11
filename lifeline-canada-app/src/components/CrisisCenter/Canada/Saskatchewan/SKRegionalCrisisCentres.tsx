@@ -34,9 +34,7 @@ const centres = [
     title: 'Prince Albert Mobile Crisis Unit',
     image: '/assets/CanadaCenter_image/SK/prince_alberta.png',
     path: 'https://www.pacrisis.ca/',
-    lines: [
-      'Crisis 24 hours: (306) 764-1011',
-    ],
+    lines: ['Crisis 24 hours: (306) 764-1011'],
   },
   {
     title: 'Regina Mobile Crisis Services',
@@ -51,18 +49,13 @@ const centres = [
     title: 'Southwest Crisis Services',
     image: '/assets/CanadaCenter_image/SK/southwest.png',
     path: 'https://www.swcrisis.ca/',
-    lines: [
-      'Swift Current',
-      '(306) 778-3386',
-    ],
+    lines: ['Swift Current', '(306) 778-3386'],
   },
   {
     title: 'West Central Crisis & Family Support Centre',
     image: '/assets/CanadaCenter_image/SK/westcentral.png',
     path: 'https://westcentralcrisis.ca/',
-    lines: [
-      'Crisis Mon-Fri, 9am-5pm: (306) 463-6655',
-    ],
+    lines: ['Crisis Mon-Fri, 9am-5pm: (306) 463-6655'],
   },
 ];
 
@@ -78,7 +71,7 @@ const SKRegionalCrisisCentres: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-serif bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 bg-clip-text text-transparent px-4">
-           Saskatchewan Regional
+            Saskatchewan Regional
             <span className="block text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 bg-clip-text text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mt-2">
               Crisis Support Centres
             </span>

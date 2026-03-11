@@ -6,19 +6,13 @@ const centres = [
     title: 'Cambridge Distress Centre',
     image: '/assets/CanadaCenter_image/ON/telecare-cambridge-400x102.jpg',
     path: '#',
-    lines: [
-      'Distress Line: 519-658-5455',
-      '24/7 Crisis Line: 1-844-437-3247',
-    ],
+    lines: ['Distress Line: 519-658-5455', '24/7 Crisis Line: 1-844-437-3247'],
   },
   {
     title: 'Distress Centre Durham',
     image: '/assets/CanadaCenter_image/ON/durham.png',
     path: 'https://distresscentredurham.com/',
-    lines: [
-      '905-430-2522',
-      '1-800-452-0688',
-    ],
+    lines: ['905-430-2522', '1-800-452-0688'],
   },
   {
     title: 'Distress Centre Halton',
@@ -35,35 +29,25 @@ const centres = [
     title: 'Hamilton Crisis Line',
     image: '/assets/CanadaCenter_image/ON/hamilton.png',
     path: 'https://sahamiltoncfs.ca/',
-    lines: [
-      '905-522-1477',
-      '1-855-294-4673',
-    ],
+    lines: ['905-522-1477', '1-855-294-4673'],
   },
   {
     title: 'Kingston Distress Line',
     image: '/assets/CanadaCenter_image/ON/kingston.png',
     path: 'https://www.telephoneaidlinekingston.com/',
-    lines: [
-      '613-544-1771',
-    ],
+    lines: ['613-544-1771'],
   },
   {
     title: 'Lanark, Leeds and Grenville Counties Distress Line',
     image: '/assets/CanadaCenter_image/ON/larnark.png',
     path: 'https://developmentalservices.com/services-distress',
-    lines: [
-      '1-800-465-4442',
-    ],
+    lines: ['1-800-465-4442'],
   },
   {
     title: 'London & District, Oxford & Surrounding Region',
     image: '/assets/CanadaCenter_image/ON/london.png',
     path: 'https://reachout247.ca/',
-    lines: [
-      'Reach Out 24/7: 1-866-933-2023',
-      'Support Line: 1-844-360-8055',
-    ],
+    lines: ['Reach Out 24/7: 1-866-933-2023', 'Support Line: 1-844-360-8055'],
   },
   {
     title: 'Distress Centre Niagara',
@@ -99,53 +83,37 @@ const centres = [
     title: 'Peel and Dufferin Region',
     image: '/assets/CanadaCenter_image/ON/peel&duffrin.png',
     path: 'https://cmhapeeldufferin.ca/programs/24-7-crisis-support-peel/',
-    lines: [
-      '24/7 Crisis Support',
-      '905-278-9036',
-      '1-888-811-2222',
-    ],
+    lines: ['24/7 Crisis Support', '905-278-9036', '1-888-811-2222'],
   },
   {
     title: 'Sarnia & Lambton County',
     image: '/assets/CanadaCenter_image/ON/sarnia@lambton.png',
     path: 'https://www.familycounsellingctr.com/',
-    lines: [
-      'Distress Line: 519-336-3000',
-      '1-888-347-8737',
-    ],
+    lines: ['Distress Line: 519-336-3000', '1-888-347-8737'],
   },
   {
     title: 'Here 24/7 Waterloo and Wellington Region',
     image: '/assets/CanadaCenter_image/ON/waterloo.png',
     path: 'https://here247.ca/',
-    lines: [
-      'Here 24/7: 1-844-437-3247',
-    ],
+    lines: ['Here 24/7: 1-844-437-3247'],
   },
   {
     title: 'Windsor & Essex County',
     image: '/assets/CanadaCenter_image/ON/windsor&essex.png',
     path: 'https://windsoressex.cmha.ca/wp-content/uploads/2016/11/Distress-Centre.pdf',
-    lines: [
-      'Distress Line: 519-256-5000',
-    ],
+    lines: ['Distress Line: 519-256-5000'],
   },
   {
     title: 'York & South Simcoe Regions',
     image: '/assets/CanadaCenter_image/ON/york.png',
     path: 'https://yssn.ca/crisis-services/310-cope/',
-    lines: [
-      'Distress Line: 1-855-310-COPE (2673)',
-    ],
+    lines: ['Distress Line: 1-855-310-COPE (2673)'],
   },
   {
     title: 'Red Lake Hospital Crisis Line',
     image: '/assets/CanadaCenter_image/ON/redlake.png',
     path: 'https://www.redlakehospital.ca/mentalhealth-addictionsservices',
-    lines: [
-      'Kenora Rainy River District of Ontario',
-      '1-866-888-8988',
-    ],
+    lines: ['Kenora Rainy River District of Ontario', '1-866-888-8988'],
   },
 ];
 
@@ -161,7 +129,7 @@ const ONRegionalCrisisCentres: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-serif bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 bg-clip-text text-transparent px-4">
-        Ontario Regional
+            Ontario Regional
             <span className="block text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 bg-clip-text text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mt-2">
               Crisis Support Centres
             </span>

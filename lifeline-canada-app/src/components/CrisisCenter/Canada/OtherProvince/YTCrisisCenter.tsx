@@ -6,10 +6,7 @@ const crisisCentres = [
     title1: 'Yukon Distress & Support Line',
     image: '/assets/CanadaCenter_image/OtherProvince/yukon.png',
     path: 'https://yukon.cmha.ca/',
-    lines: [
-        'All Ages 7 pm-12 am 7 days a week (PST)',
-        '1-844-533-3030'
-    ],
+    lines: ['All Ages 7 pm-12 am 7 days a week (PST)', '1-844-533-3030'],
   },
 ];
 
@@ -121,12 +118,12 @@ const YTCrisisCentres: React.FC = () => {
                     <h3 className="text-2xl font-medium text-gray-800 border-b-2 border-purple-500 pb-2 inline-block">
                       {centre.title1}
                     </h3>
-                    
+
                     {centre.lines.map((line, i) => {
                       const isMainNumber =
                         line.toLowerCase().includes('crisis') &&
                         line.includes(':');
-                   
+
                       return (
                         <div
                           key={i}
@@ -136,10 +133,10 @@ const YTCrisisCentres: React.FC = () => {
                               : ''
                           }`}
                         >
-                          <svg 
-                            className="w-4 h-4 text-purple-600 mr-2 flex-shrink-0" 
-                            fill="none" 
-                            stroke="currentColor" 
+                          <svg
+                            className="w-4 h-4 text-purple-600 mr-2 flex-shrink-0"
+                            fill="none"
+                            stroke="currentColor"
                             viewBox="0 0 24 24"
                           >
                             <path
@@ -149,7 +146,9 @@ const YTCrisisCentres: React.FC = () => {
                               d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                             />
                           </svg>
-                          <p className="text-gray-700 leading-relaxed">{line}</p>
+                          <p className="text-gray-700 leading-relaxed">
+                            {line}
+                          </p>
                         </div>
                       );
                     })}

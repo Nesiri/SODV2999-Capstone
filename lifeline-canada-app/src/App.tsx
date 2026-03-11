@@ -20,6 +20,9 @@ import ONCrisisCenterPage from './pages/CanadaCenter/ONCrisisCenterPage';
 import QCCrisisCenterPage from './pages/CanadaCenter/QCCrisisCentrePage';
 
 import OtherProvinceCrisisCenterPage from './pages/CanadaCenter/OtherProvincePage';
+import USACrisisCenterPage from './pages/USA/USACrisisCenterPage';
+import InternationalCrisisCentrePage from './pages/International/InternationalCentrePage';
+import ChatAndCallLinePage from './pages/ChatAndCallPage/Chat-CallPage';
 
 export default function App() {
   return (
@@ -38,16 +41,46 @@ export default function App() {
           <Route path="/contribute" element={<ContributionPage />} />
 
           <Route path="/contact" element={<ContactPage mode="contact" />} />
-          <Route path="/email-support" element={<ContactPage mode="email-support" />}/>
+          <Route
+            path="/email-support"
+            element={<ContactPage mode="email-support" />}
+          />
           <Route path="/site-map" element={<SiteMapPage />} />
-          <Route path="/canadian-crisis-centres" element={<CanadaCrisisCenterPage />}/>
-          <Route path="/british-columbia-crisis-centres" element={<BCCrisisCenterPage />} />
-         <Route path="/alberta-crisis-centres" element={<ABCrisisCentrePage />} />
-          <Route path="/saskatchewan-crisis-centres" element={<SKCrisisCenterPage/>}/>
-          <Route path="/manitoba-crisis-centres" element={<MBCrisisCentrePage/>}/>
-          <Route path="/ontario-crisis-centres" element={<ONCrisisCenterPage/>}/> 
-          <Route path="/quebec-crisis-centres" element={<QCCrisisCenterPage/>}/>
-          <Route path="/:mode" element={<OtherProvinceCrisisCenterPage/>}/>
+          <Route
+            path="/canadian-crisis-centres"
+            element={<CanadaCrisisCenterPage />}
+          />
+          <Route
+            path="/british-columbia-crisis-centres"
+            element={<BCCrisisCenterPage />}
+          />
+          <Route
+            path="/alberta-crisis-centres"
+            element={<ABCrisisCentrePage />}
+          />
+          <Route
+            path="/saskatchewan-crisis-centres"
+            element={<SKCrisisCenterPage />}
+          />
+          <Route
+            path="/manitoba-crisis-centres"
+            element={<MBCrisisCentrePage />}
+          />
+          <Route
+            path="/ontario-crisis-centres"
+            element={<ONCrisisCenterPage />}
+          />
+          <Route
+            path="/quebec-crisis-centres"
+            element={<QCCrisisCenterPage />}
+          />
+          <Route path="/:mode" element={<OtherProvinceCrisisCenterPage />} />
+          <Route path="/usa-crisis-centres" element={<USACrisisCenterPage />} />
+          <Route
+            path="/international-crisis-centres"
+            element={<InternationalCrisisCentrePage />}
+          />
+          <Route path="/in-crisis/:mode" element={<ChatAndCallLinePage />} />
         </Route>
       </Routes>
     </>

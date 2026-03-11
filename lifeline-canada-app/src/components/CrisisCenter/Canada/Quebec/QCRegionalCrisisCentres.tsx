@@ -6,19 +6,13 @@ const centres = [
     title: 'Suicide Prevention Centre and Crisis Intervention – Bas-Laurent',
     image: '/assets/CanadaCenter_image/QC/bas_laurent.png',
     path: '#',
-    lines: [
-      'Rimouski (Quebec)',
-      'Line of intervention: (418) 724-2463',
-    ],
+    lines: ['Rimouski (Quebec)', 'Line of intervention: (418) 724-2463'],
   },
   {
     title: 'Rivière-du-Loup Crisis Line',
     image: '/assets/CanadaCenter_image/QC/du_loup.png',
     path: '#',
-    lines: [
-      '(418) 862-9658',
-      '1-866-CALLS (277-3553)',
-    ],
+    lines: ['(418) 862-9658', '1-866-CALLS (277-3553)'],
   },
   {
     title: 'Centre de Prévention Suicide Arthabaska-Érable',
@@ -33,145 +27,109 @@ const centres = [
     title: 'Suicide Prevention Committee Lebel-sur-Quévillon',
     image: '/assets/CanadaCenter_image/QC/lebel.png',
     path: '#',
-    lines: [
-      'Line of intervention: 1-866-CALLS (277-3553)',
-    ],
+    lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'Saguenay / Lac-Saint-Jean',
     image: '/assets/CanadaCenter_image/QC/lac_saint_jean.png',
     path: '#',
-    lines: [
-      'Line of intervention: (418) 545-1919',
-    ],
+    lines: ['Line of intervention: (418) 545-1919'],
   },
   {
     title: 'Capitale-National – Baie-St-Paul',
     image: '/assets/CanadaCenter_image/QC/capitale.jpg',
     path: '#',
-    lines: [
-      'Line of intervention: (418) 435-2212',
-    ],
+    lines: ['Line of intervention: (418) 435-2212'],
   },
   {
     title: 'Suicide Prevention Centre (Quebec)',
     image: '/assets/CanadaCenter_image/QC/ciel.png',
     path: '#',
-    lines: [
-      'Line of intervention: 1-844-285-3283',
-    ],
+    lines: ['Line of intervention: 1-844-285-3283'],
   },
   {
     title: 'Suicide Prevention Centre of Upper St-Mauricie',
     image: '/assets/CanadaCenter_image/QC/mauricie.png',
     path: '#',
-    lines: [
-      'Line of intervention: 1-866-CALLS (277-3553)',
-    ],
+    lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'Suicide Prevention Centre of Accalmie',
     image: '/assets/CanadaCenter_image/QC/accalmie.png',
     path: '#',
-    lines: [
-      'Line of intervention: 1-866-CALLS (277-3553)',
-    ],
+    lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'JEVI Suicide Prevention Centre – Estrie',
     image: '/assets/CanadaCenter_image/QC/estrie.png',
     path: '#',
-    lines: [
-      '819-564-1354',
-    ],
+    lines: ['819-564-1354'],
   },
   {
     title: 'Outaouis Help Centre 24/7',
     image: '/assets/CanadaCenter_image/QC/oitaouis.png',
     path: '#',
-    lines: [
-      'Line of intervention: (819) 595-9999',
-    ],
+    lines: ['Line of intervention: (819) 595-9999'],
   },
   {
     title: 'Amos Suicide Prevention Centre',
     image: '/assets/CanadaCenter_image/QC/amos.png',
     path: '#',
-    lines: [
-      'Line of intervention: 1-866-CALLS (277-3553)',
-    ],
+    lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'Suicide Prevention in Abitibi-Témiscamingue – Malartic',
     image: '/assets/CanadaCenter_image/QC/abitibi.png',
     path: '#',
-    lines: [
-      'Line of intervention: 1-866-CALLS (277-3553)',
-    ],
+    lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'Chaudiere-Appalaches – Service Urgence-Distress Crisis',
     image: '/assets/CanadaCenter_image/QC/chaudiere.png',
     path: '#',
-    lines: [
-      'Line of intervention: 1-866-CALLS (277-3553)',
-    ],
+    lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'Suicide Prevention Committee Senneterre',
     image: '/assets/CanadaCenter_image/QC/senneterre.png',
     path: '#',
-    lines: [
-      'Line of intervention: 1-866-CALLS (277-3553)',
-    ],
+    lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'Suicide Prevention Centre-de-Golden Valley – Val-d’Or',
     image: '/assets/CanadaCenter_image/QC/de_golden.png',
     path: '#',
-    lines: [
-      'Line of intervention: 1-866-CALLS (277-3553)',
-    ],
+    lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'North Shore Suicide Prevention Centre – Baie-Comeau',
     image: '/assets/CanadaCenter_image/QC/baie_comeau.png',
     path: '#',
-    lines: [
-      'Line of action: 1-866-CALLS (277-3553)',
-    ],
+    lines: ['Line of action: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'Listening Centre and Suicide Prevention – Beauce-Etchemin',
     image: '/assets/CanadaCenter_image/QC/beauce-etchemin.png',
     path: '#',
-    lines: [
-      'Line of intervention: (418) 228-0001',
-    ],
+    lines: ['Line of intervention: (418) 228-0001'],
   },
   {
     title: 'Ilot-Laval Crisis Regional Service',
     image: '/assets/CanadaCenter_image/QC/ilot-laval.png',
     path: '#',
-    lines: [
-      'Line of intervention: 1-866-CALLS (277-3553)',
-    ],
+    lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'Lanaudière Suicide Prevention Centre',
     image: '/assets/CanadaCenter_image/QC/lanaudiere.png',
     path: '#',
-    lines: [
-      'Line of intervention: 1-866-CALLS (277-3553)',
-    ],
+    lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'Faubourg Suicide Prevention Centre – St-Jérôme',
     image: '/assets/CanadaCenter_image/QC/faubourg.png',
     path: '#',
-    lines: [
-      'Line of intervention: (450) 569-0101',
-    ],
+    lines: ['Line of intervention: (450) 569-0101'],
   },
   {
     title: 'The House Under the Trees',
@@ -186,44 +144,31 @@ const centres = [
     title: 'The Access Crisis Intervention Centre in Longueuil',
     image: '/assets/CanadaCenter_image/QC/quebec_nationalcenter.png',
     path: '#',
-    lines: [
-      'Line of intervention: (450) 679-8689',
-      '1-866-CALLS (277-3553)',
-    ],
+    lines: ['Line of intervention: (450) 679-8689', '1-866-CALLS (277-3553)'],
   },
   {
     title: 'Suicide Prevention Centre Pierre-de-Saurel – Sorel-Tracy',
     image: '/assets/CanadaCenter_image/QC/ciel.png',
     path: '#',
-    lines: [
-      'Line of intervention: (450) 746-0303',
-    ],
+    lines: ['Line of intervention: (450) 746-0303'],
   },
   {
     title: 'Haut-Richelieu Suicide Prevention Centre – St-Jean-Sur-Richelieu',
     image: '/assets/CanadaCenter_image/QC/haut-richelieu.png',
     path: '#',
-    lines: [
-      'Line of intervention: (450) 348-6300',
-      '1-866-CALLS (277-3553)',
-    ],
+    lines: ['Line of intervention: (450) 348-6300', '1-866-CALLS (277-3553)'],
   },
   {
     title: 'The Turn, Crisis Centre and Suicide Prevention – Suroit Region',
     image: '/assets/CanadaCenter_image/QC/suroit.png',
     path: '#',
-    lines: [
-      'Line of intervention: (450) 371-4090',
-      '1-866-CALLS (277-3553)',
-    ],
+    lines: ['Line of intervention: (450) 371-4090', '1-866-CALLS (277-3553)'],
   },
   {
     title: 'Listening Centre and Preventing Suicide – Drummondville',
     image: '/assets/CanadaCenter_image/QC/drummondville.png',
     path: '#',
-    lines: [
-      'Line of intervention: 1-866-CALLS (277-3553)',
-    ],
+    lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
 ];
 
@@ -231,12 +176,16 @@ const QCRegionalCrisisCentres: React.FC = () => {
   // Helper function to check if a line contains a phone number
   const containsPhoneNumber = (text: string): boolean => {
     // Check for patterns like (XXX) XXX-XXXX, XXX-XXX-XXXX, or X-XXX-XXX-XXXX
-    const phoneRegex = /\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}|\d{1}[-.\s]?\d{3}[-.\s]?\d{3}[-.\s]?\d{4}/;
+    const phoneRegex =
+      /\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}|\d{1}[-.\s]?\d{3}[-.\s]?\d{3}[-.\s]?\d{4}/;
     // Check for patterns like 1-866-CALLS or any text with digits
     const hasDigits = /\d/.test(text);
-    const hasPhoneFormat = phoneRegex.test(text) || text.includes('CALLS') || text.includes('1-866');
-    
-    return hasDigits && (hasPhoneFormat || text.includes('-') || text.includes('('));
+    const hasPhoneFormat =
+      phoneRegex.test(text) || text.includes('CALLS') || text.includes('1-866');
+
+    return (
+      hasDigits && (hasPhoneFormat || text.includes('-') || text.includes('('))
+    );
   };
 
   return (
@@ -315,20 +264,21 @@ const QCRegionalCrisisCentres: React.FC = () => {
                   </h4>
                   {centre.lines.map((line, i) => {
                     const isPhoneNumber = containsPhoneNumber(line);
-                    const isMainNumber = isPhoneNumber && (
-                      line.toLowerCase().includes('crisis') ||
-                      line.toLowerCase().includes('intervention') ||
-                      line.toLowerCase().includes('call') ||
-                      line.toLowerCase().includes('line')
-                    );
+                    const isMainNumber =
+                      isPhoneNumber &&
+                      (line.toLowerCase().includes('crisis') ||
+                        line.toLowerCase().includes('intervention') ||
+                        line.toLowerCase().includes('call') ||
+                        line.toLowerCase().includes('line'));
                     const isHours =
                       line.toLowerCase().includes('am') ||
                       line.toLowerCase().includes('pm') ||
                       line.toLowerCase().includes('24') ||
                       line.toLowerCase().includes('hour');
-                    const isLocation = line.includes('Quebec') || 
-                                      line.includes('MRC') ||
-                                      line.toLowerCase().includes('region');
+                    const isLocation =
+                      line.includes('Quebec') ||
+                      line.includes('MRC') ||
+                      line.toLowerCase().includes('region');
 
                     let bgColor = 'bg-gray-50/50';
                     if (isMainNumber)

@@ -5,7 +5,7 @@ const CrisisCentres: React.FC = () => {
   const crisisCentres = [
     {
       title: 'St. Paul & District Crisis Centre',
-      subtle:'Alberta & N. Saskatchewan',
+      subtle: 'Alberta & N. Saskatchewan',
       image: 'assets/CanadaCenter_image/AB/capella.png',
       path: 'https://capellacentre.ca/',
       lines: [
@@ -113,7 +113,9 @@ const CrisisCentres: React.FC = () => {
                                 : 'hover:bg-white/60'
                           }`}
                         >
-                          <p className="text-gray-700 leading-relaxed">{line}</p>
+                          <p className="text-gray-700 leading-relaxed">
+                            {line}
+                          </p>
                         </div>
                       );
                     })}

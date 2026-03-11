@@ -15,10 +15,7 @@ const centres = [
     title: 'Interlake-Eastern Regional Health Authority',
     image: '/assets/CanadaCenter_image/MB/intake_eastern.png',
     path: 'https://www.ierha.ca/programs-services/mental-health/',
-    lines: [
-      'Crisis Stabilization Unit / Mobile Crisis Unit',
-      '1-877-499-8770',
-    ],
+    lines: ['Crisis Stabilization Unit / Mobile Crisis Unit', '1-877-499-8770'],
   },
   {
     title: 'Klinic Community Health Centre',
@@ -73,19 +70,13 @@ const centres = [
     title: 'Northern Health Region Mobile Crisis Team',
     image: '/assets/CanadaCenter_image/MB/nhr-400x100.jpg',
     path: 'https://northernhealthregion.com/programs-and-services/mental-health-and-substance-recovery/',
-    lines: [
-      '204-778-1472',
-      'Toll Free: 1-866-242-1571',
-    ],
+    lines: ['204-778-1472', 'Toll Free: 1-866-242-1571'],
   },
   {
     title: 'Eden Health Care Services',
     image: '/assets/CanadaCenter_image/MB/eden_health.png',
     path: 'https://edenhealthcare.ca/walk-in-counselling/',
-    lines: [
-      'Steinbach, Portage la Prairie, Winkler',
-      '1-888-617-7715',
-    ],
+    lines: ['Steinbach, Portage la Prairie, Winkler', '1-888-617-7715'],
   },
   {
     title: 'Thompson Youth (17 and under) Mobile Crisis Team',
@@ -111,7 +102,7 @@ const MBRegionalCrisisCentres: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-serif bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 bg-clip-text text-transparent px-4">
-        Manitoba Regional
+            Manitoba Regional
             <span className="block text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 bg-clip-text text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mt-2">
               Crisis Support Centres
             </span>
