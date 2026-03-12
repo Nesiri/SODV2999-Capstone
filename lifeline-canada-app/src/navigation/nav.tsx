@@ -11,13 +11,13 @@ export const resourceCategories = [
     links: [
       {
         name: 'Coping with Suicidal Thoughts',
-        path: '/resources/coping-with-suicidal-thoughts',
+        path: '/resources/suicidal-thoughts',
         icon: '🛡️',
         color: 'from-blue-400 to-cyan-400',
       },
       {
         name: 'How Can I Help Someone?',
-        path: '/resources/how-can-i-help-someone',
+        path: '/resources/how-to-help',
         icon: '🤝',
         color: 'from-emerald-400 to-green-400',
       },
