@@ -26,7 +26,7 @@ export default function HeaderDesktop() {
                   key={link.path}
                   resourceLinks={resourceLinks}
                   triggerText={link.name}
-                  triggerPath={link.path}  // Pass the path for navigation
+                  triggerPath={link.path} // Pass the path for navigation
                   emergency={link.emergency}
                   icon={link.icon}
                 />
@@ -37,7 +37,7 @@ export default function HeaderDesktop() {
                   key={link.path}
                   resourceLinks={patternInterruptLinks}
                   triggerText={link.name}
-                  triggerPath={link.path}  // Pass the path for navigation
+                  triggerPath={link.path} // Pass the path for navigation
                   emergency={link.emergency}
                   icon={link.icon}
                 />

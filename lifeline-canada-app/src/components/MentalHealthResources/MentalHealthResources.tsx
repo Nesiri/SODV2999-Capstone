@@ -1,12 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { mentalHealthCards } from "../../constants/mental-health-cards";
-import { MentalHealthCardsGrid } from "../Cards/MentalHealthCard";
-
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { mentalHealthCards } from '../../constants/mental-health-cards';
+import { MentalHealthCardsGrid } from '../Cards/MentalHealthCard';
 
 const MentalHealthResources: React.FC = () => {
-  const filteredCards = mentalHealthCards.filter(card=> [1,2,6,7,9,20].includes(card.id)); // Show only the first 6 cards on the main page
+  const filteredCards = mentalHealthCards.filter((card) =>
+    [1, 2, 6, 7, 9, 20].includes(card.id)
+  ); // Show only the first 6 cards on the main page
   return (
     <section className="relative py-24 overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       {/* Animated background elements */}
@@ -23,10 +23,10 @@ const MentalHealthResources: React.FC = () => {
             🌟 Mental Health Support
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            What Can We{" "}
+            What Can We{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
               Help You
-            </span>{" "}
+            </span>{' '}
             With?
           </h2>
           <div className="flex justify-center gap-2 mb-6">
@@ -34,11 +34,12 @@ const MentalHealthResources: React.FC = () => {
             <div className="w-16 h-1 bg-purple-600 rounded-full"></div>
           </div>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Discover personalized resources and expert guidance tailored to support your unique mental health journey
+            Discover personalized resources and expert guidance tailored to
+            support your unique mental health journey
           </p>
         </div>
 
-       <MentalHealthCardsGrid cards={filteredCards } limit={6} />
+        <MentalHealthCardsGrid cards={filteredCards} limit={6} />
 
         {/* Enhanced Show More Button */}
         <div className="text-center mt-20">
@@ -64,12 +65,15 @@ const MentalHealthResources: React.FC = () => {
               </svg>
             </Link>
           </div>
-          
+
           {/* Enhanced total count display */}
           <div className="mt-8 flex items-center justify-center gap-4">
             <div className="h-px w-12 bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
             <p className="text-gray-500 font-medium">
-              <span className="text-2xl font-bold text-gray-800">{mentalHealthCards.length}</span> specialized resources available
+              <span className="text-2xl font-bold text-gray-800">
+                {mentalHealthCards.length}
+              </span>{' '}
+              specialized resources available
             </p>
             <div className="h-px w-12 bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
           </div>

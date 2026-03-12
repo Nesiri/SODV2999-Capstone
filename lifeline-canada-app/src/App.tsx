@@ -20,6 +20,15 @@ import ResourceBereavedSupport from './pages/ResourceBereavedSupport';
 import ResourceOrganizations from './pages/ResourceOrgaanizations';
 import ResourceSurvivorsSuicideLoss from './pages/ResourceSurvivorsSuicideLoss';
 import ResourceSurvivorsAfterSuicideLoss from './pages/ResourceSurvivorsAfterSuicideLoss';
+import AboutPage from './pages/About';
+import CrisisSupportPage from './pages/CrisisSupportPage';
+import VolunteerPage from './pages/VolunteerPage';
+
+import ContributionPage from './pages/ContributionPage';
+import ContactPage from './pages/ContactPage';
+import SiteMapPage from './pages/SiteMapPage';
+import CanadaCrisisCenterPage from './pages/CanadaCenter/CanadaCenterPage';
+import BCCrisisCenterPage from './pages/CanadaCenter/BCPage';
 
 export default function App() {
   return (
@@ -49,6 +58,25 @@ export default function App() {
           <Route path="/resources/organizations" element={<ResourceOrganizations />} />
           <Route path="/resources/suicide-loss" element={<ResourceSurvivorsSuicideLoss />} />
           <Route path='/resources/after-suicide-loss' element={<ResourceSurvivorsAfterSuicideLoss />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/in-crisis" element={<CrisisSupportPage />} />
+          <Route path="/get-involved" element={<VolunteerPage />} />
+          <Route path="/contribute" element={<ContributionPage />} />
+
+          <Route path="/contact" element={<ContactPage mode="contact" />} />
+          <Route
+            path="/email-support"
+            element={<ContactPage mode="email-support" />}
+          />
+          <Route path="/site-map" element={<SiteMapPage />} />
+          <Route
+            path="/canadian-crisis-centres"
+            element={<CanadaCrisisCenterPage />}
+          />
+          <Route
+            path="/british-columbia-crisis-centres"
+            element={<BCCrisisCenterPage />}
+          />
         </Route>
       </Routes>
     </>
