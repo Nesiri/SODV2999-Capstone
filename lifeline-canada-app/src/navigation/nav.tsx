@@ -188,13 +188,13 @@ export const resourceCategories = [
       },
       {
         name: 'Care Givers',
-        path: '/resources/caregivers',
+        path: '/resources/care-givers',
         icon: '🤲',
         color: 'from-emerald-400 to-green-400',
       },
       {
         name: 'Media Professionals',
-        path: '/resources/media',
+        path: '/resources/media-professionals',
         icon: '🎤',
         color: 'from-yellow-400 to-amber-400',
       },

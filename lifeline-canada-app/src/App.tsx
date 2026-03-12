@@ -29,6 +29,12 @@ import ContactPage from './pages/ContactPage';
 import SiteMapPage from './pages/SiteMapPage';
 import CanadaCrisisCenterPage from './pages/CanadaCenter/CanadaCenterPage';
 import BCCrisisCenterPage from './pages/CanadaCenter/BCPage';
+import ResourceEducators from './pages/ResourceEducators';
+import ResourceHealthProfessionals from './pages/ResourceHealthProfessionals';
+import ResourceFirstResponders from './pages/ResourceFirstResponders';
+import ResourceCareGivers from './pages/ResourceCareGivers';
+import ResourceMediaProfessionals from './pages/ResourceMediaProfessionals';
+import ResourceMythsFacts from './pages/ResourceMythsFacts';
 
 export default function App() {
   return (
@@ -58,6 +64,13 @@ export default function App() {
           <Route path="/resources/organizations" element={<ResourceOrganizations />} />
           <Route path="/resources/suicide-loss" element={<ResourceSurvivorsSuicideLoss />} />
           <Route path='/resources/after-suicide-loss' element={<ResourceSurvivorsAfterSuicideLoss />} />
+          <Route path='/resources/educators' element={<ResourceEducators />} />
+          <Route path='/resources/health-professionals' element={<ResourceHealthProfessionals />} />
+          <Route path='/resources/first-responders' element={<ResourceFirstResponders />} />
+          <Route path='/resources/care-givers' element={<ResourceCareGivers />} />
+          <Route path='/resources/media-professionals' element={<ResourceMediaProfessionals />} />
+          <Route path='/resources/myths-facts' element={<ResourceMythsFacts />} />
+
           <Route path="/about" element={<AboutPage />} />
           <Route path="/in-crisis" element={<CrisisSupportPage />} />
           <Route path="/get-involved" element={<VolunteerPage />} />
