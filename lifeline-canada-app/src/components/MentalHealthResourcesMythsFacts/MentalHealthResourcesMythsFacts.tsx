@@ -1,5 +1,7 @@
 import React from "react";
 import { Sparkles } from "lucide-react";
+import MentalIllnessImage from "../../assets/coping-800x575.jpg";
+import coverPhoto from '../../assets/MythsFacts.jpg'
 
 const mythsVsFacts = [
     {
@@ -80,13 +82,26 @@ const MentalHealthResourcesMythsFacts: React.FC = () => {
                 </h1>
 
                 <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
-                    <p className="leading-relaxed">
-                        "An overwhelming surge of emotions that never seems to end." That&apos;s what some who have attempted suicide try to describe to those who ask to understand why they feel the way they do. Those who are contemplating suicide might literally feel as though there is no way out of their situation. They are bombarded with feelings of hopelessness, fear, isolation, hatred toward themselves and so much more. The pain they feel is often immeasurable, to a point where they see no other option than to end their lives.
-                    </p>
+                    <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6 lg:gap-8 items-start">
+                        <div>
+                            <p className="leading-relaxed">
+                                "An overwhelming surge of emotions that never seems to end." That&apos;s what some who have attempted suicide try to describe to those who ask to understand why they feel the way they do. Those who are contemplating suicide might literally feel as though there is no way out of their situation. They are bombarded with feelings of hopelessness, fear, isolation, hatred toward themselves and so much more. The pain they feel is often immeasurable, to a point where they see no other option than to end their lives.
+                            </p>
 
-                    <p className="mt-4 leading-relaxed">
-                        But many people who have attempted suicide will say that they wanted to live. They really didn&apos;t want to die; the desire to remain with loved ones remained very strong. They simply didn&apos;t see any other options.
-                    </p>
+                            <p className="mt-4 leading-relaxed">
+                                But many people who have attempted suicide will say that they wanted to live. They really didn&apos;t want to die; the desire to remain with loved ones remained very strong. They simply didn&apos;t see any other options.
+                            </p>
+                        </div>
+
+                        <div className="w-full h-full">
+                            <img
+                                src={coverPhoto}
+                                alt="Myths and facts cover"
+                                className="w-full h-full min-h-[260px] rounded-xl border border-purple-100 shadow-sm object-cover"
+                                loading="eager"
+                            />
+                        </div>
+                    </div>
                 </main>
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
@@ -119,6 +134,72 @@ const MentalHealthResourcesMythsFacts: React.FC = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+
+                <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+                    <details open className="group">
+                        <summary className="cursor-pointer text-lg font-semibold text-purple-700">
+                                Facts About Mental Illness and Suicide
+                        </summary>
+
+                        <div className="mt-4 grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6 lg:gap-8 lg:items-stretch">
+                            <div className="space-y-4 leading-relaxed">
+                                <p>
+                                    The great majority of people who experience a mental illness do not die by suicide. However, of those who die from suicide, more than 90 percent have a diagnosable mental disorder.
+                                </p>
+
+                                <p>
+                                    People who die by suicide are frequently experiencing undiagnosed, undertreated, or untreated depression.
+                                </p>
+
+                                <p>
+                                    Worldwide, suicide is among the three leading causes of death among people aged 15 to 44.
+                                </p>
+
+                                <ul className="list-disc pl-6 space-y-3">
+                                    <li>
+                                        An estimated 2-15% of persons who have been diagnosed with major depression die by suicide. Suicide risk is highest in depressed individuals who feel hopeless about the future, those who have just been discharged from the hospital, those who have a family history of suicide and those who have made a suicide attempt in the past.
+                                    </li>
+
+                                    <li>
+                                        An estimated 3-20% of persons who have been diagnosed with bipolar disorder die by suicide. Hopelessness, recent hospital discharge, family history, and prior suicide attempts all raise the risk of suicide in these individuals.
+                                    </li>
+
+                                    <li>
+                                        An estimated 6-15% of persons diagnosed with schizophrenia die by suicide. Suicide is the leading cause of premature death in those diagnosed with schizophrenia. Between 75 and 95% of these individuals are male.
+                                    </li>
+
+                                    <li>
+                                        Also at high risk are individuals who suffer from depression at the same time as another mental illness. Specifically, the presence of substance abuse, anxiety disorders, schizophrenia and bipolar disorder put those with depression at greater risk for suicide.
+                                    </li>
+
+                                    <li>
+                                        People with personality disorders are approximately three times as likely to die by suicide than those without. Between 25 and 50% of these individuals also have a substance abuse disorder or major depressive disorder.
+                                    </li>
+                                </ul>
+
+                                <p className="text-sm sm:text-base text-gray-600">
+                                    Source:{" "}
+                                    <a
+                                        href="https://www.samhsa.gov"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-2"
+                                    >
+                                        SAMHSA
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div className="w-full h-full">
+                                <img
+                                    src={MentalIllnessImage}
+                                    alt="Mental health awareness"
+                                    className="w-full h-full min-h-[320px] rounded-xl border border-purple-100 shadow-sm object-cover"
+                                />
+                            </div>
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>
