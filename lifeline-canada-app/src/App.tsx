@@ -4,22 +4,7 @@ import Home from './pages/Home';
 import Resource from './pages/Resource';
 import PatternInterrupt from './pages/PatternInterrupt';
 import ScrollToTop from './navigation/ScrollToTop';
-import ResourceCoping from './pages/ResourceCoping';
-import ResourceHowToHelp from './pages/ResourceHowToHelp';
-import ResourceSearchProfessional from './pages/ResourceSearchProfessional';
-import ResourceWarningSigns from './pages/ResourceWarningSigns';
-import ResourceSelfManagement from './pages/ResourceSelfManagement';
-import ResourceECounselling from './pages/ResourceECounselling';
-import ResourcePTSD from './pages/ResourcePTSD';
-import ResourceGrief from './pages/ResourceGrief';
-import ResourceDepression from './pages/ResourceDepression';
-import ResourceAnxiety from './pages/ResourceAnxiety';
-import ResourceAddiction from './pages/ResourceAddiction';
-import ResourceAttemptSurvivors from './pages/ResourceAttemptSurvivors';
-import ResourceBereavedSupport from './pages/ResourceBereavedSupport';
-import ResourceOrganizations from './pages/ResourceOrgaanizations';
-import ResourceSurvivorsSuicideLoss from './pages/ResourceSurvivorsSuicideLoss';
-import ResourceSurvivorsAfterSuicideLoss from './pages/ResourceSurvivorsAfterSuicideLoss';
+
 import AboutPage from './pages/About';
 import CrisisSupportPage from './pages/CrisisSupportPage';
 import VolunteerPage from './pages/VolunteerPage';
@@ -29,7 +14,6 @@ import ContactPage from './pages/ContactPage';
 import SiteMapPage from './pages/SiteMapPage';
 import CanadaCrisisCenterPage from './pages/CanadaCenter/CanadaCenterPage';
 import BCCrisisCenterPage from './pages/CanadaCenter/BCPage';
-<<<<<<< Derek-resources-pages
 import ResourceEducators from './pages/ResourceEducators';
 import ResourceHealthProfessionals from './pages/ResourceHealthProfessionals';
 import ResourceFirstResponders from './pages/ResourceFirstResponders';
@@ -45,7 +29,6 @@ import ResourceCommunitiesIndigenous from './pages/ResourceCommunitiesIndigenous
 import ResourceCommunitiesParents from './pages/ResourceCommunitiesParents';
 import ResourceCommunitiesCollegeStudents from './pages/ResourceCommunitiesCollegeStudents';
 import ResourceCommunitiesTeensYouth from './pages/ResourceCommunitiesTeensYouth';
-=======
 import ABCrisisCentrePage from './pages/CanadaCenter/ABCrisisCentrePage';
 import SKCrisisCenterPage from './pages/CanadaCenter/SKCrisisCentrePage';
 import MBCrisisCentrePage from './pages/CanadaCenter/MBCrisisCentrePage';
@@ -72,7 +55,6 @@ import ResourceBereavedSupport from './pages/ResourceBereavedSupport';
 import ResourceOrganizations from './pages/ResourceOrgaanizations';
 import ResourceSurvivorsSuicideLoss from './pages/ResourceSurvivorsSuicideLoss';
 import ResourceSurvivorsAfterSuicideLoss from './pages/ResourceSurvivorsAfterSuicideLoss';
->>>>>>> main
 
 export default function App() {
   return (
