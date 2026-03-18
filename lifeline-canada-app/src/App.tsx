@@ -35,6 +35,15 @@ import ResourceFirstResponders from './pages/ResourceFirstResponders';
 import ResourceCareGivers from './pages/ResourceCareGivers';
 import ResourceMediaProfessionals from './pages/ResourceMediaProfessionals';
 import ResourceMythsFacts from './pages/ResourceMythsFacts';
+import ResourceCommunitiesRefugees from './pages/ResourceCommunitiesRefugees';
+import ResourceCommunitiesSeniors from './pages/ResourceCommunitiesSeniors';
+import ResourceCommunitiesVeterans from './pages/ResourceCommunitiesVeterans';
+import ResourceCommunitiesLGBTQ from './pages/ResourceCommunitiesLGBTQ';
+import ResourceCommunitiesMen from './pages/ResourceCommunitiesMen';
+import ResourceCommunitiesIndigenous from './pages/ResourceCommunitiesIndigenous';
+import ResourceCommunitiesParents from './pages/ResourceCommunitiesParents';
+import ResourceCommunitiesCollegeStudents from './pages/ResourceCommunitiesCollegeStudents';
+import ResourceCommunitiesTeensYouth from './pages/ResourceCommunitiesTeensYouth';
 
 export default function App() {
   return (
@@ -70,6 +79,15 @@ export default function App() {
           <Route path='/resources/care-givers' element={<ResourceCareGivers />} />
           <Route path='/resources/media-professionals' element={<ResourceMediaProfessionals />} />
           <Route path='/resources/myths-facts' element={<ResourceMythsFacts />} />
+          <Route path='/resources/refugees' element={<ResourceCommunitiesRefugees />} />
+          <Route path='/resources/seniors' element={<ResourceCommunitiesSeniors />} />
+          <Route path='/resources/veterans' element={<ResourceCommunitiesVeterans />} />
+          <Route path='/resources/lgbtq2s' element={<ResourceCommunitiesLGBTQ />} />
+          <Route path='/resources/men' element={<ResourceCommunitiesMen />} />
+          <Route path='/resources/indigenous' element={<ResourceCommunitiesIndigenous />} />
+          <Route path='/resources/parents' element={<ResourceCommunitiesParents />} />
+          <Route path='/resources/college-students' element={<ResourceCommunitiesCollegeStudents />} />
+          <Route path='/resources/teens-youth' element={<ResourceCommunitiesTeensYouth />} />
 
           <Route path="/about" element={<AboutPage />} />
           <Route path="/in-crisis" element={<CrisisSupportPage />} />
