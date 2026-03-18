@@ -1,6 +1,7 @@
 // components/MentalHealthCard.tsx
 
 import { Link } from 'react-router-dom';
+import { memo, useMemo, useState } from 'react';
 import type { MentalHealthCard as MentalHealthCardType } from '../../constants/mental-health-cards';
 
 interface MentalHealthCardProps {
@@ -11,14 +12,7 @@ interface MentalHealthCardProps {
   variant?: 'default' | 'compact' | 'featured';
 }
 
-const formatCategory = (category?: string): string => {
-  if (!category) return 'General';
-  return category
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-};
-
+// Memoize icon selection to prevent recalculation
 const getIconByCategory = (category?: string) => {
   switch (category) {
     case 'depression':
@@ -75,173 +69,188 @@ const getIconByCategory = (category?: string) => {
   }
 };
 
-export const MentalHealthCard = ({
-  card,
-  index = 0,
-  showCategory = true,
-  showIcon = true,
-  variant = 'default',
-}: MentalHealthCardProps) => {
-  const getCardStyles = () => {
-    switch (variant) {
-      case 'compact':
-        return {
-          container:
-            'group relative bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-1 border border-gray-100/50',
-          image: 'h-40',
-          content: 'p-6',
-          title:
-            'text-xl font-bold text-gray-900 mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300',
-          subtitle: 'text-gray-600 leading-relaxed mb-4 text-sm',
-        };
-      case 'featured':
-        return {
-          container:
-            'group relative bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden transform hover:-translate-y-3 border-2 border-blue-100/50',
-          image: 'h-64',
-          content: 'p-10',
-          title:
-            'text-3xl font-bold text-gray-900 mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300',
-          subtitle: 'text-gray-700 leading-relaxed mb-8 text-lg',
-        };
-      default:
-        return {
-          container:
-            'group relative bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2 border border-gray-100/50',
-          image: 'h-56',
-          content: 'p-8',
-          title:
-            'text-2xl font-bold text-gray-900 mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300',
-          subtitle: 'text-gray-600 leading-relaxed mb-6',
-        };
-    }
-  };
-
-  const styles = getCardStyles();
+// Optimized image component with lazy loading - MODIFIED: Added h-80
+const OptimizedImage = memo(({ src, alt }: { src: string; alt: string }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <Link
-      to={card.link || '#'}
-      className={styles.container}
-      style={{ animationDelay: `${index * 150}ms` }}
-    >
-      {/* Card gradient overlay on hover */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    <div className="w-full h-80 bg-gray-100">
+      {' '}
+      {/* CHANGED: h-full → h-80 */}
+      {!isLoaded && (
+        <div className="w-full h-full flex items-center justify-center">
+          <div className="w-8 h-8 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      )}
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        className={`w-full h-full object-cover transition-opacity duration-300 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+        onLoad={() => setIsLoaded(true)}
+        onError={(e) => {
+          e.currentTarget.src =
+            'https://via.placeholder.com/600x400?text=💚+Mental+Wellness';
+        }}
+      />
+    </div>
+  );
+});
 
-      {/* Image Container with floating effect */}
-      <div className={`relative ${styles.image} overflow-hidden`}>
-        <img
-          src={card.image[0]}
-          alt={card.title}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-          onError={(e) => {
-            e.currentTarget.src =
-              'https://via.placeholder.com/600x400?text=💚+Mental+Wellness';
-          }}
-        />
+OptimizedImage.displayName = 'OptimizedImage';
 
-        {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+// Main card component with memoization
+export const MentalHealthCard = memo(
+  ({
+    card,
+    index = 0,
+    showIcon = true,
+    variant = 'default',
+  }: MentalHealthCardProps) => {
+    // Memoize styles to prevent recalculation - MODIFIED: Removed aspect-square
+    const styles = useMemo(() => {
+      switch (variant) {
+        case 'compact':
+          return {
+            container:
+              'group relative bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-200 overflow-hidden border border-gray-100',
+            image: 'w-full', // CHANGED: aspect-square → w-full
+            content: 'p-5',
+            title: 'text-lg font-bold text-gray-900 mb-2 line-clamp-1',
+            subtitle: 'text-gray-600 text-sm line-clamp-2',
+          };
+        case 'featured':
+          return {
+            container:
+              'group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-200 overflow-hidden border-2 border-blue-100',
+            image: 'w-full', // CHANGED: aspect-square → w-full
+            content: 'p-6',
+            title: 'text-2xl font-bold text-gray-900 mb-3 line-clamp-2',
+            subtitle: 'text-gray-700 text-base line-clamp-3',
+          };
+        default:
+          return {
+            container:
+              'group relative bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-200 overflow-hidden border border-gray-100',
+            image: 'w-full', // CHANGED: aspect-square → w-full
+            content: 'p-6',
+            title: 'text-xl font-bold text-gray-900 mb-2 line-clamp-2',
+            subtitle: 'text-gray-600 line-clamp-2',
+          };
+      }
+    }, [variant]);
 
-        {/* Category Tag with modern design */}
-        {showCategory && (
-          <div className="absolute top-4 left-4 flex gap-2">
-            <span className="px-4 py-2 bg-white/95 backdrop-blur-sm text-sm font-semibold rounded-full text-gray-800 shadow-lg border border-white/50 transform group-hover:scale-105 transition-transform duration-300">
-              {formatCategory(card.category)}
-            </span>
-          </div>
-        )}
+    // Memoize the icon to prevent recalculation
+    const icon = useMemo(
+      () => showIcon && getIconByCategory(card.category),
+      [showIcon, card.category]
+    );
 
-        {/* Icon indicator */}
-        {showIcon && (
-          <div className="absolute top-4 right-4 w-10 h-10 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform duration-300">
+    // Use will-change for hardware acceleration
+    return (
+      <Link
+        to={card.link || '#'}
+        className={`${styles.container} will-change-transform`}
+        style={{ animationDelay: `${index * 100}ms` }}
+      >
+        {/* Image Container - MODIFIED: Using updated styles.image (w-full) */}
+        <div className={`relative ${styles.image} overflow-hidden bg-gray-100`}>
+          <OptimizedImage src={card.image[0]} alt={card.title} />
+
+          {/* Simple gradient overlay - reduced opacity */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+
+          {/* Icon indicator - simplified animation */}
+          {showIcon && (
+            <div className="absolute top-3 right-3 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center shadow-md">
+              <svg
+                className="w-4 h-4 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                {icon}
+              </svg>
+            </div>
+          )}
+        </div>
+
+        {/* Content - UNCHANGED */}
+        <div className={styles.content}>
+          <h3 className={styles.title}>{card.title}</h3>
+          <p className={styles.subtitle}>{card.subtitle}</p>
+
+          {/* Simplified Learn More Link - UNCHANGED */}
+          <div className="flex justify-end items-center text-blue-600 font-medium mt-4 group/link">
             <svg
-              className="w-5 h-5 text-blue-600"
+              className="w-4 h-4 ml-1 transition-transform duration-200 group-hover/link:translate-x-1"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              {getIconByCategory(card.category)}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </div>
-        )}
-      </div>
-
-      {/* Content with modern typography */}
-      <div className={styles.content}>
-        <h3 className={styles.title}>{card.title}</h3>
-        <p className={styles.subtitle}>{card.subtitle}</p>
-
-        {/* Enhanced Learn More Link */}
-        <div className="flex items-center text-blue-600 font-semibold group/link">
-          <span className="relative">
-            Access Resources
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover/link:w-full transition-all duration-300"></span>
-          </span>
-          <svg
-            className="w-5 h-5 ml-2 group-hover/link:translate-x-2 transition-transform duration-300"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
-          </svg>
         </div>
+      </Link>
+    );
+  }
+);
+
+MentalHealthCard.displayName = 'MentalHealthCard';
+
+// Optimized Grid Component - UNCHANGED
+export const MentalHealthCardsGrid = memo(
+  ({
+    cards,
+    limit,
+    showIcon = true,
+    variant = 'default',
+  }: MentalHealthCardsGridProps) => {
+    const displayedCards = limit ? cards.slice(0, limit) : cards;
+
+    // Determine grid columns based on variant
+    const gridCols = useMemo(() => {
+      if (variant === 'featured') {
+        return 'grid grid-cols-1 gap-6';
+      }
+      if (variant === 'compact') {
+        return 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4';
+      }
+      return 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
+    }, [variant]);
+
+    return (
+      <div className={gridCols}>
+        {displayedCards.map((card, index) => (
+          <MentalHealthCard
+            key={card.id}
+            card={card}
+            index={index}
+            showIcon={showIcon}
+            variant={variant}
+          />
+        ))}
       </div>
+    );
+  }
+);
 
-      {/* Decorative corner accent */}
-      <div className="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-blue-600/10 to-purple-600/10 rounded-tl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-    </Link>
-  );
-};
+MentalHealthCardsGrid.displayName = 'MentalHealthCardsGrid';
 
-// Optional: Cards Grid Component for easy usage
 interface MentalHealthCardsGridProps {
   cards: MentalHealthCardType[];
   limit?: number;
-  showCategory?: boolean;
   showIcon?: boolean;
   variant?: 'default' | 'compact' | 'featured';
-  columns?: {
-    default?: number;
-    md?: number;
-    lg?: number;
-  };
 }
-
-export const MentalHealthCardsGrid = ({
-  cards,
-  limit,
-  showCategory = true,
-  showIcon = true,
-  variant = 'default',
-  columns = { default: 1, md: 2, lg: 3 },
-}: MentalHealthCardsGridProps) => {
-  const getGridCols = () => {
-    return `grid grid-cols-${columns.default} md:grid-cols-${columns.md} lg:grid-cols-${columns.lg} gap-8`;
-  };
-
-  const displayedCards = limit ? cards.slice(0, limit) : cards;
-
-  return (
-    <div className={getGridCols()}>
-      {displayedCards.map((card, index) => (
-        <MentalHealthCard
-          key={card.id}
-          card={card}
-          index={index}
-          showCategory={showCategory}
-          showIcon={showIcon}
-          variant={variant}
-        />
-      ))}
-    </div>
-  );
-};
 
 export default MentalHealthCard;

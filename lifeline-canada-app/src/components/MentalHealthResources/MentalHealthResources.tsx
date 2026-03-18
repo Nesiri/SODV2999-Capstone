@@ -6,18 +6,18 @@ import { MentalHealthCardsGrid } from '../Cards/MentalHealthCard';
 const MentalHealthResources: React.FC = () => {
   const filteredCards = mentalHealthCards.filter((card) =>
     [1, 2, 6, 7, 9, 20].includes(card.id)
-  ); // Show only the first 6 cards on the main page
+  );
+
   return (
-    <section className="relative py-24 overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+    <section className="relative py-24 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+      {/* Simplified background elements - reduced blur and opacity for better performance */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-10"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-10"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header with enhanced design */}
+        {/* Header */}
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-600 font-semibold text-sm mb-4">
             🌟 Mental Health Support
@@ -39,19 +39,21 @@ const MentalHealthResources: React.FC = () => {
           </p>
         </div>
 
-        <MentalHealthCardsGrid cards={filteredCards} limit={6} />
+        {/* Cards grid - simplified animation */}
+        <div className="opacity-100">
+          <MentalHealthCardsGrid cards={filteredCards} limit={6} />
+        </div>
 
-        {/* Enhanced Show More Button */}
+        {/* Show More Button - optimized */}
         <div className="text-center mt-20">
           <div className="relative inline-flex group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-70 group-hover:opacity-100 transition duration-300"></div>
             <Link
               to="/resources"
-              className="relative px-10 py-5 bg-white text-gray-900 font-bold rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-3 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:text-white"
+              className="relative px-10 py-5 bg-gradient-to-r from-yellow-100 via-purple-100 to-blue-50 text-gray-900 text-xl font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-3"
             >
-              <span>Explore All Resources</span>
+              <span>View More</span>
               <svg
-                className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300"
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -65,44 +67,21 @@ const MentalHealthResources: React.FC = () => {
               </svg>
             </Link>
           </div>
-
-          {/* Enhanced total count display */}
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <div className="h-px w-12 bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
-            <p className="text-gray-500 font-medium">
-              <span className="text-2xl font-bold text-gray-800">
-                {mentalHealthCards.length}
-              </span>{' '}
-              specialized resources available
-            </p>
-            <div className="h-px w-12 bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
-          </div>
         </div>
       </div>
 
-      {/* Enhanced animations */}
+      {/* Optimized styles - removed heavy animations */}
       <style>{`
-        @keyframes blob {
-          0% { transform: translate(0px, 0px) scale(1); }
-          33% { transform: translate(30px, -50px) scale(1.1); }
-          66% { transform: translate(-20px, 20px) scale(0.9); }
-          100% { transform: translate(0px, 0px) scale(1); }
+        /* Simple fade-in animation - only on initial load */
+        .grid > div {
+          animation: fadeIn 0.3s ease-out forwards;
+          opacity: 0;
         }
 
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-        }
-
-        @keyframes glow {
-          0%, 100% { opacity: 0.5; }
-          50% { opacity: 1; }
-        }
-
-        @keyframes slideUp {
+        @keyframes fadeIn {
           from {
             opacity: 0;
-            transform: translateY(40px);
+            transform: translateY(10px);
           }
           to {
             opacity: 1;
@@ -110,49 +89,27 @@ const MentalHealthResources: React.FC = () => {
           }
         }
 
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
-        }
-
-        .animate-glow {
-          animation: glow 3s ease-in-out infinite;
-        }
-
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
-
-        .grid > div {
-          animation: slideUp 0.6s ease-out forwards;
-          opacity: 0;
-        }
-
-        /* Custom scrollbar */
+        /* Optimized scrollbar - removed gradient for better performance */
         ::-webkit-scrollbar {
           width: 8px;
-          height: 8px;
         }
 
         ::-webkit-scrollbar-track {
           background: #f1f1f1;
-          border-radius: 10px;
         }
 
         ::-webkit-scrollbar-thumb {
-          background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+          background: #3b82f6;
           border-radius: 10px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-          background: linear-gradient(to bottom, #2563eb, #7c3aed);
+          background: #2563eb;
+        }
+
+        /* Hardware acceleration for smooth scrolling */
+        * {
+          -webkit-overflow-scrolling: touch;
         }
       `}</style>
     </section>

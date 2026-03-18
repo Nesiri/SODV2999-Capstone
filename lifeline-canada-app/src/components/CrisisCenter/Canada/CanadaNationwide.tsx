@@ -79,49 +79,46 @@ const CanadaNationwide: React.FC = () => {
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#C89F9F] to-transparent mx-auto"></div>
         </div>
 
-        {/* Modern card grid - HORIZONTAL RECTANGLES */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+        {/* Card grid - VERTICAL LAYOUT (image above content) */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
           {crisisCentres.map((centre, index) => (
             <div
               key={index}
-              className="group relative transform hover:-translate-y-2 transition-all duration-500"
+              className="block group relative transform hover:-translate-y-2 transition-all duration-500"
             >
               {/* Card shadow layers */}
               <div className="absolute -inset-2 bg-gradient-to-r from-[#C89F9F]/20 to-[#B28B8B]/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-              {/* Main card - HORIZONTAL LAYOUT */}
+              {/* Main card - VERTICAL LAYOUT */}
               <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-6 shadow-xl border border-white/60 hover:border-white/80 transition-all duration-300">
-                {/* Flex row for horizontal layout */}
-                <div className="flex flex-col md:flex-row gap-6">
-                  {/* Image container - fixed width on desktop */}
-                  <div className="relative rounded-2xl overflow-hidden flex-shrink-0 md:w-48 lg:w-56">
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#2A3B3C]/20 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <img
-                      src={centre.image}
-                      alt={centre.name}
-                      className="w-full h-40 md:h-32 lg:h-36 object-cover transform group-hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
+                {/* Image at top (not clickable) */}
+                <div className="relative rounded-2xl overflow-hidden mb-5">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2A3B3C]/20 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <img
+                    src={centre.image}
+                    alt={centre.name}
+                    className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
 
-                  {/* Content area */}
-                  <div className="flex-grow">
-                    <h2 className="text-xl font-serif text-[#2A3B3C] mb-3 group-hover:text-[#C89F9F] transition-colors duration-300">
-                      {centre.name}
-                    </h2>
+                {/* Content below image */}
+                <div className="flex-grow">
+                  <h2 className="text-xl font-serif text-[#2A3B3C] mb-3 group-hover:text-[#C89F9F] transition-colors duration-300">
+                    {centre.name}
+                  </h2>
 
-                    {/* Details with modern styling */}
-                    <div className="space-y-1.5">
-                      {centre.details?.map((line, i) => (
-                        <div key={i} className="flex items-start gap-2 text-sm">
-                          <span className="text-[#C89F9F] mt-1 flex-shrink-0">
-                            ✦
-                          </span>
-                          <span className="text-[#4A5A5C] font-light leading-relaxed">
-                            {line}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
+                  {/* Details with modern styling */}
+                  <div className="space-y-1.5">
+                    {centre.details?.map((line, i) => (
+                      <div key={i} className="flex items-start gap-2 text-sm">
+                        <span className="text-[#C89F9F] mt-1 flex-shrink-0">
+                          ✦
+                        </span>
+                        <span className="text-[#4A5A5C] font-light leading-relaxed">
+                          {line}
+                        </span>
+                      </div>
+                    ))}
                   </div>
                 </div>
 

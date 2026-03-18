@@ -140,13 +140,6 @@ const BCRegionalCrisisCentres: React.FC = () => {
                     }}
                   />
 
-                  {/* Title overlay on image */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-                    <h3 className="text-white font-bold text-lg leading-tight line-clamp-2 group-hover:translate-x-1 transition-transform">
-                      {centre.title}
-                    </h3>
-                  </div>
-
                   {/* Arrow indicator */}
                   <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1 z-20">
                     <svg
@@ -170,8 +163,11 @@ const BCRegionalCrisisCentres: React.FC = () => {
               </Link>
 
               {/* Lines Section - Beautiful Card Below */}
-              <div className="mt-5 p-5 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 hover:shadow-xl transition-all duration-300 flex-1">
+              <div className="mt-1 p-5 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 hover:shadow-xl transition-all duration-300 flex-1">
                 <div className="space-y-2.5">
+                  <h3 className="text-2xl font-medium text-gray-800 border-b-2 border-purple-500 pb-2 inline-block">
+                    {centre.title}
+                  </h3>
                   {centre.lines.map((line, i) => {
                     const isMainNumber =
                       line.toLowerCase().includes('crisis') ||

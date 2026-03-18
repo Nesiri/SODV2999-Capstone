@@ -99,15 +99,6 @@ const CrisisCentres: React.FC = () => {
                         'https://via.placeholder.com/400x200/4a6fa5/ffffff?text=Crisis+Centre';
                     }}
                   />
-                  {/* Image overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 via-transparent to-transparent"></div>
-
-                  {/* Title overlay on image */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
-                    <h3 className="text-white font-bold text-lg group-hover:translate-x-1 transition-transform">
-                      {centre.title}
-                    </h3>
-                  </div>
 
                   {/* Arrow indicator */}
                   <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1">
@@ -135,8 +126,11 @@ const CrisisCentres: React.FC = () => {
               </Link>
 
               {/* Lines Section - Outside Link, Below Card */}
-              <div className="mt-4 p-5 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 hover:shadow-xl transition-all duration-300">
+              <div className="mt-1 p-5 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 hover:shadow-xl transition-all duration-300">
                 <div className="space-y-2">
+                  <h3 className="text-2xl font-medium text-gray-800 border-b-2 border-purple-500 pb-2 inline-block">
+                    {centre.title}
+                  </h3>
                   {centre.lines.map((line, i) => {
                     const isMainNumber =
                       line.toLowerCase().includes('crisis') &&

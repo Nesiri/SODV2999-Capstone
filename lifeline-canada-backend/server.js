@@ -1,16 +1,21 @@
-const express = require('express');
-const app = express();
-const PORT = process.env.PORT || 5000;
+const express = require("express");
+const cors = require("cors");
 
-// Middleware to parse JSON
+const app = express();
+const PORT = 5000;
+
+app.use(cors());
 app.use(express.json());
 
-// Simple test route
-app.get('/', (req, res) => {
-  res.send('Lifeline Canada API is running!');
-});
+// routes
+const userRoutes = require("./routes/users");
+const resourceRoutes = require("./routes/resources");
+const logRoutes = require("./routes/logs");
 
-// Start server
+app.use("/api/users", userRoutes);
+app.use("/api/resources", resourceRoutes);
+app.use("/api/logs", logRoutes);
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });

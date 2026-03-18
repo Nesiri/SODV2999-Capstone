@@ -75,7 +75,7 @@ const CanadianCrisisCentres: React.FC = () => {
 
           {/* Right Image - Elevated card design */}
           <div className="relative flex justify-center lg:justify-end">
-            <div className="relative transform hover:scale-[1.02] transition-transform duration-700">
+            <div className="sm:w-[500px] relative transform hover:scale-[1.02] transition-transform duration-700">
               {/* Layered shadows for depth */}
               <div className="absolute -inset-4 bg-gradient-to-r from-[#C1B1A1]/20 to-[#A6B4AA]/20 rounded-[3rem] blur-2xl"></div>
               <div className="absolute -inset-2 bg-white/40 rounded-[2.5rem] blur-xl"></div>

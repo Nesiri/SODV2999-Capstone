@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 interface PatternInterruptCardProps {
@@ -426,4 +426,4 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
   );
 };
 
-export default PatternInterruptCard;
+export default memo(PatternInterruptCard);
