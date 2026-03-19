@@ -30,7 +30,7 @@ export const HeaderMobileView = ({
   goBackToMenu,
   handleCategoryToggle,
 }: HeaderMobileViewProps) => (
-  <div className=" lg:hidden">
+  <div className=" relative bottom-5 sm:bottom-4 md:bottom-2  left-2 lg:hidden">
     <MenuToggleButton onClick={openMenu} />
 
     {isMenuOpen && (

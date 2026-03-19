@@ -1,0 +1,176 @@
+import React from "react";
+import coverPhoto from "../../assets/warning.jpg";
+
+const MentalHealthResourcesWarningSigns: React.FC = () => {
+  const sectionClassName = "rounded-xl border border-slate-200 bg-white p-5 sm:p-6 text-slate-700";
+
+  return (
+    <section className="w-full bg-slate-50">
+      <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="inline-flex rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold tracking-wide text-slate-600 sm:text-sm">
+          Mental Health Support
+        </div>
+
+        <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
+          <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
+            Warning Signs
+          </span>
+        </h1>
+
+        <p className="mt-4 max-w-3xl leading-relaxed text-slate-700">
+          This page is organized to help you spot warning signs early and respond calmly. Read one section at a time.
+        </p>
+
+        <div className="mt-6 overflow-hidden rounded-xl border border-slate-200 bg-white">
+          <div className="grid grid-cols-1 items-stretch lg:grid-cols-[1.35fr_0.95fr]">
+            <div className="h-full p-6 text-slate-700 lg:border-r lg:border-slate-200">
+              <h2 className="text-xl font-semibold text-purple-700">Start Here</h2>
+              <ul className="mt-3 list-disc space-y-2 pl-5 leading-relaxed">
+                <li>Take any talk of suicide seriously.</li>
+                <li>If someone is in immediate danger, call 911 now.</li>
+                <li>Stay with the person and remove access to lethal means if possible.</li>
+                <li>Contact crisis and professional support as soon as possible.</li>
+              </ul>
+              <p className="mt-4 leading-relaxed">
+                Suicide usually has multiple causes. Risk rises when stress overwhelms coping capacity, especially with untreated depression, anxiety, or substance use.
+              </p>
+            </div>
+
+            <div className="h-full min-h-[240px] bg-slate-100/70 p-2 lg:min-h-full">
+              <img
+                src={coverPhoto}
+                alt="Warning signs support"
+                className="h-full w-full rounded-lg object-cover object-center shadow-sm"
+                loading="eager"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-6 rounded-xl border border-rose-200 bg-rose-50 p-4 text-rose-900">
+          <p className="font-semibold">Emergency:</p>
+          <p className="mt-1">If the person has a plan, means, and intent, call 911 immediately and stay with them.</p>
+        </div>
+
+        <div className="mt-6 space-y-4">
+          <details className={sectionClassName} open>
+            <summary className="cursor-pointer text-lg font-semibold text-purple-700">Suicide Warning Signs</summary>
+            <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 lg:col-span-3">
+                <p className="text-sm font-semibold uppercase tracking-wide text-slate-600">Main points</p>
+                <ul className="mt-2 list-disc space-y-1 pl-5 leading-relaxed">
+                  <li>New or changed behavior after pain, loss, or major stress should be treated seriously.</li>
+                  <li>Most people show one or more warning signs in words, actions, or mood.</li>
+                  <li>Early support can reduce risk.</li>
+                </ul>
+              </div>
+
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <h3 className="text-lg font-semibold text-slate-900">If a person talks about</h3>
+                <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
+                  <li>Being a burden to others</li>
+                  <li>Feeling trapped</li>
+                  <li>Unbearable pain</li>
+                  <li>Having no reason to live</li>
+                  <li>Killing themselves</li>
+                </ul>
+              </div>
+
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <h3 className="text-lg font-semibold text-slate-900">Behavior changes to watch for</h3>
+                <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
+                  <li>Increased alcohol or drug use</li>
+                  <li>Looking for means online or in person</li>
+                  <li>Reckless behavior</li>
+                  <li>Withdrawal and isolation</li>
+                  <li>Sleep changes (too much or too little)</li>
+                  <li>Saying goodbye or giving away possessions</li>
+                  <li>Aggression</li>
+                </ul>
+              </div>
+
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <h3 className="text-lg font-semibold text-slate-900">Common crisis moods</h3>
+                <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
+                  <li>Depression</li>
+                  <li>Loss of interest</li>
+                  <li>Rage or irritability</li>
+                  <li>Humiliation</li>
+                  <li>Anxiety</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <details className={sectionClassName}>
+            <summary className="cursor-pointer text-lg font-semibold text-purple-700">Suicide Risk Factors</summary>
+            <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 lg:col-span-3">
+                <p className="text-sm font-semibold uppercase tracking-wide text-slate-600">Main points</p>
+                <ul className="mt-2 list-disc space-y-1 pl-5 leading-relaxed">
+                  <li>Risk factors increase vulnerability, but they do not guarantee an attempt.</li>
+                  <li>Multiple risk factors together require faster intervention.</li>
+                  <li>Access to lethal means significantly raises danger.</li>
+                </ul>
+              </div>
+
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <h3 className="text-lg font-semibold text-slate-900">Health Factors</h3>
+                <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
+                  <li>Mental health conditions (depression, bipolar disorder, schizophrenia, anxiety)</li>
+                  <li>Personality or psychotic symptoms</li>
+                  <li>Substance use disorders</li>
+                  <li>Serious chronic illness or pain</li>
+                </ul>
+              </div>
+
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <h3 className="text-lg font-semibold text-slate-900">Environmental Factors</h3>
+                <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
+                  <li>Major life stressors (death, divorce, job loss)</li>
+                  <li>Ongoing stress (bullying, relationship conflict, unemployment)</li>
+                  <li>Access to firearms or large quantities of medication/drugs</li>
+                  <li>Exposure to another person’s suicide</li>
+                </ul>
+              </div>
+
+              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <h3 className="text-lg font-semibold text-slate-900">Historical Factors</h3>
+                <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
+                  <li>Previous suicide attempts</li>
+                  <li>Family history of suicide attempts</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div className="mt-12 py-12 rounded-xl bg-gradient-to-br from-indigo-50 via-white to-purple-50 text-center">
+          <p className="max-w-3xl mx-auto text-center text-lg text-gray-800 mb-4">
+            For further helpful information see our <a href="/resources/how-to-help" className="text-purple-700 font-medium underline">How Can I Help Someone</a> and other resources on our <a href="/resources" className="text-purple-700 font-medium underline">Resources page</a>.
+          </p>
+
+          <p className="max-w-3xl mx-auto text-center italic text-xl font-semibold text-red-600 mb-6">
+            If you, or someone you know is in crisis, call 911 immediately!
+          </p>
+
+          <p className="max-w-3xl mx-auto text-center text-lg text-gray-700 mb-6">
+            See our directory of mental health crisis support in your area
+          </p>
+
+          <div>
+            <a
+              href="/crisis-lines"
+              style={{ color: '#ffffff' }}
+              className="inline-block px-6 sm:px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:scale-[1.02] transform transition"
+            >
+              CRISIS LINES
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default MentalHealthResourcesWarningSigns;

@@ -11,13 +11,13 @@ export const resourceCategories = [
     links: [
       {
         name: 'Coping with Suicidal Thoughts',
-        path: '/resources/coping-with-suicidal-thoughts',
+        path: '/resources/suicidal-thoughts',
         icon: '🛡️',
         color: 'from-blue-400 to-cyan-400',
       },
       {
         name: 'How Can I Help Someone?',
-        path: '/resources/how-can-i-help-someone',
+        path: '/resources/how-to-help',
         icon: '🤝',
         color: 'from-emerald-400 to-green-400',
       },
@@ -188,13 +188,13 @@ export const resourceCategories = [
       },
       {
         name: 'Care Givers',
-        path: '/resources/caregivers',
+        path: '/resources/care-givers',
         icon: '🤲',
         color: 'from-emerald-400 to-green-400',
       },
       {
         name: 'Media Professionals',
-        path: '/resources/media',
+        path: '/resources/media-professionals',
         icon: '🎤',
         color: 'from-yellow-400 to-amber-400',
       },
@@ -256,7 +256,7 @@ export const patternInterrupts = [
 export const mainNavLinks = [
   {
     name: 'In Crisis?',
-    path: '/in-crisis',
+    path: '/incrisisneedhelp',
     emergency: true,
     icon: React.createElement(AlertCircle, { className: 'w-4 h-4' }),
   },
@@ -267,12 +267,12 @@ export const mainNavLinks = [
   },
   {
     name: 'Pattern Interrupts',
-    path: '/pattern-interrupt',
+    path: '/pattern-interrupts',
     hasMegaMenu: true,
   },
   {
     name: 'LifeLine App',
-    path: '/app',
+    path: '/app?mode=login',
     icon: React.createElement(Zap, { className: 'w-4 h-4' }),
   },
 ];
@@ -284,23 +284,23 @@ export const mainNavLinks = [
 export const dropdownNavLinks = [
   {
     name: 'About',
-    path: '/about',
+    path: '/about-us',
     icon: React.createElement(Users, { className: 'w-4 h-4' }),
   },
   {
     name: 'Companion Paws',
-    path: '/paws',
+    path: 'https://companionpaws.ca/',
     icon: '🐾',
   },
 
   {
     name: 'Contact',
-    path: '/contact',
+    path: '/contact-us',
     icon: '✉️', // Phone contact
   },
   {
     name: 'Email Support',
-    path: '/email-support',
+    path: '/support',
     icon: '✉️', // Email
   },
   {

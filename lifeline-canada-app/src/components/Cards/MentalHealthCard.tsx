@@ -113,15 +113,15 @@ export const MentalHealthCard = memo(
     // Memoize styles to prevent recalculation - MODIFIED: Removed aspect-square
     const styles = useMemo(() => {
       switch (variant) {
-        case 'compact':
-          return {
-            container:
-              'group relative bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-200 overflow-hidden border border-gray-100',
-            image: 'w-full', // CHANGED: aspect-square → w-full
-            content: 'p-5',
-            title: 'text-lg font-bold text-gray-900 mb-2 line-clamp-1',
-            subtitle: 'text-gray-600 text-sm line-clamp-2',
-          };
+       case 'compact':
+  return {
+    container:
+      'group relative bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-200 overflow-hidden border border-gray-100',
+    image: 'w-full h-48 object-cover', 
+    content: 'p-5',
+    title: 'text-lg font-bold text-gray-900 mb-2 line-clamp-1',
+    subtitle: 'text-gray-600 text-sm line-clamp-2',
+  };
         case 'featured':
           return {
             container:
@@ -223,7 +223,7 @@ export const MentalHealthCardsGrid = memo(
         return 'grid grid-cols-1 gap-6';
       }
       if (variant === 'compact') {
-        return 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4';
+        return 'grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8 m-10 sm:m-20 ';
       }
       return 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
     }, [variant]);

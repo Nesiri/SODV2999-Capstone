@@ -1,6 +1,7 @@
 import React from 'react';
 import { Heart, ExternalLink } from 'lucide-react';
 import EmailImage from '../../assets/Email.jpg';
+import { Link } from 'react-router-dom';
 const EmailSupport: React.FC = () => {
   return (
     <section className="relative w-full bg-gradient-to-br from-white via-purple-50 to-pink-50 py-24 px-6 overflow-hidden">
@@ -26,7 +27,7 @@ const EmailSupport: React.FC = () => {
           {/* LEFT CONTENT */}
           <div className="space-y-8 animate-slideInLeft">
             <h1 className="text-5xl md:text-6xl font-serif font-bold">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-800 via-purple-600 to-pink-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-800 via-purple-300 to-purple-600">
                 Email
               </span>
               <br />
@@ -55,15 +56,15 @@ const EmailSupport: React.FC = () => {
                   For complete details of TLC's Companion Paws program and
                   process see
                 </p>
-                <a
-                  href="https://companionpaws.ca"
+                <Link
+                  to="https://companionpaws.ca"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-purple-700 hover:text-purple-900 font-semibold text-lg transition-colors group"
                 >
                   CompanionPaws.ca
                   <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </a>
+                </Link>
               </div>
 
               <div className="bg-pink-50/50 p-6 rounded-2xl border border-pink-100">
@@ -71,13 +72,13 @@ const EmailSupport: React.FC = () => {
                   <span className="italic text-pink-600">Non-crisis</span>{' '}
                   questions and comments or to contact The LifeLine Canada
                   Foundation about collaborating please{' '}
-                  <a
-                    href="/contact"
+                  <Link
+                    to="/contact-us"
                     className="inline-flex items-center gap-1 text-purple-700 hover:text-purple-900 font-semibold underline decoration-2 decoration-purple-300 hover:decoration-purple-500 transition-all"
                   >
                     click here
                     <span className="text-lg">→</span>
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
@@ -91,7 +92,7 @@ const EmailSupport: React.FC = () => {
 
               {/* Main icon container */}
               <div className="relative bg-white p-12 rounded-[2rem] shadow-2xl border border-white/50 backdrop-blur-sm transform group-hover:scale-105 transition-all duration-500 group-hover:rotate-2">
-                <img src={EmailImage} />
+               <img src={EmailImage} className=' w-30 h-30 sm:w-70 sm:h-70' />
                 {/* Decorative elements */}
                 <div className="absolute -top-4 -right-4 w-20 h-20 bg-purple-100 rounded-full -z-10 group-hover:scale-110 transition-transform duration-500"></div>
                 <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-pink-100 rounded-full -z-10 group-hover:scale-110 transition-transform duration-500 delay-100"></div>

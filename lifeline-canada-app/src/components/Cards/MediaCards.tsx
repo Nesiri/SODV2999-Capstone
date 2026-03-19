@@ -366,7 +366,7 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-rose-600">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-purple-300 to-purple-600">
               {title}
             </span>
           </h2>

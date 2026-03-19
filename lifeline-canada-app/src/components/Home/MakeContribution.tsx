@@ -10,6 +10,7 @@ import {
   FaGooglePay,
   FaApplePay,
 } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const MakeContribution: React.FC = () => {
   return (
@@ -38,8 +39,8 @@ const MakeContribution: React.FC = () => {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-blue-700">
+            <h1 className="!text-4xl md:text-6xl lg:text-7xl font-black leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-purple-300 to-blue-700">
                 Make a
               </span>
               <br />
@@ -67,12 +68,12 @@ const MakeContribution: React.FC = () => {
                 anxiety and PTSD. If you have questions about your gift or about
                 other ways in which one could contribute, please don't hesitate
                 to{' '}
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact-us"
                   className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 hover:from-pink-600 hover:to-purple-600 transition-all duration-300 underline decoration-purple-300"
                 >
                   contact us
-                </a>
+                </Link>
                 .
               </p>
             </div>
@@ -134,16 +135,12 @@ const MakeContribution: React.FC = () => {
           {/* Secure Payment Badge */}
           <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-green-200/50 shadow-lg mx-auto">
             <Shield className="w-4 h-4 text-green-500" />
-            <span className="text-sm font-semibold text-green-600">
-              Secure Payment
-            </span>
+            
           </div>
 
           {/* Payment Methods */}
           <div className="space-y-4">
-            <p className="text-sm text-gray-500 uppercase tracking-wider">
-              We Accept
-            </p>
+            
             {/* Payment Icons - Beautiful & Responsive with Real Colors */}
             <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6">
               {[
@@ -212,7 +209,7 @@ const MakeContribution: React.FC = () => {
             </div>
             {/* Donation Button */}
             <div className="pt-8">
-              <button className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 text-white px-10 py-5 rounded-2xl text-xl font-bold shadow-xl shadow-purple-500/30 hover:shadow-2xl hover:shadow-pink-500/40 transition-all duration-300 hover:scale-105">
+              <button className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 via-purple-300 to-blue-600 text-white px-10 py-5 rounded-2xl text-xl font-bold shadow-xl shadow-purple-500/30 hover:shadow-2xl hover:shadow-pink-500/40 transition-all duration-300 hover:scale-105">
                 <Heart className="w-6 h-6 fill-white/20 group-hover:scale-110 transition-transform" />
                 <span className="relative z-10">Make a Donation</span>
                 <span className="relative z-10 group-hover:translate-x-1 transition-transform">
@@ -222,13 +219,7 @@ const MakeContribution: React.FC = () => {
               </button>
             </div>
 
-            {/* Trust Badges */}
-            <div className="flex items-center justify-center gap-6 pt-6 text-xs text-gray-400">
-              <span>✓ 256-bit SSL Secure</span>
-              <span>✓ PCI Compliant</span>
-              <span>✓ Verified by Visa</span>
-              <span>✓ Mastercard SecureCode</span>
-            </div>
+            
           </div>
         </div>
       </div>

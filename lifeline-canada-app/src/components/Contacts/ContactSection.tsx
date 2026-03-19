@@ -1,5 +1,6 @@
 import React from 'react';
 import contactImage from '../../assets/contact-us-800x322.png';
+import { Link } from 'react-router-dom';
 const ContactSection: React.FC = () => {
   return (
     <section className="relative w-full bg-gradient-to-br from-[#f8f5ff] via-white to-[#f0f4fe] py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
@@ -27,7 +28,7 @@ const ContactSection: React.FC = () => {
 
             {/* Heading */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-blue-700">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-purple-300 to-blue-700">
                 Contact
               </span>
               <br />
@@ -72,14 +73,14 @@ const ContactSection: React.FC = () => {
                 <p className="text-gray-700 text-sm md:text-base">
                   For complete details of TLC's Companion Paws program and
                   process please see:{' '}
-                  <a
-                    href="https://companionpaws.ca"
+                  <Link
+                    to="https://companionpaws.ca"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block sm:inline mt-1 sm:mt-0 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 hover:from-pink-600 hover:to-purple-600 transition-all duration-300 underline decoration-purple-300 break-words"
                   >
                     CompanionPaws.ca
-                  </a>
+                  </Link>
                 </p>
               </div>
 
@@ -88,12 +89,12 @@ const ContactSection: React.FC = () => {
                 <span className="absolute left-0 top-1.5 w-1 h-5 bg-gradient-to-b from-pink-400 to-purple-400 rounded-full"></span>
                 <p className="text-gray-700 text-sm md:text-base">
                   For crisis support, please click{' '}
-                  <a
-                    href="#"
+                  <Link
+                    to="/incrisisneedhelp"
                     className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 underline decoration-pink-300"
                   >
                     here
-                  </a>{' '}
+                  </Link>{' '}
                   to contact our support team.
                 </p>
               </div>
