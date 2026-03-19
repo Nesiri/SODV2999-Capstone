@@ -10,14 +10,15 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import type { GoogleProfile } from '../../types/auth.types';
 import type { SignUpData } from '../../types/user.type';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../hooks/useAuth';
+
 
 const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID || '';
+
 
 const AuthPage: React.FC = () => {
   const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(true);
-  const { setUser } = useAuth();
+//console.log({GOOGLE_CLIENT_ID})
 
   const handleSocialLogin = async (
     provider: string,
@@ -30,14 +31,10 @@ const AuthPage: React.FC = () => {
     const res = await socialLogin(profile.email, profile.name, profile.sub);
 
     if (res.ok && res.data) {
-      setUser(res.data.user);
+   
 
-      navigate('/dashboard', {
-        state: {
-          user: res.data.user,
-          from: 'social',
-        },
-      });
+      navigate('/dashboard');
+   
     } else {
       return {
         ok: false,
@@ -53,13 +50,8 @@ const AuthPage: React.FC = () => {
 
     if (res.ok && res.data) {
       // Navigate to dashboard with user data in state
-      setUser(res.data.user);
-      navigate('/dashboard', {
-        state: {
-          user: res.data.user,
-          from: 'login',
-        },
-      });
+  
+      navigate('/dashboard');
     } else if (!res.ok) {
       return {
         ok: false,
@@ -96,7 +88,9 @@ const AuthPage: React.FC = () => {
           <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
             {isLogin ? (
               <>
+              {GOOGLE_CLIENT_ID?.length > 0 && (
                 <SocialMediaAuth onSocialLogin={handleSocialLogin} />
+              )}
                 <LoginForm
                   onSubmit={handleLogin}
                   onSwitchToSignup={() => setIsLogin(false)}

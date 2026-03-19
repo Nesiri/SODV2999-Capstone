@@ -256,9 +256,26 @@ export const updateProfile = async (req, res) => {
 };
 
 // DELETE user
+// DELETE user - using authenticated user from middleware
 export const deleteUser = async (req, res) => {
   try {
-    await User.deleteUser(req.params.id);
+    // Get user ID from auth middleware (req.user)
+    const userId = req.user.id;
+    
+    if (!userId) {
+      return res.status(401).json({ message: "Not authenticated" });
+    }
+    
+    console.log({ deletingUserId: userId });
+    await User.deleteUser(userId);
+    
+    // Clear the auth cookie after successful deletion
+    res.clearCookie('token', {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'strict'
+    });
+    
     res.json({ ok: true, message: "User deleted successfully" });
   } catch (err) {
     console.error(err);

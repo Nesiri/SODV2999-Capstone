@@ -2,17 +2,11 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { LogOut, X } from 'lucide-react';
-import type { User, NavItem } from '../../../types/dashboard.types';
+import type { SidebarProps } from '../../../types/dashboard.types';
 
 import DashboardLogo from './DashboardLogo';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-  user: User;
-  navItems: NavItem[];
-  onLogout: () => void;
-}
+
 
 const Sidebar: React.FC<SidebarProps> = ({
   isOpen,
@@ -56,7 +50,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
               <span className="text-base font-medium text-amber-700">
-                {user.name.charAt(0).toUpperCase()}
+                {user.name?.charAt(0).toUpperCase()}
               </span>
             </div>
             <div className="flex-1 min-w-0">

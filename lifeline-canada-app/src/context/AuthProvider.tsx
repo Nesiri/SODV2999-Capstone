@@ -1,5 +1,5 @@
 // providers/AuthProvider.tsx
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import type { User } from '../types/auth.types';
 import api from '../utils/api';
@@ -25,8 +25,20 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     fetchUser();
   }, []);
 
+  // Simple onLogout function - set user to null and redirect to home
+  const onLogout = useCallback(() => {
+    setUser(null);
+    window.location.href = '/'; // Redirect to home page
+  }, []);
+
+  const value = {
+    user,
+    setUser,
+    onLogout,
+  };
+
   return (
-    <AuthContext.Provider value={{ user, setUser }}>
+    <AuthContext.Provider value={value}>
       {!loading && children}
     </AuthContext.Provider>
   );

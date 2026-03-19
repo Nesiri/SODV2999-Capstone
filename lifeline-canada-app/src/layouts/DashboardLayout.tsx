@@ -1,25 +1,15 @@
 // layouts/DashboardLayout.tsx
 import React, { useState } from 'react';
-
+import { Outlet } from 'react-router-dom';
 import Sidebar from '../components/AppComponent/Dashboard/Sidebar';
 import Header from '../components/AppComponent/Dashboard/Header';
 import Footer from '../components/AppComponent/Dashboard/Footer';
 import { mainNavItems } from '../navigation/appNav';
 
-interface User {
-  name: string;
-  email: string;
-}
-
-interface DashboardLayoutProps {
-  user: User;
-  children: React.ReactNode;
-  onLogout: () => void;
-}
+import type { DashboardLayoutProps } from '../types/dashboard.types';
 
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({
   user,
-  children,
   onLogout,
 }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -30,23 +20,34 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({
     onLogout();
   };
 
+  // Create display values with defaults
+  const displayName = user.name || 'Guest';
+  const displayUser = {
+    ...user,
+    name: displayName  // Ensure name is never undefined for display
+  };
+
   return (
-    <div className="min-w-screen min-h-screen bg-gradient-to-br from-slate-50 to-amber-50">
+    <div className="min-w-screen min-h-screen bg-gradient-to-br from-slate-50 to-amber-50 flex flex-col">
       <Sidebar
         isOpen={isSidebarOpen}
         onClose={toggleSidebar}
-        user={user}
+        user={displayUser}
         navItems={mainNavItems}
         onLogout={handleLogout}
       />
 
-      <main className="w-full lg:pl-72 min-h-screen">
-        <Header onMenuClick={toggleSidebar} user={user} />
+      <main className="w-screen lg:pl-72 flex-1 flex flex-col">
+        <Header 
+          onMenuClick={toggleSidebar} 
+          user={displayUser}
+        />
 
-        <div className="p-4 md:p-6 max-w-7xl mx-auto">
-          {children}
-          <Footer />
+        <div className="p-4 md:p-6 max-w-7xl mx-auto flex-1 w-full">
+          <Outlet />
         </div>
+        
+        <Footer />
       </main>
     </div>
   );

@@ -12,6 +12,6 @@ router.patch("/verify-email",UserController.verifyEmail)
 router.post("/login", UserController.login);
 router.post("/social-login",UserController.socialLogin)
 router.put("/:id", UserController.updateProfile);
-router.delete("/:id", UserController.deleteUser);
+router.delete("/user",authMiddleware, UserController.deleteUser);
 
 export default router;

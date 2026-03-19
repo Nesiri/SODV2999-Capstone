@@ -1,7 +1,7 @@
 // App.tsx
 import { Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
-import ProtectedRoute from './components/ProtectedRoute';
+
 import Home from './pages/Home';
 import Resource from './pages/Resource';
 import PatternInterrupt from './pages/PatternInterrupt';
@@ -27,7 +27,9 @@ import AuthPage from './pages/AuthPage/AuthPage';
 import PrivacyPage from './pages/PrivacyPage/PrivacyPage';
 import VerifyEmail from './pages/AuthPage/VerifyEmail';
 import NotFound from './pages/NotFound';
-import DashboardPage from './pages/WebAppPage/Dashboard';
+
+import DashboardRoutes from './routes/DashboardRoutes';
+import { AuthProvider } from './context/AuthProvider';
 
 export default function App() {
   return (
@@ -91,19 +93,19 @@ export default function App() {
           {/* Auth Routes */}
           <Route path="/app" element={<AuthPage />} />
           <Route path="/verify-email" element={<VerifyEmail />} />
-          {/* 404 Route */}
+          {/* 404 Route - this will catch any unmatched routes within MainLayout */}
           <Route path="*" element={<NotFound />} />
         </Route>
 
-        {/* Protected Dashboard Route */}
-        <Route
-          path="/dashboard"
-          element={
-            <ProtectedRoute>
-              <DashboardPage />
-            </ProtectedRoute>
-          }
-        />
+      {/* Protected Dashboard Route - Add /* to match all dashboard sub-routes */}
+      <Route
+        path="/dashboard/*"  
+        element={
+          <AuthProvider>
+            <DashboardRoutes />
+          </AuthProvider>  
+        }
+      /> 
       </Routes>
     </>
   );

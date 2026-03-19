@@ -12,6 +12,7 @@ function authMiddleware(req, res, next) {
 
   try {
     const decoded = verify(token, process.env.JWT_SECRET || 'secretkey');
+    //console.log({decoded})
     req.user = decoded; // attach user info to req
     next();
   } catch (err) {

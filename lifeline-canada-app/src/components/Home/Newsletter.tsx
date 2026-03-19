@@ -8,6 +8,7 @@ import {
   User,
 } from 'lucide-react';
 import ReCAPTCHA from 'react-google-recaptcha';
+const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
 export default function Newsletter() {
   const [isEmailSubmitted, setIsEmailSubmitted] = useState(false);
@@ -17,7 +18,12 @@ export default function Newsletter() {
   const [isHovered, setIsHovered] = useState(false);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
-  const RECAPTCHA_SITE_KEY = '6Ldo5GwsAAAAAMRKPm2bqCoxbEnt4aQI05rU9vL2';
+ 
+
+// Add a helpful error message if missing
+if (!RECAPTCHA_SITE_KEY) {
+  console.error('RECAPTCHA_SITE_KEY is missing in environment variables');
+}
 
   const handleCaptchaChange = (token: string | null) => {
     if (token) {
