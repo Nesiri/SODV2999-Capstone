@@ -256,7 +256,7 @@ export const patternInterrupts = [
 export const mainNavLinks = [
   {
     name: 'In Crisis?',
-    path: '/in-crisis',
+    path: '/incrisisneedhelp',
     emergency: true,
     icon: React.createElement(AlertCircle, { className: 'w-4 h-4' }),
   },
@@ -267,12 +267,12 @@ export const mainNavLinks = [
   },
   {
     name: 'Pattern Interrupts',
-    path: '/pattern-interrupt',
+    path: '/pattern-interrupts',
     hasMegaMenu: true,
   },
   {
     name: 'LifeLine App',
-    path: '/app',
+    path: '/app?mode=login',
     icon: React.createElement(Zap, { className: 'w-4 h-4' }),
   },
 ];
@@ -284,23 +284,23 @@ export const mainNavLinks = [
 export const dropdownNavLinks = [
   {
     name: 'About',
-    path: '/about',
+    path: '/about-us',
     icon: React.createElement(Users, { className: 'w-4 h-4' }),
   },
   {
     name: 'Companion Paws',
-    path: '/paws',
+    path: 'https://companionpaws.ca/',
     icon: '🐾',
   },
 
   {
     name: 'Contact',
-    path: '/contact',
+    path: '/contact-us',
     icon: '✉️', // Phone contact
   },
   {
     name: 'Email Support',
-    path: '/email-support',
+    path: '/support',
     icon: '✉️', // Email
   },
   {

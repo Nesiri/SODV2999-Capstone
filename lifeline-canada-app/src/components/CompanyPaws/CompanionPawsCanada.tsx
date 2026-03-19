@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import therapyDog from '../../assets/company-paws-130-800x889.png';
+import { Link } from 'react-router-dom';
 
 const CompanionPawsCanada: React.FC = () => {
   const [activeProgram, setActiveProgram] = useState<number | null>(null);
@@ -17,6 +18,7 @@ const CompanionPawsCanada: React.FC = () => {
     {
       id: 1,
       title: 'Personal Therapy Dog Adoption',
+      link: 'https://companionpaws.ca/personal-therapy-dog-adoption/',
       description:
         'Find your perfect companion for emotional support and daily wellness.',
       icon: '🐕',
@@ -31,6 +33,7 @@ const CompanionPawsCanada: React.FC = () => {
     {
       id: 2,
       title: 'Assisted Therapy Dog Adoption',
+      link: 'https://companionpaws.ca/assisted-therapy-dog-adoption/',
       description:
         'Specially trained therapy dogs for hospitals, schools, and care facilities.',
       icon: '🦮',
@@ -45,6 +48,7 @@ const CompanionPawsCanada: React.FC = () => {
     {
       id: 3,
       title: 'Certify Your Own Therapy Dog',
+      link: 'https://companionpaws.ca/certify-your-own-dog/',
       description:
         'Turn your beloved pet into a certified therapy dog through guided training.',
       icon: '🐾',
@@ -268,7 +272,8 @@ const CompanionPawsCanada: React.FC = () => {
               {/* Program cards - responsive */}
               <div className="space-y-3 sm:space-y-4">
                 {programs.slice(0, 3).map((program) => (
-                  <div
+                  <Link
+                    to={program?.link ?? '#'}
                     key={program.id}
                     className={`group relative overflow-hidden rounded-xl sm:rounded-2xl transition-all duration-500 transform hover:-translate-y-1 hover:shadow-xl sm:hover:shadow-2xl cursor-pointer ${program.bgColor}`}
                     onMouseEnter={() => setActiveProgram(program.id)}
@@ -334,13 +339,16 @@ const CompanionPawsCanada: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
 
               {/* View all programs link - mobile friendly */}
               <div className="text-center sm:text-left mt-4">
-                <button className="text-amber-600 font-semibold text-sm sm:text-base inline-flex items-center gap-1 group">
+                <Link
+                  to="https://companionpaws.ca/"
+                  className="text-amber-600 font-semibold text-sm sm:text-base inline-flex items-center gap-1 group"
+                >
                   <span>View all 6 programs</span>
                   <svg
                     className="w-4 h-4 group-hover:translate-x-1 transition-transform"
@@ -355,7 +363,7 @@ const CompanionPawsCanada: React.FC = () => {
                       d="M9 5l7 7-7 7"
                     />
                   </svg>
-                </button>
+                </Link>
               </div>
 
               {/* Availability badge - responsive */}

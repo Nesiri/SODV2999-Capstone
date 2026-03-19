@@ -49,7 +49,7 @@ const PatternInterruptSection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800"
+      className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-purple-300"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0">

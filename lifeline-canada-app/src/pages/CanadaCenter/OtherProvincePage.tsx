@@ -6,6 +6,7 @@ import PECrisisCentres from '../../components/CrisisCenter/Canada/OtherProvince/
 import YTCrisisCentres from '../../components/CrisisCenter/Canada/OtherProvince/YTCrisisCenter';
 import NUCrisisCentres from '../../components/CrisisCenter/Canada/OtherProvince/NUCrisisCenter';
 import NTCrisisCentres from '../../components/CrisisCenter/Canada/OtherProvince/NTCrisisCenter';
+import NotFound from '../NotFound';
 
 function OtherProvinceCrisisCenterPage() {
   const { mode } = useParams<{ mode: string }>();
@@ -35,7 +36,7 @@ function OtherProvinceCrisisCenterPage() {
       break;
 
     default:
-      content = <p>Province not found.</p>;
+      content = <NotFound />;
   }
 
   return <>{content}</>;

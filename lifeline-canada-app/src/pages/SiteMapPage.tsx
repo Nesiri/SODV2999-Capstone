@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const SiteMapPage = () => {
-  // Link constants (keeping your existing constants)
+  // Link constants (keeping your existing constants - no changes)
   const mainLinks = [
     { name: 'Depression', path: '/depression' },
     { name: 'Anxiety', path: '/anxiety' },
@@ -133,16 +133,8 @@ const SiteMapPage = () => {
     { name: 'En Francais', path: '/fr' },
   ];
 
-  // Gradient style for links
-  const gradientStyle = {
-    background: 'linear-gradient(to right, #ec4899, #3b82f6, #8b5cf6)',
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-    backgroundClip: 'text',
-    color: 'transparent',
-    textDecoration: 'none',
-    display: 'inline-block',
-  };
+  // Create a reusable link className
+  const linkClassName = "bg-gradient-to-r from-[#4A90E2] via-[#6A98C8] to-[#8AA0AE] bg-clip-text text-transparent inline-block transition-all duration-300 hover:!underline hover:!underline-offset-4 hover:!decoration-2 hover:!decoration-pink-400";
 
   // Font size classes using clamp with halved scaling
   const fontSizes = {
@@ -151,15 +143,19 @@ const SiteMapPage = () => {
     mainLink: 'clamp(1rem, 1.25vw, 1.5rem)', // Main navigation links
     subLink: 'clamp(0.875rem, 0.9vw, 1.25rem)', // Submenu/child links
   };
+
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-indigo-50 via-purple-90 to-pink-90">
+  <div className="w-full min-h-screen bg-gradient-to-br from-amber-200 via-orange-100 to-yellow-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
         {/* Header with pink/blue/purple gradient */}
         <h1
           className="relative top-10 mb-12 md:mb-16 cursor-pointer transition-all duration-300 tracking-tight border-l-4 border-pink-400 pl-4"
           style={{ fontSize: fontSizes.mainTitle }}
         >
-          <Link to="/" style={gradientStyle}>
+          <Link 
+            to="/" 
+            className={linkClassName}
+          >
             The LifeLine Canada
           </Link>
         </h1>
@@ -173,7 +169,8 @@ const SiteMapPage = () => {
             >
               <Link
                 to={link.path}
-                style={{ ...gradientStyle, fontSize: fontSizes.mainLink }}
+                className={linkClassName}
+                style={{ fontSize: fontSizes.mainLink }}
               >
                 {link.name}
               </Link>
@@ -186,7 +183,10 @@ const SiteMapPage = () => {
           className="font-normal mt-10 md:mt-14 mb-4 md:mb-6 cursor-pointer transition-all duration-300 border-l-4 border-pink-400 pl-4"
           style={{ fontSize: fontSizes.categoryTitle }}
         >
-          <Link to="/about" style={gradientStyle}>
+          <Link 
+            to="/about" 
+            className={linkClassName}
+          >
             About Us
           </Link>
         </h2>
@@ -198,7 +198,8 @@ const SiteMapPage = () => {
             >
               <Link
                 to={link.path}
-                style={{ ...gradientStyle, fontSize: fontSizes.mainLink }}
+                className={linkClassName}
+                style={{ fontSize: fontSizes.mainLink }}
               >
                 {link.name}
               </Link>
@@ -211,7 +212,10 @@ const SiteMapPage = () => {
           className="font-normal mt-10 md:mt-14 mb-4 md:mb-6 cursor-pointer transition-all duration-300 border-l-4 border-pink-400 pl-4"
           style={{ fontSize: fontSizes.categoryTitle }}
         >
-          <Link to="/crisis" style={gradientStyle}>
+          <Link 
+            to="/crisis" 
+            className={linkClassName}
+          >
             In Crisis?
           </Link>
         </h2>
@@ -225,10 +229,9 @@ const SiteMapPage = () => {
                 <>
                   <Link
                     to={link.path}
+                    className={linkClassName.replace('inline-block', 'block')}
                     style={{
-                      ...gradientStyle,
                       fontSize: fontSizes.mainLink,
-                      display: 'block',
                       marginBottom: '0.5rem',
                     }}
                   >
@@ -242,10 +245,8 @@ const SiteMapPage = () => {
                       >
                         <Link
                           to={province.path}
-                          style={{
-                            ...gradientStyle,
-                            fontSize: fontSizes.subLink,
-                          }}
+                          className={linkClassName}
+                          style={{ fontSize: fontSizes.subLink }}
                         >
                           {province.name}
                         </Link>
@@ -256,7 +257,8 @@ const SiteMapPage = () => {
               ) : (
                 <Link
                   to={link.path}
-                  style={{ ...gradientStyle, fontSize: fontSizes.mainLink }}
+                  className={linkClassName}
+                  style={{ fontSize: fontSizes.mainLink }}
                 >
                   {link.name}
                 </Link>
@@ -270,7 +272,10 @@ const SiteMapPage = () => {
           className="font-normal mt-10 md:mt-14 mb-4 md:mb-6 cursor-pointer transition-all duration-300 border-l-4 border-pink-400 pl-4"
           style={{ fontSize: fontSizes.categoryTitle }}
         >
-          <Link to="/resources" style={gradientStyle}>
+          <Link 
+            to="/resources" 
+            className={linkClassName}
+          >
             Resources
           </Link>
         </h2>
@@ -287,7 +292,8 @@ const SiteMapPage = () => {
               >
                 <Link
                   to={`/resources/${slug}`}
-                  style={{ ...gradientStyle, fontSize: fontSizes.mainLink }}
+                  className={linkClassName}
+                  style={{ fontSize: fontSizes.mainLink }}
                 >
                   {item}
                 </Link>
@@ -301,7 +307,10 @@ const SiteMapPage = () => {
           className="font-normal mt-10 md:mt-14 mb-4 md:mb-6 cursor-pointer transition-all duration-300 border-l-4 border-pink-400 pl-4"
           style={{ fontSize: fontSizes.categoryTitle }}
         >
-          <Link to="/pattern-interrupts" style={gradientStyle}>
+          <Link 
+            to="/pattern-interrupts" 
+            className={linkClassName}
+          >
             Pattern Interrupts
           </Link>
         </h2>
@@ -315,7 +324,8 @@ const SiteMapPage = () => {
               >
                 <Link
                   to={`/pattern-interrupts/${slug}`}
-                  style={{ ...gradientStyle, fontSize: fontSizes.mainLink }}
+                  className={linkClassName}
+                  style={{ fontSize: fontSizes.mainLink }}
                 >
                   {item}
                 </Link>
@@ -325,7 +335,8 @@ const SiteMapPage = () => {
           <li className="mb-2 md:mb-3 cursor-pointer transition-all duration-300 font-medium">
             <Link
               to="/mental-health-apps"
-              style={{ ...gradientStyle, fontSize: fontSizes.mainLink }}
+              className={linkClassName}
+              style={{ fontSize: fontSizes.mainLink }}
             >
               Mental Health Apps
             </Link>
@@ -338,7 +349,8 @@ const SiteMapPage = () => {
               >
                 <Link
                   to={app.path}
-                  style={{ ...gradientStyle, fontSize: fontSizes.subLink }}
+                  className={linkClassName}
+                  style={{ fontSize: fontSizes.subLink }}
                 >
                   {app.name}
                 </Link>
@@ -354,7 +366,8 @@ const SiteMapPage = () => {
               >
                 <Link
                   to={`/pattern-interrupts/${slug}`}
-                  style={{ ...gradientStyle, fontSize: fontSizes.mainLink }}
+                  className={linkClassName}
+                  style={{ fontSize: fontSizes.mainLink }}
                 >
                   {item}
                 </Link>
@@ -370,7 +383,10 @@ const SiteMapPage = () => {
             className="font-normal mt-10 md:mt-14 mb-4 md:mb-6 cursor-pointer transition-all duration-300 border-l-4 border-pink-400 pl-4"
             style={{ fontSize: fontSizes.categoryTitle }}
           >
-            <Link to={link.path} style={gradientStyle}>
+            <Link 
+              to={link.path} 
+              className={linkClassName}
+            >
               {link.name}
             </Link>
           </h2>

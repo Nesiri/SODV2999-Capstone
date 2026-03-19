@@ -8,7 +8,7 @@ const Resource = () => {
   return (
     <div className=" relative top-20 sm:top-0 min-h-screen bg-gray-50">
       <ResourcesSection />
-      <MentalHealthCardsGrid cards={mentalHealthCards} />
+      <MentalHealthCardsGrid cards={mentalHealthCards} variant = 'compact' />
       <PatternInterruptCard src={patternInterruptImg} />
       <CrisisCentres />
     </div>

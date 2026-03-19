@@ -15,8 +15,8 @@ const MarketingManagerSection: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* LEFT COLUMN */}
           <div className="space-y-8 animate-fadeInLeft">
-            <h2 className="text-5xl md:text-4xl lg:text-5xl font-black mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-purple-600 to-pink-600">
+            <h2 className="!text-2xl md:text-4xl lg:text-5xl font-black mb-4">
+              <span className="text-black">
                 Marketing
               </span>
               <br />
@@ -78,7 +78,7 @@ const MarketingManagerSection: React.FC = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold flex items-center gap-2">
                 <span className="w-1 h-8 bg-gradient-to-b from-blue-400 to-purple-400 rounded-full"></span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                <span className="text-black">
                   Key Responsibilities
                 </span>
               </h3>
@@ -113,7 +113,7 @@ const MarketingManagerSection: React.FC = () => {
             <div className="space-y-4 pt-4">
               <h3 className="text-2xl font-bold flex items-center gap-2">
                 <span className="w-1 h-8 bg-gradient-to-b from-purple-400 to-pink-400 rounded-full"></span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                <span className="text-black">
                   Skills & Experience
                 </span>
               </h3>
