@@ -9,195 +9,156 @@ type Resource = {
 
 const resources: Resource[] = [
   {
-    title: "Suicide… Read This First",
+    title: "Suicide...Read This First",
     description:
-      "A widely shared essay by Martha Ainsworth offering a compassionate perspective for people experiencing suicidal thoughts.",
+      "The original web page written by Martha Ainsworth. A suicide prevention classic, this simple essay has been saving lives on the internet since 1995. As powerful today as when it was first created.",
     url: "http://metanoia.org/suicide/",
     image: "/images/pattern/self-management/read-this-first.jpg",
   },
   {
     title: "Coping & Self-Care",
     description:
-      "Strategies from Crisis Centre BC for managing stress, emotional pain, and overwhelming thoughts.",
+      "There are many things you can do to help reduce your feelings of stress and emotional pain. This section on coping strategies and dealing with stress will be helpful to you.",
     url: "https://crisiscentre.bc.ca/resources/",
     image: "/images/pattern/self-management/crisis-centre.jpg",
   },
   {
     title: "Coping With Suicidal Thoughts",
     description:
-      "A supportive resource designed for people currently experiencing suicidal thoughts or intense emotional distress.",
+      "Coping with Suicidal Thoughts is intended for individuals who are currently experiencing suicidal ideation and/or have had a plan or made an attempt to hurt themselves.",
     url: "https://www.suicideinfo.ca/",
     image: "/images/pattern/self-management/copingsuicidal.jpg",
   },
   {
-    title: "GetSelfHelp",
+    title: "Get Self-Help – Coping with Suicidal Thoughts",
     description:
-      "Free CBT self-help worksheets, coping strategies, and guided exercises for anxiety, depression, and stress.",
+      "This website provides CBT self help and therapy resources, including worksheets and information sheets and self help mp3s.",
     url: "https://www.getselfhelp.co.uk/",
     image: "/images/pattern/self-management/getselfhelp.jpg",
   },
   {
-    title: "Now Matters Now",
+    title: "NowMattersNow",
     description:
-      "Real coping skills for intense emotions using Dialectical Behaviour Therapy techniques.",
+      "Here we offer strategies to survive and build more manageable and meaningful lives.",
     url: "https://nowmattersnow.org/",
     image: "/images/pattern/self-management/nowmattersnow.jpg",
   },
   {
-    title: "Reasons to Go On Living",
+    title: "Reasons to go on Living",
     description:
-      "A Canadian research project sharing stories from people who survived suicide attempts and why they are glad to be alive.",
+      "Canadian research project archiving suicide attempt stories along with why the survivor is now glad to be alive.",
     url: "https://www.suicideinfo.ca/",
     image: "/images/pattern/self-management/reasons-living.jpg",
   },
   {
     title: "Reasons for Staying Alive",
     description:
-      "A grassroots suicide prevention project sharing meaningful reasons people choose to keep living.",
+      "Grassroots reasons for staying alive when you are considering suicide.",
     url: "https://grassrootshelp.org/",
     image: "/images/pattern/self-management/stayingalive.jpg",
   },
   {
     title: "Wellness Workshop",
     description:
-      "An online program providing tools for improving and maintaining mental wellness.",
+      "The Wellness Workshop online is a resource to help you on your personal journey to Mental health Wellness. The workshop is for everyone and is designed to give you tools to both improve your mental wellness and to maintain your wellness.",
     url: "https://www.suicideinfo.ca/",
     image: "/images/pattern/self-management/wellness.jpg",
   },
   {
-    title: "HereToHelp",
-    description:
-      "Trusted Canadian mental health information including anxiety, depression, substance use, and self-care tools.",
+    title: "Self-help Resources",
+    description: "Mental Health Info in 11 Languages",
     url: "https://www.heretohelp.bc.ca/",
     image: "/images/pattern/self-management/heretohelp.jpg",
   },
 ];
 
-function ResourceCard({ resource }: { resource: Resource }) {
+function ResourceRow({ resource }: { resource: Resource }) {
   return (
-    <a
-      href={resource.url}
-      target="_blank"
-      rel="noreferrer"
-      className="group block rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_10px_25px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,23,42,0.14)]"
-    >
-      <div className="flex gap-6">
-        <img
-          src={resource.image}
-          alt={resource.title}
-          className="h-20 w-20 rounded-lg object-cover"
-        />
+    <a href={resource.url} target="_blank" rel="noreferrer" className="block">
+      <div className="flex flex-col gap-4 py-8 md:flex-row md:items-start">
+        <div className="shrink-0">
+          <img
+            src={resource.image}
+            alt={resource.title}
+            className="h-[100px] w-[180px] border border-[#d9d9d9] object-cover shadow-sm"
+          />
+        </div>
 
-        <div>
-          <h3 className="text-lg font-semibold text-violet-700 group-hover:underline">
+        <div className="max-w-[760px]">
+          <h3 className="text-[22px] text-[#9a00b5] hover:underline">
             {resource.title}
           </h3>
 
-          <p className="mt-2 text-[15px] leading-7 text-slate-700">
+          <p className="mt-3 text-[15px] leading-7 text-black">
             {resource.description}
           </p>
         </div>
       </div>
+
+      <div className="h-px bg-[#d8b4f0]" />
     </a>
   );
 }
 
 export default function SelfManagementPage() {
   return (
-    <div className="min-h-screen bg-[#f5f3f8]">
-      <div className="mx-auto max-w-7xl px-6 py-10">
-        <div className="mb-6 text-sm text-slate-500">
-          <Link to="/pattern" className="text-blue-600 hover:underline">
+    <div className="w-full bg-[#f3f1f5]">
+      <div className="mx-auto max-w-[1200px] px-10 py-6">
+        <div className="mb-6 text-[12px] text-[#666]">
+          <Link to="/pattern" className="text-[#4c7bd9] hover:underline">
             Pattern Interrupts
           </Link>{" "}
-          <span className="text-slate-400">/</span>{" "}
-          <span className="text-slate-700">Self Management</span>
+          / <span className="text-[#333]">Self Management</span>
         </div>
-
-        {/* HERO */}
-        <section className="rounded-[32px] bg-gradient-to-r from-[#efe7f7] to-[#e9eef9] px-10 py-16">
-          <div className="grid items-center gap-10 md:grid-cols-2">
-            <div>
-              <h1 className="text-4xl font-semibold md:text-5xl">
-                Self Management
-              </h1>
-
-              <p className="mt-6 text-[17px] leading-8 text-slate-800">
-                Self-management empowers people to take an active role in their
-                mental health and wellbeing. It involves learning skills,
-                building awareness, and developing healthy strategies to manage
-                stress, emotions, and difficult thoughts.
-              </p>
-
-              <p className="mt-4 text-[17px] leading-8 text-slate-800">
-                Even small self-care habits can reduce stress, improve mood,
-                increase resilience, and help you feel more in control of your
-                mental health journey.
-              </p>
-
-              <p className="mt-4 text-[17px] leading-8 text-slate-800">
-                Below are trusted resources, coping strategies, and tools to
-                support your mental health.
-              </p>
-            </div>
-
-            <div>
-              <img
-                src="/images/pattern/self-management/hero.jpg"
-                alt="Self management"
-                className="rounded-[28px] shadow-[0_14px_30px_rgba(0,0,0,0.14)]"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* QUICK SELF CARE */}
-        <section className="mt-10 rounded-[28px] bg-white p-8 shadow">
-          <h2 className="text-3xl font-semibold">Quick Self-Care Ideas</h2>
-
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
-            {[
-              "Take 10 slow breaths and relax your shoulders.",
-              "Drink water and step outside for fresh air.",
-              "Write down three things you're grateful for.",
-              "Message a friend you trust.",
-              "Listen to music that calms you.",
-              "Go for a short walk.",
-            ].map((tip, i) => (
-              <div
-                key={i}
-                className="rounded-xl bg-slate-50 p-4 text-slate-700"
-              >
-                {tip}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* RESOURCES */}
-        <section className="mt-10">
-          <h2 className="mb-6 text-3xl font-semibold">
-            Trusted Self-Management Resources
-          </h2>
-
-          <div className="grid gap-6">
-            {resources.map((resource, index) => (
-              <ResourceCard key={index} resource={resource} />
-            ))}
-          </div>
-        </section>
-
-        {/* FINAL NOTE */}
-        <section className="mt-10 rounded-[28px] bg-gradient-to-r from-violet-600 to-fuchsia-600 px-8 py-10 text-white">
-          <h2 className="text-3xl font-semibold">Remember</h2>
-
-          <p className="mt-4 text-lg leading-8 text-violet-50">
-            Managing mental health is not about being perfect. It’s about
-            learning tools, practicing small steps, and asking for help when you
-            need it. Every step you take toward caring for yourself matters.
-          </p>
-        </section>
       </div>
+
+      <section className="w-full bg-[#dcd6e6]">
+        <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-12 px-10 py-16">
+          <div className="max-w-[520px]">
+            <h1 className="font-serif text-[52px] text-black">
+              Self Management
+            </h1>
+
+            <p className="mt-4 text-[16px] leading-7 text-black">
+              Self-management is intended to empower individuals in their
+              recovery by providing the skills and confidence they need to
+              take active steps in recognizing and managing their own health
+              problems.
+            </p>
+
+            <p className="mt-4 text-[16px] leading-7 text-black">
+              When it comes to your mental health, self-care can help you
+              manage stress, lower your risk of illness, and increase your
+              energy. Even small acts of self-care in your daily life can
+              have a big impact.
+            </p>
+
+            <p className="mt-4 text-[16px] leading-7 text-black">
+              Below are some strategies, research, information and resources
+              for self managing stress, emotional pain, depression, anxiety
+              and suicidal thoughts.
+            </p>
+          </div>
+
+          <div className="flex justify-end">
+            <img
+              src="/images/pattern/self-management/hero.jpg"
+              alt="Self management"
+              className="w-[420px] shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1200px] px-10 py-14">
+        <h2 className="mb-6 text-[40px] text-black">
+          Some Great Self Management Links
+        </h2>
+
+        {resources.map((resource, index) => (
+          <ResourceRow key={index} resource={resource} />
+        ))}
+      </section>
     </div>
   );
 }

@@ -7,6 +7,8 @@ import Resources from "./pages/Resources";
 import CrisisHelp from "./pages/CrisisHelp";
 import Contact from "./pages/Contact";
 
+import ImproveYourMoodPage from "./pages/pattern/ImproveYourMoodPage";
+import ComedyPage from "./pages/pattern/ComedyPage";
 import PatternLanding from "./pages/pattern/PatternLanding";
 import PatternTemplate from "./pages/pattern/PatternTemplate";
 import TransformNegativeThoughtsPage from "./pages/pattern/TransformNegativeThoughtsPage";
@@ -26,9 +28,10 @@ export default function App() {
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
-
+        <Route path="/pattern/improve-mood" element={<ImproveYourMoodPage />} />
+        <Route path="pattern/comedy" element={<ComedyPage />} />
         <Route path="pattern" element={<PatternLanding />} />
-        <Route
+  
           path="pattern/transform-negative-thoughts"
           element={<TransformNegativeThoughtsPage />}
         />

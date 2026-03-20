@@ -914,8 +914,7 @@ gallery: {
     category: "Mood & Inspiration",
     icon: "😊",
     color: "from-fuchsia-400 to-violet-500",
-    heroImage:
-      "https://images.unsplash.com/photo-1520975597475-cd75d4c7f6db?auto=format&fit=crop&w=1800&q=80",
+    heroImage: "/images/resources/improve-your-mood.jpg",
     sections: [
       {
         heading: "Why this helps",
@@ -1045,7 +1044,7 @@ gallery: {
     category: "Mood & Inspiration",
     icon: "😂",
     color: "from-violet-500 to-fuchsia-500",
-    heroImage: "/images/pattern/comedy-hero.jpg",
+   heroImage: "/images/resources/comedy-hero.jpg",
     sections: [
       {
         heading: "Why this helps",
@@ -1133,7 +1132,7 @@ gallery: {
     category: "Mood & Inspiration",
     icon: "🎬",
     color: "from-indigo-500 to-fuchsia-500",
-    heroImage: "/images/pattern/resources/inspiring-hero.jpg",
+   heroImage: "/images/resources/inspiring-videos-hero.jpg",
     resourceColumns: 4,
     sections: [
       {
@@ -1756,6 +1755,7 @@ gallery: {
     title: "Helpful Movies",
     description: "Helpful movies that support reflection and healing.",
     category: "Mood & Inspiration",
+    heroImage: "/images/resources/helpful-movies.jpg",
     icon: "🎥",
     color: "from-indigo-400 to-blue-400",
     sections: [

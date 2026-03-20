@@ -17,10 +17,7 @@ const sections: ArticleSection[] = [
     imageAlt: "Releasing negative thought patterns",
     reverse: true,
     paragraphs: [
-      "Mindfulness can be defined as paying attention in a particular way: on purpose, in the present moment, and without judgment. In simple words, mindfulness helps us become more aware of our thoughts instead of automatically getting carried away by them.",
-      "When we slow down and observe what is happening in our minds, we begin to notice repeated thought patterns. We can see how certain beliefs, assumptions, or fears keep showing up again and again. This awareness is important because we cannot change what we do not notice.",
-      "Negative thoughts often become stronger when they remain automatic and unchallenged. Mindfulness creates a pause between the thought and the reaction. That pause gives you a chance to respond differently.",
-      "Instead of believing every negative thought immediately, you can learn to step back and ask whether it is helpful, accurate, or necessary. Over time, that practice weakens the control those thoughts have over your emotions and behavior.",
+      'Mindfulness can be defined as “Paying attention in a particular way: on purpose, in the present moment, and nonjudgmentally.” In other words, mindfulness allows us to become more aware of our thoughts without labeling or judging them. When we are able to be still, and be anchored in the now, we notice our thoughts more clearly. And when we become aware of our thoughts, we’re able to begin challenging them.',
     ],
   },
   {
@@ -28,15 +25,14 @@ const sections: ArticleSection[] = [
     image: "/images/pattern/transform-negative/challenge-negative-thoughts.jpg",
     imageAlt: "Challenge your negative thoughts poster",
     paragraphs: [
-      "It becomes easier to challenge negative thoughts when the process is broken down into simple steps. The goal is not to force yourself to be unrealistically positive. The goal is to notice harmful thinking patterns and replace them with something more balanced and truthful.",
-      "The next time you notice yourself stuck in a negative thought loop, try using these four steps.",
+      "It’s easier to challenge negative thoughts when the process is broken down into steps. The next time you observe yourself stuck in a negative thought pattern, try practicing these four steps.",
     ],
     bullets: [
       "Recognize that you are having a negative thought or pattern of negative thoughts.",
-      "Pause and say “Stop” in your mind, or out loud if that helps you interrupt the spiral.",
-      "Challenge the thought by asking questions such as: What evidence do I have to support this thought? Is there another way to look at this? What would I say to a friend in the same situation?",
-      "Replace the thought with something more rational, balanced, and compassionate.",
-      "For example, instead of saying “I always ruin everything,” try “I made a mistake, but I can learn, recover, and make a better choice next time.”",
+      'Say “Stop!” in your head (or out loud if it feels socially appropriate).',
+      "Challenge the thought by probing it with questions. Ask yourself, “What evidence do I have to support this thought?” Odds are, you’ll notice that the evidence isn’t strong.",
+      "Replace the thought with something more rational or positive. For example, if you’re thinking, “I am ugly,” try thinking instead about the individuals in your life who would disagree, or browse through flattering photos on Facebook or Instagram.",
+      "When we release negative thought patterns and become mindful of the present, we allow ourselves to fully experience all the joy that is available to us in a given moment.",
     ],
   },
   {
@@ -45,67 +41,91 @@ const sections: ArticleSection[] = [
     imageAlt: "Mindfulness activities poster",
     reverse: true,
     paragraphs: [
-      "Mindfulness sounds simple, but it takes practice. The purpose is not to empty your mind. The purpose is to bring your attention back to the present moment when your thoughts begin to pull you away.",
-      "One helpful way to begin is to observe how children and animals move through the world. They tend to respond with curiosity and presence rather than endless mental replay. That same attitude can help you soften your relationship with difficult thoughts.",
-      "Mindful movement can also be useful. Gentle yoga, stretching, or even sitting still and noticing your breathing can help anchor your mind back into your body.",
-      "When you feel anxiety, shame, or racing thoughts, the mind often predicts that the feeling will last forever. Mindfulness teaches the opposite: emotions rise, pass, and change.",
-    ],
-    bullets: [
-      "Notice your breath without trying to control it too much.",
-      "Observe your thoughts without judging them as good or bad.",
-      "Bring attention back to your body when your mind feels crowded.",
-      "Practice short moments of stillness instead of waiting for the perfect time.",
-      "Repeat the process daily, even for only two or three minutes.",
+      "Mindfulness may feel great, but that doesn’t mean it feels easy to achieve. To help clients start on the path to mindfulness, try the following practices.",
+      "Imagine how young children and animals act in the world. They’re so connected to whatever’s going on in the present. Set an intention to bring a gentle curiosity to life, as animals and children do. When we approach our thoughts in this way, we don’t feel a need to attach to them or push them away. Instead, we can explore them, with childlike wonder, and let them be nothing more than what they are — thoughts.",
+      "Practice Yoga — especially the hard poses. Yoga is a meditation of the body. In yoga, our bodies help to “anchor” us in the present, as our awareness is focused on the changes happening within our bodies.",
+      "Eat Mindfully. When was the last time you sat down for a meal and really enjoyed the flavor, texture, smell, and presentation of your food? Challenge yourself to eat a meal mindfully.",
+      "Take a Mindful Shower. The next time you’re in the shower, focus on the water on your skin, the temperature, and the experience of being fully present.",
+      "Practice Mindful Listening. It means to listen, just listen, without judgment and without preparing or thinking about your response or opinion.",
     ],
   },
   {
-    title: "Simple Daily Mindfulness Practices",
-    image: "/images/pattern/transform-negative/mindfulness-circle.jpg",
-    imageAlt: "Mindfulness circle diagram",
-    paragraphs: [
-      "Mindfulness works best when it becomes part of everyday life instead of something you only try during a crisis. Small repeated practices are often more powerful than one long session.",
-      "You can practice mindfulness while eating, showering, walking, listening, stretching, washing dishes, or sitting quietly for a minute. The key is to bring your full attention into what you are doing right now.",
-      "This helps lower mental noise and gives your mind fewer chances to spiral into old negative patterns.",
-    ],
-    bullets: [
-      "Eat mindfully by noticing the taste, texture, smell, and pace of your food.",
-      "Take a mindful shower by focusing on the water, temperature, and physical sensations.",
-      "Practice mindful listening by fully hearing someone without planning your reply.",
-      "Take a slow walk and notice colors, sounds, movement, and air around you.",
-      "Pause during the day and ask: What am I thinking right now, and is it helping me?",
-    ],
-  },
-  {
-    title: "Transform Negative Thoughts with Suggested Actions",
+    title: "Transform Negative Thoughts with these Suggested Actions:",
     image: "/images/pattern/transform-negative/suggested-actions.jpg",
     imageAlt: "Meditating illustration",
-    reverse: true,
-    paragraphs: [
-      "When negative thoughts become heavy, it helps to interrupt them with action. Action changes mental momentum. You do not always need a deep solution first — sometimes you need a healthy shift in state.",
-      "Try simple activities that move your attention, body, or environment. A small change can reduce the intensity of the thought loop and make it easier to think clearly again.",
-    ],
     bullets: [
-      "Go for a walk.",
-      "Call a friend.",
+      "Kiss somebody.",
+      "Laugh out loud in a public restroom so it echoes.",
+      "Eat some candy while waiting in line.",
+      "Say thank you for anything.",
+      "Compliment someone you know needs to hear it.",
+      "Slide down a banister.",
+      "Plant something.",
+      "Do yoga.",
+      "Sprint as fast as you can like Phoebe Buffay.",
       "Take a silly picture.",
-      "Do yoga or stretching.",
-      "Play your favorite song loudly.",
-      "Read something comforting.",
-      "Buy yourself a small treat.",
-      "Take a warm bath or shower.",
-      "Paint, draw, or create something.",
+      "Play your favorite song — LOUDLY!",
+      "Exercise.",
+      "Read a book and tell someone else what you read placing yourself in the story.",
+      "Spin until you are dizzy.",
+      "Blow bubbles.",
+      "Walk in nature.",
+      "Watch a funny movie.",
+      "Call a friend.",
+      "Plan a vacation.",
+      "Hug someone — preferably a stranger.",
+      "Attempt a cartwheel.",
+      "Adopt a pet.",
+      "Dance naked to Richard Simmons’ “Sweatin to the Oldies.”",
+      "Sleep naked on silk sheets.",
+      "Do push-ups while trying to play the harmonica.",
+      "Arm wrestle your neighbor.",
+      "Whistle show tunes during your next meeting.",
+      "Meditate.",
+      "Buy yourself something.",
+      "Get a giant frozen yogurt bowl.",
+      "Test drive a new car.",
+      "Let it out — Go in your closet and SCREAMAAM!",
+      "Read anything by Louise L. Hay.",
+      "Get a manicure — guys and gals!",
+      "Walk barefoot in the grass.",
+      "Brush your hair — proven to be relaxing.",
+      "Skip rocks at the lake.",
+      "Dump negative friends.",
+      "Get acupuncture.",
+      "Paint something.",
+      "Listen to ambient sounds — those soft relaxing tones that lower your brain wave frequency.",
+      "Go to the pet store and hold something slimy.",
+      "Take a long hot bath.",
+      "Turn off your cell phone.",
+      "Ignore others opinions and start valuing your own.",
+      "Overcome a fear — do something you are afraid to do.",
+      "Challenge your negative thoughts for validity.",
+      "Look for something to be grateful for right this minute.",
+      "Swim naked.",
+      "Basically — do anything you would normally do, but naked.",
+      "Bake something and pass it out to your neighbors.",
+      "Inhale from a helium balloon and order a pizza.",
+      "Take a nap on a park bench.",
+      "Get a massage.",
+      "Jump in a pool fully clothed.",
+      "Spend time alone — but do it with friends, family and strangers.",
+      "Get a facial.",
+      "SMILE = ) — Neurological changes happen in the brain just by smiling.",
+      "Put the past in the past.",
+      "Learn in-home acupuncture kit... without the needles.",
+      "Climb a tree.",
+      "Go to your happy place.",
+      "Help a stranger.",
       "Write in your journal.",
-      "Challenge one negative thought for accuracy.",
-      "Look for one thing to be grateful for right now.",
-      "Help someone else in a small way.",
-      "Go somewhere bright or peaceful.",
-      "Smile on purpose and soften your shoulders.",
+      "Know there is no such thing as failure — only giving up.",
     ],
   },
   {
     title: "A More Helpful Inner Voice",
     image: "/images/pattern/transform-negative/inner-voice.jpg",
     imageAlt: "Mindfulness definition card",
+    reverse: true,
     paragraphs: [
       "One of the strongest ways to transform negative thinking is to change how you speak to yourself. Many people use a level of harshness on themselves that they would never use on someone they care about.",
       "A healthier inner voice does not pretend everything is perfect. It simply speaks with honesty and compassion at the same time.",
@@ -116,96 +136,189 @@ const sections: ArticleSection[] = [
   },
 ];
 
-export default function TransformNegativeThoughtsPage() {
+function SectionBlock({ section }: { section: ArticleSection }) {
+  const textBlock = (
+    <div>
+      <h2 className="text-[26px] leading-tight text-black md:text-[34px]">
+        {section.title}
+      </h2>
+
+      {section.paragraphs && section.paragraphs.length > 0 ? (
+        <div className="mt-4 space-y-4 text-[15px] leading-7 text-black">
+          {section.paragraphs.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
+      ) : null}
+
+      {section.bullets && section.bullets.length > 0 ? (
+        <ul className="mt-4 list-disc space-y-2 pl-5 text-[15px] leading-7 text-black">
+          {section.bullets.map((bullet, index) => (
+            <li key={index}>{bullet}</li>
+          ))}
+        </ul>
+      ) : null}
+    </div>
+  );
+
+  const imageBlock = (
+    <div className="flex justify-center">
+      <img
+        src={section.image}
+        alt={section.imageAlt}
+        className="w-full max-w-[420px] object-cover shadow-[0_8px_16px_rgba(0,0,0,0.18)]"
+      />
+    </div>
+  );
+
   return (
-    <div className="min-h-screen bg-[#f5f3f8]">
-      <div className="mx-auto max-w-6xl px-6 py-10">
-        <div className="mb-6 text-sm text-slate-500">
-          <Link to="/pattern" className="text-blue-600 hover:underline">
-            Pattern Interrupts
-          </Link>{" "}
-          <span className="text-slate-400">/</span>{" "}
-          <span className="text-slate-700">Transform Negative Thoughts</span>
+    <section className="py-12">
+      <div className="mx-auto grid max-w-[980px] items-start gap-10 px-6 md:grid-cols-2">
+        {section.reverse ? (
+          <>
+            <div className="md:order-2">{textBlock}</div>
+            <div className="md:order-1">{imageBlock}</div>
+          </>
+        ) : (
+          <>
+            <div>{textBlock}</div>
+            <div>{imageBlock}</div>
+          </>
+        )}
+      </div>
+    </section>
+  );
+}
+
+function SuggestedActionsBlock({ section }: { section: ArticleSection }) {
+  const bullets = section.bullets || [];
+  const firstHalf = bullets.slice(0, Math.ceil(bullets.length / 2));
+  const secondHalf = bullets.slice(Math.ceil(bullets.length / 2));
+
+  return (
+    <section className="py-12">
+      <div className="mx-auto max-w-[980px] px-6">
+        <h2 className="text-[26px] leading-tight text-black md:text-[34px]">
+          {section.title}
+        </h2>
+
+        <div className="mt-6 grid items-start gap-10 md:grid-cols-2">
+          <div className="flex justify-center">
+            <img
+              src={section.image}
+              alt={section.imageAlt}
+              className="w-full max-w-[420px] object-cover"
+            />
+          </div>
+
+          <ul className="list-disc space-y-1 pl-5 text-[15px] leading-6 text-black">
+            {firstHalf.map((bullet, index) => (
+              <li key={index}>{bullet}</li>
+            ))}
+          </ul>
         </div>
 
-        <section className="bg-gradient-to-r from-[#efe7f7] to-[#e9eef9] px-10 py-16">
-          <div className="mx-auto grid max-w-4xl items-center gap-10 md:grid-cols-2">
-            <div>
-              <h1 className="text-4xl font-semibold leading-tight text-slate-900 md:text-5xl">
-                Transform Negative Thoughts
-              </h1>
-
-              <p className="mt-5 text-[17px] leading-8 text-slate-800">
-                By cultivating mindfulness, we can learn to identify the negative
-                thoughts that keep us trapped in feelings of self-doubt, fear,
-                shame, and anxiety. Instead of being controlled by automatic
-                thought patterns, we can begin learning how to challenge them and
-                replace them with healthier ways of thinking.
-              </p>
-
-              <p className="mt-5 text-[17px] leading-8 text-slate-800">
-                One of the easiest ways to become disconnected from our core selves
-                is through habitual negative thinking. These thoughts can feel loud
-                and convincing, especially when we are stressed or overwhelmed.
-                Left unchallenged, they can lead to labeling, catastrophizing,
-                overgeneralizing, and harsh self-judgment.
-              </p>
-
-              <p className="mt-5 text-[17px] leading-8 text-slate-800">
-                This page is designed to help you slow down, understand how these
-                patterns work, and practice concrete strategies for replacing them
-                with calmer, more balanced, and more compassionate thinking.
-              </p>
-            </div>
-
-            <div>
-              <img
-                src="/images/pattern/transform-negative/hero.jpg"
-                alt="Transform negative thoughts"
-                className="w-full rounded-none object-cover shadow-[0_10px_18px_rgba(0,0,0,0.18)]"
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-white px-10 py-16">
-          <div className="mx-auto max-w-4xl space-y-20">
-            {sections.map((section, index) => (
-              <article
-                key={section.title}
-                className="grid items-start gap-10 md:grid-cols-2"
-              >
-                <div className={section.reverse ? "md:order-2" : ""}>
-                  <h2 className="text-3xl font-medium leading-tight text-slate-900">
-                    {section.title}
-                  </h2>
-
-                  <div className="mt-6 space-y-5 text-[17px] leading-8 text-slate-800">
-                    {section.paragraphs?.map((paragraph, pIndex) => (
-                      <p key={pIndex}>{paragraph}</p>
-                    ))}
-
-                    {section.bullets ? (
-                      <ul className="list-disc space-y-3 pl-6">
-                        {section.bullets.map((bullet, bIndex) => (
-                          <li key={bIndex}>{bullet}</li>
-                        ))}
-                      </ul>
-                    ) : null}
-                  </div>
-                </div>
-
-                <div className={section.reverse ? "md:order-1" : ""}>
-                  <img
-                    src={section.image}
-                    alt={section.imageAlt}
-                    className="w-full rounded-none object-cover shadow-[0_10px_18px_rgba(0,0,0,0.14)]"
-                  />
-                </div>
-              </article>
+        <div className="mt-8 grid items-start gap-10 md:grid-cols-2">
+          <ul className="list-disc space-y-1 pl-5 text-[15px] leading-6 text-black">
+            {secondHalf.map((bullet, index) => (
+              <li key={index}>{bullet}</li>
             ))}
+          </ul>
+
+          <div className="flex justify-center">
+            <img
+              src="/images/pattern/transform-negative/inner-voice.jpg"
+              alt="Mindfulness definition card"
+              className="w-full max-w-[420px] object-cover"
+            />
           </div>
-        </section>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default function TransformNegativeThoughtsPage() {
+  const normalSections = sections.filter(
+    (section) =>
+      section.title !== "Transform Negative Thoughts with these Suggested Actions:"
+  );
+
+  const suggestedActionsSection = sections.find(
+    (section) =>
+      section.title === "Transform Negative Thoughts with these Suggested Actions:"
+  );
+
+  return (
+    <div className="min-h-screen bg-[#f2f2f2]">
+      <div className="mx-auto max-w-[1200px] px-6 py-6">
+        <div className="mb-4 text-[12px] text-[#666]">
+          <Link to="/pattern" className="text-[#4c7bd9] hover:underline">
+            Pattern Interrupts
+          </Link>{" "}
+          / <span className="text-[#333]">Transform Negative Thoughts</span>
+        </div>
+      </div>
+
+      <section className="w-full bg-[linear-gradient(to_right,#e7e3f3_0%,#e7e3f3_50%,#e8edf7_50%,#e8edf7_100%)]">
+        <div className="mx-auto grid max-w-[980px] items-center gap-8 px-6 py-16 md:grid-cols-2">
+          <div>
+            <h1 className="font-serif text-[34px] leading-tight text-black md:text-[48px]">
+              Transform Negative Thoughts
+            </h1>
+
+            <div className="mt-4 space-y-4 text-[15px] leading-7 text-black">
+              <p>
+                By cultivating mindfulness, we can learn to identify the negative
+                thoughts that keep us trapped in feelings of self-doubt and shame,
+                and learn instead to embrace the peacefulness that stems from
+                living in the present moment.
+              </p>
+
+              <p>
+                One of the easiest ways to be disconnected from our core selves is
+                through habitual negative thinking. It can be easy to feel like
+                negative or worrisome thoughts are capable of kidnapping our minds
+                and taking us out of the present moment; especially when we’re
+                stressed or anxious.
+              </p>
+
+              <p>
+                These unpleasant thoughts are often based on automatic thought
+                processes that have been playing over and over in our heads,
+                unchallenged, for years. These thought patterns can fall into
+                three general categories: labeling, catastrophizing, and
+                overgeneralization.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex justify-center md:justify-end">
+            <img
+              src="/images/pattern/transform-negative/hero.jpg"
+              alt="Transform negative thoughts"
+              className="w-full max-w-[420px] object-cover shadow-[0_8px_16px_rgba(0,0,0,0.18)]"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div className="py-6">
+        {normalSections
+          .filter((section) => section.title !== "A More Helpful Inner Voice")
+          .map((section) => (
+            <SectionBlock key={section.title} section={section} />
+          ))}
+
+        {suggestedActionsSection ? (
+          <SuggestedActionsBlock section={suggestedActionsSection} />
+        ) : null}
+
+        {normalSections
+          .filter((section) => section.title === "A More Helpful Inner Voice")
+          .map((section) => (
+            <SectionBlock key={section.title} section={section} />
+          ))}
       </div>
     </div>
   );
