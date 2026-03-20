@@ -21,7 +21,7 @@ export default function Logo() {
       </div>
 
       {/* Text - Updated with calming gradient */}
-      <div className="relative bottom-5 sm:bottom-0 leading-tight text-[clamp(8px,2vw,14px)]">
+      <div className="relative bottom-5 sm:bottom-0 leading-tight text-[clamp(8px,1vw,10px)]">
         <h1 className="font-black bg-gradient-to-r from-[#2c5f8a] via-[#3d7caf] to-[#4f8fbf] bg-clip-text text-transparent whitespace-nowrap">
           The LifeLine
           <span className="block text-[#5d8cb0] text-[clamp(7px,1.8vw,14px)]">

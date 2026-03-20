@@ -1,7 +1,9 @@
 import axios, { type AxiosInstance } from 'axios';
 
 // Base API URL
-const API_BASE = ' http://localhost:3000'; //
+const API_BASE = import.meta.env.VITE_API_BASE;
+console.log(import.meta.env);
+console.log(import.meta.env.VITE_API_BASE);
 
 // Axios instance with cookie support
 const api: AxiosInstance = axios.create({

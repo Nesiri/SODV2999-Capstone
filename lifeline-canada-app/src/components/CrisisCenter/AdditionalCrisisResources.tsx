@@ -23,7 +23,7 @@ const AdditionalCrisisResources: React.FC = () => {
           <div className="group flex-1 min-w-[220px] max-w-[300px]">
             <div className="flex flex-col items-center gap-5">
               <Link
-                to="email-chat"
+                to="/in-crisis-help/email-chat"
                 className="text-xl md:text-2xl text-[#2b5f8b] font-light hover:text-[#1a3f6b] transition-all duration-300 relative"
               >
                 <div className="relative">
@@ -52,7 +52,7 @@ const AdditionalCrisisResources: React.FC = () => {
           <div className="group flex-1 min-w-[220px] max-w-[300px]">
             <div className="flex flex-col items-center gap-5">
               <Link
-                to="support-and-call-lines"
+                to="/in-crisis-help/support-and-call-lines"
                 className="text-xl md:text-2xl text-[#2b5f8b] font-light hover:text-[#1a3f6b] transition-all duration-300 relative"
               >
                 <div className="relative">
@@ -76,7 +76,7 @@ const AdditionalCrisisResources: React.FC = () => {
           <div className="group flex-1 min-w-[220px] max-w-[300px]">
             <div className="flex flex-col items-center gap-5">
               <Link
-                to="textchat"
+                to="/in-crisis-help/textchat"
                 className="text-xl md:text-2xl text-[#2b5f8b] font-light hover:text-[#1a3f6b] transition-all duration-300 relative"
               >
                 <div className="relative">
