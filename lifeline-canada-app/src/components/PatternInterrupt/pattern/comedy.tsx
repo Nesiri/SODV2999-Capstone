@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const comedyLinks = [
   {
@@ -31,7 +31,7 @@ const comedyLinks = [
   },
 ];
 
-export default function ComedyPage() {
+export default function Comedy() {
   return (
     <div className="w-full bg-white text-black">
       {/* Hero */}

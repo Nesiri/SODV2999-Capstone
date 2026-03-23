@@ -1,6 +1,6 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useMemo, useState } from "react";
-import { patternData } from "../pattern/patternData";
+import { patternData } from "../../components/PatternInterrupt/pattern/patternData";
 
 type ViewMode = "modern" | "classic";
 

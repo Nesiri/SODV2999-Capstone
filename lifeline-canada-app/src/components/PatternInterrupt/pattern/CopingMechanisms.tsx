@@ -142,7 +142,7 @@ function RowItem({ row }: { row: CopingRow }) {
   );
 }
 
-export default function CopingMechanismsPage() {
+export default function CopingMechanisms() {
   return (
     <div className="min-h-screen bg-[#f5f3f8]">
       <div className="mx-auto max-w-7xl px-6 py-10">

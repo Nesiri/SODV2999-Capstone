@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { patternData } from "../pattern/patternData";
+import { patternData } from "../../components/PatternInterrupt/pattern/patternData";
 
 export default function LifeLineLanding() {
   const items = Object.entries(patternData).filter(

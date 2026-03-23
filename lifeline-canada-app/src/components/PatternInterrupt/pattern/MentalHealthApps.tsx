@@ -171,7 +171,7 @@ function AppRowItem({ row }: { row: AppRow }) {
   );
 }
 
-export default function MentalHealthAppsPage() {
+export default function MentalHealthApps() {
   return (
     <div className="min-h-screen bg-[#f5f3f8]">
       <div className="mx-auto max-w-7xl px-6 py-10">

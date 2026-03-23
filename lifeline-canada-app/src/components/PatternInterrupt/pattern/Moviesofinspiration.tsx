@@ -218,7 +218,7 @@ function MovieCard({ movie }: { movie: Movie }) {
   );
 }
 
-export default function MoviesOfInspirationPage() {
+export default function MoviesOfInspiration() {
   return (
     <div className="min-h-screen bg-[#f2f2f2]">
 

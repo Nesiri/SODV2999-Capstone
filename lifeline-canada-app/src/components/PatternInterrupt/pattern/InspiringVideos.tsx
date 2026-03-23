@@ -142,7 +142,7 @@ function getYoutubeId(url: string) {
   return match ? match[1] : "";
 }
 
-export default function InspiringVideosPage() {
+export default function InspiringVideos() {
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
 
   return (

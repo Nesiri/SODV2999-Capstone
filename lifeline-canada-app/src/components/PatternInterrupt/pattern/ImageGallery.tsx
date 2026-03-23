@@ -186,7 +186,7 @@ function GalleryCard({ item }: { item: GalleryItem }) {
   );
 }
 
-export default function ImageGalleryPage() {
+export default function ImageGallery() {
   return (
     <div className="min-h-screen bg-[#f5f3f8]">
       <div className="mx-auto max-w-7xl px-6 py-10">

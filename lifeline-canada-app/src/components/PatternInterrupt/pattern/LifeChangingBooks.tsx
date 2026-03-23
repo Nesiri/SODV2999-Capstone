@@ -235,7 +235,7 @@ function BookEntry({ book, index }: { book: Book; index: number }) {
 }
 
 // ── Page ──────────────────────────────────────────────────────────────────────
-export default function LifeChangingBooksPage() {
+export default function LifeChangingBooks() {
   return (
     <div className="min-h-screen bg-[#f2f2f2]">
 

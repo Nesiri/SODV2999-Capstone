@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ImproveYourMoodPage() {
+export default function ImproveYourMood() {
   return (
     <div className="w-full bg-white text-black">
       {/* Intro section */}

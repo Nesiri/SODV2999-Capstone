@@ -31,6 +31,7 @@ import NotFound from './pages/NotFound';
 import DashboardRoutes from './routes/DashboardRoutes';
 import ResourceRoutes from './routes/ResourceRoutes'; // Import the new resource router
 import { AuthProvider } from './context/AuthProvider';
+import PatternInterruptRoutes from './routes/PatternInterruptRoutes';
 
 export default function App() {
   return (
@@ -67,6 +68,8 @@ export default function App() {
 
           {/* All resource routes are now handled by ResourceRoutes */}
           <Route path="resources/*" element={<ResourceRoutes />} />
+               {/* All psttern routes are now handled by PatternInterruptRoutes */}
+          <Route path="pattern/*" element={<PatternInterruptRoutes />} />
 
           {/* Auth Routes */}
           <Route path="app" element={<AuthPage />} />

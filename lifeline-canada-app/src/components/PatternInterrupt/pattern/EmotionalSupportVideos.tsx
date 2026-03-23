@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 
 type VideoRow = {
@@ -96,7 +96,7 @@ function VideoItem({ row }: { row: VideoRow }) {
   );
 }
 
-export default function EmotionalSupportVideosPage() {
+export default function EmotionalSupportVideos() {
   return (
     <div className="min-h-screen bg-[#f2f2f2]">
       <div className="mx-auto max-w-[1200px] px-6 py-4">

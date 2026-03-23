@@ -100,7 +100,7 @@ function ResourceRow({ resource }: { resource: Resource }) {
   );
 }
 
-export default function SelfManagementPage() {
+export default function SelfManagement() {
   return (
     <div className="w-full bg-[#f3f1f5]">
       <div className="mx-auto max-w-[1200px] px-10 py-6">

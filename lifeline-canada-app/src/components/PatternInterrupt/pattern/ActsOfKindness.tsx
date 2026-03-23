@@ -174,7 +174,7 @@ function KindnessListBlock({
   );
 }
 
-export default function ActsOfKindnessPage() {
+export default function ActsOfKindnes() {
   return (
     <div className="min-h-screen bg-[#f3f3f3]">
       {/* optional breadcrumb */}

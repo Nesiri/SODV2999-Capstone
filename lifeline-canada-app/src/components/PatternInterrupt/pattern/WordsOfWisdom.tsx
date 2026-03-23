@@ -156,7 +156,7 @@ function QuoteImage({ image, alt }: QuoteImageCard) {
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 
-export default function WordsOfWisdomPage() {
+export default function WordsOfWisdom() {
   // Split all quotes into left (even index) and right (odd index) columns
   const leftQuotes = allQuotes.filter((_, i) => i % 2 === 0);
   const rightQuotes = allQuotes.filter((_, i) => i % 2 !== 0);

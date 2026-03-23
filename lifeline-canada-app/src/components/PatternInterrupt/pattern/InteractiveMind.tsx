@@ -107,7 +107,7 @@ function ResourceRowItem({ row }: { row: ResourceRow }) {
   );
 }
 
-export default function InteractiveMindPage() {
+export default function InteractiveMind() {
   return (
     <div className="min-h-screen bg-[#f5f3f8]">
       <div className="mx-auto max-w-7xl px-6 py-10">

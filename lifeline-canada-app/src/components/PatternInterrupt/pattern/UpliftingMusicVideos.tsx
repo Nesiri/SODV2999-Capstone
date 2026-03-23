@@ -102,7 +102,7 @@ function getYoutubeId(url: string) {
   return match ? match[1] : "";
 }
 
-export default function UpliftingMusicVideosPage() {
+export default function UpliftingMusicVideos() {
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
 
   return (

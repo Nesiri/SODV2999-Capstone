@@ -238,7 +238,7 @@ function SuggestedActionsBlock({ section }: { section: ArticleSection }) {
   );
 }
 
-export default function TransformNegativeThoughtsPage() {
+export default function TransformNegativeThoughts() {
   const normalSections = sections.filter(
     (section) =>
       section.title !== "Transform Negative Thoughts with these Suggested Actions:"
