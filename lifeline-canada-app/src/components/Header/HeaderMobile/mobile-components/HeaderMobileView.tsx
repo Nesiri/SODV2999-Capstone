@@ -30,14 +30,14 @@ export const HeaderMobileView = ({
   goBackToMenu,
   handleCategoryToggle,
 }: HeaderMobileViewProps) => (
-  <div className="lg:hidden">
+  <div className=" relative bottom-5 sm:bottom-4 md:bottom-2  left-2 lg:hidden">
     <MenuToggleButton onClick={openMenu} />
 
     {isMenuOpen && (
-      <div className="fixed inset-0 z-50">
+      <div className="fixed inset-0 z-50 ">
         <AnimatedBackdrop isAnimating={isAnimating} onClick={closeMenu} />
 
-        <div className="fixed inset-y-0 right-0 w-full max-w-md min-h-screen">
+        <div className="fixed inset-y-0 right-0 w-full max-w-md min-h-screen ">
           <div className="h-full relative">
             <MobileMenuPanel
               openDropdown={openDropdown}

@@ -24,5 +24,11 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
+   /* 🔑 Alias configuration */
+    "baseUrl": ".",        // Important!
+    "paths": {
+      "@/*": ["src/*"]
+    },
+  
   "include": ["src"]
 }

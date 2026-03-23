@@ -1,10 +1,11 @@
-export default function About() {
+import AboutUs from '../components/Home/AboutUs';
+
+function AboutPage() {
   return (
-    <main className="mx-auto max-w-5xl px-4 py-10">
-      <h1 className="text-3xl font-semibold">About</h1>
-      <p className="mt-3 text-gray-600">
-        Placeholder page for Sprint 1. Content and design will be added in later sprints.
-      </p>
-    </main>
+    <>
+      <AboutUs />
+    </>
   );
 }
+
+export default AboutPage;

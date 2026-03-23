@@ -7,7 +7,8 @@ import {
   dropdownNavLinks,
   getAllResourceLinks,
   getAllPatternInterruptLinks,
-} from '../../navigation/headerData';
+} from '../../navigation/nav';
+import MakeContributionButton from './MakeContribution';
 
 export default function HeaderDesktop() {
   const resourceLinks = getAllResourceLinks();
@@ -16,7 +17,7 @@ export default function HeaderDesktop() {
   return (
     <nav className="hidden lg:flex items-center w-full relative right-70">
       {/* Main nav items on left */}
-      <div className="flex items-center space-x-8 flex-1">
+      <div className="flex items-center space-x-10 flex-1">
         {mainNavLinks.map((link) => {
           if (link.hasMegaMenu) {
             if (link.name === 'Resources') {
@@ -25,6 +26,7 @@ export default function HeaderDesktop() {
                   key={link.path}
                   resourceLinks={resourceLinks}
                   triggerText={link.name}
+                  triggerPath={link.path} // Pass the path for navigation
                   emergency={link.emergency}
                   icon={link.icon}
                 />
@@ -35,6 +37,7 @@ export default function HeaderDesktop() {
                   key={link.path}
                   resourceLinks={patternInterruptLinks}
                   triggerText={link.name}
+                  triggerPath={link.path} // Pass the path for navigation
                   emergency={link.emergency}
                   icon={link.icon}
                 />
@@ -49,10 +52,9 @@ export default function HeaderDesktop() {
           dropdownLinks={dropdownNavLinks}
           triggerText="More"
         />
+        <MakeContributionButton />
+        <GetInvolvedButton />
       </div>
-
-      {/* Get Involved Button on right - pushes left content */}
-      <GetInvolvedButton />
     </nav>
   );
 }

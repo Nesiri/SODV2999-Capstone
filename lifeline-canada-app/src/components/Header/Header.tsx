@@ -19,25 +19,19 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="absolute sm:sticky top-0 z-50 w-full">
-      {/* Modern gradient with mesh effect */}
-      <div className="absolute inset-0 ">
-        {/* Mesh gradient overlay */}
+    <header className="fixed sm:sticky top-0 z-50 w-full">
+      {/* Mesh gradient overlay */}
+      <div className="absolute inset-0">
         <div
-          className="absolute inset-0 opacity-60"
-          // style={{
-          //   backgroundImage: `radial-gradient(circle at 20% 30%, #3b82f6 0%, transparent 50%), 
-          //             radial-gradient(circle at 80% 70%, #8b5cf6 0%, transparent 50%)`,
-          // }}
-
+          className="absolute inset-0 opacity-40"
           style={{
-            backgroundImage: `radial-gradient( #cfc0da 100%, transparent 100%)`,
+            backgroundImage: `radial-gradient(circle at 20% 30%, #e6d9f0 0%, transparent 60%), 
+                  radial-gradient(circle at 80% 70%, #d4c2e6 0%, transparent 60%)`,
           }}
         ></div>
       </div>
 
-      {/* Clean glassmorphism */}
-      <div className="relative bg-white/8 backdrop-blur-xl border-b border-white/20">
+      <div className="relative bg-[#f5f0fa]/70 backdrop-blur-xl border-b border-[#d9c9f0]/30 max-h-16 sm:max-h-30">
         <div className="flex h-26 w-full items-center justify-between px-6">
           <Logo />
           <nav className="flex items-center">

@@ -1,5 +1,5 @@
 // components/Header/IconComponents.tsx
-import React from 'react';
+
 import {
   Heart,
   Phone,

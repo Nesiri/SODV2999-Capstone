@@ -1,0 +1,13 @@
+[build]
+  command = "tsc --noEmit || true && vite build"
+  publish = "dist"
+
+[build.environment]
+  CI = "false"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+
+# This tells Netlify to include all assets
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200

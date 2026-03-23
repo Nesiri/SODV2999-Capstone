@@ -29,7 +29,7 @@ export const MenuItems = ({
       <button
         onClick={() => onDropdownClick('More')}
         className="group w-full flex items-center gap-4 p-5 rounded-2xl 
-         bg-gradient-to-r from-indigo-200 via-blue-500 to-purple-200
+         bg-gradient-to-b from-blue-200 via-gray-200 to-pink-100
           hover:from-purple-50/80 hover:to-pink-50/80 backdrop-blur-sm 
           border border-gray-100 hover:border-purple-200 hover:shadow-xl 
           transition-all duration-500 hover:-translate-y-1 active:scale-[0.98]
@@ -61,7 +61,7 @@ const MenuItem = ({ link, index, onDropdownClick, closeMenu }: any) => (
       <button
         onClick={() => onDropdownClick(link.name)}
         className="group w-full flex items-center gap-4 p-5 rounded-2xl 
-          bg-gradient-to-r from-indigo-200 via-blue-500 to-purple-200 hover:from-blue-50/80 hover:to-indigo-50/80
+          bg-gradient-to-b from-blue-200 via-gray-200 to-pink-100 hover:from-blue-50/80 hover:to-indigo-50/80
           backdrop-blur-sm border border-gray-100 hover:border-blue-200 
           hover:shadow-xl transition-all duration-500 hover:-translate-y-1 
           active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-blue-500/30"
@@ -114,7 +114,7 @@ const MenuItem = ({ link, index, onDropdownClick, closeMenu }: any) => (
         to={link.path}
         onClick={closeMenu}
         className="group flex items-center gap-4 p-5 rounded-2xl 
-          bg-gradient-to-r from-indigo-200 via-blue-500 to-purple-200 hover:to-indigo-50/80
+         bg-gradient-to-b from-blue-200 via-gray-200 to-pink-100 hover:to-indigo-50/80
           backdrop-blur-sm border border-gray-100 hover:border-blue-200 
           hover:shadow-xl transition-all duration-500 hover:-translate-y-1 
           active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-blue-500/30"

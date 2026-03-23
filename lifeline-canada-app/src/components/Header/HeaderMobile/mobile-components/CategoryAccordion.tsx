@@ -31,7 +31,7 @@ export const CategoryAccordion = ({
           <button
             onClick={() => onCategoryToggle(category)}
             className="w-full flex items-center justify-between p-5 
-              bg-gradient-to-r from-blue-500/50 to-green-100/30 hover:from-blue-50/50 hover:to-indigo-50/30
+             bg-gradient-to-b from-blue-200 via-gray-200 to-pink-100 hover:from-blue-50/50 hover:to-indigo-50/30
               transition-all duration-500 group"
           >
             <div className="flex items-center gap-3">
@@ -70,7 +70,9 @@ export const CategoryAccordion = ({
                   style={{ animationDelay: `${linkIndex * 30}ms` }}
                 >
                   {link.icon && (
-                    <span className="text-lg">{typeof link.icon === 'string' ? link.icon : link.icon}</span>
+                    <span className="text-lg">
+                      {typeof link.icon === 'string' ? link.icon : link.icon}
+                    </span>
                   )}
                   <span className="text-gray-700 group-hover/link:text-gray-900 flex-1">
                     {link.name}
