@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 type VideoItem = {
   title: string;
   description: string;
-  youtubeId: string;
+  youtubeUrl: string;
 };
 
 const videos: VideoItem[] = [
@@ -11,111 +11,226 @@ const videos: VideoItem[] = [
     title: "Be Phenomenal",
     description:
       "This video is literally my battery pack. It recharges me when I’m tired. It brings me up when I’m down. It gives me inspiration and hope when I’m in doubt.",
-    youtubeId: "mgmVOuLgFB0",
+    youtubeUrl: "https://www.youtube.com/watch?v=e2Tq2gvGt80",
   },
   {
     title: "Never Give Up",
     description:
       "Fight for yourself using every drop of blood from your body. Muster every effort within you and fight: sure you will win.",
-    youtubeId: "KxGRhd_iWuE",
+    youtubeUrl: "https://youtu.be/bx796zSg5gs",
   },
   {
     title: "Everyone Has Obstacles",
     description:
-      "Very powerful and motivational! A true testament that “Without struggle there is no progress”.",
-    youtubeId: "wnHW6o8WMas",
+      "Very powerful and motivational! A true testament that without struggle there is no progress.",
+    youtubeUrl: "https://youtu.be/hzBCI13rJmA",
   },
   {
     title: "Increasing Your Confidence",
     description:
-      "Paul Potts sings his heart out at Britain’s Got Talent Competition. He’s been training all the way up to the competition but he lacks belief in himself. Now, he’s sold over 2 million copies of his record.",
-    youtubeId: "1k08yxu57NA",
+      "Paul Potts sings his heart out at Britain’s Got Talent Competition. He lacked belief in himself but later achieved great success.",
+    youtubeUrl: "https://www.youtube.com/watch?v=ikAb-NYkseI",
   },
   {
-    title: "Neil Gaiman",
+    title: "Neil Gaiman Speech",
     description:
-      "Inspirational Commencement Speech at the University of the Arts 2012",
-    youtubeId: "ikAb-NYkseI",
+      "Inspirational Commencement Speech at the University of the Arts 2012.",
+    youtubeUrl: "https://www.youtube.com/watch?v=__Gs02ZmUmE",
   },
   {
     title: "Christian the Lion",
     description:
-      "From the documentary “The Lion Who Thought He Was People (1971)”",
-    youtubeId: "oiGKWoJi5qM",
+      "From the documentary 'The Lion Who Thought He Was People (1971)'.",
+    youtubeUrl: "https://youtu.be/btuxO-C2IzE",
   },
   {
     title: "The Last Lecture",
     description:
-      "Really Achieving Your Childhood Dreams. Professor Randy Pausch gave his last lecture before a packed auditorium. He talks about his lessons learned and gives advice to students on how to achieve their own career and personal goals.",
-    youtubeId: "ji5_MqicxSo",
+      "Professor Randy Pausch talks about achieving childhood dreams.",
+    youtubeUrl: "https://youtu.be/ji5_MqicxSo",
   },
   {
     title: "Free Hugs",
     description:
-      "Sometimes, a hug is all that we need. This is the real life story of Juan Mann, a man whose sole mission was to reach out and hug a stranger to put a smile on their face.",
-    youtubeId: "vr3x_RRJdd4",
+      "A real-life story of spreading kindness and smiles through hugs.",
+    youtubeUrl: "https://youtu.be/vr3x_RRJdd4",
   },
   {
-    title: "Passion: The Secret to Success",
+    title: "Passion to Success",
     description:
-      "This is a compilation of some of the greatest achievers speaking about how important it is to find your passion to reach success.",
-    youtubeId: "n7wlyROqyS0",
+      "Great achievers explain how passion leads to success.",
+    youtubeUrl: "https://youtu.be/JTE5O9GxiIc",
   },
   {
     title: "Look Up",
     description:
-      "A spoken word film for an online generation. A lesson taught to us through a love story, in a world where we continue to find ways to make it easier for us to connect with one another, but always results in us spending more time alone.",
-    youtubeId: "Z7dLU6fk9QY",
+      "A spoken word film about social media and real human connection.",
+    youtubeUrl: "https://youtu.be/Z7dLU6fk9QY",
   },
   {
-    title: "Never give up!",
+    title: "Never Give Up Race",
     description:
-      "He didn’t win a medal but he did win the hearts of everybody who watched him complete the race.",
-    youtubeId: "qN6w2kI1x6Y",
+      "A runner wins hearts by finishing the race with determination.",
+    youtubeUrl: "https://www.youtube.com/watch?v=kZlXWp6vFdE",
   },
   {
     title: "Nick Vujicic",
     description:
-      "Never give up and never think you have no choice: Choose better, find purpose, and keep going.",
-    youtubeId: "6P2nPI6CTlc",
+      "Choose better, forget bitter. Inspirational life story.",
+    youtubeUrl: "https://youtu.be/Hd05kpKaYr8",
   },
   {
-    title: "Gift – Do Your Parents Embarrass You?",
+    title: "Gift",
     description:
-      "A son confronts the resentment towards his father only to realize his true intentions. This boy never saw his dad as an inspiration until he found out his big secret.",
-    youtubeId: "2-7f-1eYzrk",
+      "A powerful story about understanding and appreciating parents.",
+    youtubeUrl: "https://youtu.be/1DUYlHZsZfc",
   },
   {
     title: "Unbroken",
     description:
-      "Motivational Video “After all this time, STILL one of the best videos on the internet. Hands down.”",
-    youtubeId: "26U_seo0a1g",
+      "One of the best motivational videos on the internet.",
+    youtubeUrl: "https://www.youtube.com/watch?v=26U_seo0a1g",
   },
   {
-    title: "NEVER QUIT",
+    title: "Never Quit",
     description:
-      "This video was created with the single purpose to motivate people. Raw and honest motivation.",
-    youtubeId: "KxGRhd_iWuE",
+      "Raw and honest motivation to keep going.",
+    youtubeUrl: "https://www.youtube.com/watch?v=IzbCLooj-M8",
   },
   {
-    title: "I AM FIRST, NOT SECOND",
+    title: "I AM FIRST",
     description:
-      "Tired of being second place? Tired of always feeling down? Well this video will get you up and running again. NEVER GIVE UP ON YOUR DREAMS AND GOALS!!",
-    youtubeId: "sTJ7AzBIJoI",
+      "Never give up on your dreams and goals.",
+    youtubeUrl: "https://youtu.be/akwKRNt7fnM",
   },
   {
-    title: "The Rocky Balboa Inspirational Speech",
+    title: "Rocky Speech",
     description:
-      "From the movie, an inspiring monologue that moves people around the world.",
-    youtubeId: "D_Vg4uyYwEk",
+      "Legendary motivational speech from Rocky Balboa.",
+    youtubeUrl: "https://www.youtube.com/watch?v=1cgJte9iK1w",
   },
   {
-    title: "How Bad Do You Want It? (Success)",
+    title: "How Bad Do You Want It",
     description:
-      "When you want to succeed as bad as you want to breathe, then you’ll be successful",
-    youtubeId: "lsSC2vx7zFQ",
+      "Success comes when you want it as badly as breathing.",
+    youtubeUrl: "https://youtu.be/lsSC2vx7zFQ",
   },
   {
-    title: "If I Should Have A Daughter",
+    title: "If I Should Have a Daughter",
     description:
-      "Sarah Kay tells an inspiring story of her metamorphosis from a wide-eyed teenager soaking in verse at New York’s Bowery Poetry Club to a teacher connecting kids with the power
+      "Sarah Kay shares a powerful spoken word performance.",
+    youtubeUrl: "https://www.youtube.com/watch?v=0snNB1yS3IE",
+  },
+  {
+    title: "Transformation",
+    description:
+      "A powerful story of fitness and perseverance.",
+    youtubeUrl: "https://www.youtube.com/watch?v=j2laIPeiMtE",
+  },
+  {
+    title: "Sean Stephenson",
+    description:
+      "A joyful reminder that happiness is possible for everyone.",
+    youtubeUrl: "https://www.youtube.com/watch?v=TAibh3SqRUo",
+  },
+];
+
+function getYoutubeId(url: string) {
+  const regExp =
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&?\n]+)/;
+  const match = url.match(regExp);
+  return match ? match[1] : "";
+}
+
+export default function InspiringVideosPage() {
+  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+
+  return (
+    <main className="w-full bg-white">
+      {/* HERO */}
+<section
+  className="w-full"
+  style={{
+    background:
+      "linear-gradient(90deg, #e9e3f4 0%, #e6ecf7 60%, #eadff3 100%)",
+  }}
+>
+  <div className="mx-auto max-w-[1180px] px-6 py-20">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+      {/* LEFT TEXT */}
+      <div className="max-w-[560px]">
+        <h1
+          className="text-[54px] mb-4"
+          style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
+        >
+          Inspiring Videos
+        </h1>
+
+        <p className="text-[20px] leading-[1.3] mb-4">
+          There is so much positive mental health content to chose from on YouTube. An “Inspirational Videos” or “Inspiring Videos” search there will give you tons of great positive video suggestions.
+        </p>
+
+        <p className="text-[20px] leading-[1.3]">
+          Here are a few below to get you started. Remember there are usually suggestions for ‘more like this’ after the video which can bring you to wonderful new discoveries. Come back here if you get lost, there are some fantastic videos below.
+        </p>
+      </div>
+
+      {/* RIGHT IMAGE */}
+      <div className="flex justify-end">
+        <img
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+          alt="Inspiring"
+          className="w-full max-w-[560px] shadow-md"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+      {/* VIDEOS */}
+      <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="grid md:grid-cols-3 gap-10">
+          {videos.map((video, index) => {
+            const youtubeId = getYoutubeId(video.youtubeUrl);
+            const thumbnail = `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`;
+
+            return (
+              <div key={index}>
+                <div className="relative mb-2 aspect-video">
+                  {playingIndex === index ? (
+                    <iframe
+                      src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1`}
+                      className="w-full h-full"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <button
+                      onClick={() => setPlayingIndex(index)}
+                      className="relative w-full h-full"
+                    >
+                      <img
+                        src={thumbnail}
+                        className="w-full h-full object-cover"
+                      />
+
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                        <div className="bg-black px-4 py-2 text-white rounded">
+                          ▶
+                        </div>
+                      </div>
+                    </button>
+                  )}
+                </div>
+
+                <p className="text-sm">
+                  <strong>{video.title}</strong> – {video.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </main>
+  );
+}

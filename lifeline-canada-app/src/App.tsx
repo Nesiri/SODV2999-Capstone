@@ -19,6 +19,12 @@ import WordsOfWisdomPage from "./pages/pattern/WordsOfWisdomPage";
 import ImageGalleryPage from "./pages/pattern/ImageGalleryPage";
 import ActsOfKindnessPage from "./pages/pattern/ActsOfKindnessPage";
 import SelfManagementPage from "./pages/pattern/SelfManagementPage";
+import InspiringVideosPage from "./pages/pattern/InspiringVideosPage";
+import EmotionalSupportVideosPage from "./pages/pattern/EmotionalSupportVideosPage";
+import UpliftingMusicVideosPage from "./pages/pattern/UpliftingMusicVideosPage";
+import LifeChangingBooksPage from "./pages/pattern/LifeChangingBooksPage";
+import MoviesOfInspirationPage from "./pages/pattern/MoviesOfInspirationPage";
+
 
 import LifeLineLanding from "./pages/lifeline/LifeLineLanding";
 import LifeLineTemplate from "./pages/lifeline/LifeLineTemplate";
@@ -28,10 +34,11 @@ export default function App() {
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
-        <Route path="/pattern/improve-mood" element={<ImproveYourMoodPage />} />
-        <Route path="pattern/comedy" element={<ComedyPage />} />
+
         <Route path="pattern" element={<PatternLanding />} />
-  
+        <Route path="pattern/improve-mood" element={<ImproveYourMoodPage />} />
+        <Route path="pattern/comedy" element={<ComedyPage />} />
+        <Route
           path="pattern/transform-negative-thoughts"
           element={<TransformNegativeThoughtsPage />}
         />
@@ -44,27 +51,40 @@ export default function App() {
           element={<InteractiveMindPage />}
         />
         <Route
-        path="pattern/mental-health-apps"
-        element={<MentalHealthAppsPage />}
+          path="pattern/mental-health-apps"
+          element={<MentalHealthAppsPage />}
         />
         <Route
-        path="pattern/words-of-wisdom"
-        element={<WordsOfWisdomPage />}
+          path="pattern/words-of-wisdom"
+          element={<WordsOfWisdomPage />}
+        />
+        <Route path="pattern/gallery" element={<ImageGalleryPage />} />
+        <Route
+          path="pattern/acts-of-kindness"
+          element={<ActsOfKindnessPage />}
         />
         <Route
-        path="pattern/gallery"
-        element={<ImageGalleryPage />}
+          path="pattern/self-management"
+          element={<SelfManagementPage />}
         />
         <Route
-        path="pattern/acts-of-kindness"
-        element={<ActsOfKindnessPage />}
+          path="pattern/inspiring-videos"
+          element={<InspiringVideosPage />}
         />
         <Route
-        path="pattern/self-management"
-        element={<SelfManagementPage />}
+         path="pattern/emotional-support"
+         element={<EmotionalSupportVideosPage />}
         />
-        <Route path="pattern/:slug" element={<PatternTemplate />} />
-
+       <Route
+       path="pattern/music"
+        element={<UpliftingMusicVideosPage />}
+        />
+        <Route
+        path="pattern/books"
+        element={<LifeChangingBooksPage />}
+        />
+<Route path="pattern/movies-of-inspiration" element={<MoviesOfInspirationPage />} />
+<Route path="pattern/:slug" element={<PatternTemplate />} /> 
         <Route path="about" element={<About />} />
         <Route path="resources" element={<Resources />} />
         <Route path="crisis-help" element={<CrisisHelp />} />
