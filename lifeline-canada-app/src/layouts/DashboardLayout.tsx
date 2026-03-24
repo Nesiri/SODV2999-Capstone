@@ -1,30 +1,35 @@
 // layouts/DashboardLayout.tsx
 import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet} from 'react-router-dom';
 import Sidebar from '../components/AppComponent/Dashboard/Sidebar';
 import Header from '../components/AppComponent/Dashboard/Header';
 import Footer from '../components/AppComponent/Dashboard/Footer';
 import { mainNavItems } from '../navigation/appNav';
+import { useAuth } from '../hooks/useAuth';
 
-import type { DashboardLayoutProps } from '../types/dashboard.types';
-
-const DashboardLayout: React.FC<DashboardLayoutProps> = ({
-  user,
-  onLogout,
-}) => {
+const DashboardLayout: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+ 
+  const { user, onLogout } = useAuth();
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   const handleLogout = () => {
     onLogout();
+   
   };
+
+  // Redirect if no user
+  if (!user) {
+   onLogout();
+    return null;
+  }
 
   // Create display values with defaults
   const displayName = user.name || 'Guest';
   const displayUser = {
     ...user,
-    name: displayName  // Ensure name is never undefined for display
+    name: displayName
   };
 
   return (

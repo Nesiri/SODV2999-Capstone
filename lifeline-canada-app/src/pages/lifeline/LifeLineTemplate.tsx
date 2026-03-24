@@ -9,6 +9,7 @@ export default function LifeLineTemplate() {
   const navigate = useNavigate();
 
   const page = slug ? patternData[slug] : undefined;
+  const isAllowed = page?.category === "Mood & Inspiration";
 
   const [search, setSearch] = useState("");
   const [activeTags, setActiveTags] = useState<string[]>([]);
@@ -18,28 +19,15 @@ export default function LifeLineTemplate() {
     (page?.title ?? "").toLowerCase().includes("movie") ? "classic" : "modern"
   );
 
-  const isAllowed = page?.category === "Mood & Inspiration";
+  // Wrap items in useMemo to prevent recreation on every render
+  const items = useMemo(() => page?.resources?.items ?? [], [page?.resources?.items]);
 
-  if (!page || !isAllowed) {
-    return (
-      <div className="mx-auto max-w-5xl px-6 py-20">
-        <h1 className="text-3xl font-bold">Not Found</h1>
-        <p className="mt-4 text-slate-600">No content available for this page.</p>
-        <button
-          onClick={() => navigate("/lifeline-app")}
-          className="mt-6 rounded-lg bg-slate-900 px-4 py-2 text-white"
-        >
-          Back to LifeLine App
-        </button>
-      </div>
-    );
-  }
-
-  const exploreMore = Object.entries(patternData)
-    .filter(([key, value]) => key !== slug && value.category === "Mood & Inspiration")
-    .slice(0, 6);
-
-  const items = page.resources?.items ?? [];
+  const exploreMore = useMemo(() => 
+    Object.entries(patternData)
+      .filter(([key, value]) => key !== slug && value.category === "Mood & Inspiration")
+      .slice(0, 6),
+    [slug]
+  );
 
   const allTags = useMemo<string[]>(() => {
     const tags = items.flatMap((x) => x.tags ?? []);
@@ -62,9 +50,15 @@ export default function LifeLineTemplate() {
     });
   }, [items, search, activeTags]);
 
-  const featuredPool = filteredResources.filter((x) => Boolean(x.href));
-  const featured =
-    featuredPool.length > 0 ? featuredPool[featuredSeed % featuredPool.length] : null;
+  const featuredPool = useMemo(() => 
+    filteredResources.filter((x) => Boolean(x.href)),
+    [filteredResources]
+  );
+
+  const featured = useMemo(() => 
+    featuredPool.length > 0 ? featuredPool[featuredSeed % featuredPool.length] : null,
+    [featuredPool, featuredSeed]
+  );
 
   const posterPicks = useMemo(() => {
     const withImage = items.filter((x) => Boolean(x.image));
@@ -77,12 +71,28 @@ export default function LifeLineTemplate() {
   }, [items, featuredSeed]);
 
   const placeholderByTitle = useMemo(() => {
-    const t = (page.title ?? "").toLowerCase();
+    const t = (page?.title ?? "").toLowerCase();
     if (t.includes("movie")) return "Search movies...";
     if (t.includes("video")) return "Search videos...";
     if (t.includes("book")) return "Search books...";
     return "Search...";
-  }, [page.title]);
+  }, [page?.title]);
+
+  // Early return AFTER all hooks
+  if (!page || !isAllowed) {
+    return (
+      <div className="mx-auto max-w-5xl px-6 py-20">
+        <h1 className="text-3xl font-bold">Not Found</h1>
+        <p className="mt-4 text-slate-600">No content available for this page.</p>
+        <button
+          onClick={() => navigate("/lifeline-app")}
+          className="mt-6 rounded-lg bg-slate-900 px-4 py-2 text-white"
+        >
+          Back to LifeLine App
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-10">

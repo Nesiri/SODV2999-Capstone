@@ -111,36 +111,56 @@ const MoodCheckin: React.FC<MoodCheckinProps> = ({
     }
   };
 
-  const handleSave = () => {
+ const handleSave = () => {
     if (!selectedMood) return;
 
     const moodData = {
-      mood: selectedMood.value,
-      moodLabel: selectedMood.label,
-      moodEmoji: selectedMood.emoji,
-      category: selectedMood.category,
-      intensity: intensity,
-      note: note.trim(),
-      timestamp: new Date().toISOString(),
-      date: new Date().toLocaleDateString('en-US', {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-      }),
+        mood: selectedMood.value,
+        moodLabel: selectedMood.label,
+        moodEmoji: selectedMood.emoji,
+        category: selectedMood.category,
+        intensity: intensity,
+        note: note.trim(),
+        timestamp: new Date().toISOString(),
+       
     };
+
+    // Save to localStorage
+    try {
+        // Get existing mood entries
+        const existingMoods = localStorage.getItem('moodEntries');
+        let moodEntries = [];
+        
+        if (existingMoods) {
+            moodEntries = JSON.parse(existingMoods);
+        }
+        
+        // Add new mood entry
+        moodEntries.push(moodData);
+        
+        // Save back to localStorage
+        localStorage.setItem('moodEntries', JSON.stringify(moodEntries));
+        
+        // Optional: Save today's mood separately for quick access
+        const today = new Date().toISOString().split('T')[0];
+        localStorage.setItem(`mood_${today}`, JSON.stringify(moodData));
+        
+        console.log('Mood saved:', moodData);
+    } catch (error) {
+        console.error('Error saving mood to localStorage:', error);
+    }
 
     onMoodSelect?.(JSON.stringify(moodData));
     setIsSaved(true);
 
     setTimeout(() => {
-      setShowJournal(false);
-      setNote('');
-      setSelectedMood(null);
-      setIntensity(5);
-      setIsSaved(false);
+        setShowJournal(false);
+        setNote('');
+        setSelectedMood(null);
+        setIntensity(5);
+        setIsSaved(false);
     }, 2000);
-  };
+};
 
   const handleClose = () => {
     setShowJournal(false);

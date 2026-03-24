@@ -11,7 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 const corsOptions = {
-   origin: 'https://thelifeline.netlify.app', // Explicitly allow ONLY your Netlify domain
+   origin: ['https://thelifeline.netlify.app','http://localhost:5173'], // Explicitly allow ONLY your  domains
   credentials: true, // Allow cookies/auth headers
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],

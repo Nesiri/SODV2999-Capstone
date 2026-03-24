@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { patternData } from "./patternData";
