@@ -584,7 +584,7 @@ const ResourcesHub: React.FC = () => {
                 {/* Action Button - Fixed at bottom */}
                 <div className="relative px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6 mt-auto">
                   <motion.a
-                    href={resource.path}
+                    href={resource.path.startsWith("/") ? resource.path : "/" + resource.path}
                     whileHover={{ x: 4 }}
                     className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 text-xs sm:text-sm font-medium group/link transition-all"
                   >

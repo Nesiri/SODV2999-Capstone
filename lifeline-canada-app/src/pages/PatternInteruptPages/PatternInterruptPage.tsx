@@ -39,7 +39,7 @@ const components: Record<string, React.ComponentType> = {
 
 export default function PatternInterruptPage() {
   const location = useLocation();
-  const path = location.pathname.replace('/pattern/', '');
+  const path = location.pathname.replace('/pattern-interrupt/', '');
   const Component = components[path];
   
   return Component ? <Component /> : <NotFound/>;

@@ -73,7 +73,7 @@ export const MobileMenuPanel = ({
 
   return (
     <div
-      className={`fixed inset-0 relative bg-gradient-to-b from-white via-white to-gray-50 backdrop-blur-sm flex flex-col 
+      className={`fixed inset-0 relative h-screen bg-gradient-to-b from-white via-white to-gray-200 backdrop-blur-sm flex flex-col 
       transition-all duration-700 overflow-x-hidden overflow-y-hidden ${
         isAnimating ? 'opacity-0 translate-x-full' : 'opacity-100 translate-x-0'
       }`}

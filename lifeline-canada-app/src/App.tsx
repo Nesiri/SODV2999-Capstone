@@ -69,7 +69,7 @@ export default function App() {
           {/* All resource routes are now handled by ResourceRoutes */}
           <Route path="resources/*" element={<ResourceRoutes />} />
                {/* All psttern routes are now handled by PatternInterruptRoutes */}
-          <Route path="pattern/*" element={<PatternInterruptRoutes />} />
+          <Route path="pattern-interrupt/*" element={<PatternInterruptRoutes />} />
 
           {/* Auth Routes */}
           <Route path="app" element={<AuthPage />} />

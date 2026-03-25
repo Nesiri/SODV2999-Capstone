@@ -1,136 +1,128 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SiteMapPage = () => {
+   const navigate = useNavigate();
   // Link constants (keeping your existing constants - no changes)
   const mainLinks = [
-    { name: 'Depression', path: '/depression' },
-    { name: 'Anxiety', path: '/anxiety' },
-    { name: 'Grief Support', path: '/grief-support' },
-    { name: 'Crisis Centres', path: '/crisis-centres' },
-    { name: 'E-Counselling', path: '/e-counselling' },
-    { name: 'Resources for Parents', path: '/resources-for-parents' },
-    { name: 'View More Resources', path: '/view-more-resources' },
-    { name: 'Support Services', path: '/support-services' },
+    { name: 'Depression', path: '/resources/depression' },
+    { name: 'Anxiety', path: '/resources/anxiety' },
+    { name: 'Grief Support', path: '/resources/grief' },
+    { name: 'Crisis Centres', path: '/incrisisneedhelp' },
+    { name: 'E-Counselling', path: '/resources/e-counselling' },
+    { name: 'Resources for Parents', path: '/resources/parents' },
+    { name: 'View More Resources', path: '/resources' },
+    { name: 'Support Services', path: '/incrisisneedhelp' },
   ];
 
   const aboutLinks = [
-    { name: 'The LifeLine Canada Foundation Website', path: '/foundation' },
-    { name: 'Companion Paws Canada Therapy Dogs', path: '/companion-paws' },
-    { name: 'The LifeLine Mobile App', path: '/mobile-app' },
-    { name: 'Join Our Newsletter', path: '/newsletter' },
-    { name: 'Make A Contribution', path: '/donate' },
-    { name: 'Get Involved', path: '/get-involved' },
+    { name: 'The LifeLine Canada Foundation Website', path: '/' },
+    { name: 'Companion Paws Canada Therapy Dogs', path: 'https://companionpaws.ca/' },
+    { name: 'The LifeLine App', path: '/app?mode=login' },
+    { name: 'Join Our Newsletter', path: '/',id :"news-letter" },
+    { name: 'Make A Contribution', path: '/contribute' },
+    { name: 'Get Involved', path: '/volunteers' },
   ];
 
   const crisisProvinceLinks = [
-    { name: 'BC', path: '/crisis/bc' },
-    { name: 'Alberta', path: '/crisis/alberta' },
-    { name: 'Saskatchewan', path: '/crisis/saskatchewan' },
-    { name: 'Manitoba', path: '/crisis/manitoba' },
-    { name: 'Ontario', path: '/crisis/ontario' },
-    { name: 'Quebec', path: '/crisis/quebec' },
-    { name: 'New Brunswick', path: '/crisis/new-brunswick' },
-    { name: 'Newfoundland/Labrador', path: '/crisis/newfoundland-labrador' },
-    { name: 'Nova Scotia', path: '/crisis/nova-scotia' },
-    { name: 'PEI', path: '/crisis/pei' },
-    { name: 'Yukon', path: '/crisis/yukon' },
-    { name: 'Nunavut', path: '/crisis/nunavut' },
-    { name: 'NWT', path: '/crisis/nwt' },
+    { name: 'BC', path: '/british-columbia-crisis-centres' },
+    { name: 'Alberta', path: '/alberta-crisis-centres' },
+    { name: 'Saskatchewan', path: '/saskatchewan-crisis-centres' },
+    { name: 'Manitoba', path: '/manitoba-crisis-centres' },
+    { name: 'Ontario', path: '/ontario-crisis-centres' },
+    { name: 'Quebec', path: '/quebec-crisis-centres' },
+    { name: 'New Brunswick', path: '/newbrunswick-crisis-centres' },
+    { name: 'Newfoundland/Labrador', path: '/newfoundland-crisis-centres' },
+    { name: 'Nova Scotia', path: '/nova-scotia-crisis-centres' },
+    { name: 'PEI', path: '/pei-crisis-centres' },
+    { name: 'Yukon', path: '/yukon-crisis-centres' },
+    { name: 'Nunavut', path: '/nunavut-crisis-centres' },
+    { name: 'NWT', path: '/nwterritories-crisis-centres' },
   ];
 
   const crisisMainLinks = [
-    { name: 'Canada', path: '/crisis/canada' },
-    { name: 'USA', path: '/crisis/usa' },
-    { name: 'International', path: '/crisis/international' },
-    { name: 'Online Chat', path: '/crisis/online-chat' },
-    { name: 'Call Lines', path: '/crisis/call-lines' },
-    { name: 'Text Chat', path: '/crisis/text-chat' },
+    { name: 'Canada', path: '/canadian-crisis-centres' },
+    { name: 'USA', path: '/usa-crisis-centres' },
+    { name: 'International', path: '/international-crisis-centres' },
+    { name: 'Online Chat', path: '/in-crisis-help/email-chat' },
+    { name: 'Call Lines', path: '/in-crisis-help/support-and-call-lines' },
+    { name: 'Text Chat', path: '/in-crisis-help/textchat' },
   ];
 
-  const resourceLinks = [
-    'Canadian Crisis Centres',
-    'USA crisis Centres',
-    'International Crisis Centres',
-    'Pattern Interrupts',
-    'Coping with Suicidal Thoughts',
-    'Search for a Professional',
-    'E Councelling',
-    'Self Management',
-    'How Can I Help Someone',
-    'Warning Signs',
-    'Depression',
-    'Myths & Facts',
-    'Addiction',
-    'Anxiety',
-    'Post Traumatic Stress Disorder',
-    'Grief',
-    'Teens & Youth',
-    'Parents',
-    'College Students',
-    'LGBTQ2S',
-    'Indigenous Issues',
-    'Seniors',
-    'Men',
-    'Veterans & Military',
-    'Refugees',
-    'Attempt Survivors',
-    'Survivors of Suicide Loss',
-    'Bereaved Support',
-    'After a Suicide Loss',
-    'Educators',
-    'Health Professionals',
-    'First Responders',
-    'Care Givers',
-    'Media Professionals',
-    'Workplace Employers',
-    'Resource Organizations',
-    'Pattern Interrupts',
-  ];
+const resourceLinks = [
+  { name: 'Canadian Crisis Centres', path: '/canadian-crisis-centres' },
+  { name: 'USA crisis Centres', path: '/usa-crisis-centres' },
+  { name: 'International Crisis Centres', path: '/international-crisis-centres' },
+  { name: 'Pattern Interrupts', path: '/pattern-interrupts' },
+  { name: 'Coping with Suicidal Thoughts', path: '/resources/suicidal-thoughts' },
+  { name: 'Search for a Professional', path: '/resources/search-professional' },
+  { name: 'E Councelling', path: '/resources/e-counselling' },
+  { name: 'Self Management', path: '/resources/self-management' },
+  { name: 'How Can I Help Someone', path: '/resources/how-to-help' },
+  { name: 'Warning Signs', path: '/resources/warning-signs' },
+  { name: 'Depression', path: '/resources/depression' },
+  { name: 'Myths & Facts', path: '/resources/myths-facts' },
+  { name: 'Addiction', path: '/resources/addiction' },
+  { name: 'Anxiety', path: '/resources/anxiety' },
+  { name: 'Post Traumatic Stress Disorder', path: '/resources/ptsd' },
+  { name: 'Grief', path: '/resources/grief' },
+  { name: 'Teens & Youth', path: '/resources/teens-youth' },
+  { name: 'Parents', path: '/resources/parents' },
+  { name: 'College Students', path: '/resources/college-students' },
+  { name: 'LGBTQ2S', path: '/resources/lgbtq2s' },
+  { name: 'Indigenous Issues', path: '/resources/indigenous' },
+  { name: 'Seniors', path: '/resources/seniors' },
+  { name: 'Men', path: '/resources/men' },
+  { name: 'Veterans & Military', path: '/resources/veterans' },
+  { name: 'Refugees', path: '/resources/refugees' },
+  { name: 'Attempt Survivors', path: '/resources/attempt-survivors' },
+  { name: 'Survivors of Suicide Loss', path: '/resources/suicide-loss' },
+  { name: 'Bereaved Support', path: '/resources/bereaved-support' },
+  { name: 'After a Suicide Loss', path: '/resources/after-suicide-loss' },
+  { name: 'Educators', path: '/resources/educators' },
+  { name: 'Health Professionals', path: '/resources/health-professionals' },
+  { name: 'First Responders', path: '/resources/first-responders' },
+  { name: 'Care Givers', path: '/resources/care-givers' },
+  { name: 'Media Professionals', path: '/resources/media-professionals' },
+  { name: 'Workplace Employers', path: '#' },
+  { name: 'Resource Organizations', path: '/resources/organizations' },
+ 
+];
 
-  const patternInterruptsMainLinks = [
-    'Acts of Kindness',
-    'Comedy',
-    'Coping Mechanisms',
-    'Emotional Support Videos',
-    'Helpful Movies',
-    'Image Gallery',
-    'Improve Your Mood',
-    'Inspiring Videos',
-    'Interactive Mind',
-    'Life Changing Books',
-  ];
+const patternInterruptsMainLinks = [
+  { name: 'Acts of Kindness', path: '/pattern-interrupt/kindness' },
+  { name: 'Comedy', path: '/pattern-interrupt/comedy' },
+  { name: 'Coping Mechanisms', path: '/pattern-interrupt/coping' },
+  { name: 'Emotional Support Videos', path: '/pattern-interrupt/emotional-support' },
+  { name: 'Helpful Movies', path: '/pattern-interrupt/helpful-movies' },
+  { name: 'Image Gallery', path: '/pattern-interrupt/gallery' },
+  { name: 'Improve Your Mood', path: '/pattern-interrupt/improve-mood' },
+  { name: 'Inspiring Videos', path: '/pattern-interrupt/inspiring-videos' },
+  { name: 'Interactive Mind', path: '/pattern-interrupt/interactive-mind' },
+  { name: 'Life Changing Books', path: '/pattern-interrupt/books' }
+];
 
-  const mentalHealthAppLinks = [
-    {
-      name: 'Suicide Prevention',
-      path: '/mental-health-apps/suicide-prevention',
-    },
-    { name: 'Mood Tracking', path: '/mental-health-apps/mood-tracking' },
-    {
-      name: 'Depression & Anxiety',
-      path: '/mental-health-apps/depression-anxiety',
-    },
-    { name: 'Sleep', path: '/mental-health-apps/sleep' },
-    {
-      name: 'Sleep/Relax/Meditate',
-      path: '/mental-health-apps/sleep-relax-meditate',
-    },
-  ];
+const mentalHealthAppLinks = [
+  { name: 'Suicide Prevention', path: '/pattern-interrupt/apps', id: 'suicide-prevention' },
+  { name: 'Mood Tracking', path: '/pattern-interrupt/apps', id: 'mood-tracking' },
+  { name: 'Depression & Anxiety', path: '/pattern-interrupt/apps', id: 'depression-anxiety' },
+  { name: 'Sleep', path: '/pattern-interrupt/apps', id: 'sleep-relax' },
+  { name: 'Sleep/Relax/Meditate', path: '/pattern-interrupt/apps', id: 'sleep-relax' }
+];
 
-  const patternInterruptsMoreLinks = [
-    'Movies of Inspiration',
-    'Self Management',
-    'Uplifting Music Videos',
-    'Transform Negative Thoughts',
-    'Words of Wisdom',
-  ];
+const patternInterruptsMoreLinks = [
+  { name: 'Movies of Inspiration', path: '/pattern-interrupt/movies-inspiration' },
+  { name: 'Self Management', path: '/pattern-interrupt/self-management' },
+  { name: 'Uplifting Music Videos', path: '/pattern-interrupt/music' },
+  { name: 'Transform Negative Thoughts', path: '/pattern-interrupt/transform-thoughts' },
+  { name: 'Words of Wisdom', path: '/pattern-interrupt/wisdom' }
+];
 
   const finalLinks = [
     { name: 'The LifeLine App', path: '/app' },
-    { name: 'Companion Paws', path: '/companion-paws' },
-    { name: 'Contact Us', path: '/contact' },
-    { name: 'Email Support', path: '/email-support' },
-    { name: 'En Francais', path: '/fr' },
+    { name: 'Companion Paws', path: 'https://companionpaws.ca/' },
+    { name: 'Contact Us', path: '/contact-us' },
+    { name: 'Email Support', path: '/support' },
+    { name: 'En Francais', path: '#' },
   ];
 
   // Create a reusable link className
@@ -143,6 +135,46 @@ const SiteMapPage = () => {
     mainLink: 'clamp(1rem, 1.25vw, 1.5rem)', // Main navigation links
     subLink: 'clamp(0.875rem, 0.9vw, 1.25rem)', // Submenu/child links
   };
+
+  const handleClick = (link: (typeof aboutLinks)[0]) => (e: React.MouseEvent) => {
+        if (link.id) {
+          e.preventDefault();
+  
+          if (location.pathname !== '/') {
+            // If not on home page, navigate first, then scroll
+            navigate('/', { replace: false });
+            // Wait a tick so the new page renders
+            setTimeout(() => {
+              const section = document.getElementById(link.id!);
+              if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }, 100); // 100ms delay is usually enough
+          } else {
+            // Already on home page
+            const section = document.getElementById(link.id!);
+            if (section) {
+              section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        }
+      };
+
+
+const handleScrollToSection = (path: string, id?: string) => (e: React.MouseEvent) => {
+  if (id) {
+    e.preventDefault();
+      // Different page - navigate then scroll
+      navigate(path);
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  
+};
 
   return (
   <div className="w-full min-h-screen bg-gradient-to-br from-amber-200 via-orange-100 to-yellow-50">
@@ -184,7 +216,7 @@ const SiteMapPage = () => {
           style={{ fontSize: fontSizes.categoryTitle }}
         >
           <Link 
-            to="/about" 
+            to="/about-us" 
             className={linkClassName}
           >
             About Us
@@ -198,6 +230,7 @@ const SiteMapPage = () => {
             >
               <Link
                 to={link.path}
+                onClick={handleClick(link)}
                 className={linkClassName}
                 style={{ fontSize: fontSizes.mainLink }}
               >
@@ -213,7 +246,7 @@ const SiteMapPage = () => {
           style={{ fontSize: fontSizes.categoryTitle }}
         >
           <Link 
-            to="/crisis" 
+            to="/incrisisneedhelp" 
             className={linkClassName}
           >
             In Crisis?
@@ -281,21 +314,18 @@ const SiteMapPage = () => {
         </h2>
         <ul className="list-none p-0 mb-12 md:mb-16">
           {resourceLinks.map((item, idx) => {
-            const slug = item
-              .toLowerCase()
-              .replace(/[&\s]+/g, '-')
-              .replace(/[^a-z0-9-]/g, '');
+            
             return (
               <li
                 key={idx}
                 className="mb-2 md:mb-3 cursor-pointer transition-all duration-300 font-medium"
               >
                 <Link
-                  to={`/resources/${slug}`}
+                  to={item.path}
                   className={linkClassName}
                   style={{ fontSize: fontSizes.mainLink }}
                 >
-                  {item}
+                  {item.name}
                 </Link>
               </li>
             );
@@ -316,25 +346,24 @@ const SiteMapPage = () => {
         </h2>
         <ul className="list-none p-0 mb-12 md:mb-16">
           {patternInterruptsMainLinks.map((item, idx) => {
-            const slug = item.toLowerCase().replace(/[\s]+/g, '-');
             return (
               <li
                 key={idx}
                 className="mb-2 md:mb-3 cursor-pointer transition-all duration-300 font-medium"
               >
                 <Link
-                  to={`/pattern-interrupts/${slug}`}
+                  to={item.path}
                   className={linkClassName}
                   style={{ fontSize: fontSizes.mainLink }}
                 >
-                  {item}
+                  {item.name}
                 </Link>
               </li>
             );
           })}
           <li className="mb-2 md:mb-3 cursor-pointer transition-all duration-300 font-medium">
             <Link
-              to="/mental-health-apps"
+              to="/pattern-interrupt/apps"
               className={linkClassName}
               style={{ fontSize: fontSizes.mainLink }}
             >
@@ -349,6 +378,7 @@ const SiteMapPage = () => {
               >
                 <Link
                   to={app.path}
+                   onClick={handleScrollToSection(app.path,app.id)}
                   className={linkClassName}
                   style={{ fontSize: fontSizes.subLink }}
                 >
@@ -358,18 +388,18 @@ const SiteMapPage = () => {
             ))}
           </ul>
           {patternInterruptsMoreLinks.map((item, idx) => {
-            const slug = item.toLowerCase().replace(/[\s]+/g, '-');
+       
             return (
               <li
                 key={idx}
                 className="mb-2 md:mb-3 cursor-pointer transition-all duration-300 font-medium"
               >
                 <Link
-                  to={`/pattern-interrupts/${slug}`}
+                  to={item.path}
                   className={linkClassName}
                   style={{ fontSize: fontSizes.mainLink }}
                 >
-                  {item}
+                  {item.name}
                 </Link>
               </li>
             );

@@ -13,7 +13,7 @@ export const patternInterruptCards: MediaCard[] = [
     id: 1,
     title: 'Improve Your Mood',
     image: '/assets/PatternInterruptImages/improve-your-mood-600x401.jpg',
-    path: '/pattern-interrupt/mood',
+    path: '/pattern-interrupt/improve-mood',
     category: 'mood',
   },
   {
@@ -41,7 +41,7 @@ export const patternInterruptCards: MediaCard[] = [
     id: 5,
     title: 'Uplifting Music Videos',
     image: '/assets/PatternInterruptImages/upliftingMusic-400x260.jpg',
-    path: '/pattern-interrupt/uplifting-music',
+    path: '/pattern-interrupt/music',
     category: 'music',
   },
   {
@@ -55,7 +55,7 @@ export const patternInterruptCards: MediaCard[] = [
     id: 7,
     title: 'Helpful Movies',
     image: '/assets/PatternInterruptImages/3wPopcorn-300x200.webp',
-    path: '/pattern-interrupt/movies',
+    path: '/pattern-interrupt/helpful-movies',
     category: 'movies',
   },
   {
@@ -63,7 +63,7 @@ export const patternInterruptCards: MediaCard[] = [
     title: 'Movies of Inspiration',
     image:
       '/assets/PatternInterruptImages/Best-Inspirational-Movies-300x200.webp',
-    path: '/pattern-interrupt/inspirational-movies',
+    path: '/pattern-interrupt/movies-inspiration',
     category: 'movies',
   },
   {

@@ -20,6 +20,8 @@ const AuthPage: React.FC = () => {
   const [isLogin, setIsLogin] = useState(true);
 console.log({GOOGLE_CLIENT_ID})
 
+alert("Use this test email to login:\nEmail: test@gmail.com");//test email for login
+
   const handleSocialLogin = async (
     provider: string,
     profile?: GoogleProfile
