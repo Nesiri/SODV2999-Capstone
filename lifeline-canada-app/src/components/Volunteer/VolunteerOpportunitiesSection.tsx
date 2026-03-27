@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const VolunteerOpportunitiesSection: React.FC = () => {
   return (
@@ -25,9 +26,9 @@ const VolunteerOpportunitiesSection: React.FC = () => {
               </span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
+            <h2 className="!text-2xl md:text-5xl lg:text-6xl font-black leading-tight">
               <span className="relative inline-block">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-purple-600 to-pink-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-purple-300 to-purple-600">
                   Volunteering with TLC
                 </span>
                 <span className="absolute -bottom-2 left-0 w-full h-3 bg-gradient-to-r from-blue-300/30 via-purple-300/30 to-pink-300/30 blur-sm"></span>
@@ -77,7 +78,7 @@ const VolunteerOpportunitiesSection: React.FC = () => {
             <p className="text-lg md:text-xl leading-relaxed">
               <span className="text-2xl text-purple-500 mr-1">✨</span>
               We have many{' '}
-              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-300">
                 exciting volunteer positions
               </span>
               , and we are happy to tailor your talents and interests to our
@@ -103,16 +104,16 @@ const VolunteerOpportunitiesSection: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
 
-            <a
-              href="mailto:volunteers@thelifelinecanada.ca"
-              className="group inline-flex items-center justify-center gap-2 bg-white/80 backdrop-blur-sm text-gray-700 px-8 py-4 rounded-2xl text-lg font-semibold border-2 border-gray-200 hover:border-blue-300 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            <Link
+              to="mailto:volunteers@thelifelinecanada.ca"
+              className="group inline-flex items-center justify-center gap-2 bg-white/80 backdrop-blur-sm text-gray-700 px-8 py-4 rounded-2xl text-lg font-semibold border-2 border-gray-200 !hover:border-purple-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
               <span>volunteers@thelifelinecanada.ca</span>
               <span className="opacity-0 group-hover:opacity-100 transition-opacity">
                 📧
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

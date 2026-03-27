@@ -221,30 +221,30 @@ export const patternInterrupts = [
   {
     category: 'Mood & Inspiration',
     links: [
-      { name: 'Improve Your Mood', path: '/pattern/improve-mood' },
-      { name: 'Comedy', path: '/pattern/comedy' },
-      { name: 'Inspiring Videos', path: '/pattern/inspiring-videos' },
-      { name: 'Emotional Support Videos', path: '/pattern/emotional-support' },
-      { name: 'Uplifting Music Videos', path: '/pattern/music' },
-      { name: 'Life Changing Books', path: '/pattern/books' },
-      { name: 'Movies of Inspiration', path: '/pattern/movies-inspiration' },
-      { name: 'Helpful Movies', path: '/pattern/helpful-movies' },
+      { name: 'Improve Your Mood', path: '/pattern-interrupt/improve-mood' },
+      { name: 'Comedy', path: '/pattern-interrupt/comedy' },
+      { name: 'Inspiring Videos', path: '/pattern-interrupt/inspiring-videos' },
+      { name: 'Emotional Support Videos', path: '/pattern-interrupt/emotional-support' },
+      { name: 'Uplifting Music Videos', path: '/pattern-interrupt/music' },
+      { name: 'Life Changing Books', path: '/pattern-interrupt/books' },
+      { name: 'Movies of Inspiration', path: '/pattern-interrupt/movies-inspiration' },
+      { name: 'Helpful Movies', path: '/pattern-interrupt/helpful-movies' },
     ],
   },
   {
     category: 'Self Help & Tools',
     links: [
-      { name: 'Self Management', path: '/pattern/self-management' },
-      { name: 'Coping Mechanisms', path: '/pattern/coping' },
-      { name: 'Interactive Mind', path: '/pattern/interactive-mind' },
-      { name: 'Mental Health Apps', path: '/pattern/apps' },
+      { name: 'Self Management', path: '/pattern-interrupt/self-management' },
+      { name: 'Coping Mechanisms', path: '/pattern-interrupt/coping' },
+      { name: 'Interactive Mind', path: 'pattern-interrupt/interactive-mind' },
+      { name: 'Mental Health Apps', path: '/pattern-interrupt/apps' },
       {
         name: 'Transform Negative Thoughts',
-        path: '/pattern/transform-thoughts',
+        path: '/pattern-interrupt/transform-thoughts',
       },
-      { name: 'Words of Wisdom', path: '/pattern/wisdom' },
-      { name: 'Image Gallery', path: '/pattern/gallery' },
-      { name: 'Acts of Kindness', path: '/pattern/kindness' },
+      { name: 'Words of Wisdom', path: '/pattern-interrupt/wisdom' },
+      { name: 'Image Gallery', path: '/pattern-interrupt/gallery' },
+      { name: 'Acts of Kindness', path: '/pattern-interrupt/kindness' },
     ],
   },
 ];
@@ -256,7 +256,7 @@ export const patternInterrupts = [
 export const mainNavLinks = [
   {
     name: 'In Crisis?',
-    path: '/in-crisis',
+    path: '/incrisisneedhelp',
     emergency: true,
     icon: React.createElement(AlertCircle, { className: 'w-4 h-4' }),
   },
@@ -267,12 +267,12 @@ export const mainNavLinks = [
   },
   {
     name: 'Pattern Interrupts',
-    path: '/pattern-interrupt',
+    path: '/pattern-interrupts',
     hasMegaMenu: true,
   },
   {
     name: 'LifeLine App',
-    path: '/app',
+    path: '/app?mode=login',
     icon: React.createElement(Zap, { className: 'w-4 h-4' }),
   },
 ];
@@ -284,23 +284,23 @@ export const mainNavLinks = [
 export const dropdownNavLinks = [
   {
     name: 'About',
-    path: '/about',
+    path: '/about-us',
     icon: React.createElement(Users, { className: 'w-4 h-4' }),
   },
   {
     name: 'Companion Paws',
-    path: '/paws',
+    path: 'https://companionpaws.ca/',
     icon: '🐾',
   },
 
   {
     name: 'Contact',
-    path: '/contact',
+    path: '/contact-us',
     icon: '✉️', // Phone contact
   },
   {
     name: 'Email Support',
-    path: '/email-support',
+    path: '/support',
     icon: '✉️', // Email
   },
   {

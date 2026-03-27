@@ -27,12 +27,12 @@ const GetInvolvedSection: React.FC = () => {
 
             {/* Headings with stunning text effects */}
             <div className="space-y-3">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-blue-700 drop-shadow-lg">
+              <h1 className="!text-3xl md:text-6xl lg:text-7xl font-black tracking-tight">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-purple-300 to-blue-700 drop-shadow-lg">
                   Get Involved!
                 </span>
               </h1>
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-800">
+              <h2 className="!text-3xl md:text-6xl lg:text-7xl font-black text-gray-800">
                 <span className="relative inline-block">
                   Change a Life.
                   <span className="absolute -bottom-2 left-0 w-full h-3 bg-gradient-to-r from-purple-300/30 via-pink-300/30 to-blue-300/30 blur-sm -z-10"></span>

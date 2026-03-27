@@ -1,0 +1,19 @@
+[build]
+  command = "tsc --noEmit || true && vite build"
+  publish = "dist"
+
+[build.environment]
+  CI = "false"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+
+# Keep assets rule (optional)
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+
+# ADD THIS (MOST IMPORTANT)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

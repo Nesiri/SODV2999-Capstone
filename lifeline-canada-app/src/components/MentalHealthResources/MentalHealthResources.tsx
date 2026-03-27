@@ -9,7 +9,7 @@ const MentalHealthResources: React.FC = () => {
   );
 
   return (
-    <section className="relative py-24 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+    <section className="relative py-24 bg-gradient-to-br from-indigo-50 via-white to-purple-50 min-w-screen">
       {/* Simplified background elements - reduced blur and opacity for better performance */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-10"></div>

@@ -4,35 +4,35 @@ import { NavLink } from 'react-router-dom';
 
 const AboutUs: React.FC = () => {
   return (
-    <main className="relative w-full min-h-screen bg-gradient-to-b from-[#fbf7f2] to-[#f5efe8] font-sans antialiased overflow-hidden">
-      {/* Soft organic elements */}
-      <div className="absolute top-40 left-0 w-72 h-72 bg-[#c7d8d1]/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-0 w-96 h-96 bg-[#e6d9ce]/30 rounded-full blur-3xl"></div>
+    <main className="relative w-full min-h-screen bg-gradient-to-b from-[#ffe9de] to-[#f7dfd1] font-sans antialiased overflow-hidden">
+      {/* Soft organic elements - adjusted to match peach palette */}
+      <div className="absolute top-40 left-0 w-72 h-72 bg-[#e1b7a5]/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-0 w-96 h-96 bg-[#d6afa0]/30 rounded-full blur-3xl"></div>
 
-      {/* Subtle texture line */}
-      <div className="absolute left-20 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#c4b5a5]/10 to-transparent"></div>
+      {/* Subtle texture line - softened */}
+      <div className="absolute left-20 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#b2968a]/10 to-transparent"></div>
 
       <div className="relative w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-20 md:py-28">
-        {/* Decorative heading accent */}
+        {/* Decorative heading accent - warmed to match peach tones */}
         <div className="flex items-center gap-4 mb-12 lg:mb-16">
-          <div className="h-px w-16 bg-[#c9b6a4]"></div>
-          <span className="text-sm font-medium tracking-[0.3em] text-[#b2957b] uppercase">
+          <div className="h-px w-16 bg-[#c9a48b]"></div>
+          <span className="text-sm font-medium tracking-[0.3em] text-[#b07f64] uppercase">
             — Our story
           </span>
-          <div className="h-px flex-1 bg-[#c9b6a4]/30"></div>
+          <div className="h-px flex-1 bg-[#c9a48b]/30"></div>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 xl:gap-24">
-          {/* Left column - refined typography */}
+          {/* Left column - refined typography with warm tones */}
           <div className="flex-1 space-y-16">
             {/* About Us intro */}
             <div className="space-y-8">
-              <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl font-light text-[#1f2c32] leading-[0.95]">
+              <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl font-light text-[#4d3a32] leading-[0.95]">
                 About Us
               </h1>
 
               <div className="max-w-2xl">
-                <p className="text-xl md:text-2xl text-[#4a5c66] leading-relaxed font-light">
+                <p className="text-xl md:text-2xl text-[#6b5146] leading-relaxed font-light">
                   The LifeLine Canada Foundation (or TLC) is a registered
                   nonprofit, committed to positive mental health and suicide
                   prevention & awareness and is constantly developing new
@@ -41,39 +41,39 @@ const AboutUs: React.FC = () => {
               </div>
             </div>
 
-            {/* Important distinction card */}
+            {/* Important distinction card - warm cream background */}
             <div className="max-w-xl">
-              <div className="bg-white rounded-[2rem] p-10 shadow-[0_40px_40px_-30px_rgba(0,0,0,0.12)] border border-white/80">
+              <div className="bg-[#fff9f5] rounded-[2rem] p-10 shadow-[0_40px_40px_-30px_rgba(160,100,70,0.15)] border border-[#f5e1d6]/80">
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#ac8b74] mt-3"></div>
-                  <p className="text-lg text-[#3b4f53] leading-relaxed">
-                    <span className="font-medium text-[#1e3b4a]">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#c28463] mt-3"></div>
+                  <p className="text-lg text-[#624b40] leading-relaxed">
+                    <span className="font-medium text-[#7b5a4b]">
                       The LifeLine Canada Foundation is not a crisis hotline.
                     </span>
                   </p>
                 </div>
 
                 <div className="pl-5 space-y-4">
-                  <p className="text-base text-[#5f7480]">
+                  <p className="text-base text-[#7a6054]">
                     If in Crisis, call or text{' '}
-                    <span className="text-[#1e3b4a] font-medium text-lg">
+                    <span className="text-[#b36844] font-medium text-lg">
                       988
                     </span>{' '}
                     for Canada's suicide prevention hotline.
                   </p>
 
-                  <p className="text-base text-[#5f7480]">
+                  <p className="text-base text-[#7a6054]">
                     If you or someone you know is in immediate danger, call{' '}
-                    <span className="text-[#1e3b4a] font-medium text-lg">
+                    <span className="text-[#b36844] font-medium text-lg">
                       911
                     </span>
                     .
                   </p>
 
                   <NavLink
-                    to="/in-crisis"
+                    to="/incrisisneedhelp"
                     className={({ isActive }) =>
-                      `inline-flex items-center gap-2 text-[#2b5f6b] font-medium group text-base border-b border-dotted border-[#9fb7c0] hover:border-solid hover:border-[#1a3f48] transition-all ${isActive ? 'border-solid border-[#1a3f48]' : ''}`
+                      `inline-flex items-center gap-2 text-[#b36844] font-medium group text-base border-b border-dotted border-[#dbb8a8] hover:border-solid hover:border-[#9c6b53] transition-all ${isActive ? 'border-solid border-[#9c6b53]' : ''}`
                     }
                   >
                     See our directory of mental health crisis support
@@ -88,13 +88,13 @@ const AboutUs: React.FC = () => {
             {/* Mission section */}
             <div className="space-y-6 max-w-xl">
               <div className="flex items-center gap-4">
-                <h2 className="font-serif text-4xl md:text-5xl font-light text-[#2b4b5a]">
+                <h2 className="font-serif text-4xl md:text-5xl font-light text-[#b36844]">
                   Mission
                 </h2>
-                <div className="h-px flex-1 bg-[#dbd2c8]"></div>
+                <div className="h-px flex-1 bg-[#e2cbbd]"></div>
               </div>
 
-              <p className="text-xl md:text-2xl text-[#4a626e] leading-relaxed font-light">
+              <p className="text-xl md:text-2xl text-[#6b5146] leading-relaxed font-light">
                 To aid in suicide reduction across Canada by raising awareness
                 of risk factors, delivering programs for positive mental health
                 development, providing access to available resource options, and
@@ -102,11 +102,11 @@ const AboutUs: React.FC = () => {
                 all.
               </p>
 
-              {/* Decorative element */}
+              {/* Decorative element - warmed */}
               <div className="flex gap-2 pt-4">
-                <span className="w-2 h-2 rounded-full bg-[#c9b6a4]"></span>
-                <span className="w-2 h-2 rounded-full bg-[#c9b6a4]/60"></span>
-                <span className="w-2 h-2 rounded-full bg-[#c9b6a4]/30"></span>
+                <span className="w-2 h-2 rounded-full bg-[#c9a48b]"></span>
+                <span className="w-2 h-2 rounded-full bg-[#c9a48b]/60"></span>
+                <span className="w-2 h-2 rounded-full bg-[#c9a48b]/30"></span>
               </div>
             </div>
           </div>
@@ -116,14 +116,14 @@ const AboutUs: React.FC = () => {
             <div className="sticky top-24">
               {/* Framed image with depth */}
               <div className="relative">
-                {/* Background orbs */}
-                <div className="absolute -top-8 -right-8 w-48 h-48 bg-[#ac8b74]/10 rounded-full blur-2xl"></div>
-                <div className="absolute -bottom-8 -left-8 w-56 h-56 bg-[#1f2c32]/10 rounded-full blur-2xl"></div>
+                {/* Background orbs - warmed */}
+                <div className="absolute -top-8 -right-8 w-48 h-48 bg-[#c28463]/10 rounded-full blur-2xl"></div>
+                <div className="absolute -bottom-8 -left-8 w-56 h-56 bg-[#4d3a32]/10 rounded-full blur-2xl"></div>
 
                 {/* Main image container */}
-                <div className="relative rounded-[2rem] overflow-hidden aspect-[3/4] shadow-2xl">
-                  {/* Artistic gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1f2c32]/40 via-transparent to-[#ac8b74]/10 mix-blend-multiply z-10"></div>
+                <div className="relative rounded-[2rem] overflow-hidden aspect-[16/12] shadow-2xl">
+                  {/* Artistic gradient overlay - warmed */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#4d3a32]/40 via-transparent to-[#c28463]/10 mix-blend-multiply z-10"></div>
 
                   <img
                     src={aboutImage}
@@ -141,21 +141,21 @@ const AboutUs: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Floating stat card */}
-                <div className="absolute -bottom-5 -right-5 bg-white px-6 py-4 rounded-xl shadow-xl border border-white/80">
+                {/* Floating stat card - warmed */}
+                <div className="absolute -bottom-5 -right-5 bg-[#fff9f5] px-6 py-4 rounded-xl shadow-xl border border-[#f5e1d6]/80">
                   <div className="flex items-center gap-3">
-                    <div className="text-2xl font-serif text-[#ac8b74]">
+                    <div className="text-2xl font-serif text-[#c28463]">
                       2010
                     </div>
-                    <div className="text-xs text-[#6f8185] font-light">
+                    <div className="text-xs text-[#8d6f61] font-light">
                       founded
                     </div>
                   </div>
                 </div>
 
-                {/* Trust badge */}
-                <div className="absolute -top-4 -left-4 bg-white px-5 py-3 rounded-full shadow-lg border border-white/80">
-                  <span className="text-xs font-medium text-[#3b4f53] tracking-wide">
+                {/* Trust badge - warmed */}
+                <div className="absolute -top-10 -left-4 bg-[#fff9f5] px-5 py-3 rounded-full shadow-lg border border-[#f5e1d6]/80">
+                  <span className="text-xs font-medium text-[#624b40] tracking-wide">
                     🇨🇦 Registered Nonprofit
                   </span>
                 </div>
@@ -164,12 +164,12 @@ const AboutUs: React.FC = () => {
           </div>
         </div>
 
-        {/* Minimal footer with stats */}
-        <div className="mt-24 pt-12 border-t border-[#e2dad2]/50">
-          <div className="flex flex-wrap justify-between items-center text-xs text-[#b7c4bd] tracking-wide">
-            <span className="font-serif text-base text-[#ac8b74]">TLC</span>
+        {/* Minimal footer with stats - warmed */}
+        <div className="mt-24 pt-12 border-t border-[#e2cbbd]/50">
+          <div className="flex flex-wrap justify-between items-center text-xs text-[#b2968a] tracking-wide">
+            <span className="font-serif text-base text-[#c28463]">TLC</span>
             <span>Mental health for all Canadians</span>
-            <span className="border border-[#e2dad2] px-4 py-2 rounded-full">
+            <span className="border border-[#e2cbbd] px-4 py-2 rounded-full text-[#624b40]">
               since 2010
             </span>
           </div>

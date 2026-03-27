@@ -90,12 +90,12 @@ const CallLines: React.FC = () => {
                 <div className="absolute inset-0 rounded-[2.5rem] shadow-inner"></div>
 
                 {/* Image container with soft gradient border */}
-                <div className="relative rounded-2xl overflow-hidden">
+                <div className="relative sm:left-10 rounded-2xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-[#C89F9F]/10 to-transparent z-10"></div>
                   <img
                     src={callLineImage}
                     alt="online chat"
-                    className="sm:ml-10 w-30 sm:w-96 h-auto object-cover"
+                    className="sm:ml-10 w-30 sm:w-70 h-auto object-cover"
                   />
                 </div>
               </div>

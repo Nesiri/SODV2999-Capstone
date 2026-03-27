@@ -24,8 +24,7 @@ export const DropdownView = ({
 }: DropdownViewProps) => {
   const groupedLinks = groupLinksByCategory(links);
   const categories = Object.keys(groupedLinks);
-  const isSingleCategory =
-    categories.length === 1 && categories[0] === 'General';
+  const isSingleCategory =(categories.length === 1 && categories[0] === 'General');
 
   return (
     <div

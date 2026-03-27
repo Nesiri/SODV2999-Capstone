@@ -1,5 +1,5 @@
 // components/MoreDropdown.tsx
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 import NavLink from './NavLink';
 
@@ -17,12 +17,41 @@ interface MoreDropdownProps {
   className?: string;
 }
 
+function useDelayedClose(initialState = false, delay = 300) {
+  const [isOpen, setIsOpen] = useState(initialState);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const open = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setIsOpen(true);
+  };
+
+  const close = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsOpen(false);
+    }, delay);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
+  return { isOpen, open, close, setIsOpen };
+}
+
 export default function MoreDropdown({
   dropdownLinks,
   triggerText = 'More',
   className = '',
 }: MoreDropdownProps) {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, open, close, setIsOpen } = useDelayedClose(false, 300);
 
   const handleLinkClick = () => {
     setIsOpen(false);
@@ -37,8 +66,8 @@ export default function MoreDropdown({
   return (
     <div
       className={`relative ${className}`}
-      onMouseEnter={() => setIsOpen(true)}
-      onMouseLeave={() => setIsOpen(false)}
+      onMouseEnter={open}
+      onMouseLeave={close}
       onKeyDown={handleKeyDown}
     >
       <button
@@ -66,13 +95,13 @@ export default function MoreDropdown({
             aria-hidden="true"
           />
 
-          {/* Dropdown menu - Layer 1: Background */}
-          <div className="absolute right-0 mt-2 w-56 z-50">
+          {/* Dropdown menu */}
+          <div className="absolute left-1 right-0 mt-2 w-56 z-50">
             {/* Layer 1: Base background */}
             <div className="absolute inset-0 bg-gradient-to-br from-pink-200 via-gray-500/30 to-white rounded-lg shadow-xl border border-gray-200" />
 
-            {/* Layer 2: Content container with solid background to block transparency */}
-            <div className="relative bg-gradient-to-br from-pink-100 via-gray-100 to-white  backdrop-blur-sm rounded-lg overflow-hidden animate-in slide-in-from-top-5 fade-in duration-200">
+            {/* Layer 2: Content container with solid background */}
+            <div className="relative bg-gradient-to-br from-pink-100 via-gray-100 to-white backdrop-blur-sm rounded-lg overflow-hidden animate-in slide-in-from-top-5 fade-in duration-200">
               <div
                 className="py-1"
                 role="menu"

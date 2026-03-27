@@ -153,8 +153,8 @@ const VolunteerFormSection: React.FC = () => {
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-black mb-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-blue-700">
+          <h1 className="!text-3xl md:text-6xl font-black mb-4">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-purple-300 to-blue-700">
               Volunteer Form
             </span>
           </h1>
@@ -163,11 +163,11 @@ const VolunteerFormSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Form - Single flowing layout without cards */}
+        {/* Form - Card-based layout */}
         <form onSubmit={handleSubmit} className="space-y-8 animate-fadeInUp">
-          {/* Volunteer Confirmation */}
-          <div className="bg-white/30 backdrop-blur-sm p-6 rounded-2xl border border-white/30">
-            <label className="flex items-start gap-3">
+          {/* Volunteer Confirmation Card */}
+          <div className="backdrop-blur-sm bg-white/90 rounded-3xl shadow-2xl shadow-purple-300/20 p-8 border border-white/40 transform hover:scale-[1.02] transition-all duration-500">
+            <label className="flex items-start gap-3 cursor-pointer">
               <input
                 type="checkbox"
                 name="volunteerConfirmation"
@@ -175,19 +175,25 @@ const VolunteerFormSection: React.FC = () => {
                 className="mt-1 w-5 h-5 rounded border-gray-300 text-purple-600 focus:ring-purple-500"
               />
               <span className="text-gray-700">
-                <span className="font-semibold text-gray-900">
-                  Please check Volunteer to confirm you are applying for a
-                  Volunteer position *
+                <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-blue-700">
+                  Please check to confirm you are applying for a Volunteer position *
                 </span>
               </span>
             </label>
           </div>
 
-          {/* Personal Information - No card, just flowing sections */}
-          <div className="space-y-6">
-            <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 border-b border-gray-200/60 pb-2">
-              Personal Information
-            </h2>
+          {/* Personal Information Card */}
+          <div className="backdrop-blur-sm bg-white/90 rounded-3xl shadow-2xl shadow-purple-300/20 p-8 border border-white/40 transform hover:scale-[1.02] transition-all duration-500">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl">
+                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <h2 className="!text-1xl font-bold text-black">
+                Personal Information
+              </h2>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* First Name */}
@@ -201,7 +207,7 @@ const VolunteerFormSection: React.FC = () => {
                   value={formData.firstName}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70 backdrop-blur-sm"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70"
                   placeholder="John"
                 />
               </div>
@@ -217,7 +223,7 @@ const VolunteerFormSection: React.FC = () => {
                   value={formData.lastName}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70 backdrop-blur-sm"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70"
                   placeholder="Doe"
                 />
               </div>
@@ -233,7 +239,7 @@ const VolunteerFormSection: React.FC = () => {
                   value={formData.age}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70 backdrop-blur-sm"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70"
                   placeholder="25"
                 />
               </div>
@@ -248,7 +254,7 @@ const VolunteerFormSection: React.FC = () => {
                   value={formData.gender}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70 backdrop-blur-sm"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70"
                 >
                   <option value="">Select gender</option>
                   <option value="male">Male</option>
@@ -265,7 +271,7 @@ const VolunteerFormSection: React.FC = () => {
                 </label>
                 <div className="flex flex-wrap gap-6">
                   {PRONOUNS.map((pronoun) => (
-                    <label key={pronoun} className="flex items-center gap-2">
+                    <label key={pronoun} className="flex items-center gap-2 cursor-pointer">
                       <input
                         type="radio"
                         name="pronouns"
@@ -292,7 +298,7 @@ const VolunteerFormSection: React.FC = () => {
                   value={formData.address}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70 backdrop-blur-sm"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70"
                   placeholder="123 Main St"
                 />
               </div>
@@ -308,7 +314,7 @@ const VolunteerFormSection: React.FC = () => {
                   value={formData.city}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70 backdrop-blur-sm"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70"
                   placeholder="Toronto"
                 />
               </div>
@@ -323,7 +329,7 @@ const VolunteerFormSection: React.FC = () => {
                   value={formData.province}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70 backdrop-blur-sm"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70"
                 >
                   {PROVINCES.map((province) => (
                     <option key={province} value={province}>
@@ -343,7 +349,7 @@ const VolunteerFormSection: React.FC = () => {
                   name="postalCode"
                   value={formData.postalCode}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70 backdrop-blur-sm"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70"
                   placeholder="A1B 2C3"
                 />
               </div>
@@ -359,7 +365,7 @@ const VolunteerFormSection: React.FC = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70 backdrop-blur-sm"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70"
                   placeholder="john@example.com"
                 />
               </div>
@@ -375,7 +381,7 @@ const VolunteerFormSection: React.FC = () => {
                   value={formData.phone}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70 backdrop-blur-sm"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70"
                   placeholder="(555) 555-5555"
                 />
               </div>
@@ -390,7 +396,7 @@ const VolunteerFormSection: React.FC = () => {
                   value={formData.preferredContact}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70 backdrop-blur-sm"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70"
                 >
                   <option value="">Select method</option>
                   <option value="email">Email</option>
@@ -406,7 +412,7 @@ const VolunteerFormSection: React.FC = () => {
                 </label>
                 <div className="flex gap-6">
                   {['Yes', 'No'].map((option) => (
-                    <label key={option} className="flex items-center gap-2">
+                    <label key={option} className="flex items-center gap-2 cursor-pointer">
                       <input
                         type="radio"
                         name="driversLicense"
@@ -424,23 +430,29 @@ const VolunteerFormSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Skills and Interests - Flowing section */}
-          <div className="space-y-6 pt-4">
-            <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 border-b border-gray-200/60 pb-2">
-              Skills & Interests
-            </h2>
+          {/* Skills & Interests Card */}
+          <div className="backdrop-blur-sm bg-white/90 rounded-3xl shadow-2xl shadow-purple-300/20 p-8 border border-white/40 transform hover:scale-[1.02] transition-all duration-500">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl">
+                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h2 className="!text-1xl font-bold text-black">
+                Skills & Interests
+              </h2>
+            </div>
 
             <div className="space-y-4">
               <label className="text-sm font-semibold text-gray-700 block">
-                Please check all areas of Volunteering you would like to
-                perform. Please check boxes for skills and interests *
+                Please check all areas of Volunteering you would like to perform. *
               </label>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 max-h-96 overflow-y-auto p-4 border border-gray-200 rounded-xl bg-white/40 backdrop-blur-sm">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 max-h-96 overflow-y-auto p-4 border border-gray-200 rounded-xl bg-white/40">
                 {VOLUNTEER_SKILLS.map((skill) => (
                   <label
                     key={skill}
-                    className="flex items-start gap-2 p-2 hover:bg-purple-50/50 rounded-lg transition-colors"
+                    className="flex items-start gap-2 p-2 hover:bg-purple-50 rounded-lg transition-colors cursor-pointer"
                   >
                     <input
                       type="checkbox"
@@ -455,34 +467,31 @@ const VolunteerFormSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Experience Details */}
-            <div className="space-y-4 pt-4">
+            <div className="space-y-4 pt-6">
               <div>
                 <label className="text-sm font-semibold text-gray-700 block mb-2">
-                  Please give details of your interests and experience using
-                  said skills:
+                  Please give details of your interests and experience:
                 </label>
                 <textarea
                   name="experience"
                   value={formData.experience}
                   onChange={handleInputChange}
                   rows={4}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70 backdrop-blur-sm"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70"
                   placeholder="Tell us about your experience..."
                 />
               </div>
 
               <div>
                 <label className="text-sm font-semibold text-gray-700 block mb-2">
-                  Please let us know any specialized area of training or
-                  expertise:
+                  Any specialized training or expertise:
                 </label>
                 <textarea
                   name="training"
                   value={formData.training}
                   onChange={handleInputChange}
                   rows={3}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70 backdrop-blur-sm"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70"
                   placeholder="Any specialized training or certifications..."
                 />
               </div>
@@ -492,7 +501,7 @@ const VolunteerFormSection: React.FC = () => {
                 <label className="text-sm font-semibold text-gray-700 block mb-2">
                   Upload a Resume if available:
                 </label>
-                <div className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-purple-400 transition-colors bg-white/40 backdrop-blur-sm">
+                <div className="border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-purple-400 transition-colors bg-white/40">
                   <input
                     type="file"
                     onChange={handleFileChange}
@@ -503,7 +512,7 @@ const VolunteerFormSection: React.FC = () => {
                   <label htmlFor="resume-upload" className="cursor-pointer">
                     <div className="text-4xl mb-2">📄</div>
                     <p className="text-purple-600 font-semibold">
-                      Drag & Drop Files, or Click to Upload
+                      Drag & Drop or Click to Upload
                     </p>
                     <p className="text-sm text-gray-500 mt-1">
                       PDF, DOC, DOCX (Max 5MB)
@@ -514,11 +523,18 @@ const VolunteerFormSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Time Commitment - Flowing section */}
-          <div className="space-y-6 pt-4">
-            <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 border-b border-gray-200/60 pb-2">
-              Time Commitment
-            </h2>
+          {/* Time Commitment Card */}
+          <div className="backdrop-blur-sm bg-white/90 rounded-3xl shadow-2xl shadow-purple-300/20 p-8 border border-white/40 transform hover:scale-[1.02] transition-all duration-500">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl">
+                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h2 className="!text-1xl font-bold text-black">
+                Time Commitment
+              </h2>
+            </div>
 
             <div className="space-y-4">
               <div>
@@ -529,7 +545,7 @@ const VolunteerFormSection: React.FC = () => {
                   {TIME_COMMITMENTS.map((commitment) => (
                     <label
                       key={commitment}
-                      className="flex items-center gap-2 p-3 border border-gray-200 rounded-xl hover:border-purple-400 transition-colors bg-white/40 backdrop-blur-sm"
+                      className="flex items-center gap-2 p-3 border border-gray-200 rounded-xl hover:border-purple-400 transition-colors bg-white/40 cursor-pointer"
                     >
                       <input
                         type="radio"
@@ -549,14 +565,14 @@ const VolunteerFormSection: React.FC = () => {
               {formData.timeCommitment === 'Other' && (
                 <div>
                   <label className="text-sm font-semibold text-gray-700 block mb-2">
-                    If other, please explain...
+                    If other, please explain:
                   </label>
                   <input
                     type="text"
                     name="otherCommitment"
                     value={formData.otherCommitment}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70 backdrop-blur-sm"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70"
                     placeholder="Please specify..."
                   />
                 </div>
@@ -564,7 +580,7 @@ const VolunteerFormSection: React.FC = () => {
 
               <div>
                 <label className="text-sm font-semibold text-gray-700 block mb-2">
-                  How many hours per week are you available to volunteer? *
+                  Hours per week available? *
                 </label>
                 <input
                   type="text"
@@ -572,29 +588,29 @@ const VolunteerFormSection: React.FC = () => {
                   value={formData.hoursPerWeek}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70 backdrop-blur-sm"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70"
                   placeholder="e.g., 5-10 hours"
                 />
               </div>
 
               <div>
                 <label className="text-sm font-semibold text-gray-700 block mb-2">
-                  Is there anything else you would like to share with us?
+                  Anything else you'd like to share?
                 </label>
                 <textarea
                   name="additionalInfo"
                   value={formData.additionalInfo}
                   onChange={handleInputChange}
                   rows={4}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70 backdrop-blur-sm"
-                  placeholder="Any additional information you'd like to share..."
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-200 transition-all bg-white/70"
+                  placeholder="Any additional information..."
                 />
               </div>
             </div>
           </div>
 
           {/* Submit Button */}
-          <div className="flex justify-center pt-8">
+          <div className="flex justify-center pt-4">
             <button
               type="submit"
               className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-12 py-5 rounded-2xl text-xl font-bold shadow-xl shadow-purple-500/30 hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105"

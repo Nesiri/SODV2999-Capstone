@@ -48,7 +48,7 @@ const MentalHealthHero: React.FC = () => {
         }
       `}</style>
 
-      <section className="relative top-20 sm:top-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12 sm:py-16 md:py-24 overflow-hidden min-h-screen sm:min-h-0 flex items-center">
+      <section className="relative top-10 sm:top-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12 sm:py-16 md:py-24 overflow-hidden min-w-screen min-h-screen sm:min-h-0 flex items-center">
         {/* Decorative background elements - adjusted for mobile */}
         <div className="absolute top-0 left-0 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10 sm:opacity-20 animate-blob"></div>
         <div className="absolute top-0 right-0 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-10 sm:opacity-20 animate-blob animation-delay-2000"></div>
