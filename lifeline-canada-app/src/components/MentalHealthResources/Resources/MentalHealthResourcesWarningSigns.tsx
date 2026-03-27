@@ -1,5 +1,11 @@
 import React from "react";
-const coverPhoto = "/assets/AdditionalResourceImages/warning.jpg";
+const coverPhoto = "/assets/AdditionalResourceImages/warningSigns-600x600.webp";
+const talkingAbout = "/assets/AdditionalResourceImages/Mission-img-400x423.png";
+const behaviour = "/assets/AdditionalResourceImages/coping-200x144.jpg";
+const mood = "/assets/AdditionalResourceImages/Vision-img-200x154.png";
+const healthFactors = "/assets/AdditionalResourceImages/healthFactors-200x94.jpg";
+const environmentalFactors = "/assets/AdditionalResourceImages/environmental-factors-200x150.webp";
+const historicalFactors = "/assets/AdditionalResourceImages/More-Resources-200x196.png";
 
 const MentalHealthResourcesWarningSigns: React.FC = () => {
   const sectionClassName = "rounded-xl border border-slate-200 bg-white p-5 sm:p-6 text-slate-700";
@@ -66,6 +72,9 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
               </div>
 
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white mb-3">
+                  <img src={talkingAbout} alt="Talking about suicide" className="h-40 w-full object-cover" loading="lazy" />
+                </div>
                 <h3 className="text-lg font-semibold text-slate-900">If a person talks about</h3>
                 <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
                   <li>Being a burden to others</li>
@@ -77,6 +86,9 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
               </div>
 
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white mb-3">
+                  <img src={behaviour} alt="Behaviour changes" className="h-40 w-full object-cover" loading="lazy" />
+                </div>
                 <h3 className="text-lg font-semibold text-slate-900">Behavior changes to watch for</h3>
                 <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
                   <li>Increased alcohol or drug use</li>
@@ -90,6 +102,9 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
               </div>
 
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white mb-3">
+                  <img src={mood} alt="Common crisis moods" className="h-40 w-full object-cover" loading="lazy" />
+                </div>
                 <h3 className="text-lg font-semibold text-slate-900">Common crisis moods</h3>
                 <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
                   <li>Depression</li>
@@ -115,6 +130,9 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
               </div>
 
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white mb-3">
+                  <img src={healthFactors} alt="Health factors" className="h-40 w-full object-cover" loading="lazy" />
+                </div>
                 <h3 className="text-lg font-semibold text-slate-900">Health Factors</h3>
                 <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
                   <li>Mental health conditions (depression, bipolar disorder, schizophrenia, anxiety)</li>
@@ -125,6 +143,9 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
               </div>
 
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white mb-3">
+                  <img src={environmentalFactors} alt="Environmental factors" className="h-40 w-full object-cover" loading="lazy" />
+                </div>
                 <h3 className="text-lg font-semibold text-slate-900">Environmental Factors</h3>
                 <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
                   <li>Major life stressors (death, divorce, job loss)</li>
@@ -135,6 +156,9 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
               </div>
 
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white mb-3">
+                  <img src={historicalFactors} alt="Historical factors" className="h-40 w-full object-cover" loading="lazy" />
+                </div>
                 <h3 className="text-lg font-semibold text-slate-900">Historical Factors</h3>
                 <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
                   <li>Previous suicide attempts</li>
