@@ -3,12 +3,10 @@ import { mainNavLinks, dropdownNavLinks } from '../../../../navigation/nav';
 import { MenuItems } from './MenuItems';
 import { DropdownView } from './DropdownView';
 
-import {GetInvolvedButton } from './GetInvolvedButton';
-import { MakeContributionButton } from './makeContribution';
 
 interface MobileMenuPanelProps {
   openDropdown: string | null;
-  isAnimating: boolean;
+
   resourceLinks: any[];
   patternInterruptLinks: any[];
   activeCategory: string | null;
@@ -20,7 +18,7 @@ interface MobileMenuPanelProps {
 
 export const MobileMenuPanel = ({
   openDropdown,
-  isAnimating,
+
   resourceLinks,
   patternInterruptLinks,
   activeCategory,
@@ -40,7 +38,7 @@ export const MobileMenuPanel = ({
             onLinkClick={closeMenu}
             activeCategory={activeCategory}
             onCategoryToggle={handleCategoryToggle}
-            isAnimating={isAnimating}
+       
           />
         )}
 
@@ -52,7 +50,7 @@ export const MobileMenuPanel = ({
             onLinkClick={closeMenu}
             activeCategory={activeCategory}
             onCategoryToggle={handleCategoryToggle}
-            isAnimating={isAnimating}
+      
           />
         )}
 
@@ -64,7 +62,7 @@ export const MobileMenuPanel = ({
             onLinkClick={closeMenu}
             activeCategory={null}
             onCategoryToggle={() => {}}
-            isAnimating={isAnimating}
+   
           />
         )}
       </>
@@ -74,15 +72,14 @@ export const MobileMenuPanel = ({
   return (
     <div
       className={`fixed inset-0 relative h-screen bg-gradient-to-b from-white via-white to-gray-200 backdrop-blur-sm flex flex-col 
-      transition-all duration-700 overflow-x-hidden overflow-y-hidden ${
-        isAnimating ? 'opacity-0 translate-x-full' : 'opacity-100 translate-x-0'
+      transition-all duration-700 overflow-x-hidden overflow-y-hidden opacity-100 translate-x-0
       }`}
     >
       {/* Floating Close Icon */}
       <div className="absolute top-4 right-4 z-50">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 text-red-700 bg-gradient-to-b from-gray-100 via-yellow-200 to-purple-200 cursor-pointer"
+          className="w-6 h-6 text-blue-700 bg-gradient-to-b from-gray-100 via-yellow-200 to-purple-200 cursor-pointer"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -103,8 +100,7 @@ export const MobileMenuPanel = ({
           onDropdownClick={openDropdownWithAnimation}
           closeMenu={closeMenu}
         />
-        <MakeContributionButton closeMenu={closeMenu} />
-        <GetInvolvedButton closeMenu={closeMenu}     />
+       
       </div>
     </div>
   );

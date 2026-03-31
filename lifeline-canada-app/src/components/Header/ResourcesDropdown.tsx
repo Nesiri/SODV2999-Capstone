@@ -21,9 +21,9 @@ interface ResourcesDropdownProps {
   resourceLinks: ResourceLink[];
   triggerText: string;
   triggerPath: string;
-  emergency?: boolean;
+ 
   icon?: React.ReactNode;
-  className?: string;
+ 
 }
 
 function useDelayedClose(initialState = false, delay = 300) {
@@ -59,9 +59,8 @@ export default function ResourcesDropdown({
   resourceLinks,
   triggerText,
   triggerPath,
-  emergency = false,
   icon = null,
-  className = '',
+
 }: ResourcesDropdownProps) {
   const { isOpen, open, close, setIsOpen } = useDelayedClose(false, 300);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -128,7 +127,7 @@ export default function ResourcesDropdown({
 
   return (
     <div
-      className={`relative ${className}`}
+      className={`relative `}
       onKeyDown={handleKeyDown}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -139,11 +138,7 @@ export default function ResourcesDropdown({
         className={`
           relative flex items-center px-4 py-2 font-medium 
           transition-colors duration-200 focus:outline-none
-          ${
-            emergency
-              ? 'text-red-600 hover:text-red-700'
-              : 'text-gray-800 hover:text-blue-600'
-          }
+          text-gray-800 hover:text-blue-600
         `}
         aria-expanded={isOpen}
         aria-haspopup="true"
@@ -153,7 +148,9 @@ export default function ResourcesDropdown({
             {icon}
           </span>
         )}
-        {triggerText}
+       <span className="text-[clamp(12px,1.2vw,16px)] whitespace-nowrap">
+          {triggerText}
+        </span>
         <ChevronDown
           className={`ml-1.5 w-4 h-4 transition-transform duration-200 ${
             isOpen ? 'rotate-180' : ''

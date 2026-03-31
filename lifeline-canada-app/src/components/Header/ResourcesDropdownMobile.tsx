@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { ChevronDown, Star, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -27,6 +27,23 @@ export default function ResourcesDropdownMobile({
   onClick,
 }: ResourcesDropdownMobileProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   const handleLinkClick = () => {
     setIsOpen(false);
@@ -38,8 +55,8 @@ export default function ResourcesDropdownMobile({
   };
 
   return (
-    <div className="w-full mb-3">
-      {/* SUPER VIBRANT TRIGGER - Definitely shows color */}
+    <div className="w-full mb-3" ref={dropdownRef}>
+      {/* Trigger button with desktop colors */}
       <button
         onClick={toggleDropdown}
         className={`w-full flex items-center justify-between p-5 rounded-2xl
@@ -52,7 +69,6 @@ export default function ResourcesDropdownMobile({
         aria-expanded={isOpen}
       >
         <div className="flex items-center gap-4">
-          {/* Bright Icon */}
           <div
             className={`p-3.5 rounded-2xl ${
               emergency
@@ -89,10 +105,10 @@ export default function ResourcesDropdownMobile({
         />
       </button>
 
-      {/* VIBRANT DROPDOWN */}
+      {/* Dropdown with desktop color scheme */}
       {isOpen && (
         <div className="mt-3 bg-white rounded-2xl shadow-2xl border-2 border-gray-300 overflow-hidden">
-          {/* Bright Header */}
+          {/* Header with desktop gradient */}
           <div
             className={`px-5 py-4 ${
               emergency
@@ -108,7 +124,7 @@ export default function ResourcesDropdownMobile({
             </div>
           </div>
 
-          {/* Colorful Links */}
+          {/* Links with desktop color styling */}
           <div className="p-4 space-y-3">
             {resourceLinks.map((link) => (
               <Link
@@ -120,7 +136,7 @@ export default function ResourcesDropdownMobile({
                   hover:shadow-lg transition-all duration-200 
                   hover:translate-x-1 active:bg-blue-50 group"
               >
-                {/* Colored Icon */}
+                {/* Icon with desktop gradient */}
                 <div
                   className={`p-3.5 rounded-xl shadow-md ${
                     link.emergency
@@ -137,7 +153,6 @@ export default function ResourcesDropdownMobile({
                   </span>
                 </div>
 
-                {/* Link Text */}
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="font-bold text-gray-900 text-base truncate">
@@ -149,15 +164,20 @@ export default function ResourcesDropdownMobile({
                   </div>
                   {link.category && (
                     <span
-                      className="text-xs font-medium px-3 py-1 
-                      bg-gray-100 text-gray-700 rounded-full"
+                      className={`text-xs font-medium px-3 py-1 rounded-full
+                        ${
+                          link.emergency
+                            ? 'bg-red-100 text-red-700'
+                            : link.featured
+                              ? 'bg-yellow-100 text-yellow-700'
+                              : 'bg-gray-100 text-gray-700'
+                        }`}
                     >
                       {link.category}
                     </span>
                   )}
                 </div>
 
-                {/* Arrow */}
                 <div
                   className={`p-2 rounded-full ${
                     link.emergency

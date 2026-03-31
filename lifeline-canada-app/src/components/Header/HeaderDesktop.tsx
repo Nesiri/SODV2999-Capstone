@@ -1,23 +1,27 @@
 import NavLink from './NavLink';
 import ResourcesDropdown from './ResourcesDropdown';
 import MoreDropdown from './MoreDropdown';
-import GetInvolvedButton from './GetInvolvedButton';
+
 import {
   mainNavLinks,
   dropdownNavLinks,
   getAllResourceLinks,
   getAllPatternInterruptLinks,
 } from '../../navigation/nav';
-import MakeContributionButton from './MakeContribution';
+
 
 export default function HeaderDesktop() {
   const resourceLinks = getAllResourceLinks();
   const patternInterruptLinks = getAllPatternInterruptLinks();
 
   return (
-    <nav className="hidden lg:flex items-center w-full relative right-70">
+    <nav className="hidden lg:flex items-center w-full relative xl:mr-10">
       {/* Main nav items on left */}
-      <div className="flex items-center space-x-10 flex-1">
+      <div className={`flex items-center flex-1
+                      lg:space-x-2 xl:space-x-8 2xl:space-x-10
+                     [@media(min-width:1024px)_and_(max-width:1280px)]:space-x-0">
+                   
+                  `}>
         {mainNavLinks.map((link) => {
           if (link.hasMegaMenu) {
             if (link.name === 'Resources') {
@@ -27,7 +31,6 @@ export default function HeaderDesktop() {
                   resourceLinks={resourceLinks}
                   triggerText={link.name}
                   triggerPath={link.path} // Pass the path for navigation
-                  emergency={link.emergency}
                   icon={link.icon}
                 />
               );
@@ -38,7 +41,7 @@ export default function HeaderDesktop() {
                   resourceLinks={patternInterruptLinks}
                   triggerText={link.name}
                   triggerPath={link.path} // Pass the path for navigation
-                  emergency={link.emergency}
+            
                   icon={link.icon}
                 />
               );
@@ -52,8 +55,7 @@ export default function HeaderDesktop() {
           dropdownLinks={dropdownNavLinks}
           triggerText="More"
         />
-        <MakeContributionButton />
-        <GetInvolvedButton />
+
       </div>
     </nav>
   );

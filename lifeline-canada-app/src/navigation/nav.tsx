@@ -275,6 +275,11 @@ export const mainNavLinks = [
     path: '/app?mode=login',
     icon: React.createElement(Zap, { className: 'w-4 h-4' }),
   },
+   {
+  name: 'Companion Paws',
+  path: 'https://companionpaws.ca/',
+  icon: '🐕'
+}
 ];
 
 /* =========================
@@ -287,21 +292,27 @@ export const dropdownNavLinks = [
     path: '/about-us',
     icon: React.createElement(Users, { className: 'w-4 h-4' }),
   },
-  {
-    name: 'Companion Paws',
-    path: 'https://companionpaws.ca/',
-    icon: '🐾',
-  },
-
-  {
+   {
     name: 'Contact',
     path: '/contact-us',
     icon: '✉️', // Phone contact
   },
+     {
+    name: 'Get Involved',
+    path: '/volunteers',
+    icon: '🙋',
+  },
+
+
   {
     name: 'Email Support',
     path: '/support',
     icon: '✉️', // Email
+  },
+   {
+    name: 'Contribute',
+    path: '/contribute',
+    icon: '❤️',
   },
   {
     name: 'EN/FR',
