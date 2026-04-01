@@ -1,14 +1,28 @@
 import React from "react";
 import { Sparkles } from "lucide-react";
 
+const coverPhoto = "/assets/AdditionalResourceImages/DepressionHurts-e1686713557588.jpg";
+const EmotionalSymptoms = "/assets/AdditionalResourceImages/Group-246-800x695.png";
+const PhysicalSymptoms = "/assets/AdditionalResourceImages/Value-img-600x600.png";
+const biological = "/assets/AdditionalResourceImages/biological-200x200.png";
+const psychological = "/assets/AdditionalResourceImages/Physcological-e1686865357454-200x231.png";
+const environmental = "/assets/AdditionalResourceImages/globe-200x201.png";
+const selfTest = "/assets/AdditionalResourceImages/SelfTest-e1686708611260-600x400.jpg";
+const workouts = "/assets/AdditionalResourceImages/If-Youre-Depressed-These-Workouts-Can-Help_header-200x107.jpg";
+const happinessAndDepression = "/assets/AdditionalResourceImages/depression-happiness-e1686705314881-200x110.jpg";
+const loveLearnings = "/assets/AdditionalResourceImages/LoveLearnings-e1686707571846-200x218.jpg";
+const alcoholAwareness = "/assets/AdditionalResourceImages/Alcohol-Suicide-200x126.jpg";
+const beyondBlue = "/assets/AdditionalResourceImages/BeyondBlue-200x113.jpg";
+const depressionHurts = "/assets/AdditionalResourceImages/DepressionHurts-e1686713557588.jpg";
+const headsUpGuys = "/assets/AdditionalResourceImages/HeadsUpGuys-200x106.jpg";
+const depressionAndYoungPeople = "/assets/AdditionalResourceImages/YoungPeopleDepression.png";
+const interpretScore = "/assets/AdditionalResourceImages/Image-2-600x370.png";
+
+
 const MentalHealthResourcesDepression: React.FC = () => {
     return (
         <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-12">
             <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-                <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm border border-purple-100">
-                    <Sparkles className="w-4 h-4 text-purple-600" />
-                    <span className="text-xs sm:text-sm font-medium text-purple-700">Mental Health Support</span>
-                </div>
 
                 <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
                     <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
@@ -16,7 +30,8 @@ const MentalHealthResourcesDepression: React.FC = () => {
                     </span>
                 </h1>
 
-                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex gap-6 items-start">
+                    <div className="flex-1">
                     <p className="leading-relaxed">
                         Depression is a mental state of low mood and aversion to activity. It affects more than 3.5% of the global population. Depression affects a person’s thoughts, behavior, feelings, and sense of well-being.
                     </p>
@@ -28,6 +43,12 @@ const MentalHealthResourcesDepression: React.FC = () => {
                     <p className="mt-4 leading-relaxed">
                         Although it may feel like a never ending, self-sustaining, big, dark hole sometimes, have faith that you can break free from depression.
                     </p>
+                    </div>
+                    <img
+                        src={coverPhoto}
+                        alt="Depression support"
+                        className="w-56 h-full object-cover rounded-lg shrink-0 self-stretch"
+                    />
                 </main>
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
@@ -37,6 +58,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
 
                     <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={EmotionalSymptoms} alt="Emotional Symptoms" className="w-full h-40 object-contain rounded-lg mb-4" />
                             <h3 className="text-xl font-semibold text-purple-700">Emotional Symptoms</h3>
                             <ul className="list-disc ml-6 mt-3 space-y-2 text-base text-gray-700">
                                 <li>Feeling sad, empty, hopeless, or numb</li>
@@ -49,6 +71,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={PhysicalSymptoms} alt="Physical Symptoms" className="w-full h-40 object-contain rounded-lg mb-4" />
                             <h3 className="text-xl font-semibold text-purple-700">Physical Symptoms</h3>
                             <ul className="list-disc ml-6 mt-3 space-y-2 text-base text-gray-700">
                                 <li>Low energy and feeling tired all the time</li>
@@ -69,6 +92,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
 
                     <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5">
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={biological} alt="Biological" className="w-full h-24 object-contain rounded-lg mb-4" />
                             <h3 className="text-xl font-semibold text-purple-700">Biological</h3>
                             <p className="mt-3 leading-relaxed">There are many possible causes of depression, including:</p>
                             <ul className="list-disc ml-6 mt-3 space-y-2 text-base text-gray-700">
@@ -82,6 +106,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={psychological} alt="Psychological" className="w-full h-24 object-contain rounded-lg mb-4" />
                             <h3 className="text-xl font-semibold text-purple-700">Psychological</h3>
                             <p className="mt-3 leading-relaxed">
                                 Individuals are affected by outside events differently. One’s thoughts determine how they will experience life, and can affect whether or not they become depressed. Some Psychological Factors include:
@@ -105,6 +130,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={environmental} alt="Environmental" className="w-full h-24 object-contain rounded-lg mb-4" />
                             <h3 className="text-xl font-semibold text-purple-700">Environmental</h3>
                             <p className="mt-3 leading-relaxed">
                                 Depression can often be triggered by very stressful life situations such as:
@@ -129,112 +155,139 @@ const MentalHealthResourcesDepression: React.FC = () => {
                     </h2>
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <a
-                                href="https://www.cnvdetox.com/depression-self-test/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
-                            >
-                                Depression Self Test
-                            </a>
-                            <p className="mt-2 leading-relaxed">Take the free Self Test for Depression using CNV Detox a LA based Medically Supervised Drug and Alcohol Detox &amp; Residential Rehab</p>
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex gap-4 items-start">
+                            <img src={selfTest} alt="Depression Self Test" className="w-32 h-auto object-contain rounded-lg shrink-0" />
+                            <div className="flex-1">
+                                <a
+                                    href="https://www.cnvdetox.com/depression-self-test/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                                >
+                                    Depression Self Test
+                                </a>
+                                <p className="mt-2 leading-relaxed">Take the free Self Test for Depression using CNV Detox a LA based Medically Supervised Drug and Alcohol Detox &amp; Residential Rehab</p>
+                            </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <a
-                                href="https://daveasprey.com/benefits-exercise-depression/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
-                            >
-                                Depressed? These Workouts Can Help
-                            </a>
-                            <p className="mt-2 leading-relaxed">Exercise supports brain health, hormonal function, self-esteem and improves mood which is why it’s an important part of any positive mental health self-care routine.</p>
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex gap-4 items-start">
+                            <img src={workouts} alt="Depressed? These Workouts Can Help" className="w-32 h-auto object-contain rounded-lg shrink-0" />
+                            <div className="flex-1">
+                                <a
+                                    href="https://daveasprey.com/benefits-exercise-depression/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                                >
+                                    Depressed? These Workouts Can Help
+                                </a>
+                                <p className="mt-2 leading-relaxed">Exercise supports brain health, hormonal function, self-esteem and improves mood which is why it's an important part of any positive mental health self-care routine.</p>
+                            </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <a
-                                href="https://www.healthyplace.com/blogs/survivingmentalhealthstigma/2016/06/happiness-and-depression-its-possible-to-feel-both"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
-                            >
-                                Happiness and Depression: It’s Possible to Feel Both
-                            </a>
-                            <p className="mt-2 leading-relaxed">Canadian Author Laura A. Barton’s blog on healthyplace.com. A good article on the contradiction.</p>
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex gap-4 items-start">
+                            <img src={happinessAndDepression} alt="Happiness and Depression" className="w-32 h-auto object-contain rounded-lg shrink-0" />
+                            <div className="flex-1">
+                                <a
+                                    href="https://www.healthyplace.com/blogs/survivingmentalhealthstigma/2016/06/happiness-and-depression-its-possible-to-feel-both"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                                >
+                                    Happiness and Depression: It's Possible to Feel Both
+                                </a>
+                                <p className="mt-2 leading-relaxed">Canadian Author Laura A. Barton's blog on healthyplace.com. A good article on the contradiction.</p>
+                            </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <a
-                                href="https://www.lovelearnings.com/health/depression-suicide"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
-                            >
-                                Love Learnings
-                            </a>
-                            <p className="mt-2 leading-relaxed">“What to do if You’re Depressed or Have Suicidal Thoughts” By Love Learnings contributor and Clinical Psychologist Carolina Estevez Psy.D.</p>
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex gap-4 items-start">
+                            <img src={loveLearnings} alt="Love Learnings" className="w-32 h-auto object-contain rounded-lg shrink-0" />
+                            <div className="flex-1">
+                                <a
+                                    href="https://www.lovelearnings.com/health/depression-suicide"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                                >
+                                    Love Learnings
+                                </a>
+                                <p className="mt-2 leading-relaxed">"What to do if You're Depressed or Have Suicidal Thoughts" By Love Learnings contributor and Clinical Psychologist Carolina Estevez Psy.D.</p>
+                            </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <a
-                                href="https://alcoholawareness.org"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
-                            >
-                                Alcohol and Suicide
-                            </a>
-                            <p className="mt-2 leading-relaxed">When things get tough and when it’s hard to cope, it can be easy to turn to alcohol and drugs to soothe or numb the pain.</p>
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex gap-4 items-start">
+                            <img src={alcoholAwareness} alt="Alcohol and Suicide" className="w-32 h-auto object-contain rounded-lg shrink-0" />
+                            <div className="flex-1">
+                                <a
+                                    href="https://alcoholawareness.org"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                                >
+                                    Alcohol and Suicide
+                                </a>
+                                <p className="mt-2 leading-relaxed">When things get tough and when it's hard to cope, it can be easy to turn to alcohol and drugs to soothe or numb the pain.</p>
+                            </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <a
-                                href="https://www.beyondblue.org.au"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
-                            >
-                                Beyond Blue
-                            </a>
-                            <p className="mt-2 leading-relaxed">Discover this Australian resource for people who are suffering from depression, bipolar and postpartum depression, and anxiety-related illness.</p>
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex gap-4 items-start">
+                            <img src={beyondBlue} alt="Beyond Blue" className="w-32 h-auto object-contain rounded-lg shrink-0" />
+                            <div className="flex-1">
+                                <a
+                                    href="https://www.beyondblue.org.au"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                                >
+                                    Beyond Blue
+                                </a>
+                                <p className="mt-2 leading-relaxed">Discover this Australian resource for people who are suffering from depression, bipolar and postpartum depression, and anxiety-related illness.</p>
+                            </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <a
-                                href="https://depressionhurts.ca/en/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
-                            >
-                                Depression Hurts
-                            </a>
-                            <p className="mt-2 leading-relaxed">Discover this resource that offers guides relating to depression. See the Symptom Checklist our Journey to Improvement and more.</p>
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex gap-4 items-start">
+                            <img src={depressionHurts} alt="Depression Hurts" className="w-32 h-auto object-contain rounded-lg shrink-0" />
+                            <div className="flex-1">
+                                <a
+                                    href="https://depressionhurts.ca/en/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                                >
+                                    Depression Hurts
+                                </a>
+                                <p className="mt-2 leading-relaxed">Discover this resource that offers guides relating to depression. See the Symptom Checklist our Journey to Improvement and more.</p>
+                            </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <a
-                                href="https://headsupguys.org"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
-                            >
-                                HeadsUpGuys
-                            </a>
-                            <p className="mt-2 leading-relaxed">UBC initiative with resources, services, and programs to improve the mental health and well-being of Men. Info on symptoms, triggers, risk factors and more.</p>
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex gap-4 items-start">
+                            <img src={headsUpGuys} alt="HeadsUpGuys" className="w-32 h-auto object-contain rounded-lg shrink-0" />
+                            <div className="flex-1">
+                                <a
+                                    href="https://headsupguys.org"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                                >
+                                    HeadsUpGuys
+                                </a>
+                                <p className="mt-2 leading-relaxed">UBC initiative with resources, services, and programs to improve the mental health and well-being of Men. Info on symptoms, triggers, risk factors and more.</p>
+                            </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <a
-                                href="https://pymhws.org.au/young-people/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
-                            >
-                                Depression &amp; Young People
-                            </a>
-                            <p className="mt-2 leading-relaxed">Australian published quick read by Orygen Youth Health with information regarding the differences between Major Depression, Dysthymia and Bipolar disorder. 2 Page PDF download.</p>
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex gap-4 items-start">
+                            <img src={depressionAndYoungPeople} alt="Depression & Young People" className="w-32 h-auto object-contain rounded-lg shrink-0" />
+                            <div className="flex-1">
+                                <a
+                                    href="https://pymhws.org.au/young-people/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                                >
+                                    Depression &amp; Young People
+                                </a>
+                                <p className="mt-2 leading-relaxed">Australian published quick read by Orygen Youth Health with information regarding the differences between Major Depression, Dysthymia and Bipolar disorder. 2 Page PDF download.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -259,19 +312,22 @@ const MentalHealthResourcesDepression: React.FC = () => {
                             </ul>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <h3 className="text-xl font-semibold text-purple-700">Over the past 2 weeks, how often have you experienced or been bothered by any of the following:</h3>
-                            <ol className="list-decimal ml-6 mt-3 space-y-2 text-base text-gray-700">
-                                <li>Little interest or pleasure in doing things</li>
-                                <li>Feeling down, depressed or hopeless</li>
-                                <li>Trouble falling asleep, staying asleep, or sleeping too much</li>
-                                <li>Feeling tired or having little energy</li>
-                                <li>Poor appetite or overeating</li>
-                                <li>Feeling bad about yourself, feeling that you are a failure, or feeling that you have let yourself or a loved one down</li>
-                                <li>Trouble concentrating on things such as reading or watching television</li>
-                                <li>Moving or speaking so slowly that other people notice, or being more fidgety or restless than usual</li>
-                                <li>Thinking that you would be better off dead or that you want to hurt yourself in some way</li>
-                            </ol>
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex gap-4 items-start">
+                            <div className="flex-1">
+                                <h3 className="text-xl font-semibold text-purple-700">Over the past 2 weeks, how often have you experienced or been bothered by any of the following:</h3>
+                                <ol className="list-decimal ml-6 mt-3 space-y-2 text-base text-gray-700">
+                                    <li>Little interest or pleasure in doing things</li>
+                                    <li>Feeling down, depressed or hopeless</li>
+                                    <li>Trouble falling asleep, staying asleep, or sleeping too much</li>
+                                    <li>Feeling tired or having little energy</li>
+                                    <li>Poor appetite or overeating</li>
+                                    <li>Feeling bad about yourself, feeling that you are a failure, or feeling that you have let yourself or a loved one down</li>
+                                    <li>Trouble concentrating on things such as reading or watching television</li>
+                                    <li>Moving or speaking so slowly that other people notice, or being more fidgety or restless than usual</li>
+                                    <li>Thinking that you would be better off dead or that you want to hurt yourself in some way</li>
+                                </ol>
+                            </div>
+                            <img src={selfTest} alt="Depression Self Test" className="w-48 h-auto object-contain rounded-lg shrink-0" />
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
@@ -284,14 +340,17 @@ const MentalHealthResourcesDepression: React.FC = () => {
                             </ul>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <h3 className="text-xl font-semibold text-purple-700">Interpreting Scores</h3>
-                            <h4 className="mt-3 text-lg font-semibold text-gray-900">How to know if you may need help:</h4>
-                            <ul className="list-disc ml-6 mt-3 space-y-2 text-base text-gray-700">
-                                <li>4 or Less: May be experiencing tough times but may not need professional treatment.</li>
-                                <li>5 to 14: Should consider speaking with a professional, your doctor, a counselor at school or work, therapist, or other mental health specialist.</li>
-                                <li>15 or More: May be experiencing clinical depression and likely would benefit from a thorough check up and possibly antidepressant medication and therapy.</li>
-                            </ul>
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex gap-4 items-start">
+                            <div className="flex-1">
+                                <h3 className="text-xl font-semibold text-purple-700">Interpreting Scores</h3>
+                                <h4 className="mt-3 text-lg font-semibold text-gray-900">How to know if you may need help:</h4>
+                                <ul className="list-disc ml-6 mt-3 space-y-2 text-base text-gray-700">
+                                    <li>4 or Less: May be experiencing tough times but may not need professional treatment.</li>
+                                    <li>5 to 14: Should consider speaking with a professional, your doctor, a counselor at school or work, therapist, or other mental health specialist.</li>
+                                    <li>15 or More: May be experiencing clinical depression and likely would benefit from a thorough check up and possibly antidepressant medication and therapy.</li>
+                                </ul>
+                            </div>
+                            <img src={interpretScore} alt="Interpreting Scores" className="w-48 h-auto object-contain rounded-lg shrink-0" />
                         </div>
                     </div>
                 </div>

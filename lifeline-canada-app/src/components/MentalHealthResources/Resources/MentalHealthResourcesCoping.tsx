@@ -23,9 +23,6 @@ const MentalHealthResourcesCoping: React.FC = () => {
     return (
         <section className="w-full bg-slate-50">
             <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-                <div className="inline-flex rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold tracking-wide text-slate-600 sm:text-sm">
-                    Coping Resources
-                </div>
 
                 <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
                     <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
@@ -33,21 +30,15 @@ const MentalHealthResourcesCoping: React.FC = () => {
                     </span>
                 </h1>
 
-                <p className="mt-4 max-w-3xl leading-relaxed text-slate-700">
-                    This page is organized to help you move one step at a time. Start with immediate safety, then continue through practical coping tools and longer-term support options.
-                </p>
-
                 <div className="mt-8">
                     <div className={sectionClassName}>
                         <div className="grid grid-cols-1 gap-4 lg:grid-cols-[3fr_2fr] lg:items-stretch">
                             <div>
-                                <h2 className="text-xl font-semibold text-purple-700">Start Here</h2>
-                                <ol className="mt-3 list-decimal space-y-2 pl-5 text-slate-700">
-                                    <li>If you are in immediate danger, call 911 or go to the nearest emergency room.</li>
-                                    <li>If you can, reach out to someone you trust and stay connected.</li>
-                                    <li>Use the Safety Plan section below for clear next steps.</li>
-                                    <li>Review one section at a time at your own pace.</li>
-                                </ol>
+                                <p className="leading-relaxed text-slate-700">
+                                    Suicidal thoughts can happen when feelings of hopelessness, isolation and despair become too heavy to bear. You might feel so overwhelmed with pain that suicide seems like the only way to release yourself from the burden you've been carrying. You should know that there is help available to deal with your feelings. Contacting a mental health professional can help you heal and experience joy and happiness again, no matter how impossible it seems right now.
+                                </p>
+
+                                <hr className="my-4 border-slate-200" />
 
                                 <a
                                     href={copingPdf}
@@ -89,14 +80,6 @@ const MentalHealthResourcesCoping: React.FC = () => {
                         </summary>
                         <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[3fr_2fr] lg:items-stretch text-slate-700">
                             <div className="space-y-3">
-                                <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                                    <p className="text-sm font-semibold uppercase tracking-wide text-slate-600">Main points</p>
-                                    <ul className="mt-2 list-disc space-y-1 pl-5 leading-relaxed">
-                                        <li>You are not alone, and these thoughts can pass.</li>
-                                        <li>Having suicidal thoughts does not mean you are weak or out of control.</li>
-                                        <li>Immediate help is available right now.</li>
-                                    </ul>
-                                </div>
                                 <p className="font-medium text-purple-700">What to do right now</p>
                                 <ul className="list-disc space-y-2 pl-5 leading-relaxed">
                                     <li><strong>Tell someone immediately:</strong> Ask a trusted person to stay with you.</li>
@@ -121,14 +104,6 @@ const MentalHealthResourcesCoping: React.FC = () => {
                         <summary className="cursor-pointer text-lg font-semibold text-purple-700">Safety Plan</summary>
                         <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[3fr_2fr] lg:items-stretch text-slate-700">
                             <div className="space-y-3">
-                                <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                                    <p className="text-sm font-semibold uppercase tracking-wide text-slate-600">Main points</p>
-                                    <ul className="mt-2 list-disc space-y-1 pl-5 leading-relaxed">
-                                        <li>Start at step 1 and continue until you feel safe.</li>
-                                        <li>Keep this plan where you can find it quickly.</li>
-                                        <li>If steps do not help, call 911 or go to emergency.</li>
-                                    </ul>
-                                </div>
                                 <ol className="list-decimal space-y-2 pl-5 leading-relaxed">
                                     <li>Remind myself of my reasons for living</li>
                                     <li>Call a friend or family member</li>
@@ -155,14 +130,6 @@ const MentalHealthResourcesCoping: React.FC = () => {
                     <details className={sectionClassName}>
                         <summary className="cursor-pointer text-lg font-semibold text-purple-700">What else can I do to decrease thoughts of suicide?</summary>
                         <div className="mt-4 space-y-4 text-slate-700">
-                            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                                <p className="text-sm font-semibold uppercase tracking-wide text-slate-600">Main points</p>
-                                <ul className="mt-2 list-disc space-y-1 pl-5 leading-relaxed">
-                                    <li>Solve one small problem at a time.</li>
-                                    <li>Reconnect with reasons to live and people who help.</li>
-                                    <li>Use support: professional care, routines, and safe coping habits.</li>
-                                </ul>
-                            </div>
                             <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                                 <div>
                                     <h3 className="font-semibold text-purple-700">Problem Solve</h3>
@@ -222,13 +189,6 @@ const MentalHealthResourcesCoping: React.FC = () => {
 
                     <details className={sectionClassName}>
                         <summary className="cursor-pointer text-lg font-semibold text-purple-700">Some common problems and solution ideas</summary>
-                        <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4 text-slate-700">
-                            <p className="text-sm font-semibold uppercase tracking-wide text-slate-600">Main points</p>
-                            <ul className="mt-2 list-disc space-y-1 pl-5 leading-relaxed">
-                                <li>Ask for support early when a major stressor starts.</li>
-                                <li>Use both emotional support and practical care (sleep, meals, movement).</li>
-                            </ul>
-                        </div>
                         <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
                             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                                 <h3 className="font-semibold text-purple-700">Problem: Depressed Mood</h3>
@@ -254,14 +214,6 @@ const MentalHealthResourcesCoping: React.FC = () => {
                     <details className={sectionClassName}>
                         <summary className="cursor-pointer text-lg font-semibold text-purple-700">How can I decrease chances that I will feel suicidal in the future?</summary>
                         <div className="mt-4 space-y-4 text-slate-700">
-                            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                                <p className="text-sm font-semibold uppercase tracking-wide text-slate-600">Main points</p>
-                                <ul className="mt-2 list-disc space-y-1 pl-5 leading-relaxed">
-                                    <li>Build regular support from professionals and trusted people.</li>
-                                    <li>Reduce triggers and keep daily structure.</li>
-                                    <li>Protect sleep, nutrition, activity, and medication routines.</li>
-                                </ul>
-                            </div>
                             <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                                 <div>
                                     <h3 className="font-semibold text-purple-700">Get Professional Support</h3>
