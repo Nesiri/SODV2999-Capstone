@@ -1,5 +1,17 @@
 import React from "react";
 
+const coverPhoto = "/assets/AdditionalResourceImages/christina-wocintechchat-com-UTw3j_aoIKM-unsplash-1-600x379.png";
+const counselling = "/assets/AdditionalResourceImages/Counselling.jpg";
+const notCounselling = "/assets/AdditionalResourceImages/counselling2-600x400.jpg";
+const talkspace = "/assets/AdditionalResourceImages/Talkspace.png";
+const sevenCups = "/assets/AdditionalResourceImages/7cups.png";
+const wellin5 = "/assets/AdditionalResourceImages/Wellin5.png";
+const betterHelp = "/assets/AdditionalResourceImages/BetterHelp.png";
+const accessCBT = "/assets/AdditionalResourceImages/AccessCBT.png";
+const counsellingGroup = "/assets/AdditionalResourceImages/CounsellingGroup.png";
+const blahTherapy = "/assets/AdditionalResourceImages/BlahTherapy.png";
+const breakingFreeOnline = "/assets/AdditionalResourceImages/BreakingFreeOnline.png";
+
 const MentalHealthResourcesECounselling: React.FC = () => {
     return (
         <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-12">
@@ -11,13 +23,23 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                         </span>
                     </h1>
 
-                    <p className="mt-4 text-base text-gray-700 leading-relaxed">
-                        The role of the counselor is to enable the client to explore many aspects of their life and feelings, by talking openly and freely. Talking in such a way it is rarely possible with family or friends, who are likely to be emotionally involved and have opinions and biases that may be detrimental to the success of the counseling.
-                    </p>
+                    <div className="mt-4 flex flex-col sm:flex-row items-center gap-6">
+                        <div className="flex-1">
+                            <p className="text-base text-gray-700 leading-relaxed">
+                                The role of the counselor is to enable the client to explore many aspects of their life and feelings, by talking openly and freely. Talking in such a way it is rarely possible with family or friends, who are likely to be emotionally involved and have opinions and biases that may be detrimental to the success of the counseling.
+                            </p>
 
-                    <p className="mt-4 text-base text-gray-700 leading-relaxed">
-                        It is important that the counselor is not emotionally involved with the client and does not become so during counselling sessions. The counsellor neither judges, nor offers advice. The counselor gives the client an opportunity to express difficult feelings such as anger, resentment, guilt and fear in a confidential environment.
-                    </p>
+                            <p className="mt-4 text-base text-gray-700 leading-relaxed">
+                                It is important that the counselor is not emotionally involved with the client and does not become so during counselling sessions. The counsellor neither judges, nor offers advice. The counselor gives the client an opportunity to express difficult feelings such as anger, resentment, guilt and fear in a confidential environment.
+                            </p>
+                        </div>
+
+                        <img
+                            src={coverPhoto}
+                            alt="E-Counselling"
+                            className="w-full sm:w-64 flex-shrink-0 rounded-xl shadow-md object-cover"
+                        />
+                    </div>
                 </div>
 
                 <div className="mt-6 bg-white/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-white/50">
@@ -25,6 +47,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
 
                     <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="bg-green-50 p-5 rounded-lg border border-green-200">
+                            <img src={counselling} alt="Counselling Is" className="w-full h-40 object-cover rounded-lg mb-4" />
                             <h3 className="text-xl font-semibold text-purple-700">Counselling Is:</h3>
                             <ul className="list-disc ml-6 mt-3 space-y-2 text-base text-gray-700 leading-relaxed">
                                 <li>The process that occurs when you and a counselor set aside time in order to explore difficulties which may include one’s stressful or emotional feelings.</li>
@@ -34,6 +57,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                         </div>
 
                         <div className="bg-red-50 p-5 rounded-lg border border-red-200">
+                            <img src={notCounselling} alt="Counselling Is Not" className="w-full h-40 object-cover rounded-lg mb-4" />
                             <h3 className="text-xl font-semibold text-purple-700">Counselling Is Not:</h3>
                             <ul className="list-disc ml-6 mt-3 space-y-2 text-base text-gray-700 leading-relaxed">
                                 <li>Getting advice</li>
@@ -56,76 +80,100 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                     <h2 className="text-2xl font-bold text-gray-900">E-Counselling Resources</h2>
 
                     <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                            <h3 className="text-xl font-semibold text-purple-700">
-                                <a href="https://www.talkspace.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-purple-800 transition-colors">Talkspace</a>
-                            </h3>
-                            <p className="mt-2 text-base text-gray-700 leading-relaxed">
-                                Depending on your therapy goals, your Talkspace therapist will help you process thoughts and feelings, understand your motivations, develop coping strategies, and more. You’ll connect through live sessions, ongoing messaging, or both.
-                            </p>
+                        <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
+                            <img src={talkspace} alt="Talkspace" className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain" />
+                            <div>
+                                <h3 className="text-xl font-semibold text-purple-700">
+                                    <a href="https://www.talkspace.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-purple-800 transition-colors">Talkspace</a>
+                                </h3>
+                                <p className="mt-2 text-base text-gray-700 leading-relaxed">
+                                    Depending on your therapy goals, your Talkspace therapist will help you process thoughts and feelings, understand your motivations, develop coping strategies, and more. You'll connect through live sessions, ongoing messaging, or both.
+                                </p>
+                            </div>
                         </div>
 
-                        <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                            <h3 className="text-xl font-semibold text-purple-700">
-                                <a href="https://www.7cups.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-purple-800 transition-colors">7 Cups</a>
-                            </h3>
-                            <p className="mt-2 text-base text-gray-700 leading-relaxed">
-                                Connect with caring people for online therapy & counseling. Free, anonymous and confidential online text chat with trained listeners, online therapists & counselors.
-                            </p>
+                        <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
+                            <img src={sevenCups} alt="7 Cups" className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain" />
+                            <div>
+                                <h3 className="text-xl font-semibold text-purple-700">
+                                    <a href="https://www.7cups.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-purple-800 transition-colors">7 Cups</a>
+                                </h3>
+                                <p className="mt-2 text-base text-gray-700 leading-relaxed">
+                                    Connect with caring people for online therapy & counseling. Free, anonymous and confidential online text chat with trained listeners, online therapists & counselors.
+                                </p>
+                            </div>
                         </div>
 
-                        <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                            <h3 className="text-xl font-semibold text-purple-700">
-                                <a href="https://wellin5.ca" target="_blank" rel="noopener noreferrer" className="underline hover:text-purple-800 transition-colors">Wellin5</a>
-                            </h3>
-                            <p className="mt-2 text-base text-gray-700 leading-relaxed">
-                                BC-based online counselling platform which provides affordable, accessible video counselling via our Canada-wide counselling network. Helping Canadians connect with highly qualified, masters-level counselling.
-                            </p>
+                        <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
+                            <img src={wellin5} alt="Wellin5" className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain" />
+                            <div>
+                                <h3 className="text-xl font-semibold text-purple-700">
+                                    <a href="https://wellin5.ca" target="_blank" rel="noopener noreferrer" className="underline hover:text-purple-800 transition-colors">Wellin5</a>
+                                </h3>
+                                <p className="mt-2 text-base text-gray-700 leading-relaxed">
+                                    BC-based online counselling platform which provides affordable, accessible video counselling via our Canada-wide counselling network. Helping Canadians connect with highly qualified, masters-level counselling.
+                                </p>
+                            </div>
                         </div>
 
-                        <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                            <h3 className="text-xl font-semibold text-purple-700">
-                                <a href="https://www.betterhelp.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-purple-800 transition-colors">BetterHelp</a>
-                            </h3>
-                            <p className="mt-2 text-base text-gray-700 leading-relaxed">
-                                BetterHelp will match you to one of 2,000 licensed therapists. All counselors are licensed, accredited professionals. Anything you share is confidential.
-                            </p>
+                        <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
+                            <img src={betterHelp} alt="BetterHelp" className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain" />
+                            <div>
+                                <h3 className="text-xl font-semibold text-purple-700">
+                                    <a href="https://www.betterhelp.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-purple-800 transition-colors">BetterHelp</a>
+                                </h3>
+                                <p className="mt-2 text-base text-gray-700 leading-relaxed">
+                                    BetterHelp will match you to one of 2,000 licensed therapists. All counselors are licensed, accredited professionals. Anything you share is confidential.
+                                </p>
+                            </div>
                         </div>
 
-                        <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                            <h3 className="text-xl font-semibold text-purple-700">
-                                <a href="https://www.accesscbt.co.uk" target="_blank" rel="noopener noreferrer" className="underline hover:text-purple-800 transition-colors">Access CBT</a>
-                            </h3>
-                            <p className="mt-2 text-base text-gray-700 leading-relaxed">
-                                Provides Cognitive Behavioural Therapy (CBT) and Eye movement desensitization reprocessing (EMDR) in clinics in Liverpool and online from anywhere in the world.
-                            </p>
+                        <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
+                            <img src={accessCBT} alt="Access CBT" className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain" />
+                            <div>
+                                <h3 className="text-xl font-semibold text-purple-700">
+                                    <a href="https://www.accesscbt.co.uk" target="_blank" rel="noopener noreferrer" className="underline hover:text-purple-800 transition-colors">Access CBT</a>
+                                </h3>
+                                <p className="mt-2 text-base text-gray-700 leading-relaxed">
+                                    Provides Cognitive Behavioural Therapy (CBT) and Eye movement desensitization reprocessing (EMDR) in clinics in Liverpool and online from anywhere in the world.
+                                </p>
+                            </div>
                         </div>
 
-                        <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                            <h3 className="text-xl font-semibold text-purple-700">
-                                <a href="https://thecounsellinggroup.com/e-counselling/" target="_blank" rel="noopener noreferrer" className="underline hover:text-purple-800 transition-colors">Counselling Group</a>
-                            </h3>
-                            <p className="mt-2 text-base text-gray-700 leading-relaxed">
-                                Online counselling provided by Registered Social Workers & Psychotherapists that have specialized training to provide online counselling using a secure & confidential email platform designed for online counselling.
-                            </p>
+                        <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
+                            <img src={counsellingGroup} alt="Counselling Group" className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain" />
+                            <div>
+                                <h3 className="text-xl font-semibold text-purple-700">
+                                    <a href="https://thecounsellinggroup.com/e-counselling/" target="_blank" rel="noopener noreferrer" className="underline hover:text-purple-800 transition-colors">Counselling Group</a>
+                                </h3>
+                                <p className="mt-2 text-base text-gray-700 leading-relaxed">
+                                    Online counselling provided by Registered Social Workers & Psychotherapists that have specialized training to provide online counselling using a secure & confidential email platform designed for online counselling.
+                                </p>
+                            </div>
                         </div>
 
-                        <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                            <h3 className="text-xl font-semibold text-purple-700">
-                                <a href="https://blahtherapy.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-purple-800 transition-colors">BlahTherapy</a>
-                            </h3>
-                            <p className="mt-2 text-base text-gray-700 leading-relaxed">
-                                BlahTherapy connects you with caring people around the world who are willing to talk to you about your problems, as well as sharing their own. Talking through our emotional, psychological, or mental issues is one of the best methods of releasing our anger, stress, depression or pain. Sharing and connecting with other strangers who are going through a struggles just like you provides great consolation to anyone in need of healing or a friend.
-                            </p>
+                        <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
+                            <img src={blahTherapy} alt="BlahTherapy" className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain" />
+                            <div>
+                                <h3 className="text-xl font-semibold text-purple-700">
+                                    <a href="https://blahtherapy.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-purple-800 transition-colors">BlahTherapy</a>
+                                </h3>
+                                <p className="mt-2 text-base text-gray-700 leading-relaxed">
+                                    BlahTherapy connects you with caring people around the world who are willing to talk to you about your problems, as well as sharing their own. Talking through our emotional, psychological, or mental issues is one of the best methods of releasing our anger, stress, depression or pain. Sharing and connecting with other strangers who are going through a struggles just like you provides great consolation to anyone in need of healing or a friend.
+                                </p>
+                            </div>
                         </div>
 
-                        <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                            <h3 className="text-xl font-semibold text-purple-700">
-                                <a href="https://www.breakingfreeonline.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-purple-800 transition-colors">Breaking Free Online</a>
-                            </h3>
-                            <p className="mt-2 text-base text-gray-700 leading-relaxed">
-                                Breaking Free Online, the award-winning treatment and recovery programme for alcohol and drugs. As a global health and wellbeing provider encompassing physical, mental and financial health, our team of thousands of team members globally is dedicated to solving the most pressing issues facing citizens, healthcare professionals, employers, and employees around the world.
-                            </p>
+                        <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
+                            <img src={breakingFreeOnline} alt="Breaking Free Online" className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain" />
+                            <div>
+                                <h3 className="text-xl font-semibold text-purple-700">
+                                    <a href="https://www.breakingfreeonline.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-purple-800 transition-colors">Breaking Free Online</a>
+                                </h3>
+                                <p className="mt-2 text-base text-gray-700 leading-relaxed">
+                                    Breaking Free Online, the award-winning treatment and recovery programme for alcohol and drugs. As a global health and wellbeing provider encompassing physical, mental and financial health, our team of thousands of team members globally is dedicated to solving the most pressing issues facing citizens, healthcare professionals, employers, and employees around the world.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
