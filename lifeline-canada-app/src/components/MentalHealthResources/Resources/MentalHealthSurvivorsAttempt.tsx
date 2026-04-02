@@ -4,14 +4,20 @@ const CASPpdf = "/pdfs/CASP-After-Suicide-Attempt-12-1575.pdf";
 const SAMHSApdf = "/pdfs/HandbookForRecoveryAfterAttemptSAMHSA.pdf";
 const ActionAlliancepdf = "/pdfs/The-Way-Forward-Final-2014-07-01.pdf";
 
+const coverPhoto = '/assets/AdditionalResourceImages/attempt-survivors-600x401.jpg';
+const shortTerm = '/assets/AdditionalResourceImages/long-term-crises-800x448.jpg';
+const letThemTalk = '/assets/AdditionalResourceImages/Copingwithconversationsintheworkplacewhereapersonisincrisis-600x400.jpg';
+const lifestyleChanges = '/assets/AdditionalResourceImages/2-600x600.png';
+const beAlert = '/assets/AdditionalResourceImages/warning-Signs-600x600.jpg';
+const forSurvivors = '/assets/AdditionalResourceImages/YourLifeCounts.png';
+const afterASuicideAttempt = '/assets/AdditionalResourceImages/CASP.png';
+const healthAndHope = '/assets/AdditionalResourceImages/SAMHSA.png';
+const theWayForward = '/assets/AdditionalResourceImages/ActionAlliance.png';
+
 const MentalHealthSurvivorsAttempt: React.FC = () => {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-12">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm border border-purple-100">
-          <Sparkles className="w-4 h-4 text-purple-600" />
-          <span className="text-xs sm:text-sm font-medium text-purple-700">Mental Health Support</span>
-        </div>
 
         <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
           <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
@@ -19,19 +25,28 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
           </span>
         </h1>
 
-        <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
-          <p className="leading-relaxed">
-            Suicidal behaviour can be very distressing for both the person at risk and those who care about them. It is
-            important to remember that people not only get through these experiences, but that there can also be positive
-            changes. Crises often lead to growth, increased self-understanding and awareness, and the discovery of new and
-            more effective ways of coping.
-          </p>
-          <p className="mt-4 leading-relaxed">
-            Remember that there is help and you will get through this. You are not alone. We all have reasons to live –
-            but for all kinds of reasons we can lose contact with our reasons. The good news is there&rsquo;s always hope and
-            there&apos;s always an opportunity to reconnect with our reasons to live. Find encouragement &amp; inspiration with
-            the resources below.
-          </p>
+        <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
+          <div className="flex-1">
+            <p className="leading-relaxed">
+              Suicidal behaviour can be very distressing for both the person at risk and those who care about them. It is
+              important to remember that people not only get through these experiences, but that there can also be positive
+              changes. Crises often lead to growth, increased self-understanding and awareness, and the discovery of new and
+              more effective ways of coping.
+            </p>
+            <p className="mt-4 leading-relaxed">
+              Remember that there is help and you will get through this. You are not alone. We all have reasons to live –
+              but for all kinds of reasons we can lose contact with our reasons. The good news is there&rsquo;s always hope and
+              there&apos;s always an opportunity to reconnect with our reasons to live. Find encouragement &amp; inspiration with
+              the resources below.
+            </p>
+          </div>
+          <div className="sm:w-64 sm:flex-shrink-0 w-full">
+            <img
+              src={coverPhoto}
+              alt="Attempt Survivors"
+              className="w-full h-full object-cover rounded-lg shadow-md"
+            />
+          </div>
         </main>
 
         <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
@@ -46,7 +61,8 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
           </p>
 
           <div className="mt-6 grid grid-cols-1 gap-4 sm:gap-5">
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+              <div className="flex-1">
               <h3 className="text-xl font-semibold text-purple-700">Short-Term Planning</h3>
               <p className="mt-3 leading-relaxed">
                 The first thing to do is to ensure the person is stable. This will most likely require hospitalization,
@@ -85,9 +101,14 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
                 as recommended by the doctor in order to build up strength that&apos;s probably been depleted. Often times,
                 the suicidal person has neglected themselves to the extent that they are seriously malnourished.
               </p>
+              </div>
+              <div className="sm:w-56 sm:flex-shrink-0 w-full">
+                <img src={shortTerm} alt="Short-Term Planning" className="w-full h-auto object-cover rounded-lg shadow-md" />
+              </div>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+              <div className="flex-1">
               <h3 className="text-xl font-semibold text-purple-700">Let Them Talk</h3>
               <p className="mt-3 leading-relaxed">
                 During the time after the suicide attempt is when you want to engage the person in conversation as much
@@ -97,6 +118,10 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
                 devastated, feeling incredibly lost, ashamed, guilty, fearful of the future, and afraid, most of all,
                 that you will withdraw your love.
               </p>
+              </div>
+              <div className="sm:w-56 sm:flex-shrink-0 w-full">
+                <img src={letThemTalk} alt="Let Them Talk" className="w-full h-auto object-cover rounded-lg shadow-md" />
+              </div>
             </div>
 
             <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
@@ -116,7 +141,8 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
               </p>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+              <div className="flex-1">
               <h3 className="text-xl font-semibold text-purple-700">Make Important Lifestyle Changes</h3>
               <p className="mt-3 leading-relaxed">
                 Obviously, things can&apos;t go back to the way they were before. This often means a severe change of
@@ -152,9 +178,14 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
                 are ready, take them out to activities and events – but don&apos;t go anywhere that&apos;s too stressful. Your
                 loved one won&apos;t be ready for that for quite a while.
               </p>
+              </div>
+              <div className="sm:w-56 sm:flex-shrink-0 w-full">
+                <img src={lifestyleChanges} alt="Make Important Lifestyle Changes" className="w-full h-auto object-cover rounded-lg shadow-md" />
+              </div>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+              <div className="flex-1">
               <h3 className="text-xl font-semibold text-purple-700">Be Alert for Suicide Warning Signs</h3>
               <p className="mt-3 leading-relaxed">
                 After the suicide attempt, it doesn&apos;t mean you&apos;re home free – no matter how much your loved one tells
@@ -180,6 +211,10 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
                 <li>Acting impulsively or recklessly</li>
                 <li>Feeling excessive shame and/or guilt</li>
               </ul>
+              </div>
+              <div className="sm:w-56 sm:flex-shrink-0 w-full">
+                <img src={beAlert} alt="Be Alert for Suicide Warning Signs" className="w-full h-auto object-cover rounded-lg shadow-md" />
+              </div>
             </div>
           </div>
         </div>
@@ -250,7 +285,11 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
           </h2>
 
           <div className="mt-6 grid grid-cols-1 gap-4 sm:gap-5">
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+              <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                <img src={forSurvivors} alt="For Survivors Of An Attempt" className="w-full h-auto object-cover rounded-lg shadow-md" />
+              </div>
+              <div className="flex-1">
               <a href="https://hughumanity.org" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                 For Survivors Of An Attempt
               </a>
@@ -271,9 +310,14 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
                 something that is good to discuss with our loved ones so that the layers of protection and
                 accountability around you can be all that they need to be, if need be.
               </p>
+              </div>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+              <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                <img src={afterASuicideAttempt} alt="After A Suicide Attempt" className="w-full h-auto object-cover rounded-lg shadow-md" />
+              </div>
+              <div className="flex-1">
               <a href={CASPpdf} className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                 After A Suicide Attempt: A Guide For Family and Friends
               </a>
@@ -297,9 +341,14 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
                 compassion toward ourselves and those in distress gives us hope and builds resilience. Remember that
                 there is help and you will get through this. You are not alone.
               </p>
+              </div>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+              <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                <img src={healthAndHope} alt="A Journey Towards Health and Hope" className="w-full h-auto object-cover rounded-lg shadow-md" />
+              </div>
+              <div className="flex-1">
               <a href={SAMHSApdf} className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                 A Journey Towards Health and Hope
               </a>
@@ -314,9 +363,14 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
                 Administration Center for Mental Health Services Division of Prevention, Traumatic Stress, and Special
                 Programs Suicide Prevention Branch.
               </p>
+              </div>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+              <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                <img src={theWayForward} alt="The Way Forward" className="w-full h-auto object-cover rounded-lg shadow-md" />
+              </div>
+              <div className="flex-1">
               <a href={ActionAlliancepdf} className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                 The Way Forward: Pathways to Hope, Recovery &amp; Wellness
               </a>
@@ -327,6 +381,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
                 Action Alliance for Suicide Prevention. It is a comprehensive resource for policy makers, service
                 providers and invested community members alike.
               </p>
+              </div>
             </div>
           </div>
         </div>

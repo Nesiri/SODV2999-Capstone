@@ -1,5 +1,4 @@
 import React from "react";
-import { Sparkles } from "lucide-react";
 // PDFs (change to const)
 const HopeAndHealing = "/pdfs/HopeandHealing.pdf";
 const Klinic = "/pdfs/After-a-Suicide-A-Practical-and-Personal-Guide-for-Survivors.pdf";
@@ -8,14 +7,20 @@ const Winnipeg = "/pdfs/guide-for-early-responders.pdf";
 const CanadianVer = "/pdfs/Canada-Funeral-Directors.pdf";
 const USAVer = "/pdfs/SMA09-4375.pdf";
 
+const coverPhoto = '/assets/AdditionalResourceImages/afterSuicide-200x160.jpg';
+const bereavedSupport = '/assets/AdditionalResourceImages/emotionalSupport-600x400.jpg';
+const survivorsOfSuicideLoss = '/assets/AdditionalResourceImages/survivorsOf_hand-ribbon-200x133.jpg';
+const resourceOrganizations = '/assets/AdditionalResourceImages/organizations-200x113.jpg';
+const hopeAndHealing = '/assets/AdditionalResourceImages/SimonFraserUniversity.png';
+const practicalAndPersonalGuide = '/assets/AdditionalResourceImages/klinic-200x50.jpg';
+const toolkitForSchools = '/assets/AdditionalResourceImages/AmericanFoundationForSuicidePrevention.png';
+const earlyResponders = '/assets/AdditionalResourceImages/WinnipegSuicidePreventionNetwork.png';
+const funeralDirectors = '/assets/AdditionalResourceImages/SAMHSA.png';
+
 const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
     return (
         <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-12">
             <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-                <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm border border-purple-100">
-                    <Sparkles className="w-4 h-4 text-purple-600" />
-                    <span className="text-xs sm:text-sm font-medium text-purple-700">Mental Health Support</span>
-                </div>
 
                 <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
                     <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
@@ -23,20 +28,29 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                     </span>
                 </h1>
 
-                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
-                    <p className="leading-relaxed">
-                        Immediately after a death by suicide, there are many practical matters that families will need
-                        to attend to and questions they might have about what to do. Grief associated with a death by
-                        suicide can be complicated, and also very different to what people experience following death by
-                        other causes.
-                    </p>
+                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
+                    <div className="flex-1">
+                        <p className="leading-relaxed">
+                            Immediately after a death by suicide, there are many practical matters that families will need
+                            to attend to and questions they might have about what to do. Grief associated with a death by
+                            suicide can be complicated, and also very different to what people experience following death by
+                            other causes.
+                        </p>
 
-                    <p className="mt-4 leading-relaxed">
-                        Immediately after a death by suicide, people are often in shock and unable to describe or explain
-                        their feelings or make meaning of what has happened. You may need time before you feel ready to
-                        examine what has happened, how it has affected you, what it all means, and what you need in
-                        order to begin healing.
-                    </p>
+                        <p className="mt-4 leading-relaxed">
+                            Immediately after a death by suicide, people are often in shock and unable to describe or explain
+                            their feelings or make meaning of what has happened. You may need time before you feel ready to
+                            examine what has happened, how it has affected you, what it all means, and what you need in
+                            order to begin healing.
+                        </p>
+                    </div>
+                    <div className="sm:w-64 sm:flex-shrink-0 w-full">
+                        <img
+                            src={coverPhoto}
+                            alt="After a Suicide Loss"
+                            className="w-full h-full object-cover rounded-lg shadow-md"
+                        />
+                    </div>
                 </main>
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
@@ -45,7 +59,11 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                     </h2>
 
                     <div className="mt-6 space-y-4 sm:space-y-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+                            <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                                <img src={hopeAndHealing} alt="Hope and Healing" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                            </div>
+                            <div className="flex-1">
                             <a href={HopeAndHealing} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Hope &amp; Healing: A Practical Guide for Survivors of Suicide, Family &amp; Friends
                             </a>
@@ -65,9 +83,14 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                                 Alberta Mental Health Board. Adapted by the Centre for Applied Research in Mental Health
                                 and Addiction, Faculty of Health Sciences, Simon Fraser University.
                             </p>
+                            </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+                            <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                                <img src={practicalAndPersonalGuide} alt="After a Suicide: A Practical and Personal Guide" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                            </div>
+                            <div className="flex-1">
                             <a href={Klinic} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 After a Suicide: A Practical &amp; Personal Guide for Survivors of Suicide Loss
                             </a>
@@ -92,9 +115,14 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                                 indebted to the Alberta Health Services, Calgary Health Region, for sharing their
                                 resource guide “Survivor of Suicide Handbook”, which helped inform this document.
                             </p>
+                            </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+                            <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                                <img src={toolkitForSchools} alt="After a Suicide: A Toolkit for Schools" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                            </div>
+                            <div className="flex-1">
                             <a href={SPRC} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 After a Suicide: A Toolkit for Schools
                             </a>
@@ -114,9 +142,14 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                                 By The American Foundation for Suicide Prevention and the Suicide Prevention Resource
                                 Center
                             </p>
+                            </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+                            <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                                <img src={earlyResponders} alt="A Guide for Early Responders" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                            </div>
+                            <div className="flex-1">
                             <a href={Winnipeg} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 A Guide for Early Responders Supporting Survivors Bereaved by Suicide
                             </a>
@@ -138,9 +171,14 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                                 Association for Suicide Prevention. This guide was adapted from “Supporting Survivors of
                                 Suicide Loss, A Guide for Funeral Directors”
                             </p>
+                            </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+                            <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                                <img src={funeralDirectors} alt="For Funeral Directors" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                            </div>
+                            <div className="flex-1">
                             <span className="text-xl font-semibold text-indigo-500">
                                 For Funeral Directors: Supporting Survivors of Suicide Loss
                             </span>
@@ -186,6 +224,7 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                                 </a>
                             </div>
                         </div>
+                        </div>
                     </div>
                 </div>
 
@@ -196,18 +235,21 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                            <img src={bereavedSupport} alt="Bereaved Support" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
                             <a href="/resources/bereaved-support" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Bereaved Support
                             </a>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                            <img src={survivorsOfSuicideLoss} alt="Survivors of Suicide Loss" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
                             <a href="/resources/suicide-loss" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Survivors of Suicide Loss
                             </a>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                            <img src={resourceOrganizations} alt="Resource Organizations" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
                             <a href="/resources/organizations" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Resource Organizations
                             </a>
