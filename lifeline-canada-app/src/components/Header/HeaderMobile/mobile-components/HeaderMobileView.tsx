@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { MenuToggleButton } from './MenuToggleButton';
 import { MobileMenuPanel } from './MobileMenuPanel';
-import { AnimatedBackdrop } from './AnimatedBackdrop';
+
 
 interface HeaderMobileViewProps {
   isMenuOpen: boolean;
@@ -21,7 +21,7 @@ export const HeaderMobileView = ({
   isMenuOpen,
   openDropdown,
   activeCategory,
-  isAnimating,
+
   resourceLinks,
   patternInterruptLinks,
   closeMenu,
@@ -35,13 +35,13 @@ export const HeaderMobileView = ({
 
     {isMenuOpen && (
       <div className="fixed inset-0 z-50 ">
-        <AnimatedBackdrop isAnimating={isAnimating} onClick={closeMenu} />
+        
 
         <div className="fixed inset-y-0 right-0 w-full max-w-md min-h-screen ">
           <div className="h-full relative">
             <MobileMenuPanel
               openDropdown={openDropdown}
-              isAnimating={isAnimating}
+         
               resourceLinks={resourceLinks}
               patternInterruptLinks={patternInterruptLinks}
               activeCategory={activeCategory}

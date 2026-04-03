@@ -31,7 +31,7 @@ export const CategoryAccordion = ({
           <button
             onClick={() => onCategoryToggle(category)}
             className="w-full flex items-center justify-between p-5 
-             bg-gradient-to-b from-blue-200 via-gray-200 to-pink-100 hover:from-blue-50/50 hover:to-indigo-50/30
+             bg-gradient-to-br from-pink-90 via-gray-100 to-white hover:to-indigo-50/30
               transition-all duration-500 group"
           >
             <div className="flex items-center gap-3">

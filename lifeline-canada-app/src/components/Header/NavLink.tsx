@@ -1,13 +1,12 @@
 // components/NavLink.tsx
 import React from 'react';
-import { Link } from 'react-router-dom'; // or your router's Link
+import { Link } from 'react-router-dom';
 
 interface NavLinkProps {
   link: {
     name: string;
     path: string;
     icon?: React.ReactNode;
-    emergency?: boolean;
   };
   onClick?: () => void;
   className?: string;
@@ -16,20 +15,33 @@ interface NavLinkProps {
 export default function NavLink({
   link,
   onClick,
-  className = '',
 }: NavLinkProps) {
   return (
     <Link
       to={link.path}
       onClick={onClick}
-      className={`flex items-center ${className} ${
-        link.emergency
-          ? 'text-red-600 hover:text-red-700'
-          : 'text-gray-700 hover:text-blue-600'
-      } transition-colors duration-150`}
+     className={`
+  relative flex items-center gap-2
+  px-4 py-3 rounded-lg
+  h-[45px]
+
+  bg-gray-50 !text-gray-600 font-bold
+  border border-gray-200
+
+  transition-all duration-200
+
+  hover:border-blue-600 hover:text-gray-800
+
+`}
     >
-      {link.icon && <span className="mr-2">{link.icon}</span>}
-      {link.name}
+      {link.icon && (
+        <span className="flex items-center" aria-hidden="true">
+          {link.icon}
+        </span>
+      )}
+      <span className="text-[clamp(12px,1.2vw,16px)] whitespace-nowrap">
+        {link.name}
+      </span>
     </Link>
   );
 }

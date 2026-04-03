@@ -77,7 +77,10 @@ export default function MoreDropdown({
         aria-haspopup="true"
         aria-label={`${triggerText} menu`}
       >
+        <span className="text-[clamp(12px,1.2vw,16px)] whitespace-nowrap">
         {triggerText}
+        </span>
+        
         <ChevronDown
           className={`ml-1 w-4 h-4 transition-transform duration-200 ${
             isOpen ? 'rotate-180' : ''
@@ -96,7 +99,7 @@ export default function MoreDropdown({
           />
 
           {/* Dropdown menu */}
-          <div className="absolute left-1 right-0 mt-2 w-56 z-50">
+          <div className="absolute right-1 right-0 mt-2 w-56 z-50">
             {/* Layer 1: Base background */}
             <div className="absolute inset-0 bg-gradient-to-br from-pink-200 via-gray-500/30 to-white rounded-lg shadow-xl border border-gray-200" />
 
