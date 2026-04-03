@@ -60,6 +60,14 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
       return;
     } else {
       setInfo(result.info ?? '');
+      setFormData({
+        fullName: '',
+        email: '',
+        agreedToTerms: false,
+        signupMethod: 'email',
+      })
+      setTimeout(() => 
+        setInfo(''), 10000);
     }
   };
 
@@ -71,7 +79,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
           Start Your Wellness Journey
         </h2>
         <p className="text-sm text-gray-500 mt-1">
-          No password needed - we'll send a link
+          No password needed we'll send a link
         </p>
         {formError && (
           <p className="text-red-600 text-sm mt-2 bg-red-50 p-2 rounded-lg">
@@ -79,7 +87,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
           </p>
         )}
         {info && (
-          <p className="text-green-600 text-sm mt-2 bg-red-50 p-2 rounded-lg">
+          <p className="text-green-600 text-sm mt-2 bg-green-50 p-2 rounded-lg">
             {info}
           </p>
         )}
@@ -102,7 +110,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
               name="fullName"
               value={formData.fullName}
               onChange={handleChange}
-              className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+              className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
               placeholder="Your name"
               required
             />
@@ -124,7 +132,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+              className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
               placeholder="you@example.com"
               required
             />
@@ -139,21 +147,21 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
               name="agreedToTerms"
               checked={formData.agreedToTerms}
               onChange={handleChange}
-              className="w-4 h-4 text-amber-500 rounded border-gray-300 focus:ring-amber-500 mt-1 flex-shrink-0"
+              className="w-4 h-4 text-purple-500 rounded border-gray-300 focus:ring-purple-500 mt-1 flex-shrink-0"
               required
             />
             <span className="text-sm text-gray-600">
               I agree to the{' '}
               <Link
                 to="/privacy?mode=termsofservice"
-                className="text-amber-600 hover:text-amber-700 hover:underline"
+                className="text-purple-600 hover:text-purple-700 hover:underline"
               >
                 Terms of Service
               </Link>{' '}
               and{' '}
               <Link
                 to="/privacy?mode=privacy"
-                className="text-amber-600 hover:text-amber-700 hover:underline"
+                className="text-purple-600 hover:text-purple-700 hover:underline"
               >
                 Privacy Policy
               </Link>
@@ -165,7 +173,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
         <button
           type="submit"
           disabled={!formData.agreedToTerms}
-          className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <span>Sign Up</span>
           <ArrowRight
@@ -176,8 +184,8 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
       </form>
 
       {/* Info Box */}
-      <div className="mt-6 bg-amber-50 rounded-lg p-4">
-        <p className="text-xs text-amber-700 flex items-start gap-2">
+      <div className="mt-6 bg-purple-50 rounded-lg p-4">
+        <p className="text-xs text-purple-700 flex items-start gap-2">
           <Shield className="w-4 h-4 flex-shrink-0 mt-0.5" />
           <span>
             <strong>No password needed!</strong> We'll email you a secure
@@ -193,7 +201,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
           Already have an account?{' '}
           <button
             onClick={onSwitchToLogin}
-            className="text-amber-600 hover:text-amber-700 font-medium hover:underline"
+            className="text-purple-600 hover:text-purple-700 font-medium hover:underline"
           >
             Sign in
           </button>

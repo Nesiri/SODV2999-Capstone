@@ -1,99 +1,91 @@
 import React from 'react';
 import onlineChatImage from '../../../assets/chatIcons/OnlineChat-1.png';
 import { Link } from 'react-router-dom';
+import SpiderWebBackground from '../../Background/SpiderWebBackground';
+
 const OnlineChatLines: React.FC = () => {
   return (
-    <section className="relative w-full bg-gradient-to-br from-[#F3F5F7] via-[#E9EEF3] to-[#DEE6EF] py-20 md:py-28 overflow-hidden">
-      {/* Elegant geometric pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.02]">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L55 30 L30 55 L5 30 Z' fill='none' stroke='%23948374' stroke-width='0.5'/%3E%3C/svg%3E")`,
-            backgroundSize: '60px 60px',
-          }}
-        ></div>
-      </div>
+    <section className="relative w-full bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 py-20 md:py-28 overflow-hidden">
+      {/* Spider Web Background */}
+      <SpiderWebBackground opacity={0.5} />
+      
+      {/* Soft luminous gradients - updated to purple */}
+      <div className="absolute top-0 -left-40 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-[120px]"></div>
+      <div className="absolute bottom-0 -right-40 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px]"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-400/10 rounded-full blur-[140px]"></div>
 
-      {/* Soft luminous gradients */}
-      <div className="absolute top-0 -left-40 w-[500px] h-[500px] bg-[#C1B1A1]/20 rounded-full blur-[120px]"></div>
-      <div className="absolute bottom-0 -right-40 w-[500px] h-[500px] bg-[#A6B4AA]/20 rounded-full blur-[120px]"></div>
-
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          {/* Left Content */}
-          <div className="space-y-8">
-            {/* Elegant badge with refined typography */}
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
+          {/* Left Column - Elevated boxed paragraphs */}
+          <div className="space-y-10">
+            {/* Badge - updated to purple */}
             <div className="inline-block">
-              <span className="text-xs tracking-[0.3em] text-[#B28B8B] uppercase font-light">
-                — Compassionate Support
+              <span className="text-xs tracking-[0.3em] text-purple-300 uppercase font-light bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-purple-400/30">
+                Compassionate Support
               </span>
             </div>
 
-            {/* Sophisticated headline with elegant font pairing */}
-            <div className="space-y-3">
-              <h1 className="text-5xl lg:text-6xl font-serif text-[#2A3B3C] leading-[1.1]">
+            {/* Headline - updated to purple */}
+            <div className="space-y-4">
+              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-serif text-purple-100 leading-[1.1]">
                 OnLine Chat
-                <span className="block text-[#C89F9F]">Lines</span>
+                <span className="block text-purple-300">Lines</span>
               </h1>
-              <div className="w-20 h-px bg-gradient-to-r from-[#C89F9F] to-transparent"></div>
+              <div className="w-20 h-px bg-gradient-to-r from-purple-400 to-transparent"></div>
             </div>
 
-            {/* Refined content with elegant typography */}
+            {/* Boxed paragraphs with elevated design - updated to purple */}
             <div className="space-y-6">
-              {/* Highlight box with subtle elegance */}
-              <div className="bg-white/40 backdrop-blur-sm p-6 rounded-2xl border border-white/60">
-                <p className="text-[#4A5A5C] text-lg leading-relaxed">
-                  <span className="inline-flex items-center gap-3 text-[#2A3B3C] font-medium mb-2">
-                    <span className="w-2 h-2 bg-[#C89F9F] rounded-full"></span>
-                    If you or someone you know is in crisis, call 911
-                    immediately
-                  </span>
-                  <br />
-                  <span className="font-light text-[#4A5A5C]">
-                    Sometimes it is easier to open up and seek support via
-                    OnLine Chat, where one can compose their thoughts and get
-                    things “on paper” to help sort out the issues and the
-                    questions that require answers and support. OnLine Chat Line
-                    support is also ideal when one wishes to have a record of
-                    advice and a place you can go back to and look at the words
-                    of support over again. Below are some OnLine chat lines for
-                    North America and worldwide.
-                  </span>
-                  <br />
-                  <span className="font-light text-[#4A5A5C]">
-                    The LifeLine Canada Foundation is not a crisis hotline.{' '}
-                    <Link to='/incrisisneedhelp'>
-                      See our directory of mental health crisis support in your
-                      area.
-                    </Link>
-                  </span>
-                </p>
+              <div className="bg-purple-900/40 backdrop-blur-md rounded-3xl border border-purple-500/30 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                <div className="p-8 space-y-5">
+                  {/* Highlighted alert - updated to purple */}
+                  <div className="flex items-start gap-3 pb-2 border-b border-purple-400/30">
+                    <div className="w-2 h-2 rounded-full bg-purple-400 mt-2 flex-shrink-0"></div>
+                    <p className="text-purple-200 font-semibold text-lg leading-relaxed">
+                      If you or someone you know is in crisis, call 911 immediately
+                    </p>
+                  </div>
+                  
+                  {/* Paragraphs with improved spacing - updated to purple */}
+                  <div className="space-y-4 text-purple-200 leading-relaxed">
+                    <p>
+                      Sometimes it is easier to open up and seek support via OnLine Chat, where one can compose their thoughts and get things "on paper" to help sort out the issues and the questions that require answers and support. OnLine Chat Line support is also ideal when one wishes to have a record of advice and a place you can go back to and look at the words of support over again. Below are some OnLine chat lines for North America and worldwide.
+                    </p>
+                    
+                    <p>
+                      The LifeLine Canada Foundation is not a crisis hotline.{' '}
+                      <Link to='/incrisisneedhelp' className="text-purple-300 font-medium hover:text-purple-200 transition-colors">
+                        See our directory of mental health crisis support in your area.
+                      </Link>
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Decorative gradient bottom - updated to purple */}
+                <div className="h-1 bg-gradient-to-r from-purple-500/50 via-transparent to-transparent"></div>
               </div>
             </div>
           </div>
 
-          {/* Right Image - Elevated card design */}
-          <div className=" relative sm:top-25 flex justify-center lg:justify-end">
-            <div className="sm:w-[500px] relative transform hover:scale-[1.02] transition-transform duration-700">
-              {/* Layered shadows for depth */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#C1B1A1]/20 to-[#A6B4AA]/20 rounded-[3rem] blur-2xl"></div>
-              <div className="absolute -inset-2 bg-white/40 rounded-[2.5rem] blur-xl"></div>
-
-              {/* Main card */}
-              <div className="relative  p-4 shadow-2xl">
-                {/* Subtle inner glow */}
-                <div className="absolute inset-0 rounded-[2.5rem] shadow-inner"></div>
-
-                {/* Image container with soft gradient border */}
-                <div className="relative sm:left-10 rounded-2xl overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#C89F9F]/10 to-transparent z-10"></div>
-                  <img
-                    src={onlineChatImage}
-                    alt="online chat"
-                    className="sm:ml-10 w-30 sm:w-70 h-auto object-cover"
-                  />
-                </div>
+          {/* Right Column - Bare image, no card */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative">
+              {/* Simple floating glow behind image - updated to purple */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-purple-400/30 to-purple-500/20 rounded-full blur-3xl scale-110"></div>
+              
+              {/* Bare image with subtle shadow */}
+              <img
+                src={onlineChatImage}
+                alt="online chat"
+                className="relative sm:top-30 w-64 sm:w-80 md:w-96 h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+              />
+              
+              {/* Decorative spider web corner element */}
+              <div className="absolute -bottom-4 -right-4 w-12 h-12">
+                <svg className="w-full h-full text-purple-400/30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+                  <path d="M12 3 L12 21 M3 12 L21 12 M4.5 4.5 L19.5 19.5 M19.5 4.5 L4.5 19.5" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
               </div>
             </div>
           </div>

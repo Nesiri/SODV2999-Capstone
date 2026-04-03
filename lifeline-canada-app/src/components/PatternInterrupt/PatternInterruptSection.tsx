@@ -102,25 +102,25 @@ const PatternInterruptSection: React.FC = () => {
               </span>
             </div>
 
-            {/* Main heading with gradient */}
+            {/* Main heading with gradient - replaced amber/yellow with purple */}
             <h1 className="relative mb-8">
-              <span className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-200 animate-gradient-x">
+              <span className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-300 via-purple-400 to-purple-300 animate-gradient-x">
                 Pattern
               </span>
               <br />
               <span className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white relative">
                 Interruptions
-                {/* Decorative underline */}
-                <span className="absolute -bottom-4 left-0 w-32 h-1.5 bg-gradient-to-r from-amber-400 to-pink-400 rounded-full" />
+                {/* Decorative underline - replaced amber with purple */}
+                <span className="absolute -bottom-4 left-0 w-32 h-1.5 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full" />
               </span>
             </h1>
 
-            {/* Feature cards */}
+            {/* Feature cards - replaced amber with purple */}
             <div className="space-y-6 mb-8">
               <div className="flex items-start gap-4 group">
                 <div className="flex-shrink-0 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300">
                   <svg
-                    className="w-6 h-6 text-amber-300"
+                    className="w-6 h-6 text-purple-300"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -147,7 +147,7 @@ const PatternInterruptSection: React.FC = () => {
               <div className="flex items-start gap-4 group">
                 <div className="flex-shrink-0 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300">
                   <svg
-                    className="w-6 h-6 text-amber-300"
+                    className="w-6 h-6 text-purple-300"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -175,7 +175,7 @@ const PatternInterruptSection: React.FC = () => {
               <div className="flex items-start gap-4 group">
                 <div className="flex-shrink-0 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300">
                   <svg
-                    className="w-6 h-6 text-amber-300"
+                    className="w-6 h-6 text-purple-300"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -211,8 +211,8 @@ const PatternInterruptSection: React.FC = () => {
           >
             {/* Main image container */}
             <div className="relative group">
-              {/* Glow effect */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-amber-500 to-pink-500 rounded-3xl opacity-20 group-hover:opacity-30 blur-2xl transition-opacity duration-700" />
+              {/* Glow effect - replaced amber with purple */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl opacity-20 group-hover:opacity-30 blur-2xl transition-opacity duration-700" />
 
               {/* Image frame */}
               <div className="relative rounded-3xl overflow-hidden">
@@ -249,15 +249,15 @@ const PatternInterruptSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Decorative corner accents */}
-              <div className="absolute -top-4 -left-4 w-16 h-16 border-t-4 border-l-4 border-amber-400/50 rounded-tl-3xl" />
+              {/* Decorative corner accents - replaced amber with purple */}
+              <div className="absolute -top-4 -left-4 w-16 h-16 border-t-4 border-l-4 border-purple-400/50 rounded-tl-3xl" />
               <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b-4 border-r-4 border-pink-400/50 rounded-br-3xl" />
             </div>
 
-            {/* Testimonial card */}
+            {/* Testimonial card - replaced amber with purple */}
             <div className="absolute -bottom-10 -left-10 bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 max-w-xs hidden lg:block">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-gradient-to-r from-amber-400 to-pink-400 rounded-full" />
+                <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full" />
                 <div>
                   <div className="text-white font-semibold"></div>
                   <div className="text-white/60 text-sm">

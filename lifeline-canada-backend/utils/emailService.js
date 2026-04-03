@@ -73,7 +73,7 @@ export const sendVerificationEmail = async (email, name, token) => {
           }
           
           .header {
-            background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+            background: linear-gradient(135deg, #a78bfa 0%, #6a4db9 100%);
             padding: 40px 32px 32px;
             text-align: center;
           }
@@ -128,7 +128,7 @@ export const sendVerificationEmail = async (email, name, token) => {
           
           .button {
             display: inline-block;
-            background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+            background: linear-gradient(135deg, #a78bfa 0%, #342284 100%);
             color: #ffffff;
             text-decoration: none;
             font-weight: 600;
@@ -214,7 +214,7 @@ export const sendVerificationEmail = async (email, name, token) => {
             padding: 16px;
             margin: 24px 0;
             font-size: 14px;
-            color: #9a3412;
+            color: #6a129a;
           }
           
           .heart {
@@ -242,7 +242,7 @@ export const sendVerificationEmail = async (email, name, token) => {
         <div class="container">
           <!-- Header with calming gradient -->
           <div class="header">
-            <h1>🌿 Mindful Support</h1>
+            <h1>🌿The Lifeline Canada Foundation</h1>
             <p>Your safe space for mental wellness</p>
           </div>
           
@@ -309,7 +309,7 @@ export const sendVerificationEmail = async (email, name, token) => {
           <!-- Footer -->
           <div class="footer">
             <div style="margin-bottom: 16px;">
-              <span style="color: #ec4899; font-size: 20px;">❤️</span>
+              <span style="color: #a248ec; font-size: 20px;">❤️</span>
             </div>
             <p style="font-weight: 500; color: #374151;">You're not alone on this journey</p>
             

@@ -41,12 +41,13 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
       ),
     },
     hopeful: {
-      gradient: 'from-amber-400 via-orange-400 to-rose-400',
-      light: 'from-amber-50 via-orange-50 to-rose-50',
+      // Changed from amber/orange to purple
+      gradient: 'from-purple-400 via-purple-500 to-pink-500',
+      light: 'from-purple-50 via-purple-100 to-pink-50',
       button:
-        'bg-gradient-to-r from-amber-500 to-rose-500 hover:from-amber-600 hover:to-rose-600',
-      accent: 'border-amber-200',
-      shadow: 'shadow-amber-100/50',
+        'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600',
+      accent: 'border-purple-200',
+      shadow: 'shadow-purple-100/50',
       icon: (
         <path
           strokeLinecap="round"
@@ -204,10 +205,10 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
               </div>
             </div>
 
-            {/* Hope symbol - repositioned for full width */}
+            {/* Hope symbol - changed from amber to purple */}
             <div className="absolute -bottom-4 -right-4 lg:right-0 lg:-bottom-6 bg-white/90 backdrop-blur-sm rounded-2xl p-3 lg:p-4 shadow-xl">
               <svg
-                className="w-8 h-8 lg:w-10 lg:h-10 text-amber-500 animate-float"
+                className="w-8 h-8 lg:w-10 lg:h-10 text-purple-500 animate-float"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -364,12 +365,12 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
           </div>
         </div>
 
-        {/* Healing corner decorations - scaled for full width */}
+        {/* Healing corner decorations - changed amber to purple */}
         <div className="absolute bottom-0 left-0 w-24 lg:w-32 h-24 lg:h-32">
-          <div className="absolute bottom-0 left-0 w-16 lg:w-20 h-16 lg:h-20 border-l-4 border-b-4 border-teal-200/30 rounded-bl-3xl lg:rounded-bl-[2rem]" />
+          <div className="absolute bottom-0 left-0 w-16 lg:w-20 h-16 lg:h-20 border-l-4 border-b-4 border-purple-200/30 rounded-bl-3xl lg:rounded-bl-[2rem]" />
         </div>
         <div className="absolute top-0 right-0 w-24 lg:w-32 h-24 lg:h-32">
-          <div className="absolute top-0 right-0 w-16 lg:w-20 h-16 lg:h-20 border-r-4 border-t-4 border-amber-200/30 rounded-tr-3xl lg:rounded-tr-[2rem]" />
+          <div className="absolute top-0 right-0 w-16 lg:w-20 h-16 lg:h-20 border-r-4 border-t-4 border-pink-200/30 rounded-tr-3xl lg:rounded-tr-[2rem]" />
         </div>
       </div>
 

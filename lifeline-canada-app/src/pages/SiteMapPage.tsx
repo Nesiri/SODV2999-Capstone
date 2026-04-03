@@ -177,7 +177,7 @@ const handleScrollToSection = (path: string, id?: string) => (e: React.MouseEven
 };
 
   return (
-  <div className="w-full min-h-screen bg-gradient-to-br from-amber-200 via-orange-100 to-yellow-50">
+  <div className="w-full min-h-screen bg-gradient-to-br from-purple-50 via-purple-100/50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
         {/* Header with pink/blue/purple gradient */}
         <h1

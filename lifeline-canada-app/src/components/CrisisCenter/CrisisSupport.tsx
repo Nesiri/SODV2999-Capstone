@@ -3,95 +3,180 @@ import crisisSuportImage from '../../assets/crisis-support.png';
 
 const CrisisSupport: React.FC = () => {
   return (
-    <main className="relative w-full min-h-screen bg-gradient-to-br from-[#e0bbff]/30 via-[#f3e8ff]/40 to-[#d9c9ff]/30 font-sans antialiased overflow-hidden">
-      {/* Minimalist floating orbs - softened to match palette */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-[#d9c9ff]/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-20 w-80 h-80 bg-[#e6d9ce]/30 rounded-full blur-3xl"></div>
+    <main className="relative w-full min-h-screen bg-gradient-to-br from-slate-700 via-purple-700 to-slate-700 font-sans antialiased overflow-hidden">
+      {/* Visible spider web / lattice grid pattern */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Radial lines - spider web spokes */}
+        <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          {[...Array(16)].map((_, i) => {
+            const angle = (i * 22.5) * Math.PI / 180;
+            const x2 = 50 + 48 * Math.cos(angle);
+            const y2 = 50 + 48 * Math.sin(angle);
+            return (
+              <line
+                key={`radial-${i}`}
+                x1="50%"
+                y1="50%"
+                x2={`${x2}%`}
+                y2={`${y2}%`}
+                stroke="rgba(168, 85, 247, 0.25)"
+                strokeWidth="0.8"
+              />
+            );
+          })}
+          {/* Concentric circles - spider web rings */}
+          {[12, 24, 36, 48, 60, 72].map((radius, i) => (
+            <circle
+              key={`circle-${i}`}
+              cx="50%"
+              cy="50%"
+              r={`${radius}%`}
+              fill="none"
+              stroke="rgba(168, 85, 247, 0.2)"
+              strokeWidth="0.6"
+              strokeDasharray={i % 2 === 0 ? "5 3" : "3 5"}
+            />
+          ))}
+        </svg>
+        
+        {/* Diagonal lattice grid */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0 L50 50 M0 50 L50 0' stroke='%23a855f7' stroke-width='0.5' fill='none' opacity='0.2'/%3E%3C/svg%3E")`,
+            backgroundSize: '35px 35px',
+          }}
+        />
+        
+        {/* Fine cross grid */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 0 L15 30 M0 15 L30 15' stroke='%23c084fc' stroke-width='0.4' fill='none' opacity='0.15'/%3E%3C/svg%3E")`,
+            backgroundSize: '25px 25px',
+          }}
+        />
+      </div>
 
-      {/* Single diagonal accent line */}
-      <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-[#c4b5a5]/10 to-transparent"></div>
+      {/* Animated gradient orbs */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-600/30 rounded-full blur-[120px] animate-pulse-slow" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-pink-600/20 rounded-full blur-[120px] animate-pulse-slow" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-600/10 rounded-full blur-[150px]" />
 
       <div className="relative w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-20 md:py-28">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-20">
-          {/* Left column */}
-          <div className="flex-1 flex flex-col justify-center space-y-14">
-            {/* Heading - adjusted for better contrast */}
-            <div className="space-y-3">
-              <span className="text-sm font-medium tracking-[0.3em] text-[#6b4f6f] uppercase block">
-                CRISIS SUPPORT
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left Column */}
+          <div className="space-y-10">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/20 w-fit">
+              <div className="w-2 h-2 rounded-full bg-purple-400 animate-pulse" />
+              <span className="text-xs font-medium tracking-[0.2em] text-white/80 uppercase">
+                24/7 CRISIS SUPPORT
               </span>
-              <h1 className="font-serif text-7xl md:text-8xl lg:text-8xl font-light text-[#2d1f33] leading-[0.9]">
-                In Crisis?
-                <span className="block text-[#7c5e7f] mt-2">Need Help?</span>
-              </h1>
             </div>
 
-            {/* Crisis information - FIXED card colors */}
-            <div className="max-w-xl">
-              <div className="bg-white/90 backdrop-blur-sm rounded-[2rem] p-10 shadow-[0_50px_40px_-30px_rgba(0,0,0,0.15)] border border-white/60">
-                <p className="text-xl md:text-2xl leading-relaxed text-[#2d1f33]">
-                  In Crisis? Call or Text{' '}
-                  <span className="text-[#7c3a7c] font-bold text-2xl md:text-3xl">
-                    988
-                  </span>{' '}
-                  Canada's new suicide prevention hotline. If you or someone you
-                  know is in danger of hurting themselves or others, call{' '}
-                  <span className="text-[#7c3a7c] font-bold">911</span>{' '}
-                  immediately.{' '}
-                  <a
-                    href="#local-crisis-support"
-                    className="text-[#5f4b8b] border-b border-dotted border-[#b19cd9] hover:border-solid hover:border-[#4a3780] transition-all duration-300 inline-flex items-center gap-1 group cursor-pointer"
-                  >
-                    See our directory of mental health crisis support
-                  </a>{' '}
-                  in your area below.
+            {/* Headline */}
+            <div className="space-y-4">
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1]">
+                <span className="bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                  In Crisis?
+                </span>
+                <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mt-3">
+                  Need Help?
+                </span>
+              </h1>
+              <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" />
+            </div>
+
+            {/* Boxed paragraph - Modern glass card */}
+            <div className="relative group">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-0 group-hover:opacity-50 transition duration-500" />
+              <div className="relative bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-2xl">
+                <p className="text-white/90 leading-relaxed space-y-4">
+                  <span className="block text-lg">
+                    In Crisis? Call or Text{' '}
+                    <span className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                      988
+                    </span>{' '}
+                    Canada's new suicide prevention hotline.
+                  </span>
+                  <span className="block">
+                    If you or someone you know is in danger of hurting themselves or others, call{' '}
+                    <span className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                      911
+                    </span>{' '}
+                    immediately.
+                  </span>
+                  <span className="block">
+                    <a
+                      href="#local-crisis-support"
+                      className="inline-flex items-center gap-2 text-purple-300 font-medium border-b border-purple-500/50 hover:border-purple-300 transition-all group/link"
+                    >
+                      See our directory of mental health crisis support
+                      <span className="inline-block transition-transform group-hover/link:translate-x-1">→</span>
+                    </a>{' '}
+                    in your area below.
+                  </span>
                 </p>
               </div>
             </div>
 
-            {/* Medical disclaimer - FIXED colors */}
-            <div className="max-w-md">
-              <p className="text-base md:text-lg text-[#4a3f5a] leading-relaxed border-l-2 border-[#b19cd9] pl-6">
+            {/* Disclaimer */}
+            <div className="flex items-start gap-4">
+              <div className="w-px h-12 bg-gradient-to-b from-purple-500 to-transparent" />
+              <p className="text-sm text-white/50 leading-relaxed">
                 Seek the advice of an appropriately qualified healthcare
                 professional before making decisions about your circumstances.
               </p>
             </div>
           </div>
 
-          {/* Right column */}
-          <div className="flex-1 lg:flex lg:items-center mt-10">
-            <div className="sticky top-24">
-              {/* Asymmetrical frame */}
-              <div className="relative">
-                {/* Bold negative space treatment - adjusted colors */}
-                <div className="absolute -top-6 -left-6 w-32 h-32 bg-[#b19cd9]/20 rounded-full blur-2xl"></div>
-                <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-[#4a3f5a]/20 rounded-full blur-2xl"></div>
-
-                {/* Main image */}
-                <div className="relative rounded-[2rem] overflow-hidden aspect-[16/10] shadow-2xl">
-                  {/* Duotone-like overlay - softened */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#b19cd9]/30 via-transparent to-[#4a3f5a]/40 mix-blend-soft-light z-10"></div>
-
-                  <img
-                    src={crisisSuportImage}
-                    alt="Calm waters representing peace and support"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                {/* Caption - now properly positioned */}
-                <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 p-4 z-[9999] w-full flex justify-center">
-                  <div className="backdrop-blur-md bg-[#2d1f33]/30 px-6 py-4 rounded-full inline-block border border-white/30 shadow-2xl">
-                    <span className="text-white text-base font-light tracking-widest">
-                      — you are not alone —
+          {/* Right Column - Image aligned with text box */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-md">
+              {/* Glow effect */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl blur-2xl" />
+              
+              {/* Image Container */}
+              <div className="relative sm:top-22 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/20">
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 via-transparent to-transparent z-10" />
+                <img
+                  src={crisisSuportImage}
+                  alt="Peace and support"
+                  className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
+                />
+                
+                {/* Caption overlay */}
+                <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 z-20 w-full px-6">
+                  <div className="backdrop-blur-md bg-black/30 rounded-full px-6 py-3 text-center border border-white/20">
+                    <span className="text-white text-sm font-medium tracking-wider">
+                      ✨ you are not alone ✨
                     </span>
                   </div>
                 </div>
               </div>
+
+              
             </div>
           </div>
         </div>
       </div>
+
+      <style>{`
+        @keyframes pulse-slow {
+          0%, 100% {
+            opacity: 0.3;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 0.5;
+            transform: scale(1.05);
+          }
+        }
+        .animate-pulse-slow {
+          animation: pulse-slow 6s ease-in-out infinite;
+        }
+      `}</style>
     </main>
   );
 };

@@ -1,15 +1,7 @@
 import React from 'react';
 import contributionImage from '../../assets/contribution-800x419.jpg';
 import { Heart, Shield } from 'lucide-react';
-import {
-  FaCcVisa,
-  FaCcMastercard,
-  FaCcAmex,
-  FaCcDiscover,
-  FaCcPaypal,
-  FaGooglePay,
-  FaApplePay,
-} from 'react-icons/fa';
+
 import { Link } from 'react-router-dom';
 
 const MakeContribution: React.FC = () => {
@@ -141,72 +133,7 @@ const MakeContribution: React.FC = () => {
           {/* Payment Methods */}
           <div className="space-y-4">
             
-            {/* Payment Icons - Beautiful & Responsive with Real Colors */}
-            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6">
-              {[
-                {
-                  icon: <FaCcVisa />,
-                  color: '#1A1F71', // Visa blue
-                  label: 'Visa',
-                },
-                {
-                  icon: <FaCcMastercard />,
-                  color: '#EB001B', // Mastercard red
-                  label: 'Mastercard',
-                },
-                {
-                  icon: <FaCcAmex />,
-                  color: '#2E77BB', // Amex blue
-                  label: 'American Express',
-                },
-                {
-                  icon: <FaCcDiscover />,
-                  color: '#FF6000', // Discover orange
-                  label: 'Discover',
-                },
-                {
-                  icon: <FaCcPaypal />,
-                  color: '#003087', // PayPal blue
-                  label: 'PayPal',
-                },
-                {
-                  icon: <FaGooglePay />,
-                  color: '#4285F4', // Google Pay blue
-                  label: 'Google Pay',
-                },
-                {
-                  icon: <FaApplePay />,
-                  color: '#000000', // Apple Pay black
-                  label: 'Apple Pay',
-                },
-              ].map((item, index) => (
-                <div key={index} className="group relative">
-                  {/* Subtle background glow that doesn't affect icon color */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-gray-100/50 to-gray-200/50 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                  {/* Main icon container - no hover effects on icon itself */}
-                  <div className="relative bg-white/80 backdrop-blur-sm p-3 sm:p-4 md:p-5 rounded-xl shadow-md border border-gray-100 transition-shadow duration-300 hover:shadow-lg">
-                    {/* Icon with fixed brand color */}
-                    <div
-                      className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 transition-none"
-                      style={{ color: item.color }}
-                    >
-                      {React.cloneElement(item.icon, {
-                        className: 'w-full h-full',
-                        style: { color: item.color },
-                      })}
-                    </div>
-                  </div>
-
-                  {/* Tooltip label on hover */}
-                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                    <span className="text-xs bg-gray-800 text-white px-2 py-1 rounded-full whitespace-nowrap">
-                      {item.label}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
+            
             {/* Donation Button */}
             <div className="pt-8">
               <button className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 via-purple-300 to-blue-600 text-white px-10 py-5 rounded-2xl text-xl font-bold shadow-xl shadow-purple-500/30 hover:shadow-2xl hover:shadow-pink-500/40 transition-all duration-300 hover:scale-105">

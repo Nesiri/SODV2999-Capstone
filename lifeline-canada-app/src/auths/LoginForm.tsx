@@ -70,7 +70,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
           </p>
         )}
         {info && (
-          <p className="text-green-600 text-sm mt-2 bg-red-50 p-2 rounded-lg">
+          <p className="text-green-600 text-sm mt-2 bg-green-50 p-2 rounded-lg">
             {info}
           </p>
         )}
@@ -87,7 +87,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+              className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
               placeholder="you@example.com"
               required
             />
@@ -101,7 +101,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
               type="checkbox"
               checked={rememberMe}
               onChange={handleRememberMeChange}
-              className="w-4 h-4 text-amber-500 rounded border-gray-300 focus:ring-amber-500"
+              className="w-4 h-4 text-purple-500 rounded border-gray-300 focus:ring-purple-500"
             />
             <span className="ml-2 text-sm text-gray-600">Remember me</span>
           </label>
@@ -109,7 +109,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
 
         <button
           type="submit"
-          className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2"
+          className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2"
         >
           <span>Login</span>
           <ArrowRight size={18} />
@@ -121,7 +121,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
           Don't have an account?{' '}
           <button
             onClick={onSwitchToSignup}
-            className="text-amber-600 hover:text-amber-700 font-medium hover:underline"
+            className="text-purple-600 hover:text-purple-700 font-medium hover:underline"
           >
             Sign up
           </button>
