@@ -21,9 +21,6 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
   return (
     <section className="w-full bg-slate-50">
       <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-        <div className="inline-flex rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold tracking-wide text-slate-600 sm:text-sm">
-          Mental Health Support
-        </div>
 
         <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
           <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
@@ -31,22 +28,13 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
           </span>
         </h1>
 
-        <p className="mt-4 max-w-3xl leading-relaxed text-slate-700">
-          This page is designed for quick action first, then deeper guidance. If someone may be in immediate danger, call 911 now.
-        </p>
-
         <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-[1.3fr_1fr]">
           <div className={sectionClassName}>
-            <h2 className="text-xl font-semibold text-purple-700">Start Here</h2>
-            <ol className="mt-3 list-decimal space-y-2 pl-5 text-slate-700">
-              <li>Ask directly: "Are you thinking about suicide?"</li>
-              <li>Stay with the person and listen without judgment.</li>
-              <li>If there is immediate risk, call 911 or go to emergency.</li>
-              <li>Remove or secure lethal means if possible (medications, firearms, blades).</li>
-              <li>Connect them to professional support as soon as possible.</li>
-            </ol>
-            <p className="mt-4 text-sm text-slate-600">
-              Talking about suicide does not cause suicide. Asking directly can save a life.
+            <p className="leading-relaxed text-slate-700">
+              A suicidal person may not ask for help, but that doesn't mean that help isn't wanted. People who take their lives don't want to die—they just want to stop hurting. Suicide prevention starts with recognizing the warning signs and taking them seriously. If you think a friend or family member is considering suicide, you might be afraid to bring up the subject. But talking openly about suicidal thoughts and feelings can save a life.
+            </p>
+            <p className="mt-4 leading-relaxed text-slate-700">
+              The World Health Organization estimates that approximately 1 million people die each year from suicide. What drives so many individuals to take their own lives? To those not in the grips of suicidal depression and despair, it's difficult to understand what drives so many individuals to take their own lives. But a suicidal person is in so much pain that he or she can see no other option.
             </p>
           </div>
 
@@ -73,14 +61,6 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
               Understanding Suicide
             </summary>
             <div className="mt-4 space-y-3 text-slate-700">
-              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                <p className="text-sm font-semibold uppercase tracking-wide text-slate-600">Main points</p>
-                <ul className="mt-2 list-disc space-y-1 pl-5">
-                  <li>Most people want the pain to stop, not their life to end.</li>
-                  <li>A person may be conflicted and still open to help.</li>
-                  <li>Your calm, caring response can make a real difference.</li>
-                </ul>
-              </div>
               <p className="leading-relaxed">
                 People in suicidal crisis often feel trapped, hopeless, and alone. Taking warning signs seriously and responding early is one of the most effective ways to help.
               </p>
@@ -93,14 +73,6 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             </summary>
             <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[3fr_2fr] lg:items-start text-slate-700">
               <div className="space-y-3">
-                <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                  <p className="text-sm font-semibold uppercase tracking-wide text-slate-600">Main points</p>
-                  <ul className="mt-2 list-disc space-y-1 pl-5">
-                    <li>Always treat suicidal talk or behavior as urgent.</li>
-                    <li>Risk is higher with recent loss, substance use, or past attempts.</li>
-                    <li>Sudden mood and behavior changes matter.</li>
-                  </ul>
-                </div>
                 <ul className="list-disc space-y-2 pl-5 leading-relaxed">
                   <li>Talking about death, suicide, or being a burden.</li>
                   <li>Looking for ways to die (weapons, pills, ropes).</li>
@@ -136,14 +108,6 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             </summary>
             <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[3fr_2fr] lg:items-start text-slate-700">
               <div className="space-y-3">
-                <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                  <p className="text-sm font-semibold uppercase tracking-wide text-slate-600">Main points</p>
-                  <ul className="mt-2 list-disc space-y-1 pl-5">
-                    <li>Be direct, kind, and non-judgmental.</li>
-                    <li>Listen more than you speak.</li>
-                    <li>Do not promise to keep suicide risk a secret.</li>
-                  </ul>
-                </div>
                 <ul className="list-disc space-y-2 pl-5 leading-relaxed">
                 <li>Say: "I care about you. Are you thinking about suicide?"</li>
                 <li>Validate feelings: "I’m glad you told me."</li>
@@ -179,11 +143,6 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             </summary>
             <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[3fr_2fr] lg:items-start text-slate-700">
               <div className="space-y-3">
-                <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                  <p className="text-sm font-semibold uppercase tracking-wide text-slate-600">Main points</p>
-                  <p className="mt-2 font-medium">Ask clearly and calmly:</p>
-                  <p className="mt-1">Suicidal thoughts? Plan? Means? Timing?</p>
-                </div>
                 <ul className="list-disc space-y-2 pl-5 leading-relaxed">
                   <li>Are you thinking of suicide?</li>
                   <li>Have you tried before?</li>
@@ -209,14 +168,6 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
               If You Receive a Suicidal Phone Call
             </summary>
             <div className="mt-4 space-y-3 text-slate-700">
-              <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                <p className="text-sm font-semibold uppercase tracking-wide text-slate-600">Main points</p>
-                <ul className="mt-2 list-disc space-y-1 pl-5">
-                  <li>Listen, stay calm, and assess immediate risk.</li>
-                  <li>Ask directly about plan, means, and timing.</li>
-                  <li>If risk is high, call 911 and keep them connected.</li>
-                </ul>
-              </div>
               <ul className="list-disc space-y-2 pl-5 leading-relaxed">
                 <li>Let the person talk and express emotion without judgment.</li>
                 <li>Reflect back what you heard to confirm understanding.</li>

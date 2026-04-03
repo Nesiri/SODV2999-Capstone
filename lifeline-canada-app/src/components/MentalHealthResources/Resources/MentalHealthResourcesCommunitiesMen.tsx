@@ -1,15 +1,22 @@
 import React from "react";
-import { Sparkles } from "lucide-react";
 const menGetDepression = "/pdfs/men_get_depression.pdf";
+
+const coverPhoto = '/assets/AdditionalResourceImages/men-600x338.jpg';
+
+const waysToLookAfterMentalHealth = '/assets/AdditionalResourceImages/mental-health-men-600x300.png';
+const emotionallyDistressed = '/assets/AdditionalResourceImages/triangle-sign-600x534.jpg';
+
+const notASignOfWeakness = '/assets/AdditionalResourceImages/Alcohol-Suicide-600x379.jpg';
+const manyMisconceptions = '/assets/AdditionalResourceImages/Men-mental-health-600x338.jpg';
+const moreAndMoreMen = '/assets/AdditionalResourceImages/forMenAboutMen.png';
+
+const manTherapy = '/assets/AdditionalResourceImages/manTherapy.png';
+const menGetDepressionImg = '/assets/AdditionalResourceImages/menGetDepression.png';
 
 const MentalHealthResourcesCommunitiesMen: React.FC = () => {
     return (
         <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-12">
             <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-                <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm border border-purple-100">
-                    <Sparkles className="w-4 h-4 text-purple-600" />
-                    <span className="text-xs sm:text-sm font-medium text-purple-700">Mental Health Support</span>
-                </div>
 
                 <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
                     <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
@@ -18,17 +25,25 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
                 </h1>
 
                 <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
-                    <p className="leading-relaxed">
-                        Things happen in life, like difficulties with work or finances, the breakdown of a relationship, overwhelming family responsibilities, or a significant setback. These challenges can take a serious toll on your mental health, if left unchecked. Many men tough it out and struggle alone.
-                    </p>
+                    <img
+                        src={coverPhoto}
+                        alt="Men's Mental Health"
+                        className="float-right ml-6 mb-4 w-64 sm:w-80 rounded-xl shadow-md object-cover"
+                    />
+                    <div className="overflow-hidden">
+                        <p className="leading-relaxed">
+                            Things happen in life, like difficulties with work or finances, the breakdown of a relationship, overwhelming family responsibilities, or a significant setback. These challenges can take a serious toll on your mental health, if left unchecked. Many men tough it out and struggle alone.
+                        </p>
 
-                    <p className="mt-4 leading-relaxed">
-                        Establishing and maintaining relationships, talking about the hard stuff in life and taking action when times are tough are proven ways for men stay mentally healthy and cope with the stress of everyday life. Good overall health and wellbeing is linked to not only to better mental health but also reduces the likelihood of suicide.
-                    </p>
+                        <p className="mt-4 leading-relaxed">
+                            Establishing and maintaining relationships, talking about the hard stuff in life and taking action when times are tough are proven ways for men stay mentally healthy and cope with the stress of everyday life. Good overall health and wellbeing is linked to not only to better mental health but also reduces the likelihood of suicide.
+                        </p>
 
-                    <p className="mt-4 leading-relaxed">
-                        Some signs of poor mental health include feeling irritable, hopeless or worthless and behaviors such as aggression, drinking more than usual and isolating yourself from friends and family.
-                    </p>
+                        <p className="mt-4 leading-relaxed">
+                            Some signs of poor mental health include feeling irritable, hopeless or worthless and behaviors such as aggression, drinking more than usual and isolating yourself from friends and family.
+                        </p>
+                    </div>
+                    <div className="clear-both" />
                 </main>
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
@@ -38,6 +53,11 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img
+                                src={waysToLookAfterMentalHealth}
+                                alt="Ways to look after your mental health"
+                                className="float-right ml-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
+                            />
                             <h3 className="text-lg font-semibold text-gray-900">
                                 Some Ways to Look After Your Mental Health
                             </h3>
@@ -47,6 +67,7 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
                                 <li>Spend time with friends.</li>
                                 <li>Share what&apos;s going on, especially if you&apos;re feeling overwhelmed.</li>
                             </ul>
+                            <div className="clear-both" />
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
@@ -69,25 +90,33 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <p className="leading-relaxed">
-                                If you or someone you know are emotionally distressed or in crisis, the most important first step is to talk. Begin a conversation with a friend, family member, health professional or support service. Advice and effective tools are available.
-                            </p>
+                            <img
+                                src={emotionallyDistressed}
+                                alt="Emotionally distressed"
+                                className="float-right ml-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
+                            />
+                            <div className="overflow-hidden">
+                                <p className="leading-relaxed">
+                                    If you or someone you know are emotionally distressed or in crisis, the most important first step is to talk. Begin a conversation with a friend, family member, health professional or support service. Advice and effective tools are available.
+                                </p>
 
-                            <p className="mt-4 leading-relaxed">
-                                Talking, listening and being there for someone doing it tough can be lifesaving. Check in if you know someone is going through a difficult time. Ask if they are doing okay and be prepared to listen.
-                            </p>
+                                <p className="mt-4 leading-relaxed">
+                                    Talking, listening and being there for someone doing it tough can be lifesaving. Check in if you know someone is going through a difficult time. Ask if they are doing okay and be prepared to listen.
+                                </p>
 
-                            <p className="mt-4 text-sm font-medium text-gray-600">
-                                Source:{" "}
-                                <a
-                                    href="https://ca.movember.com/mens-health/mental-health"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="text-purple-700 underline underline-offset-4 hover:text-purple-800"
-                                >
-                                    Movember Canada
-                                </a>
-                            </p>
+                                <p className="mt-4 text-sm font-medium text-gray-600">
+                                    Source:{" "}
+                                    <a
+                                        href="https://ca.movember.com/mens-health/mental-health"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="text-purple-700 underline underline-offset-4 hover:text-purple-800"
+                                    >
+                                        Movember Canada
+                                    </a>
+                                </p>
+                            </div>
+                            <div className="clear-both" />
                         </div>
                     </div>
                 </div>
@@ -97,60 +126,84 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <p className="leading-relaxed">
-                                It&apos;s an illness that can rob you of your will to live. It can also steal:
-                            </p>
+                            <img
+                                src={notASignOfWeakness}
+                                alt="Not a sign of weakness"
+                                className="float-right ml-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
+                            />
+                            <div className="overflow-hidden">
+                                <p className="leading-relaxed">
+                                    It&apos;s an illness that can rob you of your will to live. It can also steal:
+                                </p>
 
-                            <ul className="mt-3 list-disc space-y-2 pl-6 leading-relaxed">
-                                <li>The pleasure from things that used to give you joy.</li>
-                                <li>Your physical energy and strength.</li>
-                                <li>Your connections to friends and family.</li>
-                                <li>Your ability to handle stress.</li>
-                            </ul>
+                                <ul className="mt-3 list-disc space-y-2 pl-6 leading-relaxed">
+                                    <li>The pleasure from things that used to give you joy.</li>
+                                    <li>Your physical energy and strength.</li>
+                                    <li>Your connections to friends and family.</li>
+                                    <li>Your ability to handle stress.</li>
+                                </ul>
 
-                            <p className="mt-4 leading-relaxed">
-                                It&apos;s not a sign of weakness, it&apos;s a fact. Guys get depressed. Depression affects millions of men every year, and is the leading cause of disability worldwide.
-                            </p>
+                                <p className="mt-4 leading-relaxed">
+                                    It&apos;s not a sign of weakness, it&apos;s a fact. Guys get depressed. Depression affects millions of men every year, and is the leading cause of disability worldwide.
+                                </p>
+                            </div>
+                            <div className="clear-both" />
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <p className="leading-relaxed">
-                                There are many misconceptions about depression that make it difficult for men to talk to others and take charge of their health.
-                            </p>
+                            <img
+                                src={manyMisconceptions}
+                                alt="Many misconceptions about depression"
+                                className="float-right ml-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
+                            />
+                            <div className="overflow-hidden">
+                                <p className="leading-relaxed">
+                                    There are many misconceptions about depression that make it difficult for men to talk to others and take charge of their health.
+                                </p>
 
-                            <p className="mt-4 leading-relaxed">
-                                Because of these myths, men will often talk about feeling angry or irritable rather than sad or down. These myths can also feel like handcuffs for men, preventing them from reaching out to others for even a little support. This contributes to many men not seeking support until their depression is very severe, if at all. This can place men at an increased risk of taking their own lives - the greatest risk factor for suicide is untreated depression.
-                            </p>
+                                <p className="mt-4 leading-relaxed">
+                                    Because of these myths, men will often talk about feeling angry or irritable rather than sad or down. These myths can also feel like handcuffs for men, preventing them from reaching out to others for even a little support. This contributes to many men not seeking support until their depression is very severe, if at all. This can place men at an increased risk of taking their own lives - the greatest risk factor for suicide is untreated depression.
+                                </p>
+                            </div>
+                            <div className="clear-both" />
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <p className="leading-relaxed">
-                                Fortunately, more and more men, including professional athletes, musicians, actors, lawyers, businessmen, writers, tradesmen, teachers, men in the military, and everyone in between, are &apos;going public&apos; about depression and taking control of their health.
-                            </p>
+                            <img
+                                src={moreAndMoreMen}
+                                alt="More and more men"
+                                className="float-right ml-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
+                            />
+                            <div className="overflow-hidden">
+                                <p className="leading-relaxed">
+                                    Fortunately, more and more men, including professional athletes, musicians, actors, lawyers, businessmen, writers, tradesmen, teachers, men in the military, and everyone in between, are &apos;going public&apos; about depression and taking control of their health.
+                                </p>
 
-                            <p className="mt-4 leading-relaxed">
-                                The myths are breaking down, freeing guys to talk about and tackle their depression.
-                            </p>
+                                <p className="mt-4 leading-relaxed">
+                                    The myths are breaking down, freeing guys to talk about and tackle their depression.
+                                </p>
 
-                            <p className="mt-4 leading-relaxed">
-                                Ignoring or hiding the pain of depression only makes things worse. This site will provide you with tips and tools, information about professional services, and stories of success that show you how depression can be overcome.
-                            </p>
+                                <p className="mt-4 leading-relaxed">
+                                    Ignoring or hiding the pain of depression only makes things worse. This site will provide you with tips and tools, information about professional services, and stories of success that show you how depression can be overcome.
+                                </p>
 
-                            <p className="mt-4 leading-relaxed">
-                                It starts with you recognizing depression and then making important changes in your life to overcome it. It takes courage. It takes strength. It takes work. But know that it can be done.
-                            </p>
+                                <p className="mt-4 leading-relaxed">
+                                    It starts with you recognizing depression and then making important changes in your life to overcome it. It takes courage. It takes strength. It takes work. But know that it can be done.
+                                </p>
 
-                            <p className="mt-4 text-sm font-medium text-gray-600">
-                                Source:{" "}
-                                <a
-                                    href="https://headsupguys.org"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="text-purple-700 underline underline-offset-4 hover:text-purple-800"
-                                >
-                                    Heads Up Guys
-                                </a>
-                            </p>
+                                <p className="mt-4 text-sm font-medium text-gray-600">
+                                    Source:{" "}
+                                    <a
+                                        href="https://headsupguys.org"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="text-purple-700 underline underline-offset-4 hover:text-purple-800"
+                                    >
+                                        Heads Up Guys
+                                    </a>
+                                </p>
+                            </div>
+                            <div className="clear-both" />
                         </div>
                     </div>
                 </div>
@@ -160,29 +213,45 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <a
-                                href="https://mantherapy.org"
-                                className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
-                            >
-                                Man Therapy
-                            </a>
+                            <img
+                                src={manTherapy}
+                                alt="Man Therapy"
+                                className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
+                            />
+                            <div className="overflow-hidden">
+                                <a
+                                    href="https://mantherapy.org"
+                                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                                >
+                                    Man Therapy
+                                </a>
 
-                            <p className="mt-2 leading-relaxed">
-                                Suicide is a complex issue with many unique, contributing variables. While there is no magic solution when it comes to suicide prevention, we believe the best defense is a good offense. After years of research, Man Therapy(R) was created as an upstream approach to preventing suicide for the highest-risk men, who often don&apos;t receive support. The innovative campaign and 24/7 digital platform gets working-aged men to think differently about their mental health and take action before they ever reach a point of crisis. Man Therapy(R) has spent over ten years breaking down barriers to help-seeking behavior and smashing the notion that men can&apos;t talk about their feelings.
-                            </p>
+                                <p className="mt-2 leading-relaxed">
+                                    Suicide is a complex issue with many unique, contributing variables. While there is no magic solution when it comes to suicide prevention, we believe the best defense is a good offense. After years of research, Man Therapy(R) was created as an upstream approach to preventing suicide for the highest-risk men, who often don&apos;t receive support. The innovative campaign and 24/7 digital platform gets working-aged men to think differently about their mental health and take action before they ever reach a point of crisis. Man Therapy(R) has spent over ten years breaking down barriers to help-seeking behavior and smashing the notion that men can&apos;t talk about their feelings.
+                                </p>
+                            </div>
+                            <div className="clear-both" />
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <a
-                                href={menGetDepression}
-                                className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
-                            >
-                                Men Get Depression
-                            </a>
+                            <img
+                                src={menGetDepressionImg}
+                                alt="Men Get Depression"
+                                className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
+                            />
+                            <div className="overflow-hidden">
+                                <a
+                                    href={menGetDepression}
+                                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                                >
+                                    Men Get Depression
+                                </a>
 
-                            <p className="mt-2 leading-relaxed">
-                                You may have depression and not know it. This booklet will help you find out. Maybe you know that you are depressed but don&apos;t know where to get help. We&apos;ll show you some safe places to start looking. Maybe you know a man who seems depressed. We&apos;ll show you how to help. Getting help for your depression can make a big difference in your life and in the lives of those you love and those who love you.
-                            </p>
+                                <p className="mt-2 leading-relaxed">
+                                    You may have depression and not know it. This booklet will help you find out. Maybe you know that you are depressed but don&apos;t know where to get help. We&apos;ll show you some safe places to start looking. Maybe you know a man who seems depressed. We&apos;ll show you how to help. Getting help for your depression can make a big difference in your life and in the lives of those you love and those who love you.
+                                </p>
+                            </div>
+                            <div className="clear-both" />
                         </div>
                     </div>
                 </div>

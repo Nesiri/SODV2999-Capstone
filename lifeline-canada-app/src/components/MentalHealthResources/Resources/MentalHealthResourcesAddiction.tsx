@@ -1,30 +1,51 @@
 import React from "react";
 import { Sparkles } from "lucide-react";
 
+const coverPhoto = '/assets/AdditionalResourceImages/addict2-600x494.jpg';
+const alberta = '/assets/AdditionalResourceImages/AlbertaHealthServices.png';
+const britishColumbia = '/assets/AdditionalResourceImages/BritishColumbia.jpg';
+const manitoba = '/assets/AdditionalResourceImages/AddictionsFoundationsOfManitoba.png';
+const newBrunswick = '/assets/AdditionalResourceImages/NewBrunswick.png';
+const newfoundland = '/assets/AdditionalResourceImages/Newfoundland.png';
+const northwestTerritories = '/assets/AdditionalResourceImages/NorthwestTerritories.png';
+const novaScotia = '/assets/AdditionalResourceImages/NovaScotia.png';
+const nunavut = '/assets/AdditionalResourceImages/Nunavut.png';
+const ontario = '/assets/AdditionalResourceImages/ConnexOntario.png';
+const princeEdwardIsland = '/assets/AdditionalResourceImages/PEI.png';
+const quebec = '/assets/AdditionalResourceImages/Quebec.webp';
+const saskatchewan = '/assets/AdditionalResourceImages/Saskatchewan.png';
+const yukon = '/assets/AdditionalResourceImages/Yukon.png';
+const canadianCentreForAddictions = '/assets/AdditionalResourceImages/CanadianCentreForAddictions.png';
+
 const MentalHealthResourcesAddiction: React.FC = () => {
     return (
         <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-12">
             <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-                <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm border border-purple-100">
-                    <Sparkles className="w-4 h-4 text-purple-600" />
-                    <span className="text-xs sm:text-sm font-medium text-purple-700">Mental Health Support</span>
+
+                <div className="flex flex-col sm:flex-row items-start gap-6">
+                    <div className="flex-1">
+                        <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
+                            <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
+                                Addiction
+                            </span>
+                        </h1>
+
+                        <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+                            <img
+                                src={coverPhoto}
+                                alt="Addiction awareness"
+                                className="float-right ml-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
+                            />
+                            <p className="leading-relaxed">
+                                Although addiction is not technically considered a mental illness, it is a medical disorder that often co-occurs with mental illnesses. Some illnesses like depression and anxiety can be the root causes of substance abuse. One of the main characteristics of addiction is that people are compelled to use rather than doing so through choice.
+                            </p>
+
+                            <p className="mt-4 leading-relaxed">
+                                The symptoms of depression can drive some people toward substance use to cope with their condition. However, consuming drugs or alcohol to self-medicate can increase the risk for addiction. Depression can raise the risk of substance abuse, as chemical intoxicants can be a way to self-medicate by numbing feelings of despair. This chemical intoxication can make depressive episodes more severe, thereby exacerbating self-destructive behavior and pessimistic thoughts.
+                            </p>
+                        </main>
+                    </div>
                 </div>
-
-                <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
-                    <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
-                        Addiction
-                    </span>
-                </h1>
-
-                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
-                    <p className="leading-relaxed">
-                        Although addiction is not technically considered a mental illness, it is a medical disorder that often co-occurs with mental illnesses. Some illnesses like depression and anxiety can be the root causes of substance abuse. One of the main characteristics of addiction is that people are compelled to use rather than doing so through choice.
-                    </p>
-
-                    <p className="mt-4 leading-relaxed">
-                        The symptoms of depression can drive some people toward substance use to cope with their condition. However, consuming drugs or alcohol to self-medicate can increase the risk for addiction. Depression can raise the risk of substance abuse, as chemical intoxicants can be a way to self-medicate by numbing feelings of despair. This chemical intoxication can make depressive episodes more severe, thereby exacerbating self-destructive behavior and pessimistic thoughts.
-                    </p>
-                </main>
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
                     <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
@@ -33,71 +54,85 @@ const MentalHealthResourcesAddiction: React.FC = () => {
 
                     <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={alberta} alt="Alberta Health Services" className="w-full h-24 object-contain mb-3" />
                             <a href="https://www.albertahealthservices.ca/findhealth/service.aspx?Id=1008399" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">Alberta</a>
                             <p className="mt-2 leading-relaxed">1-866-332-2322<br />780-427-7164</p>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={britishColumbia} alt="British Columbia" className="w-full h-24 object-contain mb-3" />
                             <a href="https://www.healthlinkbc.ca/mental-health-and-substance-use/substance-use" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">British Columbia</a>
                             <p className="mt-2 leading-relaxed">1-800-663-1441<br />604-660-9382</p>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={manitoba} alt="Manitoba" className="w-full h-24 object-contain mb-3" />
                             <a href="https://sharedhealthmb.ca/services/mental-health/" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">Manitoba</a>
                             <p className="mt-2 leading-relaxed">Adult: 1-855-662-6605<br />Youth: 1-877-710-3999<br />204-944-6200</p>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={newBrunswick} alt="New Brunswick" className="w-full h-24 object-contain mb-3" />
                             <a href="https://www.gnb.ca/en/topic/health-wellness/mental-health.html" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">New Brunswick</a>
                             <p className="mt-2 leading-relaxed">1-866-355-5550</p>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={newfoundland} alt="Newfoundland & Labrador" className="w-full h-24 object-contain mb-3" />
                             <a href="https://www.gov.nl.ca/hcs/mentalhealth-committee/mentalhealth/" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">Newfoundland &amp; Labrador</a>
                             <p className="mt-2 leading-relaxed">1-888-737-4668<br />709-729-3658</p>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={northwestTerritories} alt="Northwest Territories" className="w-full h-24 object-contain mb-3" />
                             <a href="https://www.hss.gov.nt.ca/en/contact/community-counsellor" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">Northwest Territories</a>
                             <p className="mt-2 leading-relaxed">1-800-661-0844<br />867-873-7037</p>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={novaScotia} alt="Nova Scotia" className="w-full h-24 object-contain mb-3" />
                             <a href="https://novascotia.ca/dhw/addictions/addiction-services-offices.asp" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">Nova Scotia</a>
                             <p className="mt-2 leading-relaxed">1-866-340-6700<br />902-424-8866</p>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={nunavut} alt="Nunavut" className="w-full h-24 object-contain mb-3" />
                             <a href="https://nunavuthelpline.ca" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">Nunavut</a>
                             <p className="mt-2 leading-relaxed">1-800-265-3333<br />867-979-3333</p>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={ontario} alt="Ontario" className="w-full h-24 object-contain mb-3" />
                             <a href="https://connexontario.ca" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">Ontario</a>
                             <p className="mt-2 leading-relaxed">1-866-531-2600</p>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={princeEdwardIsland} alt="Prince Edward Island" className="w-full h-24 object-contain mb-3" />
                             <a href="https://www.princeedwardisland.ca/en/information/health-pei/help-for-addiction-and-substance-use?utm_source=redirect&utm_medium=url&utm_campaign=addiction-services" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">Prince Edward Island</a>
                             <p className="mt-2 leading-relaxed">1-888-299-8399<br />902-368-4120</p>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={quebec} alt="Quebec" className="w-full h-24 object-contain mb-3" />
                             <a href="" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">Quebec</a>
                             <p className="mt-2 leading-relaxed">1-800-265-2626<br />514-527-2626</p>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={saskatchewan} alt="Saskatchewan" className="w-full h-24 object-contain mb-3" />
                             <a href="https://www.saskatchewan.ca/residents/health/accessing-health-care-services/healthline" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">Saskatchewan</a>
                             <p className="mt-2 leading-relaxed">811 or 1-877-800-0002<br />306-766-6600</p>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={yukon} alt="Yukon" className="w-full h-24 object-contain mb-3" />
                             <a href="https://yukon.ca/en/mental-wellness" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">Yukon</a>
                             <p className="mt-2 leading-relaxed">1-800-661-0408 Ext 5777<br />After hours:<br />1-800-661-0408 Ext. 8473<br />867-667-5777</p>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img src={canadianCentreForAddictions} alt="Canadian Centre for Addictions" className="w-full h-24 object-contain mb-3" />
                             <a
                                 href="https://canadiancentreforaddictions.org"
                                 target="_blank"

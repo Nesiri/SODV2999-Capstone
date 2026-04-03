@@ -128,7 +128,7 @@ export const resourceCategories = [
         color: 'from-purple-400 to-violet-400',
       },
       {
-        name: 'Indigenous Issues',
+        name: 'Indigenous',
         path: '/resources/indigenous',
         icon: '🪶',
         color: 'from-amber-400 to-orange-400',

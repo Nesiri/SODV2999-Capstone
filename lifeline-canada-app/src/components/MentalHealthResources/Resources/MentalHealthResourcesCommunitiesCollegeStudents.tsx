@@ -1,15 +1,33 @@
 import React from "react";
-import { Sparkles } from "lucide-react";
 const studentCopingGuide = "/pdfs/StudentGuidetoCopingwithEmotionalCrisis.pdf";
+
+const coverPhoto = '/assets/AdditionalResourceImages/college-600x400.webp';
+
+const emotionalResponse = '/assets/AdditionalResourceImages/Emotional.png';
+const cognitiveResponse = '/assets/AdditionalResourceImages/Responses-400x359.png';
+const physicalResponse = '/assets/AdditionalResourceImages/stress-response-1024x1024-1-400x400.webp';
+const behavioralResponse = '/assets/AdditionalResourceImages/taming-your-reactions-to-stress-with-cognitive-behavioral-therapy-and-the-cvi-400x286.jpg';
+
+const howSchoolStaffCanHelp = '/assets/AdditionalResourceImages/Preventing-Suicide-in-Schools_A-Systemwide-Approach-600x385.jpg';
+const returningToSchool = '/assets/AdditionalResourceImages/schoolsuicides-600x400.png';
+const discussMissedWork = '/assets/AdditionalResourceImages/suicideschools-ORIG.jpg';
+
+const suicidePreventionForStudents = '/assets/AdditionalResourceImages/psychologyOrg.png';
+
+const here2talk = '/assets/AdditionalResourceImages/here2Talk.png';
+const activeMinds = '/assets/AdditionalResourceImages/activeMinds.png';
+const jackOrg = '/assets/AdditionalResourceImages/jackOrg.png';
+const uLifeLine = '/assets/AdditionalResourceImages/uLifeLine.png';
+const centreForOnlineEducation = '/assets/AdditionalResourceImages/centerForOnlineEducation.png';
+const centreForInnovation = '/assets/AdditionalResourceImages/centreForInnovation.png';
+const americanCollegeHealthAssociation = '/assets/AdditionalResourceImages/americanCollegeHealthAssocation.png';
+const beyondOCD = '/assets/AdditionalResourceImages/beyondOCD.png';
+const kognito = '/assets/AdditionalResourceImages/kognito.png';
 
 const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
     return (
         <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-12">
             <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-                <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm border border-purple-100">
-                    <Sparkles className="w-4 h-4 text-purple-600" />
-                    <span className="text-xs sm:text-sm font-medium text-purple-700">Mental Health Support</span>
-                </div>
 
                 <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
                     <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
@@ -18,6 +36,11 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                 </h1>
 
                 <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+                    <img
+                        src={coverPhoto}
+                        alt="College Students"
+                        className="float-right ml-6 mb-4 w-64 sm:w-80 rounded-xl shadow-md object-cover"
+                    />
                     <p className="leading-relaxed">
                         Mental health problems can affect many areas of students' lives, reducing their quality of life, academic achievement, physical health, and satisfaction with the college experience, and negatively impacting relationships with friends and family members.
                     </p>
@@ -25,6 +48,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                     <p className="mt-4 leading-relaxed">
                         Being a student can be stressful enough, but trying to juggle schoolwork and other responsibilities while experiencing mental illness can make it that much harder. But students can work through many challenges and still perform well in school.
                     </p>
+                    <div className="clear-both" />
                 </main>
 
                 {/* Student Guide To Coping With Emotional Crisis */}
@@ -44,7 +68,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
 
                     <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {/* Emotional Responses */}
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col">
                             <h3 className="text-lg font-semibold text-purple-700">Emotional Responses</h3>
                             <ul className="mt-3 space-y-1 list-disc list-inside text-sm leading-relaxed">
                                 <li>Shock, denial or disbelief</li>
@@ -58,10 +82,15 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                                 <li>Grief</li>
                                 <li>Numbness</li>
                             </ul>
+                            <img
+                                src={emotionalResponse}
+                                alt="Emotional Responses"
+                                className="mt-4 w-40 sm:w-48 mx-auto rounded-lg shadow-sm object-contain bg-gray-50"
+                            />
                         </div>
 
                         {/* Cognitive Responses */}
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col">
                             <h3 className="text-lg font-semibold text-purple-700">Cognitive Responses</h3>
                             <ul className="mt-3 space-y-1 list-disc list-inside text-sm leading-relaxed">
                                 <li>Difficulties concentrating</li>
@@ -73,10 +102,15 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                                 <li>Nightmares about the precipitating event</li>
                                 <li>Flashbacks about the event</li>
                             </ul>
+                            <img
+                                src={cognitiveResponse}
+                                alt="Cognitive Responses"
+                                className="mt-4 w-40 sm:w-48 mx-auto rounded-lg shadow-sm object-contain bg-gray-50"
+                            />
                         </div>
 
                         {/* Physical Responses */}
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col">
                             <h3 className="text-lg font-semibold text-purple-700">Physical Responses</h3>
                             <ul className="mt-3 space-y-1 list-disc list-inside text-sm leading-relaxed">
                                 <li>Stomach problems (i.e. nausea)</li>
@@ -89,10 +123,15 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                                 <li>Exaggerated startle response</li>
                                 <li>Chest pain</li>
                             </ul>
+                            <img
+                                src={physicalResponse}
+                                alt="Physical Responses"
+                                className="mt-4 w-40 sm:w-48 mx-auto rounded-lg shadow-sm object-contain bg-gray-50"
+                            />
                         </div>
 
                         {/* Behavioral Responses */}
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col">
                             <h3 className="text-lg font-semibold text-purple-700">Behavioral Responses</h3>
                             <ul className="mt-3 space-y-1 list-disc list-inside text-sm leading-relaxed">
                                 <li>Social withdrawal or isolation</li>
@@ -105,6 +144,11 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                                 <li>Reduced sexual interest</li>
                                 <li>Emotional outbursts (i.e., crying, giggling)</li>
                             </ul>
+                            <img
+                                src={behavioralResponse}
+                                alt="Behavioral Responses"
+                                className="mt-4 w-40 sm:w-48 mx-auto rounded-lg shadow-sm object-contain bg-gray-50"
+                            />
                         </div>
                     </div>
 
@@ -136,26 +180,43 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                     <div className="mt-6 space-y-4">
                         {/* Sub-div 1: School faculty and staff */}
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img
+                                src={howSchoolStaffCanHelp}
+                                alt="How school staff can help"
+                                className="float-right ml-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
+                            />
                             <p className="leading-relaxed">
                                 The school faculty and staff may also not know how to be supportive to the returning student. Many staff can be insensitive and say thoughtless things that other students may overhear in the office or hallways. Many staff hold outdated beliefs about mental health treatment which may not lead to the most positive climate for the student. Still other staff, who are knowledgeable about mental health issues and who themselves may have or know others in their own life with mental illness, may be the most compassionate.
                             </p>
                             <p className="mt-4 leading-relaxed">
                                 <span className="font-semibold text-purple-700">How school staff can help:</span> Coming back to school after a traumatic absence is difficult for students, but returning after a suicide attempt is quiet challenging, especially if everyone knows. Try to give the student as much control as possible over the situation. Meet with the student before her return to school, plan together what she does and doesn't want you to say and to whom. Practicing role playing so that she can try out different responses to different situations that may arise will help lower her anxiety. Teaching her to say, "I don't want to talk about it" gives the student permission to be as private as she would like to be about the circumstances regarding her absence as needed.
                             </p>
+                            <div className="clear-both" />
                         </div>
 
                         {/* Sub-div 2: Consent and safety net */}
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img
+                                src={returningToSchool}
+                                alt="Returning to school"
+                                className="float-right ml-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
+                            />
                             <p className="leading-relaxed">
                                 You may want to ask the student (and parents) for permission to let some of her teachers and some students (that may be in clubs or sports) with her, to know how she wants to be treated. It is also important that the student's counselor gets consent to read the student's discharge plan and recommendations as well as to speak with the outside therapist. This helps the student by building a safety net for her.
                             </p>
                             <p className="mt-4 leading-relaxed">
                                 The return to school requires individualized attention and regular follow up. If the attempt isn't public knowledge, not everyone in the school needs to know the details around the student's absence. Faculty and staff who have direct contact with the student, should be part of her safety net that monitors continuing risk. Giving instructions to those members of the staff about how they can be most helpful to the student will benefit both the student and staff.
                             </p>
+                            <div className="clear-both" />
                         </div>
 
                         {/* Sub-div 3: Ideas for staff */}
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img
+                                src={discussMissedWork}
+                                alt="Discuss missed work"
+                                className="float-right ml-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
+                            />
                             <p className="font-semibold text-purple-700 mb-3">Here are some ideas:</p>
                             <ul className="space-y-2 list-disc list-inside leading-relaxed">
                                 <li>Treat the student's return to school as you would had the student been out sick for a few days.</li>
@@ -180,15 +241,23 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                     <div className="mt-6">
                         {/* Suicide Prevention for Students */}
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <a
-                                href="https://www.psychology.org/resources/"
-                                className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
-                            >
-                                Suicide Prevention for Students
-                            </a>
-                            <p className="mt-3 text-sm leading-relaxed">
-                                This guide is dedicated to helping those who are suffering or have suffered from depression, suicidal thoughts or suicide attempts. It is also designed for concerned friends and family members who might be worried that someone they love will experience death by suicide. Finally, it is meant for students, so that they might spot the warning signs of suicide in others – or in themselves – and find the proper resources.
-                            </p>
+                            <img
+                                src={suicidePreventionForStudents}
+                                alt="Suicide Prevention for Students"
+                                className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
+                            />
+                            <div className="overflow-hidden">
+                                <a
+                                    href="https://www.psychology.org/resources/"
+                                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                                >
+                                    Suicide Prevention for Students
+                                </a>
+                                <p className="mt-3 text-sm leading-relaxed">
+                                    This guide is dedicated to helping those who are suffering or have suffered from depression, suicidal thoughts or suicide attempts. It is also designed for concerned friends and family members who might be worried that someone they love will experience death by suicide. Finally, it is meant for students, so that they might spot the warning signs of suicide in others – or in themselves – and find the proper resources.
+                                </p>
+                            </div>
+                            <div className="clear-both" />
                         </div>
                     </div>
                 </div>
@@ -202,6 +271,11 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                     <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {/* Here2Talk */}
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img
+                                src={here2talk}
+                                alt="Here2Talk"
+                                className="w-full h-40 object-contain rounded-lg mb-3 bg-gray-50"
+                            />
                             <a href="https://here2talk.ca/main" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Here2Talk
                             </a>
@@ -212,6 +286,11 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
 
                         {/* Active Minds on Campus */}
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img
+                                src={activeMinds}
+                                alt="Active Minds on Campus"
+                                className="w-full h-40 object-contain rounded-lg mb-3 bg-gray-50"
+                            />
                             <a href="https://activeminds.org" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Active Minds on Campus
                             </a>
@@ -222,6 +301,11 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
 
                         {/* Jack.org */}
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img
+                                src={jackOrg}
+                                alt="Jack.org"
+                                className="w-full h-40 object-contain rounded-lg mb-3 bg-gray-50"
+                            />
                             <a href="https://www.jack.org" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Jack.org
                             </a>
@@ -232,6 +316,11 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
 
                         {/* ULifeLine */}
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img
+                                src={uLifeLine}
+                                alt="ULifeLine"
+                                className="w-full h-40 object-contain rounded-lg mb-3 bg-gray-50"
+                            />
                             <a href="https://jedfoundation.org/ulifeline-transition/" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 ULifeLine
                             </a>
@@ -242,6 +331,11 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
 
                         {/* Centre for Online Education */}
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img
+                                src={centreForOnlineEducation}
+                                alt="Centre for Online Education"
+                                className="w-full h-40 object-contain rounded-lg mb-3 bg-gray-50"
+                            />
                             <a href="https://www.onlinecolleges.net/for-students/mental-health-resources/" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Centre for Online Education
                             </a>
@@ -252,6 +346,11 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
 
                         {/* Centre for Innovation in Campus Mental Health */}
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img
+                                src={centreForInnovation}
+                                alt="Centre for Innovation in Campus Mental Health"
+                                className="w-full h-40 object-contain rounded-lg mb-3 bg-gray-50"
+                            />
                             <a href="https://campusmentalhealth.ca/external-resources/" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Centre for Innovation in Campus Mental Health
                             </a>
@@ -262,6 +361,11 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
 
                         {/* American College Health Association */}
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img
+                                src={americanCollegeHealthAssociation}
+                                alt="American College Health Association"
+                                className="w-full h-40 object-contain rounded-lg mb-3 bg-gray-50"
+                            />
                             <a href="https://www.acha.org" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 American College Health Association
                             </a>
@@ -272,6 +376,11 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
 
                         {/* Beyond OCD */}
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img
+                                src={beyondOCD}
+                                alt="Beyond OCD"
+                                className="w-full h-40 object-contain rounded-lg mb-3 bg-gray-50"
+                            />
                             <a href="http://beyondocd.org/information-for-college-students" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Beyond OCD: Overcoming OCD – The College Student's Guide
                             </a>
@@ -282,6 +391,11 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
 
                         {/* Kognito's At-Risk on Campus */}
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <img
+                                src={kognito}
+                                alt="Kognito's At-Risk on Campus"
+                                className="w-full h-40 object-contain rounded-lg mb-3 bg-gray-50"
+                            />
                             <a href="https://kognito.com/?markets=Higher%20Ed" className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Kognito's At-Risk on Campus
                             </a>

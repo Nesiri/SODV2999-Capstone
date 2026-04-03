@@ -1,6 +1,11 @@
 import React from "react";
 import { Sparkles } from "lucide-react";
 
+const coverPhoto = '/assets/AdditionalResourceImages/emotionalSupport-600x400.jpg';
+const survivorsOfSuicideLoss = '/assets/AdditionalResourceImages/survivorsOf_hand-ribbon-200x133.jpg';
+const afterASuicideLoss = '/assets/AdditionalResourceImages/afterSuicide-200x160.jpg';
+const resourceOrganizations = '/assets/AdditionalResourceImages/organizations-200x113.jpg';
+
 type ProvinceResource = {
   title: string;
   content: string;
@@ -338,10 +343,6 @@ const MentalHealthSurvivorsBereavedSupport: React.FC = () => {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-12">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm border border-purple-100">
-          <Sparkles className="w-4 h-4 text-purple-600" />
-          <span className="text-xs sm:text-sm font-medium text-purple-700">Mental Health Support</span>
-        </div>
 
         <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
           <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
@@ -349,17 +350,26 @@ const MentalHealthSurvivorsBereavedSupport: React.FC = () => {
           </span>
         </h1>
 
-        <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
-          <p className="leading-relaxed">
-            Grieving a loss to suicide can seem overwhelming, but the support and understanding of others can be a
-            powerful source of strength.
-          </p>
+        <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
+          <div className="flex-1">
+            <p className="leading-relaxed">
+              Grieving a loss to suicide can seem overwhelming, but the support and understanding of others can be a
+              powerful source of strength.
+            </p>
 
-          <p className="mt-4 leading-relaxed">
-            Bereavement support, or grief and loss services, can help family members and loved ones process emotions
-            and understand how they&apos;re feeling during this painful time. Grief support services can also help you
-            celebrate the life of your family member and focus on the positive aspects of their journey.
-          </p>
+            <p className="mt-4 leading-relaxed">
+              Bereavement support, or grief and loss services, can help family members and loved ones process emotions
+              and understand how they&apos;re feeling during this painful time. Grief support services can also help you
+              celebrate the life of your family member and focus on the positive aspects of their journey.
+            </p>
+          </div>
+          <div className="sm:w-64 sm:flex-shrink-0 w-full">
+            <img
+              src={coverPhoto}
+              alt="Bereaved Support"
+              className="w-full h-full object-cover rounded-lg shadow-md"
+            />
+          </div>
         </main>
 
         <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
@@ -405,6 +415,7 @@ const MentalHealthSurvivorsBereavedSupport: React.FC = () => {
 
           <div className="mt-6 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
             <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+              <img src={survivorsOfSuicideLoss} alt="Survivors of Suicide Loss" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
               <a
                 href="/resources/suicide-loss"
                 className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
@@ -414,6 +425,7 @@ const MentalHealthSurvivorsBereavedSupport: React.FC = () => {
             </div>
 
             <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+              <img src={afterASuicideLoss} alt="After A Suicide Loss" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
               <a
                 href="/resources/after-suicide-loss"
                 className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
@@ -423,6 +435,7 @@ const MentalHealthSurvivorsBereavedSupport: React.FC = () => {
             </div>
 
             <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+              <img src={resourceOrganizations} alt="Resource Organizations" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
               <a
                 href="/resources/organizations"
                 className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"

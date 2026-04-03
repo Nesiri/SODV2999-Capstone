@@ -1,14 +1,36 @@
 import React from "react";
-import { Sparkles } from "lucide-react";
+
+const coverPhoto = '/assets/AdditionalResourceImages/organizations-200x113.jpg';
+const afterASuicideLoss = '/assets/AdditionalResourceImages/afterSuicide-200x160.jpg';
+const bereavedSupport = '/assets/AdditionalResourceImages/emotionalSupport-600x400.jpg';
+const survivorsOfSuicideLoss = '/assets/AdditionalResourceImages/survivorsOf_hand-ribbon-200x133.jpg';
+
+const kidsHelpPhone = '/assets/AdditionalResourceImages/kidsHelpPhone-1-800x352.jpg';
+const CMHA = '/assets/AdditionalResourceImages/CMHA.png';
+const CASP = '/assets/AdditionalResourceImages/CASP-200x69.png';
+const centreForSuicidePrevention = '/assets/AdditionalResourceImages/CentreForSuicidePrevention.png';
+const keltyMentalHealth = '/assets/AdditionalResourceImages/KeltyMentalHealth.png';
+const suicidePreventionResourceCentre = '/assets/AdditionalResourceImages/SuicidePreventionResourceCentreCanada.png';
+const klinicCommunityHealth = '/assets/AdditionalResourceImages/klinic-200x50.jpg';
+const mentalHealthCommissionOfCanada = '/assets/AdditionalResourceImages/MentalHealthComission.png';
+const ontarioSuicidePreventionRoundtable = '/assets/AdditionalResourceImages/OntarioSuicidePreventionRoundtable.png';
+
+const nationSuicidePreventionLifeline = '/assets/AdditionalResourceImages/NationsalSuicidePreventionLifeline.png';
+const americanFoundationForSuicidePrevention = '/assets/AdditionalResourceImages/AmericanFoundationForSuicidePrevention.png';
+const centerForMentalHealthServices = '/assets/AdditionalResourceImages/SAMHSA.png';
+const helpYourselfHelpOthers = '/assets/AdditionalResourceImages/MindWise.png';
+const depressionAndBipolarSupportAlliance = '/assets/AdditionalResourceImages/DBSA.png';
+const studentMentalHealthResources = '/assets/AdditionalResourceImages/Accredited.png';
+const nationalAllianceForTheMentallyIll = '/assets/AdditionalResourceImages/NAMI.png';
+const suicidePreventionResourceCenter = '/assets/AdditionalResourceImages/SPRC.png';
+
+const internationalAssociationForSuicidePrevention = '/assets/AdditionalResourceImages/InternationalAssociationForSuicidePrevention.png';
+const worldHealthOrganization = '/assets/AdditionalResourceImages/WHO.png';
 
 const MentalHealthResourcesOrganizations: React.FC = () => {
     return (
         <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-12">
             <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-                <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm border border-purple-100">
-                    <Sparkles className="w-4 h-4 text-purple-600" />
-                    <span className="text-xs sm:text-sm font-medium text-purple-700">Mental Health Support</span>
-                </div>
 
                 <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
                     <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
@@ -16,19 +38,28 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                     </span>
                 </h1>
 
-                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
-                    <p className="leading-relaxed">
-                        There is plenty of help out there for those looking for Mental Health support. We have scoured the
-                        web for some of the top providers of Suicide prevention resources and information. Below are links
-                        to their websites and blogs.
-                    </p>
+                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
+                    <div className="flex-1">
+                        <p className="leading-relaxed">
+                            There is plenty of help out there for those looking for Mental Health support. We have scoured the
+                            web for some of the top providers of Suicide prevention resources and information. Below are links
+                            to their websites and blogs.
+                        </p>
 
-                    <p className="mt-4 leading-relaxed">
-                        The guides, toolkits and resources on this page and throughout this site represent a compilation
-                        of suicide prevention resources from various sources across the Globe as noted. When clicking 3rd
-                        party links, you will be redirected to websites not affiliated but has our underlying support at
-                        The LifeLine Canada Foundation.
-                    </p>
+                        <p className="mt-4 leading-relaxed">
+                            The guides, toolkits and resources on this page and throughout this site represent a compilation
+                            of suicide prevention resources from various sources across the Globe as noted. When clicking 3rd
+                            party links, you will be redirected to websites not affiliated but has our underlying support at
+                            The LifeLine Canada Foundation.
+                        </p>
+                    </div>
+                    <div className="sm:w-64 sm:flex-shrink-0 w-full">
+                        <img
+                            src={coverPhoto}
+                            alt="Resource Organizations"
+                            className="w-full h-full object-cover rounded-lg shadow-md"
+                        />
+                    </div>
                 </main>
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
@@ -38,7 +69,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                         </summary>
 
                         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                            <img src={kidsHelpPhone} alt="Kids Help Phone" className="mx-auto h-16 w-auto object-contain mb-4" />
                             <a href="https://kidshelpphone.ca" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Kids Help Phone
                             </a>
@@ -47,7 +79,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                             </p>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                            <img src={CMHA} alt="CMHA Canadian Mental Health" className="mx-auto h-16 w-auto object-contain mb-4" />
                             <a href="https://cmha.ca" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 CMHA Canadian Mental Health
                             </a>
@@ -56,7 +89,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                             </p>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                            <img src={CASP} alt="Canadian Association for Suicide Prevention" className="mx-auto h-16 w-auto object-contain mb-4" />
                             <a href="https://suicideprevention.ca" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Canadian Association for Suicide Prevention
                             </a>
@@ -65,7 +99,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                             </p>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                            <img src={centreForSuicidePrevention} alt="Centre For Suicide Prevention Canada" className="mx-auto h-16 w-auto object-contain mb-4" />
                             <a href="https://www.suicideinfo.ca/resources/" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Centre For Suicide Prevention Canada
                             </a>
@@ -74,7 +109,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                             </p>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                            <img src={keltyMentalHealth} alt="Kelty Mental Health Resource Centre" className="mx-auto h-16 w-auto object-contain mb-4" />
                             <a href="https://keltymentalhealth.ca" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Kelty Mental Health Resource Centre
                             </a>
@@ -83,7 +119,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                             </p>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                            <img src={suicidePreventionResourceCentre} alt="Suicide Prevention Resource Centre Canada" className="mx-auto h-16 w-auto object-contain mb-4" />
                             <a href="https://www.sp-rc.ca" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Suicide Prevention Resource Centre Canada
                             </a>
@@ -92,7 +129,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                             </p>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                            <img src={klinicCommunityHealth} alt="Klinic Community Health" className="mx-auto h-16 w-auto object-contain mb-4" />
                             <a href="https://klinic.mb.ca" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Klinic Community Health
                             </a>
@@ -101,7 +139,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                             </p>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                            <img src={mentalHealthCommissionOfCanada} alt="Mental Health Commission of Canada" className="mx-auto h-16 w-auto object-contain mb-4" />
                             <a href="https://mentalhealthcommission.ca" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Mental Health Commission of Canada
                             </a>
@@ -110,7 +149,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                             </p>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                            <img src={ontarioSuicidePreventionRoundtable} alt="Ontario Suicide Prevention Roundtable" className="mx-auto h-16 w-auto object-contain mb-4" />
                             <a href="https://wrspc.ca/about-us/ontario-suicide-prevention-roundtable/" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Ontario Suicide Prevention Roundtable
                             </a>
@@ -129,7 +169,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                         </summary>
 
                         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                                <img src={nationSuicidePreventionLifeline} alt="National Suicide Prevention Lifeline" className="mx-auto h-16 w-auto object-contain mb-4" />
                                 <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                     The National Suicide Prevention Lifeline
                                 </a>
@@ -138,7 +179,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                                 </p>
                             </div>
 
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                                <img src={americanFoundationForSuicidePrevention} alt="American Foundation for Suicide Prevention" className="mx-auto h-16 w-auto object-contain mb-4" />
                                 <a href="https://afsp.org" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                     American Foundation for Suicide Prevention
                                 </a>
@@ -147,7 +189,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                                 </p>
                             </div>
 
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                                <img src={centerForMentalHealthServices} alt="Center for Mental Health Services" className="mx-auto h-16 w-auto object-contain mb-4" />
                                 <a href="https://www.samhsa.gov/about/offices-centers/cmhs" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                     Center for Mental Health Services
                                 </a>
@@ -156,7 +199,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                                 </p>
                             </div>
 
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                                <img src={helpYourselfHelpOthers} alt="Help Yourself Help Others" className="mx-auto h-16 w-auto object-contain mb-4" />
                                 <a href="https://info.sossignsofsuicide.org/bh-beat" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                     Help Yourself. Help Others
                                 </a>
@@ -165,7 +209,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                                 </p>
                             </div>
 
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                                <img src={depressionAndBipolarSupportAlliance} alt="Depression and Bipolar Support Alliance" className="mx-auto h-16 w-auto object-contain mb-4" />
                                 <a href="https://www.dbsalliance.org" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                     Depression and Bipolar Support Alliance
                                 </a>
@@ -174,7 +219,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                                 </p>
                             </div>
 
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                                <img src={studentMentalHealthResources} alt="Student Mental Health Resources" className="mx-auto h-16 w-auto object-contain mb-4" />
                                 <a href="https://www.accreditedschoolsonline.org/resources/student-mental-health-resources/" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                     Student Mental Health Resources
                                 </a>
@@ -183,7 +229,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                                 </p>
                             </div>
 
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                                <img src={nationalAllianceForTheMentallyIll} alt="National Alliance for the Mentally Ill" className="mx-auto h-16 w-auto object-contain mb-4" />
                                 <a href="https://www.nami.org" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                     National Alliance for the Mentally Ill
                                 </a>
@@ -192,7 +239,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                                 </p>
                             </div>
 
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                                <img src={suicidePreventionResourceCenter} alt="Suicide Prevention Resource Center" className="mx-auto h-16 w-auto object-contain mb-4" />
                                 <a href="https://www.sprc.org" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                     Suicide Prevention Resource Center
                                 </a>
@@ -211,7 +259,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                         </summary>
 
                         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                                <img src={internationalAssociationForSuicidePrevention} alt="International Association for Suicide Prevention" className="mx-auto h-16 w-auto object-contain mb-4" />
                                 <a href="https://www.iasp.info" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                     International Association for Suicide Prevention
                                 </a>
@@ -220,7 +269,8 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                                 </p>
                             </div>
 
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                                <img src={worldHealthOrganization} alt="World Health Organization" className="mx-auto h-16 w-auto object-contain mb-4" />
                                 <a href="https://www.who.int" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                     World Health Organization
                                 </a>
@@ -239,18 +289,21 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
 
                     <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                            <img src={bereavedSupport} alt="Bereaved Support" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
                             <a href="/resources/bereaved-support" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Bereaved Support
                             </a>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                            <img src={afterASuicideLoss} alt="After A Suicide Loss" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
                             <a href="/resources/after-suicide-loss" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 After A Suicide Loss
                             </a>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                            <img src={survivorsOfSuicideLoss} alt="Survivors of Suicide Loss" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
                             <a href="/resources/suicide-loss" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Survivors of Suicide Loss
                             </a>

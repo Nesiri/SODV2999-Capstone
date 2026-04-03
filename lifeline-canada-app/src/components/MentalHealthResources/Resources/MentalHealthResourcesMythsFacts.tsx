@@ -1,7 +1,7 @@
 import React from "react";
-import { Sparkles } from "lucide-react";
+
 const MentalIllnessImage = "/assets/AdditionalResourceImages/coping-800x575.jpg";
-const coverPhoto = "/assets/AdditionalResourceImages/MythsFacts.jpg";
+const coverPhoto = "/assets/AdditionalResourceImages/MythsFacts-600x444.jpg";
 
 const mythsVsFacts = [
     {
@@ -70,10 +70,6 @@ const MentalHealthResourcesMythsFacts: React.FC = () => {
     return (
         <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-12">
             <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-                <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm border border-purple-100">
-                    <Sparkles className="w-4 h-4 text-purple-600" />
-                    <span className="text-xs sm:text-sm font-medium text-purple-700">Mental Health Support</span>
-                </div>
 
                 <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
                     <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">

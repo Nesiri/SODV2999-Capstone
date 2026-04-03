@@ -199,7 +199,7 @@ export const mentalHealthCards: MentalHealthCard[] = [
   {
     id: 22,
     image: ['assets/ResourceImages/indigenousMentalHealth-400x267.jpg'],
-    title: 'Indigenous Issues',
+    title: 'Indigenous',
     subtitle:
       'Culturally grounded mental health resources for Indigenous peoples.',
     link: '/resources/indigenous',
