@@ -1,9 +1,9 @@
-import React from 'react';
+
 import contactImage from '../../assets/contact-us-800x322.png';
 import { Link } from 'react-router-dom';
 import AboutUsBackground from '../Background/AboutUsBackground';
 
-const ContactSection: React.FC = () => {
+const ContactSection = () => {
   return (
     <AboutUsBackground>
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 md:py-20 lg:py-28 z-10">

@@ -1,5 +1,5 @@
 import React from "react";
-import { Sparkles } from "lucide-react";
+
 
 const coverPhoto = "/assets/AdditionalResourceImages/griefSupport-600x338.png";
 const AfterTalk = "/assets/AdditionalResourceImages/AfterTalk.png";

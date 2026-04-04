@@ -1,5 +1,5 @@
 import React from "react";
-import { Sparkles } from "lucide-react";
+
 const HopeAndHealing = "/pdfs/HopeandHealing.pdf";
 const Klinic = "/pdfs/After-a-Suicide-A-Practical-and-Personal-Guide-for-Survivors.pdf";
 const SPRC = "/pdfs/AfteraSuicideToolkitforSchools-3.pdf";

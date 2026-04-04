@@ -1,5 +1,5 @@
 import React from "react";
-import { Sparkles } from "lucide-react";
+
 const CASPpdf = "/pdfs/CASP-After-Suicide-Attempt-12-1575.pdf";
 const SAMHSApdf = "/pdfs/HandbookForRecoveryAfterAttemptSAMHSA.pdf";
 const ActionAlliancepdf = "/pdfs/The-Way-Forward-Final-2014-07-01.pdf";

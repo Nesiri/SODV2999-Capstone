@@ -1,10 +1,10 @@
-import React from 'react';
+
 import { Heart } from 'lucide-react';
 import EmailImage from '../../assets/Email.jpg';
 import { Link } from 'react-router-dom';
 import AboutUsBackground from '../Background/AboutUsBackground';
 
-const EmailSupport: React.FC = () => {
+const EmailSupport = () => {
   return (
     <AboutUsBackground>
       <div className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-20 lg:py-28 z-10">
