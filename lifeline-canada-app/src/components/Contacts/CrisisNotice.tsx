@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SpiderWebBackground from '../Background/SpiderWebBackground';
+import SpiderWebBackground from '../Background/CalmBackground';
 
 const CrisisNotice: React.FC = () => {
   return (

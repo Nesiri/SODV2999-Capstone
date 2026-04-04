@@ -1,6 +1,6 @@
 import React from 'react';
 import callLineImage from '../../../assets/chatIcons/telephone.png';
-import SpiderWebBackground from '../../Background/SpiderWebBackground';
+import SpiderWebBackground from '../../Background/CalmBackground';
 
 const CallLines: React.FC = () => {
   return (

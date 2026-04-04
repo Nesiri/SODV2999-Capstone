@@ -1,7 +1,7 @@
 import React from 'react';
 import onlineChatImage from '../../../assets/chatIcons/OnlineChat-1.png';
 import { Link } from 'react-router-dom';
-import SpiderWebBackground from '../../Background/SpiderWebBackground';
+import SpiderWebBackground from '../../Background/CalmBackground';
 
 const OnlineChatLines: React.FC = () => {
   return (

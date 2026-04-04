@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+     "dev:safe": "vite --mode development",
+     "debug": "vite --debug",
+
     "build": "tsc && vite build",
     "build:skip-types": "tsc --noEmit || true && vite build",
     "type-check": "tsc --noEmit",

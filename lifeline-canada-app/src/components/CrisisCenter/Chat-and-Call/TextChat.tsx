@@ -1,7 +1,7 @@
 import React from 'react';
 import textChatImage from '../../../assets/chatIcons/chat-room-icon-7-200x200.png';
 import { Link } from 'react-router-dom';
-import SpiderWebBackground from '../../Background/SpiderWebBackground';
+import SpiderWebBackground from '../../Background/CalmBackground';
 
 const TextChat: React.FC = () => {
   return (
