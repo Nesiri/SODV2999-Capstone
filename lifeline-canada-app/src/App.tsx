@@ -50,8 +50,7 @@ export default function App() {
           <Route path="incrisisneedhelp" element={<CrisisSupportPage />} />
           <Route path="volunteers" element={<VolunteerPage />} />
           <Route path="contribute" element={<ContributionPage />} />
-          <Route path="contact-us" element={<ContactPage mode="contact" />} />
-          <Route path="support" element={<ContactPage mode="email-support" />} />
+         <Route path=":mode" element={<ContactPage />} />
           <Route path="site-map" element={<SiteMapPage />} />
           
           
