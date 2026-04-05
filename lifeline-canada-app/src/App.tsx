@@ -50,7 +50,7 @@ export default function App() {
           <Route path="incrisisneedhelp" element={<CrisisSupportPage />} />
           <Route path="volunteers" element={<VolunteerPage />} />
           <Route path="contribute" element={<ContributionPage />} />
-         <Route path=":mode" element={<ContactPage />} />
+         <Route path="/contact/:mode" element={<ContactPage />} />
           <Route path="site-map" element={<SiteMapPage />} />
           
           
@@ -62,10 +62,10 @@ export default function App() {
           <Route path="manitoba-crisis-centres" element={<MBCrisisCentrePage />} />
           <Route path="ontario-crisis-centres" element={<ONCrisisCenterPage />} />
           <Route path="quebec-crisis-centres" element={<QCCrisisCenterPage />} />
-          <Route path=":mode" element={<OtherProvinceCrisisCenterPage />} />
+          <Route path="/other-provinces/:mode" element={<OtherProvinceCrisisCenterPage />} />
           <Route path="usa-crisis-centres" element={<USACrisisCenterPage />} />
           <Route path="international-crisis-centres" element={<InternationalCrisisCentrePage />} />
-          <Route path="in-crisis-help/:mode" element={<ChatAndCallLinePage />} />
+          <Route path="/in-crisis-help/:mode" element={<ChatAndCallLinePage />} />
 
           {/* All resource routes are now handled by ResourceRoutes */}
           <Route path="resources/*" element={<ResourceRoutes />} />

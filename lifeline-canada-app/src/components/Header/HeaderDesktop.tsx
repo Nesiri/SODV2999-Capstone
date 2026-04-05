@@ -18,7 +18,7 @@ export default function HeaderDesktop() {
     <nav className="hidden lg:flex items-center w-full relative xl:mr-10">
       {/* Main nav items on left */}
       <div className={`flex items-center flex-1
-                      lg:space-x-2 xl:space-x-8 2xl:space-x-10
+                      lg:space-x-2 xl:space-x-4 2xl:space-x-5
                      [@media(min-width:1024px)_and_(max-width:1280px)]:space-x-0">
                    
                   `}>

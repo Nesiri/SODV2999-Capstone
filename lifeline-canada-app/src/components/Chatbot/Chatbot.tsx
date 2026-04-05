@@ -1,14 +1,16 @@
 // components/Chatbot.tsx
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Bot, X, Send, ExternalLink, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { chatbotResponses } from './chatbotResponses';
+import chatService from '../../services/chatService';
 
 interface Message {
   text: string;
   isUser: boolean;
   isEscalation?: boolean;
   links?: Array<{ name: string; path?: string; description?: string }>;
+  intent?: string;
+  score?: number;
 }
 
 interface ChatbotProps {
@@ -31,65 +33,69 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
   const [inputMessage, setInputMessage] = useState('');
   const [isTyping, setIsTyping] = useState(false);
 
-  // Find the best matching response from the rules
-  const findResponse = (userMessage: string): { response: string; requiresEscalation: boolean; links?: Array<{ name: string; path?: string; description?: string }> } => {
-    const message = userMessage.toLowerCase();
+  
+  // Ref for auto-scrolling
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll to bottom whenever messages change
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages, isTyping]);
+
+  
+
+  // Send message to backend - NO FRONTEND MATCHING
+  const handleSendMessage = async () => {
+  if (!inputMessage.trim()) return;
+
+  const userMessage = inputMessage;
+  
+  // Add user message
+  setMessages(prev => [...prev, { text: userMessage, isUser: true }]);
+  setInputMessage('');
+  setIsTyping(true);
+
+  try {
+    // Call backend API - returns ChatResponse directly
+    const botResponse = await chatService.sendMessage(userMessage);
     
-    // Sort rules by priority (highest first)
-    const sortedRules = [...chatbotResponses].sort((a, b) => (b.priority || 0) - (a.priority || 0));
+    console.log('Backend response:', botResponse);
     
-    // Find first rule that matches any keyword
-    for (const rule of sortedRules) {
-      if (rule.keywords[0] === "default") continue;
-      
-      for (const keyword of rule.keywords) {
-        if (message.includes(keyword.toLowerCase())) {
-          return {
-            response: rule.response,
-            requiresEscalation: rule.requiresEscalation || false,
-            links: rule.links
-          };
-        }
-      }
+    setMessages(prev => [...prev, { 
+      text: botResponse.response || "I'm here to help. Please try again.",
+      isUser: false,
+      isEscalation: botResponse.requiresEscalation || botResponse.intent === 'crisis',
+      links: botResponse.links,
+      intent: botResponse.intent,
+      score: botResponse.score
+    }]);
+    
+    // Trigger crisis detection callback if needed
+    if ((botResponse.requiresEscalation || botResponse.intent === 'crisis') && onCrisisDetected) {
+      onCrisisDetected();
     }
     
-    // Return default response if no match found
-    const defaultRule = chatbotResponses.find(rule => rule.keywords[0] === "default");
-    return {
-      response: defaultRule?.response || "I'm here to help. If you're in crisis, please call or text 988 immediately.",
-      requiresEscalation: false,
-      links: defaultRule?.links
-    };
-  };
-
-  const handleSendMessage = async () => {
-    if (!inputMessage.trim()) return;
-
-    const userMessage = inputMessage;
+  } catch (error) {
+    console.error('Chatbot error:', error);
     
-    // Add user message
-    setMessages(prev => [...prev, { text: userMessage, isUser: true }]);
-    setInputMessage('');
-    setIsTyping(true);
-
-    // Simulate API call delay
-    setTimeout(() => {
-      const { response, requiresEscalation, links } = findResponse(userMessage);
-      
-      setMessages(prev => [...prev, { 
-        text: response, 
-        isUser: false,
-        isEscalation: requiresEscalation,
-        links: links
-      }]);
-      setIsTyping(false);
-      
-      // Trigger crisis detection callback if needed
-      if (requiresEscalation && onCrisisDetected) {
-        onCrisisDetected();
-      }
-    }, 600);
-  };
+    // Fallback when backend is completely unreachable
+    setMessages(prev => [...prev, { 
+      text: "I'm having trouble connecting right now. Please try again or contact us directly for support.",
+      isUser: false,
+      isEscalation: false,
+      links: [
+        { name: "Contact Support", path: "/contact/contact-us", description: "Get help from our team" },
+        { name: "Crisis Support", path: "/incrisisneedhelp", description: "Immediate help available" }
+      ]
+    }]);
+  } finally {
+    setIsTyping(false);
+  }
+};
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -104,6 +110,8 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
 
   // Helper to render links - handles both clickable and non-clickable items
   const renderLinks = (links: Array<{ name: string; path?: string; description?: string }>) => {
+    if (!links || links.length === 0) return null;
+    
     return (
       <div className="mt-3 space-y-2">
         {links.map((link, idx) => {
@@ -118,7 +126,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
                 href={link.path}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block p-2 bg-purple-50 hover:bg-purple-100 rounded-lg transition group cursor-pointer"
+                className="block p-2 !bg-purple-50 hover:bg-purple-100 rounded-lg transition group cursor-pointer"
               >
                 <div className="flex items-center justify-between">
                   <div>
@@ -138,29 +146,34 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
               <Link
                 key={idx}
                 to={link.path!}
-                className="block p-2 bg-purple-50 hover:bg-purple-100 rounded-lg transition group cursor-pointer"
-              
+                className="block p-2 !bg-purple-50 hover:bg-purple-100 rounded-lg transition group cursor-pointer"
+                onClick={() => {
+                  // Optional: Close chatbot or handle navigation
+                  if (link.path?.includes('/contact')) {
+                    // You can add logic here if needed
+                  }
+                }}
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-sm font-medium text-purple-700">{link.name}</span>
+                    <span className="text-sm font-medium !text-purple-700">{link.name}</span>
                     {link.description && (
-                      <p className="text-xs text-gray-500">{link.description}</p>
+                      <p className="text-xs !text-gray-500">{link.description}</p>
                     )}
                   </div>
-                  <ArrowRight className="w-4 h-4 text-purple-400 group-hover:text-purple-600" />
+                  <ArrowRight className="w-4 h-4 !text-purple-400 group-hover:text-purple-600" />
                 </div>
               </Link>
             );
           }
-          // No path - just informational text (no arrow, no click)
+          // No path - just informational text
           else {
             return (
               <div key={idx} className="block p-2 bg-gray-50 rounded-lg">
                 <div>
-                  <span className="text-sm font-medium text-gray-700">{link.name}</span>
+                  <span className="text-sm font-medium !text-gray-700">{link.name}</span>
                   {link.description && (
-                    <p className="text-xs text-gray-500 mt-0.5">{link.description}</p>
+                    <p className="text-xs !text-gray-500 mt-0.5">{link.description}</p>
                   )}
                 </div>
               </div>
@@ -174,17 +187,17 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
   return (
     <>
       {/* Chatbot Header */}
-      <div className="bg-gradient-to-r from-indigo-500 to-purple-600 px-5 py-4 flex items-center justify-between">
+      <div className="!bg-gradient-to-r from-indigo-500 to-purple-600 px-5 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Bot className="w-5 h-5 text-white" />
+          <Bot className="w-5 h-5 !text-white" />
           <div>
-            <h3 className="font-semibold text-white text-sm">Support Assistant</h3>
-            <p className="text-[10px] text-white/80">Always here to listen</p>
+            <h3 className="font-semibold !text-white text-sm">Support AI Assistant</h3>
+           
           </div>
         </div>
         <button
           onClick={onClose}
-          className="text-black/80 hover:text-purple-600 transition"
+          className="!text-black/80 hover:text-white transition"
         >
           <X className="w-4 h-4" />
         </button>
@@ -202,11 +215,13 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
                 msg.isUser
                   ? 'bg-purple-500 text-white rounded-br-none'
                   : msg.isEscalation
-                    ? 'bg-red-50 border border-red-200 text-red-800 rounded-bl-none'
-                    : 'bg-white border border-gray-200 text-gray-700 rounded-bl-none shadow-sm'
+                    ? '!bg-red-50 border border-red-200 text-red-800 rounded-bl-none'
+                    : '!bg-white border border-gray-200 text-gray-700 rounded-bl-none shadow-sm'
               }`}
             >
               <p className="text-sm whitespace-pre-line">{msg.text}</p>
+              
+           
               
               {/* Render links if available */}
               {msg.links && msg.links.length > 0 && renderLinks(msg.links)}
@@ -215,7 +230,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
               {msg.isEscalation && (
                 <button
                   onClick={handleCrisisButton}
-                  className="mt-3 text-xs bg-red-500 hover:bg-red-600 text-white px-3 py-1.5 rounded-full transition"
+                  className="mt-3 text-xs !bg-red-500 hover:bg-red-600 text-white px-3 py-1.5 rounded-full transition"
                 >
                   Call 988 Now
                 </button>
@@ -225,7 +240,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
         ))}
         {isTyping && (
           <div className="flex justify-start">
-            <div className="bg-white border border-gray-200 rounded-2xl rounded-bl-none p-3 shadow-sm">
+            <div className="!bg-white border border-gray-200 rounded-2xl rounded-bl-none p-3 shadow-sm">
               <div className="flex gap-1">
                 <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
                 <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
@@ -234,10 +249,12 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
             </div>
           </div>
         )}
+        {/* Invisible div for auto-scroll target */}
+        <div ref={messagesEndRef} />
       </div>
       
       {/* Input */}
-      <div className="p-4 border-t border-gray-100 bg-white">
+      <div className="p-4 border-t !border-gray-100 bg-white">
         <div className="flex gap-2">
           <input
             type="text"
@@ -245,17 +262,17 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
             onChange={(e) => setInputMessage(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="Type your message..."
-            className="flex-1 p-2 border border-gray-200 rounded-xl focus:outline-none focus:border-purple-400 text-sm"
+            className="flex-1 p-2 border !border-gray-200 rounded-xl focus:outline-none focus:border-purple-400 text-sm"
           />
           <button
             onClick={handleSendMessage}
             disabled={!inputMessage.trim()}
-            className="bg-purple-500 hover:bg-purple-600 text-white p-2 rounded-xl transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="!bg-purple-500 hover:bg-purple-600 text-white p-2 rounded-xl transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Send className="w-5 h-5" />
           </button>
         </div>
-        <p className="text-[9px] text-gray-400 text-center mt-2">
+        <p className="text-[9px] !text-gray-400 text-center mt-2">
           If in crisis, call or text 988 immediately
         </p>
       </div>

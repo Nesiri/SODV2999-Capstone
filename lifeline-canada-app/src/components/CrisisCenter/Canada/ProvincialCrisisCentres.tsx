@@ -41,7 +41,7 @@ const provinces: Province[] = [
   {
     name: 'New Brunswick',
     image: '/assets/flags/nbth_1024x1024-300x147.webp',
-    path: '/newbrunswick-crisis-centres',
+    path: '/other-provinces/newbrunswick-crisis-centres',
   },
   {
     name: 'Newfoundland and Labrador',
@@ -51,27 +51,27 @@ const provinces: Province[] = [
   {
     name: 'Nova Scotia',
     image: '/assets/flags/nsth_1024x1024-300x151.webp',
-    path: '/nova-scotia-crisis-centres',
+    path: '/other-provinces/nova-scotia-crisis-centres',
   },
   {
     name: 'Prince Edward Island',
     image: '/assets/flags/peith_1024x1024-300x150.webp',
-    path: '/pei-crisis-centres',
+    path: '/other-provinces/pei-crisis-centres',
   },
   {
     name: 'Yukon',
     image: '/assets/flags/yuth_1024x1024-e1687406771897-300x149.webp',
-    path: '/yukon-crisis-centres',
+    path: '/other-provinces/yukon-crisis-centres',
   },
   {
     name: 'Nunavut',
     image: '/assets/flags/nuth_1024x1024-300x150.webp',
-    path: '/nunavut-crisis-centres',
+    path: '/other-provinces/nunavut-crisis-centres',
   },
   {
     name: 'Northwest Territories',
     image: '/assets/flags/nwth_1024x1024-300x149.webp',
-    path: '/nwterritories-crisis-centres',
+    path: '/other-provinces/nwterritories-crisis-centres',
   },
 ];
 

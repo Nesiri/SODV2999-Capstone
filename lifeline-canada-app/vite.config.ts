@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [
     react(), // no babel plugins
   ],
-
+  
   test: {
     environment: "jsdom",
     globals: true,

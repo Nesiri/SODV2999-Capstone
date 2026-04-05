@@ -62,7 +62,7 @@ const CrisisButton: React.FC = () => {
                 >
                   <Bot className="w-5 h-5" />
                   <div className="text-left">
-                    <div className="font-medium text-sm">Chat with Bot Assistant</div>
+                    <div className="font-medium text-sm">Chat with AI Assistant</div>
                     <div className="text-xs opacity-90">Get immediate support</div>
                   </div>
                 </button>

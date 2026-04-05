@@ -53,7 +53,7 @@ const EmailSupport = () => {
                     questions and comments or to contact The LifeLine Canada
                     Foundation about collaborating please{' '}
                     <Link
-                      to="/contact-us"
+                      to="/contact/contact-us"
                       className="inline-flex items-center gap-1 text-purple-700 hover:text-purple-900 font-semibold underline decoration-2 decoration-purple-300 hover:decoration-purple-500 transition-all duration-300"
                     >
                       click here
