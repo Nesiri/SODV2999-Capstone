@@ -13,7 +13,7 @@ const TermsOfService: React.FC = () => {
             <div className="flex items-center space-x-1.5 sm:space-x-2">
               <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-rose-500" />
               <span className="text-xs sm:text-sm font-medium text-gray-700 truncate max-w-[120px] sm:max-w-none">
-                Mindful Support
+                The LifeLine Canada Foundation
               </span>
             </div>
             <span className="text-[10px] sm:text-xs text-gray-500 whitespace-nowrap ml-2">

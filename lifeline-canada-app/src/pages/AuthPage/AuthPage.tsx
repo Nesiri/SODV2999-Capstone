@@ -1,3 +1,4 @@
+// Updated AuthPage - remove the max-w-md wrapper
 import React, { useState } from 'react';
 import SocialMediaAuth from '../../auths/SocialMediaAuth';
 import LoginForm from '../../auths/LoginForm';
@@ -11,16 +12,15 @@ import type { GoogleProfile } from '../../types/auth.types';
 import type { SignUpData } from '../../types/user.type';
 import { useNavigate } from 'react-router-dom';
 
-
 const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID || '';
-
 
 const AuthPage: React.FC = () => {
   const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(true);
-console.log({GOOGLE_CLIENT_ID})
 
-alert("Use this test email to login:\nEmail: test@gmail.com");//test email for login
+  console.log({ GOOGLE_CLIENT_ID });
+
+  alert("Use this test email to login:\nEmail: test@gmail.com");
 
   const handleSocialLogin = async (
     provider: string,
@@ -33,10 +33,7 @@ alert("Use this test email to login:\nEmail: test@gmail.com");//test email for l
     const res = await socialLogin(profile.email, profile.name, profile.sub);
 
     if (res.ok && res.data) {
-   
-
       navigate('/dashboard');
-   
     } else {
       return {
         ok: false,
@@ -47,12 +44,10 @@ alert("Use this test email to login:\nEmail: test@gmail.com");//test email for l
   };
 
   const handleLogin = async (email: string) => {
-    const res = await login(email); // your login API call
+    const res = await login(email);
     console.log({ res });
 
     if (res.ok && res.data) {
-      // Navigate to dashboard with user data in state
-  
       navigate('/dashboard');
     } else if (!res.ok) {
       return {
@@ -62,9 +57,7 @@ alert("Use this test email to login:\nEmail: test@gmail.com");//test email for l
       };
     }
 
-    // successful login logic
     setIsLogin(true);
-
     return { ok: true };
   };
 
@@ -84,30 +77,28 @@ alert("Use this test email to login:\nEmail: test@gmail.com");//test email for l
   };
 
   return (
-    <div className="min-h-screen mt-20 sm:mt-0 bg-gradient-to-br from-amber-50 to-white flex items-center justify-center p-4">
-      <div className="max-w-md w-full">
-        <div className="bg-white rounded-2xl shadow-xl p-8">
-          <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
-            {isLogin ? (
-              <>
+    <>
+      <div className="bg-white rounded-2xl shadow-xl p-8">
+        <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
+          {isLogin ? (
+            <>
               {GOOGLE_CLIENT_ID?.length > 0 && (
                 <SocialMediaAuth onSocialLogin={handleSocialLogin} />
               )}
-                <LoginForm
-                  onSubmit={handleLogin}
-                  onSwitchToSignup={() => setIsLogin(false)}
-                />
-              </>
-            ) : (
-              <SignUpForm
-                onSubmit={handleSignUp}
-                onSwitchToLogin={() => setIsLogin(true)}
+              <LoginForm
+                onSubmit={handleLogin}
+                onSwitchToSignup={() => setIsLogin(false)}
               />
-            )}
-          </GoogleOAuthProvider>
-        </div>
+            </>
+          ) : (
+            <SignUpForm
+              onSubmit={handleSignUp}
+              onSwitchToLogin={() => setIsLogin(true)}
+            />
+          )}
+        </GoogleOAuthProvider>
       </div>
-    </div>
+    </>
   );
 };
 

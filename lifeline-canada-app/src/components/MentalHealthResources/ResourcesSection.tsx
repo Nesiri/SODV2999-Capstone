@@ -6,7 +6,6 @@ import {
   Shield,
   ArrowRight,
   AlertCircle,
-  Sparkles,
   ExternalLink,
 } from 'lucide-react';
 import resourceImg from '../../assets/Signposts-800x604.jpg';
@@ -55,13 +54,7 @@ const ResourcesSection = () => {
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-start">
           {/* Left Content */}
           <div className="space-y-4 sm:space-y-6 md:space-y-8 order-2 lg:order-1 w-full">
-            {/* Animated Badge - Calmer gradient */}
-            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-sm border border-blue-100 animate-slideIn">
-              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-teal-600" />
-              <span className="text-xs sm:text-sm font-medium bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent">
-                Mental Health Support
-              </span>
-            </div>
+            
 
             {/* Main Heading with Gradient Animation */}
             <div className="space-y-2 sm:space-y-3 md:space-y-4">
@@ -84,15 +77,15 @@ const ResourcesSection = () => {
                 <div className="relative flex flex-col sm:flex-row items-start gap-3 sm:gap-4 md:gap-5">
                   <div className="flex-shrink-0">
                     <div className="relative">
-                      <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg sm:rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                      <div className="relative bg-gradient-to-br from-amber-500 to-orange-500 p-2 sm:p-3 md:p-4 rounded-lg sm:rounded-xl shadow-lg">
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg sm:rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                      <div className="relative bg-gradient-to-br from-blue-500 to-purple-500 p-2 sm:p-3 md:p-4 rounded-lg sm:rounded-xl shadow-lg">
                         <Phone className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
                       </div>
                     </div>
                   </div>
                   <div className="flex-1">
                     <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-1 sm:mb-2 flex items-center gap-1 sm:gap-2 flex-wrap">
-                      <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500" />
+                      <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-purple-500" />
                       <span>In Crisis? Help is Available 24/7</span>
                     </h3>
                     <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-2 sm:mb-3 md:mb-4">
@@ -104,7 +97,7 @@ const ResourcesSection = () => {
                     </p>
                     <p className="text-xs sm:text-sm md:text-base text-gray-600">
                       If you or someone you know is in immediate danger,{' '}
-                      <span className="font-bold text-amber-600">
+                      <span className="font-bold text-purple-600">
                         call 911 right now
                       </span>
                     </p>

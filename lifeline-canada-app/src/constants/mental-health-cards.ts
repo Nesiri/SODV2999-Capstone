@@ -61,7 +61,7 @@ export const mentalHealthCards: MentalHealthCard[] = [
     image: ['assets/ResourceImages/crisis-600x316.png'],
     title: 'Crisis Centres',
     subtitle: 'Access immediate help through call, text, or emergency support.',
-    link: '/resources/crisis',
+    link: '/incrisisneedhelp',
     category: 'crisis',
   },
   {

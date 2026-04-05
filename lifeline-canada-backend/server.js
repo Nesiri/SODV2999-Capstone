@@ -5,13 +5,14 @@ import express from "express";
 import cors from "cors";
 import cookieParser from 'cookie-parser';
 import userRouter from "./routes/userRoute.js";
-
+import {aiMatcherService} from "./services/aiMatcherService.js";
+import chatRoutes from "./routes/aiChatRoute.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 const corsOptions = {
-   origin: ['https://thelifeline.netlify.app','http://localhost:5173'], // Explicitly allow ONLY your  domains
+   origin: [process.env.FRONTEND_URL, 'http://localhost:5173'], // Explicitly allow ONLY your  domains
   credentials: true, // Allow cookies/auth headers
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
@@ -26,6 +27,11 @@ app.use(cookieParser());
 
 // Routes
 app.use("/api/auth", userRouter);
+app.use('/api/chat', chatRoutes);
+
+  // Load the AI model once during deployment/startup
+    await aiMatcherService.initialize();
+    console.log(' AI Matcher Service initialized and ready');
 
 // Start server
 app.listen(PORT, () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Sparkles } from "lucide-react";
+
 const coverPhoto = '/assets/AdditionalResourceImages/coping-800x575.jpg';
 const emotionalSymptoms = '/assets/AdditionalResourceImages/Group-246.png';
 const differenceStressAnxiety = '/assets/AdditionalResourceImages/Value-img-800x799.png';

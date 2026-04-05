@@ -1,20 +1,22 @@
+
 import ContactSection from '../components/Contacts/ContactSection';
 import CrisisNotice from '../components/Contacts/CrisisNotice';
 import EmailSupport from '../components/Contacts/EmailSupport';
 import TLCEmailContactForm from '../components/Contacts/TLCEmailContactForm';
 
-type ContactPageProps = {
-  mode: 'contact' | 'email-support';
-};
+import { useParams } from 'react-router-dom';
+import NotFound from './NotFound';
 
-function ContactPage({ mode }: ContactPageProps) {
-  // Toggle rendering based on mode
-  if (mode === 'contact') {
+function ContactPage() {
+  const { mode } = useParams<{ mode: string }>();
+  console.log('ContactPage mode:', mode); // Debugging log
+
+  if (mode === 'contact-us') {
     return (
       <>
         <ContactSection />
         <TLCEmailContactForm
-          title={`TLC Email` + '    ' + `Contact Form`}
+          title="TLC Email Contact Form"
           subtitle="Questions or Comments"
         />
         <CrisisNotice />
@@ -22,7 +24,7 @@ function ContactPage({ mode }: ContactPageProps) {
     );
   }
 
-  if (mode === 'email-support') {
+  if (mode === 'support') {
     return (
       <>
         <EmailSupport />
@@ -34,6 +36,9 @@ function ContactPage({ mode }: ContactPageProps) {
       </>
     );
   }
+
+  // fallback for invalid URLs
+  return <NotFound />; // You can create a NotFound component or simply return null
 }
 
 export default ContactPage;

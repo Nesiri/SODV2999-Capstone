@@ -1,5 +1,5 @@
 import React from "react";
-import { Sparkles } from "lucide-react";
+
 
 const coverPhoto = '/assets/AdditionalResourceImages/addict2-600x494.jpg';
 const alberta = '/assets/AdditionalResourceImages/AlbertaHealthServices.png';

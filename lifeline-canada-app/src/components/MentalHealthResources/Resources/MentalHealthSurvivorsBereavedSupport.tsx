@@ -1,5 +1,5 @@
 import React from "react";
-import { Sparkles } from "lucide-react";
+
 
 const coverPhoto = '/assets/AdditionalResourceImages/emotionalSupport-600x400.jpg';
 const survivorsOfSuicideLoss = '/assets/AdditionalResourceImages/survivorsOf_hand-ribbon-200x133.jpg';

@@ -30,13 +30,13 @@ const SiteMapPage = () => {
     { name: 'Manitoba', path: '/manitoba-crisis-centres' },
     { name: 'Ontario', path: '/ontario-crisis-centres' },
     { name: 'Quebec', path: '/quebec-crisis-centres' },
-    { name: 'New Brunswick', path: '/newbrunswick-crisis-centres' },
-    { name: 'Newfoundland/Labrador', path: '/newfoundland-crisis-centres' },
-    { name: 'Nova Scotia', path: '/nova-scotia-crisis-centres' },
-    { name: 'PEI', path: '/pei-crisis-centres' },
-    { name: 'Yukon', path: '/yukon-crisis-centres' },
-    { name: 'Nunavut', path: '/nunavut-crisis-centres' },
-    { name: 'NWT', path: '/nwterritories-crisis-centres' },
+    { name: 'New Brunswick', path: '/other-provinces/newbrunswick-crisis-centres' },
+    { name: 'Newfoundland/Labrador', path: '/other-provinces/newfoundland-crisis-centres' },
+    { name: 'Nova Scotia', path: '/other-provinces/nova-scotia-crisis-centres' },
+    { name: 'PEI', path: '/other-provinces/pei-crisis-centres' },
+    { name: 'Yukon', path: '/other-provinces/yukon-crisis-centres' },
+    { name: 'Nunavut', path: '/other-provinces/nunavut-crisis-centres' },
+    { name: 'NWT', path: '/other-provinces/nwterritories-crisis-centres' },
   ];
 
   const crisisMainLinks = [
@@ -120,8 +120,8 @@ const patternInterruptsMoreLinks = [
   const finalLinks = [
     { name: 'The LifeLine App', path: '/app' },
     { name: 'Companion Paws', path: 'https://companionpaws.ca/' },
-    { name: 'Contact Us', path: '/contact-us' },
-    { name: 'Email Support', path: '/support' },
+    { name: 'Contact Us', path: '/contact/contact-us' },
+    { name: 'Email Support', path: '/contact/support' },
     { name: 'En Francais', path: '#' },
   ];
 
@@ -177,7 +177,7 @@ const handleScrollToSection = (path: string, id?: string) => (e: React.MouseEven
 };
 
   return (
-  <div className="w-full min-h-screen bg-gradient-to-br from-amber-200 via-orange-100 to-yellow-50">
+  <div className="w-full min-h-screen bg-gradient-to-br from-purple-50 via-purple-100/50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
         {/* Header with pink/blue/purple gradient */}
         <h1

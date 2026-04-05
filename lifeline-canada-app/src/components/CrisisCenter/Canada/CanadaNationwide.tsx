@@ -8,14 +8,13 @@ type CrisisCentre = {
 
 const crisisCentres: CrisisCentre[] = [
   {
-    name: 'Talk Suicide Canada',
-    image: '/assets/CanadaCenter_image/talkSuicide.jpg',
-    details: [
-      'Call: 1-833-456-4566',
-      'Toll-Free 24/7',
-      'Text: 45645  4 pm – 12 am EST',
-    ],
-  },
+  name: '988 Suicide & Crisis Lifeline',
+  image: '/assets/CanadaCenter_image/talkSuicide.jpg', 
+  details: [
+    'Call or Text: 988',
+    'Toll-Free 24/7',
+  ],
+},
   {
     name: 'Kids Help Phone',
     image: '/assets/CanadaCenter_image/kidsHelpPhone-1-400x176.jpg',

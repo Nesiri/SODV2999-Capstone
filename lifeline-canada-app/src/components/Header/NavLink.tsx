@@ -17,22 +17,26 @@ export default function NavLink({
   onClick,
 }: NavLinkProps) {
   return (
+    
     <Link
       to={link.path}
       onClick={onClick}
+       {...(link.name === "LifeLine App"
+    ? { target: "_blank", rel: "noopener noreferrer" }
+    : {})}
      className={`
-  relative flex items-center gap-2
-  px-4 py-3 rounded-lg
-  h-[45px]
+        relative flex items-center gap-2
+        px-4 py-3 rounded-lg
+        h-[45px]
 
-  bg-gray-50 !text-gray-600 font-bold
-  border border-gray-200
+        bg-gray-50 !text-gray-600 font-bold
+        border border-gray-200
 
-  transition-all duration-200
+        transition-all duration-200
 
-  hover:border-blue-600 hover:text-gray-800
+        hover:border-blue-600 hover:text-gray-800
 
-`}
+      `}
     >
       {link.icon && (
         <span className="flex items-center" aria-hidden="true">

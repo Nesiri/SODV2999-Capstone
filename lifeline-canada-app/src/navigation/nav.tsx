@@ -293,8 +293,13 @@ export const dropdownNavLinks = [
     icon: React.createElement(Users, { className: 'w-4 h-4' }),
   },
    {
+    name: 'Email Support',
+    path: '/contact/support',
+    icon: '✉️', // Email
+  },
+   {
     name: 'Contact',
-    path: '/contact-us',
+    path: '/contact/contact-us',
     icon: '✉️', // Phone contact
   },
      {
@@ -303,12 +308,6 @@ export const dropdownNavLinks = [
     icon: '🙋',
   },
 
-
-  {
-    name: 'Email Support',
-    path: '/support',
-    icon: '✉️', // Email
-  },
    {
     name: 'Contribute',
     path: '/contribute',

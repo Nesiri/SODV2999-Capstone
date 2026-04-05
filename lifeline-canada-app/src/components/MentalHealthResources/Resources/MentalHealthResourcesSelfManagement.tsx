@@ -1,5 +1,5 @@
 import React from "react";
-import { Sparkles } from "lucide-react";
+
 
 const coverPhoto = "/assets/AdditionalResourceImages/self-care-600x338.jpg";
 const copingWithSuicidalThoughts = "/assets/AdditionalResourceImages/copingMain.webp";
