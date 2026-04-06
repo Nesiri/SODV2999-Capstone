@@ -1,6 +1,5 @@
 # Lifeline Canada App
 A full-stack web application with **React + TypeScript + Vite** frontend and **Node.js + Express** backend, designed to provide support services through a secure web platform.
-⚠️ **IMPORTANT:** This repository has been or will be transferred to the Lifeline Canada organization. All environment variables shown in this document are **test/demo values only**. The new owner must regenerate **all credentials** before production deployment.
 ---
 ## 📝 Overview / Purpose
 **What the project is:** Lifeline Canada is a secure web platform providing support services, including authentication, communication, and resource access, in a safe and scalable environment.
