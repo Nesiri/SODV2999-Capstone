@@ -76,13 +76,13 @@ const MentalHealthResourcesCommunitiesIndigenous: React.FC = () => {
                     </span>
                 </h1>
 
-                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row-reverse sm:items-start gap-6">
                     <img
                         src={coverPhoto}
                         alt="Indigenous Mental Health"
-                        className="float-right ml-6 mb-4 w-64 sm:w-80 rounded-xl shadow-md object-cover"
+                        className="w-full h-52 sm:w-64 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-cover"
                     />
-                    <div className="overflow-hidden">
+                    <div className="flex-1">
                         <p className="leading-relaxed">
                             So many factors can influence your health, including your mental health. These factors are commonly known as the determinants of health and include such things as how much money you make, how much education you have and your relationships with family and friends. For instance, supportive relationships with family and friends can make you feel cared for, loved, esteemed and valued, and as a result, have a protective effect on your health.
                         </p>
@@ -91,18 +91,17 @@ const MentalHealthResourcesCommunitiesIndigenous: React.FC = () => {
                             Historical determinants, such as the legacy of residential schools, are believed to have shaped the mental health of Aboriginal people. A research project commissioned by the Aboriginal Healing Foundation found that 75 percent of the case files for a sample of Aboriginal residential school survivors contained mental health information with the most common mental health diagnoses being post-traumatic stress disorder, substance abuse disorder and major depression.
                         </p>
                     </div>
-                    <div className="clear-both" />
                 </main>
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
                     <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">If You Are In Crisis</h2>
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <img
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
+                                <img
                                 src={ifYouAreInCrisis}
                                 alt="If You Are In Crisis"
-                                className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
+                                className="w-full h-40 sm:w-48 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-cover"
                             />
                             <div className="overflow-hidden">
                                 <p className="leading-relaxed">
@@ -133,7 +132,6 @@ const MentalHealthResourcesCommunitiesIndigenous: React.FC = () => {
                                     </a>
                                 </p>
                             </div>
-                            <div className="clear-both" />
                         </div>
                     </div>
                 </div>
@@ -145,13 +143,13 @@ const MentalHealthResourcesCommunitiesIndigenous: React.FC = () => {
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
                         {indigenousResources.map((resource) => (
-                            <div key={resource.title} className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <div key={resource.title} className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                                 <img
                                     src={resource.image}
                                     alt={resource.title}
-                                    className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
+                                    className="w-full h-36 sm:w-48 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-cover"
                                 />
-                                <div className="overflow-hidden">
+                                <div>
                                     <a
                                         href={resource.href}
                                         className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
@@ -161,7 +159,6 @@ const MentalHealthResourcesCommunitiesIndigenous: React.FC = () => {
 
                                     <p className="mt-2 leading-relaxed">{resource.content}</p>
                                 </div>
-                                <div className="clear-both" />
                             </div>
                         ))}
                     </div>

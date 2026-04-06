@@ -177,13 +177,13 @@ const MentalHealthResourcesCommunitiesVeterans: React.FC = () => {
                     </span>
                 </h1>
 
-                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row-reverse sm:items-start gap-6">
                     <img
                         src={coverPhoto}
                         alt="Veterans"
-                        className="float-right ml-6 mb-4 w-64 sm:w-80 rounded-xl shadow-md object-cover"
+                        className="w-full h-52 sm:w-64 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-cover"
                     />
-                    <div className="overflow-hidden">
+                    <div className="flex-1">
                         <p className="leading-relaxed">
                             Military personnel can be exposed to an array of potentially traumatizing experiences. PTSD symptoms can significantly disrupt interpersonal and occupational functioning and manifest in various ways, affecting psychological, emotional, physical, behavioral, and cognitive aspects.
                         </p>
@@ -196,7 +196,6 @@ const MentalHealthResourcesCommunitiesVeterans: React.FC = () => {
                             Assembled here are some of the top resources available to both active duty and retired veterans to help ensure that they are getting the best in return for the sacrifices that they have patriotically made.
                         </p>
                     </div>
-                    <div className="clear-both" />
                 </main>
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
@@ -204,13 +203,13 @@ const MentalHealthResourcesCommunitiesVeterans: React.FC = () => {
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
                         {canadianVeteranResources.map((resource) => (
-                            <div key={resource.title} className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <div key={resource.title} className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                                 <img
                                     src={resource.image}
                                     alt={resource.title}
-                                    className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-contain bg-gray-50"
+                                    className="w-full h-36 sm:w-48 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                                 />
-                                <div className="overflow-hidden">
+                                <div>
                                     <a
                                         href={resource.href}
                                         target="_blank"
@@ -222,7 +221,6 @@ const MentalHealthResourcesCommunitiesVeterans: React.FC = () => {
 
                                     <p className="mt-2 leading-relaxed">{resource.content}</p>
                                 </div>
-                                <div className="clear-both" />
                             </div>
                         ))}
                     </div>
@@ -233,13 +231,13 @@ const MentalHealthResourcesCommunitiesVeterans: React.FC = () => {
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
                         {usaVeteranResources.map((resource) => (
-                            <div key={resource.title} className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <div key={resource.title} className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                                 <img
                                     src={resource.image}
                                     alt={resource.title}
-                                    className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-contain bg-gray-50"
+                                    className="w-full h-36 sm:w-48 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                                 />
-                                <div className="overflow-hidden">
+                                <div>
                                     <a
                                         href={resource.href}
                                         target="_blank"
@@ -251,7 +249,6 @@ const MentalHealthResourcesCommunitiesVeterans: React.FC = () => {
 
                                     <p className="mt-2 leading-relaxed">{resource.content}</p>
                                 </div>
-                                <div className="clear-both" />
                             </div>
                         ))}
                     </div>
@@ -264,13 +261,13 @@ const MentalHealthResourcesCommunitiesVeterans: React.FC = () => {
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
                         {additionalVeteranResources.map((resource) => (
-                            <div key={resource.title} className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <div key={resource.title} className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                                 <img
                                     src={resource.image}
                                     alt={resource.title}
-                                    className="float-left mr-6 mb-4 w-48 sm:w-64 h-32 sm:h-40 rounded-xl shadow-md object-contain bg-gray-50"
+                                    className="w-full h-36 sm:w-48 sm:h-40 sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                                 />
-                                <div className="overflow-hidden">
+                                <div>
                                     <a
                                         href={resource.href}
                                         target="_blank"
@@ -282,7 +279,6 @@ const MentalHealthResourcesCommunitiesVeterans: React.FC = () => {
 
                                     <p className="mt-2 leading-relaxed">{resource.content}</p>
                                 </div>
-                                <div className="clear-both" />
                             </div>
                         ))}
                     </div>

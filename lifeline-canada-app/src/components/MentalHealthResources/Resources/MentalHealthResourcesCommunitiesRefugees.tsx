@@ -57,13 +57,13 @@ const MentalHealthResourcesCommunitiesRefugees: React.FC = () => {
                     </span>
                 </h1>
 
-                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row-reverse sm:items-start gap-6">
                     <img
                         src={coverPhoto}
                         alt="Refugees"
-                        className="float-right ml-6 mb-4 w-64 sm:w-80 rounded-xl shadow-md object-cover"
+                        className="w-full h-52 sm:w-64 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-cover"
                     />
-                    <div className="overflow-hidden">
+                    <div className="flex-1">
                         <p className="leading-relaxed">
                             A refugee is a person who has fled their own country because they are at risk of serious human rights violations and persecution there, are unable to return, and need protection.
                         </p>
@@ -81,7 +81,6 @@ const MentalHealthResourcesCommunitiesRefugees: React.FC = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="clear-both" />
                 </main>
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
@@ -91,13 +90,13 @@ const MentalHealthResourcesCommunitiesRefugees: React.FC = () => {
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
                         {refugeeResources.map((resource) => (
-                            <div key={resource.title} className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <div key={resource.title} className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                                 <img
                                     src={resource.image}
                                     alt={resource.title}
-                                    className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-contain bg-gray-50"
+                                    className="w-full h-36 sm:w-48 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                                 />
-                                <div className="overflow-hidden">
+                                <div>
                                     <a
                                         href={resource.href}
                                         target="_blank"
@@ -109,7 +108,6 @@ const MentalHealthResourcesCommunitiesRefugees: React.FC = () => {
 
                                     <p className="mt-2 leading-relaxed">{resource.content}</p>
                                 </div>
-                                <div className="clear-both" />
                             </div>
                         ))}
                     </div>

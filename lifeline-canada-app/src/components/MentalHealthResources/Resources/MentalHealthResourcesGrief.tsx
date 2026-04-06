@@ -20,7 +20,7 @@ const MentalHealthResourcesGrief: React.FC = () => {
                     </span>
                 </h1>
 
-                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex gap-6 items-start">
+                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row sm:items-start gap-6">
                     <div className="flex-1">
                     <p className="leading-relaxed">
                         Although we all know that death is a part of everyone’s life, the sudden death of a loved one will still be an emotional and difficult experience. It’s important to understand that grief affects everyone differently. During the grieving process, you will likely experience several different emotional responses. Grief can affect both your psychological and physical well-being.
@@ -33,7 +33,7 @@ const MentalHealthResourcesGrief: React.FC = () => {
                     <img
                         src={coverPhoto}
                         alt="Grief support"
-                        className="w-56 h-40 object-cover rounded-lg shrink-0"
+                        className="w-full h-52 sm:w-56 sm:h-40 object-cover rounded-lg sm:shrink-0 order-first sm:order-last"
                     />
                 </main>
 
@@ -43,7 +43,7 @@ const MentalHealthResourcesGrief: React.FC = () => {
                     </h2>
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex gap-4 items-start">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <div className="flex-1">
                             <a
                                 href="https://www.aftertalk.com/"
@@ -60,10 +60,10 @@ const MentalHealthResourcesGrief: React.FC = () => {
                                 If you are coping with grief, you’ve come to the right place. Our online grief support site offers grief blogs, inspirational quotes, and interactive writing tools to help you manage your grief.
                             </p>
                             </div>
-                            <img src={AfterTalk} alt="After Talk" className="w-40 h-auto object-contain rounded-lg shrink-0" />
+                            <img src={AfterTalk} alt="After Talk" className="w-full h-36 sm:w-40 sm:h-auto object-contain rounded-lg sm:shrink-0 order-first sm:order-last" />
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex gap-4 items-start">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <div className="flex-1">
                             <a
                                 href="https://whatsyourgrief.com/"
@@ -77,10 +77,10 @@ const MentalHealthResourcesGrief: React.FC = () => {
                                 Grief is a complex, heavy, frustrating, scary, enormous…ahem, big topic. It starts with a death and envelopes everyone from family to friends, to friends of family and friends. Not only is grief an emotional, logistical, and existential nightmare, but it is taxing. It requires us to navigate the world without someone important, deal with complex feelings and emotions, and figure out ways to move forward when everything seems kind of bleak. Our mission is to promote grief education, exploration, and expression in both practical and creative ways.
                             </p>
                             </div>
-                            <img src={WhatsYourGrief} alt="What's Your Grief" className="w-40 h-auto object-contain rounded-lg shrink-0" />
+                            <img src={WhatsYourGrief} alt="What's Your Grief" className="w-full h-36 sm:w-40 sm:h-auto object-contain rounded-lg sm:shrink-0 order-first sm:order-last" />
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex gap-4 items-start">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <div className="flex-1">
                             <a
                                 href="https://www.homeadvisor.com/cost/cleaning-services/estate-cleanout/"
@@ -97,7 +97,7 @@ const MentalHealthResourcesGrief: React.FC = () => {
                                 The hard truth is that while it’s a difficult process to declutter and organize your house after a loved one passes away, it’s an important step in moving forward. This guide will help you create a strategy for getting through the process as easily as possible.
                             </p>
                             </div>
-                            <img src={HomeAdvisor} alt="Decluttering Your Home" className="w-40 h-auto object-contain rounded-lg shrink-0" />
+                            <img src={HomeAdvisor} alt="Decluttering Your Home" className="w-full h-36 sm:w-40 sm:h-auto object-contain rounded-lg sm:shrink-0 order-first sm:order-last" />
                         </div>
                     </div>
                 </div>
@@ -108,8 +108,8 @@ const MentalHealthResourcesGrief: React.FC = () => {
                     </h2>
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex gap-4 items-start">
-                            <img src={GriefRefuge} alt="Grief Refuge" className="w-28 h-auto object-contain rounded-lg shrink-0" />
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
+                            <img src={GriefRefuge} alt="Grief Refuge" className="w-28 h-auto object-contain rounded-lg sm:shrink-0" />
                             <div className="flex-1">
                             <h3 className="text-lg font-semibold text-purple-700">Grief Refuge</h3>
                             <p className="mt-2 leading-relaxed">
@@ -137,8 +137,8 @@ const MentalHealthResourcesGrief: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex gap-4 items-start">
-                            <img src={GriefWorks} alt="Grief Works" className="w-28 h-auto object-contain rounded-lg shrink-0" />
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
+                            <img src={GriefWorks} alt="Grief Works" className="w-28 h-auto object-contain rounded-lg sm:shrink-0" />
                             <div className="flex-1">
                             <h3 className="text-lg font-semibold text-purple-700">Grief Works</h3>
                             <p className="mt-2 leading-relaxed">
@@ -177,7 +177,7 @@ const MentalHealthResourcesGrief: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700 flex gap-6 items-start">
+                <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700 flex flex-col sm:flex-row sm:items-start gap-6">
                     <div className="flex-1">
                     <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
                         Recommended Reading
@@ -199,7 +199,7 @@ const MentalHealthResourcesGrief: React.FC = () => {
                     <img
                         src={MindfullnessAndGrief}
                         alt="Mindfulness and Grief"
-                        className="w-48 h-auto rounded-lg shrink-0"
+                        className="w-full h-48 sm:w-48 sm:h-auto rounded-lg sm:shrink-0 order-first sm:order-last"
                     />
                 </div>
             </div>

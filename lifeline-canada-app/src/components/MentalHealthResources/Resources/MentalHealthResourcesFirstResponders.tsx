@@ -26,13 +26,13 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                     </span>
                 </h1>
 
-                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row-reverse sm:items-start gap-6">
                     <img
                         src={coverPhoto}
                         alt="First Responders"
-                        className="float-right ml-6 mb-4 w-64 sm:w-80 rounded-xl shadow-md object-cover"
+                        className="w-full h-52 sm:w-64 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-cover"
                     />
-                    <div className="overflow-hidden">
+                    <div className="flex-1">
                         <p className="leading-relaxed">
                             First responders, such as police officers, firefighters and ambulance and paramedics are increasingly called upon in situations involving mental health emergencies, such as suicidal crises. Consequently, they occupy an important role in community-based suicide prevention: by ensuring that persons with mental disorders receive appropriate mental health treatment, by removing access to lethal means from people at high risk of suicide, and by recognizing the suicide potential in situations involving domestic disputes or where potentially deadly force is exercised. First responders are in a unique position to determine the course and outcome of suicidal crises.
                         </p>
@@ -41,7 +41,6 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                             Additionally, First responders are at least twice as likely to suffer from PTSD caused by witnessing or experiencing actual or threatened death, serious injury or violence.
                         </p>
                     </div>
-                    <div className="clear-both" />
                 </main>
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
@@ -50,13 +49,13 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                     </h2>
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <img
                                 src={earlyRespondersSupportingSurvivors}
                                 alt="A Guide for Early Responders Supporting Survivors Bereaved by Suicide"
-                                className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-contain bg-gray-50"
+                                className="w-full h-40 sm:w-48 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                             />
-                            <div className="overflow-hidden">
+                            <div className="flex-1">
                                 <a
                                     href={GuideForEarlyResponders}
                                     className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
@@ -71,16 +70,15 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                                 </p>
                                 <p className="mt-4 leading-relaxed">Developed by the Winnipeg Suicide Prevention Network in partnership with the Canadian Association for Suicide Prevention</p>
                             </div>
-                            <div className="clear-both" />
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <img
                                 src={informationForFirstResponders}
                                 alt="Information For First Responders in Mental Health or Addictions Crises"
-                                className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-contain bg-gray-50"
+                                className="w-full h-40 sm:w-48 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                             />
-                            <div className="overflow-hidden">
+                            <div className="flex-1">
                                 <a
                                     href={ManualForFirstResponders}
                                     className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
@@ -107,16 +105,15 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                                     </a>
                                 </p>
                             </div>
-                            <div className="clear-both" />
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <img
                                 src={firstRespondersTraumaSuicide}
                                 alt="First Responders, Trauma and Suicide"
-                                className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-contain bg-gray-50"
+                                className="w-full h-40 sm:w-48 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                             />
-                            <div className="overflow-hidden">
+                            <div className="flex-1">
                                 <a
                                     href={FirstResponders}
                                     className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
@@ -131,7 +128,6 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                                 </p>
                                 <p className="mt-4 leading-relaxed">Centre for Suicide Prevention</p>
                             </div>
-                            <div className="clear-both" />
                         </div>
                     </div>
                 </div>
@@ -142,13 +138,13 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                     </h2>
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <img
                                 src={suicidesAmongFirstResponders}
                                 alt="Suicides Among First Responders: A Call to Action"
-                                className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-contain bg-gray-50"
+                                className="w-full h-40 sm:w-48 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                             />
-                            <div className="overflow-hidden">
+                            <div className="flex-1">
                                 <a
                                     href="https://www.cdc.gov/niosh/bulletin/index.html"
                                     className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
@@ -159,16 +155,15 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                                     In 2019, there were 47,500 suicide fatalities in the U.S. and an estimated 1.4 million suicide attempts. The causes of suicide are complex, with many personal, socio-demographic, medical, and economic factors playing a role. One potential risk factor is occupation and several occupations appear to be at higher risk for suicide, including first responders
                                 </p>
                             </div>
-                            <div className="clear-both" />
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <img
                                 src={preventingSuicide}
                                 alt="Preventing Suicide: Information for Emergency Responders"
-                                className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-contain bg-gray-50"
+                                className="w-full h-40 sm:w-48 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                             />
-                            <div className="overflow-hidden">
+                            <div className="flex-1">
                                 <a
                                     href="https://www.youtube.com/watch?v=ECarCNxgM-4"
                                     className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
@@ -179,16 +174,15 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                                     Emergency workers are often the first on the scene to a mental health crisis or suicide attempt. They have a pivotal role to play in what happens from there on.
                                 </p>
                             </div>
-                            <div className="clear-both" />
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <img
                                 src={iDontWantToLoseMoreFriends}
                                 alt="I Don't Want to Lose Any More Friends: First Responders are Not Alone"
-                                className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-contain bg-gray-50"
+                                className="w-full h-40 sm:w-48 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                             />
-                            <div className="overflow-hidden">
+                            <div className="flex-1">
                                 <a
                                     href="https://www.youtube.com/watch?v=UGKHx6dX1EY"
                                     className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
@@ -199,16 +193,15 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                                     Officer Victor Machese has spent more than 15 years working in law enforcement. In the past few years, he has lost five of his close friends on the force due to suicide. It was these losses that moved Victor to do more to stem the tide of first responder deaths by suicide. This is his story and a message to others that there is help and a path to wellness and recovery.
                                 </p>
                             </div>
-                            <div className="clear-both" />
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <img
                                 src={ptsdResourceToolkit}
                                 alt="PTSD Resource Toolkit"
-                                className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-contain bg-gray-50"
+                                className="w-full h-40 sm:w-48 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                             />
-                            <div className="overflow-hidden">
+                            <div className="flex-1">
                                 <a
                                     href="https://www.firstrespondersfirst.ca"
                                     className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
@@ -219,7 +212,6 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                                     First responders are at least twice as likely to suffer from PTSD. There&apos;s no need to suffer in silence. The help you need is here. This website offers resources and services for the First Responder community to understand the various steps of a PTSD program from managing a crisis through to implementing best practices into an existing program.
                                 </p>
                             </div>
-                            <div className="clear-both" />
                         </div>
                     </div>
                 </div>
