@@ -16,13 +16,13 @@ const MentalHealthResourcesEducators: React.FC = () => {
           </span>
         </h1>
 
-        <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+        <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row-reverse sm:items-start gap-6">
           <img
             src={coverPhoto}
             alt="Educators"
-            className="float-right ml-6 mb-4 w-64 sm:w-80 rounded-xl shadow-md object-cover"
+            className="w-full h-52 sm:w-64 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-cover"
           />
-          <div className="overflow-hidden">
+          <div className="flex-1">
             <p className="leading-relaxed">
               The best approach to school-based suicide prevention activities is teamwork that includes teachers, school doctors, school nurses, school psychologists and school social workers, working in close cooperation with community agencies.
             </p>
@@ -31,7 +31,6 @@ const MentalHealthResourcesEducators: React.FC = () => {
               Having suicidal thoughts now and then is not abnormal. They are part of the normal development process in childhood and adolescence, as are working on existential problems and trying to understand life, death, and the meaning of life. Questionnaire surveys show that more than half of upper-secondary students report that they have entertained thoughts of suicide. Young people need to discuss these topics with adults. Suicidal thoughts become abnormal in children and adolescents when the realization of those thoughts seems to be the only way out of their difficulties. There is then a serious risk of attempted suicide or suicide.
             </p>
           </div>
-          <div className="clear-both" />
         </main>
 
         <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
@@ -40,13 +39,13 @@ const MentalHealthResourcesEducators: React.FC = () => {
           </h2>
 
           <div className="mt-6 grid gap-4 sm:gap-5">
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
               <img
                 src={supportingMinds}
                 alt="Supporting Minds"
-                className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-contain bg-gray-50"
+                className="w-full h-40 sm:w-48 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
               />
-              <div className="overflow-hidden">
+              <div className="flex-1">
                 <a
                   href={'#'}
                   className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
@@ -58,16 +57,15 @@ const MentalHealthResourcesEducators: React.FC = () => {
                 </p>
                 <p className="mt-4 leading-relaxed">By the Hamilton-Wentworth Student Support Leadership Initiative, in collaboration with the Child and Youth Mental Health Information Network.</p>
               </div>
-              <div className="clear-both" />
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
               <img
                 src={howToMakeADifference}
                 alt="How to Make a Difference When You Witness Bullying Online"
-                className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-contain bg-gray-50"
+                className="w-full h-40 sm:w-48 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
               />
-              <div className="overflow-hidden">
+              <div className="flex-1">
                 <a
                   href="https://impact.mediasmarts.ca/en/teachers"
                   className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
@@ -82,7 +80,6 @@ const MentalHealthResourcesEducators: React.FC = () => {
               </p>
               <p className="mt-4 leading-relaxed">By Telus / Media Smarts</p>
               </div>
-              <div className="clear-both" />
             </div>
           </div>
         </div>

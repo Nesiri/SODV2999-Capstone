@@ -54,7 +54,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                     <details className={sectionClassName} open>
                         <summary className="cursor-pointer text-lg font-semibold text-purple-700">What is PTSD?</summary>
                         <div className="mt-4 space-y-4">
-                            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 flex gap-4 items-start">
+                            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 flex flex-col sm:flex-row sm:items-start gap-4">
                                 <div className="flex-1">
                                     <p className="leading-relaxed">
                                         Post-Traumatic Stress Disorder (PTSD) is an anxiety disorder that can occur after a person has been through a traumatic event. These events can include:
@@ -70,11 +70,11 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                                 <img
                                     src={soldierPTSD}
                                     alt="Soldier with PTSD"
-                                    className="w-40 h-32 object-cover rounded-lg shrink-0"
+                                    className="w-full h-40 sm:w-40 sm:h-32 object-cover rounded-lg sm:shrink-0 order-first sm:order-last"
                                 />
                             </div>
 
-                            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 flex gap-4 items-start">
+                            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 flex flex-col sm:flex-row sm:items-start gap-4">
                                 <div className="flex-1">
                                     <h3 className="text-lg font-semibold text-slate-900">PTSD Signs &amp; Symptoms</h3>
                                     <ul className="mt-3 list-disc space-y-1 pl-5 leading-relaxed">
@@ -92,11 +92,11 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                                 <img
                                     src={firstResponderPTSD}
                                     alt="First responder with PTSD"
-                                    className="w-40 h-32 object-cover rounded-lg shrink-0"
+                                    className="w-full h-40 sm:w-40 sm:h-32 object-cover rounded-lg sm:shrink-0 order-first sm:order-last"
                                 />
                             </div>
 
-                            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 flex gap-4 items-start">
+                            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 flex flex-col sm:flex-row sm:items-start gap-4">
                                 <div className="flex-1">
                                     <h3 className="text-lg font-semibold text-slate-900">Here are some strategies to help with PTSD</h3>
                                     <ul className="mt-3 list-disc space-y-1 pl-5 leading-relaxed">
@@ -123,7 +123,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                                 <img
                                     src={PTSDSupport}
                                     alt="PTSD support"
-                                    className="w-40 h-32 object-cover rounded-lg shrink-0"
+                                    className="w-full h-40 sm:w-40 sm:h-32 object-cover rounded-lg sm:shrink-0 order-first sm:order-last"
                                 />
                             </div>
                         </div>

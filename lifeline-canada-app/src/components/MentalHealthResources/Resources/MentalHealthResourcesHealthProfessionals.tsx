@@ -19,13 +19,13 @@ const MentalHealthResourcesHealthProfessionals: React.FC = () => {
                     </span>
                 </h1>
 
-                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row-reverse sm:items-start gap-6">
                     <img
                         src={coverPhoto}
                         alt="Health Professionals"
-                        className="float-right ml-6 mb-4 w-64 sm:w-80 rounded-xl shadow-md object-cover"
+                        className="w-full h-52 sm:w-64 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-cover"
                     />
-                    <div className="overflow-hidden">
+                    <div className="flex-1">
                         <p className="leading-relaxed">
                             More people commit suicide each year than die in all the world&apos;s combined conflicts. The assistance of counselling professionals in the prevention of suicide, on a world wide scale, is critically and clearly needed.
                         </p>
@@ -34,7 +34,6 @@ const MentalHealthResourcesHealthProfessionals: React.FC = () => {
                             Suicide results from a complex interaction of biological, genetic, psychological, sociological, and environmental factors. Improved community detection, referral, and management of suicidal behavior are important steps in suicide prevention. The critical challenge of such prevention is to identify people who are at risk and vulnerable; to understand the cicumstances that influence their self destructive behavior; and to effectively structure interventions. Consequently, counsellors need to develop community based initiatives for preventing as well as managing suicidal behavior.
                         </p>
                     </div>
-                    <div className="clear-both" />
                 </main>
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
@@ -43,13 +42,13 @@ const MentalHealthResourcesHealthProfessionals: React.FC = () => {
                     </h2>
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <img
                                 src={resourceForGeneralPhysiciansImage}
                                 alt="A Resource for General Physicians"
-                                className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-contain bg-gray-50"
+                                className="w-full h-40 sm:w-48 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                             />
-                            <div className="overflow-hidden">
+                            <div className="flex-1">
                                 <a
                                     href={AResourceForGeneralPhysicians}
                                     className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
@@ -64,16 +63,15 @@ const MentalHealthResourcesHealthProfessionals: React.FC = () => {
                                 </p>
                                 <p className="mt-4 leading-relaxed">By World Health Organization</p>
                             </div>
-                            <div className="clear-both" />
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <img
                                 src={organizationsManagementPersonnel}
                                 alt="A Resource Guide for Organizations, Management and Personnel"
-                                className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-contain bg-gray-50"
+                                className="w-full h-40 sm:w-48 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                             />
-                            <div className="overflow-hidden">
+                            <div className="flex-1">
                                 <a
                                     href={SuicidePreventionCoalition}
                                     className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
@@ -88,7 +86,6 @@ const MentalHealthResourcesHealthProfessionals: React.FC = () => {
                                 </p>
                                 <p className="mt-4 leading-relaxed">By: Suicide Prevention Coalition Champlain East</p>
                             </div>
-                            <div className="clear-both" />
                         </div>
                     </div>
                 </div>

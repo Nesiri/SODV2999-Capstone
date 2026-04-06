@@ -16,11 +16,11 @@ const MentalHealthResourcesMediaProfessionals: React.FC = () => {
                     </span>
                 </h1>
 
-                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row-reverse sm:items-start gap-6">
                     <img
                         src={coverPhoto}
                         alt="Media Professionals"
-                        className="float-right ml-6 mb-4 w-40 sm:w-56 rounded-xl shadow-md object-cover"
+                        className="w-full h-44 sm:w-40 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-cover"
                     />
                     <p className="leading-relaxed">
                         The factors contributing to suicide and its prevention are complex and not fully understood, but there is evidence that the media plays a significant role. On the one hand, vulnerable individuals may be influenced to engage in imitative behaviours by reports of suicide, particularly if the coverage is extensive, prominent, sensationalist and/or explicitly describes the method of suicide. On the other hand, responsible reporting may serve to educate the public about suicide, and may encourage those at risk of suicide to seek help.
@@ -33,13 +33,13 @@ const MentalHealthResourcesMediaProfessionals: React.FC = () => {
                     </h2>
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <img
                                 src={preventingSuicideImage}
                                 alt="Preventing Suicide - A Resource for Media Professionals"
-                                className="float-left mr-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-contain bg-gray-50"
+                                className="w-full h-40 sm:w-48 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                             />
-                            <div className="overflow-hidden">
+                            <div className="flex-1">
                                 <a
                                     href={PreventingSuicide}
                                     className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
@@ -56,7 +56,6 @@ const MentalHealthResourcesMediaProfessionals: React.FC = () => {
 
                                 <p className="mt-4 leading-relaxed">By World Health Organization and International Association for Suicide Prevention</p>
                             </div>
-                            <div className="clear-both" />
                         </div>
                     </div>
                 </div>

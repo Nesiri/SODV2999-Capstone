@@ -129,13 +129,13 @@ const MentalHealthResourcesCommunitiesLGBTQ: React.FC = () => {
                     </span>
                 </h1>
 
-                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row-reverse sm:items-start gap-6">
                     <img
                         src={coverPhoto}
                         alt="LGBTQ2S Mental Health"
-                        className="float-right ml-6 mb-4 w-64 sm:w-80 rounded-xl shadow-md object-cover"
+                        className="w-full h-52 sm:w-64 sm:h-auto sm:shrink-0 rounded-xl shadow-md object-cover"
                     />
-                    <div className="overflow-hidden">
+                    <div className="flex-1">
                         <p className="leading-relaxed">
                             Despite the wide spectrum of experiences regarding mental health and overall well-being among lesbian, gay, bisexual, trans, queer-identified, and two-spirited individuals, mirroring the diversity seen within the broader Canadian population, they encounter elevated susceptibilities to specific mental health issues owing to the impact of discrimination and the underlying social determinants of health.
                         </p>
@@ -144,7 +144,6 @@ const MentalHealthResourcesCommunitiesLGBTQ: React.FC = () => {
                             Socioeconomic elements hold significant sway over the mental health and general well-being of each individual, with their importance magnified for marginalized groups. Among the pivotal components contributing to the nurturing of positive mental health and well-being, three fundamental determinants come to the forefront: the fostering of social inclusiveness, the eradication of discrimination and violence, and ensuring access to financial resources. The echoes of these three factors resonate prominently across LGBTQ2S individuals and communities in Canada.
                         </p>
                     </div>
-                    <div className="clear-both" />
                 </main>
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
@@ -152,13 +151,13 @@ const MentalHealthResourcesCommunitiesLGBTQ: React.FC = () => {
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
                         {lgbtqResources.map((resource) => (
-                            <div key={resource.title} className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                            <div key={resource.title} className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                                 <img
                                     src={resource.image}
                                     alt={resource.title}
-                                    className="float-left mr-6 mb-4 w-48 sm:w-64 h-32 sm:h-40 rounded-xl shadow-md object-contain bg-gray-50"
+                                    className="w-full h-36 sm:w-48 sm:h-40 sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                                 />
-                                <div className="overflow-hidden">
+                                <div>
                                     <a
                                         href={resource.href}
                                         className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
@@ -168,7 +167,6 @@ const MentalHealthResourcesCommunitiesLGBTQ: React.FC = () => {
 
                                     <p className="mt-2 leading-relaxed">{resource.content}</p>
                                 </div>
-                                <div className="clear-both" />
                             </div>
                         ))}
                     </div>
