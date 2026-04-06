@@ -26,7 +26,7 @@ const comedyLinks = [
     title: "Kevin Breel: Confessions of a Depressed Comic",
     description:
       "Writer, comic and mental health activist Kevin Breel speaks up about depression. Kevin Breel didn’t look like a depressed kid: team captain, at every party, funny and confident. But he tells the story of the night he realized that to save his own life he needed to say four simple words.",
-    image: "/images/comedy/comedy-link-4.jpg",
+    image: "/images/pattern/comedy/kevin-breel.jpg",
     href: "https://www.ted.com/talks/kevin_breel_confessions_of_a_depressed_comic",
   },
 ];
