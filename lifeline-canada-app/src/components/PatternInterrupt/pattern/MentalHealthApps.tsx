@@ -132,7 +132,7 @@ const appRows: AppRow[] = [
 
 function CategoryCardItem({ card }: { card: CategoryCard }) {
   return (
-   <a href={`/pattern-interrupt/apps#${card.target}`} className="block text-center">
+    <a href={`#${card.target}`} className="block text-center">
       <img
         src={card.image}
         alt={card.alt}

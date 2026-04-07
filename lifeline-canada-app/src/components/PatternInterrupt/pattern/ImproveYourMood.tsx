@@ -62,16 +62,16 @@ export default function ImproveYourMood() {
           className="mb-10 text-[24px] leading-[1.25] text-black"
           style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
         >
-          If you’re looking for suggestions, you may find these helpful:
+          If you're looking for suggestions, you may find these helpful:
         </p>
 
-        {/* Block 1 */}
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[280px_1fr] lg:gap-16">
+        {/* Block 1 — image LEFT, text RIGHT */}
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[400px_1fr] lg:gap-16">
           <div className="flex justify-center lg:justify-start lg:pt-2">
             <img
               src="/images/improve-your-mood/small-things-big-ways.jpg"
               alt="Small Things That Impact Your Mood In Big Ways"
-              className="w-full max-w-[230px] object-contain"
+              className="w-full max-w-[380px] object-contain"
             />
           </div>
 
@@ -103,7 +103,7 @@ export default function ImproveYourMood() {
 
             <p>
               5. Go for a walk. Walking always helps clear the head and shed
-              negative energy. It’s especially therapeutic if you choose to walk
+              negative energy. It's especially therapeutic if you choose to walk
               at a scenic location.
             </p>
 
@@ -140,7 +140,7 @@ export default function ImproveYourMood() {
           </div>
         </div>
 
-        {/* Block 2 */}
+        {/* Block 2 — text LEFT, images RIGHT */}
         <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-[1fr_420px] lg:gap-14">
           <div
             className="max-w-[720px] space-y-5 text-[20px] leading-[1.5] text-black"
@@ -171,7 +171,7 @@ export default function ImproveYourMood() {
             </p>
 
             <p>
-              15. Cry. I don’t like crying in front of people, but whenever you
+              15. Cry. I don't like crying in front of people, but whenever you
               have an opportunity to slink away and cry by yourself, we always
               feel better afterwards. Crying releases pain.
             </p>
@@ -185,7 +185,7 @@ export default function ImproveYourMood() {
 
             <p>
               17. Reconnect with someone. Get back in touch with an old friend
-              or a family member that you haven’t spoken to in awhile.
+              or a family member that you haven't spoken to in awhile.
               Reconnecting with people almost always puts one in a good mood and
               fills the heart up with love.
             </p>
@@ -193,13 +193,13 @@ export default function ImproveYourMood() {
             <p>
               18. Write yourself a letter. Try to separate yourself from the ego
               and give yourself a pep talk every now and then. Cicero said,
-              “Nobody can give you wiser advice than yourself.”
+              "Nobody can give you wiser advice than yourself."
             </p>
 
             <p>
               19. Try a deep breathing exercise. There are all kinds of deep
               breathing exercises out there. Find one you like and do it
-              whenever you’re feeling stressed or overly emotional.
+              whenever you're feeling stressed or overly emotional.
             </p>
 
             <p>
@@ -211,27 +211,27 @@ export default function ImproveYourMood() {
             </p>
           </div>
 
-          <div className="flex flex-col items-end gap-8 lg:pt-1">
+          <div className="flex flex-col items-center gap-8 lg:items-end lg:pt-1">
             <img
               src="/images/improve-your-mood/smile.webp"
               alt="Smile"
-              className="w-full max-w-[360px] object-cover"
+              className="w-full max-w-[400px] object-cover"
             />
             <img
               src="/images/improve-your-mood/mood-2.jpg"
               alt="Walking outdoors"
-              className="w-full max-w-[360px] object-cover"
+              className="w-full max-w-[400px] object-cover"
             />
           </div>
         </div>
 
-        {/* Block 3 */}
-        <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-[300px_1fr] lg:gap-16">
+        {/* Block 3 — image LEFT, text RIGHT */}
+        <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-[400px_1fr] lg:gap-16">
           <div className="flex justify-center lg:justify-start lg:pt-2">
             <img
               src="/images/improve-your-mood/mood-1.jpg"
               alt="Mood illustration"
-              className="w-full max-w-[290px] object-contain"
+              className="w-full max-w-[380px] object-contain"
             />
           </div>
 
@@ -251,14 +251,14 @@ export default function ImproveYourMood() {
 
             <p>
               23. Get out of the house. Make a point to get out every now and
-              then, whether it’s to get some fresh air or go out to eat with a
+              then, whether it's to get some fresh air or go out to eat with a
               friend.
             </p>
 
             <p>
               24. Focus on what truly matters to you. Sometimes we forget what
-              matters to us and what isn’t that important. Some things just
-              aren’t worth getting too upset over.
+              matters to us and what isn't that important. Some things just
+              aren't worth getting too upset over.
             </p>
 
             <p>

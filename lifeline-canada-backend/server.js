@@ -33,6 +33,14 @@ app.use('/api/chat', chatRoutes);
     await aiMatcherService.initialize();
     console.log(' AI Matcher Service initialized and ready');
 
+// Simple wake-up // endpoint to prevent idling on platforms like Heroku, render, etc on free tiers.
+
+app.get('/wake', (req, res) => {
+  res.status(200).json({
+    status: 'success',
+    message: 'Render backend is awake!'
+  });
+});
 // Start server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

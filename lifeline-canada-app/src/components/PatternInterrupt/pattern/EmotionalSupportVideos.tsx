@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 
 type VideoRow = {
   title: string;
-  videoId?: string;
-  thumbnail?: string;
+  image: string;
   alt: string;
   text: string;
   href?: string;
@@ -12,62 +11,48 @@ type VideoRow = {
 const videoRows: VideoRow[] = [
   {
     title: "It Gets Better",
-    videoId: "7IcVyvg2Qlo",
-    thumbnail: "/images/pattern/emotional-support-videos/it-gets-better.png",
+    image: "/images/pattern/emotional-support-videos/it-gets-better.jpg",
     alt: "It Gets Better",
     text:
       "Video campaign against LGTBQ bullying and suicide, with people creating and sharing stories of hope that life improves after high school. Many LGBT youth can't picture what their lives might be like as openly gay adults. They can't imagine a future for themselves. So let's show them what our lives are like, let's show them what the future may hold in store for them.",
     href: "https://itgetsbetter.org/",
   },
   {
-    title: "Suicidal? It's ok. You can get through it. Please Talk",
-    videoId: "VOjY2BM6JGA",
-    thumbnail: "/images/pattern/emotional-support-videos/please-talk.png",
+    title: "Suicidal? It’s ok. You can get through it. Please Talk",
+    image: "/images/pattern/emotional-support-videos/please-talk.jpg",
     alt: "Please talk video",
     text:
       "Jonny was diagnosed with a combination of schizophrenia and depression. Since then he has had various relapses which he documented on this channel. He has produced and presented documentaries on BBC Three and Channel 4 on the subject of mental health.",
-    href: "https://www.youtube.com/watch?v=VOjY2BM6JGA",
+    href: "https://youtu.be/VOjY2BM6JGA?si=Jho4MU0gW4oK0VWD",
   },
   {
     title: "Suicide and a Safety Plan",
-    videoId: "tfDruc0QDCc",
-    thumbnail: "/images/pattern/emotional-support-videos/safe-plan.png",
+    image: "/images/pattern/emotional-support-videos/safety-plan.jpg",
     alt: "Suicide and a safety plan",
     text:
       "The great thing about a safety plan is that we can create them with our therapist (if we are seeing one) or on our own. They need to be unique to us and realistic.",
-    href: "https://www.youtube.com/watch?v=tfDruc0QDCc&feature=youtu.be",
+    href: "https://youtu.be/tfDruc0QDCc?si=Gti7_5e11fYtG9T5",
   },
   {
     title: "Suicidal? Take Some Pause For Thought",
-    videoId: "_IW4pyba3DE",
-    thumbnail: "/images/pattern/emotional-support-videos/pause-thought.webp",
+    image: "/images/pattern/emotional-support-videos/pause-for-thought.jpg",
     alt: "Pause for thought",
     text:
       "Existential therapist Emmy van Deurzen speaks about suicide.",
-    href: "https://www.youtube.com/watch?v=_IW4pyba3DE",
-  },
-  {
-    title: "IDrankTheSeaWater",
-    videoId: "UCWJw_8LsWMk", // Channel ID - using a placeholder, replace with actual video ID if available
-    thumbnail: "/images/pattern/emotional-support-videos/sea-water.webp",
-    alt: "IDrankTheSeaWater",
-    text: "I am a mental health and Tourette syndrome YouTuber. I raise awareness for Self-harm, Eating disorders, Suicide, OCD, PTSD, Maladaptive Daydreaming, Dissociative Identity Disorder...etc.",
-    href: "https://www.youtube.com/@IDrankTheSeaWater/about",
+    href: "https://youtu.be/_IW4pyba3DE?si=6Lbr6VZ6_QpQXIBj",
   },
   {
     title: "The Laughing Heart written by Charles Bukowski",
-    videoId: "nEbIuDuW7l8",
-    thumbnail: "/images/pattern/emotional-support-videos/laughing-heart.png",
+    image: "/images/pattern/emotional-support-videos/laughing-heart.jpg",
     alt: "The Laughing Heart",
     text:
       "The animation is based on 'The Laughing Heart' written by Charles Bukowski and spoken by Tom Waits. I've interpreted Bukowski's words through a story of an aged man reflecting on his life.",
-    href: "https://www.youtube.com/watch?v=nEbIuDuW7l8",
+    href: "https://youtu.be/nEbIuDuW7l8?si=LwEt4CoJvRxRr1HO",
   },
   {
-    title: "Contemplate Suicide",
-    videoId: "UCWJw_8LsWMk", // Channel ID - using a placeholder, replace with actual video ID if available
-    thumbnail: "/images/pattern/emotional-support-videos/contemplate-suicide.png",
-    alt: "Contemplate Suicide",
+    title: "IDrankTheSeaWater",
+    image: "/images/pattern/emotional-support-videos/idranktheseawater.jpg",
+    alt: "IDrankTheSeaWater",
     text:
       "I am a mental health and Tourette syndrome YouTuber. I raise awareness for Self-harm, Eating disorders, Suicide, OCD, PTSD, Maladaptive Daydreaming, Dissociative Identity Disorder...etc.",
     href: "https://www.youtube.com/@IDrankTheSeaWater/about",
@@ -75,10 +60,6 @@ const videoRows: VideoRow[] = [
 ];
 
 function VideoItem({ row }: { row: VideoRow }) {
-  const getYouTubeEmbedUrl = (videoId: string) => {
-    return `https://www.youtube.com/embed/${videoId}`;
-  };
-
   const titleContent = row.href ? (
     <a
       href={row.href}
@@ -94,25 +75,23 @@ function VideoItem({ row }: { row: VideoRow }) {
 
   return (
     <div className="border-t border-[#b9a9c4] py-6">
-      <div className="grid gap-6 md:grid-cols-[200px_1fr] md:items-start">
+      <div className="grid gap-6 md:grid-cols-[190px_1fr] md:items-start">
         <div>
-          {row.videoId ? (
-            <div className="relative w-[200px]">
-              <iframe
-                src={getYouTubeEmbedUrl(row.videoId)}
-                title={row.title}
-                className="h-[113px] w-full object-cover shadow-[0_4px_8px_rgba(0,0,0,0.18)]"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-          ) : row.thumbnail ? (
+          {row.href ? (
+            <a href={row.href} target="_blank" rel="noreferrer">
+              <img
+                src={row.image}
+                alt={row.alt}
+                className="w-[170px] object-cover shadow-[0_4px_8px_rgba(0,0,0,0.18)] transition-transform duration-300 hover:scale-105"
+              />
+            </a>
+          ) : (
             <img
-              src={row.thumbnail}
+              src={row.image}
               alt={row.alt}
-              className="w-[200px] object-cover shadow-[0_4px_8px_rgba(0,0,0,0.18)]"
+              className="w-[170px] object-cover shadow-[0_4px_8px_rgba(0,0,0,0.18)] transition-transform duration-300 hover:scale-105"
             />
-          ) : null}
+          )}
         </div>
 
         <div>
@@ -177,7 +156,7 @@ export default function EmotionalSupportVideos() {
 
             <div className="flex justify-center md:justify-start">
               <img
-                src="/images/pattern/emotional-support-videos/hope-reminds-us-we-are-strong.jpg"
+                src="/images/pattern/emotional-support-videos/hero.jpg"
                 alt="Emotional support"
                 className="w-full max-w-[420px] object-cover shadow-[0_10px_16px_rgba(0,0,0,0.18)]"
               />

@@ -15,6 +15,7 @@ import TransformNegativeThoughtsPage from '../../components/PatternInterrupt/pat
 import WordsOfWisdom from '../../components/PatternInterrupt/pattern/WordsOfWisdom';
 import ImageGallery from '../../components/PatternInterrupt/pattern/ImageGallery';
 import ActsOfKindness from '../../components/PatternInterrupt/pattern/ActsOfKindness';
+import HelpfulMovies from '../../components/PatternInterrupt/pattern/HelpfulMovies';
 import NotFound from '../NotFound';
 
 // Map paths to components
@@ -26,7 +27,7 @@ const components: Record<string, React.ComponentType> = {
   'music': UpliftingMusicVideos,
   'books': LifeChangingBooks,
   'movies-inspiration': Moviesofinspiration,
-  'helpful-movies': Moviesofinspiration, 
+  'helpful-movies': HelpfulMovies,
   'self-management': SelfManagement,
   'coping': CopingMechanisms,
   'interactive-mind': InteractiveMind,
@@ -35,6 +36,7 @@ const components: Record<string, React.ComponentType> = {
   'wisdom': WordsOfWisdom,
   'gallery': ImageGallery,
   'kindness': ActsOfKindness,
+
 };
 
 export default function PatternInterruptPage() {
