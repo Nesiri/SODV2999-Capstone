@@ -24,7 +24,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
         <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-12">
             <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
 
-                <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
+                <h1 className="mt-4 !text-3xl sm:!text-5xl font-extrabold tracking-tight">
                     <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
                         Depression
                     </span>
