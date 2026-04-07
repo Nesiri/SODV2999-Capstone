@@ -17,23 +17,32 @@ const ptsdResourceToolkit = '/assets/AdditionalResourceImages/PTSDToolkit.png';
 
 const MentalHealthResourcesFirstResponders: React.FC = () => {
     return (
-        <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-8 sm:py-12">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
+            {/* Decorative background orbs */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+            </div>
+            <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
 
-                <h1 className="mt-2 sm:mt-4 !text-2xl sm:!text-4xl md:!text-5xl font-extrabold tracking-tight text-center sm:text-left">
-                    <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
+                <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+                    <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
                         First Responders
                     </span>
                 </h1>
 
-                <main className="mt-4 sm:mt-6 bg-white/70 backdrop-blur-sm p-4 sm:p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col-reverse sm:flex-row-reverse sm:items-start gap-4 sm:gap-6">
+                <div className="flex items-center gap-4 mt-3 mb-1">
+                    <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+                </div>
+
+                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row-reverse sm:items-start gap-6">
                     <img
                         src={coverPhoto}
                         alt="First Responders"
-                        className="w-full h-48 sm:w-56 md:w-64 sm:h-auto rounded-xl shadow-md object-cover"
+                        className="w-full h-40 sm:w-[30vw] sm:max-w-[18rem] sm:h-auto sm:shrink-0 rounded-xl shadow-md object-cover"
                     />
                     <div className="flex-1">
-                        <p className="leading-relaxed text-sm sm:text-base">
+                        <p className="leading-relaxed">
                             First responders, such as police officers, firefighters and ambulance and paramedics are increasingly called upon in situations involving mental health emergencies, such as suicidal crises. Consequently, they occupy an important role in community-based suicide prevention: by ensuring that persons with mental disorders receive appropriate mental health treatment, by removing access to lethal means from people at high risk of suicide, and by recognizing the suicide potential in situations involving domestic disputes or where potentially deadly force is exercised. First responders are in a unique position to determine the course and outcome of suicidal crises.
                         </p>
 
@@ -48,12 +57,12 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                         Guides &amp; Toolkits for First Responders
                     </h2>
 
-                    <div className="mt-4 sm:mt-6 grid gap-4 sm:gap-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+                    <div className="mt-6 grid gap-4 sm:gap-5">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <img
                                 src={earlyRespondersSupportingSurvivors}
                                 alt="A Guide for Early Responders Supporting Survivors Bereaved by Suicide"
-                                className="w-full h-40 sm:w-40 md:w-48 sm:h-auto rounded-xl shadow-md object-contain bg-gray-50"
+                                className="w-full h-40 sm:w-[22vw] sm:max-w-[18rem] sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                             />
                             <div className="flex-1">
                                 <a
@@ -74,11 +83,11 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <img
                                 src={informationForFirstResponders}
                                 alt="Information For First Responders in Mental Health or Addictions Crises"
-                                className="w-full h-40 sm:w-40 md:w-48 sm:h-auto rounded-xl shadow-md object-contain bg-gray-50"
+                                className="w-full h-40 sm:w-[22vw] sm:max-w-[18rem] sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                             />
                             <div className="flex-1">
                                 <a
@@ -109,11 +118,11 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <img
                                 src={firstRespondersTraumaSuicide}
                                 alt="First Responders, Trauma and Suicide"
-                                className="w-full h-40 sm:w-40 md:w-48 sm:h-auto rounded-xl shadow-md object-contain bg-gray-50"
+                                className="w-full h-40 sm:w-[22vw] sm:max-w-[18rem] sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                             />
                             <div className="flex-1">
                                 <a
@@ -141,12 +150,12 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                         Resources &amp; Links for First Responders
                     </h2>
 
-                    <div className="mt-4 sm:mt-6 grid gap-4 sm:gap-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+                    <div className="mt-6 grid gap-4 sm:gap-5">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <img
                                 src={suicidesAmongFirstResponders}
                                 alt="Suicides Among First Responders: A Call to Action"
-                                className="w-full h-40 sm:w-40 md:w-48 sm:h-auto rounded-xl shadow-md object-contain bg-gray-50"
+                                className="w-full h-40 sm:w-[22vw] sm:max-w-[18rem] sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                             />
                             <div className="flex-1">
                                 <a
@@ -161,11 +170,11 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <img
                                 src={preventingSuicide}
                                 alt="Preventing Suicide: Information for Emergency Responders"
-                                className="w-full h-40 sm:w-40 md:w-48 sm:h-auto rounded-xl shadow-md object-contain bg-gray-50"
+                                className="w-full h-40 sm:w-[22vw] sm:max-w-[18rem] sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                             />
                             <div className="flex-1">
                                 <a
@@ -180,11 +189,11 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <img
                                 src={iDontWantToLoseMoreFriends}
                                 alt="I Don't Want to Lose Any More Friends: First Responders are Not Alone"
-                                className="w-full h-40 sm:w-40 md:w-48 sm:h-auto rounded-xl shadow-md object-contain bg-gray-50"
+                                className="w-full h-40 sm:w-[22vw] sm:max-w-[18rem] sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                             />
                             <div className="flex-1">
                                 <a
@@ -199,11 +208,11 @@ const MentalHealthResourcesFirstResponders: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                             <img
                                 src={ptsdResourceToolkit}
                                 alt="PTSD Resource Toolkit"
-                                className="w-full h-40 sm:w-40 md:w-48 sm:h-auto rounded-xl shadow-md object-contain bg-gray-50"
+                                className="w-full h-40 sm:w-[22vw] sm:max-w-[18rem] sm:h-auto sm:shrink-0 rounded-xl shadow-md object-contain bg-gray-50"
                             />
                             <div className="flex-1">
                                 <a

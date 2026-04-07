@@ -21,14 +21,23 @@ const interpretScore = "/assets/AdditionalResourceImages/Image-2-600x370.png";
 
 const MentalHealthResourcesDepression: React.FC = () => {
     return (
-        <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-12">
-            <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+        <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
+            {/* Decorative background orbs */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+            </div>
+            <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
 
-                <h1 className="mt-4 !text-3xl sm:!text-5xl font-extrabold tracking-tight">
-                    <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
+                <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+                    <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
                         Depression
                     </span>
                 </h1>
+
+                <div className="flex items-center gap-4 mt-3 mb-1">
+                    <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+                </div>
 
                 <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row sm:items-start gap-6">
                     <div className="flex-1">
@@ -47,7 +56,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
                     <img
                         src={coverPhoto}
                         alt="Depression support"
-                        className="w-full h-52 sm:w-56 sm:h-auto object-cover rounded-lg sm:shrink-0 order-first sm:order-last"
+                        className="w-full h-40 sm:w-[30vw] sm:max-w-[18rem] sm:h-auto object-cover rounded-lg sm:shrink-0 order-first sm:order-last"
                     />
                 </main>
 
@@ -156,7 +165,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
-                            <img src={selfTest} alt="Depression Self Test" className="w-full h-32 sm:w-32 sm:h-auto object-contain rounded-lg sm:shrink-0" />
+                            <img src={selfTest} alt="Depression Self Test" className="w-full h-36 sm:w-[18vw] sm:max-w-[14rem] sm:h-auto object-contain rounded-lg sm:shrink-0" />
                             <div className="flex-1">
                                 <a
                                     href="https://www.cnvdetox.com/depression-self-test/"
@@ -171,7 +180,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
-                            <img src={workouts} alt="Depressed? These Workouts Can Help" className="w-full h-32 sm:w-32 sm:h-auto object-contain rounded-lg sm:shrink-0" />
+                            <img src={workouts} alt="Depressed? These Workouts Can Help" className="w-full h-36 sm:w-[18vw] sm:max-w-[14rem] sm:h-auto object-contain rounded-lg sm:shrink-0" />
                             <div className="flex-1">
                                 <a
                                     href="https://daveasprey.com/benefits-exercise-depression/"
@@ -186,7 +195,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
-                            <img src={happinessAndDepression} alt="Happiness and Depression" className="w-full h-32 sm:w-32 sm:h-auto object-contain rounded-lg sm:shrink-0" />
+                            <img src={happinessAndDepression} alt="Happiness and Depression" className="w-full h-36 sm:w-[18vw] sm:max-w-[14rem] sm:h-auto object-contain rounded-lg sm:shrink-0" />
                             <div className="flex-1">
                                 <a
                                     href="https://www.healthyplace.com/blogs/survivingmentalhealthstigma/2016/06/happiness-and-depression-its-possible-to-feel-both"
@@ -201,7 +210,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
-                            <img src={loveLearnings} alt="Love Learnings" className="w-full h-32 sm:w-32 sm:h-auto object-contain rounded-lg sm:shrink-0" />
+                            <img src={loveLearnings} alt="Love Learnings" className="w-full h-36 sm:w-[18vw] sm:max-w-[14rem] sm:h-auto object-contain rounded-lg sm:shrink-0" />
                             <div className="flex-1">
                                 <a
                                     href="https://www.lovelearnings.com/health/depression-suicide"
@@ -216,7 +225,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
-                            <img src={alcoholAwareness} alt="Alcohol and Suicide" className="w-full h-32 sm:w-32 sm:h-auto object-contain rounded-lg sm:shrink-0" />
+                            <img src={alcoholAwareness} alt="Alcohol and Suicide" className="w-full h-36 sm:w-[18vw] sm:max-w-[14rem] sm:h-auto object-contain rounded-lg sm:shrink-0" />
                             <div className="flex-1">
                                 <a
                                     href="https://alcoholawareness.org"
@@ -231,7 +240,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
-                            <img src={beyondBlue} alt="Beyond Blue" className="w-full h-32 sm:w-32 sm:h-auto object-contain rounded-lg sm:shrink-0" />
+                            <img src={beyondBlue} alt="Beyond Blue" className="w-full h-36 sm:w-[18vw] sm:max-w-[14rem] sm:h-auto object-contain rounded-lg sm:shrink-0" />
                             <div className="flex-1">
                                 <a
                                     href="https://www.beyondblue.org.au"
@@ -246,7 +255,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
-                            <img src={depressionHurts} alt="Depression Hurts" className="w-full h-32 sm:w-32 sm:h-auto object-contain rounded-lg sm:shrink-0" />
+                            <img src={depressionHurts} alt="Depression Hurts" className="w-full h-36 sm:w-[18vw] sm:max-w-[14rem] sm:h-auto object-contain rounded-lg sm:shrink-0" />
                             <div className="flex-1">
                                 <a
                                     href="https://depressionhurts.ca/en/"
@@ -261,7 +270,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
-                            <img src={headsUpGuys} alt="HeadsUpGuys" className="w-full h-32 sm:w-32 sm:h-auto object-contain rounded-lg sm:shrink-0" />
+                            <img src={headsUpGuys} alt="HeadsUpGuys" className="w-full h-36 sm:w-[18vw] sm:max-w-[14rem] sm:h-auto object-contain rounded-lg sm:shrink-0" />
                             <div className="flex-1">
                                 <a
                                     href="https://headsupguys.org"
@@ -276,7 +285,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
-                            <img src={depressionAndYoungPeople} alt="Depression & Young People" className="w-full h-32 sm:w-32 sm:h-auto object-contain rounded-lg sm:shrink-0" />
+                            <img src={depressionAndYoungPeople} alt="Depression &amp; Young People" className="w-full h-36 sm:w-[18vw] sm:max-w-[14rem] sm:h-auto object-contain rounded-lg sm:shrink-0" />
                             <div className="flex-1">
                                 <a
                                     href="https://pymhws.org.au/young-people/"
@@ -327,7 +336,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
                                     <li>Thinking that you would be better off dead or that you want to hurt yourself in some way</li>
                                 </ol>
                             </div>
-                            <img src={selfTest} alt="Depression Self Test" className="w-full h-48 sm:w-48 sm:h-auto object-contain rounded-lg sm:shrink-0 order-first sm:order-last" />
+                            <img src={selfTest} alt="Depression Self Test" className="w-full h-48 sm:w-[28vw] sm:max-w-[20rem] sm:h-auto object-contain rounded-lg sm:shrink-0 order-first sm:order-last" />
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
@@ -350,7 +359,7 @@ const MentalHealthResourcesDepression: React.FC = () => {
                                     <li>15 or More: May be experiencing clinical depression and likely would benefit from a thorough check up and possibly antidepressant medication and therapy.</li>
                                 </ul>
                             </div>
-                            <img src={interpretScore} alt="Interpreting Scores" className="w-full h-48 sm:w-48 sm:h-auto object-contain rounded-lg sm:shrink-0 order-first sm:order-last" />
+                            <img src={interpretScore} alt="Interpreting Scores" className="w-full h-48 sm:w-[28vw] sm:max-w-[20rem] sm:h-auto object-contain rounded-lg sm:shrink-0 order-first sm:order-last" />
                         </div>
                     </div>
                 </div>

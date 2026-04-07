@@ -19,16 +19,25 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
   const sectionClassName = 'rounded-xl border border-slate-200 bg-white p-5 sm:p-6';
 
   return (
-    <section className="w-full bg-slate-50">
-      <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+    <section className="relative w-full bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 overflow-hidden">
+      {/* Decorative background orbs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+      </div>
+      <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-8 relative z-10">
 
-        <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
-          <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
+        <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+          <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
             How Can I Help Someone?
           </span>
         </h1>
 
-        <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-[1.3fr_1fr]">
+        <div className="flex items-center gap-4 mt-3 mb-1">
+          <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-[1fr_300px]">
           <div className={sectionClassName}>
             <p className="leading-relaxed text-slate-700">
               A suicidal person may not ask for help, but that doesn't mean that help isn't wanted. People who take their lives don't want to die—they just want to stop hurting. Suicide prevention starts with recognizing the warning signs and taking them seriously. If you think a friend or family member is considering suicide, you might be afraid to bring up the subject. But talking openly about suicidal thoughts and feelings can save a life.
@@ -38,7 +47,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             </p>
           </div>
 
-          <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+          <div className="overflow-hidden rounded-xl border border-slate-200 bg-white max-h-52 lg:max-h-64">
             <img
               src={coverPhoto}
               alt="How to help someone in crisis"
@@ -56,22 +65,22 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
         </div>
 
         <div className="mt-8 space-y-4">
-          <details className={sectionClassName} open>
-            <summary className="cursor-pointer text-lg font-semibold text-purple-700">
+          <div className={sectionClassName}>
+            <h2 className="text-lg font-semibold text-purple-700">
               Understanding Suicide
-            </summary>
+            </h2>
             <div className="mt-4 space-y-3 text-slate-700">
               <p className="leading-relaxed">
                 People in suicidal crisis often feel trapped, hopeless, and alone. Taking warning signs seriously and responding early is one of the most effective ways to help.
               </p>
             </div>
-          </details>
+          </div>
 
-          <details className={sectionClassName}>
-            <summary className="cursor-pointer text-lg font-semibold text-purple-700">
+          <div className={sectionClassName}>
+            <h2 className="text-lg font-semibold text-purple-700">
               Warning Signs to Watch For
-            </summary>
-            <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[3fr_2fr] lg:items-start text-slate-700">
+            </h2>
+            <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
               <div className="space-y-3">
                 <ul className="list-disc space-y-2 pl-5 leading-relaxed">
                   <li>Talking about death, suicide, or being a burden.</li>
@@ -91,22 +100,22 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                   </a>
                 </p>
               </div>
-              <div className="h-full overflow-hidden rounded-xl border border-slate-200 bg-white">
+              <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
                 <img
                   src={warning}
                   alt="Warning signs illustration"
-                  className="h-full w-full min-h-[240px] object-cover"
+                  className="h-full w-full min-h-[120px] object-cover"
                   loading="lazy"
                 />
               </div>
             </div>
-          </details>
+          </div>
 
-          <details className={sectionClassName}>
-            <summary className="cursor-pointer text-lg font-semibold text-purple-700">
-              How to Talk to Someone You’re Worried About
-            </summary>
-            <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[3fr_2fr] lg:items-start text-slate-700">
+          <div className={sectionClassName}>
+            <h2 className="text-lg font-semibold text-purple-700">
+              How to Talk to Someone You're Worried About
+            </h2>
+            <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
               <div className="space-y-3">
                 <ul className="list-disc space-y-2 pl-5 leading-relaxed">
                 <li>Say: "I care about you. Are you thinking about suicide?"</li>
@@ -126,22 +135,22 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 </a>
               </p>
             </div>
-              <div className="h-full overflow-hidden rounded-xl border border-slate-200 bg-white">
+              <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
                 <img
                   src={talkingToSomeone}
                   alt="Talking to someone about suicidal feelings"
-                  className="h-full w-full min-h-[240px] object-cover"
+                  className="h-full w-full min-h-[120px] object-cover"
                   loading="lazy"
                 />
               </div>
             </div>
-          </details>
+          </div>
 
-          <details className={sectionClassName}>
-            <summary className="cursor-pointer text-lg font-semibold text-purple-700">
+          <div className={sectionClassName}>
+            <h2 className="text-lg font-semibold text-purple-700">
               Quick Risk Questions
-            </summary>
-            <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[3fr_2fr] lg:items-start text-slate-700">
+            </h2>
+            <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
               <div className="space-y-3">
                 <ul className="list-disc space-y-2 pl-5 leading-relaxed">
                   <li>Are you thinking of suicide?</li>
@@ -152,21 +161,21 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                   <li>Who can we contact right now for support?</li>
                 </ul>
               </div>
-              <div className="h-full overflow-hidden rounded-xl border border-slate-200 bg-white">
+              <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
                 <img
                   src={phone}
                   alt="Phone crisis support"
-                  className="h-full w-full min-h-[240px] object-cover"
+                  className="h-full w-full min-h-[120px] object-cover"
                   loading="lazy"
                 />
               </div>
             </div>
-          </details>
+          </div>
 
-          <details className={sectionClassName}>
-            <summary className="cursor-pointer text-lg font-semibold text-purple-700">
+          <div className={sectionClassName}>
+            <h2 className="text-lg font-semibold text-purple-700">
               If You Receive a Suicidal Phone Call
-            </summary>
+            </h2>
             <div className="mt-4 space-y-3 text-slate-700">
               <ul className="list-disc space-y-2 pl-5 leading-relaxed">
                 <li>Let the person talk and express emotion without judgment.</li>
@@ -175,12 +184,12 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 <li>Encourage immediate emergency care or same-day professional support.</li>
               </ul>
             </div>
-          </details>
+          </div>
 
-          <details className={sectionClassName}>
-            <summary className="cursor-pointer text-lg font-semibold text-purple-700">
+          <div className={sectionClassName}>
+            <h2 className="text-lg font-semibold text-purple-700">
               After a Suicide Attempt: What to Do Next
-            </summary>
+            </h2>
             <div className="mt-4 space-y-4 text-slate-700">
 
               {/* Let Them Talk */}
@@ -355,7 +364,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
               </div>
 
             </div>
-          </details>
+          </div>
         </div>
 
         <div className="mt-10 rounded-xl border border-slate-200 bg-white p-6 text-center sm:p-8">

@@ -11,20 +11,28 @@ const americanAddictionCenters = "/assets/AdditionalResourceImages/FitcyHealth.p
 
 const MentalHealthResourcesSearchProfessional: React.FC = () => {
   return (
-    <section className="relative py-20 bg-gradient-to-br from-slate-50 via-white to-purple-50">
-      <div className="max-w-5xl mx-auto px-6 sm:px-8">
+    <section className="relative py-20 bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 overflow-hidden">
+      {/* Decorative background orbs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+      </div>
+      <div className="w-full px-6 sm:px-8 relative z-10">
 
-        <h1 className="mt-6 text-3xl sm:text-4xl font-extrabold tracking-tight">
-          <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
+        <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+          <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
             Search for a Professional
           </span>
         </h1>
 
-        <div className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">          <img
-            src={coverPhoto}
-            alt="Search for a Professional"
-            className="float-right ml-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
-          />          <p className="leading-relaxed">
+        <div className="flex items-center gap-4 mt-3 mb-1">
+          <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+        </div>
+
+        <div className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+          <div className="flex flex-col sm:flex-row sm:items-start gap-6">
+            <div className="flex-1">
+              <p className="leading-relaxed">
             If you’re having suicidal thoughts — which can range from despair,
             hopelessness, and a sense that life’s not worth living to having a
             concrete plan for ending your life — now’s the time to get help.
@@ -38,6 +46,13 @@ const MentalHealthResourcesSearchProfessional: React.FC = () => {
             psychiatrist can be a lifesaving step that can help you feel good
             again.
           </p>
+            </div>
+            <img
+              src={coverPhoto}
+              alt="Search for a Professional"
+              className="w-full h-40 sm:w-[30vw] sm:max-w-[18rem] sm:h-auto sm:shrink-0 rounded-xl shadow-md object-cover"
+            />
+          </div>
 
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="p-5 bg-white rounded-lg shadow-sm border border-gray-100 flex items-start gap-4">

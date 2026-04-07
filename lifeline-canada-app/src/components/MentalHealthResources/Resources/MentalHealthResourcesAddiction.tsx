@@ -19,23 +19,27 @@ const canadianCentreForAddictions = '/assets/AdditionalResourceImages/CanadianCe
 
 const MentalHealthResourcesAddiction: React.FC = () => {
     return (
-        <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-12">
-            <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+        <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
+            {/* Decorative background orbs */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+            </div>
+            <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
 
-                <div className="flex flex-col sm:flex-row items-start gap-6">
-                    <div className="flex-1">
-                        <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
-                            <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
-                                Addiction
-                            </span>
-                        </h1>
+                <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+                    <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
+                        Addiction
+                    </span>
+                </h1>
 
-                        <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
-                            <img
-                                src={coverPhoto}
-                                alt="Addiction awareness"
-                                className="float-right ml-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
-                            />
+                <div className="flex items-center gap-4 mt-3 mb-1">
+                    <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+                </div>
+
+                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+                    <div className="flex flex-col sm:flex-row sm:items-start gap-6">
+                        <div className="flex-1">
                             <p className="leading-relaxed">
                                 Although addiction is not technically considered a mental illness, it is a medical disorder that often co-occurs with mental illnesses. Some illnesses like depression and anxiety can be the root causes of substance abuse. One of the main characteristics of addiction is that people are compelled to use rather than doing so through choice.
                             </p>
@@ -43,9 +47,14 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                             <p className="mt-4 leading-relaxed">
                                 The symptoms of depression can drive some people toward substance use to cope with their condition. However, consuming drugs or alcohol to self-medicate can increase the risk for addiction. Depression can raise the risk of substance abuse, as chemical intoxicants can be a way to self-medicate by numbing feelings of despair. This chemical intoxication can make depressive episodes more severe, thereby exacerbating self-destructive behavior and pessimistic thoughts.
                             </p>
-                        </main>
+                        </div>
+                        <img
+                            src={coverPhoto}
+                            alt="Addiction awareness"
+                            className="w-full h-40 sm:w-[30vw] sm:max-w-[18rem] sm:h-auto sm:shrink-0 rounded-xl shadow-md object-cover"
+                        />
                     </div>
-                </div>
+                </main>
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
                     <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
