@@ -16,33 +16,45 @@ const teenBodyImage = '/assets/AdditionalResourceImages/freeDerm.png';
 
 const MentalHealthResourcesCommunitiesParents: React.FC = () => {
     return (
-        <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-12">
-            <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+        <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
+            {/* Decorative background orbs */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+            </div>
+            <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
 
-                <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
-                    <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
+                <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+                    <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
                         Parents
                     </span>
                 </h1>
 
+                <div className="flex items-center gap-4 mt-3 mb-1">
+                    <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+                </div>
+
                 <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
-                    <img
-                        src={coverImage}
-                        alt="Parents"
-                        className="float-right ml-6 mb-4 w-64 sm:w-80 rounded-xl shadow-md object-cover"
-                    />
-                    <p className="leading-relaxed">
-                        Communication is the first step in suicide prevention. Perhaps you have noticed your son or daughter seems very down lately, not eating or doing any of the things he enjoys. Maybe she is talking about dying, not wanting to live anymore. You are concerned but not sure whether to take her seriously. You are afraid if you bring up the subject it will be painful or, even worse, you might put ideas about suicide in your child&apos;s head. Your own discomfort with suicide and the stigma associated with it may also be complicating matters. What do you do?
-                    </p>
+                    <div className="flex flex-col sm:flex-row sm:items-start gap-6">
+                        <div className="flex-1">
+                            <p className="leading-relaxed">
+                                Communication is the first step in suicide prevention. Perhaps you have noticed your son or daughter seems very down lately, not eating or doing any of the things he enjoys. Maybe she is talking about dying, not wanting to live anymore. You are concerned but not sure whether to take her seriously. You are afraid if you bring up the subject it will be painful or, even worse, you might put ideas about suicide in your child&apos;s head. Your own discomfort with suicide and the stigma associated with it may also be complicating matters. What do you do?
+                            </p>
 
-                    <p className="mt-4 leading-relaxed">
-                        First of all, accept the possibility that your child may be at risk of suicide. Secondly, ask the questions - Are you thinking about suicide? Are you thinking about killing yourself? Do you have a plan? Do you have the means to do it (a way to do it)? If your child answers yes to these questions, you need to get help immediately. Do not leave your child alone.
-                    </p>
+                            <p className="mt-4 leading-relaxed">
+                                First of all, accept the possibility that your child may be at risk of suicide. Secondly, ask the questions - Are you thinking about suicide? Are you thinking about killing yourself? Do you have a plan? Do you have the means to do it (a way to do it)? If your child answers yes to these questions, you need to get help immediately. Do not leave your child alone.
+                            </p>
 
-                    <p className="mt-4 leading-relaxed">
-                        In asking these questions you will not make your child suicidal. By expressing concern you open the door for communicating with your child, giving her permission to talk about her feelings. You show him that there is strength in asking for help.
-                    </p>
-                    <div className="clear-both" />
+                            <p className="mt-4 leading-relaxed">
+                                In asking these questions you will not make your child suicidal. By expressing concern you open the door for communicating with your child, giving her permission to talk about her feelings. You show him that there is strength in asking for help.
+                            </p>
+                        </div>
+                        <img
+                            src={coverImage}
+                            alt="Parents"
+                            className="w-full h-40 sm:w-[30vw] sm:max-w-[18rem] sm:h-auto sm:shrink-0 rounded-xl shadow-md object-cover"
+                        />
+                    </div>
                 </main>
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">

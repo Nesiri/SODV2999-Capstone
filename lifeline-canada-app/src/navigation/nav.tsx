@@ -34,7 +34,7 @@ export const resourceCategories = [
         color: 'from-purple-400 to-violet-400',
       },
       {
-        name: 'Grief Support',
+        name: 'Grief',
         path: '/resources/grief',
         icon: '💔',
         color: 'from-rose-400 to-pink-400',

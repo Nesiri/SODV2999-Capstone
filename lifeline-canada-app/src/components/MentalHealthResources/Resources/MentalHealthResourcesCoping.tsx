@@ -21,18 +21,27 @@ const MentalHealthResourcesCoping: React.FC = () => {
     const sectionClassName = 'rounded-xl border border-slate-200 bg-white p-5 sm:p-6';
 
     return (
-        <section className="w-full bg-slate-50">
-            <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <section className="relative w-full bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 overflow-hidden">
+            {/* Decorative background orbs */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+            </div>
+            <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-8 relative z-10">
 
-                <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
-                    <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
+                <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+                    <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
                         Coping with Suicidal Thoughts
                     </span>
                 </h1>
 
+                <div className="flex items-center gap-4 mt-3 mb-1">
+                    <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+                </div>
+
                 <div className="mt-8">
                     <div className={sectionClassName}>
-                        <div className="grid grid-cols-1 gap-4 lg:grid-cols-[3fr_2fr] lg:items-stretch">
+                        <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1fr_300px] lg:items-start">
                             <div>
                                 <p className="leading-relaxed text-slate-700">
                                     Suicidal thoughts can happen when feelings of hopelessness, isolation and despair become too heavy to bear. You might feel so overwhelmed with pain that suicide seems like the only way to release yourself from the burden you've been carrying. You should know that there is help available to deal with your feelings. Contacting a mental health professional can help you heal and experience joy and happiness again, no matter how impossible it seems right now.
@@ -54,7 +63,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                                 </p>
                             </div>
 
-                            <div className="h-full overflow-hidden rounded-xl border border-slate-200 bg-white">
+                            <div className="overflow-hidden rounded-xl border border-slate-200 bg-white max-h-52 lg:max-h-64">
                                 <img
                                     src={copingMain}
                                     alt="Coping support illustration"
@@ -67,18 +76,12 @@ const MentalHealthResourcesCoping: React.FC = () => {
 
                 </div>
 
-                <div className="mt-8 rounded-xl border border-rose-200 bg-rose-50 p-4 text-rose-900">
-                    <p className="text-sm sm:text-base">
-                        If you feel you might act on suicidal thoughts, seek emergency help now by calling 911.
-                    </p>
-                </div>
-
                 <div className="mt-8 space-y-4">
-                    <details className={sectionClassName} open>
-                        <summary className="cursor-pointer text-lg font-semibold text-purple-700">
-                            I’m seriously thinking about suicide. What should I do?
-                        </summary>
-                        <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[3fr_2fr] lg:items-stretch text-slate-700">
+                    <div className={sectionClassName}>
+                        <h2 className="text-lg font-semibold text-purple-700">
+                            I'm seriously thinking about suicide. What should I do?
+                        </h2>
+                        <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
                             <div className="space-y-3">
                                 <p className="font-medium text-purple-700">What to do right now</p>
                                 <ul className="list-disc space-y-2 pl-5 leading-relaxed">
@@ -89,20 +92,20 @@ const MentalHealthResourcesCoping: React.FC = () => {
                                 </ul>
                             </div>
 
-                            <div className="h-full overflow-hidden rounded-xl border border-slate-200 bg-white">
+                            <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
                                 <img
                                     src={copingThinking}
                                     alt="Person thinking with support"
-                                    className="h-full w-full min-h-[260px] object-cover"
+                                    className="h-full w-full min-h-[120px] object-cover"
                                     loading="lazy"
                                 />
                             </div>
                         </div>
-                    </details>
+                    </div>
 
-                    <details className={sectionClassName}>
-                        <summary className="cursor-pointer text-lg font-semibold text-purple-700">Safety Plan</summary>
-                        <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[3fr_2fr] lg:items-stretch text-slate-700">
+                    <div className={sectionClassName}>
+                        <h2 className="text-lg font-semibold text-purple-700">Safety Plan</h2>
+                        <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
                             <div className="space-y-3">
                                 <ol className="list-decimal space-y-2 pl-5 leading-relaxed">
                                     <li>Remind myself of my reasons for living</li>
@@ -116,19 +119,19 @@ const MentalHealthResourcesCoping: React.FC = () => {
                                 </ol>
                             </div>
 
-                            <div className="h-full overflow-hidden rounded-xl border border-slate-200 bg-white">
+                            <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
                                 <img
                                     src={safetyPlanImg}
                                     alt="Safety plan illustration"
-                                    className="h-full w-full min-h-[260px] object-cover"
+                                    className="h-full w-full min-h-[120px] object-cover"
                                     loading="lazy"
                                 />
                             </div>
                         </div>
-                    </details>
+                    </div>
 
-                    <details className={sectionClassName}>
-                        <summary className="cursor-pointer text-lg font-semibold text-purple-700">What else can I do to decrease thoughts of suicide?</summary>
+                    <div className={sectionClassName}>
+                        <h2 className="text-lg font-semibold text-purple-700">What else can I do to decrease thoughts of suicide?</h2>
                         <div className="mt-4 space-y-4 text-slate-700">
                             <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                                 <div>
@@ -185,10 +188,10 @@ const MentalHealthResourcesCoping: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                    </details>
+                    </div>
 
-                    <details className={sectionClassName}>
-                        <summary className="cursor-pointer text-lg font-semibold text-purple-700">Some common problems and solution ideas</summary>
+                    <div className={sectionClassName}>
+                        <h2 className="text-lg font-semibold text-purple-700">Some common problems and solution ideas</h2>
                         <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
                             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                                 <h3 className="font-semibold text-purple-700">Problem: Depressed Mood</h3>
@@ -209,10 +212,10 @@ const MentalHealthResourcesCoping: React.FC = () => {
                                 </ul>
                             </div>
                         </div>
-                    </details>
+                    </div>
 
-                    <details className={sectionClassName}>
-                        <summary className="cursor-pointer text-lg font-semibold text-purple-700">How can I decrease chances that I will feel suicidal in the future?</summary>
+                    <div className={sectionClassName}>
+                        <h2 className="text-lg font-semibold text-purple-700">How can I decrease chances that I will feel suicidal in the future?</h2>
                         <div className="mt-4 space-y-4 text-slate-700">
                             <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                                 <div>
@@ -295,7 +298,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                    </details>
+                    </div>
                 </div>
             </div>
         </section>

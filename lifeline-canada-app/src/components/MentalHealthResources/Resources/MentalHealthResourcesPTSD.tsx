@@ -15,17 +15,25 @@ const MentalHealthResourcesPTSD: React.FC = () => {
     const sectionClassName = "rounded-xl border border-slate-200 bg-white p-5 sm:p-6 text-slate-700";
 
     return (
-        <section className="w-full bg-slate-50">
-            <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-                
+        <section className="relative w-full bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 overflow-hidden">
+            {/* Decorative background orbs */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+            </div>
+            <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-8 relative z-10">
 
-                <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
-                    <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
+                <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+                    <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
                         Post Traumatic Stress Disorder
                     </span>
                 </h1>
 
-                <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[1.3fr_1fr] items-stretch">
+                <div className="flex items-center gap-4 mt-3 mb-1">
+                    <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+                </div>
+
+                <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[1fr_300px] items-start">
                     <div className={sectionClassName}>
                         <p className="leading-relaxed">
                             During a traumatic event, people think that their life or the lives of others are in danger. They may feel afraid or feel that they have no control over what is happening. These feelings of lack of control and fear can balloon into confusion, challenges with memory, or intense emotion.
@@ -35,7 +43,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                         </p>
                     </div>
 
-                    <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+                    <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm max-h-52 lg:max-h-64">
                         <img
                             src={coverPhoto}
                             alt="Post traumatic stress disorder support"
@@ -51,8 +59,8 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                 </div>
 
                 <div className="mt-6 space-y-4">
-                    <details className={sectionClassName} open>
-                        <summary className="cursor-pointer text-lg font-semibold text-purple-700">What is PTSD?</summary>
+                    <div className={sectionClassName}>
+                        <h2 className="text-lg font-semibold text-purple-700">What is PTSD?</h2>
                         <div className="mt-4 space-y-4">
                             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 flex flex-col sm:flex-row sm:items-start gap-4">
                                 <div className="flex-1">
@@ -70,7 +78,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                                 <img
                                     src={soldierPTSD}
                                     alt="Soldier with PTSD"
-                                    className="w-full h-40 sm:w-40 sm:h-32 object-cover rounded-lg sm:shrink-0 order-first sm:order-last"
+                                    className="w-full h-40 sm:w-[22vw] sm:max-w-[18rem] sm:h-auto object-cover rounded-lg sm:shrink-0 order-first sm:order-last"
                                 />
                             </div>
 
@@ -92,7 +100,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                                 <img
                                     src={firstResponderPTSD}
                                     alt="First responder with PTSD"
-                                    className="w-full h-40 sm:w-40 sm:h-32 object-cover rounded-lg sm:shrink-0 order-first sm:order-last"
+                                    className="w-full h-40 sm:w-[22vw] sm:max-w-[18rem] sm:h-auto object-cover rounded-lg sm:shrink-0 order-first sm:order-last"
                                 />
                             </div>
 
@@ -123,14 +131,14 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                                 <img
                                     src={PTSDSupport}
                                     alt="PTSD support"
-                                    className="w-full h-40 sm:w-40 sm:h-32 object-cover rounded-lg sm:shrink-0 order-first sm:order-last"
+                                    className="w-full h-40 sm:w-[22vw] sm:max-w-[18rem] sm:h-auto object-cover rounded-lg sm:shrink-0 order-first sm:order-last"
                                 />
                             </div>
                         </div>
-                    </details>
+                    </div>
 
-                    <details className={sectionClassName}>
-                        <summary className="cursor-pointer text-lg font-semibold text-purple-700">Resources for PTSD</summary>
+                    <div className={sectionClassName}>
+                        <h2 className="text-lg font-semibold text-purple-700">Resources for PTSD</h2>
                         <div className="mt-4 grid gap-4 sm:grid-cols-2">
                             <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 flex flex-col items-center text-center">
                                 <img src={PTSDAssociationCanada} alt="PTSD Association of Canada" className="w-full h-32 object-cover rounded-lg mb-3" />
@@ -174,7 +182,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                                 <p className="mt-2 leading-relaxed">A reintegration site for veterans and their families.</p>
                             </div>
                         </div>
-                    </details>
+                    </div>
 
                     <div
                         role="alert"

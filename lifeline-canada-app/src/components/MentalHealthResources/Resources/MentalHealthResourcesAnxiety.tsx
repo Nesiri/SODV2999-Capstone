@@ -15,14 +15,23 @@ const suicideRisk = '/assets/AdditionalResourceImages/NationalLibraryOfMedicine.
 
 const MentalHealthResourcesAnxiety: React.FC = () => {
     return (
-        <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-12">
-            <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+        <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
+            {/* Decorative background orbs */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+            </div>
+            <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
 
-                <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
-                    <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
+                <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+                    <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
                         Anxiety
                     </span>
                 </h1>
+
+                <div className="flex items-center gap-4 mt-3 mb-1">
+                    <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+                </div>
 
                 <main className="mt-6 flex flex-col sm:flex-row items-start gap-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
                     <div className="flex-1">
@@ -39,7 +48,7 @@ const MentalHealthResourcesAnxiety: React.FC = () => {
                         <img
                             src={coverPhoto}
                             alt="Coping with anxiety"
-                            className="w-64 sm:w-80 rounded-xl shadow-md object-cover"
+                            className="w-full h-40 sm:w-[30vw] sm:max-w-[18rem] sm:h-auto rounded-xl shadow-md object-cover"
                         />
                     </div>
                 </main>
@@ -66,7 +75,7 @@ const MentalHealthResourcesAnxiety: React.FC = () => {
                                 <img
                                     src={emotionalSymptoms}
                                     alt="Emotional symptoms"
-                                    className="w-48 sm:w-56 rounded-xl shadow-md object-cover"
+                                    className="w-full sm:w-[22vw] sm:max-w-[18rem] rounded-xl shadow-md object-cover"
                                 />
                             </div>
                         </div>
@@ -95,7 +104,7 @@ const MentalHealthResourcesAnxiety: React.FC = () => {
                                 <img
                                     src={differenceStressAnxiety}
                                     alt="Difference between stress and anxiety"
-                                    className="w-48 sm:w-56 rounded-xl shadow-md object-cover"
+                                    className="w-full sm:w-[22vw] sm:max-w-[18rem] rounded-xl shadow-md object-cover"
                                 />
                             </div>
                         </div>

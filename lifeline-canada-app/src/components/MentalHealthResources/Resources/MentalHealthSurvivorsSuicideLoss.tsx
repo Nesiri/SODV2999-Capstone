@@ -358,14 +358,23 @@ const renderLineWithWebsiteLinks = (line: string): React.ReactNode[] => {
 
 const MentalHealthSurvivorsSuicideLoss: React.FC = () => {
     return (
-        <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-12">
-            <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+        <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
+            {/* Decorative background orbs */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+            </div>
+            <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
 
-                <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
-                    <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
+                <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+                    <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
                         Survivors of Suicide Loss
                     </span>
                 </h1>
+
+                <div className="flex items-center gap-4 mt-3 mb-1">
+                    <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+                </div>
 
                 <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
                     <div className="flex-1">
@@ -382,7 +391,7 @@ const MentalHealthSurvivorsSuicideLoss: React.FC = () => {
                             someone.
                         </p>
                     </div>
-                    <div className="sm:w-64 sm:flex-shrink-0 w-full">
+                    <div className="sm:w-[30vw] sm:max-w-[18rem] sm:flex-shrink-0 w-full">
                         <img
                             src={coverPhoto}
                             alt="Survivors of Suicide Loss"
@@ -398,7 +407,7 @@ const MentalHealthSurvivorsSuicideLoss: React.FC = () => {
 
                     <div className="mt-6 space-y-4 sm:space-y-5">
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
-                            <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
                                 <img src={hopeAndHealing} alt="Hope and Healing" className="w-full h-auto object-cover rounded-lg shadow-md" />
                             </div>
                             <div className="flex-1">
@@ -423,7 +432,7 @@ const MentalHealthSurvivorsSuicideLoss: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
-                            <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
                                 <img src={practicalAndPersonalGuide} alt="After a Suicide: A Practical and Personal Guide" className="w-full h-auto object-cover rounded-lg shadow-md" />
                             </div>
                             <div className="flex-1">
@@ -453,7 +462,7 @@ const MentalHealthSurvivorsSuicideLoss: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
-                            <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
                                 <img src={toolkitForSchools} alt="After a Suicide: A Toolkit for Schools" className="w-full h-auto object-cover rounded-lg shadow-md" />
                             </div>
                             <div className="flex-1">
@@ -475,7 +484,7 @@ const MentalHealthSurvivorsSuicideLoss: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
-                            <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
                                 <img src={writeAnObituary} alt="How Do I Write an Obituary" className="w-full h-auto object-cover rounded-lg shadow-md" />
                             </div>
                             <div className="flex-1">
@@ -499,7 +508,7 @@ const MentalHealthSurvivorsSuicideLoss: React.FC = () => {
                     </div>
 
                     <div className="mt-5 rounded-xl border border-gray-300 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
-                        <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                        <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
                             <img src={talkToYourChild} alt="How to Talk to your Child" className="w-full h-auto object-cover rounded-lg shadow-md" />
                         </div>
                         <div className="flex-1">
@@ -555,7 +564,7 @@ const MentalHealthSurvivorsSuicideLoss: React.FC = () => {
 
                     <div className="mt-6 space-y-4 sm:space-y-5">
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
-                            <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
                                 <img src={mentalHealthCommission} alt="The Mental Health Commission of Canada" className="w-full h-auto object-cover rounded-lg shadow-md" />
                             </div>
                             <div className="flex-1">
@@ -573,7 +582,7 @@ const MentalHealthSurvivorsSuicideLoss: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
-                            <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
                                 <img src={actionAlliance} alt="The Action Alliance" className="w-full h-auto object-cover rounded-lg shadow-md" />
                             </div>
                             <div className="flex-1">
@@ -591,7 +600,7 @@ const MentalHealthSurvivorsSuicideLoss: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
-                            <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
                                 <img src={CanadianMentalHealthAssociation} alt="Canadian Mental Health Association" className="w-full h-auto object-cover rounded-lg shadow-md" />
                             </div>
                             <div className="flex-1">
@@ -609,7 +618,7 @@ const MentalHealthSurvivorsSuicideLoss: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
-                            <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
                                 <img src={BillRights} alt="Bill of Rights" className="w-full h-auto object-cover rounded-lg shadow-md" />
                             </div>
                             <div className="flex-1">
@@ -627,7 +636,7 @@ const MentalHealthSurvivorsSuicideLoss: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
-                            <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
                                 <img src={understandingSuicide} alt="Understanding Suicide, Supporting Children" className="w-full h-auto object-cover rounded-lg shadow-md" />
                             </div>
                             <div className="flex-1">
@@ -644,7 +653,7 @@ const MentalHealthSurvivorsSuicideLoss: React.FC = () => {
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
-                            <div className="sm:w-48 sm:flex-shrink-0 w-full">
+                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
                                 <img src={SeasonsCentre} alt="Seasons Centre for Grieving Children" className="w-full h-auto object-cover rounded-lg shadow-md" />
                             </div>
                             <div className="flex-1">

@@ -11,17 +11,26 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
   const sectionClassName = "rounded-xl border border-slate-200 bg-white p-5 sm:p-6 text-slate-700";
 
   return (
-    <section className="w-full bg-slate-50">
-      <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+    <section className="relative w-full bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 overflow-hidden">
+      {/* Decorative background orbs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+      </div>
+      <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-8 relative z-10">
 
-        <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
-          <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
+        <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+          <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
             Warning Signs
           </span>
         </h1>
 
+        <div className="flex items-center gap-4 mt-3 mb-1">
+          <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+        </div>
+
         <div className="mt-6 overflow-hidden rounded-xl border border-slate-200 bg-white">
-          <div className="grid grid-cols-1 items-stretch lg:grid-cols-[1.35fr_0.95fr]">
+          <div className="grid grid-cols-1 items-stretch lg:grid-cols-[1fr_300px]">
             <div className="h-full p-6 text-slate-700 lg:border-r lg:border-slate-200">
               <p className="leading-relaxed">
                 What leads to suicide? There is no single cause for suicide. Suicide most often occurs when stressors exceed current coping abilities of someone suffering from a mental health condition. Depression is the most common condition associated with suicide, and it is often undiagnosed or untreated.
@@ -31,7 +40,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
               </p>
             </div>
 
-            <div className="h-full min-h-[240px] bg-slate-100/70 p-2 lg:min-h-full">
+            <div className="min-h-[180px] max-h-52 lg:max-h-64 bg-slate-100/70 p-2">
               <img
                 src={coverPhoto}
                 alt="Warning signs support"
@@ -48,8 +57,8 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
         </div>
 
         <div className="mt-6 space-y-4">
-          <details className={sectionClassName} open>
-            <summary className="cursor-pointer text-lg font-semibold text-purple-700">Suicide Warning Signs</summary>
+          <div className={sectionClassName}>
+            <h2 className="text-lg font-semibold text-purple-700">Suicide Warning Signs</h2>
             <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
 
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -96,10 +105,10 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
                 </ul>
               </div>
             </div>
-          </details>
+          </div>
 
-          <details className={sectionClassName}>
-            <summary className="cursor-pointer text-lg font-semibold text-purple-700">Suicide Risk Factors</summary>
+          <div className={sectionClassName}>
+            <h2 className="text-lg font-semibold text-purple-700">Suicide Risk Factors</h2>
             <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
 
               <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
@@ -139,7 +148,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
                 </ul>
               </div>
             </div>
-          </details>
+          </div>
         </div>
 
         <div className="mt-12 py-12 rounded-xl bg-gradient-to-br from-indigo-50 via-white to-purple-50 text-center">

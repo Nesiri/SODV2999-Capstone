@@ -11,14 +11,23 @@ const MindfullnessAndGrief = "/assets/AdditionalResourceImages/MindfullnessAndGr
 
 const MentalHealthResourcesGrief: React.FC = () => {
     return (
-        <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50 py-12">
-            <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+        <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
+            {/* Decorative background orbs */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+            </div>
+            <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
 
-                <h1 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">
-                    <span className="bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
+                <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+                    <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
                         Grief
                     </span>
                 </h1>
+
+                <div className="flex items-center gap-4 mt-3 mb-1">
+                    <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+                </div>
 
                 <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row sm:items-start gap-6">
                     <div className="flex-1">
@@ -33,7 +42,7 @@ const MentalHealthResourcesGrief: React.FC = () => {
                     <img
                         src={coverPhoto}
                         alt="Grief support"
-                        className="w-full h-52 sm:w-56 sm:h-40 object-cover rounded-lg sm:shrink-0 order-first sm:order-last"
+                        className="w-full h-40 sm:w-[30vw] sm:max-w-[18rem] sm:h-auto object-cover rounded-lg sm:shrink-0 order-first sm:order-last"
                     />
                 </main>
 
@@ -60,7 +69,7 @@ const MentalHealthResourcesGrief: React.FC = () => {
                                 If you are coping with grief, you’ve come to the right place. Our online grief support site offers grief blogs, inspirational quotes, and interactive writing tools to help you manage your grief.
                             </p>
                             </div>
-                            <img src={AfterTalk} alt="After Talk" className="w-full h-36 sm:w-40 sm:h-auto object-contain rounded-lg sm:shrink-0 order-first sm:order-last" />
+                            <img src={AfterTalk} alt="After Talk" className="w-full h-36 sm:w-[20vw] sm:max-w-[16rem] sm:h-auto object-contain rounded-lg sm:shrink-0 order-first sm:order-last" />
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
@@ -77,7 +86,7 @@ const MentalHealthResourcesGrief: React.FC = () => {
                                 Grief is a complex, heavy, frustrating, scary, enormous…ahem, big topic. It starts with a death and envelopes everyone from family to friends, to friends of family and friends. Not only is grief an emotional, logistical, and existential nightmare, but it is taxing. It requires us to navigate the world without someone important, deal with complex feelings and emotions, and figure out ways to move forward when everything seems kind of bleak. Our mission is to promote grief education, exploration, and expression in both practical and creative ways.
                             </p>
                             </div>
-                            <img src={WhatsYourGrief} alt="What's Your Grief" className="w-full h-36 sm:w-40 sm:h-auto object-contain rounded-lg sm:shrink-0 order-first sm:order-last" />
+                            <img src={WhatsYourGrief} alt="What's Your Grief" className="w-full h-36 sm:w-[20vw] sm:max-w-[16rem] sm:h-auto object-contain rounded-lg sm:shrink-0 order-first sm:order-last" />
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
@@ -97,7 +106,7 @@ const MentalHealthResourcesGrief: React.FC = () => {
                                 The hard truth is that while it’s a difficult process to declutter and organize your house after a loved one passes away, it’s an important step in moving forward. This guide will help you create a strategy for getting through the process as easily as possible.
                             </p>
                             </div>
-                            <img src={HomeAdvisor} alt="Decluttering Your Home" className="w-full h-36 sm:w-40 sm:h-auto object-contain rounded-lg sm:shrink-0 order-first sm:order-last" />
+                            <img src={HomeAdvisor} alt="Decluttering Your Home" className="w-full h-36 sm:w-[20vw] sm:max-w-[16rem] sm:h-auto object-contain rounded-lg sm:shrink-0 order-first sm:order-last" />
                         </div>
                     </div>
                 </div>
@@ -199,7 +208,7 @@ const MentalHealthResourcesGrief: React.FC = () => {
                     <img
                         src={MindfullnessAndGrief}
                         alt="Mindfulness and Grief"
-                        className="w-full h-48 sm:w-48 sm:h-auto rounded-lg sm:shrink-0 order-first sm:order-last"
+                        className="w-full h-48 sm:w-[28vw] sm:max-w-[20rem] sm:h-auto rounded-lg sm:shrink-0 order-first sm:order-last"
                     />
                 </div>
             </div>
