@@ -1,14 +1,22 @@
-// components/dashboard/Footer.tsx
+// components/dashboard/Footer.tsx (Centered Modern)
 
-import { Heart } from 'lucide-react';
+
+
 const Footer = () => {
   return (
-    <footer className="mt-8 text-center">
-     
-      <div className="flex items-center justify-center gap-1 text-xs text-gray-400">
-        <span>© {new Date().getFullYear()} Mindful Support</span>
-        <Heart className="w-3 h-3 text-rose-300" />
-        <span>All rights reserved</span>
+    <footer className="mt-16 sm:mt-20 md:mt-24 py-8 sm:py-10 border-t border-slate-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center justify-center space-y-3">
+         
+          
+          {/* Copyright */}
+          <div className="text-center">
+            <p className="text-xs text-slate-400">
+              © {new Date().getFullYear()} The LifeLine Canada Foundation
+            </p>
+           
+          </div>
+        </div>
       </div>
     </footer>
   );

@@ -18,6 +18,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
       </div>
       <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-8 relative z-10">
+        <div className="w-full lg:w-4/5 mx-auto">
 
         <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
           <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
@@ -29,22 +30,22 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
           <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
         </div>
 
-        <div className="mt-6 overflow-hidden rounded-xl border border-slate-200 bg-white">
+        <div className="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-white">
           <div className="grid grid-cols-1 items-stretch lg:grid-cols-[1fr_300px]">
-            <div className="h-full p-6 text-slate-700 lg:border-r lg:border-slate-200">
+            <div className="h-full p-3 text-slate-700 lg:border-r lg:border-slate-200">
               <p className="leading-relaxed">
                 What leads to suicide? There is no single cause for suicide. Suicide most often occurs when stressors exceed current coping abilities of someone suffering from a mental health condition. Depression is the most common condition associated with suicide, and it is often undiagnosed or untreated.
               </p>
-              <p className="mt-4 leading-relaxed">
+              <p className="mt-3 leading-relaxed">
                 Conditions like depression, anxiety and substance problems, especially when unaddressed, increase risk for suicide. Yet it's important to note that most people who actively manage their mental health conditions lead fulfilling lives.
               </p>
             </div>
 
-            <div className="min-h-[180px] max-h-52 lg:max-h-64 bg-slate-100/70 p-2">
+            <div className="h-36 lg:h-auto p-3 flex items-center">
               <img
                 src={coverPhoto}
                 alt="Warning signs support"
-                className="h-full w-full rounded-lg object-cover object-center shadow-sm"
+                className="h-full w-full rounded-lg object-cover object-center"
                 loading="eager"
               />
             </div>
@@ -173,6 +174,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
               CRISIS LINES
             </a>
           </div>
+        </div>
         </div>
       </div>
     </section>

@@ -45,9 +45,7 @@ export const CategoryAccordion = ({
                 <span className="font-bold text-gray-900 group-hover:text-blue-700">
                   {category}
                 </span>
-                <p className="text-sm text-gray-500 mt-0.5">
-                  {groupedLinks[category].length} items
-                </p>
+               
               </div>
             </div>
             <ChevronRight

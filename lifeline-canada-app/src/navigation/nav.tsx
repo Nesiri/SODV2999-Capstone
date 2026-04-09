@@ -7,7 +7,7 @@ import React from 'react';
 
 export const resourceCategories = [
   {
-    category: 'Mental Health Topics',
+    category: 'Mental Health Support',
     links: [
       {
         name: 'Coping with Suicidal Thoughts',
@@ -201,7 +201,7 @@ export const resourceCategories = [
     ],
   },
   {
-    category: 'Other',
+    category: 'Insight',
     links: [
       {
         name: 'Myths & Facts',

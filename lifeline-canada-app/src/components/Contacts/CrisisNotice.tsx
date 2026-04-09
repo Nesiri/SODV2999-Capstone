@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SpiderWebBackground from '../Background/CalmBackground';
+
 
 const CrisisNotice: React.FC = () => {
   return (
     <section className="relative w-full bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 py-12 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden min-h-screen flex items-center">
       {/* Spider Web Background */}
-      <SpiderWebBackground opacity={0.5} />
+ 
       
       {/* Decorative background elements - updated to purple */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

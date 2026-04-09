@@ -1,9 +1,9 @@
 // components/CrisisButton.tsx
 import React, { useState } from 'react';
 import { Phone, MessageCircle, X, Heart, Bot } from 'lucide-react';
-import Chatbot from '../Chatbot/Chatbot';
+import Chatbot from './Chatbot';
 
-const CrisisButton: React.FC = () => {
+const CrisisSupportButton: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showChatbot, setShowChatbot] = useState(false);
 
@@ -29,9 +29,18 @@ const CrisisButton: React.FC = () => {
           {/* Subtle ring - purple only */}
           <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full blur-md animate-pulse" />
           
-          {/* Main button - calming purple */}
-          <div className="relative bg-white rounded-full p-4 shadow-xl border border-purple-100 hover:shadow-2xl transition-all duration-300">
-            <Heart className="w-6 h-6 text-purple-500 fill-purple-50" />
+          {/* Main button - calming purple with label inside */}
+          <div className="relative bg-white rounded-full shadow-xl border border-purple-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+            {/* Inner container with heart and label */}
+            <div className="relative p-3 flex flex-col items-center justify-center min-w-[70px]">
+              <Heart className="w-5 h-5 text-purple-500 fill-purple-50" />
+              <span className="text-[9px] font-bold text-purple-600 mt-0.5 tracking-tight">
+                Crisis
+              </span>
+              <span className="text-[8px] font-semibold text-purple-500 -mt-0.5">
+                Support
+              </span>
+            </div>
           </div>
         </button>
       ) : (
@@ -135,4 +144,4 @@ const CrisisButton: React.FC = () => {
   );
 };
 
-export default CrisisButton;
+export default CrisisSupportButton;

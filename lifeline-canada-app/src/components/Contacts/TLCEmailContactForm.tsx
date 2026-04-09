@@ -40,15 +40,13 @@ const TLCEmailContactForm = ({ title, subtitle }: MyType) => {
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-black mb-4">
+          {/* Title kept in one line - no substring division */}
+          <h1 className="!text-3xl sm:!text-4xl   font-black mb-4 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700">
-              {title?.substring(0, 13)}
+              {title}
             </span>
             <br />
-            <span className="text-gray-800 relative">
-              {title?.substring(13, title?.length)}
-              <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-purple-300 to-purple-500 rounded-full"></span>
-            </span>
+           
           </h1>
         </div>
 

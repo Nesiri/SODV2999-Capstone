@@ -14,7 +14,7 @@ import {
   Heart,
   Sparkles,
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+
 
 const Settings: React.FC = () => {
   const { user } = useAuth();
@@ -275,15 +275,7 @@ const Settings: React.FC = () => {
         )}
       </div>
 
-      {/* Supportive Footer */}
-      <div className="mt-6 sm:mt-8 text-center w-full">
-        <p className="text-xs text-gray-400 leading-relaxed break-words px-2">
-          Need someone to talk to? Our support team is here 24/7 • 
-          <Link to="/contact-us" className="text-emerald-500 hover:text-emerald-600 ml-1 font-medium whitespace-nowrap">
-            Reach out
-          </Link>
-        </p>
-      </div>
+     
     </div>
   );
 };

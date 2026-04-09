@@ -14,7 +14,7 @@ const VolunteerOpportunitiesSection: React.FC = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Content - full width */}
         <div className="space-y-8 animate-fadeInUp">
-          {/* Title with consistent purple gradient */}
+          {/* Title with consistent purple gradient - Updated headline */}
           <div className="space-y-4">
             <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-purple-200/50 shadow-lg shadow-purple-500/5 mb-4">
               <span className="relative flex h-2 w-2">
@@ -29,13 +29,13 @@ const VolunteerOpportunitiesSection: React.FC = () => {
             <h2 className="!text-2xl md:text-5xl lg:text-6xl font-black leading-tight">
               <span className="relative inline-block">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700">
-                  Volunteering with TLC
+                  Volunteering with TLC:
                 </span>
                 <span className="absolute -bottom-2 left-0 w-full h-3 bg-gradient-to-r from-purple-300/30 via-purple-300/30 to-purple-300/30 blur-sm"></span>
               </span>
               <br />
               <span className="text-gray-800 relative">
-                is rewarding and fun!
+                Meaningful Work, Real Impact
                 <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-purple-400 to-purple-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></span>
               </span>
             </h2>

@@ -1,4 +1,3 @@
-markdown
 # Database Setup Guide for New Owner
 
 ## Recommended Approach: Create Your Own Database in Neon
@@ -59,7 +58,10 @@ Copy the entire contents.
 If you can't access the file, copy this SQL schema:
 
 ```sql
--- Create users table
+-- Create database
+CREATE DATABASE Thelifelinecanada;
+
+-- Create users table (without password)
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -71,16 +73,16 @@ CREATE TABLE users (
     updated_at TIMESTAMP DEFAULT NOW()
 );
 
--- Create indexes for faster email lookups
+-- Optional: Create index for faster email lookups
 CREATE INDEX idx_users_email ON users(email);
 
--- Create index for verification token lookups
+-- Optional: Create index for verification token lookups
 CREATE INDEX idx_users_verification_token ON users(verification_token);
 
--- Create index for verification status
+-- Optional: Create index for verification status
 CREATE INDEX idx_users_is_verified ON users(is_verified);
 
--- Create function to auto-update updated_at
+-- Optional: Add a trigger to automatically update updated_at
 CREATE OR REPLACE FUNCTION update_updated_at_column()
 RETURNS TRIGGER AS $$
 BEGIN
@@ -89,11 +91,11 @@ BEGIN
 END;
 $$ language 'plpgsql';
 
--- Create trigger to automatically update updated_at on row update
 CREATE TRIGGER update_users_updated_at
     BEFORE UPDATE ON users
     FOR EACH ROW
     EXECUTE FUNCTION update_updated_at_column();
+
 
 
 Step 5: Run the SQL Schema
@@ -103,16 +105,13 @@ Click Run (or press Ctrl+Enter / Cmd+Enter)
 
 Wait for success message
 
-
-### Step 6: Get Your Connection String
-Get Your Connection String
+Step 6: Get Your Connection String
 Click Connection Details (top right of dashboard)
 
 Copy the connection string:
 
 text
 postgresql://username:password@ep-xxx-pooler.region.neon.tech/neondb?sslmode=require
-
 Step 7: Update Backend .env File
 In your backend .env file (lifeline-canada-backend/.env):
 

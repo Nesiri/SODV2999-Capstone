@@ -28,6 +28,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
             </div>
             <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-8 relative z-10">
+                <div className="w-full lg:w-4/5 mx-auto">
 
                 <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
                     <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
@@ -133,58 +134,58 @@ const MentalHealthResourcesCoping: React.FC = () => {
                     <div className={sectionClassName}>
                         <h2 className="text-lg font-semibold text-purple-700">What else can I do to decrease thoughts of suicide?</h2>
                         <div className="mt-4 space-y-4 text-slate-700">
-                            <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
+                            <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                                 <div>
                                     <h3 className="font-semibold text-purple-700">Problem Solve</h3>
                                     <p className="mt-1 leading-relaxed">Write down your top problems and possible solutions. Start with one small, manageable step.</p>
                                 </div>
-                                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
-                                    <img src={problemSolve} alt="Problem solving" className="h-full w-full min-h-[120px] object-cover" loading="lazy" />
+                                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white h-32">
+                                    <img src={problemSolve} alt="Problem solving" className="h-full w-full object-cover" loading="lazy" />
                                 </div>
                             </div>
-                            <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
+                            <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                                 <div>
                                     <h3 className="font-semibold text-purple-700">Think of Reasons for Living</h3>
                                     <p className="mt-1 leading-relaxed">Create a short list of personal reasons to keep going and read it when distress rises.</p>
                                 </div>
-                                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
-                                    <img src={reasonsLiving} alt="Reasons for living" className="h-full w-full min-h-[120px] object-cover" loading="lazy" />
+                                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white h-32">
+                                    <img src={reasonsLiving} alt="Reasons for living" className="h-full w-full object-cover" loading="lazy" />
                                 </div>
                             </div>
-                            <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
+                            <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                                 <div>
                                     <h3 className="font-semibold text-purple-700">Remember Things That Have Helped in the Past</h3>
                                     <p className="mt-1 leading-relaxed">Use coping skills that worked before, like talking to someone, journaling, or following your safety plan.</p>
                                 </div>
-                                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
-                                    <img src={pastThings} alt="Helpful things from the past" className="h-full w-full min-h-[120px] object-cover" loading="lazy" />
+                                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white h-32">
+                                    <img src={pastThings} alt="Helpful things from the past" className="h-full w-full object-cover" loading="lazy" />
                                 </div>
                             </div>
-                            <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
+                            <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                                 <div>
                                     <h3 className="font-semibold text-purple-700">Get Treatment for Mental Health Problems</h3>
                                     <p className="mt-1 leading-relaxed">Ask for mental health treatment and tell your provider if current care is not helping enough.</p>
                                 </div>
-                                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
-                                    <img src={getTreatment} alt="Get treatment support" className="h-full w-full min-h-[120px] object-cover" loading="lazy" />
+                                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white h-32">
+                                    <img src={getTreatment} alt="Get treatment support" className="h-full w-full object-cover" loading="lazy" />
                                 </div>
                             </div>
-                            <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
+                            <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                                 <div>
                                     <h3 className="font-semibold text-purple-700">Do The Opposite of How You Feel</h3>
                                     <p className="mt-1 leading-relaxed">If you want to isolate, try one opposite action such as texting someone or stepping outside.</p>
                                 </div>
-                                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
-                                    <img src={oppositeEmotion} alt="Opposite emotion strategy" className="h-full w-full min-h-[120px] object-cover" loading="lazy" />
+                                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white h-32">
+                                    <img src={oppositeEmotion} alt="Opposite emotion strategy" className="h-full w-full object-cover" loading="lazy" />
                                 </div>
                             </div>
-                            <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
+                            <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                                 <div>
                                     <h3 className="font-semibold text-purple-700">Talk To Someone</h3>
                                     <p className="mt-1 leading-relaxed">Tell a trusted person exactly how you feel, including any plan to hurt yourself.</p>
                                 </div>
-                                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
-                                    <img src={talkToSomeone} alt="Talk to someone" className="h-full w-full min-h-[120px] object-cover" loading="lazy" />
+                                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white h-32">
+                                    <img src={talkToSomeone} alt="Talk to someone" className="h-full w-full object-cover" loading="lazy" />
                                 </div>
                             </div>
                         </div>
@@ -299,6 +300,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </section>

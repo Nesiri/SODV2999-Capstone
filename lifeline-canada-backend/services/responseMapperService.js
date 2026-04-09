@@ -70,25 +70,7 @@ const chatbotResponses = [
     links: [{ name: "Call 911", path: "tel:911", description: "Emergency services" }]
   },
   
-  // LOGIN / ACCOUNT (Priority 8)
-  {
-    keywords: [
-      "login", "sign in", "log in", "my account", "account help", 
-      "can't login", "cannot login", "forgot password", "reset password", 
-      "account settings", "profile settings", "access account",
-      "sign into account", "log into app", "can't access account",
-      "locked out", "account locked", "password reset", "change password",
-      "update password", "forgot my password", "remember password",
-      "account recovery", "recover account"
-    ],
-    response: "You can access your account here:",
-    priority: 8,
-    links: [
-      { name: "Login to Your Account", path: "/app?mode=login", description: "Access your personal dashboard" },
-      { name: "Create New Account", path: "/app?mode=signup", description: "Sign up for free" },
-      { name: "LifeLine App", path: "/app", description: "Explore the app features" }
-    ]
-  },
+  
   
   // PANIC ATTACK (Priority 8)
   {
@@ -150,6 +132,16 @@ const chatbotResponses = [
       { name: "Login", path: "/app?mode=login", description: "Step 4: After verification, login to access your dashboard" }
     ]
   },
+    // LOGIN / ACCOUNT (Priority 8)
+  {
+    keywords: ["login", "sign in", "log in", "my account", "can't login", "account settings", "access account", "locked out"],
+    response: "You can access your account here:",
+    priority: 8,
+    links: [
+      { name: "Login to Your Account", path: "/app?mode=login", description: "Access your personal dashboard" },
+      { name: "Sign Up with Google", path: "/app?mode=login", description: "Sign up using Google" }
+    ]
+  },
 
   // SIGN UP PROCESS (Priority 7)
   {
@@ -171,66 +163,29 @@ const chatbotResponses = [
     ]
   },
 
-  // WHY SIGN UP / BENEFITS (Priority 7)
+   // APP FEATURES (Priority 7)
   {
-    keywords: [
-      "why sign up", "why create account", "benefits of account", 
-      "what do i get", "sign up benefits", "why register", 
-      "create account benefits", "is it worth it", "why should i sign up", 
-      "what's in the app", "dashboard features", "after login", 
-      "what happens after login", "app benefits", "advantage of signing up",
-      "what will i get", "features of app", "what can i do",
-      "is app useful", "worth creating account"
-    ],
-    response: "Creating a free account unlocks personalized tools to support your mental wellness journey:",
+    keywords: ["app features", "dashboard features", "what's in the app", "lifeline app", "mood tracker", "breathing exercises", "my resources"],
+    response: "The LifeLine App gives you free tools for your wellness journey:",
     priority: 7,
     links: [
-      { name: "Mood Tracker", description: "Track your daily mood, identify patterns, and see your progress over time" },
-      { name: "Breathing Exercises", description: "Guided techniques to calm anxiety and reduce stress" },
-      { name: "My Resources", description: "Save and organize mental health resources that resonate with you" },
-      { name: "Personalized Dashboard", description: "Your central hub for wellness insights and tools" }
+      { name: "Mood Tracker", description: "Track daily emotions and patterns" },
+      { name: "Breathing Exercises", description: "Guided calming techniques" },
+      { name: "My Resources", description: "Save helpful content" },
+      { name: "LifeLine App", path: "/app?mode=login", description: "Access the app" }
     ]
   },
 
-  // DASHBOARD FEATURES (Priority 7)
+
+  // PRIVACY (Priority 7)
   {
-    keywords: [
-      "dashboard features", "what's in dashboard", "dashboard explained", 
-      "app features", "lifeline app features", "what can i do in the app",
-      "dashboard tools", "my dashboard", "user dashboard",
-      "dashboard overview", "features available", "tools in app",
-      "what does dashboard do", "dashboard functionality"
-    ],
-    response: "After you sign up and log in, your personal dashboard gives you access to:",
+    keywords: ["privacy", "data collection", "is my data safe", "data protection", "secure", "confidential", "privacy policy"],
+    response: "Your privacy is our priority. Your data is encrypted and never shared without your consent.",
     priority: 7,
     links: [
-      { name: "Mood Tracker", description: "Log daily emotions, track triggers, and visualize mood patterns" },
-      { name: "Breathing Exercises", description: "Guided sessions for anxiety relief, stress reduction, and better sleep" },
-      { name: "My Resources", description: "Bookmark articles, videos, and tools that work for you" },
-      { name: "Settings", description: "Manage your profile, notifications, and privacy preferences" }
+      { name: "Privacy Policy", path: "/privacy?mode=privacy", description: "Read our full privacy policy" }
     ]
   },
-
-  // PRIVACY & DATA COLLECTION (Priority 7)
-  {
-    keywords: [
-      "privacy policy", "data collection", "privacy concerns", 
-      "what data", "personal information", "store data", "data policy",
-      "is my data safe", "privacy dashboard", "secure account", 
-      "data protection", "is it private", "who can see my data",
-      "privacy settings", "data security", "confidentiality",
-      "information stored", "data sharing", "privacy rights"
-    ],
-    response: "Your privacy is our priority. Here's what you should know:",
-    priority: 7,
-    links: [
-      { name: "Privacy Policy", path: "/privacy?mode=privacy", description: "Read our full privacy policy" },
-      { name: "What We Collect", description: "We only collect your name and email to support your wellness journey" },
-      { name: "Data Protection", description: "Your information is encrypted and never shared without consent" },
-      { name: "Your Control", description: "You can access, update, or delete your data anytime" }
-    ]
-  },
-
   // FREE ACCOUNT INFO (Priority 6)
   {
     keywords: [
@@ -465,6 +420,15 @@ const chatbotResponses = [
       { name: "Warning Signs", path: "/resources/warning-signs", description: "Learn to recognize signs of crisis" },
       { name: "How Can I Help Someone?", path: "/resources/how-to-help", description: "Support someone in need" },
       { name: "Myths & Facts", path: "/resources/myths-facts", description: "Common misconceptions" }
+    ]
+  },
+  // REFUGEES (Priority 6)
+  {
+    keywords: ["refugee", "asylum seeker", "forced displacement", "newcomer mental health"],
+    response: "Adjusting to a new country comes with unique challenges. Here are resources for refugees.",
+    priority: 6,
+    links: [
+      { name: "Refugees", path: "/resources/refugees", description: "Mental health support for refugees" }
     ]
   },
 
@@ -743,6 +707,16 @@ const chatbotResponses = [
       { name: "Crisis Support", path: "/incrisisneedhelp", description: "Immediate crisis resources" }
     ]
   },
+
+    // SENIORS (Priority 6)
+  {
+    keywords: ["senior", "elderly", "older adult", "aging", "senior mental health"],
+    response: "Mental health matters at every age. Here are resources for seniors.",
+    priority: 6,
+    links: [
+      { name: "Seniors", path: "/resources/seniors", description: "Mental health support for seniors" }
+    ]
+  },
   
   // MEN (Priority 6)
   {
@@ -805,39 +779,7 @@ const chatbotResponses = [
     ]
   },
 
-  // MOOD TRACKER BENEFITS (Priority 6)
-  {
-    keywords: [
-      "mood tracker benefit", "why track mood", "mood journal", 
-      "benefits of mood tracking", "mood tracking helps", "tracking emotions",
-      "mood log", "emotional tracking", "daily mood"
-    ],
-    response: "Mood tracking is a powerful tool for mental wellness. After you sign up, you can:",
-    priority: 6,
-    links: [
-      { name: "Identify Patterns", description: "See how your mood changes with sleep, stress, and daily activities" },
-      { name: "Recognize Triggers", description: "Discover what situations affect your mental health" },
-      { name: "Track Progress", description: "Celebrate improvements and see your growth over time" },
-      { name: "Share with Professionals", description: "Share your mood history with therapists or counselors" }
-    ]
-  },
 
-  // BREATHING EXERCISES BENEFITS (Priority 6)
-  {
-    keywords: [
-      "breathing exercises", "breathing benefits", "why breathing exercises", 
-      "calm breathing", "anxiety breathing", "stress relief breathing", 
-      "deep breathing", "breath work", "pranayama", "diaphragmatic breathing"
-    ],
-    response: "Once you create an account, you'll get access to guided breathing exercises proven to calm the nervous system:",
-    priority: 6,
-    links: [
-      { name: "4-7-8 Breathing", description: "Calm anxiety and fall asleep faster" },
-      { name: "Box Breathing", description: "Used by Navy SEALs to stay calm under pressure" },
-      { name: "Deep Belly Breathing", description: "Activate your body's relaxation response" },
-      { name: "Quick Calm (2 min)", description: "Short exercises for moments of overwhelm" }
-    ]
-  },
 
   // GREETINGS (Priority 5)
   {
@@ -879,6 +821,73 @@ const chatbotResponses = [
     ]
   },
 
+  // CALL LINE SUPPORT (Priority 3) - Focus on VOICE/PHONE only
+{
+  keywords: [
+    "call line", "phone line", "helpline", "hotline", "crisis line",
+    "support line", "mental health line", "distress line", "talk to someone",
+    "call someone", "phone support", "kids help phone", "hope for wellness",
+    "trans lifeline", "trevor project", "veterans crisis line",
+    "national suicide prevention", "need to talk"
+  ],
+  response: "You're not alone. Crisis support is available 24/7 by phone.",
+  priority: 3,
+  links: [
+    { name: "Crisis Call Lines", path: "/in-crisis-help/support-and-call-lines", description: "Find phone support in your area" }
+  ]
+},
+
+// CHAT SUPPORT (Priority 4) - Focus on WEB/ONLINE/EMAIL only
+{
+  keywords: [
+    "online chat", "chat line", "chat support", "live chat", 
+    "web chat", "online counseling",
+    "teen chat", "youth chat", "kids helpline", "childline chat",
+    "prefer to write", "compose my thoughts", "record of advice",
+    "write an email", "send an email", "online messaging"
+  ],
+  response: "Sometimes it's easier to open up through chat where you can compose your thoughts. Online chat and email support options are available.",
+  priority: 4,
+  links: [
+    { name: "Online Chat Support", path: "/in-crisis-help/email-chat", description: "Chat and email crisis support" }
+  ]
+},
+
+// TEXT CHAT SUPPORT (Priority 4) - Focus on SMS/TEXT only
+{
+  keywords: [
+    "text chat", "text line", "text support", "sms support",
+    "text helpline", "text crisis line", "text a counselor",
+    "text a counsellor", "crisis text line", "text message",
+    "text connect", "text matter", "text voice", "text teen",
+    "text trevor", "hopeline uk", "samaritans text",
+    "prefer to text", "kids help phone text", "connecteen text", "lowdown nz"
+  ],
+  response: "Sometimes it's easier to open up through text where you can compose your thoughts. Text chat support options are available.",
+  priority: 4,
+  links: [
+    { name: "Text Chat Support", path: "/in-crisis-help/text-chat-lines", description: "Free text-based crisis support" }
+  ]
+},
+// DONATE / CONTRIBUTE (Priority 6)
+{
+  keywords: ["donate", "donation", "contribute", "contribution", "support us", "give money", "financial support", "fundraise", "sponsor"],
+  response: "Thank you for your generosity. Your contribution helps us continue providing mental health support.",
+  priority: 6,
+  links: [
+    { name: "Make a Donation", path: "/contribute", description: "Support mental health crisis support" }
+  ]
+},
+
+// VOLUNTEERS (Priority 6)
+{
+  keywords: ["volunteer", "volunteering", "volunteer opportunity", "become a volunteer", "help out", "give time", "volunteer program"],
+  response: "Thank you for your interest in volunteering. Volunteers are the heart of our mission.",
+  priority: 6,
+  links: [
+    { name: "Volunteer Opportunities", path: "/volunteers", description: "Join our team" }
+  ]
+},
   // DEFAULT (Lowest Priority - Priority 0)
   {
     keywords: ["default"],

@@ -26,6 +26,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
             </div>
             <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
+                <div className="w-full lg:w-4/5 mx-auto">
 
                 <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
                     <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
@@ -206,6 +207,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                             <p className="mt-2 leading-relaxed">Making the decision to get better or become sober is the first big step in recovery. When you are ready, give us a call. One of our caring admissions counselors will explain the addiction treatment options available. They will also answer your questions, address your concerns, and walk you through the admissions process. If you are taking action on behalf of a family member, friend, or loved one who you think needs our help, call us and we will help you through the process of getting them admitted for treatment.</p>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </section>

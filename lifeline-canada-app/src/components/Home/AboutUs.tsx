@@ -1,6 +1,6 @@
 // pages/AboutUs.tsx
 import React from 'react';
-import aboutImage from '../../assets/about-image.jpg';
+import aboutImage from '../../assets/new-about-us.png';
 import { NavLink } from 'react-router-dom';
 import AboutUsBackground from '../Background/AboutUsBackground';
 
@@ -20,11 +20,16 @@ const AboutUs: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-20">
           {/* Left Column */}
           <div className="flex-1 space-y-8 md:space-y-12">
-            {/* Hero Section */}
+            {/* Hero Section - Reduced heading size and side by side */}
             <div className="space-y-4 md:space-y-6">
-              <h1 className="font-serif !text-4xl sm:!text-5xl md:!text-7xl lg:!text-8xl xl:!text-9xl font-bold leading-[1.1] md:leading-[0.9] bg-gradient-to-r from-stone-800 via-purple-700 to-purple-600 bg-clip-text text-transparent">
-                About Us
-              </h1>
+              <div className="flex flex-wrap items-baseline gap-2 md:gap-3">
+                <span className="font-serif !text-3xl sm:!text-4xl md:!text-5xl lg:!text-6xl font-bold leading-[1.1] bg-gradient-to-r from-stone-800 via-purple-700 to-purple-600 bg-clip-text text-transparent">
+                  About
+                </span>
+                <span className="font-serif !text-3xl sm:!text-4xl md:!text-5xl lg:!text-6xl font-bold leading-[1.1] bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
+                  Us
+                </span>
+              </div>
               <div className="relative">
                 <div className="absolute -inset-1 bg-gradient-to-r from-purple-200/50 to-purple-300/50 rounded-xl md:rounded-2xl blur-lg" />
                 <p className="relative !text-sm sm:!text-base md:!text-lg lg:!text-xl text-stone-700 leading-relaxed bg-white/40 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/60">
@@ -102,7 +107,7 @@ const AboutUs: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column - Image with improved display */}
+          {/* Right Column - Simplified Image with only "Moment of Calm" */}
           <div className="flex-1 lg:mt-20 mt-8 md:mt-12 lg:mt-20">
             <div className="sticky top-50">
               <div className="relative">
@@ -110,9 +115,8 @@ const AboutUs: React.FC = () => {
                 <div className="absolute -top-6 md:-top-10 -right-6 md:-right-10 w-40 md:w-60 h-40 md:h-60 bg-gradient-to-bl from-purple-300/30 to-purple-400/20 rounded-full blur-2xl md:blur-3xl animate-pulse-slow" />
                 <div className="absolute -bottom-6 md:-bottom-10 -left-6 md:-left-10 w-40 md:w-60 h-40 md:h-60 bg-gradient-to-tr from-pink-300/20 to-purple-300/20 rounded-full blur-2xl md:blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
 
-                {/* Main Image - Improved to prevent unwanted cropping */}
+                {/* Main Image - Simplified, only "Moment of Calm" retained */}
                 <div className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-xl md:shadow-2xl ring-1 ring-white/50">
-                  {/* Image container with flexible height */}
                   <div className="relative w-full" style={{ minHeight: '400px', maxHeight: '600px' }}>
                     <div className="absolute inset-0 bg-gradient-to-t from-stone-900/50 via-stone-900/20 to-transparent z-10" />
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-transparent to-purple-600/20 z-10" />
@@ -122,7 +126,7 @@ const AboutUs: React.FC = () => {
                       className="w-full h-full object-contain md:object-cover"
                       style={{ 
                         maxHeight: '600px',
-                        objectPosition: 'center 30%' // Adjusts focal point to prevent face cropping
+                        objectPosition: 'center 30%'
                       }}
                     />
                     <div className="absolute bottom-3 md:bottom-6 left-3 md:left-6 right-3 md:right-6 z-20">
@@ -135,43 +139,15 @@ const AboutUs: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Floating Cards - repositioned for mobile */}
-                <div className="absolute -bottom-3 md:-bottom-5 -right-3 md:-right-5 bg-white rounded-lg md:rounded-xl px-3 md:px-5 py-2 md:py-3 shadow-lg md:shadow-xl border border-purple-100">
-                  <div className="flex items-center gap-1 md:gap-2">
-                    <span className="!text-lg md:!text-2xl font-serif font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">2010</span>
-                    <span className="text-[10px] md:text-xs text-stone-500 uppercase tracking-wide">founded</span>
-                    <span className="!text-base md:!text-xl ml-0.5 md:ml-1">🌟</span>
-                  </div>
-                </div>
-
-                <div className="absolute -top-5 md:-top-7 -left-3 md:-left-5 bg-white/95 backdrop-blur-sm px-2 md:px-4 py-1 md:py-2 rounded-full shadow-md md:shadow-lg border border-purple-100">
-                  <span className="text-[10px] md:text-sm font-semibold text-stone-700 flex items-center gap-1 md:gap-2">
-                    <span className="!text-sm md:!text-base">🇨🇦</span> Registered Nonprofit <span className="!text-xs md:!text-base">❤️</span>
-                  </span>
-                </div>
+                {/* Removed: Founded 2010 and Registered Nonprofit floating cards */}
               </div>
             </div>
           </div>
         </div>
 
-        {/* Footer - mobile optimized */}
+        {/* Footer - Simplified, removed the requested line */}
         <div className="mt-16 md:mt-20 lg:mt-24 pt-6 md:pt-8 border-t border-purple-200/50">
-          <div className="flex flex-wrap justify-between items-center gap-3 md:gap-4">
-            <div className="flex items-center gap-1 md:gap-2">
-              <span className="font-serif !text-lg md:!text-2xl font-bold bg-gradient-to-r from-purple-700 to-purple-800 bg-clip-text text-transparent">TLC</span>
-              <span className="!text-base md:!text-xl">💙</span>
-            </div>
-            <div className="flex flex-wrap justify-center gap-3 md:gap-6 text-[10px] md:text-sm text-stone-500">
-              <span>Mental health for all Canadians</span>
-              <span className="hidden sm:inline">•</span>
-              <span className="flex items-center gap-0.5 md:gap-1">
-                <span className="!text-xs md:!text-base">✨</span> since 2010 <span className="!text-xs md:!text-base">✨</span>
-              </span>
-            </div>
-            <div className="bg-white/50 backdrop-blur-sm px-2 md:px-4 py-1 md:py-2 rounded-full border border-purple-200 text-[9px] md:text-sm text-stone-600">
-              🇨🇦 Supporting Canadians since 2010
-            </div>
-          </div>
+          {/* Footer content removed as requested */}
         </div>
       </div>
 
