@@ -6,7 +6,7 @@ import ResponseBuilder from '../utils/responseBuilder.js';
 const { chatbotResponses } = responseMapper;
 
 const CONFIG = {
-  AI_THRESHOLD: 0.45,  // Lower threshold to catch more
+  AI_THRESHOLD: 0.55,  // Lower threshold to catch more
   CACHE_SIZE: 50
 };
 
