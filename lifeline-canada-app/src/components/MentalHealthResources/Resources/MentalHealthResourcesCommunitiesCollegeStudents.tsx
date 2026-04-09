@@ -33,6 +33,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
             </div>
             <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
+                <div className="w-full lg:w-4/5 mx-auto">
 
                 <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
                     <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
@@ -416,6 +417,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                             </p>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </section>
