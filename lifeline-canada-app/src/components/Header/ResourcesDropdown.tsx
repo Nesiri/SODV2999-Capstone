@@ -172,9 +172,7 @@ export default function ResourcesDropdown({
             {/* Left Categories - Slimmer */}
             <div className="w-[160px] bg-gradient-to-b from-blue-200 via-gray-200 to-pink-100 border-r border-gray-200/50">
               <div className="p-3 border-b border-gray-200/60 bg-gradient-to-r from-white to-gray-50">
-                <h3 className="text-xs font-semibold text-gray-800 tracking-wide uppercase">
-                  Categories
-                </h3>
+               
               </div>
               <div className="p-1.5 overflow-y-auto max-h-[280px]">
                 {groupedByCategory.map((group) => (
@@ -211,7 +209,7 @@ export default function ResourcesDropdown({
                           }
                         `}
                       >
-                        {group.links.length}
+                       
                       </span>
                     </div>
                   </button>
@@ -227,12 +225,7 @@ export default function ResourcesDropdown({
                     <h4 className="text-sm font-semibold text-gray-800 truncate">
                       {activeCategory}
                     </h4>
-                    <span className="text-xs text-gray-400 px-2.5 py-0.5 bg-gray-100 rounded-full shrink-0">
-                      {groupedByCategory.find(
-                        (g) => g.category === activeCategory
-                      )?.links.length || 0}{' '}
-                      items
-                    </span>
+                   
                   </div>
                   <div className="grid grid-cols-2 gap-2 overflow-y-auto max-h-[300px] pr-1">
                     {groupedByCategory

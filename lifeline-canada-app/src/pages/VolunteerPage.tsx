@@ -1,8 +1,11 @@
+
+/*
 import AdministrationAssistantSection from '../components/Volunteer/AdministrationAssistantSection';
-import CommunicationsSpecialistSection from '../components/Volunteer/CommunicationsSpecialistSection';
+import CommunicationsSpecialistSection from '../components/Volunteer/CommunicationsSpecialistSection';*/
 import GetInvolvedSection from '../components/Volunteer/GetInvolvedSection';
+/*
 import MarketingManagerSection from '../components/Volunteer/MarketingManagerSection';
-import ProjectManagerSection from '../components/Volunteer/ProjectManagerSection';
+import ProjectManagerSection from '../components/Volunteer/ProjectManagerSection';*/
 import VolunteerFormSection from '../components/Volunteer/VolunteerFormSection';
 import VolunteerOpportunitiesSection from '../components/Volunteer/VolunteerOpportunitiesSection';
 
@@ -12,10 +15,11 @@ function VolunteerPage() {
       <GetInvolvedSection />
       <VolunteerOpportunitiesSection />
       <VolunteerFormSection />
+      {/* 
       <CommunicationsSpecialistSection />
       <AdministrationAssistantSection />
       <ProjectManagerSection />
-      <MarketingManagerSection />
+      <MarketingManagerSection />*/}
     </>
   );
 }

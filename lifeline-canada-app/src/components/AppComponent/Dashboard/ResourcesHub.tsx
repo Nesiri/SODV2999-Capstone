@@ -4,26 +4,34 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, 
   Heart, 
-  ExternalLink, 
   BookOpen, 
-  Sparkles, 
   X,
   ChevronLeft,
   ChevronRight,
-  Shield,
   Compass,
-  Feather
+  Feather,
+  Eye,
+  CheckCircle
 } from 'lucide-react';
 import { getAllResourceLinks, getAllPatternInterruptLinks } from '../../../navigation/nav';
-import { MarkAsReadButton } from './MarkRead';
+
+interface ReadResource {
+  path: string;
+  name: string;
+  date: string;
+  timestamp: number;
+}
 
 const ResourcesHub: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [savedView, setSavedView] = useState(false);
   const [savedResources, setSavedResources] = useState<Set<string>>(new Set());
+  const [readResources, setReadResources] = useState<Map<string, ReadResource>>(new Map());
   const [showSavedToast, setShowSavedToast] = useState(false);
+  const [showReadToast, setShowReadToast] = useState(false);
   const [lastSavedResource, setLastSavedResource] = useState<string>('');
+  const [lastReadResource, setLastReadResource] = useState<string>('');
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(9);
@@ -39,7 +47,7 @@ const ResourcesHub: React.FC = () => {
     return [...resources, ...patterns];
   }, []);
 
-  // Load saved resources from localStorage on mount
+  // Load saved and read resources from localStorage on mount
   useEffect(() => {
     const loadSavedResources = async () => {
       try {
@@ -48,8 +56,18 @@ const ResourcesHub: React.FC = () => {
           const savedPaths = JSON.parse(saved);
           setSavedResources(new Set(savedPaths));
         }
+        
+        const read = localStorage.getItem('readResources');
+        if (read) {
+          const readData = JSON.parse(read);
+          const readMap = new Map<string, ReadResource>();
+          readData.forEach((item: ReadResource) => {
+            readMap.set(item.path, item);
+          });
+          setReadResources(readMap);
+        }
       } catch (error) {
-        console.error('Error loading saved resources:', error);
+        console.error('Error loading resources:', error);
       } finally {
         setIsLoading(false);
       }
@@ -83,6 +101,13 @@ const ResourcesHub: React.FC = () => {
       }
       debounceTimer.current = setTimeout(() => {
         localStorage.setItem('savedResources', JSON.stringify(Array.from(savedResources)));
+        
+        // Save read resources as array with full details
+        const readArray = Array.from(readResources.values());
+        localStorage.setItem('readResources', JSON.stringify(readArray));
+        
+        // Dispatch custom event for ActivityList to update
+        window.dispatchEvent(new CustomEvent('dataUpdated'));
       }, 300);
     }
     
@@ -91,14 +116,14 @@ const ResourcesHub: React.FC = () => {
         clearTimeout(debounceTimer.current);
       }
     };
-  }, [savedResources, isLoading]);
+  }, [savedResources, readResources, isLoading]);
 
   // Reset page when filters change
   useEffect(() => {
     setCurrentPage(1);
   }, [searchTerm, selectedCategory, savedView]);
 
-  // Get unique categories with counts (memoized)
+  // Get unique categories with counts (memoized) - removed numbers from categories
   const categories = useMemo(() => {
     const catMap = new Map<string, number>();
     allResources.forEach(r => {
@@ -165,6 +190,31 @@ const ResourcesHub: React.FC = () => {
     });
   }, []);
 
+  const markAsRead = useCallback((path: string, name: string) => {
+    setReadResources(prev => {
+      const newMap = new Map(prev);
+      const isMarkingRead = !newMap.has(path);
+      
+      if (isMarkingRead) {
+        // Save resource with name and current date
+        const readResource: ReadResource = {
+          path: path,
+          name: name,
+          date: new Date().toISOString(),
+          timestamp: Date.now()
+        };
+        newMap.set(path, readResource);
+        setLastReadResource(name);
+        setShowReadToast(true);
+        setTimeout(() => setShowReadToast(false), 2000);
+      } else {
+        newMap.delete(path);
+      }
+      
+      return newMap;
+    });
+  }, []);
+
   const handleSearchChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
   }, []);
@@ -188,27 +238,13 @@ const ResourcesHub: React.FC = () => {
     }
   }, []);
 
-  // Memoized icon and color functions
-  const getCategoryIcon = useCallback((category?: string) => {
-    const icons: Record<string, string> = {
-      'Mental Health Topics': '🧠',
-      'Survivors': '🕊️',
-      'Communities': '👥',
-      'Professionals': '👩‍⚕️',
-      'Other': '📌',
-      'Mood & Inspiration': '✨',
-      'Self Help & Tools': '🛠️'
-    };
-    return icons[category || ''] || '📖';
-  }, []);
-
   const getCategoryColor = useCallback((category?: string) => {
     const colors: Record<string, string> = {
       'Mental Health Topics': 'from-blue-400 to-cyan-400',
       'Survivors': 'from-purple-400 to-pink-400',
       'Communities': 'from-emerald-400 to-teal-400',
       'Professionals': 'from-indigo-400 to-blue-400',
-      'Other': 'from-gray-400 to-slate-400',
+      'insights': 'from-gray-400 to-slate-400',
       'Mood & Inspiration': 'from-amber-400 to-orange-400',
       'Self Help & Tools': 'from-teal-400 to-emerald-400'
     };
@@ -219,8 +255,8 @@ const ResourcesHub: React.FC = () => {
   const stats = useMemo(() => ({
     total: allResources.length,
     saved: savedResources.size,
-    featured: allResources.filter(r => r.featured).length
-  }), [allResources, savedResources]);
+    read: readResources.size
+  }), [allResources, savedResources, readResources]);
 
   // Calming gradient backgrounds for cards
   const getCardGradient = (featured: boolean, isHovered: boolean) => {
@@ -246,11 +282,9 @@ const ResourcesHub: React.FC = () => {
     );
   }
 
-  
-
   return (
     <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-3 sm:py-4 md:py-8 relative">
-      {/* Toast Notification - Mobile Optimized */}
+      {/* Toast Notification for Saved */}
       <AnimatePresence>
         {showSavedToast && (
           <motion.div
@@ -261,6 +295,21 @@ const ResourcesHub: React.FC = () => {
           >
             <Heart size={14} fill="white" className="sm:w-4 sm:h-4" />
             <span className="truncate text-sm sm:text-base">Saved "{lastSavedResource}" to your library</span>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Toast Notification for Read */}
+      <AnimatePresence>
+        {showReadToast && (
+          <motion.div
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 50, scale: 0.9 }}
+            className="fixed bottom-20 left-3 right-3 sm:left-auto sm:right-6 z-50 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 sm:px-6 py-2.5 sm:py-3 rounded-xl shadow-lg flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base"
+          >
+            <CheckCircle size={14} className="sm:w-4 sm:h-4" />
+            <span className="truncate text-sm sm:text-base">Marked "{lastReadResource}" as read</span>
           </motion.div>
         )}
       </AnimatePresence>
@@ -296,7 +345,7 @@ const ResourcesHub: React.FC = () => {
         </motion.p>
       </div>
 
-      {/* Stats Cards - Responsive Grid with Calming Colors */}
+      {/* Stats Cards - Added Read counter */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -326,15 +375,15 @@ const ResourcesHub: React.FC = () => {
             </div>
           </div>
         </div>
-        
-        <div className="bg-gradient-to-br from-amber-50/50 to-orange-50/50 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 border border-amber-100/50 hover:shadow-md transition-all duration-300">
+
+        <div className="bg-gradient-to-br from-indigo-50/50 to-purple-50/50 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 border border-indigo-100/50 hover:shadow-md transition-all duration-300">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[10px] sm:text-xs md:text-sm text-amber-600 mb-0.5 sm:mb-1">Featured Picks</p>
-              <p className="text-xl sm:text-2xl md:text-3xl font-light text-slate-800">{stats.featured}</p>
+              <p className="text-[10px] sm:text-xs md:text-sm text-indigo-600 mb-0.5 sm:mb-1">Marked as Read</p>
+              <p className="text-xl sm:text-2xl md:text-3xl font-light text-slate-800">{stats.read}</p>
             </div>
             <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/60 rounded-lg sm:rounded-xl flex items-center justify-center">
-              <Sparkles size={16} className="text-amber-400 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+              <Eye size={16} className="text-indigo-400 sm:w-5 sm:h-5 md:w-6 md:h-6" />
             </div>
           </div>
         </div>
@@ -369,7 +418,7 @@ const ResourcesHub: React.FC = () => {
           )}
         </div>
 
-        {/* Mobile Category Dropdown - KEPT */}
+        {/* Mobile Category Dropdown */}
         <div className="sm:hidden">
           <select
             value={selectedCategory}
@@ -384,7 +433,7 @@ const ResourcesHub: React.FC = () => {
           >
             {categories.map((cat) => (
               <option key={cat.name} value={cat.name}>
-                {cat.name === 'all' ? 'All Categories' : cat.name} ({cat.count})
+                {cat.name === 'all' ? 'All Categories' : cat.name}
               </option>
             ))}
           </select>
@@ -421,15 +470,6 @@ const ResourcesHub: React.FC = () => {
                   `}
                 >
                   {cat.name === 'all' ? 'All' : cat.name}
-                  <span className={`
-                    ml-1.5 sm:ml-2 text-[10px] sm:text-xs px-1 py-0.5 rounded-full
-                    ${selectedCategory === cat.name 
-                      ? 'bg-white/20 text-white' 
-                      : 'bg-slate-100 text-slate-500'
-                    }
-                  `}>
-                    {cat.count}
-                  </span>
                 </button>
               ))}
             </div>
@@ -453,36 +493,18 @@ const ResourcesHub: React.FC = () => {
             className={`
               flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 rounded-full font-medium transition-all duration-300 text-xs sm:text-sm
               ${savedView 
-                ? 'bg-gradient-to-r from-rose-400 to-pink-400 text-white shadow-md' 
-                : 'bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-slate-50 border border-slate-200'
+                ? '!bg-gradient-to-r from-rose-400 to-pink-400 text-white shadow-md' 
+                : '!bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-slate-50 border border-slate-200'
               }
             `}
           >
             <Heart size={12} fill={savedView ? 'white' : 'none'} />
             <span>Saved Only</span>
-            {savedView && stats.saved > 0 && (
-              <span className="ml-1 text-[10px] sm:text-xs bg-white/20 px-1 py-0.5 rounded-full">
-                {stats.saved}
-              </span>
-            )}
           </button>
         </div>
       </motion.div>
-
-      {/* Results Count */}
-      <div className="mb-3 sm:mb-4 md:mb-6 flex justify-between items-center">
-        <p className="text-[10px] sm:text-xs md:text-sm text-slate-500">
-          Showing <span className="font-medium text-slate-700">{filteredResources.length}</span> of{' '}
-          <span className="font-medium text-slate-700">{savedView ? stats.saved : stats.total}</span> resources
-        </p>
-        {filteredResources.length > itemsPerPage && (
-          <p className="text-[10px] sm:text-xs md:text-sm text-slate-500">
-            Page {currentPage} of {totalPages}
-          </p>
-        )}
-      </div>
-
-      {/* Resources Grid - Equal Height Cards */}
+     
+      {/* Resources Grid */}
       <AnimatePresence mode="wait">
         <motion.div 
           key={`${savedView}-${selectedCategory}-${searchTerm}-${currentPage}`}
@@ -491,117 +513,124 @@ const ResourcesHub: React.FC = () => {
           exit={{ opacity: 0 }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6"
         >
-          {paginatedResources.map((resource, index) => (
-            <motion.div
-              key={resource.path}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ delay: index * 0.05 }}
-              onHoverStart={() => setHoveredCard(resource.path)}
-              onHoverEnd={() => setHoveredCard(null)}
-              className="group h-full"
-            >
-              <div className={`
-                relative h-full flex flex-col rounded-xl sm:rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 
-                border border-slate-100 overflow-hidden
-                ${getCardGradient(resource.featured || false, hoveredCard === resource.path)}
-              `}>
-                {/* Calming Background Pattern */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                  <div className="absolute inset-0 bg-gradient-to-br from-teal-50/30 to-emerald-50/30" />
-                </div>
-                
-                {/* Subtle Border Glow */}
+          {paginatedResources.map((resource, index) => {
+            const isRead = readResources.has(resource.path);
+            const isSaved = savedResources.has(resource.path);
+            
+            return (
+              <motion.div
+                key={resource.path}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ delay: index * 0.05 }}
+                onHoverStart={() => setHoveredCard(resource.path)}
+                onHoverEnd={() => setHoveredCard(null)}
+                className="group h-full cursor-pointer"
+                onClick={() => window.location.href = resource.path.startsWith("/") ? resource.path : "/" + resource.path}
+              >
                 <div className={`
-                  absolute inset-0 rounded-xl sm:rounded-2xl pointer-events-none transition-opacity duration-300
-                  ${hoveredCard === resource.path ? 'ring-2 ring-teal-300/50 ring-offset-1' : ''}
-                `} />
-                
-                {/* Header Section */}
-                <div className="relative p-4 sm:p-5 md:p-6 pb-2 sm:pb-3">
-                  <div className="flex items-start justify-between">
-                    <motion.div 
-                      className={`
-                        w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center text-2xl sm:text-3xl md:text-4xl
-                        bg-gradient-to-br ${resource.color || getCategoryColor(resource.category)}
-                        shadow-md group-hover:scale-110 transition-all duration-500
-                      `}
-                      whileHover={{ rotate: [0, -5, 5, 0], transition: { duration: 0.5 } }}
-                    >
-                      {resource.icon}
-                    </motion.div>
-                    <motion.button
-                      onClick={() => toggleSave(resource.path, resource.name)}
-                      whileTap={{ scale: 0.9 }}
-                      className={`
-                        p-1.5 sm:p-2 rounded-full transition-all duration-300
-                        ${savedResources.has(resource.path) 
-                          ? 'bg-rose-100 text-rose-500 hover:bg-rose-200' 
-                          : 'bg-slate-50 text-slate-400 hover:bg-rose-50 hover:text-rose-500'
-                        }
-                      `}
-                    >
-                      <Heart size={16} fill={savedResources.has(resource.path) ? 'currentColor' : 'none'} />
-                    </motion.button>
-                  </div>
-                </div>
-                
-                {/* Content Section - Flexible but equal height */}
-                <div className="relative flex-1 px-4 sm:px-5 md:px-6 pb-3 sm:pb-4">
-                  {/* Title with line clamp */}
-                  <h3 className="text-base sm:text-lg md:text-xl font-medium text-slate-800 mb-2 group-hover:text-teal-700 transition-colors line-clamp-2 min-h-[3.5rem]">
-                    {resource.name}
-                  </h3>
-                  
-                  {/* Category Badge */}
-                  {resource.category && (
-                    <div className="flex items-center gap-1.5 sm:gap-2 mb-3">
-                      <span className="text-sm sm:text-base">{getCategoryIcon(resource.category)}</span>
-                      <span className="text-[11px] sm:text-xs text-slate-500 bg-slate-50/80 backdrop-blur-sm px-2 sm:px-2.5 py-1 rounded-full truncate max-w-[130px]">
-                        {resource.category}
-                      </span>
+                  relative h-full flex flex-col rounded-xl sm:rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 
+                  border border-slate-100 overflow-hidden
+                  ${getCardGradient(resource.featured || false, hoveredCard === resource.path)}
+                  ${isRead ? 'ring-1 ring-indigo-200 bg-indigo-50/5' : ''}
+                `}>
+                  {/* Read indicator overlay */}
+                  {isRead && (
+                    <div className="absolute top-3 right-3 z-10">
+                      <div className="bg-indigo-100 rounded-full p-1">
+                        <CheckCircle size={14} className="!text-indigo-600" />
+                      </div>
                     </div>
                   )}
                   
-                  {/* Featured Badge */}
-                  {resource.featured && (
-                    <div className="mb-3">
-                      <span className="inline-flex items-center gap-1 text-[10px] sm:text-xs px-2 sm:px-3 py-1 bg-amber-50/80 backdrop-blur-sm text-amber-700 rounded-full border border-amber-100">
-                        <Sparkles size={10} />
-                        <span>Featured Resource</span>
-                      </span>
-                    </div>
-                  )}
+                  {/* Calming Background Pattern */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    <div className="absolute inset-0 !bg-gradient-to-br from-teal-50/30 to-emerald-50/30" />
+                  </div>
                   
-                  {/* Calming Quote Placeholder - Optional */}
-                  <div className="mt-2 text-xs text-slate-400 italic">
-                    <Shield size={10} className="inline mr-1" />
-                    take what resonates
+                  {/* Subtle Border Glow */}
+                  <div className={`
+                    absolute inset-0 rounded-xl sm:rounded-2xl pointer-events-none transition-opacity duration-300
+                    ${hoveredCard === resource.path ? 'ring-2 ring-teal-300/50 ring-offset-1' : ''}
+                  `} />
+                  
+                  {/* Header Section */}
+                  <div className="relative p-4 sm:p-5 md:p-6 pb-2 sm:pb-3">
+                    <div className="flex items-start justify-between">
+                      <motion.div 
+                        className={`
+                          w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center text-2xl sm:text-3xl md:text-4xl
+                          bg-gradient-to-br ${resource.color || getCategoryColor(resource.category)}
+                          shadow-md group-hover:scale-110 transition-all duration-500
+                          ${isRead ? 'opacity-75' : ''}
+                        `}
+                        whileHover={{ rotate: [0, -5, 5, 0], transition: { duration: 0.5 } }}
+                      >
+                        {resource.icon}
+                      </motion.div>
+                      <motion.button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleSave(resource.path, resource.name);
+                        }}
+                        whileTap={{ scale: 0.9 }}
+                        className={`
+                          p-1.5 sm:p-2 rounded-full transition-all duration-300
+                          ${isSaved 
+                            ? 'bg-rose-100 text-rose-500 hover:bg-rose-200' 
+                            : 'bg-slate-50 text-slate-400 hover:bg-rose-50 hover:text-rose-500'
+                          }
+                        `}
+                      >
+                        <Heart size={16} fill={isSaved ? 'currentColor' : 'none'} />
+                      </motion.button>
+                    </div>
+                  </div>
+                  
+                  {/* Content Section */}
+                  <div className="relative flex-1 px-4 sm:px-5 md:px-6 pb-3 sm:pb-4">
+                    <h3 className={`text-base sm:text-lg md:text-xl font-medium mb-2 group-hover:text-teal-700 transition-colors line-clamp-2 min-h-[3.5rem] ${isRead ? 'text-slate-600' : 'text-slate-800'}`}>
+                      {resource.name}
+                    </h3>
+                  </div>
+                  
+                  {/* Action Buttons */}
+                  <div className="relative px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6 mt-auto">
+                    <div className="flex gap-2">
+                      {savedView && isSaved && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            markAsRead(resource.path, resource.name);
+                          }}
+                          className={`
+                            flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300
+                            ${isRead 
+                              ? '!bg-indigo-100 text-indigo-700 cursor-default' 
+                              : '!bg-indigo-500 !text-white shadow-md hover:shadow-lg'
+                            }
+                          `}
+                        >
+                          {isRead ? (
+                            <>
+                              <CheckCircle size={12} />
+                              <span>Read</span>
+                            </>
+                          ) : (
+                            <>
+                              <Eye size={12} />
+                              <span>Mark as Read</span>
+                            </>
+                          )}
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </div>
-                
-                {/* Action Button - Fixed at bottom */}
-                <div className="relative px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6 mt-auto">
-                  <motion.a
-                    href={resource.path.startsWith("/") ? resource.path : "/" + resource.path}
-                    whileHover={{ x: 4 }}
-                    className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 text-xs sm:text-sm font-medium group/link transition-all"
-                  >
-                    <span>Explore with compassion</span>
-                    <ExternalLink size={12} className="group-hover/link:translate-x-1 transition-transform" />
-                  </motion.a>
-                  {/* Show button only in saved view AND for saved resources */}
-                {savedView && savedResources.has(resource.path) && (
-                    <MarkAsReadButton 
-                        resourcePath={resource.path}
-                        resourceName={resource.name}
-                    />
-                )}
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </motion.div>
       </AnimatePresence>
 

@@ -6,7 +6,7 @@ import MoodCheckin from "../components/AppComponent/Dashboard/MoodCheckin";
 
 import BreathingExercises from "../components/AppComponent/Dashboard/BreathingExercises";
 
-import DeleteAccount from "../components/AppComponent/Profile/DeleteAccount";
+import DeleteAccount from "../components/AppComponent/Profile/Settings";
 import MoodTrackingGraph from "../components/AppComponent/Dashboard/MoodTrackingGraph";
 const ResourcesHub = lazy(() => import("../components/AppComponent/Dashboard/ResourcesHub"));
 export default function DashboardRoutes() {

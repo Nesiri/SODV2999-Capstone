@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React, { createElement } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {
   FaFacebookF,
@@ -17,8 +18,8 @@ const LEFT_LINKS = [
 ];
 
 const RIGHT_LINKS = [
-  { name: 'Contact Us', path: '/contact-us' },
-  { name: 'Support', path: '/support' },
+  { name: 'Contact Us', path: '/contact/contact-us' },
+  { name: 'Support', path: '/contact/support' },
   { name: 'Get Involved', path: '/volunteers' },
   { name: 'Join Our Newsletter', id: 'news-letter' },
   { name: 'Make a Contribution', path: '/contribute' },
@@ -26,22 +27,22 @@ const RIGHT_LINKS = [
 
 const SOCIAL_LINKS = [
   {
-    icon: <FaFacebookF />,
+    icon: createElement(FaFacebookF as any),
     url: 'https://www.facebook.com/TheLifelineCanada/',
     label: 'Facebook',
   },
   {
-    icon: <FaXTwitter />,
+    icon: createElement(FaXTwitter as any),
     url: 'https://x.com/i/flow/login?redirect_after_login=%2FTheLifeLineCan',
     label: 'Twitter',
   },
   {
-    icon: <FaYoutube />,
+    icon: createElement(FaYoutube as any),
     url: 'https://www.youtube.com/channel/UCpyDFXctDhgxsYbNoX5sTyg',
     label: 'YouTube',
   },
   {
-    icon: <FaInstagram />,
+    icon: createElement(FaInstagram as any),
     url: 'https://www.instagram.com/thelifelinecanada/',
     label: 'Instagram',
   },

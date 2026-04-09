@@ -33,7 +33,7 @@ import ResourceRoutes from './routes/ResourceRoutes'; // Import the new resource
 import { AuthProvider } from './context/AuthProvider';
 import PatternInterruptRoutes from './routes/PatternInterruptRoutes';
 import { CenteredLayout } from './layouts/CenterLayout';
-import CrisisButton from './components/Chatbot/CrisisButton';
+import CrisisSupportButton from './components/Chatbot/CrisisSupportButton';
 
 export default function App() {
   return (
@@ -102,7 +102,7 @@ export default function App() {
           }
         /> 
       </Routes>
-       <CrisisButton />
+       <CrisisSupportButton/>
     </>
   );
 }
