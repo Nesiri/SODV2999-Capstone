@@ -29,22 +29,22 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
           <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
         </div>
 
-        <div className="mt-6 overflow-hidden rounded-xl border border-slate-200 bg-white">
+        <div className="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-white">
           <div className="grid grid-cols-1 items-stretch lg:grid-cols-[1fr_300px]">
-            <div className="h-full p-6 text-slate-700 lg:border-r lg:border-slate-200">
+            <div className="h-full p-3 text-slate-700 lg:border-r lg:border-slate-200">
               <p className="leading-relaxed">
                 What leads to suicide? There is no single cause for suicide. Suicide most often occurs when stressors exceed current coping abilities of someone suffering from a mental health condition. Depression is the most common condition associated with suicide, and it is often undiagnosed or untreated.
               </p>
-              <p className="mt-4 leading-relaxed">
+              <p className="mt-3 leading-relaxed">
                 Conditions like depression, anxiety and substance problems, especially when unaddressed, increase risk for suicide. Yet it's important to note that most people who actively manage their mental health conditions lead fulfilling lives.
               </p>
             </div>
 
-            <div className="min-h-[180px] max-h-52 lg:max-h-64 bg-slate-100/70 p-2">
+            <div className="h-36 lg:h-auto p-3 flex items-center">
               <img
                 src={coverPhoto}
                 alt="Warning signs support"
-                className="h-full w-full rounded-lg object-cover object-center shadow-sm"
+                className="h-full w-full rounded-lg object-cover object-center"
                 loading="eager"
               />
             </div>
