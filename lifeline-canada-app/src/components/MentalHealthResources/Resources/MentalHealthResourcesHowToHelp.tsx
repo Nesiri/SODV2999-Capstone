@@ -8,12 +8,14 @@ const lifestyleChanges = '/assets/AdditionalResourceImages/Lifestyle-changes-wit
 const shortTermPlans = '/assets/AdditionalResourceImages/short-term-plan-200x133.jpg';
 const beAlert = '/assets/AdditionalResourceImages/know-the-signs-200x114.webp';
 const shouldYouWorry = '/assets/AdditionalResourceImages/should-you-worry-200x113.webp';
-const whatToDo = '/assets/AdditionalResourceImages/things-to-do-200x113.jpg';
+const whatToDo = '/assets/AdditionalResourceImages/whatShouldIDo.webp';
 const hopeCards = '/assets/AdditionalResourceImages/hope-cards-200x150.webp';
 const resourcesHelp = '/assets/AdditionalResourceImages/help-sign-200x158.jpg';
 const warning = '/assets/AdditionalResourceImages/warning.jpg';
 const talkingToSomeone = '/assets/AdditionalResourceImages/talking-to-someone-about-suicidal-feelings-600x600.jpg';
 const phone = '/assets/AdditionalResourceImages/phone-600x338.jpg';
+const understandingSuicide = '/assets/AdditionalResourceImages/understandingSuicide.webp';
+const ifYouReceieveSuicidalPhoneCall = '/assets/AdditionalResourceImages/ifYouReceiveASuicidalPhoneCall.webp';
 
 const MentalHealthResourcesHowToHelp: React.FC = () => {
   const sectionClassName = 'rounded-xl border border-slate-200 bg-white p-5 sm:p-6';
@@ -70,10 +72,20 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             <h2 className="text-lg font-semibold text-purple-700">
               Understanding Suicide
             </h2>
-            <div className="mt-4 space-y-3 text-slate-700">
-              <p className="leading-relaxed">
-                People in suicidal crisis often feel trapped, hopeless, and alone. Taking warning signs seriously and responding early is one of the most effective ways to help.
-              </p>
+            <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
+              <div className="space-y-3">
+                <p className="leading-relaxed">
+                  Suicide is a desperate attempt to escape suffering that has become unbearable. Blinded by feelings of self-loathing, hopelessness, and isolation, a suicidal person can't see any way of finding relief except through death. But despite their desire for the pain to stop, most suicidal people are deeply conflicted about ending their own lives. They wish there was an alternative to suicide, but they just can't see one.
+                </p>
+              </div>
+              <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+                <img
+                  src={understandingSuicide}
+                  alt="Understanding suicide"
+                  className="h-full w-full min-h-[120px] object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
 
@@ -177,13 +189,23 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             <h2 className="text-lg font-semibold text-purple-700">
               If You Receive a Suicidal Phone Call
             </h2>
-            <div className="mt-4 space-y-3 text-slate-700">
-              <ul className="list-disc space-y-2 pl-5 leading-relaxed">
-                <li>Let the person talk and express emotion without judgment.</li>
-                <li>Reflect back what you heard to confirm understanding.</li>
-                <li>If they have plan + means + timing, treat as emergency now.</li>
-                <li>Encourage immediate emergency care or same-day professional support.</li>
-              </ul>
+            <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
+              <div className="space-y-3">
+                <ul className="list-disc space-y-2 pl-5 leading-relaxed">
+                  <li>Let the person talk and express emotion without judgment.</li>
+                  <li>Reflect back what you heard to confirm understanding.</li>
+                  <li>If they have plan + means + timing, treat as emergency now.</li>
+                  <li>Encourage immediate emergency care or same-day professional support.</li>
+                </ul>
+              </div>
+              <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+                <img
+                  src={ifYouReceieveSuicidalPhoneCall}
+                  alt="Receiving a suicidal phone call"
+                  className="h-full w-full min-h-[120px] object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
 

@@ -15,6 +15,10 @@ const healthAndHope = '/assets/AdditionalResourceImages/SAMHSA.png';
 const theWayForward = '/assets/AdditionalResourceImages/ActionAlliance.png';
 
 const MentalHealthSurvivorsAttempt: React.FC = () => {
+  const imageRowClassName = 'rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-start';
+  const sideImageClassName = 'w-full h-auto object-cover object-top rounded-lg shadow-md';
+  const coverImageClassName = 'w-full h-full object-cover object-top rounded-lg shadow-md';
+
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
       {/* Decorative background orbs */}
@@ -54,7 +58,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
             <img
               src={coverPhoto}
               alt="Attempt Survivors"
-              className="w-full h-full object-cover rounded-lg shadow-md"
+              className={coverImageClassName}
             />
           </div>
         </main>
@@ -71,7 +75,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
           </p>
 
           <div className="mt-6 grid grid-cols-1 gap-4 sm:gap-5">
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+            <div className={imageRowClassName}>
               <div className="flex-1">
               <h3 className="text-xl font-semibold text-purple-700">Short-Term Planning</h3>
               <p className="mt-3 leading-relaxed">
@@ -113,11 +117,11 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
               </p>
               </div>
               <div className="sm:w-[22vw] sm:max-w-[16rem] sm:flex-shrink-0 w-full">
-                <img src={shortTerm} alt="Short-Term Planning" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                <img src={shortTerm} alt="Short-Term Planning" className={sideImageClassName} />
               </div>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+            <div className={imageRowClassName}>
               <div className="flex-1">
               <h3 className="text-xl font-semibold text-purple-700">Let Them Talk</h3>
               <p className="mt-3 leading-relaxed">
@@ -130,7 +134,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
               </p>
               </div>
               <div className="sm:w-[22vw] sm:max-w-[16rem] sm:flex-shrink-0 w-full">
-                <img src={letThemTalk} alt="Let Them Talk" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                <img src={letThemTalk} alt="Let Them Talk" className={sideImageClassName} />
               </div>
             </div>
 
@@ -151,7 +155,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
               </p>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+            <div className={imageRowClassName}>
               <div className="flex-1">
               <h3 className="text-xl font-semibold text-purple-700">Make Important Lifestyle Changes</h3>
               <p className="mt-3 leading-relaxed">
@@ -190,11 +194,11 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
               </p>
               </div>
               <div className="sm:w-[22vw] sm:max-w-[16rem] sm:flex-shrink-0 w-full">
-                <img src={lifestyleChanges} alt="Make Important Lifestyle Changes" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                <img src={lifestyleChanges} alt="Make Important Lifestyle Changes" className={sideImageClassName} />
               </div>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+            <div className={imageRowClassName}>
               <div className="flex-1">
               <h3 className="text-xl font-semibold text-purple-700">Be Alert for Suicide Warning Signs</h3>
               <p className="mt-3 leading-relaxed">
@@ -223,7 +227,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
               </ul>
               </div>
               <div className="sm:w-[22vw] sm:max-w-[16rem] sm:flex-shrink-0 w-full">
-                <img src={beAlert} alt="Be Alert for Suicide Warning Signs" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                <img src={beAlert} alt="Be Alert for Suicide Warning Signs" className={sideImageClassName} />
               </div>
             </div>
           </div>
@@ -295,9 +299,9 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
           </h2>
 
           <div className="mt-6 grid grid-cols-1 gap-4 sm:gap-5">
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+            <div className={imageRowClassName}>
               <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                <img src={forSurvivors} alt="For Survivors Of An Attempt" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                <img src={forSurvivors} alt="For Survivors Of An Attempt" className={sideImageClassName} />
               </div>
               <div className="flex-1">
               <a href="https://hughumanity.org" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
@@ -323,9 +327,9 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
               </div>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+            <div className={imageRowClassName}>
               <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                <img src={afterASuicideAttempt} alt="After A Suicide Attempt" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                <img src={afterASuicideAttempt} alt="After A Suicide Attempt" className={sideImageClassName} />
               </div>
               <div className="flex-1">
               <a href={CASPpdf} className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
@@ -354,9 +358,9 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
               </div>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+            <div className={imageRowClassName}>
               <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                <img src={healthAndHope} alt="A Journey Towards Health and Hope" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                <img src={healthAndHope} alt="A Journey Towards Health and Hope" className={sideImageClassName} />
               </div>
               <div className="flex-1">
               <a href={SAMHSApdf} className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
@@ -376,9 +380,9 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
               </div>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+            <div className={imageRowClassName}>
               <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                <img src={theWayForward} alt="The Way Forward" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                <img src={theWayForward} alt="The Way Forward" className={sideImageClassName} />
               </div>
               <div className="flex-1">
               <a href={ActionAlliancepdf} className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
