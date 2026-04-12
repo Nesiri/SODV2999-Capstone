@@ -13,6 +13,9 @@ const moreAndMoreMen = '/assets/AdditionalResourceImages/forMenAboutMen.png';
 const manTherapy = '/assets/AdditionalResourceImages/manTherapy.png';
 const menGetDepressionImg = '/assets/AdditionalResourceImages/menGetDepression.png';
 
+const manDistress = '/assets/AdditionalResourceImages/menDistress.webp';
+const manFactors = '/assets/AdditionalResourceImages/manFactors.webp';
+
 const MentalHealthResourcesCommunitiesMen: React.FC = () => {
     return (
         <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
@@ -80,23 +83,37 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <p className="leading-relaxed">
-                                Untreated mental health conditions can carry a high risk for suicide among men. The distress a man experiences at these times can distort his thinking so it becomes harder for him to see possible solutions to problems, or to connect with those who can offer support.
-                            </p>
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row-reverse sm:items-start gap-4">
+                            <img
+                                src={manDistress}
+                                alt="Distress in men"
+                                className="w-full h-32 sm:w-[18vw] sm:max-w-[14rem] sm:h-auto sm:shrink-0 rounded-xl shadow-md object-cover"
+                            />
+                            <div className="flex-1">
+                                <p className="leading-relaxed">
+                                    Untreated mental health conditions can carry a high risk for suicide among men. The distress a man experiences at these times can distort his thinking so it becomes harder for him to see possible solutions to problems, or to connect with those who can offer support.
+                                </p>
+                            </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <p className="leading-relaxed">
-                                There are a number of factors that have been linked to an increased risk of suicide, including:
-                            </p>
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row-reverse sm:items-start gap-4">
+                            <img
+                                src={manFactors}
+                                alt="Risk factors for men"
+                                className="w-full h-32 sm:w-[18vw] sm:max-w-[14rem] sm:h-auto sm:shrink-0 rounded-xl shadow-md object-cover"
+                            />
+                            <div className="flex-1">
+                                <p className="leading-relaxed">
+                                    There are a number of factors that have been linked to an increased risk of suicide, including:
+                                </p>
 
-                            <ul className="mt-3 list-disc space-y-2 pl-6 leading-relaxed">
-                                <li>Previous family or personal history of mental illness.</li>
-                                <li>Harmful drug and alcohol use.</li>
-                                <li>Isolation or loneliness.</li>
-                                <li>Ongoing stressful life situations such as unemployment, relationship difficulties or chronic health issues.</li>
-                            </ul>
+                                <ul className="mt-3 list-disc space-y-2 pl-6 leading-relaxed">
+                                    <li>Previous family or personal history of mental illness.</li>
+                                    <li>Harmful drug and alcohol use.</li>
+                                    <li>Isolation or loneliness.</li>
+                                    <li>Ongoing stressful life situations such as unemployment, relationship difficulties or chronic health issues.</li>
+                                </ul>
+                            </div>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row-reverse sm:items-start gap-4">

@@ -13,6 +13,8 @@ const forSurvivors = '/assets/AdditionalResourceImages/YourLifeCounts.png';
 const afterASuicideAttempt = '/assets/AdditionalResourceImages/CASP.png';
 const healthAndHope = '/assets/AdditionalResourceImages/SAMHSA.png';
 const theWayForward = '/assets/AdditionalResourceImages/ActionAlliance.png';
+const survivalKit = '/assets/AdditionalResourceImages/survivalKit.webp';
+const hopeCards = '/assets/AdditionalResourceImages/hopeCards.webp';
 
 const MentalHealthSurvivorsAttempt: React.FC = () => {
   const imageRowClassName = 'rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-start';
@@ -266,29 +268,39 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
 
         <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
           <div className="grid grid-cols-1 gap-4 sm:gap-5">
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-              <h3 className="text-xl font-semibold text-purple-700">Making a Survivor Kit or Box:</h3>
-              <p className="mt-3 leading-relaxed">
-                Consider having your loved one make a survival kit or box, where they can put music, pictures, poetry,
-                anything that will help comfort them and represent safety. If the attempt survivor believes it would be
-                helpful, letters and objects to remind them of their value and the negative impact it would have if they
-                killed themselves can be included. Then, whenever they are upset, they can go to the box and begin to
-                focus on the moment and not the future.
-              </p>
+            <div className={imageRowClassName}>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-purple-700">Making a Survivor Kit or Box:</h3>
+                <p className="mt-3 leading-relaxed">
+                  Consider having your loved one make a survival kit or box, where they can put music, pictures, poetry,
+                  anything that will help comfort them and represent safety. If the attempt survivor believes it would be
+                  helpful, letters and objects to remind them of their value and the negative impact it would have if they
+                  killed themselves can be included. Then, whenever they are upset, they can go to the box and begin to
+                  focus on the moment and not the future.
+                </p>
+              </div>
+              <div className="sm:w-[22vw] sm:max-w-[16rem] sm:flex-shrink-0 w-full">
+                <img src={survivalKit} alt="Survivor kit or box" className={sideImageClassName} />
+              </div>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-              <h3 className="text-xl font-semibold text-purple-700">Hope Cards:</h3>
-              <p className="mt-3 leading-relaxed">
-                Consider making hope cards, which are simply index cards. The attempt survivor and a supportive person
-                sit down and write what causes them to feel suicidal on one side of the card and on the other side,
-                they work together to create a list of things that can challenge or change these thoughts. For example,
-                perhaps someone feels suicidal when they believe nobody cares for or loves them. On one side they may
-                write, “unloved” and on the other side, they can list all the people in their life who do care about
-                them and/or love them, such as parents, spouse, siblings, partner, friends, children, etc. The cards
-                can be carried at all times and when these feelings come up the person can pull them out the stack of
-                cards, read them and manage his or her feelings.
-              </p>
+            <div className={imageRowClassName}>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-purple-700">Hope Cards:</h3>
+                <p className="mt-3 leading-relaxed">
+                  Consider making hope cards, which are simply index cards. The attempt survivor and a supportive person
+                  sit down and write what causes them to feel suicidal on one side of the card and on the other side,
+                  they work together to create a list of things that can challenge or change these thoughts. For example,
+                  perhaps someone feels suicidal when they believe nobody cares for or loves them. On one side they may
+                  write, “unloved” and on the other side, they can list all the people in their life who do care about
+                  them and/or love them, such as parents, spouse, siblings, partner, friends, children, etc. The cards
+                  can be carried at all times and when these feelings come up the person can pull them out the stack of
+                  cards, read them and manage his or her feelings.
+                </p>
+              </div>
+              <div className="sm:w-[22vw] sm:max-w-[16rem] sm:flex-shrink-0 w-full">
+                <img src={hopeCards} alt="Hope cards" className={sideImageClassName} />
+              </div>
             </div>
           </div>
         </div>
