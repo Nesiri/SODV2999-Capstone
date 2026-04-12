@@ -17,7 +17,8 @@ const depressionHurts = "/assets/AdditionalResourceImages/DepressionHurts-e16867
 const headsUpGuys = "/assets/AdditionalResourceImages/HeadsUpGuys-200x106.jpg";
 const depressionAndYoungPeople = "/assets/AdditionalResourceImages/YoungPeopleDepression.png";
 const interpretScore = "/assets/AdditionalResourceImages/Image-2-600x370.png";
-
+const insertNumberScore = "/assets/AdditionalResourceImages/frequency.webp";
+const takeCareOfThingsAtHomeOrPerformAtSchool = '/assets/AdditionalResourceImages/frequency.webp';
 
 const MentalHealthResourcesDepression: React.FC = () => {
     return (
@@ -312,14 +313,17 @@ const MentalHealthResourcesDepression: React.FC = () => {
                     </p>
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <h3 className="text-xl font-semibold text-purple-700">For each statement below, insert a number score:</h3>
-                            <ul className="list-disc ml-6 mt-3 space-y-2 text-base text-gray-700">
-                                <li>0 = Never</li>
-                                <li>1 = Several days</li>
-                                <li>2 = More than half the days</li>
-                                <li>3 = Nearly every day</li>
-                            </ul>
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
+                            <div className="flex-1">
+                                <h3 className="text-xl font-semibold text-purple-700">For each statement below, insert a number score:</h3>
+                                <ul className="list-disc ml-6 mt-3 space-y-2 text-base text-gray-700">
+                                    <li>0 = Never</li>
+                                    <li>1 = Several days</li>
+                                    <li>2 = More than half the days</li>
+                                    <li>3 = Nearly every day</li>
+                                </ul>
+                            </div>
+                            <img src={insertNumberScore} alt="Insert number score frequency guide" className="w-full h-40 sm:w-[22vw] sm:max-w-[16rem] sm:h-auto object-contain rounded-lg sm:shrink-0 order-first sm:order-last" />
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
@@ -340,14 +344,17 @@ const MentalHealthResourcesDepression: React.FC = () => {
                             <img src={selfTest} alt="Depression Self Test" className="w-full h-48 sm:w-[28vw] sm:max-w-[20rem] sm:h-auto object-contain rounded-lg sm:shrink-0 order-first sm:order-last" />
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <h3 className="text-xl font-semibold text-purple-700">If you scored 1 or more for any of the statements, how difficult have these problems made if for you to do your work, take care of things at home or perform at school?</h3>
-                            <ul className="list-disc ml-6 mt-3 space-y-2 text-base text-gray-700">
-                                <li>0 = Not difficult at all</li>
-                                <li>1 = Somewhat difficult</li>
-                                <li>2 = Very difficult</li>
-                                <li>3 = Extremely difficult</li>
-                            </ul>
+                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
+                            <div className="flex-1">
+                                <h3 className="text-xl font-semibold text-purple-700">If you scored 1 or more for any of the statements, how difficult have these problems made if for you to do your work, take care of things at home or perform at school?</h3>
+                                <ul className="list-disc ml-6 mt-3 space-y-2 text-base text-gray-700">
+                                    <li>0 = Not difficult at all</li>
+                                    <li>1 = Somewhat difficult</li>
+                                    <li>2 = Very difficult</li>
+                                    <li>3 = Extremely difficult</li>
+                                </ul>
+                            </div>
+                            <img src={takeCareOfThingsAtHomeOrPerformAtSchool} alt="Difficulty scale for work home or school" className="w-full h-40 sm:w-[22vw] sm:max-w-[16rem] sm:h-auto object-contain rounded-lg sm:shrink-0 order-first sm:order-last" />
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">

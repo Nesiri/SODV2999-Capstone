@@ -14,6 +14,7 @@ const prescriptions = '/assets/AdditionalResourceImages/follow-thru-with-prescri
 const structureRoutine = '/assets/AdditionalResourceImages/routine-e1697585679528-200x136.webp';
 const doThingsEnjoy = '/assets/AdditionalResourceImages/do-things-you-enjoy-mental-health-200x133.jpg';
 const personalGoals = '/assets/AdditionalResourceImages/personal_goal_setting_full_9267662-200x149.png';
+const highRiskTriggers = '/assets/AdditionalResourceImages/highRisk.webp';
 
 const copingPdf = '/pdfs/Coping-With-Suicidal-Thoughts.pdf';
 
@@ -227,9 +228,14 @@ const MentalHealthResourcesCoping: React.FC = () => {
                                     <img src={professionalSupport} alt="Professional support" className="h-full w-full min-h-[120px] object-cover" loading="lazy" />
                                 </div>
                             </div>
-                            <div className="pb-3 border-b border-purple-200">
-                                <h3 className="font-semibold text-purple-700">Identify high-risk triggers or situations</h3>
-                                <p className="mt-1 leading-relaxed">Think about the situations or factors that increase your feelings of despair and thoughts of suicide. Work to avoid those situations. For example, going to a bar and drinking with friends may increase feelings of depression. If this is a trigger for you, avoid going to a bar or seeing friends who drink.</p>
+                            <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
+                                <div>
+                                    <h3 className="font-semibold text-purple-700">Identify high-risk triggers or situations</h3>
+                                    <p className="mt-1 leading-relaxed">Think about the situations or factors that increase your feelings of despair and thoughts of suicide. Work to avoid those situations. For example, going to a bar and drinking with friends may increase feelings of depression. If this is a trigger for you, avoid going to a bar or seeing friends who drink.</p>
+                                </div>
+                                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                                    <img src={highRiskTriggers} alt="High-risk triggers" className="h-full w-full min-h-[120px] object-cover" loading="lazy" />
+                                </div>
                             </div>
                             <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                                 <div>

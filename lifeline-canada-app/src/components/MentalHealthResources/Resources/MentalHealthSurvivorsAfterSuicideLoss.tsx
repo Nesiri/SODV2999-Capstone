@@ -18,6 +18,11 @@ const earlyResponders = '/assets/AdditionalResourceImages/WinnipegSuicidePrevent
 const funeralDirectors = '/assets/AdditionalResourceImages/SAMHSA.png';
 
 const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
+    const imageRowClassName = 'rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-start';
+    const sideImageClassName = 'w-full h-auto object-cover object-top rounded-lg shadow-md';
+    const coverImageClassName = 'w-full h-full object-cover object-top rounded-lg shadow-md';
+    const tileImageClassName = 'w-full h-40 object-cover object-top rounded-lg shadow-md mb-4';
+
     return (
         <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
             {/* Decorative background orbs */}
@@ -58,7 +63,7 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                         <img
                             src={coverPhoto}
                             alt="After a Suicide Loss"
-                            className="w-full h-full object-cover rounded-lg shadow-md"
+                            className={coverImageClassName}
                         />
                     </div>
                 </main>
@@ -69,9 +74,9 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                     </h2>
 
                     <div className="mt-6 space-y-4 sm:space-y-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+                        <div className={imageRowClassName}>
                             <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={hopeAndHealing} alt="Hope and Healing" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                                <img src={hopeAndHealing} alt="Hope and Healing" className={sideImageClassName} />
                             </div>
                             <div className="flex-1">
                             <a href={HopeAndHealing} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
@@ -96,9 +101,9 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+                        <div className={imageRowClassName}>
                             <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={practicalAndPersonalGuide} alt="After a Suicide: A Practical and Personal Guide" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                                <img src={practicalAndPersonalGuide} alt="After a Suicide: A Practical and Personal Guide" className={sideImageClassName} />
                             </div>
                             <div className="flex-1">
                             <a href={Klinic} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
@@ -128,9 +133,9 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+                        <div className={imageRowClassName}>
                             <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={toolkitForSchools} alt="After a Suicide: A Toolkit for Schools" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                                <img src={toolkitForSchools} alt="After a Suicide: A Toolkit for Schools" className={sideImageClassName} />
                             </div>
                             <div className="flex-1">
                             <a href={SPRC} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
@@ -155,9 +160,9 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+                        <div className={imageRowClassName}>
                             <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={earlyResponders} alt="A Guide for Early Responders" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                                <img src={earlyResponders} alt="A Guide for Early Responders" className={sideImageClassName} />
                             </div>
                             <div className="flex-1">
                             <a href={Winnipeg} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
@@ -184,9 +189,9 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+                        <div className={imageRowClassName}>
                             <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={funeralDirectors} alt="For Funeral Directors" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                                <img src={funeralDirectors} alt="For Funeral Directors" className={sideImageClassName} />
                             </div>
                             <div className="flex-1">
                             <span className="text-xl font-semibold text-indigo-500">
@@ -245,21 +250,21 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={bereavedSupport} alt="Bereaved Support" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
+                            <img src={bereavedSupport} alt="Bereaved Support" className={tileImageClassName} />
                             <a href="/resources/bereaved-support" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Bereaved Support
                             </a>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={survivorsOfSuicideLoss} alt="Survivors of Suicide Loss" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
+                            <img src={survivorsOfSuicideLoss} alt="Survivors of Suicide Loss" className={tileImageClassName} />
                             <a href="/resources/suicide-loss" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Survivors of Suicide Loss
                             </a>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={resourceOrganizations} alt="Resource Organizations" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
+                            <img src={resourceOrganizations} alt="Resource Organizations" className={tileImageClassName} />
                             <a href="/resources/organizations" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
                                 Resource Organizations
                             </a>

@@ -65,36 +65,45 @@ const MentalHealthResourcesCommunitiesParents: React.FC = () => {
 
                     <div className="mt-6 grid gap-4 sm:gap-5">
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                            <img
-                                src={communicatingWithATeenager}
-                                alt="Communicating with a teenager"
-                                className="float-right ml-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
-                            />
-                            <p className="leading-relaxed">
-                                Communicating with a teenager who is in crisis and may be thinking about suicide is difficult, especially if it is your own child. You will need to reassure her that help is available and that you will assist her in finding the right help. Be careful you do not take over and try to "fix" things for your child.
-                            </p>
+                            <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start">
+                                <div>
+                                    <p className="leading-relaxed">
+                                        Communicating with a teenager who is in crisis and may be thinking about suicide is difficult, especially if it is your own child. You will need to reassure her that help is available and that you will assist her in finding the right help. Be careful you do not take over and try to "fix" things for your child.
+                                    </p>
 
-                            <p className="mt-4 leading-relaxed">
-                                Making significant changes can be a long process and there will be some bumps along the way. The journey begins with a conversation. It will take courage, time, space, patience and skill to start this conversation.
-                            </p>
+                                    <p className="mt-4 leading-relaxed">
+                                        Making significant changes can be a long process and there will be some bumps along the way. The journey begins with a conversation. It will take courage, time, space, patience and skill to start this conversation.
+                                    </p>
 
-                            <img
-                                src={beforeBeginningTheConversation}
-                                alt="Before beginning the conversation"
-                                className="float-right ml-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
-                            />
+                                    <ul className="mt-3 list-disc space-y-2 pl-6 leading-relaxed">
+                                        <li>Make a time to have the conversation when you will not be interrupted.</li>
+                                        <li>Be flexible about the amount of time that you set aside.</li>
+                                        <li>Choose a place where there will be no distractions.</li>
+                                        <li>Choose a place that offers comfort and privacy.</li>
+                                        <li>Before beginning the conversation, clear your mind of other issues and calm yourself.</li>
+                                        <li>Remember that your child may talk about things that are difficult to hear. Try not to react with anger, shock or frustration. Do not interrupt or provide unwanted advice.</li>
+                                        <li>Continue to ask questions until you have a clear understanding of what your child is saying. Do not become frustrated if things are not immediately apparent or reasonable to you.</li>
+                                        <li>Maintain a positive outlook.</li>
+                                    </ul>
+                                </div>
 
-                            <ul className="mt-3 list-disc space-y-2 pl-6 leading-relaxed">
-                                <li>Make a time to have the conversation when you will not be interrupted.</li>
-                                <li>Be flexible about the amount of time that you set aside.</li>
-                                <li>Choose a place where there will be no distractions.</li>
-                                <li>Choose a place that offers comfort and privacy.</li>
-                                <li>Before beginning the conversation, clear your mind of other issues and calm yourself.</li>
-                                <li>Remember that your child may talk about things that are difficult to hear. Try not to react with anger, shock or frustration. Do not interrupt or provide unwanted advice.</li>
-                                <li>Continue to ask questions until you have a clear understanding of what your child is saying. Do not become frustrated if things are not immediately apparent or reasonable to you.</li>
-                                <li>Maintain a positive outlook.</li>
-                            </ul>
-                            <div className="clear-both" />
+                                <div className="space-y-3">
+                                    <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+                                        <img
+                                            src={communicatingWithATeenager}
+                                            alt="Communicating with a teenager"
+                                            className="h-full w-full min-h-[120px] object-cover"
+                                        />
+                                    </div>
+                                    <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+                                        <img
+                                            src={beforeBeginningTheConversation}
+                                            alt="Before beginning the conversation"
+                                            className="h-full w-full min-h-[120px] object-cover"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
@@ -146,7 +155,7 @@ const MentalHealthResourcesCommunitiesParents: React.FC = () => {
                     <div className="mt-6 rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
                         <p className="leading-relaxed">
                             If you feel you cannot have this conversation, please seek help from an outside source - another family member, your family doctor, a member of the clergy from your place of worship, a counsellor or a teacher. You could also call a{" "}
-                            <a href="/in-crisis" className="text-purple-700 underline underline-offset-4 hover:text-purple-800">
+                            <a href="/incrisisneedhelp" className="text-purple-700 underline underline-offset-4 hover:text-purple-800">
                                 Crisis Line
                             </a>
                             {" "}

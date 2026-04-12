@@ -2,6 +2,7 @@ import React from "react";
 
 const MentalIllnessImage = "/assets/AdditionalResourceImages/coping-800x575.jpg";
 const coverPhoto = "/assets/AdditionalResourceImages/MythsFacts-600x444.jpg";
+const strongConflict = "/assets/AdditionalResourceImages/strongConflict.webp";
 
 const mythsVsFacts = [
     {
@@ -111,11 +112,24 @@ const MentalHealthResourcesMythsFacts: React.FC = () => {
                 </main>
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-                    <p className="leading-relaxed">What causes such a strong conflict in a person? What leads to that feeling of a dead-end, no-way-out scenario?</p>
+                    <div className="grid grid-cols-1 lg:grid-cols-[1fr_260px] gap-4 lg:gap-6 lg:items-start">
+                        <div>
+                            <p className="leading-relaxed">What causes such a strong conflict in a person? What leads to that feeling of a dead-end, no-way-out scenario?</p>
 
-                    <p className="mt-4 leading-relaxed">
-                        There are many reasons that someone might choose suicide or contemplate suicidal thoughts. Those reasons are often so complex and complicated that the person suffering from those feelings might not be able to articulate exactly what is going on in their head and heart. However, long and difficult research has found that the basic motivation for suicide is the feeling of utter despair and hopelessness. How a person reaches that point is what varies from one to another.
-                    </p>
+                            <p className="mt-4 leading-relaxed">
+                                There are many reasons that someone might choose suicide or contemplate suicidal thoughts. Those reasons are often so complex and complicated that the person suffering from those feelings might not be able to articulate exactly what is going on in their head and heart. However, long and difficult research has found that the basic motivation for suicide is the feeling of utter despair and hopelessness. How a person reaches that point is what varies from one to another.
+                            </p>
+                        </div>
+
+                        <div className="w-full">
+                            <img
+                                src={strongConflict}
+                                alt="Strong internal conflict"
+                                className="w-full h-full min-h-[180px] rounded-xl border border-purple-100 shadow-sm object-cover"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
                 </div>
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">

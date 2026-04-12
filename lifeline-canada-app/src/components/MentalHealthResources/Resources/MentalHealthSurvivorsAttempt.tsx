@@ -13,8 +13,14 @@ const forSurvivors = '/assets/AdditionalResourceImages/YourLifeCounts.png';
 const afterASuicideAttempt = '/assets/AdditionalResourceImages/CASP.png';
 const healthAndHope = '/assets/AdditionalResourceImages/SAMHSA.png';
 const theWayForward = '/assets/AdditionalResourceImages/ActionAlliance.png';
+const survivalKit = '/assets/AdditionalResourceImages/survivalKit.webp';
+const hopeCards = '/assets/AdditionalResourceImages/hopeCards.webp';
 
 const MentalHealthSurvivorsAttempt: React.FC = () => {
+  const imageRowClassName = 'rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-start';
+  const sideImageClassName = 'w-full h-auto object-cover object-top rounded-lg shadow-md';
+  const coverImageClassName = 'w-full h-full object-cover object-top rounded-lg shadow-md';
+
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
       {/* Decorative background orbs */}
@@ -54,7 +60,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
             <img
               src={coverPhoto}
               alt="Attempt Survivors"
-              className="w-full h-full object-cover rounded-lg shadow-md"
+              className={coverImageClassName}
             />
           </div>
         </main>
@@ -71,7 +77,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
           </p>
 
           <div className="mt-6 grid grid-cols-1 gap-4 sm:gap-5">
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+            <div className={imageRowClassName}>
               <div className="flex-1">
               <h3 className="text-xl font-semibold text-purple-700">Short-Term Planning</h3>
               <p className="mt-3 leading-relaxed">
@@ -113,11 +119,11 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
               </p>
               </div>
               <div className="sm:w-[22vw] sm:max-w-[16rem] sm:flex-shrink-0 w-full">
-                <img src={shortTerm} alt="Short-Term Planning" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                <img src={shortTerm} alt="Short-Term Planning" className={sideImageClassName} />
               </div>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+            <div className={imageRowClassName}>
               <div className="flex-1">
               <h3 className="text-xl font-semibold text-purple-700">Let Them Talk</h3>
               <p className="mt-3 leading-relaxed">
@@ -130,7 +136,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
               </p>
               </div>
               <div className="sm:w-[22vw] sm:max-w-[16rem] sm:flex-shrink-0 w-full">
-                <img src={letThemTalk} alt="Let Them Talk" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                <img src={letThemTalk} alt="Let Them Talk" className={sideImageClassName} />
               </div>
             </div>
 
@@ -151,7 +157,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
               </p>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+            <div className={imageRowClassName}>
               <div className="flex-1">
               <h3 className="text-xl font-semibold text-purple-700">Make Important Lifestyle Changes</h3>
               <p className="mt-3 leading-relaxed">
@@ -190,11 +196,11 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
               </p>
               </div>
               <div className="sm:w-[22vw] sm:max-w-[16rem] sm:flex-shrink-0 w-full">
-                <img src={lifestyleChanges} alt="Make Important Lifestyle Changes" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                <img src={lifestyleChanges} alt="Make Important Lifestyle Changes" className={sideImageClassName} />
               </div>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+            <div className={imageRowClassName}>
               <div className="flex-1">
               <h3 className="text-xl font-semibold text-purple-700">Be Alert for Suicide Warning Signs</h3>
               <p className="mt-3 leading-relaxed">
@@ -223,7 +229,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
               </ul>
               </div>
               <div className="sm:w-[22vw] sm:max-w-[16rem] sm:flex-shrink-0 w-full">
-                <img src={beAlert} alt="Be Alert for Suicide Warning Signs" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                <img src={beAlert} alt="Be Alert for Suicide Warning Signs" className={sideImageClassName} />
               </div>
             </div>
           </div>
@@ -262,29 +268,39 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
 
         <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
           <div className="grid grid-cols-1 gap-4 sm:gap-5">
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-              <h3 className="text-xl font-semibold text-purple-700">Making a Survivor Kit or Box:</h3>
-              <p className="mt-3 leading-relaxed">
-                Consider having your loved one make a survival kit or box, where they can put music, pictures, poetry,
-                anything that will help comfort them and represent safety. If the attempt survivor believes it would be
-                helpful, letters and objects to remind them of their value and the negative impact it would have if they
-                killed themselves can be included. Then, whenever they are upset, they can go to the box and begin to
-                focus on the moment and not the future.
-              </p>
+            <div className={imageRowClassName}>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-purple-700">Making a Survivor Kit or Box:</h3>
+                <p className="mt-3 leading-relaxed">
+                  Consider having your loved one make a survival kit or box, where they can put music, pictures, poetry,
+                  anything that will help comfort them and represent safety. If the attempt survivor believes it would be
+                  helpful, letters and objects to remind them of their value and the negative impact it would have if they
+                  killed themselves can be included. Then, whenever they are upset, they can go to the box and begin to
+                  focus on the moment and not the future.
+                </p>
+              </div>
+              <div className="sm:w-[22vw] sm:max-w-[16rem] sm:flex-shrink-0 w-full">
+                <img src={survivalKit} alt="Survivor kit or box" className={sideImageClassName} />
+              </div>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-              <h3 className="text-xl font-semibold text-purple-700">Hope Cards:</h3>
-              <p className="mt-3 leading-relaxed">
-                Consider making hope cards, which are simply index cards. The attempt survivor and a supportive person
-                sit down and write what causes them to feel suicidal on one side of the card and on the other side,
-                they work together to create a list of things that can challenge or change these thoughts. For example,
-                perhaps someone feels suicidal when they believe nobody cares for or loves them. On one side they may
-                write, “unloved” and on the other side, they can list all the people in their life who do care about
-                them and/or love them, such as parents, spouse, siblings, partner, friends, children, etc. The cards
-                can be carried at all times and when these feelings come up the person can pull them out the stack of
-                cards, read them and manage his or her feelings.
-              </p>
+            <div className={imageRowClassName}>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-purple-700">Hope Cards:</h3>
+                <p className="mt-3 leading-relaxed">
+                  Consider making hope cards, which are simply index cards. The attempt survivor and a supportive person
+                  sit down and write what causes them to feel suicidal on one side of the card and on the other side,
+                  they work together to create a list of things that can challenge or change these thoughts. For example,
+                  perhaps someone feels suicidal when they believe nobody cares for or loves them. On one side they may
+                  write, “unloved” and on the other side, they can list all the people in their life who do care about
+                  them and/or love them, such as parents, spouse, siblings, partner, friends, children, etc. The cards
+                  can be carried at all times and when these feelings come up the person can pull them out the stack of
+                  cards, read them and manage his or her feelings.
+                </p>
+              </div>
+              <div className="sm:w-[22vw] sm:max-w-[16rem] sm:flex-shrink-0 w-full">
+                <img src={hopeCards} alt="Hope cards" className={sideImageClassName} />
+              </div>
             </div>
           </div>
         </div>
@@ -295,9 +311,9 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
           </h2>
 
           <div className="mt-6 grid grid-cols-1 gap-4 sm:gap-5">
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+            <div className={imageRowClassName}>
               <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                <img src={forSurvivors} alt="For Survivors Of An Attempt" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                <img src={forSurvivors} alt="For Survivors Of An Attempt" className={sideImageClassName} />
               </div>
               <div className="flex-1">
               <a href="https://hughumanity.org" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
@@ -323,9 +339,9 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
               </div>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+            <div className={imageRowClassName}>
               <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                <img src={afterASuicideAttempt} alt="After A Suicide Attempt" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                <img src={afterASuicideAttempt} alt="After A Suicide Attempt" className={sideImageClassName} />
               </div>
               <div className="flex-1">
               <a href={CASPpdf} className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
@@ -354,9 +370,9 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
               </div>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+            <div className={imageRowClassName}>
               <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                <img src={healthAndHope} alt="A Journey Towards Health and Hope" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                <img src={healthAndHope} alt="A Journey Towards Health and Hope" className={sideImageClassName} />
               </div>
               <div className="flex-1">
               <a href={SAMHSApdf} className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
@@ -376,9 +392,9 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
               </div>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-center">
+            <div className={imageRowClassName}>
               <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                <img src={theWayForward} alt="The Way Forward" className="w-full h-auto object-cover rounded-lg shadow-md" />
+                <img src={theWayForward} alt="The Way Forward" className={sideImageClassName} />
               </div>
               <div className="flex-1">
               <a href={ActionAlliancepdf} className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">

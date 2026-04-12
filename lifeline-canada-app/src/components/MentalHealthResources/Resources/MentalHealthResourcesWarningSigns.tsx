@@ -167,7 +167,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
 
           <div>
             <a
-              href="/crisis-lines"
+              href="/incrisisneedhelp"
               style={{ color: '#ffffff' }}
               className="inline-block px-6 sm:px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:scale-[1.02] transform transition"
             >
