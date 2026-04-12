@@ -155,7 +155,7 @@ const MentalHealthResourcesCommunitiesParents: React.FC = () => {
                     <div className="mt-6 rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
                         <p className="leading-relaxed">
                             If you feel you cannot have this conversation, please seek help from an outside source - another family member, your family doctor, a member of the clergy from your place of worship, a counsellor or a teacher. You could also call a{" "}
-                            <a href="/in-crisis" className="text-purple-700 underline underline-offset-4 hover:text-purple-800">
+                            <a href="/incrisisneedhelp" className="text-purple-700 underline underline-offset-4 hover:text-purple-800">
                                 Crisis Line
                             </a>
                             {" "}

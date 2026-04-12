@@ -98,7 +98,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                     />
 
                     <p className="mt-4 leading-relaxed">
-                        <span className="font-semibold text-purple-700">If You Are Feeling Suicidal:</span> Tell someone right away. Contact a <a href="/in-crisis" className="text-purple-700 underline underline-offset-4 hover:text-purple-800">crisis line</a> or talk to an adult, such as a parent, teacher or school counsellor. It may not seem like it now, but things can and do change. Asking for help opens the door to change.
+                        <span className="font-semibold text-purple-700">If You Are Feeling Suicidal:</span> Tell someone right away. Contact a <a href="/incrisisneedhelp" className="text-purple-700 underline underline-offset-4 hover:text-purple-800">crisis line</a> or talk to an adult, such as a parent, teacher or school counsellor. It may not seem like it now, but things can and do change. Asking for help opens the door to change.
                     </p>
 
                     <p className="mt-4 leading-relaxed">

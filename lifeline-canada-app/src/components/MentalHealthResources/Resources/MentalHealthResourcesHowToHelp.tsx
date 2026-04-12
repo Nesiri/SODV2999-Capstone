@@ -323,7 +323,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                     <li>Acting impulsively or recklessly</li>
                     <li>Feeling excessive shame and/or guilt</li>
                   </ul>
-                  <p className="mt-2 leading-relaxed">If your loved one is in immediate danger, call 911 without delay. Suicide prevention lifelines are available 24/7 – so make use of them if your loved one needs to talk with someone urgently. <a href="/crisis-help" className="font-medium text-blue-700 underline underline-offset-2">Click here for Crisis Lines</a>.</p>
+                  <p className="mt-2 leading-relaxed">If your loved one is in immediate danger, call 911 without delay. Suicide prevention lifelines are available 24/7 – so make use of them if your loved one needs to talk with someone urgently. <a href="/incrisisneedhelp" className="font-medium text-blue-700 underline underline-offset-2">Click here for Crisis Lines</a>.</p>
                 </div>
                 <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
                   <img src={beAlert} alt="Be alert for warning signs" className="h-full w-full min-h-[120px] object-cover" loading="lazy" />
