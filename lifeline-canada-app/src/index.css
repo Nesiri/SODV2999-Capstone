@@ -213,3 +213,31 @@ button:focus-visible {
 .animate-bounce-slow {
   animation: bounce-slow 3s ease-in-out infinite;
 }
+
+/* Resources pages theme (applied at page wrapper level) */
+.resources-page-theme h1,
+.resources-page-theme h2,
+.resources-page-theme h3,
+.resources-page-theme h4 {
+  color: #6d28d9 !important;
+}
+
+.resources-page-theme a {
+  color: #6d28d9 !important;
+}
+
+.resources-page-theme a:hover {
+  color: #5b21b6 !important;
+}
+
+.resources-page-theme button,
+.resources-page-theme a[class*='bg-'] {
+  background-color: #6d28d9 !important;
+  color: #ffffff !important;
+}
+
+.resources-page-theme button:hover,
+.resources-page-theme a[class*='bg-']:hover {
+  background-color: #5b21b6 !important;
+  color: #ffffff !important;
+}
