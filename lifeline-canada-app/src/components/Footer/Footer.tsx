@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
               {...(link.path?.startsWith('http')
                 ? { target: '_blank', rel: 'noopener noreferrer' }
                 : {})}
-              className="relative group transition duration-300 !text-[#89009B] hover:text-white"
+              className="relative group transition duration-300 !text-white hover:text-[#9F7AEA]"
             >
               <span className="relative z-10">{link.name}</span>
               <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-gradient-to-r from-[#9F7AEA] to-[#6B46C1] transition-all duration-300 group-hover:w-full"></span>
@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 target="_blank"
                 aria-label={item.label}
-                className="bg-white/10 backdrop-blur-sm !text-[#89009B] p-3 md:p-4 rounded-lg hover:bg-gradient-to-r hover:from-[#9F7AEA] hover:to-[#6B46C1] hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg border border-white/10"
+                className="bg-white/10 backdrop-blur-sm !text-white p-3 md:p-4 rounded-lg hover:bg-gradient-to-r hover:from-[#9F7AEA] hover:to-[#6B46C1] hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg border border-white/10"
               >
                 <span className="text-lg md:text-xl">{item.icon}</span>
               </a>
@@ -148,9 +148,9 @@ const Footer: React.FC = () => {
               key={index}
               to={link.path ?? '#'}
               onClick={handleClick(link)}
-              className="relative group transition duration-300 !text-[#89009B]  hover:text-white"
+              className="relative group transition duration-300 !text-white hover:text-[#9F7AEA]"
             >
-              <span className="relative z-10 text-[#89009B]">{link.name}</span>
+              <span className="relative z-10">{link.name}</span>
               <span className="absolute right-0 -bottom-1 w-0 h-[2px] bg-gradient-to-r from-[#6B46C1] to-[#9F7AEA] transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
