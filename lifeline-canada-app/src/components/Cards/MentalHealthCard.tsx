@@ -12,8 +12,6 @@ interface MentalHealthCardProps {
   variant?: 'default' | 'compact' | 'featured';
 }
 
-
-
 // Optimized image component with lazy loading - MODIFIED: Added h-80
 const OptimizedImage = memo(({ src, alt }: { src: string; alt: string }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -88,7 +86,6 @@ export const MentalHealthCard = memo(
       }
     }, [variant]);
 
-
     // Use will-change for hardware acceleration
     return (
       <Link
@@ -102,8 +99,6 @@ export const MentalHealthCard = memo(
 
           {/* Simple gradient overlay - reduced opacity */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-
-          
         </div>
 
         {/* Content - UNCHANGED */}

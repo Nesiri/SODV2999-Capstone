@@ -42,7 +42,7 @@ const AboutUs: React.FC = () => {
 
               <div className="bg-[#f5edf7]/50 p-6 rounded-2xl border border-[#B266C9]/20">
                 <p className="text-lg md:text-xl leading-relaxed">
-                <span className="text-2xl text-[#B266C9] mr-1">💜</span>
+                  <span className="text-2xl text-[#B266C9] mr-1">💜</span>
                   The LifeLine Canada Foundation is{' '}
                   <span className="font-semibold text-[#89009B]">
                     not a crisis hotline
@@ -62,7 +62,9 @@ const AboutUs: React.FC = () => {
 
               <p className="text-lg md:text-xl leading-relaxed">
                 <span className="text-2xl text-[#89009B] mr-1">✨</span>
-                <span className="font-semibold text-[#89009B]">Our Mission:</span>{' '}
+                <span className="font-semibold text-[#89009B]">
+                  Our Mission:
+                </span>{' '}
                 To aid in suicide reduction across Canada by raising awareness
                 of risk factors, delivering programs for positive mental health
                 development, providing access to available resource options, and

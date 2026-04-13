@@ -34,7 +34,6 @@ const MakeContribution: React.FC = () => {
             <h1 className="!text-4xl md:text-6xl lg:text-7xl font-black leading-tight">
               <span className="text-transparent bg-clip-text !bg-gradient-to-r from-[#89009B] via-[#B266C9] to-[#89009B]">
                 Make a Contribution
-              
               </span>
             </h1>
 
@@ -50,8 +49,8 @@ const MakeContribution: React.FC = () => {
               </p>
 
               <p className="text-lg md:text-xl leading-relaxed bg-[#f5edf7]/50 p-6 rounded-2xl border border-[#B266C9]/20">
-                <span className="text-2xl text-[#B266C9] mr-1">💝</span>A gift to
-                The LifeLine Canada Foundation helps fund our mission to save
+                <span className="text-2xl text-[#B266C9] mr-1">💝</span>A gift
+                to The LifeLine Canada Foundation helps fund our mission to save
                 lives and give hope to those affected by suicide, depression,
                 anxiety and PTSD. If you have questions about your gift or about
                 other ways in which one could contribute, please don't hesitate

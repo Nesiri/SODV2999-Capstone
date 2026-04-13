@@ -127,14 +127,14 @@ const ONRegionalCrisisCentres: React.FC = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-<div className="text-center mb-12 sm:mb-16 lg:mb-20">
-  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif !bg-[#89009B] bg-clip-text text-transparent px-4">
-    Ontario Regional
-    <span className="block text-transparent bg-[#B266C9] bg-clip-text text-2xl sm:text-3xl lg:text-4xl mt-2">
-      Crisis Support Centres
-    </span>
-  </h1>
-</div>
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif !bg-[#89009B] bg-clip-text text-transparent px-4">
+            Ontario Regional
+            <span className="block text-transparent bg-[#B266C9] bg-clip-text text-2xl sm:text-3xl lg:text-4xl mt-2">
+              Crisis Support Centres
+            </span>
+          </h1>
+        </div>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
@@ -143,6 +143,8 @@ const ONRegionalCrisisCentres: React.FC = () => {
               {/* Image Card - Clickable Link */}
               <Link
                 to={centre.path}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border border-white/50 cursor-pointer"
               >
                 {/* Gradient top bar */}

@@ -12,10 +12,10 @@ const TermsOfService: React.FC = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-1.5 sm:space-x-2">
               <img
-                  src="/src/assets/logo.png"
-                  alt="LifeLine Canada Foundation"
-                  className="w-4 h-4 object-cover rounded-lg"
-                />
+                src="/src/assets/logo.png"
+                alt="LifeLine Canada Foundation"
+                className="w-4 h-4 object-cover rounded-lg"
+              />
               <span className="text-xs sm:text-sm font-medium text-gray-700 truncate max-w-[120px] sm:max-w-none">
                 The LifeLine Canada Foundation
               </span>
@@ -51,8 +51,9 @@ const TermsOfService: React.FC = () => {
               {/* Introduction - More compact on mobile */}
               <div className="bg-[#f5edf7] rounded-lg sm:rounded-xl p-3 sm:p-4">
                 <p className="text-xs sm:text-sm text-gray-700">
-                  Welcome to The LifeLine Canada Foundation. By using our app, you agree to
-                  these simple terms designed with your mental wellness in mind.
+                  Welcome to The LifeLine Canada Foundation. By using our app,
+                  you agree to these simple terms designed with your mental
+                  wellness in mind.
                 </p>
               </div>
 

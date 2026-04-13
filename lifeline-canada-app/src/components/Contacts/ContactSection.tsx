@@ -32,20 +32,20 @@ const ContactSection = () => {
             <div className="space-y-6 text-gray-700">
               <p className="text-lg md:text-xl leading-relaxed">
                 <span className="text-2xl text-[#89009B] mr-1">📬</span>
-                For non-crisis questions and comments or to contact The
-                LifeLine Canada Foundation about collaborating, please use the
-                contact form below.
+                For non-crisis questions and comments or to contact The LifeLine
+                Canada Foundation about collaborating, please use the contact
+                form below.
               </p>
 
               <p className="text-lg md:text-xl leading-relaxed bg-[#f5edf7]/50 p-6 rounded-2xl border border-[#B266C9]/20">
                 <span className="text-2xl text-[#B266C9] mr-1">💬</span>
                 The LifeLine Canada Foundation (TLC) is a registered non-profit
-                committed to the prevention of suicide and positive mental health
-                in Canada and Worldwide. We envision a country where suicide is
-                a rare event, where people are nurtured and supported, where
-                individuals and families are aware of the risk factors for
-                suicide and actively seek help from accessible, effective
-                community resources.
+                committed to the prevention of suicide and positive mental
+                health in Canada and Worldwide. We envision a country where
+                suicide is a rare event, where people are nurtured and
+                supported, where individuals and families are aware of the risk
+                factors for suicide and actively seek help from accessible,
+                effective community resources.
               </p>
 
               <p className="text-lg md:text-xl leading-relaxed">

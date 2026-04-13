@@ -84,9 +84,10 @@ export default function ResourcesDropdownMobile({
           </div>
 
           <div className="text-left">
-            <h3 className="text-xl font-black mb-1 !text-[#89009B] ">{triggerText}</h3>
+            <h3 className="text-xl font-black mb-1 !text-[#89009B] ">
+              {triggerText}
+            </h3>
             <div className="flex items-center gap-3">
-              
               {emergency && (
                 <span
                   className="px-3 py-1 text-xs font-black bg-white/30 
@@ -117,7 +118,9 @@ export default function ResourcesDropdownMobile({
             }`}
           >
             <div className="flex items-center justify-between">
-              <h4 className="font-bold text-lg !text-[#89009B]">{triggerText}</h4>
+              <h4 className="font-bold text-lg !text-[#89009B]">
+                {triggerText}
+              </h4>
               <span className="px-3 py-1.5 bg-white rounded-full font-bold text-sm shadow">
                 {resourceLinks.length}
               </span>
@@ -156,7 +159,6 @@ export default function ResourcesDropdownMobile({
                     <span className="font-bold !text-[#89009B] text-base truncate">
                       {link.name}
                     </span>
-                    
                   </div>
                   {link.category && (
                     <span

@@ -14,11 +14,11 @@ export default function HeaderDesktop() {
   const patternInterruptLinks = getAllPatternInterruptLinks();
 
   return (
-    <nav 
+    <nav
       className="hidden lg:flex items-center w-full relative xl:mr-10"
-      style={{ 
+      style={{
         fontSize: '16px', // Fixed base font size
-       // color:'#89009B important' // Ensure text color is consistent
+        // color:'#89009B important' // Ensure text color is consistent
       }}
     >
       {/* Main nav items on left */}

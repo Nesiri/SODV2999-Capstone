@@ -65,7 +65,6 @@ const CanadaNationwide: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section header with elegant typography */}
         <div className="text-center mb-16">
-          
           <h1 className="!text-3xl sm:!text-5xl font-serif !text-[#89009B]  leading-[1.1] mb-4">
             Canada Nationwide
             <span className="block !text-[#B266C9]">Crisis Centres</span>

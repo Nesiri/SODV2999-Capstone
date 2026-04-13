@@ -10,20 +10,20 @@ const QCCrisisCentres: React.FC = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-12">
           {/* Text Container */}
-<div className="flex-1 text-center sm:text-left space-y-3 sm:space-y-4">
-  <div className="inline-block sm:block mx-auto sm:mx-0">
-    <span className="hidden sm:inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-white/40 backdrop-blur-sm rounded-full text-xs sm:text-sm font-semibold text-[#B266C9] border border-white/60 shadow-sm mb-2 sm:mb-3">
-      🇨🇦 Quebec
-    </span>
-  </div>
+          <div className="flex-1 text-center sm:text-left space-y-3 sm:space-y-4">
+            <div className="inline-block sm:block mx-auto sm:mx-0">
+              <span className="hidden sm:inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-white/40 backdrop-blur-sm rounded-full text-xs sm:text-sm font-semibold text-[#B266C9] border border-white/60 shadow-sm mb-2 sm:mb-3">
+                🇨🇦 Quebec
+              </span>
+            </div>
 
-  <h1 className="text-3xl xs:text-4xl sm:text-5xl font-serif font-medium leading-tight !text-[#89009B]">
-    <span className="block">Quebec</span>
-    <span className="block text-transparent bg-[#B266C9] bg-clip-text text-3xl xs:text-5xl sm:text-5xl mt-1 sm:mt-2">
-      Crisis Centres
-    </span>
-  </h1>
-</div>
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl font-serif font-medium leading-tight !text-[#89009B]">
+              <span className="block">Quebec</span>
+              <span className="block text-transparent bg-[#B266C9] bg-clip-text text-3xl xs:text-5xl sm:text-5xl mt-1 sm:mt-2">
+                Crisis Centres
+              </span>
+            </h1>
+          </div>
 
           {/* Image Container */}
           <div className="flex-1 flex justify-center sm:justify-end mt-4 sm:mt-0">

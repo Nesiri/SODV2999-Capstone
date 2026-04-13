@@ -93,8 +93,6 @@ const ABRegionalCrisisCentres: React.FC = () => {
               Crisis Support Centres
             </span>
           </h1>
-
-    
         </div>
 
         {/* Cards Grid */}
@@ -104,6 +102,8 @@ const ABRegionalCrisisCentres: React.FC = () => {
               {/* Image Card - Clickable Link */}
               <Link
                 to={centre.path}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border border-white/50 cursor-pointer"
               >
                 {/* Gradient top bar */}

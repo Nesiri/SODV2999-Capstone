@@ -46,7 +46,12 @@ export const DropdownView = ({
         {isSingleCategory ? (
           <div className="space-y-3 w-full max-w-md">
             {links.map((link) => (
-              <LinkItem key={link.path} link={link} onClick={onLinkClick} className='!text-[#89009B] '/>
+              <LinkItem
+                key={link.path}
+                link={link}
+                onClick={onLinkClick}
+                className="!text-[#89009B] "
+              />
             ))}
           </div>
         ) : (

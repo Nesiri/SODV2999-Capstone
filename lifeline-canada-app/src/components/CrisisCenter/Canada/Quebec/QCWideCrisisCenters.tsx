@@ -20,15 +20,15 @@ const QCWiderCrisisCentres: React.FC = () => {
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-6xl max-h-96 bg-gradient-to-r from-transparent via-white/10 to-transparent blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-       {/* Header */}
-<div className="text-center mb-12 sm:mb-16 lg:mb-20">
-  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif !bg-[#89009B] bg-clip-text text-transparent px-4">
-    Quebec Provincial
-    <span className="block text-transparent bg-[#B266C9] bg-clip-text text-2xl sm:text-3xl lg:text-4xl mt-2">
-      Wide Crisis Centres
-    </span>
-  </h1>
-</div>
+        {/* Header */}
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif !bg-[#89009B] bg-clip-text text-transparent px-4">
+            Quebec Provincial
+            <span className="block text-transparent bg-[#B266C9] bg-clip-text text-2xl sm:text-3xl lg:text-4xl mt-2">
+              Wide Crisis Centres
+            </span>
+          </h1>
+        </div>
 
         {/* Centered Card */}
         <div className="flex justify-center">
@@ -38,6 +38,8 @@ const QCWiderCrisisCentres: React.FC = () => {
                 {/* Image Link Card */}
                 <Link
                   to={centre.path}
+                    target="_blank"
+                rel="noopener noreferrer"
                   className="group relative bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border border-white/50 cursor-pointer"
                 >
                   {/* Gradient top bar */}

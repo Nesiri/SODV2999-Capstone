@@ -1,9 +1,12 @@
-import React from "react"; 
+import React from 'react';
 
 const coverPhoto = '/assets/AdditionalResourceImages/Workplace-600x400.jpeg';
-const workplaceHealth = '/assets/AdditionalResourceImages/WorkplaceHealth_En.pdf';
-const workplaceMentalHealth = '/assets/AdditionalResourceImages/workplaceMentalHealth.png';
-const guideToWorkplaceBullying = '/assets/AdditionalResourceImages/guideToWorkPlaceBullying.png';
+const workplaceHealth =
+  '/assets/AdditionalResourceImages/WorkplaceHealth_En.pdf';
+const workplaceMentalHealth =
+  '/assets/AdditionalResourceImages/workplaceMentalHealth.png';
+const guideToWorkplaceBullying =
+  '/assets/AdditionalResourceImages/guideToWorkPlaceBullying.png';
 
 const MentalHealthResourcesWorkplace: React.FC = () => {
   return (
@@ -33,11 +36,19 @@ const MentalHealthResourcesWorkplace: React.FC = () => {
             />
             <div className="flex-1">
               <p className="leading-relaxed">
-                There&apos;s a perception that bullying is something that only happens at school, as if you&apos;ll leave education and never meet a bully again. Unfortunately, some people never grow up. Bullying is a problem across ages and environments. It&apos;s by no means restricted to school. In fact, bullying in the workplace is more commonplace than you&apos;d think.
+                There&apos;s a perception that bullying is something that only
+                happens at school, as if you&apos;ll leave education and never
+                meet a bully again. Unfortunately, some people never grow up.
+                Bullying is a problem across ages and environments. It&apos;s by
+                no means restricted to school. In fact, bullying in the
+                workplace is more commonplace than you&apos;d think.
               </p>
 
               <p className="mt-4 leading-relaxed">
-                Whether it&apos;s a critical boss singling out one employee to blame and punish, or a workforce playing repeated pranks on a colleague and choosing to ignore their contributions to a project, workplace bullying is on the rise.
+                Whether it&apos;s a critical boss singling out one employee to
+                blame and punish, or a workforce playing repeated pranks on a
+                colleague and choosing to ignore their contributions to a
+                project, workplace bullying is on the rise.
               </p>
             </div>
           </main>
@@ -59,7 +70,18 @@ const MentalHealthResourcesWorkplace: React.FC = () => {
                     Workplace Mental Health
                   </h3>
                   <p className="mt-3 leading-relaxed">
-                    This handbook offers employers a step-by-step approach to adopting the National Standard for Psychological Health and Safety by the Mental Health Commission of Canada. By summarizing both the Standard and an Action Guide, Mood Disorders Society of Canada has created for employers an accessible resource for making positive changes in their workplaces that will benefit employees and protect their company&apos;s bottom-line. Mental Health in the Workplace will encourage discussion and dialogue in your place of employment. Mental illness affects all Canadians. The overarching message is that recovery from mental illness is possible.
+                    This handbook offers employers a step-by-step approach to
+                    adopting the National Standard for Psychological Health and
+                    Safety by the Mental Health Commission of Canada. By
+                    summarizing both the Standard and an Action Guide, Mood
+                    Disorders Society of Canada has created for employers an
+                    accessible resource for making positive changes in their
+                    workplaces that will benefit employees and protect their
+                    company&apos;s bottom-line. Mental Health in the Workplace
+                    will encourage discussion and dialogue in your place of
+                    employment. Mental illness affects all Canadians. The
+                    overarching message is that recovery from mental illness is
+                    possible.
                   </p>
                   <p className="mt-4 leading-relaxed italic">
                     By Mood Disorders Society of Canada
@@ -90,10 +112,19 @@ const MentalHealthResourcesWorkplace: React.FC = () => {
                     A Guide To Workplace Bullying
                   </a>
                   <p className="mt-3 leading-relaxed">
-                    Bullying is a problem across ages and environments - by no means is it restricted to school. In fact, bullying in the workplace is more commonplace than you&apos;d think. This guide explores what steps both employees and employers can take to overcome and stamp out a bullying culture in the workplace.
+                    Bullying is a problem across ages and environments - by no
+                    means is it restricted to school. In fact, bullying in the
+                    workplace is more commonplace than you&apos;d think. This
+                    guide explores what steps both employees and employers can
+                    take to overcome and stamp out a bullying culture in the
+                    workplace.
                   </p>
                   <p className="mt-4 leading-relaxed">
-                    While not every individual will love their job, everyone deserves to feel comfortable and at ease in the workplace. Your working environment should be a supportive one, where everyone can work towards their goals without undue pressure or attention.
+                    While not every individual will love their job, everyone
+                    deserves to feel comfortable and at ease in the workplace.
+                    Your working environment should be a supportive one, where
+                    everyone can work towards their goals without undue pressure
+                    or attention.
                   </p>
                 </div>
               </div>

@@ -5,19 +5,19 @@ const centres = [
   {
     title: 'Suicide Prevention Centre and Crisis Intervention – Bas-Laurent',
     image: '/assets/CanadaCenter_image/QC/bas_laurent.png',
-    path: '#',
+    path: 'https://www.cpse.ca/',
     lines: ['Rimouski (Quebec)', 'Line of intervention: (418) 724-2463'],
   },
   {
     title: 'Rivière-du-Loup Crisis Line',
     image: '/assets/CanadaCenter_image/QC/du_loup.png',
-    path: '#',
+    path: 'https://cpsdukrtb.org/',
     lines: ['(418) 862-9658', '1-866-CALLS (277-3553)'],
   },
   {
     title: 'Centre de Prévention Suicide Arthabaska-Érable',
     image: '/assets/CanadaCenter_image/QC/erable.png',
-    path: '#',
+    path: 'https://www.cpsae.ca/',
     lines: [
       'MRC d’Arthabaska: (819) 751-2205',
       'MRC de l’Érable: (819) 362-8581',
@@ -32,7 +32,7 @@ const centres = [
   {
     title: 'Saguenay / Lac-Saint-Jean',
     image: '/assets/CanadaCenter_image/QC/lac_saint_jean.png',
-    path: '#',
+    path: 'https://cps02.org/',
     lines: ['Line of intervention: (418) 545-1919'],
   },
   {
@@ -44,97 +44,97 @@ const centres = [
   {
     title: 'Suicide Prevention Centre (Quebec)',
     image: '/assets/CanadaCenter_image/QC/ciel.png',
-    path: '#',
+    path: 'https://larcencielportneuf.org/',
     lines: ['Line of intervention: 1-844-285-3283'],
   },
   {
     title: 'Suicide Prevention Centre of Upper St-Mauricie',
     image: '/assets/CanadaCenter_image/QC/mauricie.png',
-    path: '#',
+    path: 'https://www.suicidedetour.org/#',
     lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'Suicide Prevention Centre of Accalmie',
     image: '/assets/CanadaCenter_image/QC/accalmie.png',
-    path: '#',
+    path: 'https://preventiondusuicide.com/',
     lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'JEVI Suicide Prevention Centre – Estrie',
     image: '/assets/CanadaCenter_image/QC/estrie.png',
-    path: '#',
+    path: 'https://jevi.qc.ca/',
     lines: ['819-564-1354'],
   },
   {
     title: 'Outaouis Help Centre 24/7',
     image: '/assets/CanadaCenter_image/QC/oitaouis.png',
-    path: '#',
+    path: 'https://centredaide247.com/',
     lines: ['Line of intervention: (819) 595-9999'],
   },
   {
     title: 'Amos Suicide Prevention Centre',
     image: '/assets/CanadaCenter_image/QC/amos.png',
-    path: '#',
+    path: 'https://preventionsuicideamos.org/',
     lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'Suicide Prevention in Abitibi-Témiscamingue – Malartic',
     image: '/assets/CanadaCenter_image/QC/abitibi.png',
-    path: '#',
+    path: 'https://cpstemis.org/',
     lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'Chaudiere-Appalaches – Service Urgence-Distress Crisis',
     image: '/assets/CanadaCenter_image/QC/chaudiere.png',
-    path: '#',
+    path: 'https://www.cisssca.com/soins-et-services/prevention-et-conseils-sante/prevenir-le-suicide',
     lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'Suicide Prevention Committee Senneterre',
     image: '/assets/CanadaCenter_image/QC/senneterre.png',
-    path: '#',
+    path: 'https://cps-senneterre.org/',
     lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'Suicide Prevention Centre-de-Golden Valley – Val-d’Or',
     image: '/assets/CanadaCenter_image/QC/de_golden.png',
-    path: '#',
+    path: 'https://www.preventionsuicidecotenord.ca/',
     lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'North Shore Suicide Prevention Centre – Baie-Comeau',
     image: '/assets/CanadaCenter_image/QC/baie_comeau.png',
-    path: '#',
+    path: 'https://www.preventionsuicidecotenord.ca/',
     lines: ['Line of action: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'Listening Centre and Suicide Prevention – Beauce-Etchemin',
     image: '/assets/CanadaCenter_image/QC/beauce-etchemin.png',
-    path: '#',
+    path: 'https://www.cepsbeauceetchemins.com/',
     lines: ['Line of intervention: (418) 228-0001'],
   },
   {
     title: 'Ilot-Laval Crisis Regional Service',
     image: '/assets/CanadaCenter_image/QC/ilot-laval.png',
-    path: '#',
+    path: 'https://lilotcrise.ca/',
     lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'Lanaudière Suicide Prevention Centre',
     image: '/assets/CanadaCenter_image/QC/lanaudiere.png',
-    path: '#',
+    path: 'https://cps-lanaudiere.org/',
     lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
   {
     title: 'Faubourg Suicide Prevention Centre – St-Jérôme',
     image: '/assets/CanadaCenter_image/QC/faubourg.png',
-    path: '#',
+    path: 'https://cps-le-faubourg.org/#',
     lines: ['Line of intervention: (450) 569-0101'],
   },
   {
     title: 'The House Under the Trees',
     image: '/assets/CanadaCenter_image/QC/thehouse_undertree.png',
-    path: '#',
+    path: 'https://www.la-msla.com/fr/services/intervention-crise',
     lines: [
       'Crisis intervention line: (450) 699-5935',
       '1-866-CALLS (277-3553)',
@@ -143,31 +143,31 @@ const centres = [
   {
     title: 'The Access Crisis Intervention Centre in Longueuil',
     image: '/assets/CanadaCenter_image/QC/quebec_nationalcenter.png',
-    path: '#',
+    path: 'https://www.santemonteregie.qc.ca/en/crisis-intervention-and-suicide-prevention-cisss-de-la-monteregie-centre',
     lines: ['Line of intervention: (450) 679-8689', '1-866-CALLS (277-3553)'],
   },
   {
     title: 'Suicide Prevention Centre Pierre-de-Saurel – Sorel-Tracy',
     image: '/assets/CanadaCenter_image/QC/ciel.png',
-    path: '#',
+    path: 'https://cpslatraversee.ca/',
     lines: ['Line of intervention: (450) 746-0303'],
   },
   {
     title: 'Haut-Richelieu Suicide Prevention Centre – St-Jean-Sur-Richelieu',
     image: '/assets/CanadaCenter_image/QC/haut-richelieu.png',
-    path: '#',
+    path: 'https://www.ccpshrr.ca/',
     lines: ['Line of intervention: (450) 348-6300', '1-866-CALLS (277-3553)'],
   },
   {
     title: 'The Turn, Crisis Centre and Suicide Prevention – Suroit Region',
     image: '/assets/CanadaCenter_image/QC/suroit.png',
-    path: '#',
+    path: 'https://letournant.org/en/',
     lines: ['Line of intervention: (450) 371-4090', '1-866-CALLS (277-3553)'],
   },
   {
     title: 'Listening Centre and Preventing Suicide – Drummondville',
     image: '/assets/CanadaCenter_image/QC/drummondville.png',
-    path: '#',
+    path: 'https://cepsd.ca/',
     lines: ['Line of intervention: 1-866-CALLS (277-3553)'],
   },
 ];
@@ -196,15 +196,15 @@ const QCRegionalCrisisCentres: React.FC = () => {
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-6xl max-h-96 bg-gradient-to-r from-transparent via-white/10 to-transparent blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-       {/* Header */}
-<div className="text-center mb-12 sm:mb-16 lg:mb-20">
-  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif !bg-[#89009B] bg-clip-text text-transparent px-4">
-    Quebec Regional
-    <span className="block text-transparent bg-[#B266C9] bg-clip-text text-2xl sm:text-3xl lg:text-4xl mt-2">
-      Crisis Support Centres
-    </span>
-  </h1>
-</div>
+        {/* Header */}
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif !bg-[#89009B] bg-clip-text text-transparent px-4">
+            Quebec Regional
+            <span className="block text-transparent bg-[#B266C9] bg-clip-text text-2xl sm:text-3xl lg:text-4xl mt-2">
+              Crisis Support Centres
+            </span>
+          </h1>
+        </div>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
@@ -213,6 +213,8 @@ const QCRegionalCrisisCentres: React.FC = () => {
               {/* Image Card - Clickable Link */}
               <Link
                 to={centre.path}
+                  target="_blank"
+                rel="noopener noreferrer"
                 className="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border border-white/50 cursor-pointer"
               >
                 {/* Gradient top bar */}

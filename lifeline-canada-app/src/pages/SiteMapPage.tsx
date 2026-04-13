@@ -436,23 +436,24 @@ const SiteMapPage = () => {
         </ul>
 
         {/* Section 6 - Final Items with gradient */}
-      {finalLinks.map((link, idx) => (
-  <h2
-    key={idx}
-    className="font-normal mt-10 md:mt-14 mb-4 md:mb-6 cursor-pointer transition-all duration-300 border-l-4 border-pink-400 pl-4"
-    style={{ fontSize: fontSizes.categoryTitle }}
-  >
-    <Link
-      to={link.path}
-      className={linkClassName}
-      {...(link.name === 'The LifeLine App' || link.name === 'Companion Paws'
-        ? { target: '_blank', rel: 'noopener noreferrer' }
-        : {})}
-    >
-      {link.name}
-    </Link>
-  </h2>
-))}
+        {finalLinks.map((link, idx) => (
+          <h2
+            key={idx}
+            className="font-normal mt-10 md:mt-14 mb-4 md:mb-6 cursor-pointer transition-all duration-300 border-l-4 border-pink-400 pl-4"
+            style={{ fontSize: fontSizes.categoryTitle }}
+          >
+            <Link
+              to={link.path}
+              className={linkClassName}
+              {...(link.name === 'The LifeLine App' ||
+              link.name === 'Companion Paws'
+                ? { target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
+            >
+              {link.name}
+            </Link>
+          </h2>
+        ))}
       </div>
     </div>
   );

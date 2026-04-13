@@ -102,7 +102,9 @@ const Footer: React.FC = () => {
             <Link
               key={index}
               to={link.path}
-              {...(link.path?.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              {...(link.path?.startsWith('http')
+                ? { target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
               className="relative group transition duration-300 !text-[#89009B] hover:text-white"
             >
               <span className="relative z-10">{link.name}</span>

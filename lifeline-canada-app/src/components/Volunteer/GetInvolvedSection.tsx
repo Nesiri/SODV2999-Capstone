@@ -33,10 +33,7 @@ const GetInvolvedSection: React.FC = () => {
                 </span>
               </h1>
               <h2 className="!text-3xl md:!text-4xl font-black text-gray-800">
-                <span className="relative inline-block">
-                  Change a Life.
-                  
-                </span>
+                <span className="relative inline-block">Change a Life.</span>
               </h2>
             </div>
 

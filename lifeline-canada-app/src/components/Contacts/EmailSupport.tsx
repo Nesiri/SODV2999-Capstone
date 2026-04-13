@@ -1,4 +1,3 @@
-
 import EmailImage from '../../assets/Email.jpg';
 import { Link } from 'react-router-dom';
 import AboutUsBackground from '../Background/AboutUsBackground';
@@ -38,11 +37,11 @@ const EmailSupport = () => {
                 </span>{' '}
                 is a registered non-profit committed to the prevention of
                 suicide and positive mental health in Canada and Worldwide and
-                has made work in this area a top priority. We envision a
-                country where suicide is a rare event, where people are
-                nurtured and supported, where individuals and families are
-                aware of the risk factors for suicide and actively seek help
-                from accessible, effective community resources.
+                has made work in this area a top priority. We envision a country
+                where suicide is a rare event, where people are nurtured and
+                supported, where individuals and families are aware of the risk
+                factors for suicide and actively seek help from accessible,
+                effective community resources.
               </p>
 
               <p className="text-lg md:text-xl leading-relaxed bg-[#f5edf7]/50 p-6 rounded-2xl border border-[#B266C9]/20">

@@ -6,7 +6,7 @@ interface LinkItemProps {
   link: any;
   onClick: () => void;
   showIcon?: boolean;
- 
+
   className?: string;
   animationDelay?: number;
 }
@@ -44,7 +44,6 @@ export const LinkItem = ({
           <span className="font-semibold !text-[#89009B]  group-hover:text-gray-900 truncate transition-colors">
             {link.name}
           </span>
-         
         </div>
       </div>
       <ArrowRight className="w-4 h-4 text-gray-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-500" />

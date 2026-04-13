@@ -28,7 +28,8 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
     peaceful: {
       gradient: 'from-[#89009B] via-[#9B4DAB] to-[#B266C9]',
       light: 'from-[#f5edf7] via-[#f9f2fb] to-[#e8dceb]',
-      button: 'bg-gradient-to-r from-[#89009B] to-[#B266C9] hover:from-[#7a0088] hover:to-[#a355b8]',
+      button:
+        'bg-gradient-to-r from-[#89009B] to-[#B266C9] hover:from-[#7a0088] hover:to-[#a355b8]',
       accent: 'border-[#B266C9]/30',
       shadow: 'shadow-[#B266C9]/20',
       icon: (
@@ -42,7 +43,8 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
     hopeful: {
       gradient: 'from-[#89009B] via-[#B266C9] to-[#C77DDF]',
       light: 'from-[#f5edf7] via-[#f0e6f2] to-[#e8dceb]',
-      button: 'bg-gradient-to-r from-[#89009B] to-[#B266C9] hover:from-[#7a0088] hover:to-[#a355b8]',
+      button:
+        'bg-gradient-to-r from-[#89009B] to-[#B266C9] hover:from-[#7a0088] hover:to-[#a355b8]',
       accent: 'border-[#B266C9]/30',
       shadow: 'shadow-[#B266C9]/20',
       icon: (
@@ -56,7 +58,8 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
     energetic: {
       gradient: 'from-[#7B2D8F] via-[#89009B] to-[#B266C9]',
       light: 'from-[#f0e6f2] via-[#f5edf7] to-[#e8dceb]',
-      button: 'bg-gradient-to-r from-[#7B2D8F] to-[#89009B] hover:from-[#6a1d7e] hover:to-[#7a0088]',
+      button:
+        'bg-gradient-to-r from-[#7B2D8F] to-[#89009B] hover:from-[#6a1d7e] hover:to-[#7a0088]',
       accent: 'border-[#89009B]/30',
       shadow: 'shadow-[#89009B]/20',
       icon: (
@@ -70,7 +73,8 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
     calm: {
       gradient: 'from-[#B266C9] via-[#C77DDF] to-[#D494E5]',
       light: 'from-[#f9f2fb] via-[#fdf5ff] to-[#f0e6f2]',
-      button: 'bg-gradient-to-r from-[#B266C9] to-[#C77DDF] hover:from-[#a355b8] hover:to-[#b56ccd]',
+      button:
+        'bg-gradient-to-r from-[#B266C9] to-[#C77DDF] hover:from-[#a355b8] hover:to-[#b56ccd]',
       accent: 'border-[#C77DDF]/30',
       shadow: 'shadow-[#C77DDF]/20',
       icon: (
@@ -199,8 +203,6 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
                 />
               </div>
             </div>
-
-          
           </div>
 
           {/* Content Section - adjusted for full width */}

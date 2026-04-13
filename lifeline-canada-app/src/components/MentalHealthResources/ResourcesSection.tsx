@@ -1,13 +1,6 @@
 // components/ResourcesSection.tsx
 import { useEffect, useRef } from 'react';
-import {
-  Phone,
-  Heart,
-  Shield,
-
-  AlertCircle,
-  ExternalLink,
-} from 'lucide-react';
+import { Phone, Heart, Shield, AlertCircle, ExternalLink } from 'lucide-react';
 import resourceImg from '../../assets/Signposts-800x604.jpg';
 import { Link } from 'react-router-dom';
 
@@ -104,7 +97,6 @@ const ResourcesSection = () => {
                       className="inline-flex items-center gap-1 sm:gap-2 mt-2 sm:mt-3 md:mt-4 text-sm sm:text-base !text-[#89009B] font-medium group-hover:gap-2 sm:group-hover:gap-3 transition-all"
                     >
                       Find local crisis support
-                     
                     </Link>
                   </div>
                 </div>

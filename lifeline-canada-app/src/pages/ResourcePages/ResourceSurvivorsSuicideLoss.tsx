@@ -1,13 +1,13 @@
-import MentalHealthSurvivorsSuicideLoss from "../../components/MentalHealthResources/Resources/MentalHealthSurvivorsSuicideLoss";
+import MentalHealthSurvivorsSuicideLoss from '../../components/MentalHealthResources/Resources/MentalHealthSurvivorsSuicideLoss';
 
 const ResourceSurvivorsSuicideLoss = () => {
-    return (
+  return (
     <div className="relative top-20 sm:top-0 min-h-screen bg-gray-50 resources-page-theme">
-            <div className="w-full px-4 sm:px-6 lg:px-8 py-12">
-                <MentalHealthSurvivorsSuicideLoss />
-            </div>
-        </div>
-    );
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-12">
+        <MentalHealthSurvivorsSuicideLoss />
+      </div>
+    </div>
+  );
 };
 
 export default ResourceSurvivorsSuicideLoss;

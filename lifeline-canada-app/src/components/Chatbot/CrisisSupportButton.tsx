@@ -121,19 +121,19 @@ const CrisisSupportButton: React.FC = () => {
                   </div>
                 </button>
 
-               {/* Emergency 911 */}
-<button
-  onClick={() => handleCall('911')}
-  className="w-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white rounded-xl py-3 px-4 flex items-center gap-3 transition shadow-sm"
->
-  <div className="w-5 h-5 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold">
-    !
-  </div>
-  <div className="text-left">
-    <div className="font-medium text-sm">Emergency 911</div>
-    <div className="text-xs opacity-90">Immediate Danger</div>
-  </div>
-</button>
+                {/* Emergency 911 */}
+                <button
+                  onClick={() => handleCall('911')}
+                  className="w-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white rounded-xl py-3 px-4 flex items-center gap-3 transition shadow-sm"
+                >
+                  <div className="w-5 h-5 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold">
+                    !
+                  </div>
+                  <div className="text-left">
+                    <div className="font-medium text-sm">Emergency 911</div>
+                    <div className="text-xs opacity-90">Immediate Danger</div>
+                  </div>
+                </button>
               </div>
 
               <div className="px-4 pb-4 text-center">

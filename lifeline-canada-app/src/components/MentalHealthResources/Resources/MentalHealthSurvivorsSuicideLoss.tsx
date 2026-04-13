@@ -1,38 +1,47 @@
-import React from "react";
+import React from 'react';
 
-const HopeAndHealing = "/pdfs/HopeandHealing.pdf";
-const Klinic = "/pdfs/After-a-Suicide-A-Practical-and-Personal-Guide-for-Survivors.pdf";
-const SPRC = "/pdfs/AfteraSuicideToolkitforSchools-3.pdf";
-const obituary = "/pdfs/Suicide-Obituary-Brochure-8.5-x-14-Dec-7.pdf";
-const FourToEight = "/pdfs/Talking_to_your_4-8_year_old.pdf";
-const NineToThirteen = "/pdfs/Talking_to_your_9-13_year_old.pdf";
-const FourteenToEighteen = "/pdfs/Talking_to_your_14-18_year_old.pdf";
+const HopeAndHealing = '/pdfs/HopeandHealing.pdf';
+const Klinic =
+  '/pdfs/After-a-Suicide-A-Practical-and-Personal-Guide-for-Survivors.pdf';
+const SPRC = '/pdfs/AfteraSuicideToolkitforSchools-3.pdf';
+const obituary = '/pdfs/Suicide-Obituary-Brochure-8.5-x-14-Dec-7.pdf';
+const FourToEight = '/pdfs/Talking_to_your_4-8_year_old.pdf';
+const NineToThirteen = '/pdfs/Talking_to_your_9-13_year_old.pdf';
+const FourteenToEighteen = '/pdfs/Talking_to_your_14-18_year_old.pdf';
 
-const coverPhoto = '/assets/AdditionalResourceImages/survivorsOf_hand-ribbon-600x400.jpg';
+const coverPhoto =
+  '/assets/AdditionalResourceImages/survivorsOf_hand-ribbon-600x400.jpg';
 const hopeAndHealing = '/assets/AdditionalResourceImages/HopeAndHealing.png';
-const practicalAndPersonalGuide = '/assets/AdditionalResourceImages/klinic-200x50.jpg';
+const practicalAndPersonalGuide =
+  '/assets/AdditionalResourceImages/klinic-200x50.jpg';
 const toolkitForSchools = '/assets/AdditionalResourceImages/SPRC.png';
 const writeAnObituary = '/assets/AdditionalResourceImages/WRSPC.png';
-const talkToYourChild = '/assets/AdditionalResourceImages/USDepartmentofVeteransAffairs.png';
-const mentalHealthCommission = '/assets/AdditionalResourceImages/MentalHealthComission.png';
+const talkToYourChild =
+  '/assets/AdditionalResourceImages/USDepartmentofVeteransAffairs.png';
+const mentalHealthCommission =
+  '/assets/AdditionalResourceImages/MentalHealthComission.png';
 const actionAlliance = '/assets/AdditionalResourceImages/ActionAlliance.png';
-const CanadianMentalHealthAssociation = '/assets/AdditionalResourceImages/CanadianMentalHealthAssociation.png';
+const CanadianMentalHealthAssociation =
+  '/assets/AdditionalResourceImages/CanadianMentalHealthAssociation.png';
 const BillRights = '/assets/AdditionalResourceImages/BillRights.png';
-const understandingSuicide = '/assets/AdditionalResourceImages/DougyCenterBookstore.png';
+const understandingSuicide =
+  '/assets/AdditionalResourceImages/DougyCenterBookstore.png';
 const SeasonsCentre = '/assets/AdditionalResourceImages/SeasonsCentre.png';
 const BereavedSupport = '/assets/AdditionalResourceImages/BereavedSupport.jpg';
-const afterASuicideLoss = '/assets/AdditionalResourceImages/afterSuicide-200x160.jpg';
-const resourceOrganizations = '/assets/AdditionalResourceImages/organizations-200x113.jpg';
+const afterASuicideLoss =
+  '/assets/AdditionalResourceImages/afterSuicide-200x160.jpg';
+const resourceOrganizations =
+  '/assets/AdditionalResourceImages/organizations-200x113.jpg';
 
 type ProvinceSupportGroup = {
-    title: string;
-    content: string;
+  title: string;
+  content: string;
 };
 
 const provinceSupportGroups: ProvinceSupportGroup[] = [
-    {
-        title: "Alberta",
-        content: `Catholic Family Services – Men’s Support Group
+  {
+    title: 'Alberta',
+    content: `Catholic Family Services – Men’s Support Group
 (for men experiencing any type of loss)
 9902-101 Street (lower level)
 Grande Prairie, AB T8V 2P5
@@ -54,10 +63,10 @@ Where: Queen Street Medical Centre
 FCSS Office 105 – 505 Queen Street, Spruce Grove, Alberta
 Contact: Meryl Murray R.S.W.
 Work phone—780-342-1340`,
-    },
-    {
-        title: "British Columbia",
-        content: `Suicide Bereavement Support Group
+  },
+  {
+    title: 'British Columbia',
+    content: `Suicide Bereavement Support Group
 16 – 1708 Bowen Road
 Nanaimo, BC
 Contact: Lyndsay Wells
@@ -115,10 +124,10 @@ Victoria, BC
 Contact: Melanie Winter
 Phone: (250) 386-6328
 email: admin@need2.ca`,
-    },
-    {
-        title: "Manitoba",
-        content: `Healing From Suicide’s Grief
+  },
+  {
+    title: 'Manitoba',
+    content: `Healing From Suicide’s Grief
 St. John’s United Church
 52 Cariboo Road
 Thompson, MB R8N 0L1
@@ -140,10 +149,10 @@ Klinic Community Health Centre (Survivors of Suicide Self Help Group)
 Winnipeg, MB R3G 0Z3
 Phone: (204) 784-4064
 email: speak@klinic.mb.ca`,
-    },
-    {
-        title: "New Brunswick",
-        content: `Capital Region Mental Health and Addictions Association
+  },
+  {
+    title: 'New Brunswick',
+    content: `Capital Region Mental Health and Addictions Association
 292-65 Brunswick Street
 Fredericton, NB E3B 1G5
 Phone: (506) 458-1803
@@ -161,10 +170,10 @@ Contact: Executive Director
 Phone: (506) 633-1705
 Fax: (506) 633-2892
 email: cmha@nb.aibn.ca`,
-    },
-    {
-        title: "Newfoundland and Labrador",
-        content: `Survivors of Suicide Loss Support Group – St. Johns
+  },
+  {
+    title: 'Newfoundland and Labrador',
+    content: `Survivors of Suicide Loss Support Group – St. Johns
 99 Dorans Lane
 St. Johns, NFLD
 Contact: Tina Davies
@@ -177,10 +186,10 @@ Corner Brook, NL
 Contact: Community Mental Health Initiative
 Phone: (709)634-4322
 Email: cmhi.iac@gmail.com`,
-    },
-    {
-        title: "Nova Scotia",
-        content: `Bereavement Support
+  },
+  {
+    title: 'Nova Scotia',
+    content: `Bereavement Support
 P.O. Box 2391
 Springhill, NS B0M 1X0
 Contact: Earl & Marie Gilbert
@@ -199,10 +208,10 @@ Survivor of Suicide Support Group
 Westville, NS B0K 2A0
 Contact: Lori Miller
 Phone: (902) 396-3000`,
-    },
-    {
-        title: "Northwest Territories",
-        content: `Whitehorse, Yukon
+  },
+  {
+    title: 'Northwest Territories',
+    content: `Whitehorse, Yukon
 CMHA Yukon
 415 Baxter St.
 Whitehorse, Yukon
@@ -212,10 +221,10 @@ Kamatsiaqtut Help Line
 Iqaluit, NU
 Phone: (800) 265-3333
 website: www.nunavuthelpline.ca/index.html`,
-    },
-    {
-        title: "Ontario",
-        content: `Toronto Distress Centre
+  },
+  {
+    title: 'Ontario',
+    content: `Toronto Distress Centre
 Phone: (416) 595-1716
 Website: www.torontodistresscentre.com/survivor-support
 
@@ -263,19 +272,19 @@ Contact: Flavia Ceschin
 Oakville, ON
 Phone: 905.599.HOPE (4673)
 Website: www.Heartache2Hope.com`,
-    },
-    {
-        title: "Prince Edward Island",
-        content: `CMHA: Adult Survivors of Suicide Self-Help Group
+  },
+  {
+    title: 'Prince Edward Island',
+    content: `CMHA: Adult Survivors of Suicide Self-Help Group
 178 Fitzroy St
 Charlottetown, PE C1A 7L9
 Contact: Consumer & Family Support Program
 Phone: (902) 628-1648
 email: selfhelp@cmha.pe.ca`,
-    },
-    {
-        title: "Quebec",
-        content: `Support Group for Children 8 – 12
+  },
+  {
+    title: 'Quebec',
+    content: `Support Group for Children 8 – 12
 Laval, QC
 contact: Danyelle Latreille
 phone: (450) 687-5691
@@ -289,10 +298,10 @@ Teen Survivors of Suicide
 Montreal, QC H3H 1J9
 phone: (514) 937-5351
 email: info@ccs-montreal.org`,
-    },
-    {
-        title: "Saskatchewan",
-        content: `After Suicide Support Saskatoon
+  },
+  {
+    title: 'Saskatchewan',
+    content: `After Suicide Support Saskatoon
 108 – 322 LaRonge Road
 Saskatoon, SK S7K 8B9
 Contact: Cathy Campbell
@@ -321,429 +330,595 @@ Tisdale, Sakstachewan
 Every 2nd Wednesday of the month at 7:00pm
 Anglican Church (1304-98th Street, Tisdale)
 Phone: 306-873-3760`,
-    },
+  },
 ];
 
 const websitePattern = /(https?:\/\/[^\s]+|www\.[^\s]+)/g;
 
 const normalizeWebsiteUrl = (url: string): string => {
-    if (url.startsWith("http://") || url.startsWith("https://")) {
-        return url;
-    }
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    return url;
+  }
 
-    return `https://${url}`;
+  return `https://${url}`;
 };
 
 const renderLineWithWebsiteLinks = (line: string): React.ReactNode[] => {
-    return line.split(websitePattern).map((segment, segmentIndex) => {
-        const isWebsite = /^(https?:\/\/[^\s]+|www\.[^\s]+)$/.test(segment);
+  return line.split(websitePattern).map((segment, segmentIndex) => {
+    const isWebsite = /^(https?:\/\/[^\s]+|www\.[^\s]+)$/.test(segment);
 
-        if (!isWebsite) {
-            return <React.Fragment key={`text-${segmentIndex}`}>{segment}</React.Fragment>;
-        }
+    if (!isWebsite) {
+      return (
+        <React.Fragment key={`text-${segmentIndex}`}>{segment}</React.Fragment>
+      );
+    }
 
-        return (
-            <a
-                key={`link-${segmentIndex}`}
-                href={normalizeWebsiteUrl(segment)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-purple-700 hover:text-purple-800 underline underline-offset-2 break-all"
-            >
-                {segment}
-            </a>
-        );
-    });
+    return (
+      <a
+        key={`link-${segmentIndex}`}
+        href={normalizeWebsiteUrl(segment)}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-purple-700 hover:text-purple-800 underline underline-offset-2 break-all"
+      >
+        {segment}
+      </a>
+    );
+  });
 };
 
 const MentalHealthSurvivorsSuicideLoss: React.FC = () => {
-    const imageRowClassName = 'rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-start';
-    const sideImageClassName = 'w-full h-auto object-cover object-top rounded-lg shadow-md';
-    const coverImageClassName = 'w-full h-full object-cover object-top rounded-lg shadow-md';
-    const tileImageClassName = 'w-full h-40 object-cover object-top rounded-lg shadow-md mb-4';
+  const imageRowClassName =
+    'rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-start';
+  const sideImageClassName =
+    'w-full h-auto object-cover object-top rounded-lg shadow-md';
+  const coverImageClassName =
+    'w-full h-full object-cover object-top rounded-lg shadow-md';
+  const tileImageClassName =
+    'w-full h-40 object-cover object-top rounded-lg shadow-md mb-4';
 
-    return (
-        <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
-            {/* Decorative background orbs */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+  return (
+    <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
+      {/* Decorative background orbs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+      </div>
+      <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="w-full lg:w-4/5 mx-auto">
+          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
+              Survivors of Suicide Loss
+            </span>
+          </h1>
+
+          <div className="flex items-center gap-4 mt-3 mb-1">
+            <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+          </div>
+
+          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
+            <div className="flex-1">
+              <p className="leading-relaxed">
+                Immediately following the tragedy of suicide loss, it is not
+                uncommon to feel only despair. It helps to share the pain with
+                others, whether that be one-on-one or in a group support
+                setting. You are not alone.
+              </p>
+
+              <p className="mt-4 leading-relaxed">
+                The fact that someone died by suicide does not diminish our love
+                for them, their value, the contribution they made to our
+                families and communities and our right and need to celebrate and
+                honor their lives and accomplishments. It is how a person lived,
+                not how they died, that defines someone.
+              </p>
             </div>
-            <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
-                <div className="w-full lg:w-4/5 mx-auto">
+            <div className="sm:w-[30vw] sm:max-w-[18rem] sm:flex-shrink-0 w-full">
+              <img
+                src={coverPhoto}
+                alt="Survivors of Suicide Loss"
+                className={coverImageClassName}
+              />
+            </div>
+          </main>
 
-                <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-                    <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-                        Survivors of Suicide Loss
-                    </span>
-                </h1>
+          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+              Guides &amp; Toolkits for Survivors of Suicide Loss
+            </h2>
 
-                <div className="flex items-center gap-4 mt-3 mb-1">
-                    <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+            <div className="mt-6 space-y-4 sm:space-y-5">
+              <div className={imageRowClassName}>
+                <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
+                  <img
+                    src={hopeAndHealing}
+                    alt="Hope and Healing"
+                    className={sideImageClassName}
+                  />
                 </div>
-
-                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
-                    <div className="flex-1">
-                        <p className="leading-relaxed">
-                            Immediately following the tragedy of suicide loss, it is not uncommon to feel only despair. It
-                            helps to share the pain with others, whether that be one-on-one or in a group support setting.
-                            You are not alone.
-                        </p>
-
-                        <p className="mt-4 leading-relaxed">
-                            The fact that someone died by suicide does not diminish our love for them, their value, the
-                            contribution they made to our families and communities and our right and need to celebrate and
-                            honor their lives and accomplishments. It is how a person lived, not how they died, that defines
-                            someone.
-                        </p>
-                    </div>
-                    <div className="sm:w-[30vw] sm:max-w-[18rem] sm:flex-shrink-0 w-full">
-                        <img
-                            src={coverPhoto}
-                            alt="Survivors of Suicide Loss"
-                            className={coverImageClassName}
-                        />
-                    </div>
-                </main>
-
-                <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-                    <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
-                        Guides &amp; Toolkits for Survivors of Suicide Loss
-                    </h2>
-
-                    <div className="mt-6 space-y-4 sm:space-y-5">
-                        <div className={imageRowClassName}>
-                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={hopeAndHealing} alt="Hope and Healing" className={sideImageClassName} />
-                            </div>
-                            <div className="flex-1">
-                            <a href={HopeAndHealing} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Hope and Healing: A Practical Guide for Survivors of Suicide, Family and Friends
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                This is a practical guide to help you through… the first few moments, then the first few
-                                hours, then the first few days, then the first few years…after the suicide of someone you
-                                love.
-                            </p>
-                            <p className="mt-3 leading-relaxed">
-                                This guide has been written with the help of many suicide survivors and the health
-                                professionals who work with them. We hope it will help you through this difficult time.
-                                Please share it with others who may benefit from the information. The guide focuses on
-                                the practical matters that survivors need to deal with after a suicide.
-                            </p>
-                            <p className="mt-3 leading-relaxed text-sm text-gray-600">
-                                By Suicide Response Initiative of the Calgary Health Region and the BC Ministry of Health
-                            </p>
-                            </div>
-                        </div>
-
-                        <div className={imageRowClassName}>
-                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={practicalAndPersonalGuide} alt="After a Suicide: A Practical and Personal Guide" className={sideImageClassName} />
-                            </div>
-                            <div className="flex-1">
-                            <a href={Klinic} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                After a Suicide: A Practical and Personal Guide for Survivors of Suicide Loss
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                This handbook was written to help you through the death by suicide of your loved one. It
-                                contains both practical and personal information, as well as a list of books, websites and
-                                support groups, that we hope will help you through your grief. Different parts of this
-                                resource may be of help to you at different times.
-                            </p>
-                            <p className="mt-3 leading-relaxed">
-                                Immediately after a death by suicide, there are many practical matters that families will
-                                need to attend to and questions they might have about what to do. This resource starts
-                                with addressing these practical matters. Grief associated with a death by suicide can be
-                                complicated, and also very different to what people experience following death by other
-                                causes. Immediately after a suicide death, people are often in shock and unable to
-                                describe or explain their feelings or make meaning of what has happened. You may need
-                                time before you feel ready to examine what has happened, how it has affected you, what it
-                                all means, and what you need in order to begin healing.
-                            </p>
-                            <p className="mt-3 leading-relaxed text-sm text-gray-600">
-                                By Klinic Community Health Centre
-                            </p>
-                            </div>
-                        </div>
-
-                        <div className={imageRowClassName}>
-                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={toolkitForSchools} alt="After a Suicide: A Toolkit for Schools" className={sideImageClassName} />
-                            </div>
-                            <div className="flex-1">
-                            <a href={SPRC} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                After a Suicide: A Toolkit for Schools
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                After a Suicide: A Toolkit for Schools assists schools in implementing a coordinated
-                                response to the suicide death of a student. Originally developed in 2011, the second
-                                edition includes new information and tools that middle and high schools can use to help
-                                the school community cope and reduce suicide risk. It is designed primarily for
-                                administrators and staff but can also be useful for parents and communities.
-                            </p>
-                            <p className="mt-3 leading-relaxed text-sm text-gray-600">
-                                By the American Foundation for Suicide Prevention, the Suicide Prevention Resource Center
-                                and the Education Development Center
-                            </p>
-                            </div>
-                        </div>
-
-                        <div className={imageRowClassName}>
-                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={writeAnObituary} alt="How Do I Write an Obituary" className={sideImageClassName} />
-                            </div>
-                            <div className="flex-1">
-                            <a href={obituary} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                How Do I Write an Obituary when my Loved One Died by Suicide?
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                After a death by suicide, one of the first decisions you and your family will make is what
-                                to include in an obituary and whether or not to include the word suicide. Historically,
-                                suicide was never mentioned as the cause of death, but, in more recent times, some
-                                families have chosen to disclose the fact that their loved one died by suicide. The
-                                decision whether or not to disclose this information in an obituary is a personal one that
-                                only you and your family can make.
-                            </p>
-                            <p className="mt-3 leading-relaxed text-sm text-gray-600">
-                                By Ontario Funeral Services Association &amp; Waterloo Region Suicide Prevention Council
-                            </p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div className="mt-5 rounded-xl border border-gray-300 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-start">
-                        <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                            <img src={talkToYourChild} alt="How to Talk to your Child" className={sideImageClassName} />
-                        </div>
-                        <div className="flex-1">
-                        <span className="text-xl font-semibold text-indigo-500">
-                            How to Talk to your Child about a Suicide Attempt in Your Family
-                        </span>
-                        <p className="mt-3 leading-relaxed">
-                            A guide for adults to use when talking with specific age groups of children about a
-                            suicide attempt in the family. It is not intended to replace the advice of a mental health
-                            professional. In fact, it may be best to use this along with professional support if you
-                            or your child is struggling with how to talk about this difficult topic. It is important
-                            to consider your child’s level of development and ability to understand events when
-                            deciding how to talk with them about this issue.
-                        </p>
-                        <p className="mt-3 leading-relaxed text-sm text-gray-600">
-                            By The US Department of Veterans Affairs
-                        </p>
-
-                        <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
-                            <a
-                                href={FourToEight}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center text-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold !text-white hover:bg-indigo-600 transition-colors"
-                            >
-                                4-8 YEAR OLDS
-                            </a>
-                            <a
-                                href={NineToThirteen}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center text-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold !text-white hover:bg-indigo-600 transition-colors"
-                            >
-                                9-13 YEAR OLDS
-                            </a>
-                            <a
-                                href={FourteenToEighteen}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center text-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold !text-white hover:bg-indigo-600 transition-colors"
-                            >
-                                14-18 YEAR OLDS
-                            </a>
-                        </div>
-                        </div>
-                    </div>
+                <div className="flex-1">
+                  <a
+                    href={HopeAndHealing}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Hope and Healing: A Practical Guide for Survivors of
+                    Suicide, Family and Friends
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    This is a practical guide to help you through… the first few
+                    moments, then the first few hours, then the first few days,
+                    then the first few years…after the suicide of someone you
+                    love.
+                  </p>
+                  <p className="mt-3 leading-relaxed">
+                    This guide has been written with the help of many suicide
+                    survivors and the health professionals who work with them.
+                    We hope it will help you through this difficult time. Please
+                    share it with others who may benefit from the information.
+                    The guide focuses on the practical matters that survivors
+                    need to deal with after a suicide.
+                  </p>
+                  <p className="mt-3 leading-relaxed text-sm text-gray-600">
+                    By Suicide Response Initiative of the Calgary Health Region
+                    and the BC Ministry of Health
+                  </p>
                 </div>
+              </div>
 
-                <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-                    <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
-                        Resources &amp; Links for Survivors of Suicide Loss
-                    </h2>
-
-                    <div className="mt-6 space-y-4 sm:space-y-5">
-                        <div className={imageRowClassName}>
-                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={mentalHealthCommission} alt="The Mental Health Commission of Canada" className={sideImageClassName} />
-                            </div>
-                            <div className="flex-1">
-                            <a href="https://mentalhealthcommission.ca/" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                The Mental Health Commission of Canada
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                The Mental Health Commission of Canada leads the development and dissemination of
-                                innovative programs and tools to support the mental health and wellness of Canadians.
-                                Through its unique mandate from the Government of Canada, the MHCC supports federal,
-                                provincial, and territorial governments as well as organizations in the implementation of
-                                sound public policy.
-                            </p>
-                            </div>
-                        </div>
-
-                        <div className={imageRowClassName}>
-                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={actionAlliance} alt="The Action Alliance" className={sideImageClassName} />
-                            </div>
-                            <div className="flex-1">
-                            <a href="https://theactionalliance.org/" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                The Action Alliance
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                The National Action Alliance for Suicide Prevention works with more than 250 national
-                                partners from the public and private sectors to advance the National Strategy for Suicide
-                                Prevention. The Action Alliance is currently focusing on three priority areas, selected
-                                from the National Strategy, based on their potential to save lives: transforming health
-                                systems, transforming communities, and changing the conversation.
-                            </p>
-                            </div>
-                        </div>
-
-                        <div className={imageRowClassName}>
-                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={CanadianMentalHealthAssociation} alt="Canadian Mental Health Association" className={sideImageClassName} />
-                            </div>
-                            <div className="flex-1">
-                            <a href="https://cmhastarttalking.ca" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Canadian Mental Health Association
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                The Canadian Mental Health Association Simcoe County provides a full care system for those
-                                with addictions and mental health issues. We serve everyone from youth to adults to
-                                seniors. Our programs help individuals and families to lead lives filled with meaning and
-                                promise. We have 250 staff at offices in Barrie, Orillia, Collingwood, Midland, Innisfil
-                                and soon Wasaga Beach.
-                            </p>
-                            </div>
-                        </div>
-
-                        <div className={imageRowClassName}>
-                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={BillRights} alt="Bill of Rights" className={sideImageClassName} />
-                            </div>
-                            <div className="flex-1">
-                            <a href="https://www.dougy.org/resource-articles/the-bill-of-rights" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Bill of Rights
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                Created by teens at Dougy Center for teens who are grieving. Dougy Center provides
-                                support in a safe place where children, teens, young adults, and families who are
-                                grieving can share their experiences before and after a death. They provide support and
-                                training locally, nationally, and internationally to individuals and organizations seeking
-                                to assist children in grief.
-                            </p>
-                            </div>
-                        </div>
-
-                        <div className={imageRowClassName}>
-                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={understandingSuicide} alt="Understanding Suicide, Supporting Children" className={sideImageClassName} />
-                            </div>
-                            <div className="flex-1">
-                            <a href="https://dougybookstore.org/products/understanding-suicide-supporting-children-video-2020" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Understanding Suicide, Supporting Children
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                Video provides insight on the experiences of children and families after a suicide death,
-                                and offers ways to support them. The video and guide are resources for professional
-                                trainings, as well as for general viewing by anyone who wants to better understand how to
-                                help those who are grieving. 26 Minutes, $19.95 download.
-                            </p>
-                            </div>
-                        </div>
-
-                        <div className={imageRowClassName}>
-                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={SeasonsCentre} alt="Seasons Centre for Grieving Children" className={sideImageClassName} />
-                            </div>
-                            <div className="flex-1">
-                            <a href="https://www.grievingchildren.com" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Seasons Centre for Grieving Children
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                Provides peer to peer support for children between the ages of 5 and 24 years who are
-                                grieving the death of an immediate family member. The Centre is founded on the belief
-                                that every child deserves the opportunity to grieve in a supportive and understanding
-                                environment.
-                            </p>
-                            </div>
-                        </div>
-                    </div>
+              <div className={imageRowClassName}>
+                <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
+                  <img
+                    src={practicalAndPersonalGuide}
+                    alt="After a Suicide: A Practical and Personal Guide"
+                    className={sideImageClassName}
+                  />
                 </div>
+                <div className="flex-1">
+                  <a
+                    href={Klinic}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    After a Suicide: A Practical and Personal Guide for
+                    Survivors of Suicide Loss
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    This handbook was written to help you through the death by
+                    suicide of your loved one. It contains both practical and
+                    personal information, as well as a list of books, websites
+                    and support groups, that we hope will help you through your
+                    grief. Different parts of this resource may be of help to
+                    you at different times.
+                  </p>
+                  <p className="mt-3 leading-relaxed">
+                    Immediately after a death by suicide, there are many
+                    practical matters that families will need to attend to and
+                    questions they might have about what to do. This resource
+                    starts with addressing these practical matters. Grief
+                    associated with a death by suicide can be complicated, and
+                    also very different to what people experience following
+                    death by other causes. Immediately after a suicide death,
+                    people are often in shock and unable to describe or explain
+                    their feelings or make meaning of what has happened. You may
+                    need time before you feel ready to examine what has
+                    happened, how it has affected you, what it all means, and
+                    what you need in order to begin healing.
+                  </p>
+                  <p className="mt-3 leading-relaxed text-sm text-gray-600">
+                    By Klinic Community Health Centre
+                  </p>
+                </div>
+              </div>
 
-                <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-                    <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
-                        Survivors of Suicide Loss Support Groups by Province
-                    </h2>
+              <div className={imageRowClassName}>
+                <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
+                  <img
+                    src={toolkitForSchools}
+                    alt="After a Suicide: A Toolkit for Schools"
+                    className={sideImageClassName}
+                  />
+                </div>
+                <div className="flex-1">
+                  <a
+                    href={SPRC}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    After a Suicide: A Toolkit for Schools
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    After a Suicide: A Toolkit for Schools assists schools in
+                    implementing a coordinated response to the suicide death of
+                    a student. Originally developed in 2011, the second edition
+                    includes new information and tools that middle and high
+                    schools can use to help the school community cope and reduce
+                    suicide risk. It is designed primarily for administrators
+                    and staff but can also be useful for parents and
+                    communities.
+                  </p>
+                  <p className="mt-3 leading-relaxed text-sm text-gray-600">
+                    By the American Foundation for Suicide Prevention, the
+                    Suicide Prevention Resource Center and the Education
+                    Development Center
+                  </p>
+                </div>
+              </div>
 
-                    <div className="mt-6 space-y-3 sm:space-y-4">
-                        {provinceSupportGroups.map((group) => (
-                            <details key={group.title} className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                                <summary className="cursor-pointer text-xl font-semibold text-purple-700 hover:text-purple-800">
-                                    {group.title}
-                                </summary>
-                                <div className="mt-3 border-t border-gray-100 pt-3">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
-                                        {group.content
-                                            .split("\n\n")
-                                            .map((paragraph) => paragraph.trim())
-                                            .filter((paragraph) => paragraph.length > 0)
-                                            .map((paragraph, index) => (
-                                                <div key={`${group.title}-${index}`} className="rounded-lg border border-gray-100 bg-slate-50 p-3 sm:p-4">
-                                                    <div className="space-y-1">
-                                                        {paragraph.split("\n").map((line, lineIndex) => (
-                                                            <p key={`${group.title}-${index}-${lineIndex}`} className="leading-relaxed">
-                                                                {renderLineWithWebsiteLinks(line)}
-                                                            </p>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            ))}
-                                    </div>
-                                </div>
-                            </details>
+              <div className={imageRowClassName}>
+                <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
+                  <img
+                    src={writeAnObituary}
+                    alt="How Do I Write an Obituary"
+                    className={sideImageClassName}
+                  />
+                </div>
+                <div className="flex-1">
+                  <a
+                    href={obituary}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    How Do I Write an Obituary when my Loved One Died by
+                    Suicide?
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    After a death by suicide, one of the first decisions you and
+                    your family will make is what to include in an obituary and
+                    whether or not to include the word suicide. Historically,
+                    suicide was never mentioned as the cause of death, but, in
+                    more recent times, some families have chosen to disclose the
+                    fact that their loved one died by suicide. The decision
+                    whether or not to disclose this information in an obituary
+                    is a personal one that only you and your family can make.
+                  </p>
+                  <p className="mt-3 leading-relaxed text-sm text-gray-600">
+                    By Ontario Funeral Services Association &amp; Waterloo
+                    Region Suicide Prevention Council
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-5 rounded-xl border border-gray-300 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-start">
+              <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
+                <img
+                  src={talkToYourChild}
+                  alt="How to Talk to your Child"
+                  className={sideImageClassName}
+                />
+              </div>
+              <div className="flex-1">
+                <span className="text-xl font-semibold text-indigo-500">
+                  How to Talk to your Child about a Suicide Attempt in Your
+                  Family
+                </span>
+                <p className="mt-3 leading-relaxed">
+                  A guide for adults to use when talking with specific age
+                  groups of children about a suicide attempt in the family. It
+                  is not intended to replace the advice of a mental health
+                  professional. In fact, it may be best to use this along with
+                  professional support if you or your child is struggling with
+                  how to talk about this difficult topic. It is important to
+                  consider your child’s level of development and ability to
+                  understand events when deciding how to talk with them about
+                  this issue.
+                </p>
+                <p className="mt-3 leading-relaxed text-sm text-gray-600">
+                  By The US Department of Veterans Affairs
+                </p>
+
+                <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                  <a
+                    href={FourToEight}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center text-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold !text-white hover:bg-indigo-600 transition-colors"
+                  >
+                    4-8 YEAR OLDS
+                  </a>
+                  <a
+                    href={NineToThirteen}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center text-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold !text-white hover:bg-indigo-600 transition-colors"
+                  >
+                    9-13 YEAR OLDS
+                  </a>
+                  <a
+                    href={FourteenToEighteen}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center text-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold !text-white hover:bg-indigo-600 transition-colors"
+                  >
+                    14-18 YEAR OLDS
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+              Resources &amp; Links for Survivors of Suicide Loss
+            </h2>
+
+            <div className="mt-6 space-y-4 sm:space-y-5">
+              <div className={imageRowClassName}>
+                <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
+                  <img
+                    src={mentalHealthCommission}
+                    alt="The Mental Health Commission of Canada"
+                    className={sideImageClassName}
+                  />
+                </div>
+                <div className="flex-1">
+                  <a
+                    href="https://mentalhealthcommission.ca/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    The Mental Health Commission of Canada
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    The Mental Health Commission of Canada leads the development
+                    and dissemination of innovative programs and tools to
+                    support the mental health and wellness of Canadians. Through
+                    its unique mandate from the Government of Canada, the MHCC
+                    supports federal, provincial, and territorial governments as
+                    well as organizations in the implementation of sound public
+                    policy.
+                  </p>
+                </div>
+              </div>
+
+              <div className={imageRowClassName}>
+                <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
+                  <img
+                    src={actionAlliance}
+                    alt="The Action Alliance"
+                    className={sideImageClassName}
+                  />
+                </div>
+                <div className="flex-1">
+                  <a
+                    href="https://theactionalliance.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    The Action Alliance
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    The National Action Alliance for Suicide Prevention works
+                    with more than 250 national partners from the public and
+                    private sectors to advance the National Strategy for Suicide
+                    Prevention. The Action Alliance is currently focusing on
+                    three priority areas, selected from the National Strategy,
+                    based on their potential to save lives: transforming health
+                    systems, transforming communities, and changing the
+                    conversation.
+                  </p>
+                </div>
+              </div>
+
+              <div className={imageRowClassName}>
+                <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
+                  <img
+                    src={CanadianMentalHealthAssociation}
+                    alt="Canadian Mental Health Association"
+                    className={sideImageClassName}
+                  />
+                </div>
+                <div className="flex-1">
+                  <a
+                    href="https://cmhastarttalking.ca"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Canadian Mental Health Association
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    The Canadian Mental Health Association Simcoe County
+                    provides a full care system for those with addictions and
+                    mental health issues. We serve everyone from youth to adults
+                    to seniors. Our programs help individuals and families to
+                    lead lives filled with meaning and promise. We have 250
+                    staff at offices in Barrie, Orillia, Collingwood, Midland,
+                    Innisfil and soon Wasaga Beach.
+                  </p>
+                </div>
+              </div>
+
+              <div className={imageRowClassName}>
+                <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
+                  <img
+                    src={BillRights}
+                    alt="Bill of Rights"
+                    className={sideImageClassName}
+                  />
+                </div>
+                <div className="flex-1">
+                  <a
+                    href="https://www.dougy.org/resource-articles/the-bill-of-rights"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Bill of Rights
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    Created by teens at Dougy Center for teens who are grieving.
+                    Dougy Center provides support in a safe place where
+                    children, teens, young adults, and families who are grieving
+                    can share their experiences before and after a death. They
+                    provide support and training locally, nationally, and
+                    internationally to individuals and organizations seeking to
+                    assist children in grief.
+                  </p>
+                </div>
+              </div>
+
+              <div className={imageRowClassName}>
+                <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
+                  <img
+                    src={understandingSuicide}
+                    alt="Understanding Suicide, Supporting Children"
+                    className={sideImageClassName}
+                  />
+                </div>
+                <div className="flex-1">
+                  <a
+                    href="https://dougybookstore.org/products/understanding-suicide-supporting-children-video-2020"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Understanding Suicide, Supporting Children
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    Video provides insight on the experiences of children and
+                    families after a suicide death, and offers ways to support
+                    them. The video and guide are resources for professional
+                    trainings, as well as for general viewing by anyone who
+                    wants to better understand how to help those who are
+                    grieving. 26 Minutes, $19.95 download.
+                  </p>
+                </div>
+              </div>
+
+              <div className={imageRowClassName}>
+                <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
+                  <img
+                    src={SeasonsCentre}
+                    alt="Seasons Centre for Grieving Children"
+                    className={sideImageClassName}
+                  />
+                </div>
+                <div className="flex-1">
+                  <a
+                    href="https://www.grievingchildren.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Seasons Centre for Grieving Children
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    Provides peer to peer support for children between the ages
+                    of 5 and 24 years who are grieving the death of an immediate
+                    family member. The Centre is founded on the belief that
+                    every child deserves the opportunity to grieve in a
+                    supportive and understanding environment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+              Survivors of Suicide Loss Support Groups by Province
+            </h2>
+
+            <div className="mt-6 space-y-3 sm:space-y-4">
+              {provinceSupportGroups.map((group) => (
+                <details
+                  key={group.title}
+                  className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm"
+                >
+                  <summary className="cursor-pointer text-xl font-semibold text-purple-700 hover:text-purple-800">
+                    {group.title}
+                  </summary>
+                  <div className="mt-3 border-t border-gray-100 pt-3">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+                      {group.content
+                        .split('\n\n')
+                        .map((paragraph) => paragraph.trim())
+                        .filter((paragraph) => paragraph.length > 0)
+                        .map((paragraph, index) => (
+                          <div
+                            key={`${group.title}-${index}`}
+                            className="rounded-lg border border-gray-100 bg-slate-50 p-3 sm:p-4"
+                          >
+                            <div className="space-y-1">
+                              {paragraph.split('\n').map((line, lineIndex) => (
+                                <p
+                                  key={`${group.title}-${index}-${lineIndex}`}
+                                  className="leading-relaxed"
+                                >
+                                  {renderLineWithWebsiteLinks(line)}
+                                </p>
+                              ))}
+                            </div>
+                          </div>
                         ))}
                     </div>
-                </div>
-
-                <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-                    <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-6 text-center">
-                        Additional Links of Interest on this Site
-                    </h2>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={BereavedSupport} alt="Bereaved Support" className={tileImageClassName} />
-                            <a href="/resources/bereaved-support" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Bereaved Support
-                            </a>
-                        </div>
-
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={afterASuicideLoss} alt="After A Suicide Loss" className={tileImageClassName} />
-                            <a href="/resources/after-suicide-loss" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                After A Suicide Loss
-                            </a>
-                        </div>
-
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={resourceOrganizations} alt="Resource Organizations" className={tileImageClassName} />
-                            <a href="/resources/organizations" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Resource Organizations
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                </div>
+                  </div>
+                </details>
+              ))}
             </div>
-        </section>
-    );
+          </div>
+
+          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-6 text-center">
+              Additional Links of Interest on this Site
+            </h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
+              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                <img
+                  src={BereavedSupport}
+                  alt="Bereaved Support"
+                  className={tileImageClassName}
+                />
+                <a
+                  href="/resources/bereaved-support"
+                  className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                >
+                  Bereaved Support
+                </a>
+              </div>
+
+              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                <img
+                  src={afterASuicideLoss}
+                  alt="After A Suicide Loss"
+                  className={tileImageClassName}
+                />
+                <a
+                  href="/resources/after-suicide-loss"
+                  className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                >
+                  After A Suicide Loss
+                </a>
+              </div>
+
+              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                <img
+                  src={resourceOrganizations}
+                  alt="Resource Organizations"
+                  className={tileImageClassName}
+                />
+                <a
+                  href="/resources/organizations"
+                  className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                >
+                  Resource Organizations
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default MentalHealthSurvivorsSuicideLoss;

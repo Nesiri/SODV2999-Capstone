@@ -1,13 +1,13 @@
-import MentalHealthResourcesGrief from "../../components/MentalHealthResources/Resources/MentalHealthResourcesGrief";
+import MentalHealthResourcesGrief from '../../components/MentalHealthResources/Resources/MentalHealthResourcesGrief';
 
 const ResourceGrief = () => {
-    return (
-        <div className="relative top-20 sm:top-0 min-h-screen bg-gray-50 resources-page-theme">
-            <div className="w-full px-4 sm:px-6 lg:px-8 py-12">
-                <MentalHealthResourcesGrief />
-            </div>
-        </div>
-    );
+  return (
+    <div className="relative top-20 sm:top-0 min-h-screen bg-gray-50 resources-page-theme">
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-12">
+        <MentalHealthResourcesGrief />
+      </div>
+    </div>
+  );
 };
 
 export default ResourceGrief;

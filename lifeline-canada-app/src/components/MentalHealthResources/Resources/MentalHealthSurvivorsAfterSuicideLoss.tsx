@@ -1,280 +1,388 @@
-import React from "react";
+import React from 'react';
 // PDFs (change to const)
-const HopeAndHealing = "/pdfs/HopeandHealing.pdf";
-const Klinic = "/pdfs/After-a-Suicide-A-Practical-and-Personal-Guide-for-Survivors.pdf";
-const SPRC = "/pdfs/AfteraSuicideToolkitforSchools.pdf";
-const Winnipeg = "/pdfs/guide-for-early-responders.pdf";
-const CanadianVer = "/pdfs/Canada-Funeral-Directors.pdf";
-const USAVer = "/pdfs/SMA09-4375.pdf";
+const HopeAndHealing = '/pdfs/HopeandHealing.pdf';
+const Klinic =
+  '/pdfs/After-a-Suicide-A-Practical-and-Personal-Guide-for-Survivors.pdf';
+const SPRC = '/pdfs/AfteraSuicideToolkitforSchools.pdf';
+const Winnipeg = '/pdfs/guide-for-early-responders.pdf';
+const CanadianVer = '/pdfs/Canada-Funeral-Directors.pdf';
+const USAVer = '/pdfs/SMA09-4375.pdf';
 
 const coverPhoto = '/assets/AdditionalResourceImages/afterSuicide-200x160.jpg';
-const bereavedSupport = '/assets/AdditionalResourceImages/emotionalSupport-600x400.jpg';
-const survivorsOfSuicideLoss = '/assets/AdditionalResourceImages/survivorsOf_hand-ribbon-200x133.jpg';
-const resourceOrganizations = '/assets/AdditionalResourceImages/organizations-200x113.jpg';
-const hopeAndHealing = '/assets/AdditionalResourceImages/SimonFraserUniversity.png';
-const practicalAndPersonalGuide = '/assets/AdditionalResourceImages/klinic-200x50.jpg';
-const toolkitForSchools = '/assets/AdditionalResourceImages/AmericanFoundationForSuicidePrevention.png';
-const earlyResponders = '/assets/AdditionalResourceImages/WinnipegSuicidePreventionNetwork.png';
+const bereavedSupport =
+  '/assets/AdditionalResourceImages/emotionalSupport-600x400.jpg';
+const survivorsOfSuicideLoss =
+  '/assets/AdditionalResourceImages/survivorsOf_hand-ribbon-200x133.jpg';
+const resourceOrganizations =
+  '/assets/AdditionalResourceImages/organizations-200x113.jpg';
+const hopeAndHealing =
+  '/assets/AdditionalResourceImages/SimonFraserUniversity.png';
+const practicalAndPersonalGuide =
+  '/assets/AdditionalResourceImages/klinic-200x50.jpg';
+const toolkitForSchools =
+  '/assets/AdditionalResourceImages/AmericanFoundationForSuicidePrevention.png';
+const earlyResponders =
+  '/assets/AdditionalResourceImages/WinnipegSuicidePreventionNetwork.png';
 const funeralDirectors = '/assets/AdditionalResourceImages/SAMHSA.png';
 
 const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
-    const imageRowClassName = 'rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-start';
-    const sideImageClassName = 'w-full h-auto object-cover object-top rounded-lg shadow-md';
-    const coverImageClassName = 'w-full h-full object-cover object-top rounded-lg shadow-md';
-    const tileImageClassName = 'w-full h-40 object-cover object-top rounded-lg shadow-md mb-4';
+  const imageRowClassName =
+    'rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-start';
+  const sideImageClassName =
+    'w-full h-auto object-cover object-top rounded-lg shadow-md';
+  const coverImageClassName =
+    'w-full h-full object-cover object-top rounded-lg shadow-md';
+  const tileImageClassName =
+    'w-full h-40 object-cover object-top rounded-lg shadow-md mb-4';
 
-    return (
-        <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
-            {/* Decorative background orbs */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+  return (
+    <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
+      {/* Decorative background orbs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+      </div>
+      <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="w-full lg:w-4/5 mx-auto">
+          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
+              After a Suicide Loss
+            </span>
+          </h1>
+
+          <div className="flex items-center gap-4 mt-3 mb-1">
+            <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+          </div>
+
+          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
+            <div className="flex-1">
+              <p className="leading-relaxed">
+                Immediately after a death by suicide, there are many practical
+                matters that families will need to attend to and questions they
+                might have about what to do. Grief associated with a death by
+                suicide can be complicated, and also very different to what
+                people experience following death by other causes.
+              </p>
+
+              <p className="mt-4 leading-relaxed">
+                Immediately after a death by suicide, people are often in shock
+                and unable to describe or explain their feelings or make meaning
+                of what has happened. You may need time before you feel ready to
+                examine what has happened, how it has affected you, what it all
+                means, and what you need in order to begin healing.
+              </p>
             </div>
-            <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
-                <div className="w-full lg:w-4/5 mx-auto">
-
-                <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-                    <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-                        After a Suicide Loss
-                    </span>
-                </h1>
-
-                <div className="flex items-center gap-4 mt-3 mb-1">
-                    <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
-                </div>
-
-                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
-                    <div className="flex-1">
-                        <p className="leading-relaxed">
-                            Immediately after a death by suicide, there are many practical matters that families will need
-                            to attend to and questions they might have about what to do. Grief associated with a death by
-                            suicide can be complicated, and also very different to what people experience following death by
-                            other causes.
-                        </p>
-
-                        <p className="mt-4 leading-relaxed">
-                            Immediately after a death by suicide, people are often in shock and unable to describe or explain
-                            their feelings or make meaning of what has happened. You may need time before you feel ready to
-                            examine what has happened, how it has affected you, what it all means, and what you need in
-                            order to begin healing.
-                        </p>
-                    </div>
-                    <div className="sm:w-[30vw] sm:max-w-[18rem] sm:flex-shrink-0 w-full">
-                        <img
-                            src={coverPhoto}
-                            alt="After a Suicide Loss"
-                            className={coverImageClassName}
-                        />
-                    </div>
-                </main>
-
-                <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-                    <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
-                        Guides &amp; Toolkits for After a Suicide Loss
-                    </h2>
-
-                    <div className="mt-6 space-y-4 sm:space-y-5">
-                        <div className={imageRowClassName}>
-                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={hopeAndHealing} alt="Hope and Healing" className={sideImageClassName} />
-                            </div>
-                            <div className="flex-1">
-                            <a href={HopeAndHealing} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Hope &amp; Healing: A Practical Guide for Survivors of Suicide, Family &amp; Friends
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                This is a practical guide to help you through… the first few moments, then the first few
-                                hours, then the first few days, then the first few years…after the suicide of someone you
-                                love.
-                            </p>
-                            <p className="mt-3 leading-relaxed">
-                                This guide has been written with the help of many suicide survivors and the health
-                                professionals who work with them. We hope it will help you through this difficult time.
-                                Please share it with others who may benefit from the information. The guide focuses on
-                                the practical matters that survivors need to deal with after a suicide.
-                            </p>
-                            <p className="mt-3 leading-relaxed text-sm text-gray-600">
-                                By the Suicide Response Initiative of the Calgary Health Region, with support from the
-                                Alberta Mental Health Board. Adapted by the Centre for Applied Research in Mental Health
-                                and Addiction, Faculty of Health Sciences, Simon Fraser University.
-                            </p>
-                            </div>
-                        </div>
-
-                        <div className={imageRowClassName}>
-                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={practicalAndPersonalGuide} alt="After a Suicide: A Practical and Personal Guide" className={sideImageClassName} />
-                            </div>
-                            <div className="flex-1">
-                            <a href={Klinic} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                After a Suicide: A Practical &amp; Personal Guide for Survivors of Suicide Loss
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                This handbook was written to help you through the death by suicide of your loved one. It
-                                contains both practical and personal information, as well as a list of books, websites
-                                and support groups, that we hope will help you through your grief. Different parts of
-                                this resource may be of help to you at different times.
-                            </p>
-                            <p className="mt-3 leading-relaxed">
-                                Immediately after a death by suicide, there are many practical matters that families will
-                                need to attend to and questions they might have about what to do. This resource starts
-                                with addressing these practical matters. Grief associated with a death by suicide can be
-                                complicated, and also very different to what people experience following death by other
-                                causes. Immediately after a suicide death, people are often in shock and unable to
-                                describe or explain their feelings or make meaning of what has happened. You may need
-                                time before you feel ready to examine what has happened, how it has affected you, what it
-                                all means, and what you need in order to begin healing.
-                            </p>
-                            <p className="mt-3 leading-relaxed text-sm text-gray-600">
-                                Klinic Community Health Centre and the “After a Suicide” Handbook Advisory Committee is
-                                indebted to the Alberta Health Services, Calgary Health Region, for sharing their
-                                resource guide “Survivor of Suicide Handbook”, which helped inform this document.
-                            </p>
-                            </div>
-                        </div>
-
-                        <div className={imageRowClassName}>
-                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={toolkitForSchools} alt="After a Suicide: A Toolkit for Schools" className={sideImageClassName} />
-                            </div>
-                            <div className="flex-1">
-                            <a href={SPRC} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                After a Suicide: A Toolkit for Schools
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                Suicide in a school community is tremendously sad, often unexpected, and can leave a
-                                school with many uncertainties about what to do next. Faced with students struggling to
-                                cope and a community struggling to respond, schools need reliable information, practical
-                                tools, and pragmatic guidance.
-                            </p>
-                            <p className="mt-3 leading-relaxed">
-                                This toolkit was created to help schools determine what to do in the aftermath of a
-                                suicide death, and how and when to do it. It is a highly practical resource for schools
-                                facing real-time crises. While designed specifically to address the aftermath of suicide,
-                                schools will find it useful following other deaths as well.
-                            </p>
-                            <p className="mt-3 leading-relaxed text-sm text-gray-600">
-                                By The American Foundation for Suicide Prevention and the Suicide Prevention Resource
-                                Center
-                            </p>
-                            </div>
-                        </div>
-
-                        <div className={imageRowClassName}>
-                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={earlyResponders} alt="A Guide for Early Responders" className={sideImageClassName} />
-                            </div>
-                            <div className="flex-1">
-                            <a href={Winnipeg} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                A Guide for Early Responders Supporting Survivors Bereaved by Suicide
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                This resource is intended primarily for Early Responders such as: Police, Ambulance,
-                                Fireﬁghters, Emergency Personnel, Health Care Providers, Spiritual Care Providers,
-                                Medical Investigators, and Funeral Directors who all have close and often immediate
-                                contact with survivors bereaved by a suicide loss. However, other service providers may
-                                also ﬁnd this information helpful in the work they do.
-                            </p>
-                            <p className="mt-3 leading-relaxed">
-                                This guide offers information about suicide loss and will likely validate and enhance the
-                                many helpful things early responders already do. The guide may also offer new insights
-                                and guidance on suicide alertness highlighting prevention and intervention resources
-                                available, since we know that survivors may be at greater risk of suicide as well.
-                            </p>
-                            <p className="mt-3 leading-relaxed text-sm text-gray-600">
-                                Developed by the Winnipeg Suicide Prevention Network in partnership with the Canadian
-                                Association for Suicide Prevention. This guide was adapted from “Supporting Survivors of
-                                Suicide Loss, A Guide for Funeral Directors”
-                            </p>
-                            </div>
-                        </div>
-
-                        <div className={imageRowClassName}>
-                            <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                                <img src={funeralDirectors} alt="For Funeral Directors" className={sideImageClassName} />
-                            </div>
-                            <div className="flex-1">
-                            <span className="text-xl font-semibold text-indigo-500">
-                                For Funeral Directors: Supporting Survivors of Suicide Loss
-                            </span>
-                            <p className="mt-3 leading-relaxed">
-                                Funeral directors and the funeral services industry serve as a vital line of first
-                                response to those impacted by the profound and crippling effects of suicide loss. That’s
-                                because suicide claims 80 percent more lives each year in our country than homicide.
-                                These 32,000 self-inflicted deaths leave behind much more. Research shows that those
-                                closest to someone who dies by suicide are themselves vulnerable to self-harm through
-                                substance use disorders and violence that can be self-inflicted—and culminate in suicide.
-                            </p>
-                            <p className="mt-3 leading-relaxed">
-                                Because of its profound impact on our nation and its citizens, suicide has recently been
-                                identified as a major public health threat, much like diabetes or heart disease. In your
-                                close role with survivors of suicide loss in the immediate aftermath, you play a vital
-                                and powerful role. And in partnership with other early responders, including clergy and
-                                law enforcement, you can lessen the leveling blow that families are dealt when they lose
-                                a loved one to suicide. It’s in this role that we applaud you and the vital work that
-                                you do in helping prevent suicide in our country and communities.
-                            </p>
-                            <p className="mt-3 leading-relaxed text-sm text-gray-600">
-                                By Center for Mental Health Services, Substance Abuse and Mental Health Services
-                                Administration. U.S. Department of Health and Human Services, the Suicide Prevention
-                                Resource Center.
-                            </p>
-
-                            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
-                                <a
-                                    href={CanadianVer}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center text-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold !text-white hover:bg-indigo-600 transition-colors"
-                                >
-                                    CANADIAN GUIDE
-                                </a>
-                                <a
-                                    href={USAVer}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center text-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold !text-white hover:bg-indigo-600 transition-colors"
-                                >
-                                    AMERICAN GUIDE
-                                </a>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-                    <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-6 text-center">
-                        Additional Links of Interest on this Site
-                    </h2>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={bereavedSupport} alt="Bereaved Support" className={tileImageClassName} />
-                            <a href="/resources/bereaved-support" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Bereaved Support
-                            </a>
-                        </div>
-
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={survivorsOfSuicideLoss} alt="Survivors of Suicide Loss" className={tileImageClassName} />
-                            <a href="/resources/suicide-loss" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Survivors of Suicide Loss
-                            </a>
-                        </div>
-
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={resourceOrganizations} alt="Resource Organizations" className={tileImageClassName} />
-                            <a href="/resources/organizations" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Resource Organizations
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                </div>
+            <div className="sm:w-[30vw] sm:max-w-[18rem] sm:flex-shrink-0 w-full">
+              <img
+                src={coverPhoto}
+                alt="After a Suicide Loss"
+                className={coverImageClassName}
+              />
             </div>
-        </section>
-    );
+          </main>
+
+          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+              Guides &amp; Toolkits for After a Suicide Loss
+            </h2>
+
+            <div className="mt-6 space-y-4 sm:space-y-5">
+              <div className={imageRowClassName}>
+                <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
+                  <img
+                    src={hopeAndHealing}
+                    alt="Hope and Healing"
+                    className={sideImageClassName}
+                  />
+                </div>
+                <div className="flex-1">
+                  <a
+                    href={HopeAndHealing}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Hope &amp; Healing: A Practical Guide for Survivors of
+                    Suicide, Family &amp; Friends
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    This is a practical guide to help you through… the first few
+                    moments, then the first few hours, then the first few days,
+                    then the first few years…after the suicide of someone you
+                    love.
+                  </p>
+                  <p className="mt-3 leading-relaxed">
+                    This guide has been written with the help of many suicide
+                    survivors and the health professionals who work with them.
+                    We hope it will help you through this difficult time. Please
+                    share it with others who may benefit from the information.
+                    The guide focuses on the practical matters that survivors
+                    need to deal with after a suicide.
+                  </p>
+                  <p className="mt-3 leading-relaxed text-sm text-gray-600">
+                    By the Suicide Response Initiative of the Calgary Health
+                    Region, with support from the Alberta Mental Health Board.
+                    Adapted by the Centre for Applied Research in Mental Health
+                    and Addiction, Faculty of Health Sciences, Simon Fraser
+                    University.
+                  </p>
+                </div>
+              </div>
+
+              <div className={imageRowClassName}>
+                <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
+                  <img
+                    src={practicalAndPersonalGuide}
+                    alt="After a Suicide: A Practical and Personal Guide"
+                    className={sideImageClassName}
+                  />
+                </div>
+                <div className="flex-1">
+                  <a
+                    href={Klinic}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    After a Suicide: A Practical &amp; Personal Guide for
+                    Survivors of Suicide Loss
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    This handbook was written to help you through the death by
+                    suicide of your loved one. It contains both practical and
+                    personal information, as well as a list of books, websites
+                    and support groups, that we hope will help you through your
+                    grief. Different parts of this resource may be of help to
+                    you at different times.
+                  </p>
+                  <p className="mt-3 leading-relaxed">
+                    Immediately after a death by suicide, there are many
+                    practical matters that families will need to attend to and
+                    questions they might have about what to do. This resource
+                    starts with addressing these practical matters. Grief
+                    associated with a death by suicide can be complicated, and
+                    also very different to what people experience following
+                    death by other causes. Immediately after a suicide death,
+                    people are often in shock and unable to describe or explain
+                    their feelings or make meaning of what has happened. You may
+                    need time before you feel ready to examine what has
+                    happened, how it has affected you, what it all means, and
+                    what you need in order to begin healing.
+                  </p>
+                  <p className="mt-3 leading-relaxed text-sm text-gray-600">
+                    Klinic Community Health Centre and the “After a Suicide”
+                    Handbook Advisory Committee is indebted to the Alberta
+                    Health Services, Calgary Health Region, for sharing their
+                    resource guide “Survivor of Suicide Handbook”, which helped
+                    inform this document.
+                  </p>
+                </div>
+              </div>
+
+              <div className={imageRowClassName}>
+                <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
+                  <img
+                    src={toolkitForSchools}
+                    alt="After a Suicide: A Toolkit for Schools"
+                    className={sideImageClassName}
+                  />
+                </div>
+                <div className="flex-1">
+                  <a
+                    href={SPRC}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    After a Suicide: A Toolkit for Schools
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    Suicide in a school community is tremendously sad, often
+                    unexpected, and can leave a school with many uncertainties
+                    about what to do next. Faced with students struggling to
+                    cope and a community struggling to respond, schools need
+                    reliable information, practical tools, and pragmatic
+                    guidance.
+                  </p>
+                  <p className="mt-3 leading-relaxed">
+                    This toolkit was created to help schools determine what to
+                    do in the aftermath of a suicide death, and how and when to
+                    do it. It is a highly practical resource for schools facing
+                    real-time crises. While designed specifically to address the
+                    aftermath of suicide, schools will find it useful following
+                    other deaths as well.
+                  </p>
+                  <p className="mt-3 leading-relaxed text-sm text-gray-600">
+                    By The American Foundation for Suicide Prevention and the
+                    Suicide Prevention Resource Center
+                  </p>
+                </div>
+              </div>
+
+              <div className={imageRowClassName}>
+                <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
+                  <img
+                    src={earlyResponders}
+                    alt="A Guide for Early Responders"
+                    className={sideImageClassName}
+                  />
+                </div>
+                <div className="flex-1">
+                  <a
+                    href={Winnipeg}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    A Guide for Early Responders Supporting Survivors Bereaved
+                    by Suicide
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    This resource is intended primarily for Early Responders
+                    such as: Police, Ambulance, Fireﬁghters, Emergency
+                    Personnel, Health Care Providers, Spiritual Care Providers,
+                    Medical Investigators, and Funeral Directors who all have
+                    close and often immediate contact with survivors bereaved by
+                    a suicide loss. However, other service providers may also
+                    ﬁnd this information helpful in the work they do.
+                  </p>
+                  <p className="mt-3 leading-relaxed">
+                    This guide offers information about suicide loss and will
+                    likely validate and enhance the many helpful things early
+                    responders already do. The guide may also offer new insights
+                    and guidance on suicide alertness highlighting prevention
+                    and intervention resources available, since we know that
+                    survivors may be at greater risk of suicide as well.
+                  </p>
+                  <p className="mt-3 leading-relaxed text-sm text-gray-600">
+                    Developed by the Winnipeg Suicide Prevention Network in
+                    partnership with the Canadian Association for Suicide
+                    Prevention. This guide was adapted from “Supporting
+                    Survivors of Suicide Loss, A Guide for Funeral Directors”
+                  </p>
+                </div>
+              </div>
+
+              <div className={imageRowClassName}>
+                <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
+                  <img
+                    src={funeralDirectors}
+                    alt="For Funeral Directors"
+                    className={sideImageClassName}
+                  />
+                </div>
+                <div className="flex-1">
+                  <span className="text-xl font-semibold text-indigo-500">
+                    For Funeral Directors: Supporting Survivors of Suicide Loss
+                  </span>
+                  <p className="mt-3 leading-relaxed">
+                    Funeral directors and the funeral services industry serve as
+                    a vital line of first response to those impacted by the
+                    profound and crippling effects of suicide loss. That’s
+                    because suicide claims 80 percent more lives each year in
+                    our country than homicide. These 32,000 self-inflicted
+                    deaths leave behind much more. Research shows that those
+                    closest to someone who dies by suicide are themselves
+                    vulnerable to self-harm through substance use disorders and
+                    violence that can be self-inflicted—and culminate in
+                    suicide.
+                  </p>
+                  <p className="mt-3 leading-relaxed">
+                    Because of its profound impact on our nation and its
+                    citizens, suicide has recently been identified as a major
+                    public health threat, much like diabetes or heart disease.
+                    In your close role with survivors of suicide loss in the
+                    immediate aftermath, you play a vital and powerful role. And
+                    in partnership with other early responders, including clergy
+                    and law enforcement, you can lessen the leveling blow that
+                    families are dealt when they lose a loved one to suicide.
+                    It’s in this role that we applaud you and the vital work
+                    that you do in helping prevent suicide in our country and
+                    communities.
+                  </p>
+                  <p className="mt-3 leading-relaxed text-sm text-gray-600">
+                    By Center for Mental Health Services, Substance Abuse and
+                    Mental Health Services Administration. U.S. Department of
+                    Health and Human Services, the Suicide Prevention Resource
+                    Center.
+                  </p>
+
+                  <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <a
+                      href={CanadianVer}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center text-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold !text-white hover:bg-indigo-600 transition-colors"
+                    >
+                      CANADIAN GUIDE
+                    </a>
+                    <a
+                      href={USAVer}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center text-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold !text-white hover:bg-indigo-600 transition-colors"
+                    >
+                      AMERICAN GUIDE
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-6 text-center">
+              Additional Links of Interest on this Site
+            </h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
+              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                <img
+                  src={bereavedSupport}
+                  alt="Bereaved Support"
+                  className={tileImageClassName}
+                />
+                <a
+                  href="/resources/bereaved-support"
+                  className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                >
+                  Bereaved Support
+                </a>
+              </div>
+
+              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                <img
+                  src={survivorsOfSuicideLoss}
+                  alt="Survivors of Suicide Loss"
+                  className={tileImageClassName}
+                />
+                <a
+                  href="/resources/suicide-loss"
+                  className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                >
+                  Survivors of Suicide Loss
+                </a>
+              </div>
+
+              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                <img
+                  src={resourceOrganizations}
+                  alt="Resource Organizations"
+                  className={tileImageClassName}
+                />
+                <a
+                  href="/resources/organizations"
+                  className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                >
+                  Resource Organizations
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default MentalHealthSurvivorsAfterSuicideLoss;

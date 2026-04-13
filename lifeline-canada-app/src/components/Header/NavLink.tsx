@@ -16,10 +16,10 @@ export default function NavLink({ link, onClick }: NavLinkProps) {
   return (
     <Link
       to={link.path}
-      onClick={onClick} 
+      onClick={onClick}
       {...(link.name === 'LifeLine App' || link.name === 'Companion Paws'
-  ? { target: '_blank', rel: 'noopener noreferrer' }
-  : {})}
+        ? { target: '_blank', rel: 'noopener noreferrer' }
+        : {})}
       className={`
         relative flex items-center gap-2
         px-4 py-3 rounded-lg

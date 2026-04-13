@@ -39,7 +39,9 @@ export const CategoryAccordion = ({
                 className="p-2.5 rounded-lg bg-gradient-to-br from-white to-gray-50 
                 group-hover:from-blue-100/30 group-hover:to-indigo-100/30"
               >
-                <span className="text-lg !text-[#89009B] ">{getCategoryIcon(category)}</span>
+                <span className="text-lg !text-[#89009B] ">
+                  {getCategoryIcon(category)}
+                </span>
               </div>
               <div className="text-left">
                 <span className="font-bold !text-[#89009B]  group-hover:text-blue-700">
