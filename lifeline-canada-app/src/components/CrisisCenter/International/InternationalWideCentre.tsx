@@ -171,17 +171,19 @@ const InternationalNationWide: React.FC = () => {
       <div className="absolute bottom-20 -right-20 w-[400px] h-[400px] bg-[#C1B1A1]/20 rounded-full blur-[100px]"></div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Section header with elegant typography */}
-        <div className="text-center mb-16">
-          <span className="text-xs tracking-[0.3em] text-[#B28B8B] uppercase font-light block mb-4">
-            — You Are Not Alone —
-          </span>
-          <h1 className="text-5xl lg:text-6xl font-serif text-[#2A3B3C] leading-[1.1] mb-4">
-            International
-            <span className="block text-[#C89F9F]">Crisis Centres</span>
-          </h1>
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#C89F9F] to-transparent mx-auto"></div>
-        </div>
+       {/* Section header with elegant typography */}
+<div className="text-center mb-16">
+  <span className="text-xs tracking-[0.3em] text-[#B266C9] uppercase font-light block mb-4">
+    — You Are Not Alone —
+  </span>
+  <h1 className="text-3xl xs:text-4xl sm:text-5xl font-serif font-medium leading-tight !text-[#89009B] mb-4">
+    International
+    <span className="block text-transparent bg-[#B266C9] bg-clip-text text-3xl xs:text-5xl sm:text-5xl mt-1 sm:mt-2">
+      Crisis Centres
+    </span>
+  </h1>
+  <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#B266C9] to-transparent mx-auto"></div>
+</div>
 
         {/* Card grid - Using crisisData array */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">

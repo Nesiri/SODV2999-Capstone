@@ -32,6 +32,7 @@ export default {
           '100%': { transform: 'translateX(0)' },
         },
       },
+     
     },
   },
   plugins: [],

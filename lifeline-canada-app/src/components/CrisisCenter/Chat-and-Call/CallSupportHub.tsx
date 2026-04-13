@@ -26,9 +26,9 @@ const groupedCrisisCenters: CrisisGroup[] = [
         country: 'Canada',
         services: [
           {
-    name: '988 Suicide & Crisis Lifeline',
-    phone: '988',
-  },
+            name: '988 Suicide & Crisis Lifeline',
+            phone: '988',
+          },
           {
             name: 'KidsHelpPhone Ages 20 Years and Under in Canada',
             phone: '1-800-668-6868',
@@ -108,8 +108,9 @@ const groupedCrisisCenters: CrisisGroup[] = [
         country: 'United States',
         services: [
           {
-    name: '988 Suicide & Crisis Lifeline',
-    phone: '988'},
+            name: '988 Suicide & Crisis Lifeline',
+            phone: '988',
+          },
           { name: 'Trans LifeLine – U.S.A.', phone: '1-877-565-8860' },
           { name: 'The Trevor Project Lifeline', phone: '866-488-7386' },
           {
@@ -270,21 +271,21 @@ const CrisisCenterDirectory: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-pink-50 p-8">
       {/* Header - Elegant minimal design */}
-<div className="max-w-7xl mx-auto mb-12">
-  <div className="flex items-center justify-center gap-4">
-    <div className="h-px w-12 bg-gradient-to-r from-transparent to-rose-300" />
-    <svg 
-      className="w-10 h-10 text-rose-400" 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="1.5"
-    >
-      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-    </svg>
-    <div className="h-px w-12 bg-gradient-to-l from-transparent to-rose-300" />
-  </div>
-</div>
+      <div className="max-w-7xl mx-auto mb-12">
+        <div className="flex items-center justify-center gap-4">
+          <div className="h-px w-12 bg-gradient-to-r from-transparent to-rose-300" />
+          <svg
+            className="w-10 h-10 text-rose-400"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+          >
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+          </svg>
+          <div className="h-px w-12 bg-gradient-to-l from-transparent to-rose-300" />
+        </div>
+      </div>
 
       {/* Grid Container */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -351,8 +352,8 @@ const CrisisCenterDirectory: React.FC = () => {
                                 {service.name}
                               </h3>
                               <div className="inline-flex items-center space-x-2 text-blue-600">
-                                <Phone className="w-4 h-4" />
-                                <span className="text-sm font-mono bg-blue-50 px-3 py-1 rounded-full">
+                                <Phone className="w-4 h-4 text-purple-600" />
+                                <span className="text-sm text-purple-600 font-mono bg-blue-50 px-3 py-1 rounded-full">
                                   {service.phone}
                                 </span>
                               </div>

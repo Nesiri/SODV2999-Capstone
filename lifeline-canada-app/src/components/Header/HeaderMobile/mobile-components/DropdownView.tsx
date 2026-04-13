@@ -11,7 +11,6 @@ interface DropdownViewProps {
   onLinkClick: () => void;
   activeCategory: string | null;
   onCategoryToggle: (category: string) => void;
-
 }
 
 export const DropdownView = ({
@@ -20,11 +19,11 @@ export const DropdownView = ({
   onLinkClick,
   activeCategory,
   onCategoryToggle,
-
 }: DropdownViewProps) => {
   const groupedLinks = groupLinksByCategory(links);
   const categories = Object.keys(groupedLinks);
-  const isSingleCategory =(categories.length === 1 && categories[0] === 'General');
+  const isSingleCategory =
+    categories.length === 1 && categories[0] === 'General';
 
   return (
     <div
@@ -47,12 +46,7 @@ export const DropdownView = ({
         {isSingleCategory ? (
           <div className="space-y-3 w-full max-w-md">
             {links.map((link) => (
-              <LinkItem
-                key={link.path}
-                link={link}
-                onClick={onLinkClick}
-               
-              />
+              <LinkItem key={link.path} link={link} onClick={onLinkClick} className='!text-[#89009B] '/>
             ))}
           </div>
         ) : (

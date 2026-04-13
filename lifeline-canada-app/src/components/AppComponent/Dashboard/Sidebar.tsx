@@ -6,8 +6,6 @@ import type { SidebarProps } from '../../../types/dashboard.types';
 
 import DashboardLogo from './DashboardLogo';
 
-
-
 const Sidebar: React.FC<SidebarProps> = ({
   isOpen,
   onClose,

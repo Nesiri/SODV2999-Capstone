@@ -1,6 +1,6 @@
-import React from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { patternData } from "./patternData";
+import React from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { patternData } from './patternData';
 
 type Page = {
   title: string;
@@ -10,7 +10,7 @@ type Page = {
   icon?: string;
   color?: string;
   heroImage?: string;
-  resourceLayout?: "grid" | "list";
+  resourceLayout?: 'grid' | 'list';
   resourceColumns?: 2 | 3 | 4;
   sections?: { heading: string; items: string[] }[];
   resources?: {
@@ -25,22 +25,25 @@ type Page = {
       meta?: string;
       image?: string;
       moreText?: string;
-      kind?: "book" | "video" | "link";
+      kind?: 'book' | 'video' | 'link';
     }[];
   };
 };
 
 function splitGradient(grad?: string) {
-  const g = (grad || "from-violet-500 to-fuchsia-500")
-    .replace("bg-gradient-to-r", "")
+  const g = (grad || 'from-violet-500 to-fuchsia-500')
+    .replace('bg-gradient-to-r', '')
     .trim();
-  const from = (g.match(/from-[\w-]+/)?.[0] || "from-violet-500").replace("from-", "");
-  const to = (g.match(/to-[\w-]+/)?.[0] || "to-fuchsia-500").replace("to-", "");
+  const from = (g.match(/from-[\w-]+/)?.[0] || 'from-violet-500').replace(
+    'from-',
+    ''
+  );
+  const to = (g.match(/to-[\w-]+/)?.[0] || 'to-fuchsia-500').replace('to-', '');
   return { from, to };
 }
 
 function cx(...s: Array<string | false | undefined | null>) {
-  return s.filter(Boolean).join(" ");
+  return s.filter(Boolean).join(' ');
 }
 
 function getYouTubeId(url?: string) {
@@ -66,7 +69,7 @@ function Card({
   return (
     <div
       className={cx(
-        "rounded-2xl border border-slate-200/70 bg-white/80 shadow-[0_10px_30px_-15px_rgba(2,6,23,0.25)] backdrop-blur",
+        'rounded-2xl border border-slate-200/70 bg-white/80 shadow-[0_10px_30px_-15px_rgba(2,6,23,0.25)] backdrop-blur',
         className
       )}
     >
@@ -85,7 +88,7 @@ function Pill({
   return (
     <span
       className={cx(
-        "inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/70 px-3 py-1 text-xs font-medium text-slate-700",
+        'inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/70 px-3 py-1 text-xs font-medium text-slate-700',
         className
       )}
     >
@@ -106,8 +109,8 @@ function IconBadge({
   return (
     <div
       className={cx(
-        "grid h-10 w-10 place-items-center rounded-2xl text-white shadow-sm",
-        "bg-gradient-to-br",
+        'grid h-10 w-10 place-items-center rounded-2xl text-white shadow-sm',
+        'bg-gradient-to-br',
         `from-${from}`,
         `to-${to}`
       )}
@@ -135,8 +138,8 @@ function Hero({
       <div className="absolute inset-0">
         <div
           className={cx(
-            "absolute -top-32 -left-32 h-72 w-72 rounded-full blur-3xl opacity-40",
-            "bg-gradient-to-br",
+            'absolute -top-32 -left-32 h-72 w-72 rounded-full blur-3xl opacity-40',
+            'bg-gradient-to-br',
             `from-${from}`,
             `to-${to}`
           )}
@@ -153,7 +156,7 @@ function Hero({
               <span className="opacity-80">{page.category}</span>
             </Pill>
             <Pill className="gap-2">
-              <span className="text-base">{page.icon || "✨"}</span>
+              <span className="text-base">{page.icon || '✨'}</span>
               <span className="opacity-80">Pattern Interrupt</span>
             </Pill>
           </div>
@@ -176,8 +179,8 @@ function Hero({
             <button
               onClick={onBack}
               className={cx(
-                "inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-95",
-                "bg-gradient-to-r",
+                'inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-95',
+                'bg-gradient-to-r',
                 `from-${from}`,
                 `to-${to}`
               )}
@@ -192,7 +195,6 @@ function Hero({
               Start here ↓
             </a>
           </div>
-
         </div>
 
         <div className="md:col-span-5">
@@ -210,19 +212,20 @@ function Hero({
                 <div className="text-center">
                   <div
                     className={cx(
-                      "mx-auto grid h-14 w-14 place-items-center rounded-2xl text-2xl text-white shadow-sm",
-                      "bg-gradient-to-br",
+                      'mx-auto grid h-14 w-14 place-items-center rounded-2xl text-2xl text-white shadow-sm',
+                      'bg-gradient-to-br',
                       `from-${from}`,
                       `to-${to}`
                     )}
                   >
-                    {page.icon || "✨"}
+                    {page.icon || '✨'}
                   </div>
                   <p className="mt-4 text-sm text-slate-600">
                     Add a hero image to make this page feel more alive.
                   </p>
                   <p className="mt-1 text-xs text-slate-500">
-                    Set <code className="rounded bg-white px-1">heroImage</code> in patternData.
+                    Set <code className="rounded bg-white px-1">heroImage</code>{' '}
+                    in patternData.
                   </p>
                 </div>
               </div>
@@ -252,17 +255,19 @@ function Section({
   const isLong = items.length >= 12;
 
   return (
-    <div className="scroll-mt-24" id={index === 0 ? "start" : undefined}>
+    <div className="scroll-mt-24" id={index === 0 ? 'start' : undefined}>
       <div className="flex items-start justify-between gap-4">
         <div className="flex items-center gap-3">
           <IconBadge from={from} to={to}>
             {index + 1}
           </IconBadge>
           <div>
-            <h2 className="text-xl font-semibold text-slate-900 md:text-2xl">{heading}</h2>
+            <h2 className="text-xl font-semibold text-slate-900 md:text-2xl">
+              {heading}
+            </h2>
             <div
               className={cx(
-                "mt-2 h-1 w-28 rounded-full bg-gradient-to-r",
+                'mt-2 h-1 w-28 rounded-full bg-gradient-to-r',
                 `from-${from}`,
                 `to-${to}`
               )}
@@ -276,7 +281,10 @@ function Section({
           <div className="p-6 md:p-7">
             <ol className="list-decimal space-y-3 pl-5 md:columns-2 md:gap-12">
               {items.map((t, i) => (
-                <li key={i} className="break-inside-avoid text-[15px] leading-relaxed text-slate-700">
+                <li
+                  key={i}
+                  className="break-inside-avoid text-[15px] leading-relaxed text-slate-700"
+                >
                   {t}
                 </li>
               ))}
@@ -308,7 +316,7 @@ function BookList({
 }: {
   heading: string;
   subheading?: string;
-  items: NonNullable<Page["resources"]>["items"];
+  items: NonNullable<Page['resources']>['items'];
 }) {
   if (!items.length) return null;
 
@@ -316,8 +324,12 @@ function BookList({
     <div>
       <div className="flex items-end justify-between gap-4">
         <div>
-          <h2 className="text-xl font-semibold text-slate-900 md:text-2xl">{heading}</h2>
-          {subheading ? <p className="mt-2 text-sm text-slate-600">{subheading}</p> : null}
+          <h2 className="text-xl font-semibold text-slate-900 md:text-2xl">
+            {heading}
+          </h2>
+          {subheading ? (
+            <p className="mt-2 text-sm text-slate-600">{subheading}</p>
+          ) : null}
         </div>
       </div>
 
@@ -330,7 +342,9 @@ function BookList({
                   <div className="w-[120px] rounded-xl bg-white shadow-md ring-1 ring-slate-200 md:w-[130px]">
                     <div className="p-2">
                       <img
-                        src={r.image || "/images/resources/book-placeholder.jpg"}
+                        src={
+                          r.image || '/images/resources/book-placeholder.jpg'
+                        }
                         alt={r.title}
                         className="h-[180px] w-full rounded-lg object-cover"
                         loading="lazy"
@@ -356,7 +370,11 @@ function BookList({
 
                 <div className="md:pt-2">
                   <p className="leading-7 text-slate-900/90">{r.description}</p>
-                  {r.moreText ? <p className="mt-4 leading-7 text-slate-900/90">{r.moreText}</p> : null}
+                  {r.moreText ? (
+                    <p className="mt-4 leading-7 text-slate-900/90">
+                      {r.moreText}
+                    </p>
+                  ) : null}
                 </div>
               </div>
 
@@ -383,7 +401,7 @@ function ResourceGrid({
 }: {
   heading: string;
   subheading?: string;
-  items: NonNullable<Page["resources"]>["items"];
+  items: NonNullable<Page['resources']>['items'];
   from: string;
   to: string;
   columns?: 2 | 3 | 4;
@@ -391,35 +409,44 @@ function ResourceGrid({
   if (!items || items.length === 0) return null;
 
   const gridCols =
-    columns === 4 ? "md:grid-cols-4" : columns === 2 ? "md:grid-cols-2" : "md:grid-cols-3";
+    columns === 4
+      ? 'md:grid-cols-4'
+      : columns === 2
+        ? 'md:grid-cols-2'
+        : 'md:grid-cols-3';
 
   return (
     <div>
       <div className="flex items-end justify-between gap-4">
         <div>
-          <h2 className="text-xl font-semibold text-slate-900 md:text-2xl">{heading}</h2>
+          <h2 className="text-xl font-semibold text-slate-900 md:text-2xl">
+            {heading}
+          </h2>
           <p className="mt-2 text-sm text-slate-600">
-            {subheading || "Pick one item. Use it with intention."}
+            {subheading || 'Pick one item. Use it with intention.'}
           </p>
         </div>
 
         <Pill className="hidden md:inline-flex">Professional layout ✨</Pill>
       </div>
 
-      <div className={cx("mt-6 grid gap-6", gridCols)}>
+      <div className={cx('mt-6 grid gap-6', gridCols)}>
         {items.map((r, idx) => {
           const ytId = getYouTubeId(r.href);
           const isYouTube = Boolean(ytId);
           const isLink = Boolean(r.href) && !isYouTube;
-          const Wrapper: any = isLink ? "a" : "div";
+          const Wrapper: any = isLink ? 'a' : 'div';
 
           return (
             <Wrapper
               key={idx}
               href={isLink ? r.href : undefined}
-              target={isLink ? "_blank" : undefined}
-              rel={isLink ? "noreferrer" : undefined}
-              className={cx("group block rounded-3xl transition", isLink && "cursor-pointer")}
+              target={isLink ? '_blank' : undefined}
+              rel={isLink ? 'noreferrer' : undefined}
+              className={cx(
+                'group block rounded-3xl transition',
+                isLink && 'cursor-pointer'
+              )}
             >
               <Card className="overflow-hidden transition group-hover:shadow-[0_25px_60px_-40px_rgba(2,6,23,0.65)]">
                 <div className="relative w-full overflow-hidden bg-slate-100">
@@ -447,13 +474,13 @@ function ResourceGrid({
                     <div className="grid h-36 w-full place-items-center">
                       <div
                         className={cx(
-                          "grid h-12 w-12 place-items-center rounded-2xl text-white shadow-sm",
-                          "bg-gradient-to-br",
+                          'grid h-12 w-12 place-items-center rounded-2xl text-white shadow-sm',
+                          'bg-gradient-to-br',
                           `from-${from}`,
                           `to-${to}`
                         )}
                       >
-                        {r.icon || "✨"}
+                        {r.icon || '✨'}
                       </div>
                     </div>
                   )}
@@ -462,7 +489,7 @@ function ResourceGrid({
                 <div className="p-5">
                   <div className="flex items-start justify-between gap-3">
                     <h3 className="text-base font-semibold text-slate-900">
-                      {r.icon ? `${r.icon} ` : ""}
+                      {r.icon ? `${r.icon} ` : ''}
                       {r.title}
                     </h3>
 
@@ -474,7 +501,9 @@ function ResourceGrid({
                   </div>
 
                   {r.description ? (
-                    <p className="mt-2 text-sm leading-relaxed text-slate-600">{r.description}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                      {r.description}
+                    </p>
                   ) : null}
 
                   {r.tags && r.tags.length > 0 ? (
@@ -492,17 +521,21 @@ function ResourceGrid({
 
                   <div className="mt-4 flex items-center justify-between">
                     <span className="text-sm text-slate-500">
-                      {isYouTube ? "Plays here" : isLink ? "Opens in new tab" : "Tip"}
+                      {isYouTube
+                        ? 'Plays here'
+                        : isLink
+                          ? 'Opens in new tab'
+                          : 'Tip'}
                     </span>
                     <span
                       className={cx(
-                        "bg-clip-text text-sm font-semibold text-transparent",
-                        "bg-gradient-to-r",
+                        'bg-clip-text text-sm font-semibold text-transparent',
+                        'bg-gradient-to-r',
                         `from-${from}`,
                         `to-${to}`
                       )}
                     >
-                      {isYouTube ? "Play →" : isLink ? "Open →" : "Try it →"}
+                      {isYouTube ? 'Play →' : isLink ? 'Open →' : 'Try it →'}
                     </span>
                   </div>
                 </div>
@@ -525,9 +558,11 @@ export default function PatternTemplate() {
     return (
       <div className="mx-auto max-w-5xl px-6 py-20">
         <h1 className="text-3xl font-bold">Not Found</h1>
-        <p className="mt-4 text-slate-600">No content available for this page.</p>
+        <p className="mt-4 text-slate-600">
+          No content available for this page.
+        </p>
         <button
-          onClick={() => navigate("/pattern")}
+          onClick={() => navigate('/pattern')}
           className="mt-6 rounded-lg bg-slate-900 px-4 py-2 text-white"
         >
           Back to Pattern Interrupts
@@ -541,8 +576,8 @@ export default function PatternTemplate() {
     .filter(([key]) => key !== slug)
     .slice(0, 6);
 
-  const isComedy = slug === "comedy";
-  const isBooks = slug === "books";
+  const isComedy = slug === 'comedy';
+  const isBooks = slug === 'books';
   const gridColumns = page.resourceColumns || 3;
 
   return (
@@ -552,8 +587,8 @@ export default function PatternTemplate() {
           <div className="text-sm text-slate-500">
             <Link to="/pattern" className="text-blue-600 hover:underline">
               Pattern Interrupts
-            </Link>{" "}
-            <span className="text-slate-400">/</span>{" "}
+            </Link>{' '}
+            <span className="text-slate-400">/</span>{' '}
             <span className="text-slate-700">{page.title}</span>
           </div>
 
@@ -589,7 +624,7 @@ export default function PatternTemplate() {
 
           {page.resources ? (
             <div id="extras" className="scroll-mt-24">
-              {isBooks || page.resourceLayout === "list" ? (
+              {isBooks || page.resourceLayout === 'list' ? (
                 <BookList
                   heading={page.resources.heading}
                   subheading={page.resources.subheading}
@@ -619,24 +654,26 @@ export default function PatternTemplate() {
                       </h2>
                       <div
                         className={cx(
-                          "mb-6 h-1 w-24 rounded-full bg-gradient-to-r",
+                          'mb-6 h-1 w-24 rounded-full bg-gradient-to-r',
                           `from-${from}`,
                           `to-${to}`
                         )}
                       />
                       <p className="mb-4 text-[15.5px] leading-7 text-slate-700">
-                        Having a good sense of humor can provide both short-term and long-term
-                        benefits for mental health. Laughter triggers the release of endorphins —
-                        natural chemicals in the brain that promote feelings of happiness and
-                        relaxation. These positive responses can help reduce stress, lower tension,
-                        and improve overall mood.
+                        Having a good sense of humor can provide both short-term
+                        and long-term benefits for mental health. Laughter
+                        triggers the release of endorphins — natural chemicals
+                        in the brain that promote feelings of happiness and
+                        relaxation. These positive responses can help reduce
+                        stress, lower tension, and improve overall mood.
                       </p>
                       <p className="text-[15.5px] leading-7 text-slate-700">
-                        Over time, humor can also strengthen social relationships and improve
-                        emotional resilience. Sharing laughter with others builds connection and
-                        creates a sense of belonging. In difficult moments, humor can help people
-                        reframe challenges, making stressful situations feel more manageable and less
-                        overwhelming.
+                        Over time, humor can also strengthen social
+                        relationships and improve emotional resilience. Sharing
+                        laughter with others builds connection and creates a
+                        sense of belonging. In difficult moments, humor can help
+                        people reframe challenges, making stressful situations
+                        feel more manageable and less overwhelming.
                       </p>
                     </div>
 
@@ -655,22 +692,35 @@ export default function PatternTemplate() {
                       </h2>
                       <div
                         className={cx(
-                          "mb-6 h-1 w-24 rounded-full bg-gradient-to-r",
+                          'mb-6 h-1 w-24 rounded-full bg-gradient-to-r',
                           `from-${from}`,
                           `to-${to}`
                         )}
                       />
                       <p className="mb-4 text-[15.5px] leading-7 text-slate-700">
-                        Developing a healthy sense of humor does not mean forcing jokes or constantly
-                        trying to be funny. It often starts with noticing the lighter moments in
-                        everyday life and allowing yourself to enjoy them. Humor can help shift
-                        perspective and make difficult days feel a little easier.
+                        Developing a healthy sense of humor does not mean
+                        forcing jokes or constantly trying to be funny. It often
+                        starts with noticing the lighter moments in everyday
+                        life and allowing yourself to enjoy them. Humor can help
+                        shift perspective and make difficult days feel a little
+                        easier.
                       </p>
                       <ul className="list-disc space-y-2 pl-5 text-[15.5px] leading-7 text-slate-700">
-                        <li>Watch short comedy clips or stand-up shows that make you laugh.</li>
-                        <li>Spend time with people who enjoy humor and positivity.</li>
-                        <li>Take breaks from stress by doing something lighthearted.</li>
-                        <li>Share funny moments or stories with friends and family.</li>
+                        <li>
+                          Watch short comedy clips or stand-up shows that make
+                          you laugh.
+                        </li>
+                        <li>
+                          Spend time with people who enjoy humor and positivity.
+                        </li>
+                        <li>
+                          Take breaks from stress by doing something
+                          lighthearted.
+                        </li>
+                        <li>
+                          Share funny moments or stories with friends and
+                          family.
+                        </li>
                       </ul>
                     </div>
 
@@ -688,8 +738,13 @@ export default function PatternTemplate() {
 
           <div id="more" className="scroll-mt-24">
             <div className="flex items-center justify-between">
-              <h3 className="text-xl font-semibold text-slate-900 md:text-2xl">Explore more</h3>
-              <Link to="/pattern" className="text-sm text-blue-600 hover:underline">
+              <h3 className="text-xl font-semibold text-slate-900 md:text-2xl">
+                Explore more
+              </h3>
+              <Link
+                to="/pattern"
+                className="text-sm text-blue-600 hover:underline"
+              >
                 View all
               </Link>
             </div>
@@ -702,8 +757,8 @@ export default function PatternTemplate() {
                       <div className="text-2xl">{value.icon}</div>
                       <span
                         className={cx(
-                          "rounded-full px-3 py-1 text-xs font-semibold text-white",
-                          "bg-gradient-to-r",
+                          'rounded-full px-3 py-1 text-xs font-semibold text-white',
+                          'bg-gradient-to-r',
                           `from-${from}`,
                           `to-${to}`
                         )}
@@ -711,8 +766,12 @@ export default function PatternTemplate() {
                         Open
                       </span>
                     </div>
-                    <h4 className="mt-4 text-base font-semibold text-slate-900">{value.title}</h4>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-600">{value.description}</p>
+                    <h4 className="mt-4 text-base font-semibold text-slate-900">
+                      {value.title}
+                    </h4>
+                    <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                      {value.description}
+                    </p>
                   </Card>
                 </Link>
               ))}
@@ -723,17 +782,20 @@ export default function PatternTemplate() {
             <Card className="p-6 md:p-7">
               <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
                 <div>
-                  <h4 className="text-base font-semibold text-slate-900">Quick reminder</h4>
+                  <h4 className="text-base font-semibold text-slate-900">
+                    Quick reminder
+                  </h4>
                   <p className="mt-1 text-sm text-slate-600">
-                    Don’t try all of them. Pick 1–2, do them once, and repeat what works.
+                    Don’t try all of them. Pick 1–2, do them once, and repeat
+                    what works.
                   </p>
                 </div>
 
                 <a
                   href="#start"
                   className={cx(
-                    "inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-95",
-                    "bg-gradient-to-r",
+                    'inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-95',
+                    'bg-gradient-to-r',
                     `from-${from}`,
                     `to-${to}`
                   )}

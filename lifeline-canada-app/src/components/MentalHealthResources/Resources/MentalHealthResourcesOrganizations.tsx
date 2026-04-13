@@ -1,329 +1,607 @@
-import React from "react";
+import React from 'react';
 
 const coverPhoto = '/assets/AdditionalResourceImages/organizations-200x113.jpg';
-const afterASuicideLoss = '/assets/AdditionalResourceImages/afterSuicide-200x160.jpg';
-const bereavedSupport = '/assets/AdditionalResourceImages/emotionalSupport-600x400.jpg';
-const survivorsOfSuicideLoss = '/assets/AdditionalResourceImages/survivorsOf_hand-ribbon-200x133.jpg';
+const afterASuicideLoss =
+  '/assets/AdditionalResourceImages/afterSuicide-200x160.jpg';
+const bereavedSupport =
+  '/assets/AdditionalResourceImages/emotionalSupport-600x400.jpg';
+const survivorsOfSuicideLoss =
+  '/assets/AdditionalResourceImages/survivorsOf_hand-ribbon-200x133.jpg';
 
-const kidsHelpPhone = '/assets/AdditionalResourceImages/kidsHelpPhone-1-800x352.jpg';
+const kidsHelpPhone =
+  '/assets/AdditionalResourceImages/kidsHelpPhone-1-800x352.jpg';
 const CMHA = '/assets/AdditionalResourceImages/CMHA.png';
 const CASP = '/assets/AdditionalResourceImages/CASP-200x69.png';
-const centreForSuicidePrevention = '/assets/AdditionalResourceImages/CentreForSuicidePrevention.png';
-const keltyMentalHealth = '/assets/AdditionalResourceImages/KeltyMentalHealth.png';
-const suicidePreventionResourceCentre = '/assets/AdditionalResourceImages/SuicidePreventionResourceCentreCanada.png';
-const klinicCommunityHealth = '/assets/AdditionalResourceImages/klinic-200x50.jpg';
-const mentalHealthCommissionOfCanada = '/assets/AdditionalResourceImages/MentalHealthComission.png';
-const ontarioSuicidePreventionRoundtable = '/assets/AdditionalResourceImages/OntarioSuicidePreventionRoundtable.png';
+const centreForSuicidePrevention =
+  '/assets/AdditionalResourceImages/CentreForSuicidePrevention.png';
+const keltyMentalHealth =
+  '/assets/AdditionalResourceImages/KeltyMentalHealth.png';
+const suicidePreventionResourceCentre =
+  '/assets/AdditionalResourceImages/SuicidePreventionResourceCentreCanada.png';
+const klinicCommunityHealth =
+  '/assets/AdditionalResourceImages/klinic-200x50.jpg';
+const mentalHealthCommissionOfCanada =
+  '/assets/AdditionalResourceImages/MentalHealthComission.png';
+const ontarioSuicidePreventionRoundtable =
+  '/assets/AdditionalResourceImages/OntarioSuicidePreventionRoundtable.png';
 
-const nationSuicidePreventionLifeline = '/assets/AdditionalResourceImages/NationsalSuicidePreventionLifeline.png';
-const americanFoundationForSuicidePrevention = '/assets/AdditionalResourceImages/AmericanFoundationForSuicidePrevention.png';
-const centerForMentalHealthServices = '/assets/AdditionalResourceImages/SAMHSA.png';
+const nationSuicidePreventionLifeline =
+  '/assets/AdditionalResourceImages/NationsalSuicidePreventionLifeline.png';
+const americanFoundationForSuicidePrevention =
+  '/assets/AdditionalResourceImages/AmericanFoundationForSuicidePrevention.png';
+const centerForMentalHealthServices =
+  '/assets/AdditionalResourceImages/SAMHSA.png';
 const helpYourselfHelpOthers = '/assets/AdditionalResourceImages/MindWise.png';
-const depressionAndBipolarSupportAlliance = '/assets/AdditionalResourceImages/DBSA.png';
-const studentMentalHealthResources = '/assets/AdditionalResourceImages/Accredited.png';
-const nationalAllianceForTheMentallyIll = '/assets/AdditionalResourceImages/NAMI.png';
-const suicidePreventionResourceCenter = '/assets/AdditionalResourceImages/SPRC.png';
+const depressionAndBipolarSupportAlliance =
+  '/assets/AdditionalResourceImages/DBSA.png';
+const studentMentalHealthResources =
+  '/assets/AdditionalResourceImages/Accredited.png';
+const nationalAllianceForTheMentallyIll =
+  '/assets/AdditionalResourceImages/NAMI.png';
+const suicidePreventionResourceCenter =
+  '/assets/AdditionalResourceImages/SPRC.png';
 
-const internationalAssociationForSuicidePrevention = '/assets/AdditionalResourceImages/InternationalAssociationForSuicidePrevention.png';
+const internationalAssociationForSuicidePrevention =
+  '/assets/AdditionalResourceImages/InternationalAssociationForSuicidePrevention.png';
 const worldHealthOrganization = '/assets/AdditionalResourceImages/WHO.png';
 
 const MentalHealthResourcesOrganizations: React.FC = () => {
-    return (
-        <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
-            {/* Decorative background orbs */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+  return (
+    <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
+      {/* Decorative background orbs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+      </div>
+      <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="w-full lg:w-4/5 mx-auto">
+          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
+              Resource Organizations
+            </span>
+          </h1>
+
+          <div className="flex items-center gap-4 mt-3 mb-1">
+            <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+          </div>
+
+          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
+            <div className="flex-1">
+              <p className="leading-relaxed">
+                There is plenty of help out there for those looking for Mental
+                Health support. We have scoured the web for some of the top
+                providers of Suicide prevention resources and information. Below
+                are links to their websites and blogs.
+              </p>
+
+              <p className="mt-4 leading-relaxed">
+                The guides, toolkits and resources on this page and throughout
+                this site represent a compilation of suicide prevention
+                resources from various sources across the Globe as noted. When
+                clicking 3rd party links, you will be redirected to websites not
+                affiliated but has our underlying support at The LifeLine Canada
+                Foundation.
+              </p>
             </div>
-            <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
-                <div className="w-full lg:w-4/5 mx-auto">
-
-                <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-                    <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-                        Resource Organizations
-                    </span>
-                </h1>
-
-                <div className="flex items-center gap-4 mt-3 mb-1">
-                    <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
-                </div>
-
-                <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
-                    <div className="flex-1">
-                        <p className="leading-relaxed">
-                            There is plenty of help out there for those looking for Mental Health support. We have scoured the
-                            web for some of the top providers of Suicide prevention resources and information. Below are links
-                            to their websites and blogs.
-                        </p>
-
-                        <p className="mt-4 leading-relaxed">
-                            The guides, toolkits and resources on this page and throughout this site represent a compilation
-                            of suicide prevention resources from various sources across the Globe as noted. When clicking 3rd
-                            party links, you will be redirected to websites not affiliated but has our underlying support at
-                            The LifeLine Canada Foundation.
-                        </p>
-                    </div>
-                    <div className="sm:w-[30vw] sm:max-w-[18rem] sm:flex-shrink-0 w-full">
-                        <img
-                            src={coverPhoto}
-                            alt="Resource Organizations"
-                            className="w-full h-full object-cover rounded-lg shadow-md"
-                        />
-                    </div>
-                </main>
-
-                <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-                    <details>
-                        <summary className="cursor-pointer text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
-                            Canadian Resource Organizations
-                        </summary>
-
-                        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={kidsHelpPhone} alt="Kids Help Phone" className="mx-auto h-16 w-auto object-contain mb-4" />
-                            <a href="https://kidshelpphone.ca" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Kids Help Phone
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                Kids Help Phone offers anonymous, confidential, non judgemental, free 24/7 phone counselling and web counselling for ages 20 and under throughout Canada.
-                            </p>
-                        </div>
-
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={CMHA} alt="CMHA Canadian Mental Health" className="mx-auto h-16 w-auto object-contain mb-4" />
-                            <a href="https://cmha.ca" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                CMHA Canadian Mental Health
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                Canadian Mental Health Association promotes the mental health of all and supports the resilience and recovery of people experiencing mental illness.
-                            </p>
-                        </div>
-
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={CASP} alt="Canadian Association for Suicide Prevention" className="mx-auto h-16 w-auto object-contain mb-4" />
-                            <a href="https://suicideprevention.ca" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Canadian Association for Suicide Prevention
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                CASP is an informational association to reduce the suicide rate in Canada and to minimize the consequences of suicidal behaviour.
-                            </p>
-                        </div>
-
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={centreForSuicidePrevention} alt="Centre For Suicide Prevention Canada" className="mx-auto h-16 w-auto object-contain mb-4" />
-                            <a href="https://www.suicideinfo.ca/resources/" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Centre For Suicide Prevention Canada
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                Offer many different types of resources, from infographics to in-depth editorial articles.
-                            </p>
-                        </div>
-
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={keltyMentalHealth} alt="Kelty Mental Health Resource Centre" className="mx-auto h-16 w-auto object-contain mb-4" />
-                            <a href="https://keltymentalhealth.ca" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Kelty Mental Health Resource Centre
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                BC’s Information Source for Children, Youth &amp; Families
-                            </p>
-                        </div>
-
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={suicidePreventionResourceCentre} alt="Suicide Prevention Resource Centre Canada" className="mx-auto h-16 w-auto object-contain mb-4" />
-                            <a href="https://www.sp-rc.ca" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Suicide Prevention Resource Centre Canada
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                SPRC's goals are to reduce suicide, suicidal behaviour, and their effects, by promoting positive alternatives and healthy coping skills.
-                            </p>
-                        </div>
-
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={klinicCommunityHealth} alt="Klinic Community Health" className="mx-auto h-16 w-auto object-contain mb-4" />
-                            <a href="https://klinic.mb.ca" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Klinic Community Health
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                Klinic is an accredited crisis centre in Manitoba with the American Association of Suicidology and a member of the Canadian Association for Suicide Prevention and the Canadian Distress Line Network.
-                            </p>
-                        </div>
-
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={mentalHealthCommissionOfCanada} alt="Mental Health Commission of Canada" className="mx-auto h-16 w-auto object-contain mb-4" />
-                            <a href="https://mentalhealthcommission.ca" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Mental Health Commission of Canada
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                Mental health problems and illnesses affect more people in Canada than some of the major physical disorders. Together, we accelerate change to transform Canada&apos;s mental health system.
-                            </p>
-                        </div>
-
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={ontarioSuicidePreventionRoundtable} alt="Ontario Suicide Prevention Roundtable" className="mx-auto h-16 w-auto object-contain mb-4" />
-                            <a href="https://wrspc.ca/about-us/ontario-suicide-prevention-roundtable/" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Ontario Suicide Prevention Roundtable
-                            </a>
-                            <p className="mt-3 leading-relaxed">
-                                The Ontario Association for Suicide Prevention has amalgamated with the Waterloo Region Suicide Prevention Council to support a new Ontario Suicide Prevention Roundtable. They will continue to provide a touchstone for individuals, families and communities supporting suicide prevention.
-                            </p>
-                        </div>
-                        </div>
-                    </details>
-                </div>
-
-                <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-                    <details>
-                        <summary className="cursor-pointer text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
-                            Resource Organizations in the USA
-                        </summary>
-
-                        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                                <img src={nationSuicidePreventionLifeline} alt="National Suicide Prevention Lifeline" className="mx-auto h-16 w-auto object-contain mb-4" />
-                                <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                    The National Suicide Prevention Lifeline
-                                </a>
-                                <p className="mt-3 leading-relaxed">
-                                    The National Suicide Prevention Lifeline is a national network of local crisis centers that provides free and confidential emotional support to people in suicidal crisis or emotional distress 24 hours a day, 7 days a week. We&apos;re committed to improving crisis services and advancing suicide prevention by empowering individuals, advancing professional best practices, and building awareness.
-                                </p>
-                            </div>
-
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                                <img src={americanFoundationForSuicidePrevention} alt="American Foundation for Suicide Prevention" className="mx-auto h-16 w-auto object-contain mb-4" />
-                                <a href="https://afsp.org" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                    American Foundation for Suicide Prevention
-                                </a>
-                                <p className="mt-3 leading-relaxed">
-                                    AFSP is the leading national not-for-profit organization exclusively dedicated to understanding and preventing suicide through research, education, and advocacy, and to reaching out to people with mental disorders and those impacted by suicide. www.afsp.org
-                                </p>
-                            </div>
-
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                                <img src={centerForMentalHealthServices} alt="Center for Mental Health Services" className="mx-auto h-16 w-auto object-contain mb-4" />
-                                <a href="https://www.samhsa.gov/about/offices-centers/cmhs" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                    Center for Mental Health Services
-                                </a>
-                                <p className="mt-3 leading-relaxed">
-                                    CMHS, of the Substance Abuse and Mental Health Services Administration maintains a mental health services locator, which you can use to help find services, facilities and resources in your state.
-                                </p>
-                            </div>
-
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                                <img src={helpYourselfHelpOthers} alt="Help Yourself Help Others" className="mx-auto h-16 w-auto object-contain mb-4" />
-                                <a href="https://info.sossignsofsuicide.org/bh-beat" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                    Help Yourself. Help Others
-                                </a>
-                                <p className="mt-3 leading-relaxed">
-                                    Everyone experiences stress, sadness and anxiety from time to time—it&apos;s part of life. But if you are feeling overwhelmed, depressed, or unable to do the things you once enjoyed, it may be time to assess your emotional health. If you are concerned about yourself or someone you love, take a few minutes to complete an anonymous self-assessment. For college students, military and their families and the public.
-                                </p>
-                            </div>
-
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                                <img src={depressionAndBipolarSupportAlliance} alt="Depression and Bipolar Support Alliance" className="mx-auto h-16 w-auto object-contain mb-4" />
-                                <a href="https://www.dbsalliance.org" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                    Depression and Bipolar Support Alliance
-                                </a>
-                                <p className="mt-3 leading-relaxed">
-                                    DBSA is the leading patient-directed organization in the United States focusing on depression and bipolar disorder. They operate a toll-free referral line 1-800-826-3632 and have a grassroots network of more than 1,000 patient-run support groups across the country.
-                                </p>
-                            </div>
-
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                                <img src={studentMentalHealthResources} alt="Student Mental Health Resources" className="mx-auto h-16 w-auto object-contain mb-4" />
-                                <a href="https://www.accreditedschoolsonline.org/resources/student-mental-health-resources/" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                    Student Mental Health Resources
-                                </a>
-                                <p className="mt-3 leading-relaxed">
-                                    Promoting student mental health. Expert advice and school resources for understanding disorders and getting help.
-                                </p>
-                            </div>
-
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                                <img src={nationalAllianceForTheMentallyIll} alt="National Alliance for the Mentally Ill" className="mx-auto h-16 w-auto object-contain mb-4" />
-                                <a href="https://www.nami.org" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                    National Alliance for the Mentally Ill
-                                </a>
-                                <p className="mt-3 leading-relaxed">
-                                    NAMI, a nonprofit, grassroots, self-help, support and advocacy organization of consumers, family and friends of people with mental illnesses, has information on mental illnesses, programs, support groups, medication and treatment, and more. There are more than a thousand local affiliates in 50 states.
-                                </p>
-                            </div>
-
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                                <img src={suicidePreventionResourceCenter} alt="Suicide Prevention Resource Center" className="mx-auto h-16 w-auto object-contain mb-4" />
-                                <a href="https://www.sprc.org" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                    Suicide Prevention Resource Center
-                                </a>
-                                <p className="mt-3 leading-relaxed">
-                                    SPRC promotes the implementation of the National Strategy for Suicide Prevention and enhances the nation&apos;s mental health infrastructure by providing states, government agencies, private organizations, colleges and universities, and suicide survivor and mental health consumer groups with access to the science and experience that can support their efforts to develop programs, implement interventions, and promote policies to prevent suicide.
-                                </p>
-                            </div>
-                        </div>
-                    </details>
-                </div>
-
-                <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-                    <details>
-                        <summary className="cursor-pointer text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
-                            Worldwide Resource Organizations
-                        </summary>
-
-                        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                                <img src={internationalAssociationForSuicidePrevention} alt="International Association for Suicide Prevention" className="mx-auto h-16 w-auto object-contain mb-4" />
-                                <a href="https://www.iasp.info" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                    International Association for Suicide Prevention
-                                </a>
-                                <p className="mt-3 leading-relaxed">
-                                    The International Association for Suicide Prevention (IASP) is dedicated to: preventing suicidal behaviour, alleviating its effects, and providing a forum for academics, mental health professionals, crisis workers, volunteers and suicide survivors.
-                                </p>
-                            </div>
-
-                            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                                <img src={worldHealthOrganization} alt="World Health Organization" className="mx-auto h-16 w-auto object-contain mb-4" />
-                                <a href="https://www.who.int" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                    World Health Organization
-                                </a>
-                                <p className="mt-3 leading-relaxed">
-                                    Our goal is to build a better, healthier future for people all over the world. Working through offices in more than 150 countries, WHO staff work side by side with governments and other partners to ensure the highest attainable level of health for all people.
-                                </p>
-                            </div>
-                        </div>
-                    </details>
-                </div>
-
-                <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-                    <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 text-center">
-                        Additional Links of Interest on this Site
-                    </h2>
-
-                    <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={bereavedSupport} alt="Bereaved Support" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
-                            <a href="/resources/bereaved-support" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Bereaved Support
-                            </a>
-                        </div>
-
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={afterASuicideLoss} alt="After A Suicide Loss" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
-                            <a href="/resources/after-suicide-loss" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                After A Suicide Loss
-                            </a>
-                        </div>
-
-                        <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-                            <img src={survivorsOfSuicideLoss} alt="Survivors of Suicide Loss" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
-                            <a href="/resources/suicide-loss" className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4">
-                                Survivors of Suicide Loss
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                </div>
+            <div className="sm:w-[30vw] sm:max-w-[18rem] sm:flex-shrink-0 w-full">
+              <img
+                src={coverPhoto}
+                alt="Resource Organizations"
+                className="w-full h-full object-cover rounded-lg shadow-md"
+              />
             </div>
-        </section>
-    );
+          </main>
+
+          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <details>
+              <summary className="cursor-pointer text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+                Canadian Resource Organizations
+              </summary>
+
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={kidsHelpPhone}
+                    alt="Kids Help Phone"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://kidshelpphone.ca"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Kids Help Phone
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    Kids Help Phone offers anonymous, confidential, non
+                    judgemental, free 24/7 phone counselling and web counselling
+                    for ages 20 and under throughout Canada.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={CMHA}
+                    alt="CMHA Canadian Mental Health"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://cmha.ca"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    CMHA Canadian Mental Health
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    Canadian Mental Health Association promotes the mental
+                    health of all and supports the resilience and recovery of
+                    people experiencing mental illness.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={CASP}
+                    alt="Canadian Association for Suicide Prevention"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://suicideprevention.ca"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Canadian Association for Suicide Prevention
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    CASP is an informational association to reduce the suicide
+                    rate in Canada and to minimize the consequences of suicidal
+                    behaviour.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={centreForSuicidePrevention}
+                    alt="Centre For Suicide Prevention Canada"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://www.suicideinfo.ca/resources/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Centre For Suicide Prevention Canada
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    Offer many different types of resources, from infographics
+                    to in-depth editorial articles.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={keltyMentalHealth}
+                    alt="Kelty Mental Health Resource Centre"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://keltymentalhealth.ca"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Kelty Mental Health Resource Centre
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    BC’s Information Source for Children, Youth &amp; Families
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={suicidePreventionResourceCentre}
+                    alt="Suicide Prevention Resource Centre Canada"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://www.sp-rc.ca"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Suicide Prevention Resource Centre Canada
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    SPRC's goals are to reduce suicide, suicidal behaviour, and
+                    their effects, by promoting positive alternatives and
+                    healthy coping skills.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={klinicCommunityHealth}
+                    alt="Klinic Community Health"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://klinic.mb.ca"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Klinic Community Health
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    Klinic is an accredited crisis centre in Manitoba with the
+                    American Association of Suicidology and a member of the
+                    Canadian Association for Suicide Prevention and the Canadian
+                    Distress Line Network.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={mentalHealthCommissionOfCanada}
+                    alt="Mental Health Commission of Canada"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://mentalhealthcommission.ca"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Mental Health Commission of Canada
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    Mental health problems and illnesses affect more people in
+                    Canada than some of the major physical disorders. Together,
+                    we accelerate change to transform Canada&apos;s mental
+                    health system.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={ontarioSuicidePreventionRoundtable}
+                    alt="Ontario Suicide Prevention Roundtable"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://wrspc.ca/about-us/ontario-suicide-prevention-roundtable/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Ontario Suicide Prevention Roundtable
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    The Ontario Association for Suicide Prevention has
+                    amalgamated with the Waterloo Region Suicide Prevention
+                    Council to support a new Ontario Suicide Prevention
+                    Roundtable. They will continue to provide a touchstone for
+                    individuals, families and communities supporting suicide
+                    prevention.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <details>
+              <summary className="cursor-pointer text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+                Resource Organizations in the USA
+              </summary>
+
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={nationSuicidePreventionLifeline}
+                    alt="National Suicide Prevention Lifeline"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://988lifeline.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    The National Suicide Prevention Lifeline
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    The National Suicide Prevention Lifeline is a national
+                    network of local crisis centers that provides free and
+                    confidential emotional support to people in suicidal crisis
+                    or emotional distress 24 hours a day, 7 days a week.
+                    We&apos;re committed to improving crisis services and
+                    advancing suicide prevention by empowering individuals,
+                    advancing professional best practices, and building
+                    awareness.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={americanFoundationForSuicidePrevention}
+                    alt="American Foundation for Suicide Prevention"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://afsp.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    American Foundation for Suicide Prevention
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    AFSP is the leading national not-for-profit organization
+                    exclusively dedicated to understanding and preventing
+                    suicide through research, education, and advocacy, and to
+                    reaching out to people with mental disorders and those
+                    impacted by suicide. www.afsp.org
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={centerForMentalHealthServices}
+                    alt="Center for Mental Health Services"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://www.samhsa.gov/about/offices-centers/cmhs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Center for Mental Health Services
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    CMHS, of the Substance Abuse and Mental Health Services
+                    Administration maintains a mental health services locator,
+                    which you can use to help find services, facilities and
+                    resources in your state.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={helpYourselfHelpOthers}
+                    alt="Help Yourself Help Others"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://info.sossignsofsuicide.org/bh-beat"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Help Yourself. Help Others
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    Everyone experiences stress, sadness and anxiety from time
+                    to time—it&apos;s part of life. But if you are feeling
+                    overwhelmed, depressed, or unable to do the things you once
+                    enjoyed, it may be time to assess your emotional health. If
+                    you are concerned about yourself or someone you love, take a
+                    few minutes to complete an anonymous self-assessment. For
+                    college students, military and their families and the
+                    public.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={depressionAndBipolarSupportAlliance}
+                    alt="Depression and Bipolar Support Alliance"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://www.dbsalliance.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Depression and Bipolar Support Alliance
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    DBSA is the leading patient-directed organization in the
+                    United States focusing on depression and bipolar disorder.
+                    They operate a toll-free referral line 1-800-826-3632 and
+                    have a grassroots network of more than 1,000 patient-run
+                    support groups across the country.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={studentMentalHealthResources}
+                    alt="Student Mental Health Resources"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://www.accreditedschoolsonline.org/resources/student-mental-health-resources/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Student Mental Health Resources
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    Promoting student mental health. Expert advice and school
+                    resources for understanding disorders and getting help.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={nationalAllianceForTheMentallyIll}
+                    alt="National Alliance for the Mentally Ill"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://www.nami.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    National Alliance for the Mentally Ill
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    NAMI, a nonprofit, grassroots, self-help, support and
+                    advocacy organization of consumers, family and friends of
+                    people with mental illnesses, has information on mental
+                    illnesses, programs, support groups, medication and
+                    treatment, and more. There are more than a thousand local
+                    affiliates in 50 states.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={suicidePreventionResourceCenter}
+                    alt="Suicide Prevention Resource Center"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://www.sprc.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    Suicide Prevention Resource Center
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    SPRC promotes the implementation of the National Strategy
+                    for Suicide Prevention and enhances the nation&apos;s mental
+                    health infrastructure by providing states, government
+                    agencies, private organizations, colleges and universities,
+                    and suicide survivor and mental health consumer groups with
+                    access to the science and experience that can support their
+                    efforts to develop programs, implement interventions, and
+                    promote policies to prevent suicide.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <details>
+              <summary className="cursor-pointer text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+                Worldwide Resource Organizations
+              </summary>
+
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={internationalAssociationForSuicidePrevention}
+                    alt="International Association for Suicide Prevention"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://www.iasp.info"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    International Association for Suicide Prevention
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    The International Association for Suicide Prevention (IASP)
+                    is dedicated to: preventing suicidal behaviour, alleviating
+                    its effects, and providing a forum for academics, mental
+                    health professionals, crisis workers, volunteers and suicide
+                    survivors.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                  <img
+                    src={worldHealthOrganization}
+                    alt="World Health Organization"
+                    className="mx-auto h-16 w-auto object-contain mb-4"
+                  />
+                  <a
+                    href="https://www.who.int"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  >
+                    World Health Organization
+                  </a>
+                  <p className="mt-3 leading-relaxed">
+                    Our goal is to build a better, healthier future for people
+                    all over the world. Working through offices in more than 150
+                    countries, WHO staff work side by side with governments and
+                    other partners to ensure the highest attainable level of
+                    health for all people.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 text-center">
+              Additional Links of Interest on this Site
+            </h2>
+
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
+              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                <img
+                  src={bereavedSupport}
+                  alt="Bereaved Support"
+                  className="w-full h-40 object-cover rounded-lg shadow-md mb-4"
+                />
+                <a
+                  href="/resources/bereaved-support"
+                  className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                >
+                  Bereaved Support
+                </a>
+              </div>
+
+              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                <img
+                  src={afterASuicideLoss}
+                  alt="After A Suicide Loss"
+                  className="w-full h-40 object-cover rounded-lg shadow-md mb-4"
+                />
+                <a
+                  href="/resources/after-suicide-loss"
+                  className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                >
+                  After A Suicide Loss
+                </a>
+              </div>
+
+              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                <img
+                  src={survivorsOfSuicideLoss}
+                  alt="Survivors of Suicide Loss"
+                  className="w-full h-40 object-cover rounded-lg shadow-md mb-4"
+                />
+                <a
+                  href="/resources/suicide-loss"
+                  className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                >
+                  Survivors of Suicide Loss
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default MentalHealthResourcesOrganizations;

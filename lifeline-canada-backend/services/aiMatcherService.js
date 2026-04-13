@@ -43,7 +43,7 @@ class AIMatcherService {
     // ============================================
     const negationResult = checkNegationOverride(userInput);
     if (negationResult) {
-      console.log(`✅ Negation override: "${userInput}" → ${negationResult.intent}`);
+     // console.log(`✅ Negation override: "${userInput}" → ${negationResult.intent}`);
       this.cache.set(normalizedInput, negationResult);
       return negationResult;
     }
@@ -72,7 +72,7 @@ class AIMatcherService {
 
     let result;
     if (aiMatch && aiMatch.score >= CONFIG.AI_THRESHOLD) {
-      console.log(`🎯 AI match: ${aiMatch.score.toFixed(3)}`);
+      // console.log(`🎯 AI match: ${aiMatch.score.toFixed(3)}`);
       result = this.responseBuilder.buildResult(
         aiMatch.rule,
         'ai',
@@ -80,7 +80,7 @@ class AIMatcherService {
         aiMatch.score
       );
     } else {
-      console.log('📋 No match, using default');
+      // console.log('📋 No match, using default');
       result = this.responseBuilder.getDefaultResponse();
     }
 

@@ -12,19 +12,15 @@ interface NavLinkProps {
   className?: string;
 }
 
-export default function NavLink({
-  link,
-  onClick,
-}: NavLinkProps) {
+export default function NavLink({ link, onClick }: NavLinkProps) {
   return (
-    
     <Link
       to={link.path}
-      onClick={onClick}
-       {...(link.name === "LifeLine App"
-    ? { target: "_blank", rel: "noopener noreferrer" }
-    : {})}
-     className={`
+      onClick={onClick} 
+      {...(link.name === 'LifeLine App' || link.name === 'Companion Paws'
+  ? { target: '_blank', rel: 'noopener noreferrer' }
+  : {})}
+      className={`
         relative flex items-center gap-2
         px-4 py-3 rounded-lg
         h-[45px]
@@ -43,7 +39,7 @@ export default function NavLink({
           {link.icon}
         </span>
       )}
-      <span className="text-[clamp(12px,1.2vw,16px)] whitespace-nowrap">
+      <span className="text-[clamp(12px,1.2vw,16px)] !text-[#89009B]  whitespace-nowrap">
         {link.name}
       </span>
     </Link>

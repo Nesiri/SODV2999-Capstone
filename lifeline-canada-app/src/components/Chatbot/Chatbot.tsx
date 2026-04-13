@@ -20,20 +20,31 @@ interface ChatbotProps {
 
 const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
   const [messages, setMessages] = useState<Message[]>([
-    { 
-      text: "Hi there. I'm here to support you. How can I help you today?", 
+    {
+      text: "Hi there. I'm here to support you. How can I help you today?",
       isUser: false,
       links: [
-        { name: "Mental Health Resources", path: "/resources", description: "Find help and information" },
-        { name: "Pattern Interrupts", path: "/pattern-interrupts", description: "Break negative cycles" },
-        { name: "Crisis Support", path: "/incrisisneedhelp", description: "Get help now" }
-      ]
-    }
+        {
+          name: 'Mental Health Resources',
+          path: '/resources',
+          description: 'Find help and information',
+        },
+        {
+          name: 'Pattern Interrupts',
+          path: '/pattern-interrupts',
+          description: 'Break negative cycles',
+        },
+        {
+          name: 'Crisis Support',
+          path: '/incrisisneedhelp',
+          description: 'Get help now',
+        },
+      ],
+    },
   ]);
   const [inputMessage, setInputMessage] = useState('');
   const [isTyping, setIsTyping] = useState(false);
 
-  
   // Ref for auto-scrolling
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -46,56 +57,71 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
     scrollToBottom();
   }, [messages, isTyping]);
 
-  
-
   // Send message to backend - NO FRONTEND MATCHING
   const handleSendMessage = async () => {
-  if (!inputMessage.trim()) return;
+    if (!inputMessage.trim()) return;
 
-  const userMessage = inputMessage;
-  
-  // Add user message
-  setMessages(prev => [...prev, { text: userMessage, isUser: true }]);
-  setInputMessage('');
-  setIsTyping(true);
+    const userMessage = inputMessage;
 
-  try {
-    // Call backend API - returns ChatResponse directly
-    const botResponse = await chatService.sendMessage(userMessage);
-    
-    console.log('Backend response:', botResponse);
-    
-    setMessages(prev => [...prev, { 
-      text: botResponse.response || "I'm here to help. Please try again.",
-      isUser: false,
-      isEscalation: botResponse.requiresEscalation || botResponse.intent === 'crisis',
-      links: botResponse.links,
-      intent: botResponse.intent,
-      score: botResponse.score
-    }]);
-    
-    // Trigger crisis detection callback if needed
-    if ((botResponse.requiresEscalation || botResponse.intent === 'crisis') && onCrisisDetected) {
-      onCrisisDetected();
+    // Add user message
+    setMessages((prev) => [...prev, { text: userMessage, isUser: true }]);
+    setInputMessage('');
+    setIsTyping(true);
+
+    try {
+      // Call backend API - returns ChatResponse directly
+      const botResponse = await chatService.sendMessage(userMessage);
+
+      console.log('Backend response:', botResponse);
+
+      setMessages((prev) => [
+        ...prev,
+        {
+          text: botResponse.response || "I'm here to help. Please try again.",
+          isUser: false,
+          isEscalation:
+            botResponse.requiresEscalation || botResponse.intent === 'crisis',
+          links: botResponse.links,
+          intent: botResponse.intent,
+          score: botResponse.score,
+        },
+      ]);
+
+      // Trigger crisis detection callback if needed
+      if (
+        (botResponse.requiresEscalation || botResponse.intent === 'crisis') &&
+        onCrisisDetected
+      ) {
+        onCrisisDetected();
+      }
+    } catch (error) {
+      console.error('Chatbot error:', error);
+
+      // Fallback when backend is completely unreachable
+      setMessages((prev) => [
+        ...prev,
+        {
+          text: "I'm having trouble connecting right now. Please try again or contact us directly for support.",
+          isUser: false,
+          isEscalation: false,
+          links: [
+            {
+              name: 'Contact Support',
+              path: '/contact/contact-us',
+              description: 'Get help from our team',
+            },
+            {
+              name: 'Crisis Support',
+              path: '/incrisisneedhelp',
+              description: 'Immediate help available',
+            },
+          ],
+        },
+      ]);
+    } finally {
+      setIsTyping(false);
     }
-    
-  } catch (error) {
-    console.error('Chatbot error:', error);
-    
-    // Fallback when backend is completely unreachable
-    setMessages(prev => [...prev, { 
-      text: "I'm having trouble connecting right now. Please try again or contact us directly for support.",
-      isUser: false,
-      isEscalation: false,
-      links: [
-        { name: "Contact Support", path: "/contact/contact-us", description: "Get help from our team" },
-        { name: "Crisis Support", path: "/incrisisneedhelp", description: "Immediate help available" }
-      ]
-    }]);
-  } finally {
-    setIsTyping(false);
-  }
-};
+  };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -109,17 +135,25 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
   };
 
   // Helper to render links - handles both clickable and non-clickable items
-  const renderLinks = (links: Array<{ name: string; path?: string; description?: string }>) => {
+  const renderLinks = (
+    links: Array<{ name: string; path?: string; description?: string }>
+  ) => {
     if (!links || links.length === 0) return null;
-    
+
     return (
       <div className="mt-3 space-y-2">
         {links.map((link, idx) => {
           // Check if link has a valid path (non-empty and not "#")
-          const hasValidPath = link.path && link.path !== "#" && link.path.trim() !== "";
-          
+          const hasValidPath =
+            link.path && link.path !== '#' && link.path.trim() !== '';
+
           // External links (http, https, tel, sms)
-          if (hasValidPath && (link.path!.startsWith('http') || link.path!.startsWith('tel:') || link.path!.startsWith('sms:'))) {
+          if (
+            hasValidPath &&
+            (link.path!.startsWith('http') ||
+              link.path!.startsWith('tel:') ||
+              link.path!.startsWith('sms:'))
+          ) {
             return (
               <a
                 key={idx}
@@ -130,9 +164,13 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-sm font-medium text-purple-700">{link.name}</span>
+                    <span className="text-sm font-medium text-purple-700">
+                      {link.name}
+                    </span>
                     {link.description && (
-                      <p className="text-xs text-gray-500">{link.description}</p>
+                      <p className="text-xs text-gray-500">
+                        {link.description}
+                      </p>
                     )}
                   </div>
                   <ExternalLink className="w-4 h-4 text-purple-400 group-hover:text-purple-600" />
@@ -156,9 +194,13 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-sm font-medium !text-purple-700">{link.name}</span>
+                    <span className="text-sm font-medium !text-purple-700">
+                      {link.name}
+                    </span>
                     {link.description && (
-                      <p className="text-xs !text-gray-500">{link.description}</p>
+                      <p className="text-xs !text-gray-500">
+                        {link.description}
+                      </p>
                     )}
                   </div>
                   <ArrowRight className="w-4 h-4 !text-purple-400 group-hover:text-purple-600" />
@@ -171,9 +213,13 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
             return (
               <div key={idx} className="block p-2 bg-gray-50 rounded-lg">
                 <div>
-                  <span className="text-sm font-medium !text-gray-700">{link.name}</span>
+                  <span className="text-sm font-medium !text-gray-700">
+                    {link.name}
+                  </span>
                   {link.description && (
-                    <p className="text-xs !text-gray-500 mt-0.5">{link.description}</p>
+                    <p className="text-xs !text-gray-500 mt-0.5">
+                      {link.description}
+                    </p>
                   )}
                 </div>
               </div>
@@ -187,12 +233,13 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
   return (
     <>
       {/* Chatbot Header */}
-      <div className="!bg-gradient-to-r from-indigo-500 to-purple-600 px-5 py-4 flex items-center justify-between">
+      <div className="!bg-[#89009B] px-5 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Bot className="w-5 h-5 !text-white" />
           <div>
-            <h3 className="font-semibold !text-white text-sm">Support AI Assistant</h3>
-           
+            <h3 className="font-semibold !text-white text-sm">
+              Support AI Assistant
+            </h3>
           </div>
         </div>
         <button
@@ -202,7 +249,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
           <X className="w-4 h-4" />
         </button>
       </div>
-      
+
       {/* Messages */}
       <div className="h-96 overflow-y-auto p-4 space-y-3 bg-gray-50">
         {messages.map((msg, idx) => (
@@ -220,12 +267,10 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
               }`}
             >
               <p className="text-sm whitespace-pre-line">{msg.text}</p>
-              
-           
-              
+
               {/* Render links if available */}
               {msg.links && msg.links.length > 0 && renderLinks(msg.links)}
-              
+
               {/* Crisis escalation button */}
               {msg.isEscalation && (
                 <button
@@ -242,9 +287,18 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
           <div className="flex justify-start">
             <div className="!bg-white border border-gray-200 rounded-2xl rounded-bl-none p-3 shadow-sm">
               <div className="flex gap-1">
-                <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                <span className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                <span
+                  className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                  style={{ animationDelay: '0ms' }}
+                />
+                <span
+                  className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                  style={{ animationDelay: '150ms' }}
+                />
+                <span
+                  className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                  style={{ animationDelay: '300ms' }}
+                />
               </div>
             </div>
           </div>
@@ -252,7 +306,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
         {/* Invisible div for auto-scroll target */}
         <div ref={messagesEndRef} />
       </div>
-      
+
       {/* Input */}
       <div className="p-4 border-t !border-gray-100 bg-white">
         <div className="flex gap-2">

@@ -1,33 +1,31 @@
-
-
 const comedyLinks = [
   {
-    title: "14 Minutes of Comedians Reaffirming Mental Health Struggles",
+    title: '14 Minutes of Comedians Reaffirming Mental Health Struggles',
     description:
-      "May is mental health awareness month and some of our comedians have kept it all the way 100 with their mental health journey as well as letting us know: you’re doing just fine! Comedian Lineup: Jim Norton, Tom Papa, Neal Brennan, Maria Bamford.",
-    image: "/images/comedy/comedy-link-1.jpg",
-    href: "https://www.youtube.com/watch?v=GfS8bV8jJ6M",
+      'May is mental health awareness month and some of our comedians have kept it all the way 100 with their mental health journey as well as letting us know: you’re doing just fine! Comedian Lineup: Jim Norton, Tom Papa, Neal Brennan, Maria Bamford.',
+    image: '/images/comedy/comedy-link-1.jpg',
+    href: 'https://www.youtube.com/watch?v=GfS8bV8jJ6M',
   },
   {
-    title: "So Funny It Can Cure Depression",
+    title: 'So Funny It Can Cure Depression',
     description:
-      "The very best and funniest videos! You will need to wipe tears from laughing! From funny kids & toddlers to hilarious cats, funny fail moments,... The hardest TRY NOT TO LAUGH challenge! Only the best and the funniest fail videos! The content in this compilation is licensed and used with authorization of the rights holder.",
-    image: "/images/comedy/comedy-link-2.jpg",
-    href: "https://www.youtube.com/watch?v=QJfJ6Fh8R7Q",
+      'The very best and funniest videos! You will need to wipe tears from laughing! From funny kids & toddlers to hilarious cats, funny fail moments,... The hardest TRY NOT TO LAUGH challenge! Only the best and the funniest fail videos! The content in this compilation is licensed and used with authorization of the rights holder.',
+    image: '/images/comedy/comedy-link-2.jpg',
+    href: 'https://www.youtube.com/watch?v=QJfJ6Fh8R7Q',
   },
   {
-    title: "10 Minutes of Comedy to Cure Your Anxiety",
+    title: '10 Minutes of Comedy to Cure Your Anxiety',
     description:
-      "Going through it? Can relate. This 10-minute break will make you smile. Unless you’re a sociopath. John Mulaney, Michelle Buteau, and Jim Gaffigan.",
-    image: "/images/comedy/comedy-link-3.jpg",
-    href: "https://www.youtube.com/watch?v=2YwC4Vsm5h0",
+      'Going through it? Can relate. This 10-minute break will make you smile. Unless you’re a sociopath. John Mulaney, Michelle Buteau, and Jim Gaffigan.',
+    image: '/images/comedy/comedy-link-3.jpg',
+    href: 'https://www.youtube.com/watch?v=2YwC4Vsm5h0',
   },
   {
-    title: "Kevin Breel: Confessions of a Depressed Comic",
+    title: 'Kevin Breel: Confessions of a Depressed Comic',
     description:
-      "Writer, comic and mental health activist Kevin Breel speaks up about depression. Kevin Breel didn’t look like a depressed kid: team captain, at every party, funny and confident. But he tells the story of the night he realized that to save his own life he needed to say four simple words.",
-    image: "/images/pattern/comedy/kevin-breel.jpg",
-    href: "https://www.ted.com/talks/kevin_breel_confessions_of_a_depressed_comic",
+      'Writer, comic and mental health activist Kevin Breel speaks up about depression. Kevin Breel didn’t look like a depressed kid: team captain, at every party, funny and confident. But he tells the story of the night he realized that to save his own life he needed to say four simple words.',
+    image: '/images/pattern/comedy/kevin-breel.jpg',
+    href: 'https://www.ted.com/talks/kevin_breel_confessions_of_a_depressed_comic',
   },
 ];
 
@@ -48,7 +46,7 @@ export default function Comedy() {
 
               <p
                 className="mb-8 text-[24px] leading-[1.28] text-black"
-                style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+                style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
               >
                 The health benefits of comedy and laughing are widely
                 chronicled. It releases endorphins, which make us feel happy, as
@@ -63,14 +61,14 @@ export default function Comedy() {
 
               <p
                 className="text-[24px] leading-[1.28] text-black"
-                style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+                style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
               >
                 Gelotology – or the study of laughter – has long sought
                 scientific answers to the potential health benefits of laughing.
                 Whether it’s giggling at something someone said or laughing out
-                loud at a comedy show, a good laugh is healthy for you.
-                Numerous medical studies agree that laughter is a natural mental
-                health remedy and the ultimate stress relief medicine.
+                loud at a comedy show, a good laugh is healthy for you. Numerous
+                medical studies agree that laughter is a natural mental health
+                remedy and the ultimate stress relief medicine.
               </p>
             </div>
 
@@ -89,14 +87,14 @@ export default function Comedy() {
       <section className="mx-auto max-w-[1400px] px-10 py-20">
         <h2
           className="mb-6 text-[48px] leading-none text-black"
-          style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+          style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
         >
           Humor and Mental Health
         </h2>
 
         <p
           className="mb-8 text-[24px] leading-[1.3] text-black"
-          style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+          style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
         >
           Having a good sense of humor has numerous long-term and short-term
           mental health benefits. Web MD.
@@ -105,7 +103,7 @@ export default function Comedy() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
           <div
             className="max-w-[720px] text-[20px] leading-[1.32] text-black"
-            style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+            style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
           >
             <p className="mb-5">
               <strong>Short-term</strong> mental health benefits of humor.
@@ -137,7 +135,7 @@ export default function Comedy() {
 
           <div
             className="max-w-[720px] text-[20px] leading-[1.32] text-black"
-            style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+            style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
           >
             <p className="mb-5">
               <strong>Long-term</strong> benefits of humor on mental health. In
@@ -180,11 +178,11 @@ export default function Comedy() {
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1fr_520px] lg:gap-16">
           <div
             className="max-w-[760px] text-[20px] leading-[1.32] text-black"
-            style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+            style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
           >
             <h2
               className="mb-6 text-[48px] leading-none text-black"
-              style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+              style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
             >
               Tips to Improve Your Sense of Humor
             </h2>
@@ -202,7 +200,7 @@ export default function Comedy() {
               <li>
                 <strong>
                   Focus your attention on things that make you happy:
-                </strong>{" "}
+                </strong>{' '}
                 Humor revolves around happiness. Try to stay happy by doing
                 things that make you smile. A good way to do so is by
                 identifying the simple things that bring good thoughts and
@@ -244,7 +242,7 @@ export default function Comedy() {
         <div className="mx-auto max-w-[1400px] px-10 py-20">
           <h2
             className="mb-12 text-[48px] leading-none text-black"
-            style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+            style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
           >
             Helpful Comedy Links
           </h2>
@@ -270,7 +268,7 @@ export default function Comedy() {
 
                   <div
                     className="max-w-[900px] text-[20px] leading-[1.32] text-black"
-                    style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+                    style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
                   >
                     <a
                       href={item.href}

@@ -8,13 +8,10 @@ type CrisisCentre = {
 
 const crisisCentres: CrisisCentre[] = [
   {
-  name: '988 Suicide & Crisis Lifeline',
-  image: '/assets/CanadaCenter_image/talkSuicide.jpg', 
-  details: [
-    'Call or Text: 988',
-    'Toll-Free 24/7',
-  ],
-},
+    name: '988 Suicide & Crisis Lifeline',
+    image: '/assets/CanadaCenter_image/talkSuicide.jpg',
+    details: ['Call or Text: 988', 'Toll-Free 24/7'],
+  },
   {
     name: 'Kids Help Phone',
     image: '/assets/CanadaCenter_image/kidsHelpPhone-1-400x176.jpg',
@@ -68,12 +65,10 @@ const CanadaNationwide: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section header with elegant typography */}
         <div className="text-center mb-16">
-          <span className="text-xs tracking-[0.3em] text-[#B28B8B] uppercase font-light block mb-4">
-            — You Are Not Alone —
-          </span>
-          <h1 className="text-5xl lg:text-6xl font-serif text-[#2A3B3C] leading-[1.1] mb-4">
+          
+          <h1 className="!text-3xl sm:!text-5xl font-serif !text-[#89009B]  leading-[1.1] mb-4">
             Canada Nationwide
-            <span className="block text-[#C89F9F]">Crisis Centres</span>
+            <span className="block !text-[#B266C9]">Crisis Centres</span>
           </h1>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#C89F9F] to-transparent mx-auto"></div>
         </div>

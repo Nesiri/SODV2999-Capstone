@@ -38,31 +38,31 @@ const NotFound: React.FC = () => {
 
   return (
     <div
-      className={`min-h-screen bg-gradient-to-br from-[#f0f5fa] via-[#e8f0f7] to-[#d9e4f0] flex items-center justify-center p-4 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+      className={`min-h-screen bg-gradient-to-br from-[#e9e3ea] via-[#f2ecf3] to-[#e0d8e2] flex items-center justify-center p-4 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
     >
       {/* Soothing animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 w-64 h-64 bg-[#b5d1e6]/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#c6d9f0]/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#a8c3da]/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-20 w-64 h-64 bg-[#89009B]/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#B266C9]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#89009B]/5 rounded-full blur-3xl"></div>
 
-        <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-[#7c9ec0]/20 rounded-full animate-float"></div>
-        <div className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-[#7c9ec0]/20 rounded-full animate-float delay-700"></div>
-        <div className="absolute top-2/3 right-1/3 w-1.5 h-1.5 bg-[#7c9ec0]/20 rounded-full animate-float delay-500"></div>
+        <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-[#89009B]/20 rounded-full animate-float"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-[#B266C9]/20 rounded-full animate-float delay-700"></div>
+        <div className="absolute top-2/3 right-1/3 w-1.5 h-1.5 bg-[#89009B]/20 rounded-full animate-float delay-500"></div>
       </div>
 
       <div className="max-w-2xl w-full relative z-10">
         <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden border border-white/50">
-          <div className="h-2 bg-gradient-to-r from-[#98b7d6] via-[#b5cde0] to-[#d4e2f0]" />
+          <div className="h-2 bg-gradient-to-r from-[#89009B] via-[#B266C9] to-[#89009B]" />
 
           <div className="p-8 md:p-12">
             <div className="flex justify-center mb-6">
               <div className="relative">
-                <div className="absolute inset-0 bg-[#98b7d6] rounded-full opacity-20 animate-ping"></div>
-                <div className="absolute inset-0 bg-[#b5cde0] rounded-full opacity-30 blur-md"></div>
-                <div className="relative bg-gradient-to-br from-[#e1ebf5] to-[#d4e2f0] p-5 rounded-full shadow-inner">
+                <div className="absolute inset-0 bg-[#89009B] rounded-full opacity-20 animate-ping"></div>
+                <div className="absolute inset-0 bg-[#B266C9] rounded-full opacity-30 blur-md"></div>
+                <div className="relative bg-gradient-to-br from-[#f5edf7] to-[#e8dceb] p-5 rounded-full shadow-inner">
                   <Compass
-                    className="w-14 h-14 text-[#4a6b8a]"
+                    className="w-14 h-14 text-[#89009B]"
                     strokeWidth={1.5}
                   />
                 </div>
@@ -70,35 +70,35 @@ const NotFound: React.FC = () => {
             </div>
 
             <div className="text-center mb-4">
-              <span className="text-sm uppercase tracking-[0.3em] text-[#7c9ec0] font-light">
+              <span className="text-sm uppercase tracking-[0.3em] text-[#B266C9] font-light">
                 misplaced
               </span>
             </div>
 
-            <h1 className="text-6xl md:text-7xl font-light text-center text-[#2c3e50] mb-2 tracking-tight">
+            <h1 className="text-6xl md:text-7xl font-light text-center text-[#89009B] mb-2 tracking-tight">
               404
             </h1>
 
-            <h2 className="text-xl md:text-2xl font-medium text-[#4a6b8a] text-center mb-4">
+            <h2 className="text-xl md:text-2xl font-medium text-[#B266C9] text-center mb-4">
               You've wandered off the path
             </h2>
 
-            <div className="bg-[#e1ebf5]/50 rounded-2xl p-5 mb-8 border border-white/50">
-              <p className="text-[#4a6b8a] text-center italic leading-relaxed">
+            <div className="bg-[#f5edf7]/50 rounded-2xl p-5 mb-8 border border-white/50">
+              <p className="text-[#89009B] text-center italic leading-relaxed">
                 "{randomMessage}"
               </p>
 
               <div className="flex justify-center mt-3 gap-1">
-                <Heart size={14} className="text-[#98b7d6] fill-[#98b7d6]/30" />
-                <Heart size={14} className="text-[#b5cde0] fill-[#b5cde0]/30" />
-                <Heart size={14} className="text-[#7c9ec0] fill-[#7c9ec0]/30" />
+                <Heart size={14} className="text-[#89009B] fill-[#89009B]/30" />
+                <Heart size={14} className="text-[#B266C9] fill-[#B266C9]/30" />
+                <Heart size={14} className="text-[#89009B] fill-[#89009B]/30" />
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/"
-                className="inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-[#7c9ec0] to-[#98b7d6] text-white rounded-2xl hover:from-[#6b8cad] hover:to-[#87a6c4] transition-all duration-500 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group"
+                className="inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-[#89009B] to-[#B266C9] text-white rounded-2xl hover:from-[#7a0088] hover:to-[#a355b8] transition-all duration-500 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group"
               >
                 <Home
                   size={20}
@@ -109,7 +109,7 @@ const NotFound: React.FC = () => {
 
               <button
                 onClick={handleGoBack}
-                className="inline-flex items-center justify-center gap-3 px-6 py-4 bg-white/80 backdrop-blur-sm text-[#4a6b8a] rounded-2xl border border-[#cbd5e1] hover:bg-white hover:border-[#98b7d6] transition-all duration-500 shadow-md hover:shadow-lg transform hover:-translate-y-1 group"
+                className="inline-flex items-center justify-center gap-3 px-6 py-4 bg-white/80 backdrop-blur-sm text-[#89009B] rounded-2xl border border-[#e0d8e2] hover:bg-white hover:border-[#B266C9] transition-all duration-500 shadow-md hover:shadow-lg transform hover:-translate-y-1 group"
               >
                 <ArrowLeft
                   size={20}
@@ -120,13 +120,13 @@ const NotFound: React.FC = () => {
             </div>
 
             <div className="mt-8 text-center space-y-2">
-              <p className="text-sm text-[#7c9ec0] flex items-center justify-center gap-2">
+              <p className="text-sm text-[#B266C9] flex items-center justify-center gap-2">
                 <Sparkles size={14} />
                 <span>This isn't a mistake, just a moment of pause</span>
                 <Sparkles size={14} />
               </p>
 
-              <p className="text-xs text-[#a0b8cc]">
+              <p className="text-xs text-[#89009B]/60">
                 take all the time you need • you're doing great
               </p>
             </div>

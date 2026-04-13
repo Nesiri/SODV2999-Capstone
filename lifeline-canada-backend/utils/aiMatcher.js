@@ -31,7 +31,7 @@ class AIMatcher {
   }
 
   async _doInitialization() {
-    console.log('🚀 Initializing AI Semantic Matcher...');
+    // console.log('🚀 Initializing AI Semantic Matcher...');
     
     try {
       console.log('Loading AI model (Xenova/all-MiniLM-L6-v2)...');
@@ -80,7 +80,7 @@ class AIMatcher {
     }
 
     try {
-      console.log(`🧠 AI analyzing: "${input.substring(0, 50)}..."`);
+      // console.log(`🧠 AI analyzing: "${input.substring(0, 50)}..."`);
       
       const inputEmbedding = await this.model(input, { 
         pooling: 'mean', 
@@ -109,7 +109,7 @@ class AIMatcher {
       }
 
       if (bestMatch) {
-        console.log(`🎯 AI match: "${bestMatch.matchedText}" (score: ${bestMatch.score.toFixed(3)})`);
+        //console.log(`🎯 AI match: "${bestMatch.matchedText}" (score: ${bestMatch.score.toFixed(3)})`);
       }
       
       return bestMatch;

@@ -7,7 +7,7 @@ interface PatternInterruptCardProps {
   title?: string;
   description?: string;
   buttonText?: string;
-  buttonLink?: string; // Add this prop for the link destination
+  buttonLink?: string;
   variant?: 'peaceful' | 'hopeful' | 'energetic' | 'calm';
 }
 
@@ -17,21 +17,20 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
   title = 'Pattern Interrupts',
   description = 'Sometimes the biggest hurdle to getting better and moving forward is the depression itself. One often removes themselves from the presence of comforting & encouraging loved ones, or ceases to participate in activities of personal interest as a result of being depressed, which further contributes to their condition.',
   buttonText = 'Break the Pattern',
-  buttonLink = '/pattern-interrupts', 
+  buttonLink = '/pattern-interrupts',
   variant = 'hopeful',
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-  // Variant configurations based on therapeutic needs
+  // Variant configurations using your two purple colors
   const variantConfig = {
     peaceful: {
-      gradient: 'from-blue-400 via-teal-400 to-emerald-400',
-      light: 'from-blue-50 via-teal-50 to-emerald-50',
-      button:
-        'bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600',
-      accent: 'border-teal-200',
-      shadow: 'shadow-teal-100/50',
+      gradient: 'from-[#89009B] via-[#9B4DAB] to-[#B266C9]',
+      light: 'from-[#f5edf7] via-[#f9f2fb] to-[#e8dceb]',
+      button: 'bg-gradient-to-r from-[#89009B] to-[#B266C9] hover:from-[#7a0088] hover:to-[#a355b8]',
+      accent: 'border-[#B266C9]/30',
+      shadow: 'shadow-[#B266C9]/20',
       icon: (
         <path
           strokeLinecap="round"
@@ -41,13 +40,11 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
       ),
     },
     hopeful: {
-      // Changed from amber/orange to purple
-      gradient: 'from-purple-400 via-purple-500 to-pink-500',
-      light: 'from-purple-50 via-purple-100 to-pink-50',
-      button:
-        'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600',
-      accent: 'border-purple-200',
-      shadow: 'shadow-purple-100/50',
+      gradient: 'from-[#89009B] via-[#B266C9] to-[#C77DDF]',
+      light: 'from-[#f5edf7] via-[#f0e6f2] to-[#e8dceb]',
+      button: 'bg-gradient-to-r from-[#89009B] to-[#B266C9] hover:from-[#7a0088] hover:to-[#a355b8]',
+      accent: 'border-[#B266C9]/30',
+      shadow: 'shadow-[#B266C9]/20',
       icon: (
         <path
           strokeLinecap="round"
@@ -57,12 +54,11 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
       ),
     },
     energetic: {
-      gradient: 'from-purple-500 via-pink-500 to-red-500',
-      light: 'from-purple-50 via-pink-50 to-red-50',
-      button:
-        'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700',
-      accent: 'border-purple-200',
-      shadow: 'shadow-purple-100/50',
+      gradient: 'from-[#7B2D8F] via-[#89009B] to-[#B266C9]',
+      light: 'from-[#f0e6f2] via-[#f5edf7] to-[#e8dceb]',
+      button: 'bg-gradient-to-r from-[#7B2D8F] to-[#89009B] hover:from-[#6a1d7e] hover:to-[#7a0088]',
+      accent: 'border-[#89009B]/30',
+      shadow: 'shadow-[#89009B]/20',
       icon: (
         <path
           strokeLinecap="round"
@@ -72,12 +68,11 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
       ),
     },
     calm: {
-      gradient: 'from-indigo-400 via-blue-400 to-cyan-400',
-      light: 'from-indigo-50 via-blue-50 to-cyan-50',
-      button:
-        'bg-gradient-to-r from-indigo-500 to-blue-500 hover:from-indigo-600 hover:to-blue-600',
-      accent: 'border-indigo-200',
-      shadow: 'shadow-indigo-100/50',
+      gradient: 'from-[#B266C9] via-[#C77DDF] to-[#D494E5]',
+      light: 'from-[#f9f2fb] via-[#fdf5ff] to-[#f0e6f2]',
+      button: 'bg-gradient-to-r from-[#B266C9] to-[#C77DDF] hover:from-[#a355b8] hover:to-[#b56ccd]',
+      accent: 'border-[#C77DDF]/30',
+      shadow: 'shadow-[#C77DDF]/20',
       icon: (
         <path
           strokeLinecap="round"
@@ -205,22 +200,7 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
               </div>
             </div>
 
-            {/* Hope symbol - changed from amber to purple */}
-            <div className="absolute -bottom-4 -right-4 lg:right-0 lg:-bottom-6 bg-white/90 backdrop-blur-sm rounded-2xl p-3 lg:p-4 shadow-xl">
-              <svg
-                className="w-8 h-8 lg:w-10 lg:h-10 text-purple-500 animate-float"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M4.5 12.75l6 6 9-13.5"
-                />
-              </svg>
-            </div>
+          
           </div>
 
           {/* Content Section - adjusted for full width */}
@@ -231,7 +211,7 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
                 <div
                   className={`w-1 h-8 lg:h-10 bg-gradient-to-b ${config.gradient} rounded-full animate-pulse`}
                 />
-                <span className="text-sm lg:text-base font-semibold tracking-wider text-gray-500 uppercase">
+                <span className="text-sm lg:text-base font-semibold tracking-wider text-[#B266C9] uppercase">
                   Healing Journey
                 </span>
               </div>
@@ -267,10 +247,10 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
               </p>
 
               {/* Quotation marks - scaled for full width */}
-              <div className="absolute -top-4 -left-4 text-6xl lg:text-7xl text-gray-200 select-none">
+              <div className="absolute -top-4 -left-4 text-6xl lg:text-7xl text-[#B266C9]/20 select-none">
                 "
               </div>
-              <div className="absolute -bottom-8 lg:-bottom-10 -right-4 text-6xl lg:text-7xl text-gray-200 select-none rotate-180">
+              <div className="absolute -bottom-8 lg:-bottom-10 -right-4 text-6xl lg:text-7xl text-[#B266C9]/20 select-none rotate-180">
                 "
               </div>
             </div>
@@ -365,12 +345,12 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
           </div>
         </div>
 
-        {/* Healing corner decorations - changed amber to purple */}
+        {/* Healing corner decorations - using your purple colors */}
         <div className="absolute bottom-0 left-0 w-24 lg:w-32 h-24 lg:h-32">
-          <div className="absolute bottom-0 left-0 w-16 lg:w-20 h-16 lg:h-20 border-l-4 border-b-4 border-purple-200/30 rounded-bl-3xl lg:rounded-bl-[2rem]" />
+          <div className="absolute bottom-0 left-0 w-16 lg:w-20 h-16 lg:h-20 border-l-4 border-b-4 border-[#B266C9]/20 rounded-bl-3xl lg:rounded-bl-[2rem]" />
         </div>
         <div className="absolute top-0 right-0 w-24 lg:w-32 h-24 lg:h-32">
-          <div className="absolute top-0 right-0 w-16 lg:w-20 h-16 lg:h-20 border-r-4 border-t-4 border-pink-200/30 rounded-tr-3xl lg:rounded-tr-[2rem]" />
+          <div className="absolute top-0 right-0 w-16 lg:w-20 h-16 lg:h-20 border-r-4 border-t-4 border-[#89009B]/20 rounded-tr-3xl lg:rounded-tr-[2rem]" />
         </div>
       </div>
 

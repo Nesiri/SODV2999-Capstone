@@ -20,23 +20,25 @@ const InternationalCrisisCentres: React.FC = () => {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          {/* Left Content */}
-          <div className="space-y-8">
-            {/* Elegant badge with refined typography */}
-            <div className="inline-block">
-              <span className="text-xs tracking-[0.3em] text-[#B28B8B] uppercase font-light">
-                — Compassionate Support
-              </span>
-            </div>
+         {/* Left Content */}
+<div className="space-y-8">
+  {/* Elegant badge with refined typography */}
+  <div className="inline-block">
+    <span className="text-xs tracking-[0.3em] text-[#B266C9] uppercase font-light">
+      — Compassionate Support
+    </span>
+  </div>
 
-            {/* Sophisticated headline with elegant font pairing */}
-            <div className="space-y-3">
-              <h1 className="text-5xl lg:text-6xl font-serif text-[#2A3B3C] leading-[1.1]">
-                International Crisis
-                <span className="block text-[#C89F9F]">Centres</span>
-              </h1>
-              <div className="w-20 h-px bg-gradient-to-r from-[#C89F9F] to-transparent"></div>
-            </div>
+  {/* Sophisticated headline with elegant font pairing */}
+  <div className="space-y-3">
+    <h1 className="text-3xl xs:text-4xl sm:text-5xl font-serif font-medium leading-tight !text-[#89009B]">
+      International Crisis
+      <span className="block text-transparent bg-[#B266C9] bg-clip-text text-3xl xs:text-5xl sm:text-5xl mt-1 sm:mt-2">
+        Centres
+      </span>
+    </h1>
+    <div className="w-20 h-px bg-gradient-to-r from-[#B266C9] to-transparent"></div>
+  </div>
 
             {/* Refined content with elegant typography */}
             <div className="space-y-6">

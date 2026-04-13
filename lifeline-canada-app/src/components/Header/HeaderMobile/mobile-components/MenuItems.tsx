@@ -35,12 +35,12 @@ export const MenuItems = ({
           focus:outline-none focus:ring-2 focus:ring-pink-500/30"
       >
         <div className="p-3.5 rounded-xl bg-gradient-to-br from-pink-90 via-gray-100 to-white  transition-all duration-300">
-          <span className="text-gray-600 transition-all duration-300 text-2xl">
+          <span className="!text-[#89009B]  transition-all duration-300 text-2xl">
             ⋯
           </span>
         </div>
         <div className="flex-1 text-left">
-          <span className="font-bold text-gray-800  transition-colors">
+          <span className="font-bold !text-[#89009B]  transition-colors">
             More
           </span>
         </div>
@@ -83,13 +83,12 @@ const MenuItem = ({ link, index, onDropdownClick, closeMenu }: any) => (
             <span
               className={`font-bold
                 
-                  text-gray-800 group-hover:text-pink-600
+                  !text-[#89009B]  group-hover:text-pink-600
                transition-colors`}
             >
               {link.name}
             </span>
           </div>
-         
         </div>
         <ChevronRight
           className="w-5 h-5 text-gray-400 group-hover:text-pink-600 
@@ -106,15 +105,13 @@ const MenuItem = ({ link, index, onDropdownClick, closeMenu }: any) => (
           
           active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-pink-500/30"
       >
-        <div
-          className="p-3.5 rounded-xl bg-gradient-to-br from-pink-100 via-gray-100 to-white group-hover:from-pink-200 group-hover:via-gray-200 group-hover:to-pink-50 transition-all duration-300"
-        >
+        <div className="p-3.5 rounded-xl bg-gradient-to-br from-pink-100 via-gray-100 to-white group-hover:from-pink-200 group-hover:via-gray-200 group-hover:to-pink-50 transition-all duration-300">
           <span className="text-2xl text-gray-600 group-hover:text-pink-600 group-hover:scale-110 transition-all duration-300">
             {link.icon || '📱'}
           </span>
         </div>
         <div className="flex-1">
-          <span className="font-bold text-gray-800 group-hover:text-pink-600 transition-colors">
+          <span className="font-bold !text-[#89009B]  group-hover:text-pink-600 transition-colors">
             {link.name}
           </span>
           {link.emergency && (

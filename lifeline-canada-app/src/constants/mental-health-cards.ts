@@ -67,18 +67,19 @@ export const mentalHealthCards: MentalHealthCard[] = [
   {
     id: 7,
     image: ['assets/ResourceImages/e-counselling.png'],
-    title: "E-Counselling",
-    subtitle: "Connect with licensed professionals for online therapy and support.",
-    link: "/resources/e-counselling",
-    category: "counselling"
+    title: 'E-Counselling',
+    subtitle:
+      'Connect with licensed professionals for online therapy and support.',
+    link: '/resources/e-counselling',
+    category: 'counselling',
   },
   {
     id: 8,
     image: ['assets/ResourceImages/Search for a Professional.png'],
-    title: "Search for a Professional",
-    subtitle: "Find mental health professionals and therapists in your area.",
-    link: "/resources/search-professional",
-    category: "professional-help"
+    title: 'Search for a Professional',
+    subtitle: 'Find mental health professionals and therapists in your area.',
+    link: '/resources/search-professional',
+    category: 'professional-help',
   },
 
   // Grief and Loss (9-12)

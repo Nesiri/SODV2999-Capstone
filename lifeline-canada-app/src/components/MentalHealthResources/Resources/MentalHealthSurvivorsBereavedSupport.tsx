@@ -1,10 +1,13 @@
-import React from "react";
+import React from 'react';
 
-
-const coverPhoto = '/assets/AdditionalResourceImages/emotionalSupport-600x400.jpg';
-const survivorsOfSuicideLoss = '/assets/AdditionalResourceImages/survivorsOf_hand-ribbon-200x133.jpg';
-const afterASuicideLoss = '/assets/AdditionalResourceImages/afterSuicide-200x160.jpg';
-const resourceOrganizations = '/assets/AdditionalResourceImages/organizations-200x113.jpg';
+const coverPhoto =
+  '/assets/AdditionalResourceImages/emotionalSupport-600x400.jpg';
+const survivorsOfSuicideLoss =
+  '/assets/AdditionalResourceImages/survivorsOf_hand-ribbon-200x133.jpg';
+const afterASuicideLoss =
+  '/assets/AdditionalResourceImages/afterSuicide-200x160.jpg';
+const resourceOrganizations =
+  '/assets/AdditionalResourceImages/organizations-200x113.jpg';
 
 type ProvinceResource = {
   title: string;
@@ -14,7 +17,7 @@ type ProvinceResource = {
 const websitePattern = /(https?:\/\/[^\s]+|www\.[^\s]+)/g;
 
 const normalizeWebsiteUrl = (url: string): string => {
-  if (url.startsWith("http://") || url.startsWith("https://")) {
+  if (url.startsWith('http://') || url.startsWith('https://')) {
     return url;
   }
 
@@ -26,7 +29,9 @@ const renderLineWithWebsiteLinks = (line: string): React.ReactNode[] => {
     const isWebsite = /^(https?:\/\/[^\s]+|www\.[^\s]+)$/.test(segment);
 
     if (!isWebsite) {
-      return <React.Fragment key={`text-${segmentIndex}`}>{segment}</React.Fragment>;
+      return (
+        <React.Fragment key={`text-${segmentIndex}`}>{segment}</React.Fragment>
+      );
     }
 
     return (
@@ -45,7 +50,7 @@ const renderLineWithWebsiteLinks = (line: string): React.ReactNode[] => {
 
 const provinceResources: ProvinceResource[] = [
   {
-    title: "Alberta",
+    title: 'Alberta',
     content: `CMHA Suicide Services Bereavement Program
 Edmonton, Alberta
 Website:https://edmonton.cmha.ca/brochure/suicide-bereavement-support-services/
@@ -83,7 +88,7 @@ Facilitator: Meryl Murray R.S.W.
 Work phone: 780 342 1354`,
   },
   {
-    title: "British Columbia",
+    title: 'British Columbia',
     content: `Suicide Bereavement Support Group
 16 – 1708 Bowen Road
 Nanaimo, BC
@@ -144,7 +149,7 @@ Phone: (250) 386-6328
 email: admin@need2.ca`,
   },
   {
-    title: "Manitoba",
+    title: 'Manitoba',
     content: `Healing From Suicide’s Grief
 St. John’s United Church
 52 Caribou Road
@@ -169,7 +174,7 @@ Phone: (204) 784-4064
 email: speak@klinic.mb.ca`,
   },
   {
-    title: "New Brunswick",
+    title: 'New Brunswick',
     content: `Capital Region Mental Health and Addictions Association
 292-65 Brunswick Street
 Fredericton, NB E3B 1G5
@@ -190,7 +195,7 @@ Fax: (506) 633-2892
 email: cmha@nb.aibn.ca`,
   },
   {
-    title: "Newfoundland and Labrador",
+    title: 'Newfoundland and Labrador',
     content: `Survivors of Suicide Loss Support Group – St. Johns
 99 Dorans Lane
 St. Johns, NFLD
@@ -206,7 +211,7 @@ Phone: (709)634-4322
 Email: cmhi.iac@gmail.com`,
   },
   {
-    title: "Nova Scotia",
+    title: 'Nova Scotia',
     content: `Survivors of Suicide
 St. Andrew’s United Church Hall, 6036 Coburg Rd (at Robie Street)
 Halifax, NS B3H 1Z1
@@ -216,7 +221,7 @@ email: george.tomie@gmail.com
 website: www.SOSnovascotia.com`,
   },
   {
-    title: "Northwest Territories",
+    title: 'Northwest Territories',
     content: `Whitehorse, Yukon
 CMHA Yukon
 415 Baxter St.
@@ -229,7 +234,7 @@ Phone: (800) 265-3333
 website: www.nunavuthelpline.ca/index.html`,
   },
   {
-    title: "Ontario",
+    title: 'Ontario',
     content: `Toronto Distress Centre
 Phone: (416) 595-1716
 Website: www.torontodistresscentre.com/survivor-support
@@ -280,7 +285,7 @@ Phone: 905.599.HOPE (4673)
 Website: www.Heartache2Hope.com`,
   },
   {
-    title: "Prince Edward Island",
+    title: 'Prince Edward Island',
     content: `CMHA: Adult Survivors of Suicide Self-Help Group
 178 Fitzroy St
 Charlottetown, PE C1A 7L9
@@ -289,7 +294,7 @@ Phone: (902) 628-1648
 email: selfhelp@cmha.pe.ca`,
   },
   {
-    title: "Quebec",
+    title: 'Quebec',
     content: `Support Group for Children 8 – 12
 Laval, QC
 contact: Danyelle Latreille
@@ -306,7 +311,7 @@ phone: (514) 937-5351
 email: info@ccs-montreal.org`,
   },
   {
-    title: "Saskatchewan",
+    title: 'Saskatchewan',
     content: `After Suicide Support Saskatoon
 108 – 322 LaRonge Road
 Saskatoon, SK S7K 8B9
@@ -349,112 +354,135 @@ const MentalHealthSurvivorsBereavedSupport: React.FC = () => {
       </div>
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
+          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
+              Bereaved Support
+            </span>
+          </h1>
 
-        <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-          <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-            Bereaved Support
-          </span>
-        </h1>
-
-        <div className="flex items-center gap-4 mt-3 mb-1">
-          <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
-        </div>
-
-        <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
-          <div className="flex-1">
-            <p className="leading-relaxed">
-              Grieving a loss to suicide can seem overwhelming, but the support and understanding of others can be a
-              powerful source of strength.
-            </p>
-
-            <p className="mt-4 leading-relaxed">
-              Bereavement support, or grief and loss services, can help family members and loved ones process emotions
-              and understand how they&apos;re feeling during this painful time. Grief support services can also help you
-              celebrate the life of your family member and focus on the positive aspects of their journey.
-            </p>
+          <div className="flex items-center gap-4 mt-3 mb-1">
+            <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
           </div>
-          <div className="sm:w-[30vw] sm:max-w-[18rem] sm:flex-shrink-0 w-full">
-            <img
-              src={coverPhoto}
-              alt="Bereaved Support"
-              className="w-full h-full object-cover rounded-lg shadow-md"
-            />
-          </div>
-        </main>
 
-        <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
-            Bereavement Programs, Resources &amp; Support Groups by Province
-          </h2>
+          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
+            <div className="flex-1">
+              <p className="leading-relaxed">
+                Grieving a loss to suicide can seem overwhelming, but the
+                support and understanding of others can be a powerful source of
+                strength.
+              </p>
 
-          <ul className="mt-6 space-y-3">
-            {provinceResources.map((province) => {
-              const contentBlocks = province.content.split("\n\n");
+              <p className="mt-4 leading-relaxed">
+                Bereavement support, or grief and loss services, can help family
+                members and loved ones process emotions and understand how
+                they&apos;re feeling during this painful time. Grief support
+                services can also help you celebrate the life of your family
+                member and focus on the positive aspects of their journey.
+              </p>
+            </div>
+            <div className="sm:w-[30vw] sm:max-w-[18rem] sm:flex-shrink-0 w-full">
+              <img
+                src={coverPhoto}
+                alt="Bereaved Support"
+                className="w-full h-full object-cover rounded-lg shadow-md"
+              />
+            </div>
+          </main>
 
-              return (
-                <li key={province.title} className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm list-none">
-                  <details>
-                    <summary className="cursor-pointer text-xl font-semibold text-purple-700">
-                      {province.title}
-                    </summary>
+          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+              Bereavement Programs, Resources &amp; Support Groups by Province
+            </h2>
 
-                    <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {contentBlocks.map((block, index) => (
-                        <div key={`${province.title}-${index}`} className="rounded-lg border border-purple-100 bg-slate-50/70 p-3">
-                          <div className="space-y-1 text-sm sm:text-base">
-                            {block.split("\n").map((line, lineIndex) => (
-                              <p key={`${province.title}-${index}-${lineIndex}`} className="leading-relaxed">
-                                {renderLineWithWebsiteLinks(line)}
-                              </p>
-                            ))}
+            <ul className="mt-6 space-y-3">
+              {provinceResources.map((province) => {
+                const contentBlocks = province.content.split('\n\n');
+
+                return (
+                  <li
+                    key={province.title}
+                    className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm list-none"
+                  >
+                    <details>
+                      <summary className="cursor-pointer text-xl font-semibold text-purple-700">
+                        {province.title}
+                      </summary>
+
+                      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {contentBlocks.map((block, index) => (
+                          <div
+                            key={`${province.title}-${index}`}
+                            className="rounded-lg border border-purple-100 bg-slate-50/70 p-3"
+                          >
+                            <div className="space-y-1 text-sm sm:text-base">
+                              {block.split('\n').map((line, lineIndex) => (
+                                <p
+                                  key={`${province.title}-${index}-${lineIndex}`}
+                                  className="leading-relaxed"
+                                >
+                                  {renderLineWithWebsiteLinks(line)}
+                                </p>
+                              ))}
+                            </div>
                           </div>
-                        </div>
-                      ))}
-                    </div>
-                  </details>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+                        ))}
+                      </div>
+                    </details>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
 
-        <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
-            Additional Links of Interest on this Site
-          </h2>
+          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+              Additional Links of Interest on this Site
+            </h2>
 
-          <div className="mt-6 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-              <img src={survivorsOfSuicideLoss} alt="Survivors of Suicide Loss" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
-              <a
-                href="/resources/suicide-loss"
-                className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
-              >
-                Survivors of Suicide Loss
-              </a>
-            </div>
+            <div className="mt-6 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
+              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                <img
+                  src={survivorsOfSuicideLoss}
+                  alt="Survivors of Suicide Loss"
+                  className="w-full h-40 object-cover rounded-lg shadow-md mb-4"
+                />
+                <a
+                  href="/resources/suicide-loss"
+                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                >
+                  Survivors of Suicide Loss
+                </a>
+              </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-              <img src={afterASuicideLoss} alt="After A Suicide Loss" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
-              <a
-                href="/resources/after-suicide-loss"
-                className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
-              >
-                After A Suicide Loss
-              </a>
-            </div>
+              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                <img
+                  src={afterASuicideLoss}
+                  alt="After A Suicide Loss"
+                  className="w-full h-40 object-cover rounded-lg shadow-md mb-4"
+                />
+                <a
+                  href="/resources/after-suicide-loss"
+                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                >
+                  After A Suicide Loss
+                </a>
+              </div>
 
-            <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
-              <img src={resourceOrganizations} alt="Resource Organizations" className="w-full h-40 object-cover rounded-lg shadow-md mb-4" />
-              <a
-                href="/resources/organizations"
-                className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
-              >
-                Resource Organizations
-              </a>
+              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+                <img
+                  src={resourceOrganizations}
+                  alt="Resource Organizations"
+                  className="w-full h-40 object-cover rounded-lg shadow-md mb-4"
+                />
+                <a
+                  href="/resources/organizations"
+                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                >
+                  Resource Organizations
+                </a>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </section>

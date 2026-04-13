@@ -2,23 +2,22 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../../hooks/useAuth';
 import api from '../../../utils/api';
-import { 
-  AlertCircle, 
-  Trash2, 
-  User, 
-  Mail, 
-  Bell, 
-  Moon, 
+import {
+  AlertCircle,
+  Trash2,
+  User,
+  Mail,
+  Bell,
+  Moon,
   Globe,
   Leaf,
   Heart,
   Sparkles,
 } from 'lucide-react';
 
-
 const Settings: React.FC = () => {
   const { user } = useAuth();
-  
+
   const [showDeleteForm, setShowDeleteForm] = useState(false);
   const [email, setEmail] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -30,9 +29,11 @@ const Settings: React.FC = () => {
 
   const handleDeleteAccount = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (email !== user?.email) {
-      setError('The email entered does not match our records. Please try again when you feel ready.');
+      setError(
+        'The email entered does not match our records. Please try again when you feel ready.'
+      );
       return;
     }
 
@@ -43,17 +44,20 @@ const Settings: React.FC = () => {
     try {
       await api.delete('/api/auth/user', {
         data: { email },
-        withCredentials: true
+        withCredentials: true,
       });
-      
-      setSuccess('Your account has been gently removed. You will be redirected to our homepage in a moment. Remember, we are always here if you need us.');
-      
+
+      setSuccess(
+        'Your account has been gently removed. You will be redirected to our homepage in a moment. Remember, we are always here if you need us.'
+      );
+
       setTimeout(() => {
         window.location.href = '/';
       }, 3000);
-      
-    } catch  {
-      setError('We encountered a gentle hiccup. Please try again when you feel ready, or reach out to our support team for help.');
+    } catch {
+      setError(
+        'We encountered a gentle hiccup. Please try again when you feel ready, or reach out to our support team for help.'
+      );
       setIsDeleting(false);
     }
   };
@@ -66,40 +70,53 @@ const Settings: React.FC = () => {
           <div className="p-1.5 sm:p-2 bg-emerald-50 rounded-full flex-shrink-0">
             <Leaf className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-500" />
           </div>
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-light text-gray-700 break-words">Your Space</h1>
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-light text-gray-700 break-words">
+            Your Space
+          </h1>
         </div>
         <p className="text-gray-500 text-xs sm:text-sm leading-relaxed max-w-2xl">
-          Take a deep breath. This is your personal area where you can adjust things at your own pace.
+          Take a deep breath. This is your personal area where you can adjust
+          things at your own pace.
         </p>
       </div>
-      
+
       {/* Account Information - Gentle Card */}
       <div className="bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-sm border border-emerald-100 p-4 sm:p-6 mb-4 sm:mb-6 hover:shadow-md transition-all duration-500 w-full">
         <div className="flex items-center gap-2 mb-4 sm:mb-6">
           <div className="p-1.5 sm:p-2 bg-emerald-50 rounded-full flex-shrink-0">
             <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-500" />
           </div>
-          <h2 className="text-base sm:text-lg font-medium text-gray-700 break-words">About You</h2>
+          <h2 className="text-base sm:text-lg font-medium text-gray-700 break-words">
+            About You
+          </h2>
         </div>
-        
+
         <div className="space-y-3 sm:space-y-4">
           <div className="flex items-center gap-3 p-3 bg-emerald-50/50 rounded-xl w-full">
             <div className="p-1.5 bg-emerald-100 rounded-full flex-shrink-0">
               <User className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
             </div>
             <div className="flex-1 min-w-0">
-              <label className="block text-xs text-emerald-600 mb-0.5">Your Name</label>
-              <p className="text-sm sm:text-base text-gray-700 truncate">{user?.name || 'Friend'}</p>
+              <label className="block text-xs text-emerald-600 mb-0.5">
+                Your Name
+              </label>
+              <p className="text-sm sm:text-base text-gray-700 truncate">
+                {user?.name || 'Friend'}
+              </p>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-3 p-3 bg-emerald-50/50 rounded-xl w-full">
             <div className="p-1.5 bg-emerald-100 rounded-full flex-shrink-0">
               <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
             </div>
             <div className="flex-1 min-w-0">
-              <label className="block text-xs text-emerald-600 mb-0.5">Email Address</label>
-              <p className="text-sm sm:text-base text-gray-700 truncate">{user?.email}</p>
+              <label className="block text-xs text-emerald-600 mb-0.5">
+                Email Address
+              </label>
+              <p className="text-sm sm:text-base text-gray-700 truncate">
+                {user?.email}
+              </p>
             </div>
           </div>
         </div>
@@ -111,9 +128,11 @@ const Settings: React.FC = () => {
           <div className="p-1.5 sm:p-2 bg-emerald-50 rounded-full flex-shrink-0">
             <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-500" />
           </div>
-          <h2 className="text-base sm:text-lg font-medium text-gray-700 break-words">Your Comfort Preferences</h2>
+          <h2 className="text-base sm:text-lg font-medium text-gray-700 break-words">
+            Your Comfort Preferences
+          </h2>
         </div>
-        
+
         <div className="space-y-3 sm:space-y-4">
           {/* Gentle Reminders */}
           <div className="flex items-center justify-between p-3 bg-emerald-50/50 rounded-xl w-full gap-2">
@@ -121,7 +140,9 @@ const Settings: React.FC = () => {
               <div className="p-1.5 bg-emerald-100 rounded-full flex-shrink-0">
                 <Bell className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
               </div>
-              <span className="text-sm sm:text-base text-gray-700 truncate">Gentle Reminders</span>
+              <span className="text-sm sm:text-base text-gray-700 truncate">
+                Gentle Reminders
+              </span>
             </div>
             <button
               onClick={() => setReminders(!reminders)}
@@ -144,7 +165,9 @@ const Settings: React.FC = () => {
               <div className="p-1.5 bg-emerald-100 rounded-full flex-shrink-0">
                 <Moon className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
               </div>
-              <span className="text-sm sm:text-base text-gray-700 truncate">Calm Mode</span>
+              <span className="text-sm sm:text-base text-gray-700 truncate">
+                Calm Mode
+              </span>
             </div>
             <button
               onClick={() => setDarkMode(!darkMode)}
@@ -167,7 +190,9 @@ const Settings: React.FC = () => {
               <div className="p-1.5 bg-emerald-100 rounded-full flex-shrink-0">
                 <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
               </div>
-              <span className="text-sm sm:text-base text-gray-700 truncate">Soothing Notifications</span>
+              <span className="text-sm sm:text-base text-gray-700 truncate">
+                Soothing Notifications
+              </span>
             </div>
             <button
               onClick={() => setNotifications(!notifications)}
@@ -192,12 +217,15 @@ const Settings: React.FC = () => {
           <div className="p-1.5 sm:p-2 bg-rose-50 rounded-full flex-shrink-0">
             <Leaf className="w-4 h-4 sm:w-5 sm:h-5 text-rose-400" />
           </div>
-          <h2 className="text-base sm:text-lg font-medium text-rose-600 break-words">Taking a Break</h2>
+          <h2 className="text-base sm:text-lg font-medium text-rose-600 break-words">
+            Taking a Break
+          </h2>
         </div>
-        
+
         <p className="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed break-words">
-          We understand if you need some time away. This will gently remove your information from our space. 
-          Remember, you're always welcome back whenever you feel ready.
+          We understand if you need some time away. This will gently remove your
+          information from our space. Remember, you're always welcome back
+          whenever you feel ready.
         </p>
 
         {!showDeleteForm ? (
@@ -209,17 +237,25 @@ const Settings: React.FC = () => {
             <span className="truncate">I need some time away</span>
           </button>
         ) : (
-          <form onSubmit={handleDeleteAccount} className="bg-rose-50/50 rounded-xl p-4 sm:p-6 border border-rose-100 w-full">
-            <h3 className="font-medium text-rose-700 mb-3 text-sm sm:text-base break-words">This is a big decision</h3>
-            
+          <form
+            onSubmit={handleDeleteAccount}
+            className="bg-rose-50/50 rounded-xl p-4 sm:p-6 border border-rose-100 w-full"
+          >
+            <h3 className="font-medium text-rose-700 mb-3 text-sm sm:text-base break-words">
+              This is a big decision
+            </h3>
+
             <p className="text-xs sm:text-sm text-gray-600 mb-4 break-words">
-              To help us ensure this is really what you want right now, please type your email address:
+              To help us ensure this is really what you want right now, please
+              type your email address:
             </p>
-            
+
             <div className="mb-4 p-3 bg-rose-100/50 rounded-lg w-full">
-              <p className="text-xs sm:text-sm text-rose-700 font-medium break-all">{user?.email}</p>
+              <p className="text-xs sm:text-sm text-rose-700 font-medium break-all">
+                {user?.email}
+              </p>
             </div>
-            
+
             <input
               type="email"
               value={email}
@@ -229,34 +265,39 @@ const Settings: React.FC = () => {
               disabled={isDeleting || success !== null}
               required
             />
-            
+
             {error && (
               <div className="flex items-start gap-2 text-rose-600 text-xs sm:text-sm mb-4 bg-rose-100 p-3 rounded-xl w-full">
                 <AlertCircle size={16} className="mt-0.5 flex-shrink-0" />
                 <span className="flex-1 break-words">{error}</span>
               </div>
             )}
-            
+
             {success && (
               <div className="text-emerald-600 text-xs sm:text-sm mb-4 bg-emerald-100 p-4 rounded-xl text-center w-full">
                 <p className="mb-2 break-words">✨ {success}</p>
-                <p className="text-xs text-emerald-500 break-words">Take all the time you need. We'll be here.</p>
+                <p className="text-xs text-emerald-500 break-words">
+                  Take all the time you need. We'll be here.
+                </p>
               </div>
             )}
-            
+
             <div className="flex flex-col sm:flex-row gap-3 w-full">
               <button
                 type="submit"
                 disabled={isDeleting || success !== null}
                 className={`w-full sm:flex-1 px-4 py-3 bg-rose-400 text-purple-700 rounded-xl text-sm sm:text-base
-                  ${(isDeleting || success !== null) 
-                    ? 'opacity-50 cursor-not-allowed' 
-                    : 'hover:bg-rose-500 active:bg-rose-600 hover:shadow-md'
+                  ${
+                    isDeleting || success !== null
+                      ? 'opacity-50 cursor-not-allowed'
+                      : 'hover:bg-rose-500 active:bg-rose-600 hover:shadow-md'
                   } transition-all duration-300`}
               >
-                <span className="block truncate">{isDeleting ? 'Gently removing...' : 'Yes, I need a break'}</span>
+                <span className="block truncate">
+                  {isDeleting ? 'Gently removing...' : 'Yes, I need a break'}
+                </span>
               </button>
-              
+
               <button
                 type="button"
                 onClick={() => {
@@ -274,8 +315,6 @@ const Settings: React.FC = () => {
           </form>
         )}
       </div>
-
-     
     </div>
   );
 };

@@ -42,7 +42,10 @@ export default function ResourceRoutes() {
       <Route path="how-to-help" element={<ResourceHowToHelp />} />
       <Route path="warning-signs" element={<ResourceWarningSigns />} />
       <Route path="self-management" element={<ResourceSelfManagement />} />
-      <Route path="search-professional" element={<ResourceSearchProfessional />} />
+      <Route
+        path="search-professional"
+        element={<ResourceSearchProfessional />}
+      />
       <Route path="e-counselling" element={<ResourceECounselling />} />
       <Route path="ptsd" element={<ResourcePTSD />} />
       <Route path="grief" element={<ResourceGrief />} />
@@ -53,12 +56,21 @@ export default function ResourceRoutes() {
       <Route path="bereaved-support" element={<ResourceBereavedSupport />} />
       <Route path="organizations" element={<ResourceOrganizations />} />
       <Route path="suicide-loss" element={<ResourceSurvivorsSuicideLoss />} />
-      <Route path="after-suicide-loss" element={<ResourceSurvivorsAfterSuicideLoss />} />
+      <Route
+        path="after-suicide-loss"
+        element={<ResourceSurvivorsAfterSuicideLoss />}
+      />
       <Route path="educators" element={<ResourceEducators />} />
-      <Route path="health-professionals" element={<ResourceHealthProfessionals />} />
+      <Route
+        path="health-professionals"
+        element={<ResourceHealthProfessionals />}
+      />
       <Route path="first-responders" element={<ResourceFirstResponders />} />
       <Route path="care-givers" element={<ResourceCareGivers />} />
-      <Route path="media-professionals" element={<ResourceMediaProfessionals />} />
+      <Route
+        path="media-professionals"
+        element={<ResourceMediaProfessionals />}
+      />
       <Route path="myths-facts" element={<ResourceMythsFacts />} />
       <Route path="refugees" element={<ResourceCommunitiesRefugees />} />
       <Route path="seniors" element={<ResourceCommunitiesSeniors />} />
@@ -67,7 +79,10 @@ export default function ResourceRoutes() {
       <Route path="men" element={<ResourceCommunitiesMen />} />
       <Route path="indigenous" element={<ResourceCommunitiesIndigenous />} />
       <Route path="parents" element={<ResourceCommunitiesParents />} />
-      <Route path="college-students" element={<ResourceCommunitiesCollegeStudents />} />
+      <Route
+        path="college-students"
+        element={<ResourceCommunitiesCollegeStudents />}
+      />
       <Route path="teens-youth" element={<ResourceCommunitiesTeensYouth />} />
       <Route path="workplace" element={<ResourceWorkplace />} />
     </Routes>

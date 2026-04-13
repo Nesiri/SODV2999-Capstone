@@ -2,14 +2,14 @@
 export interface User {
   id: string;
   email: string;
-  name?: string;  // Optional
+  name?: string; // Optional
   avatar?: string;
 }
 
 export interface AuthContextType {
   user: User | null;
   setUser: (user: User | null) => void;
-  onLogout: () => void;  // Add this if it's in your context
+  onLogout: () => void; // Add this if it's in your context
 }
 
 export interface GoogleProfile {

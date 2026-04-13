@@ -5,7 +5,7 @@ import App from './App.tsx';
 import { BrowserRouter } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary.tsx';
 
-//  GLOBAL ERROR HANDLERS 
+//  GLOBAL ERROR HANDLERS
 window.addEventListener('error', (event) => {
   console.error('💥 Global Error:', event.error);
 });

@@ -16,9 +16,7 @@ const MarketingManagerSection: React.FC = () => {
           {/* LEFT COLUMN */}
           <div className="space-y-8 animate-fadeInLeft">
             <h2 className="!text-2xl md:text-4xl lg:text-5xl font-black mb-4">
-              <span className="text-black">
-                Marketing
-              </span>
+              <span className="text-black">Marketing</span>
               <br />
               <span className="text-gray-800 relative">
                 Manager
@@ -78,9 +76,7 @@ const MarketingManagerSection: React.FC = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold flex items-center gap-2">
                 <span className="w-1 h-8 bg-gradient-to-b from-blue-400 to-purple-400 rounded-full"></span>
-                <span className="text-black">
-                  Key Responsibilities
-                </span>
+                <span className="text-black">Key Responsibilities</span>
               </h3>
 
               <ul className="space-y-4">
@@ -113,9 +109,7 @@ const MarketingManagerSection: React.FC = () => {
             <div className="space-y-4 pt-4">
               <h3 className="text-2xl font-bold flex items-center gap-2">
                 <span className="w-1 h-8 bg-gradient-to-b from-purple-400 to-pink-400 rounded-full"></span>
-                <span className="text-black">
-                  Skills & Experience
-                </span>
+                <span className="text-black">Skills & Experience</span>
               </h3>
 
               <p className="text-gray-600 mb-4 leading-relaxed border-l-4 border-purple-200 pl-4 italic">

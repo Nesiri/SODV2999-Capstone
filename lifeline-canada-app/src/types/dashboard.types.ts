@@ -1,8 +1,8 @@
 // types/dashboard.types.ts
-import type { User } from "./auth.types";
+import type { User } from './auth.types';
 
 export interface DashboardLayoutProps {
-  user: User;  // User can have optional name
+  user: User; // User can have optional name
   onLogout: () => void;
 }
 
@@ -13,7 +13,6 @@ export interface SidebarProps {
   navItems: NavItem[];
   onLogout: () => void;
 }
-
 
 export interface NavItem {
   id: string;

@@ -9,31 +9,28 @@ const MentalHealthResources: React.FC = () => {
   );
 
   return (
-    <section className="relative py-24 bg-gradient-to-br from-indigo-50 via-white to-purple-50 min-w-screen">
-      {/* Simplified background elements - reduced blur and opacity for better performance */}
+    <section className="relative py-24 bg-gradient-to-br from-purple-50 via-white to-purple-100 min-w-screen">
+      {/* Simplified background elements - reduced blur and opacity for better performance - NO BLUE */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-10"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-10"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200 rounded-full mix-blend-multiply filter blur-2xl opacity-10"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-600 font-semibold text-sm mb-4">
-            🌟 Mental Health Support
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold !text-[#89009B]  mb-6">
             What Can We{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800">
               Help You
             </span>{' '}
             With?
           </h2>
           <div className="flex justify-center gap-2 mb-6">
-            <div className="w-16 h-1 bg-blue-600 rounded-full"></div>
             <div className="w-16 h-1 bg-purple-600 rounded-full"></div>
+            <div className="w-16 h-1 bg-purple-400 rounded-full"></div>
           </div>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-700 text-lg max-w-2xl mx-auto">
             Discover personalized resources and expert guidance tailored to
             support your unique mental health journey
           </p>
@@ -49,7 +46,7 @@ const MentalHealthResources: React.FC = () => {
           <div className="relative inline-flex group">
             <Link
               to="/resources"
-              className="relative px-10 py-5 bg-gradient-to-r from-yellow-100 via-purple-100 to-blue-50 text-gray-900 text-xl font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-3"
+              className="relative px-10 py-5 !bg-[#89009B]  hover:!bg-purple-700 !text-white text-xl font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-3"
             >
               <span>View More</span>
               <svg
@@ -89,7 +86,7 @@ const MentalHealthResources: React.FC = () => {
           }
         }
 
-        /* Optimized scrollbar - removed gradient for better performance */
+        /* Optimized scrollbar - NO BLUE */
         ::-webkit-scrollbar {
           width: 8px;
         }
@@ -99,12 +96,12 @@ const MentalHealthResources: React.FC = () => {
         }
 
         ::-webkit-scrollbar-thumb {
-          background: #3b82f6;
+          background: #6B46C1;
           border-radius: 10px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-          background: #2563eb;
+          background: #553C9A;
         }
 
         /* Hardware acceleration for smooth scrolling */
