@@ -74,7 +74,7 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
                     <details>
-                        <summary className="cursor-pointer text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+                        <summary className="cursor-pointer text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
                             Canadian Resource Organizations
                         </summary>
 
@@ -174,7 +174,7 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
                     <details>
-                        <summary className="cursor-pointer text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+                        <summary className="cursor-pointer text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
                             Resource Organizations in the USA
                         </summary>
 
@@ -264,7 +264,7 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
                     <details>
-                        <summary className="cursor-pointer text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+                        <summary className="cursor-pointer text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
                             Worldwide Resource Organizations
                         </summary>
 
@@ -293,7 +293,7 @@ const MentalHealthResourcesOrganizations: React.FC = () => {
                 </div>
 
                 <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-                    <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 text-center">
+                    <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700 text-center">
                         Additional Links of Interest on this Site
                     </h2>
 
