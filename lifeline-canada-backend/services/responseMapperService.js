@@ -5,56 +5,121 @@
 
 const chatbotResponses = [
   // CRISIS & SUICIDE (Highest Priority - Priority 10)
-  {
-    keywords: [
-      // Direct statements
-      "suicide", "kill myself", "kill my self", "want to die", 
-      "end my life", "end my existence", "take my life", 
-      "suicidal thoughts", "thinking about suicide",
-      
-      // Emotional state
-      "hopeless", "worthless", "useless", "pointless", "meaningless",
-      "no reason to live", "can't go on", "give up on life",
-      "better off dead", "wish i was dead", "want to end it",
-      "don't see a point", "no point in living", "what's the point",
-      "point in living", "nothing matters", "nothing makes sense",
-      
-      // BURDEN STATEMENTS (Critical for AI matching)
-      "burden", "feel like a burden", "i'm a burden", "burden to everyone",
-      "burden to my family", "burden to others", "being a burden",
-      "better off without me", "everyone would be better off",
-      "people would be happier if i was gone", "no one would miss me",
-      "i'm a burden to everyone", "feel like burden",
-      
-      // Giving up language
-      "i give up", "i quit", "can't do this anymore", "cannot do this",
-      "don't have the strength", "too tired to keep going",
-      "no energy to fight", "done with everything", "had enough",
-      
-      // Isolation and darkness
-      "trapped in darkness", "can't see the light", "no way out",
-      "stuck in this hole", "can't escape my thoughts", "dark place",
-      "deep dark hole", "falling into darkness", "lost in darkness",
-      
-      // Numbness and emptiness
-      "feel empty", "empty inside", "numb inside", "feel nothing",
-      "emotionless", "void inside", "hollow inside", "dead inside",
-      
-      // Self-harm indicators
-      "hurt myself", "harm myself", "self harm", "cut myself",
-      "want to hurt myself", "thinking of hurting myself"
-    ],
-    response: "I'm really concerned about you. Please reach out immediately: Call or text 988 for the Suicide Crisis Helpline. You are not alone.",
-    priority: 10,
-    requiresEscalation: true,
-    links: [
-      { name: "Call 988", path: "tel:988", description: "Free, confidential crisis support" },
-      { name: "Text 988", path: "sms:988", description: "24/7 text support" },
-      { name: "Crisis Support Directory", path: "/incrisisneedhelp", description: "More crisis resources" }
-    ]
-  },
-  
-  // EMERGENCY (Priority 9)
+
+{
+  keywords: [
+    // Direct suicide statements
+    "suicide",
+    "kill myself",
+    "kill my self",
+    "want to die",
+    "end my life",
+    "end my existence",
+    "take my life",
+    "suicidal thoughts",
+    "thinking about suicide",
+    "wish i was dead",
+    "better off dead",
+    "no reason to live",
+    "give up on life",
+    
+    // Self-harm (clear intent)
+    "hurt myself",
+    "harm myself",
+    "self harm",
+    "cut myself",
+    "want to hurt myself",
+    "thinking of hurting myself",
+    
+    // HIGH-RISK SUICIDE INDICATORS (MOVED FROM DISTRESS)
+    "better off without me",
+    "no one would miss me",
+    "everyone would be better off",
+    "people would be happier if i was gone",
+    "people would be happier if i'm gone"
+  ],
+  response: "I'm really concerned about you. Please reach out immediately: Call or text 988 for the Suicide Crisis Helpline. You are not alone.",
+  priority: 10,
+  requiresEscalation: true,
+  links: [
+    { name: "Call 988", path: "tel:988", description: "Free, confidential crisis support" },
+    { name: "Text 988", path: "sms:988", description: "24/7 text support" },
+    { name: "Crisis Support Directory", path: "/incrisisneedhelp", description: "More crisis resources" }
+  ]
+},
+
+// ============================================
+// EMOTIONAL DISTRESS (Priority 6.5) - NO 988 ESCALATION
+// ============================================
+{
+  keywords: [
+    // Emotional state
+    "hopeless",
+    "worthless",
+    "useless",
+    "pointless",
+    "meaningless",
+    "feel empty",
+    "empty inside",
+    "numb inside",
+    "feel nothing",
+    "emotionless",
+    "void inside",
+    "hollow inside",
+    "dead inside",
+    
+    // Giving up language (without suicide)
+    "i give up",
+    "i quit",
+    "can't do this anymore",
+    "cannot do this",
+    "don't have the strength",
+    "too tired to keep going",
+    "done with everything",
+    
+    // Existential distress
+    "don't see a point",
+    "no point in living",
+    "what's the point",
+    "point in living",
+    "nothing makes sense",
+    
+    // Burden feelings (without suicidal conclusion)
+    "burden",
+    "feel like a burden",
+    "i'm a burden",
+    "burden to everyone",
+    "burden to my family",
+    "burden to others",
+    "being a burden",
+    "i'm a burden to everyone",
+    "feel like burden",
+    
+    // Isolation and darkness (metaphorical)
+    "trapped in darkness",
+    "can't see the light",
+    "no way out",
+    "stuck in this hole",
+    "can't escape my thoughts",
+    "dark place",
+    "deep dark hole",
+    "falling into darkness",
+    "lost in darkness",
+    
+    // Action-based giving up (not life)
+    "can't go on"
+  ],
+  response: "I hear that you're going through a really difficult time. You're not alone. Would you like to talk about what's bothering you?",
+  priority: 6.5,
+  requiresEscalation: false,
+  links: [
+    { name: "Depression Resources", path: "/resources/depression", description: "Learn about depression and coping strategies" },
+    { name: "Coping Mechanisms", path: "/pattern-interrupt/coping", description: "Healthy ways to cope" },
+    { name: "Call 988", path: "tel:988", description: "Free, confidential support if you need to talk" }
+  ]
+},
+
+  // EMERGENCY (Priority 9) - keep as is
   {
     keywords: [
       "emergency", "danger", "hurt myself", "hurt my self", 
@@ -69,7 +134,6 @@ const chatbotResponses = [
     requiresEscalation: true,
     links: [{ name: "Call 911", path: "tel:911", description: "Emergency services" }]
   },
-  
   
   
   // PANIC ATTACK (Priority 8)
