@@ -33,6 +33,7 @@ import ResourceCommunitiesIndigenous from '../pages/ResourcePages/ResourceCommun
 import ResourceCommunitiesParents from '../pages/ResourcePages/ResourceCommunitiesParents';
 import ResourceCommunitiesCollegeStudents from '../pages/ResourcePages/ResourceCommunitiesCollegeStudents';
 import ResourceCommunitiesTeensYouth from '../pages/ResourcePages/ResourceCommunitiesTeensYouth';
+import ResourceWorkplace from '../pages/ResourcePages/ResourceWorkplace';
 
 export default function ResourceRoutes() {
   return (
@@ -68,6 +69,7 @@ export default function ResourceRoutes() {
       <Route path="parents" element={<ResourceCommunitiesParents />} />
       <Route path="college-students" element={<ResourceCommunitiesCollegeStudents />} />
       <Route path="teens-youth" element={<ResourceCommunitiesTeensYouth />} />
+      <Route path="workplace" element={<ResourceWorkplace />} />
     </Routes>
   );
 }

@@ -193,6 +193,12 @@ export const resourceCategories = [
         color: 'from-emerald-400 to-green-400',
       },
       {
+        name: 'Workplace Employers',
+        path: '/resources/workplace',
+        icon: '🏢',
+        color: 'from-slate-400 to-gray-400',
+      },
+      {
         name: 'Media Professionals',
         path: '/resources/media-professionals',
         icon: '🎤',
