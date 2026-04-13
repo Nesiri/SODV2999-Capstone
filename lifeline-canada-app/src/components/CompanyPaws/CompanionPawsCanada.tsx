@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import therapyDog from '../../assets/company-paws-130-800x889.png';
-import { Link } from 'react-router-dom';
 
 const CompanionPawsCanada: React.FC = () => {
   const [activeProgram, setActiveProgram] = useState<number | null>(null);
@@ -22,7 +21,7 @@ const CompanionPawsCanada: React.FC = () => {
       description:
         'Find your perfect companion for emotional support and daily wellness.',
       icon: '🐕',
-      color: 'from-purple-500 to-purple-700',
+      color: 'from-[#89009B] to-purple-800',
       bgColor: 'bg-purple-50',
       features: [
         '1-on-1 matching',
@@ -37,8 +36,8 @@ const CompanionPawsCanada: React.FC = () => {
       description:
         'Specially trained therapy dogs for hospitals, schools, and care facilities.',
       icon: '🦮',
-      color: 'from-blue-500 to-indigo-500',
-      bgColor: 'bg-blue-50',
+      color: 'from-[#89009B] to-purple-800',
+      bgColor: 'bg-purple-50',
       features: [
         'Certified therapy dogs',
         'Facility integration training',
@@ -52,8 +51,8 @@ const CompanionPawsCanada: React.FC = () => {
       description:
         'Turn your beloved pet into a certified therapy dog through guided training.',
       icon: '🐾',
-      color: 'from-emerald-500 to-teal-500',
-      bgColor: 'bg-emerald-50',
+      color: 'from-[#89009B] to-purple-800',
+      bgColor: 'bg-purple-50',
       features: [
         'Professional training program',
         'Certification exam',
@@ -63,10 +62,11 @@ const CompanionPawsCanada: React.FC = () => {
     {
       id: 4,
       title: 'Visiting Therapy Dog Requests',
+      link: 'https://companionpaws.ca/visiting-therapy-dog-requests/',
       description:
         'Request certified therapy dog visits for events, schools, or healthcare settings.',
       icon: '🏥',
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-[#89009B] to-purple-800',
       bgColor: 'bg-purple-50',
       features: [
         'Scheduled visits',
@@ -77,11 +77,12 @@ const CompanionPawsCanada: React.FC = () => {
     {
       id: 5,
       title: 'Therapy Dog Training',
+      link: 'https://companionpaws.ca/therapy-dog-training/',
       description:
         'Comprehensive training programs for future therapy dogs and handlers.',
       icon: '🎓',
-      color: 'from-red-500 to-rose-500',
-      bgColor: 'bg-red-50',
+      color: 'from-[#89009B] to-purple-800',
+      bgColor: 'bg-purple-50',
       features: [
         'Obedience training',
         'Behavior assessment',
@@ -91,11 +92,12 @@ const CompanionPawsCanada: React.FC = () => {
     {
       id: 6,
       title: 'Animal-Assisted Therapy',
+      link: 'https://companionpaws.ca/animal-assisted-therapy/',
       description:
         'Structured therapy programs incorporating animals for emotional healing.',
       icon: '❤️',
-      color: 'from-cyan-500 to-sky-500',
-      bgColor: 'bg-cyan-50',
+      color: 'from-[#89009B] to-purple-800',
+      bgColor: 'bg-purple-50',
       features: [
         'Licensed professionals',
         'Individual & group sessions',
@@ -175,7 +177,7 @@ const CompanionPawsCanada: React.FC = () => {
           {/* Floating paw prints - hidden on very small screens */}
           <div className="hidden sm:block absolute top-20 left-10 opacity-5 cp-float-slow">
             <svg
-              className="w-16 sm:w-20 md:w-24 h-auto text-purple-600"
+              className="w-16 sm:w-20 md:w-24 h-auto text-[#89009B]"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -184,7 +186,7 @@ const CompanionPawsCanada: React.FC = () => {
           </div>
           <div className="hidden sm:block absolute bottom-20 right-10 opacity-5 cp-float-slow cp-delay-2000">
             <svg
-              className="w-24 sm:w-28 md:w-32 h-auto text-purple-600"
+              className="w-24 sm:w-28 md:w-32 h-auto text-[#89009B]"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -194,14 +196,14 @@ const CompanionPawsCanada: React.FC = () => {
 
           {/* Gradient orbs - smaller on mobile */}
           <div className="absolute -top-20 sm:-top-40 -right-20 sm:-right-40 w-48 sm:w-64 md:w-80 h-48 sm:h-64 md:h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl sm:blur-3xl opacity-10 sm:opacity-20 cp-blob"></div>
-          <div className="absolute -bottom-20 sm:-bottom-40 -left-20 sm:-left-40 w-48 sm:w-64 md:w-80 h-48 sm:h-64 md:h-80 bg-purple-400 rounded-full mix-blend-multiply filter blur-2xl sm:blur-3xl opacity-10 sm:opacity-20 cp-blob cp-delay-2000"></div>
+          <div className="absolute -bottom-20 sm:-bottom-40 -left-20 sm:-left-40 w-48 sm:w-64 md:w-80 h-48 sm:h-64 md:h-80 bg-[#89009B] rounded-full mix-blend-multiply filter blur-2xl sm:blur-3xl opacity-10 sm:opacity-20 cp-blob cp-delay-2000"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 sm:w-64 md:w-80 h-48 sm:h-64 md:h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl sm:blur-3xl opacity-10 sm:opacity-20 cp-blob cp-delay-4000"></div>
         </div>
 
         {/* Canadian map background - hidden on mobile */}
         <div className="absolute right-0 top-1/2 transform -translate-y-1/2 opacity-5 hidden lg:block">
           <svg
-            className="w-72 xl:w-96 h-auto text-purple-900"
+            className="w-72 xl:w-96 h-auto text-[#89009B]"
             viewBox="0 0 100 100"
             fill="currentColor"
           >
@@ -216,36 +218,34 @@ const CompanionPawsCanada: React.FC = () => {
           >
             {/* Logo/badge */}
             <div className="inline-flex items-center justify-center mb-4 sm:mb-6 relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full blur-xl sm:blur-2xl opacity-30 cp-pulse"></div>
-              <div className="relative w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center shadow-xl sm:shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#89009B] to-purple-800 rounded-full blur-xl sm:blur-2xl opacity-30 cp-pulse"></div>
+              <div className="relative w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-[#89009B] to-purple-800 rounded-full flex items-center justify-center shadow-xl sm:shadow-2xl">
                 <span className="text-2xl sm:text-3xl md:text-4xl">🐕</span>
               </div>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 px-2">
-              <span className="bg-gradient-to-r from-purple-600 to-purple-800 text-transparent bg-clip-text">
+              <span className="bg-gradient-to-r from-[#89009B] to-purple-800 text-transparent bg-clip-text">
                 Companion Paws
-              </span>
-              <br />
-              <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-gray-800">
-                Canada
               </span>
             </h1>
 
             <div className="flex justify-center gap-2 mb-6 sm:mb-8">
-              <div className="w-12 sm:w-14 md:w-16 h-1 bg-purple-500 rounded-full"></div>
+              <div className="w-12 sm:w-14 md:w-16 h-1 bg-[#89009B] rounded-full"></div>
               <div className="w-12 sm:w-14 md:w-16 h-1 bg-purple-600 rounded-full"></div>
-              <div className="w-12 sm:w-14 md:w-16 h-1 bg-purple-500 rounded-full"></div>
+              <div className="w-12 sm:w-14 md:w-16 h-1 bg-[#89009B] rounded-full"></div>
             </div>
 
             <p className="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
-              Companion Paws is dedicated to supporting Canadians in need while
-              also providing a
-              <span className="text-purple-600 font-semibold">
-                {' '}
-                second chance for pets in rescues
+              <span className="text-[#89009B] font-semibold">
+                Certifying compassion.
+              </span>{' '}
+              <span className="text-[#89009B] font-semibold">
+                Rescuing hope.
+              </span>{' '}
+              <span className="text-[#89009B] font-semibold">
+                Supporting Canadians in need.
               </span>
-              .
             </p>
           </div>
 
@@ -256,14 +256,14 @@ const CompanionPawsCanada: React.FC = () => {
               className={`w-full order-2 lg:order-1 space-y-6 sm:space-y-8 transform transition-all duration-1000 cp-delay-300 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}
             >
               <div className="inline-block">
-                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-100 text-purple-700 rounded-full text-xs sm:text-sm font-semibold">
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple-100 text-[#89009B] rounded-full text-xs sm:text-sm font-semibold">
                   🐾 Our Programs
                 </span>
               </div>
 
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 sm:mb-8">
                 Healing Hearts,{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800 block sm:inline">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#89009B] to-purple-800 block sm:inline">
                   One Paw
                 </span>{' '}
                 at a Time
@@ -272,17 +272,14 @@ const CompanionPawsCanada: React.FC = () => {
               {/* Program cards - responsive */}
               <div className="space-y-3 sm:space-y-4">
                 {programs.slice(0, 3).map((program) => (
-                  <Link
-                    to={program?.link ?? '#'}
+                  <a
+                    href={program.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     key={program.id}
-                    className={`group relative overflow-hidden rounded-xl sm:rounded-2xl transition-all duration-500 transform hover:-translate-y-1 hover:shadow-xl sm:hover:shadow-2xl cursor-pointer ${program.bgColor}`}
+                    className={`group relative overflow-hidden rounded-xl sm:rounded-2xl transition-all duration-500 transform hover:-translate-y-1 hover:shadow-xl sm:hover:shadow-2xl cursor-pointer block ${program.bgColor}`}
                     onMouseEnter={() => setActiveProgram(program.id)}
                     onMouseLeave={() => setActiveProgram(null)}
-                    onClick={() =>
-                      setActiveProgram(
-                        program.id === activeProgram ? null : program.id
-                      )
-                    }
                   >
                     <div
                       className={`absolute inset-0 bg-gradient-to-r ${program.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
@@ -297,7 +294,7 @@ const CompanionPawsCanada: React.FC = () => {
                         </div>
 
                         <div className="flex-1 min-w-0">
-                          <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-1 sm:mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-purple-800 transition-all duration-300">
+                          <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-1 sm:mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#89009B] group-hover:to-purple-800 transition-all duration-300">
                             {program.title}
                           </h3>
                           <p className="text-gray-600 text-xs sm:text-sm mb-2 sm:mb-3">
@@ -321,7 +318,7 @@ const CompanionPawsCanada: React.FC = () => {
 
                         {/* Arrow indicator - touch friendly */}
                         <div
-                          className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white shadow-md flex items-center justify-center transform transition-all duration-300 flex-shrink-0 ${activeProgram === program.id ? 'translate-x-1 bg-gradient-to-r from-purple-500 to-purple-700' : ''}`}
+                          className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white shadow-md flex items-center justify-center transform transition-all duration-300 flex-shrink-0 ${activeProgram === program.id ? 'translate-x-1 bg-gradient-to-r from-[#89009B] to-purple-800' : ''}`}
                         >
                           <svg
                             className={`w-3 h-3 sm:w-4 sm:h-4 transition-colors duration-300 ${activeProgram === program.id ? 'text-white' : 'text-gray-400'}`}
@@ -339,15 +336,17 @@ const CompanionPawsCanada: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                  </Link>
+                  </a>
                 ))}
               </div>
 
               {/* View all programs link - mobile friendly */}
               <div className="text-center sm:text-left mt-4">
-                <Link
-                  to="https://companionpaws.ca/"
-                  className="text-purple-600 font-semibold text-sm sm:text-base inline-flex items-center gap-1 group"
+                <a
+                  href="https://companionpaws.ca/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="!text-[#89009B] font-semibold text-sm sm:text-base inline-flex items-center gap-1 group"
                 >
                   <span>View all 6 programs</span>
                   <svg
@@ -363,13 +362,13 @@ const CompanionPawsCanada: React.FC = () => {
                       d="M9 5l7 7-7 7"
                     />
                   </svg>
-                </Link>
+                </a>
               </div>
 
               {/* Availability badge - responsive */}
               <div className="flex items-center gap-2 sm:gap-3 mt-6 sm:mt-8 p-3 sm:p-4 bg-gradient-to-r from-purple-100/50 to-purple-200/50 rounded-xl sm:rounded-2xl backdrop-blur-sm">
                 <div className="relative flex-shrink-0">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-purple-500 rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#89009B] rounded-full flex items-center justify-center">
                     <svg
                       className="w-4 h-4 sm:w-5 sm:h-5 text-white"
                       fill="none"
@@ -388,7 +387,7 @@ const CompanionPawsCanada: React.FC = () => {
                 </div>
                 <p className="text-gray-700 text-xs sm:text-sm md:text-base font-medium">
                   Available in{' '}
-                  <span className="font-bold text-purple-600">
+                  <span className="font-bold text-[#89009B]">
                     all provinces
                   </span>{' '}
                   across Canada
@@ -396,7 +395,7 @@ const CompanionPawsCanada: React.FC = () => {
               </div>
             </div>
 
-            {/* Right column - Image & CTA (shows second on mobile) */}
+            {/* Right column - Image & CTA (shows second on mobile) - REMOVED caption box and stats */}
             <div
               className={`w-full order-1 lg:order-2 relative transform transition-all duration-1000 cp-delay-600 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}
             >
@@ -404,76 +403,15 @@ const CompanionPawsCanada: React.FC = () => {
               <div className="relative group max-w-md mx-auto lg:max-w-full">
                 {/* Decorative elements - smaller on mobile */}
                 <div className="absolute -top-4 sm:-top-6 -left-4 sm:-left-6 w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 bg-purple-200 rounded-full opacity-30 sm:opacity-50 blur-xl sm:blur-2xl cp-pulse"></div>
-                <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 w-20 sm:w-24 md:w-32 h-20 sm:h-24 md:h-32 bg-purple-300 rounded-full opacity-30 sm:opacity-50 blur-xl sm:blur-2xl cp-pulse cp-delay-2000"></div>
+                <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 w-20 sm:w-24 md:w-32 h-20 sm:h-24 md:h-32 bg-[#89009B] rounded-full opacity-30 sm:opacity-50 blur-xl sm:blur-2xl cp-pulse cp-delay-2000"></div>
 
-                {/* Image container */}
+                {/* Image container - removed overlay caption box */}
                 <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl sm:shadow-3xl transform group-hover:scale-[1.02] transition-transform duration-700">
                   <img
                     src={therapyDog}
                     alt="Therapy dog with happy owner"
                     className="w-full h-auto object-cover"
                   />
-
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-
-                  {/* Floating card - mobile optimized */}
-                  <div className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 right-3 sm:right-6 bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 transform translate-y-0 group-hover:-translate-y-2 transition-transform duration-500">
-                    <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-white text-base sm:text-lg">
-                          ❤️
-                        </span>
-                      </div>
-                      <div>
-                        <p className="text-[10px] sm:text-xs text-purple-600 font-semibold">
-                          SECOND CHANCE
-                        </p>
-                        <p className="text-xs sm:text-sm font-bold text-gray-900">
-                          Rescue pets find loving homes
-                        </p>
-                      </div>
-                    </div>
-
-                    <p className="text-gray-600 text-xs sm:text-sm mb-2 sm:mb-3">
-                      Every adoption gives a rescue pet a loving home while
-                      providing essential support to Canadians in need.
-                    </p>
-
-                    <div className="flex items-center gap-2">
-                      <div className="flex -space-x-1.5 sm:-space-x-2">
-                        <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-purple-200 rounded-full border-2 border-white"></div>
-                        <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-purple-300 rounded-full border-2 border-white"></div>
-                        <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-purple-400 rounded-full border-2 border-white"></div>
-                      </div>
-                      <span className="text-[10px] sm:text-xs text-gray-500">
-                        100+ success stories
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Stats card - hidden on mobile, shown on larger screens */}
-              <div className="absolute -bottom-6 sm:-bottom-8 -left-4 sm:-left-8 bg-white rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-3 sm:p-4 hidden md:block">
-                <div className="flex items-center gap-3 sm:gap-4">
-                  <div>
-                    <p className="text-lg sm:text-xl md:text-2xl font-bold text-purple-600">
-                      15+
-                    </p>
-                    <p className="text-[10px] sm:text-xs text-gray-500">
-                      Years of Service
-                    </p>
-                  </div>
-                  <div className="w-px h-8 sm:h-10 bg-gray-200"></div>
-                  <div>
-                    <p className="text-lg sm:text-xl md:text-2xl font-bold text-purple-700">
-                      500+
-                    </p>
-                    <p className="text-[10px] sm:text-xs text-gray-500">
-                      Dogs Placed
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -483,7 +421,7 @@ const CompanionPawsCanada: React.FC = () => {
           <div
             className={`relative mt-16 sm:mt-20 lg:mt-32 text-center transform transition-all duration-1000 cp-delay-900 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-purple-700 rounded-2xl sm:rounded-3xl blur-2xl sm:blur-3xl opacity-20"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#89009B] to-purple-800 rounded-2xl sm:rounded-3xl blur-2xl sm:blur-3xl opacity-20"></div>
 
             <div className="relative bg-white/80 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-2xl sm:shadow-3xl border border-white/50">
               <div className="max-w-3xl mx-auto">
@@ -496,21 +434,21 @@ const CompanionPawsCanada: React.FC = () => {
                   website.
                 </p>
 
-                {/* Website link - mobile friendly */}
+                {/* Website link - Consistent Purple Button */}
                 <div className="relative inline-block group w-full sm:w-auto">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-purple-800 rounded-full blur opacity-70 group-hover:opacity-100 transition duration-300"></div>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-[#89009B] to-purple-800 rounded-full blur opacity-70 group-hover:opacity-100 transition duration-300"></div>
                   <a
                     href="https://companionpaws.ca"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-white text-gray-900 font-bold rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto text-sm sm:text-base"
+                    className="relative inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-[#89009B] to-purple-800 text-white font-bold rounded-full shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto text-sm sm:text-base"
                   >
                     <span className="text-lg sm:text-xl">🐾</span>
-                    <span className="font-black bg-gradient-to-r from-purple-600 to-purple-800 text-transparent bg-clip-text text-sm sm:text-base md:text-lg lg:text-xl">
+                    <span className="font-black text-white text-sm sm:text-base md:text-lg lg:text-xl">
                       COMPANIONPAWS.CA
                     </span>
                     <svg
-                      className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-purple-600 group-hover:translate-x-2 transition-transform flex-shrink-0"
+                      className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white group-hover:translate-x-2 transition-transform flex-shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -529,7 +467,7 @@ const CompanionPawsCanada: React.FC = () => {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 mt-6 sm:mt-8">
                   <div className="flex items-center gap-1.5 sm:gap-2 text-gray-500">
                     <svg
-                      className="w-4 h-4 sm:w-5 sm:h-5 text-green-500"
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-[#89009B]"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -547,7 +485,7 @@ const CompanionPawsCanada: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-1.5 sm:gap-2 text-gray-500">
                     <svg
-                      className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500"
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-[#89009B]"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

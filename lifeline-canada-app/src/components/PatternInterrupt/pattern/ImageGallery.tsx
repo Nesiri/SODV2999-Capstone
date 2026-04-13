@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 type GalleryItem = {
   image: string;
@@ -9,160 +9,161 @@ type GalleryItem = {
 
 const galleryItems: GalleryItem[] = [
   {
-    image: "/images/pattern/image-gallery/you-are-amazing.jpg",
-    alt: "You are amazing quote",
-    title: "You are amazing",
-    height: "h-[280px]",
+    image: '/images/pattern/image-gallery/you-are-amazing.jpg',
+    alt: 'You are amazing quote',
+    title: 'You are amazing',
+    height: 'h-[280px]',
   },
   {
-    image: "/images/pattern/image-gallery/so-many-reasons.jpg",
-    alt: "There are so many reasons to be happy",
-    title: "So many reasons",
-    height: "h-[280px]",
+    image: '/images/pattern/image-gallery/so-many-reasons.jpg',
+    alt: 'There are so many reasons to be happy',
+    title: 'So many reasons',
+    height: 'h-[280px]',
   },
   {
-    image: "/images/pattern/image-gallery/illness-doesnt-define-you.jpg",
+    image: '/images/pattern/image-gallery/illness-doesnt-define-you.jpg',
     alt: "Your illness doesn't define you",
-    title: "Strength and courage",
-    height: "h-[340px]",
+    title: 'Strength and courage',
+    height: 'h-[340px]',
   },
   {
-    image: "/images/pattern/image-gallery/being-sensitive.jpg",
-    alt: "Being sensitive does not make you weak",
-    title: "Sensitivity is not weakness",
-    height: "h-[180px]",
+    image: '/images/pattern/image-gallery/being-sensitive.jpg',
+    alt: 'Being sensitive does not make you weak',
+    title: 'Sensitivity is not weakness',
+    height: 'h-[180px]',
   },
   {
-    image: "/images/pattern/image-gallery/its-okay-not-to-control-everything.jpg",
+    image:
+      '/images/pattern/image-gallery/its-okay-not-to-control-everything.jpg',
     alt: "It's okay not to be in control of everything",
-    title: "Let go a little",
-    height: "h-[150px]",
+    title: 'Let go a little',
+    height: 'h-[150px]',
   },
   {
-    image: "/images/pattern/image-gallery/depression-is-not-a-weakness.jpg",
-    alt: "Depression is not a weakness",
-    title: "Mental illness is real",
-    height: "h-[220px]",
+    image: '/images/pattern/image-gallery/depression-is-not-a-weakness.jpg',
+    alt: 'Depression is not a weakness',
+    title: 'Mental illness is real',
+    height: 'h-[220px]',
   },
   {
-    image: "/images/pattern/image-gallery/open-minds.jpg",
-    alt: "Open minds",
-    title: "Open minds",
-    height: "h-[190px]",
+    image: '/images/pattern/image-gallery/open-minds.jpg',
+    alt: 'Open minds',
+    title: 'Open minds',
+    height: 'h-[190px]',
   },
   {
-    image: "/images/pattern/image-gallery/positive-life-negative-mind.jpg",
+    image: '/images/pattern/image-gallery/positive-life-negative-mind.jpg',
     alt: "You can't live a positive life with a negative mind",
-    title: "Choose your mindset",
-    height: "h-[140px]",
+    title: 'Choose your mindset',
+    height: 'h-[140px]',
   },
   {
-    image: "/images/pattern/image-gallery/music-friends-talk.jpg",
-    alt: "Music friends talk support",
-    title: "Simple supports",
-    height: "h-[170px]",
+    image: '/images/pattern/image-gallery/music-friends-talk.jpg',
+    alt: 'Music friends talk support',
+    title: 'Simple supports',
+    height: 'h-[170px]',
   },
   {
-    image: "/images/pattern/image-gallery/mental-health-commandments.jpg",
-    alt: "10 commandments of mental health",
-    title: "Mental health reminders",
-    height: "h-[210px]",
+    image: '/images/pattern/image-gallery/mental-health-commandments.jpg',
+    alt: '10 commandments of mental health',
+    title: 'Mental health reminders',
+    height: 'h-[210px]',
   },
   {
-    image: "/images/pattern/image-gallery/its-ok-to-ask-for-help.jpg",
+    image: '/images/pattern/image-gallery/its-ok-to-ask-for-help.jpg',
     alt: "It's okay to ask for help",
-    title: "Asking for help",
-    height: "h-[260px]",
+    title: 'Asking for help',
+    height: 'h-[260px]',
   },
   {
-    image: "/images/pattern/image-gallery/never-give-up.jpg",
-    alt: "Like life, never give up",
-    title: "Keep going",
-    height: "h-[210px]",
+    image: '/images/pattern/image-gallery/never-give-up.jpg',
+    alt: 'Like life, never give up',
+    title: 'Keep going',
+    height: 'h-[210px]',
   },
   {
-    image: "/images/pattern/image-gallery/silent-battles.jpg",
+    image: '/images/pattern/image-gallery/silent-battles.jpg',
     alt: "The most important of life's battles are fought silently",
-    title: "Silent battles",
-    height: "h-[170px]",
+    title: 'Silent battles',
+    height: 'h-[170px]',
   },
   {
-    image: "/images/pattern/image-gallery/be-soft.jpg",
-    alt: "Be soft, do not let the world make you hard",
-    title: "Stay soft",
-    height: "h-[290px]",
+    image: '/images/pattern/image-gallery/be-soft.jpg',
+    alt: 'Be soft, do not let the world make you hard',
+    title: 'Stay soft',
+    height: 'h-[290px]',
   },
   {
-    image: "/images/pattern/image-gallery/okay-not-perfect.jpg",
+    image: '/images/pattern/image-gallery/okay-not-perfect.jpg',
     alt: "Remind yourself it's okay not to be perfect",
-    title: "Not perfection",
-    height: "h-[190px]",
+    title: 'Not perfection',
+    height: 'h-[190px]',
   },
   {
-    image: "/images/pattern/image-gallery/if-you-feel-like-crying.jpg",
-    alt: "If you feel like crying try positive thinking",
-    title: "Pause and breathe",
-    height: "h-[180px]",
+    image: '/images/pattern/image-gallery/if-you-feel-like-crying.jpg',
+    alt: 'If you feel like crying try positive thinking',
+    title: 'Pause and breathe',
+    height: 'h-[180px]',
   },
   {
-    image: "/images/pattern/image-gallery/breathe-deeply-live-simply.jpg",
-    alt: "Breathe deeply live simply",
-    title: "Live simply",
-    height: "h-[170px]",
+    image: '/images/pattern/image-gallery/breathe-deeply-live-simply.jpg',
+    alt: 'Breathe deeply live simply',
+    title: 'Live simply',
+    height: 'h-[170px]',
   },
   {
-    image: "/images/pattern/image-gallery/think-positively.jpg",
-    alt: "Think positively speak kindly",
-    title: "Positive words",
-    height: "h-[160px]",
+    image: '/images/pattern/image-gallery/think-positively.jpg',
+    alt: 'Think positively speak kindly',
+    title: 'Positive words',
+    height: 'h-[160px]',
   },
   {
-    image: "/images/pattern/image-gallery/hope-reminds-us-we-are-strong.jpg",
-    alt: "Hope reminds us we are strong",
-    title: "Hope reminds",
-    height: "h-[230px]",
+    image: '/images/pattern/image-gallery/hope-reminds-us-we-are-strong.jpg',
+    alt: 'Hope reminds us we are strong',
+    title: 'Hope reminds',
+    height: 'h-[230px]',
   },
   {
-    image: "/images/pattern/image-gallery/embracing-vulnerability.jpg",
-    alt: "Embracing vulnerability",
-    title: "Vulnerability and support",
-    height: "h-[150px]",
+    image: '/images/pattern/image-gallery/embracing-vulnerability.jpg',
+    alt: 'Embracing vulnerability',
+    title: 'Vulnerability and support',
+    height: 'h-[150px]',
   },
   {
-    image: "/images/pattern/image-gallery/three-cs-life.jpg",
+    image: '/images/pattern/image-gallery/three-cs-life.jpg',
     alt: "The three C's of life",
-    title: "Choices chances changes",
-    height: "h-[140px]",
+    title: 'Choices chances changes',
+    height: 'h-[140px]',
   },
   {
-    image: "/images/pattern/image-gallery/self-forgiveness.jpg",
-    alt: "Self-forgiveness is essential for self-healing",
-    title: "Self-forgiveness",
-    height: "h-[260px]",
+    image: '/images/pattern/image-gallery/self-forgiveness.jpg',
+    alt: 'Self-forgiveness is essential for self-healing',
+    title: 'Self-forgiveness',
+    height: 'h-[260px]',
   },
   {
-    image: "/images/pattern/image-gallery/today-i-will-do-my-best.jpg",
-    alt: "Today I will do my best",
-    title: "Do your best",
-    height: "h-[120px]",
+    image: '/images/pattern/image-gallery/today-i-will-do-my-best.jpg',
+    alt: 'Today I will do my best',
+    title: 'Do your best',
+    height: 'h-[120px]',
   },
   {
-    image: "/images/pattern/image-gallery/you-never-know-how-strong.jpg",
-    alt: "You never know how strong you are",
-    title: "Hidden strength",
-    height: "h-[150px]",
+    image: '/images/pattern/image-gallery/you-never-know-how-strong.jpg',
+    alt: 'You never know how strong you are',
+    title: 'Hidden strength',
+    height: 'h-[150px]',
   },
   {
-    image: "/images/pattern/image-gallery/sometimes-you-need-bad-days.jpg",
-    alt: "Sometimes you need bad days",
-    title: "Good days and bad days",
-    height: "h-[240px]",
+    image: '/images/pattern/image-gallery/sometimes-you-need-bad-days.jpg',
+    alt: 'Sometimes you need bad days',
+    title: 'Good days and bad days',
+    height: 'h-[240px]',
   },
   {
-    image: "/images/pattern/image-gallery/love-yourself.jpg",
-    alt: "Love yourself trust yourself forgive yourself",
-    title: "Love yourself",
-    height: "h-[160px]",
+    image: '/images/pattern/image-gallery/love-yourself.jpg',
+    alt: 'Love yourself trust yourself forgive yourself',
+    title: 'Love yourself',
+    height: 'h-[160px]',
   },
 ];
 
@@ -179,7 +180,7 @@ function GalleryCard({ item }: { item: GalleryItem }) {
         <img
           src={item.image}
           alt={item.alt}
-          className={`w-full object-cover ${item.height || "h-[220px]"} transition duration-300 group-hover:scale-[1.02]`}
+          className={`w-full object-cover ${item.height || 'h-[220px]'} transition duration-300 group-hover:scale-[1.02]`}
         />
       </div>
     </a>
@@ -193,8 +194,8 @@ export default function ImageGallery() {
         <div className="mb-6 text-sm text-slate-500">
           <Link to="/pattern" className="text-blue-600 hover:underline">
             Pattern Interrupts
-          </Link>{" "}
-          <span className="text-slate-400">/</span>{" "}
+          </Link>{' '}
+          <span className="text-slate-400">/</span>{' '}
           <span className="text-slate-700">Image Gallery</span>
         </div>
 

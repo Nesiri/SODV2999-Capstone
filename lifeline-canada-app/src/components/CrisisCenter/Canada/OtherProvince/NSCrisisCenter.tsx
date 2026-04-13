@@ -21,20 +21,20 @@ const NSCrisisCentres: React.FC = () => {
         {/* Header Section with Flag */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-12 mb-12">
           {/* Text Container */}
-          <div className="flex-1 text-center sm:text-left space-y-3 sm:space-y-4">
-            <div className="inline-block sm:block mx-auto sm:mx-0">
-              <span className="hidden sm:inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-white/40 backdrop-blur-sm rounded-full text-xs sm:text-sm font-semibold text-[#4a6fa5] border border-white/60 shadow-sm mb-2 sm:mb-3">
-                🇨🇦 Nova Scotia
-              </span>
-            </div>
+<div className="flex-1 text-center sm:text-left space-y-3 sm:space-y-4">
+  <div className="inline-block sm:block mx-auto sm:mx-0">
+    <span className="hidden sm:inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-white/40 backdrop-blur-sm rounded-full text-xs sm:text-sm font-semibold text-[#B266C9] border border-white/60 shadow-sm mb-2 sm:mb-3">
+      🇨🇦 Nova Scotia
+    </span>
+  </div>
 
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium leading-tight text-gray-900">
-              <span className="block">Nova Scotia</span>
-              <span className="block text-transparent bg-gradient-to-r from-[#4a6fa5] to-[#6b8cbc] bg-clip-text text-4xl xs:text-5xl sm:text-5xl md:text-6xl lg:text-7xl mt-1 sm:mt-2">
-                Crisis Centres
-              </span>
-            </h1>
-          </div>
+  <h1 className="text-3xl xs:text-4xl sm:text-5xl font-serif font-medium leading-tight !text-[#89009B]">
+    <span className="block">Nova Scotia</span>
+    <span className="block text-transparent bg-[#B266C9] bg-clip-text text-3xl xs:text-5xl sm:text-5xl mt-1 sm:mt-2">
+      Crisis Centres
+    </span>
+  </h1>
+</div>
 
           {/* Image Container */}
           <div className="flex-1 flex justify-center sm:justify-end mt-4 sm:mt-0">

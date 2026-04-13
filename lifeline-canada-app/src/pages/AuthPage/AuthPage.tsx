@@ -20,7 +20,7 @@ const AuthPage: React.FC = () => {
 
   console.log({ GOOGLE_CLIENT_ID });
 
-  alert("Use this test email to login:\nEmail: test@gmail.com");
+  alert('Use this test email to login:\nEmail: test@gmail.com');
 
   const handleSocialLogin = async (
     provider: string,

@@ -19,17 +19,15 @@ const MBWideCrisisCentres: React.FC = () => {
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-6xl max-h-96 bg-gradient-to-r from-transparent via-white/10 to-transparent blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-serif bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 bg-clip-text text-transparent px-4">
-            Manitoba
-            <span className="block text-transparent bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 bg-clip-text text-2xl sm:text-3xl lg:text-4xl xl:text-5xl mt-2">
-              Province Wide Crisis Centres
-            </span>
-          </h1>
-
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-600/50 via-pink-600/50 to-purple-600/50 rounded-full mx-auto mt-6"></div>
-        </div>
+       {/* Header */}
+<div className="text-center mb-12 sm:mb-16 lg:mb-20">
+  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif !bg-[#89009B] bg-clip-text text-transparent px-4">
+    Manitoba Province
+    <span className="block text-transparent bg-[#B266C9] bg-clip-text text-2xl sm:text-3xl lg:text-4xl mt-2">
+    Wide Crisis Centres
+    </span>
+  </h1>
+</div>
 
         {/* Centered Card */}
         <div className="flex justify-center">

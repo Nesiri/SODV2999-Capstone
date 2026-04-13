@@ -1,11 +1,5 @@
 // data/navigationData.tsx
-import {
-  Home,
-  Activity,
-  Wind,
-  BookOpen,
-  Settings,
-} from 'lucide-react';
+import { Home, Activity, Wind, BookOpen, Settings } from 'lucide-react';
 import type { NavItem } from '../types/dashboard.types';
 
 export const mainNavItems: NavItem[] = [
@@ -34,7 +28,6 @@ export const mainNavItems: NavItem[] = [
     path: '/dashboard/resources',
   },
 
-
   {
     id: 'settings',
     icon: <Settings size={20} />,
@@ -42,6 +35,3 @@ export const mainNavItems: NavItem[] = [
     path: '/dashboard/settings',
   },
 ];
-
-
-

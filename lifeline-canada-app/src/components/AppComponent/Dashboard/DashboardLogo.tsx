@@ -1,4 +1,4 @@
-import Logo from '../../Header/Logo'
+import Logo from '../../Header/Logo';
 
 export default function DashboardLogo() {
   return (
@@ -11,7 +11,7 @@ export default function DashboardLogo() {
         {/* Main Logo Container */}
         <div className="relative flex items-center justify-center">
           {/* Logo Component with custom sizing and disabled click */}
-          <div 
+          <div
             className="scale-75 md:scale-90 transform"
             onClick={(e) => {
               e.preventDefault();

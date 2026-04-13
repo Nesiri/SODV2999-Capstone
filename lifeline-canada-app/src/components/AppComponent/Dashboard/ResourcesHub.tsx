@@ -1,19 +1,28 @@
 // components/AppComponent/Dashboard/ResourcesHub.tsx
-import React, { useState, useMemo, useEffect, useCallback, useRef } from 'react';
+import React, {
+  useState,
+  useMemo,
+  useEffect,
+  useCallback,
+  useRef,
+} from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Heart, 
-  BookOpen, 
+import {
+  Search,
+  Heart,
+  BookOpen,
   X,
   ChevronLeft,
   ChevronRight,
   Compass,
   Feather,
   Eye,
-  CheckCircle
+  CheckCircle,
 } from 'lucide-react';
-import { getAllResourceLinks, getAllPatternInterruptLinks } from '../../../navigation/nav';
+import {
+  getAllResourceLinks,
+  getAllPatternInterruptLinks,
+} from '../../../navigation/nav';
 
 interface ReadResource {
   path: string;
@@ -27,7 +36,9 @@ const ResourcesHub: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [savedView, setSavedView] = useState(false);
   const [savedResources, setSavedResources] = useState<Set<string>>(new Set());
-  const [readResources, setReadResources] = useState<Map<string, ReadResource>>(new Map());
+  const [readResources, setReadResources] = useState<Map<string, ReadResource>>(
+    new Map()
+  );
   const [showSavedToast, setShowSavedToast] = useState(false);
   const [showReadToast, setShowReadToast] = useState(false);
   const [lastSavedResource, setLastSavedResource] = useState<string>('');
@@ -36,7 +47,7 @@ const ResourcesHub: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(9);
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
-  
+
   const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const categoryScrollRef = useRef<HTMLDivElement>(null);
 
@@ -56,7 +67,7 @@ const ResourcesHub: React.FC = () => {
           const savedPaths = JSON.parse(saved);
           setSavedResources(new Set(savedPaths));
         }
-        
+
         const read = localStorage.getItem('readResources');
         if (read) {
           const readData = JSON.parse(read);
@@ -72,7 +83,7 @@ const ResourcesHub: React.FC = () => {
         setIsLoading(false);
       }
     };
-    
+
     loadSavedResources();
 
     // Handle responsive items per page
@@ -87,7 +98,7 @@ const ResourcesHub: React.FC = () => {
         setItemsPerPage(9);
       }
     };
-    
+
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -100,17 +111,20 @@ const ResourcesHub: React.FC = () => {
         clearTimeout(debounceTimer.current);
       }
       debounceTimer.current = setTimeout(() => {
-        localStorage.setItem('savedResources', JSON.stringify(Array.from(savedResources)));
-        
+        localStorage.setItem(
+          'savedResources',
+          JSON.stringify(Array.from(savedResources))
+        );
+
         // Save read resources as array with full details
         const readArray = Array.from(readResources.values());
         localStorage.setItem('readResources', JSON.stringify(readArray));
-        
+
         // Dispatch custom event for ActivityList to update
         window.dispatchEvent(new CustomEvent('dataUpdated'));
       }, 300);
     }
-    
+
     return () => {
       if (debounceTimer.current) {
         clearTimeout(debounceTimer.current);
@@ -126,34 +140,37 @@ const ResourcesHub: React.FC = () => {
   // Get unique categories with counts (memoized) - removed numbers from categories
   const categories = useMemo(() => {
     const catMap = new Map<string, number>();
-    allResources.forEach(r => {
+    allResources.forEach((r) => {
       if (r.category) {
         catMap.set(r.category, (catMap.get(r.category) || 0) + 1);
       }
     });
-    const cats = Array.from(catMap.entries()).map(([name, count]) => ({ name, count }));
+    const cats = Array.from(catMap.entries()).map(([name, count]) => ({
+      name,
+      count,
+    }));
     return [{ name: 'all', count: allResources.length }, ...cats];
   }, [allResources]);
 
   // Direct filtering without cache - just use useMemo
   const filteredResources = useMemo(() => {
     let filtered = allResources;
-    
+
     if (savedView) {
-      filtered = filtered.filter(r => savedResources.has(r.path));
+      filtered = filtered.filter((r) => savedResources.has(r.path));
     }
-    
+
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(r => r.category === selectedCategory);
+      filtered = filtered.filter((r) => r.category === selectedCategory);
     }
-    
+
     if (searchTerm) {
       const lowerSearchTerm = searchTerm.toLowerCase();
-      filtered = filtered.filter(r => 
+      filtered = filtered.filter((r) =>
         r.name.toLowerCase().includes(lowerSearchTerm)
       );
     }
-    
+
     return filtered;
   }, [allResources, savedView, savedResources, selectedCategory, searchTerm]);
 
@@ -173,10 +190,10 @@ const ResourcesHub: React.FC = () => {
   }, []);
 
   const toggleSave = useCallback((path: string, name: string) => {
-    setSavedResources(prev => {
+    setSavedResources((prev) => {
       const newSet = new Set(prev);
       const isSaving = !newSet.has(path);
-      
+
       if (isSaving) {
         newSet.add(path);
         setLastSavedResource(name);
@@ -185,23 +202,23 @@ const ResourcesHub: React.FC = () => {
       } else {
         newSet.delete(path);
       }
-      
+
       return newSet;
     });
   }, []);
 
   const markAsRead = useCallback((path: string, name: string) => {
-    setReadResources(prev => {
+    setReadResources((prev) => {
       const newMap = new Map(prev);
       const isMarkingRead = !newMap.has(path);
-      
+
       if (isMarkingRead) {
         // Save resource with name and current date
         const readResource: ReadResource = {
           path: path,
           name: name,
           date: new Date().toISOString(),
-          timestamp: Date.now()
+          timestamp: Date.now(),
         };
         newMap.set(path, readResource);
         setLastReadResource(name);
@@ -210,14 +227,17 @@ const ResourcesHub: React.FC = () => {
       } else {
         newMap.delete(path);
       }
-      
+
       return newMap;
     });
   }, []);
 
-  const handleSearchChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value);
-  }, []);
+  const handleSearchChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setSearchTerm(e.target.value);
+    },
+    []
+  );
 
   const clearSearch = useCallback(() => {
     setSearchTerm('');
@@ -228,40 +248,46 @@ const ResourcesHub: React.FC = () => {
   }, []);
 
   const handleSavedViewToggle = useCallback(() => {
-    setSavedView(prev => !prev);
+    setSavedView((prev) => !prev);
   }, []);
 
   const scrollCategories = useCallback((direction: 'left' | 'right') => {
     if (categoryScrollRef.current) {
       const scrollAmount = direction === 'left' ? -200 : 200;
-      categoryScrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      categoryScrollRef.current.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth',
+      });
     }
   }, []);
 
   const getCategoryColor = useCallback((category?: string) => {
     const colors: Record<string, string> = {
       'Mental Health Topics': 'from-blue-400 to-cyan-400',
-      'Survivors': 'from-purple-400 to-pink-400',
-      'Communities': 'from-emerald-400 to-teal-400',
-      'Professionals': 'from-indigo-400 to-blue-400',
-      'insights': 'from-gray-400 to-slate-400',
+      Survivors: 'from-purple-400 to-pink-400',
+      Communities: 'from-emerald-400 to-teal-400',
+      Professionals: 'from-indigo-400 to-blue-400',
+      insights: 'from-gray-400 to-slate-400',
       'Mood & Inspiration': 'from-amber-400 to-orange-400',
-      'Self Help & Tools': 'from-teal-400 to-emerald-400'
+      'Self Help & Tools': 'from-teal-400 to-emerald-400',
     };
     return colors[category || ''] || 'from-teal-400 to-emerald-400';
   }, []);
 
   // Pre-compute stats to avoid recalculation
-  const stats = useMemo(() => ({
-    total: allResources.length,
-    saved: savedResources.size,
-    read: readResources.size
-  }), [allResources, savedResources, readResources]);
+  const stats = useMemo(
+    () => ({
+      total: allResources.length,
+      saved: savedResources.size,
+      read: readResources.size,
+    }),
+    [allResources, savedResources, readResources]
+  );
 
   // Calming gradient backgrounds for cards
   const getCardGradient = (featured: boolean, isHovered: boolean) => {
     if (featured) {
-      return isHovered 
+      return isHovered
         ? 'bg-gradient-to-br from-white via-amber-50/30 to-amber-100/20'
         : 'bg-gradient-to-br from-white to-amber-50/10';
     }
@@ -294,7 +320,9 @@ const ResourcesHub: React.FC = () => {
             className="fixed bottom-4 left-3 right-3 sm:left-auto sm:right-6 z-50 bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-3 sm:px-6 py-2.5 sm:py-3 rounded-xl shadow-lg flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base"
           >
             <Heart size={14} fill="white" className="sm:w-4 sm:h-4" />
-            <span className="truncate text-sm sm:text-base">Saved "{lastSavedResource}" to your library</span>
+            <span className="truncate text-sm sm:text-base">
+              Saved "{lastSavedResource}" to your library
+            </span>
           </motion.div>
         )}
       </AnimatePresence>
@@ -309,7 +337,9 @@ const ResourcesHub: React.FC = () => {
             className="fixed bottom-20 left-3 right-3 sm:left-auto sm:right-6 z-50 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 sm:px-6 py-2.5 sm:py-3 rounded-xl shadow-lg flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base"
           >
             <CheckCircle size={14} className="sm:w-4 sm:h-4" />
-            <span className="truncate text-sm sm:text-base">Marked "{lastReadResource}" as read</span>
+            <span className="truncate text-sm sm:text-base">
+              Marked "{lastReadResource}" as read
+            </span>
           </motion.div>
         )}
       </AnimatePresence>
@@ -321,10 +351,15 @@ const ResourcesHub: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 bg-gradient-to-r from-teal-50 to-emerald-50 rounded-full mb-2 sm:mb-3 md:mb-4"
         >
-          <Feather size={12} className="text-teal-600 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4" />
-          <span className="text-[11px] sm:text-xs md:text-sm text-teal-600 font-medium">Gentle Guidance</span>
+          <Feather
+            size={12}
+            className="text-teal-600 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4"
+          />
+          <span className="text-[11px] sm:text-xs md:text-sm text-teal-600 font-medium">
+            Gentle Guidance
+          </span>
         </motion.div>
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
@@ -335,18 +370,19 @@ const ResourcesHub: React.FC = () => {
             Inner Peace
           </span>
         </motion.h1>
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           className="text-xs sm:text-sm md:text-base text-slate-500 max-w-2xl mx-auto px-3 sm:px-4"
         >
-          Take a deep breath. Here you'll find gentle resources and tools to support your mental wellness journey
+          Take a deep breath. Here you'll find gentle resources and tools to
+          support your mental wellness journey
         </motion.p>
       </div>
 
       {/* Stats Cards - Added Read counter */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
@@ -355,23 +391,37 @@ const ResourcesHub: React.FC = () => {
         <div className="bg-gradient-to-br from-teal-50/50 to-emerald-50/50 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 border border-teal-100/50 hover:shadow-md transition-all duration-300">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[10px] sm:text-xs md:text-sm text-teal-600 mb-0.5 sm:mb-1">Resources Available</p>
-              <p className="text-xl sm:text-2xl md:text-3xl font-light text-slate-800">{stats.total}</p>
+              <p className="text-[10px] sm:text-xs md:text-sm text-teal-600 mb-0.5 sm:mb-1">
+                Resources Available
+              </p>
+              <p className="text-xl sm:text-2xl md:text-3xl font-light text-slate-800">
+                {stats.total}
+              </p>
             </div>
             <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/60 rounded-lg sm:rounded-xl flex items-center justify-center">
-              <BookOpen size={16} className="text-teal-500 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+              <BookOpen
+                size={16}
+                className="text-teal-500 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />
             </div>
           </div>
         </div>
-        
+
         <div className="bg-gradient-to-br from-rose-50/50 to-pink-50/50 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 border border-rose-100/50 hover:shadow-md transition-all duration-300">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[10px] sm:text-xs md:text-sm text-rose-600 mb-0.5 sm:mb-1">Saved for Later</p>
-              <p className="text-xl sm:text-2xl md:text-3xl font-light text-slate-800">{stats.saved}</p>
+              <p className="text-[10px] sm:text-xs md:text-sm text-rose-600 mb-0.5 sm:mb-1">
+                Saved for Later
+              </p>
+              <p className="text-xl sm:text-2xl md:text-3xl font-light text-slate-800">
+                {stats.saved}
+              </p>
             </div>
             <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/60 rounded-lg sm:rounded-xl flex items-center justify-center">
-              <Heart size={16} className="text-rose-400 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+              <Heart
+                size={16}
+                className="text-rose-400 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />
             </div>
           </div>
         </div>
@@ -379,18 +429,25 @@ const ResourcesHub: React.FC = () => {
         <div className="bg-gradient-to-br from-indigo-50/50 to-purple-50/50 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 border border-indigo-100/50 hover:shadow-md transition-all duration-300">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[10px] sm:text-xs md:text-sm text-indigo-600 mb-0.5 sm:mb-1">Marked as Read</p>
-              <p className="text-xl sm:text-2xl md:text-3xl font-light text-slate-800">{stats.read}</p>
+              <p className="text-[10px] sm:text-xs md:text-sm text-indigo-600 mb-0.5 sm:mb-1">
+                Marked as Read
+              </p>
+              <p className="text-xl sm:text-2xl md:text-3xl font-light text-slate-800">
+                {stats.read}
+              </p>
             </div>
             <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/60 rounded-lg sm:rounded-xl flex items-center justify-center">
-              <Eye size={16} className="text-indigo-400 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+              <Eye
+                size={16}
+                className="text-indigo-400 sm:w-5 sm:h-5 md:w-6 md:h-6"
+              />
             </div>
           </div>
         </div>
       </motion.div>
 
       {/* Search and Filter Bar */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
@@ -398,7 +455,10 @@ const ResourcesHub: React.FC = () => {
       >
         {/* Search Input */}
         <div className="relative">
-          <Search className="absolute left-2.5 sm:left-3 md:left-4 top-1/2 transform -translate-y-1/2 text-slate-400" size={16} />
+          <Search
+            className="absolute left-2.5 sm:left-3 md:left-4 top-1/2 transform -translate-y-1/2 text-slate-400"
+            size={16}
+          />
           <input
             type="text"
             placeholder="Search by title or topic..."
@@ -428,7 +488,7 @@ const ResourcesHub: React.FC = () => {
               backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'right 0.75rem center',
-              backgroundSize: '0.875rem'
+              backgroundSize: '0.875rem',
             }}
           >
             {categories.map((cat) => (
@@ -451,8 +511,8 @@ const ResourcesHub: React.FC = () => {
                 <ChevronLeft size={18} />
               </button>
             )}
-            
-            <div 
+
+            <div
               ref={categoryScrollRef}
               className="flex flex-nowrap gap-1.5 sm:gap-2 overflow-x-auto scrollbar-hide py-1"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
@@ -463,9 +523,10 @@ const ResourcesHub: React.FC = () => {
                   onClick={() => handleCategoryChange(cat.name)}
                   className={`
                     group relative px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap flex-shrink-0
-                    ${selectedCategory === cat.name 
-                      ? `bg-gradient-to-r ${getCategoryColor(cat.name === 'all' ? undefined : cat.name)} text-white shadow-md` 
-                      : 'bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-slate-50 border border-slate-200'
+                    ${
+                      selectedCategory === cat.name
+                        ? `bg-gradient-to-r ${getCategoryColor(cat.name === 'all' ? undefined : cat.name)} text-white shadow-md`
+                        : 'bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-slate-50 border border-slate-200'
                     }
                   `}
                 >
@@ -473,7 +534,7 @@ const ResourcesHub: React.FC = () => {
                 </button>
               ))}
             </div>
-            
+
             {categories.length > 5 && (
               <button
                 onClick={() => scrollCategories('right')}
@@ -492,9 +553,10 @@ const ResourcesHub: React.FC = () => {
             onClick={handleSavedViewToggle}
             className={`
               flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 rounded-full font-medium transition-all duration-300 text-xs sm:text-sm
-              ${savedView 
-                ? '!bg-gradient-to-r from-rose-400 to-pink-400 text-white shadow-md' 
-                : '!bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-slate-50 border border-slate-200'
+              ${
+                savedView
+                  ? '!bg-gradient-to-r from-rose-400 to-pink-400 text-white shadow-md'
+                  : '!bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-slate-50 border border-slate-200'
               }
             `}
           >
@@ -503,10 +565,10 @@ const ResourcesHub: React.FC = () => {
           </button>
         </div>
       </motion.div>
-     
+
       {/* Resources Grid */}
       <AnimatePresence mode="wait">
-        <motion.div 
+        <motion.div
           key={`${savedView}-${selectedCategory}-${searchTerm}-${currentPage}`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -516,7 +578,7 @@ const ResourcesHub: React.FC = () => {
           {paginatedResources.map((resource, index) => {
             const isRead = readResources.has(resource.path);
             const isSaved = savedResources.has(resource.path);
-            
+
             return (
               <motion.div
                 key={resource.path}
@@ -527,14 +589,20 @@ const ResourcesHub: React.FC = () => {
                 onHoverStart={() => setHoveredCard(resource.path)}
                 onHoverEnd={() => setHoveredCard(null)}
                 className="group h-full cursor-pointer"
-                onClick={() => window.location.href = resource.path.startsWith("/") ? resource.path : "/" + resource.path}
+                onClick={() =>
+                  (window.location.href = resource.path.startsWith('/')
+                    ? resource.path
+                    : '/' + resource.path)
+                }
               >
-                <div className={`
+                <div
+                  className={`
                   relative h-full flex flex-col rounded-xl sm:rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 
                   border border-slate-100 overflow-hidden
                   ${getCardGradient(resource.featured || false, hoveredCard === resource.path)}
                   ${isRead ? 'ring-1 ring-indigo-200 bg-indigo-50/5' : ''}
-                `}>
+                `}
+                >
                   {/* Read indicator overlay */}
                   {isRead && (
                     <div className="absolute top-3 right-3 z-10">
@@ -543,29 +611,34 @@ const ResourcesHub: React.FC = () => {
                       </div>
                     </div>
                   )}
-                  
+
                   {/* Calming Background Pattern */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                     <div className="absolute inset-0 !bg-gradient-to-br from-teal-50/30 to-emerald-50/30" />
                   </div>
-                  
+
                   {/* Subtle Border Glow */}
-                  <div className={`
+                  <div
+                    className={`
                     absolute inset-0 rounded-xl sm:rounded-2xl pointer-events-none transition-opacity duration-300
                     ${hoveredCard === resource.path ? 'ring-2 ring-teal-300/50 ring-offset-1' : ''}
-                  `} />
-                  
+                  `}
+                  />
+
                   {/* Header Section */}
                   <div className="relative p-4 sm:p-5 md:p-6 pb-2 sm:pb-3">
                     <div className="flex items-start justify-between">
-                      <motion.div 
+                      <motion.div
                         className={`
                           w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center text-2xl sm:text-3xl md:text-4xl
                           bg-gradient-to-br ${resource.color || getCategoryColor(resource.category)}
                           shadow-md group-hover:scale-110 transition-all duration-500
                           ${isRead ? 'opacity-75' : ''}
                         `}
-                        whileHover={{ rotate: [0, -5, 5, 0], transition: { duration: 0.5 } }}
+                        whileHover={{
+                          rotate: [0, -5, 5, 0],
+                          transition: { duration: 0.5 },
+                        }}
                       >
                         {resource.icon}
                       </motion.div>
@@ -577,24 +650,30 @@ const ResourcesHub: React.FC = () => {
                         whileTap={{ scale: 0.9 }}
                         className={`
                           p-1.5 sm:p-2 rounded-full transition-all duration-300
-                          ${isSaved 
-                            ? 'bg-rose-100 text-rose-500 hover:bg-rose-200' 
-                            : 'bg-slate-50 text-slate-400 hover:bg-rose-50 hover:text-rose-500'
+                          ${
+                            isSaved
+                              ? 'bg-rose-100 text-rose-500 hover:bg-rose-200'
+                              : 'bg-slate-50 text-slate-400 hover:bg-rose-50 hover:text-rose-500'
                           }
                         `}
                       >
-                        <Heart size={16} fill={isSaved ? 'currentColor' : 'none'} />
+                        <Heart
+                          size={16}
+                          fill={isSaved ? 'currentColor' : 'none'}
+                        />
                       </motion.button>
                     </div>
                   </div>
-                  
+
                   {/* Content Section */}
                   <div className="relative flex-1 px-4 sm:px-5 md:px-6 pb-3 sm:pb-4">
-                    <h3 className={`text-base sm:text-lg md:text-xl font-medium mb-2 group-hover:text-teal-700 transition-colors line-clamp-2 min-h-[3.5rem] ${isRead ? 'text-slate-600' : 'text-slate-800'}`}>
+                    <h3
+                      className={`text-base sm:text-lg md:text-xl font-medium mb-2 group-hover:text-teal-700 transition-colors line-clamp-2 min-h-[3.5rem] ${isRead ? 'text-slate-600' : 'text-slate-800'}`}
+                    >
                       {resource.name}
                     </h3>
                   </div>
-                  
+
                   {/* Action Buttons */}
                   <div className="relative px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6 mt-auto">
                     <div className="flex gap-2">
@@ -606,9 +685,10 @@ const ResourcesHub: React.FC = () => {
                           }}
                           className={`
                             flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300
-                            ${isRead 
-                              ? '!bg-indigo-100 text-indigo-700 cursor-default' 
-                              : '!bg-indigo-500 !text-white shadow-md hover:shadow-lg'
+                            ${
+                              isRead
+                                ? '!bg-indigo-100 text-indigo-700 cursor-default'
+                                : '!bg-indigo-500 !text-white shadow-md hover:shadow-lg'
                             }
                           `}
                         >
@@ -636,7 +716,7 @@ const ResourcesHub: React.FC = () => {
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="mt-8 sm:mt-10 md:mt-12 flex justify-center items-center gap-1.5 sm:gap-2"
@@ -646,15 +726,16 @@ const ResourcesHub: React.FC = () => {
             disabled={currentPage === 1}
             className={`
               p-1.5 sm:p-2 rounded-lg transition-all duration-300
-              ${currentPage === 1 
-                ? 'bg-slate-100 text-slate-400 cursor-not-allowed' 
-                : 'bg-white text-slate-600 hover:bg-teal-50 hover:text-teal-600 border border-slate-200'
+              ${
+                currentPage === 1
+                  ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
+                  : 'bg-white text-slate-600 hover:bg-teal-50 hover:text-teal-600 border border-slate-200'
               }
             `}
           >
             <ChevronLeft size={16} />
           </button>
-          
+
           <div className="flex gap-1 sm:gap-2">
             {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
               let pageNum;
@@ -667,16 +748,17 @@ const ResourcesHub: React.FC = () => {
               } else {
                 pageNum = currentPage - 2 + i;
               }
-              
+
               return (
                 <button
                   key={pageNum}
                   onClick={() => handlePageChange(pageNum)}
                   className={`
                     w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-lg font-medium transition-all duration-300 text-xs sm:text-sm
-                    ${currentPage === pageNum
-                      ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-white shadow-md'
-                      : 'bg-white text-slate-600 hover:bg-slate-50 border border-slate-200'
+                    ${
+                      currentPage === pageNum
+                        ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-white shadow-md'
+                        : 'bg-white text-slate-600 hover:bg-slate-50 border border-slate-200'
                     }
                   `}
                 >
@@ -685,15 +767,16 @@ const ResourcesHub: React.FC = () => {
               );
             })}
           </div>
-          
+
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
             className={`
               p-1.5 sm:p-2 rounded-lg transition-all duration-300
-              ${currentPage === totalPages 
-                ? 'bg-slate-100 text-slate-400 cursor-not-allowed' 
-                : 'bg-white text-slate-600 hover:bg-teal-50 hover:text-teal-600 border border-slate-200'
+              ${
+                currentPage === totalPages
+                  ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
+                  : 'bg-white text-slate-600 hover:bg-teal-50 hover:text-teal-600 border border-slate-200'
               }
             `}
           >
@@ -717,12 +800,12 @@ const ResourcesHub: React.FC = () => {
             )}
           </div>
           <h3 className="text-lg sm:text-xl md:text-2xl font-light text-slate-600 mb-2 sm:mb-3">
-            {savedView ? "Your collection is resting" : "Gently wandering..."}
+            {savedView ? 'Your collection is resting' : 'Gently wandering...'}
           </h3>
           <p className="text-sm sm:text-base text-slate-400 max-w-md mx-auto px-4">
-            {savedView 
-              ? "Save resources that speak to your heart by clicking the ♡ icon" 
-              : "Take a moment to breathe. Try a different search or explore all categories"}
+            {savedView
+              ? 'Save resources that speak to your heart by clicking the ♡ icon'
+              : 'Take a moment to breathe. Try a different search or explore all categories'}
           </p>
           {savedView && stats.saved === 0 && (
             <button

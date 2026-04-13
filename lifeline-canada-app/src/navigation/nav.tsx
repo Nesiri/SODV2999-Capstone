@@ -230,10 +230,16 @@ export const patternInterrupts = [
       { name: 'Improve Your Mood', path: '/pattern-interrupt/improve-mood' },
       { name: 'Comedy', path: '/pattern-interrupt/comedy' },
       { name: 'Inspiring Videos', path: '/pattern-interrupt/inspiring-videos' },
-      { name: 'Emotional Support Videos', path: '/pattern-interrupt/emotional-support' },
+      {
+        name: 'Emotional Support Videos',
+        path: '/pattern-interrupt/emotional-support',
+      },
       { name: 'Uplifting Music Videos', path: '/pattern-interrupt/music' },
       { name: 'Life Changing Books', path: '/pattern-interrupt/books' },
-      { name: 'Movies of Inspiration', path: '/pattern-interrupt/movies-inspiration' },
+      {
+        name: 'Movies of Inspiration',
+        path: '/pattern-interrupt/movies-inspiration',
+      },
       { name: 'Helpful Movies', path: '/pattern-interrupt/helpful-movies' },
     ],
   },
@@ -281,11 +287,11 @@ export const mainNavLinks = [
     path: '/app?mode=login',
     icon: React.createElement(Zap, { className: 'w-4 h-4' }),
   },
-   {
-  name: 'Companion Paws',
-  path: 'https://companionpaws.ca/',
-  icon: '🐕'
-}
+  {
+    name: 'Companion Paws',
+    path: 'https://companionpaws.ca/',
+    icon: '🐕',
+  },
 ];
 
 /* =========================
@@ -298,23 +304,23 @@ export const dropdownNavLinks = [
     path: '/about-us',
     icon: React.createElement(Users, { className: 'w-4 h-4' }),
   },
-   {
+  {
     name: 'Email Support',
     path: '/contact/support',
     icon: '✉️', // Email
   },
-   {
+  {
     name: 'Contact',
     path: '/contact/contact-us',
     icon: '✉️', // Phone contact
   },
-     {
+  {
     name: 'Get Involved',
     path: '/volunteers',
     icon: '🙋',
   },
 
-   {
+  {
     name: 'Contribute',
     path: '/contribute',
     icon: '❤️',

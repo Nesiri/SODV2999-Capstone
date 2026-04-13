@@ -50,59 +50,100 @@ export default function App() {
           <Route path="incrisisneedhelp" element={<CrisisSupportPage />} />
           <Route path="volunteers" element={<VolunteerPage />} />
           <Route path="contribute" element={<ContributionPage />} />
-         <Route path="/contact/:mode" element={<ContactPage />} />
+          <Route path="/contact/:mode" element={<ContactPage />} />
           <Route path="site-map" element={<SiteMapPage />} />
-          
-          
+
           {/* Crisis Center Routes */}
-          <Route path="canadian-crisis-centres" element={<CanadaCrisisCenterPage />} />
-          <Route path="british-columbia-crisis-centres" element={<BCCrisisCenterPage />} />
-          <Route path="alberta-crisis-centres" element={<ABCrisisCentrePage />} />
-          <Route path="saskatchewan-crisis-centres" element={<SKCrisisCenterPage />} />
-          <Route path="manitoba-crisis-centres" element={<MBCrisisCentrePage />} />
-          <Route path="ontario-crisis-centres" element={<ONCrisisCenterPage />} />
-          <Route path="quebec-crisis-centres" element={<QCCrisisCenterPage />} />
-          <Route path="/other-provinces/:mode" element={<OtherProvinceCrisisCenterPage />} />
+          <Route
+            path="canadian-crisis-centres"
+            element={<CanadaCrisisCenterPage />}
+          />
+          <Route
+            path="british-columbia-crisis-centres"
+            element={<BCCrisisCenterPage />}
+          />
+          <Route
+            path="alberta-crisis-centres"
+            element={<ABCrisisCentrePage />}
+          />
+          <Route
+            path="saskatchewan-crisis-centres"
+            element={<SKCrisisCenterPage />}
+          />
+          <Route
+            path="manitoba-crisis-centres"
+            element={<MBCrisisCentrePage />}
+          />
+          <Route
+            path="ontario-crisis-centres"
+            element={<ONCrisisCenterPage />}
+          />
+          <Route
+            path="quebec-crisis-centres"
+            element={<QCCrisisCenterPage />}
+          />
+          <Route
+            path="/other-provinces/:mode"
+            element={<OtherProvinceCrisisCenterPage />}
+          />
           <Route path="usa-crisis-centres" element={<USACrisisCenterPage />} />
-          <Route path="international-crisis-centres" element={<InternationalCrisisCentrePage />} />
-          <Route path="/in-crisis-help/:mode" element={<ChatAndCallLinePage />} />
+          <Route
+            path="international-crisis-centres"
+            element={<InternationalCrisisCentrePage />}
+          />
+          <Route
+            path="/in-crisis-help/:mode"
+            element={<ChatAndCallLinePage />}
+          />
 
           {/* All resource routes are now handled by ResourceRoutes */}
           <Route path="resources/*" element={<ResourceRoutes />} />
-               {/* All psttern routes are now handled by PatternInterruptRoutes */}
-          <Route path="pattern-interrupt/*" element={<PatternInterruptRoutes />} />
- 
+          {/* All psttern routes are now handled by PatternInterruptRoutes */}
+          <Route
+            path="pattern-interrupt/*"
+            element={<PatternInterruptRoutes />}
+          />
+
           {/* 404 Route - this will catch any unmatched routes within MainLayout */}
           <Route path="*" element={<NotFound />} />
         </Route>
 
-          {/* Auth Routes */}
-          <Route path="app" element={
+        {/* Auth Routes */}
+        <Route
+          path="app"
+          element={
             <CenteredLayout>
               <AuthPage />
             </CenteredLayout>
-          } />
-          <Route path="verify-email" element={
+          }
+        />
+        <Route
+          path="verify-email"
+          element={
             <CenteredLayout>
               <VerifyEmail />
             </CenteredLayout>
-          } />
-          <Route path="privacy" element={
+          }
+        />
+        <Route
+          path="privacy"
+          element={
             <CenteredLayout>
               <PrivacyPage />
             </CenteredLayout>
-          } />
+          }
+        />
         {/* Protected Dashboard Route */}
         <Route
-          path="/dashboard/*"  
+          path="/dashboard/*"
           element={
             <AuthProvider>
               <DashboardRoutes />
-            </AuthProvider>  
+            </AuthProvider>
           }
-        /> 
+        />
       </Routes>
-       <CrisisSupportButton/>
+      <CrisisSupportButton />
     </>
   );
 }

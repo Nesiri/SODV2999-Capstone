@@ -29,15 +29,16 @@ const USACrisisCentres: React.FC = () => {
               </span>
             </div>
 
-            {/* Sophisticated headline with elegant font pairing */}
-            <div className="space-y-3">
-              <h1 className="text-5xl lg:text-6xl font-serif text-[#2A3B3C] leading-[1.1]">
-                United States of America Crisis
-                <span className="block text-[#C89F9F]">Centres</span>
-              </h1>
-              <div className="w-20 h-px bg-gradient-to-r from-[#C89F9F] to-transparent"></div>
-            </div>
-
+           {/* Sophisticated headline with elegant font pairing */}
+<div className="space-y-3">
+  <h1 className="text-3xl xs:text-4xl sm:text-5xl font-serif font-medium leading-tight !text-[#89009B]">
+    United States of America Crisis
+    <span className="block text-transparent bg-[#B266C9] bg-clip-text text-3xl xs:text-5xl sm:text-5xl mt-1 sm:mt-2">
+      Centres
+    </span>
+  </h1>
+  <div className="w-20 h-px bg-gradient-to-r from-[#B266C9] to-transparent"></div>
+</div>
             {/* Refined content with elegant typography */}
             <div className="space-y-6">
               {/* Highlight box with subtle elegance */}

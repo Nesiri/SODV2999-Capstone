@@ -77,10 +77,10 @@ export default function MoreDropdown({
         aria-haspopup="true"
         aria-label={`${triggerText} menu`}
       >
-        <span className="text-[clamp(12px,1.2vw,16px)] whitespace-nowrap">
-        {triggerText}
+        <span className="text-[clamp(12px,1.2vw,16px)] !text-[#89009B]  whitespace-nowrap">
+          {triggerText}
         </span>
-        
+
         <ChevronDown
           className={`ml-1 w-4 h-4 transition-transform duration-200 ${
             isOpen ? 'rotate-180' : ''

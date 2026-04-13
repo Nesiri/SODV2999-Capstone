@@ -46,7 +46,7 @@ const provinces: Province[] = [
   {
     name: 'Newfoundland and Labrador',
     image: '/assets/flags/nfth_1024x1024-300x148.webp',
-    path: '/newfoundland-crisis-centres',
+    path: '/other-provinces/newfoundland-crisis-centres',
   },
   {
     name: 'Nova Scotia',
@@ -99,9 +99,9 @@ const ProvincialCrisisCentres: React.FC = () => {
           <span className="text-xs tracking-[0.3em] text-[#7C9EB2] uppercase font-light block mb-4">
             — Support Across Canada —
           </span>
-          <h1 className="text-5xl lg:text-6xl font-serif text-[#1F3A4F] leading-[1.1] mb-4">
+          <h1 className="!text-3xl sm:!text-5xl font-serif !text-[#89009B] leading-[1.1] mb-4">
             Provincial Crisis
-            <span className="block text-[#B18F9E]">Centres</span>
+            <span className="block !text-[#B266C9]">Centres</span>
           </h1>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#B18F9E] to-transparent mx-auto"></div>
           <p className="text-[#3C5A6F] text-lg font-light max-w-2xl mx-auto mt-6">

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function ImproveYourMood() {
   return (
@@ -17,19 +17,19 @@ export default function ImproveYourMood() {
 
               <p
                 className="mb-8 text-[24px] leading-[1.25] text-black"
-                style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+                style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
               >
                 Depression is hard. In many ways it is all up to you. And that
                 can be difficult, tiring, scary. One way to try to combat
                 depression is to find interruptions to the cycle that occurs. To
-                interrupt these patterns takes time, strength and perseverance. A
-                good place to start is by doing things that can change your
+                interrupt these patterns takes time, strength and perseverance.
+                A good place to start is by doing things that can change your
                 mood.
               </p>
 
               <p
                 className="text-[24px] leading-[1.25] text-black"
-                style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+                style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
               >
                 Studies show negative emotions – including anger, hostility and
                 pessimism – are linked to a higher risk of heart disease and
@@ -53,14 +53,14 @@ export default function ImproveYourMood() {
       <section className="mx-auto max-w-[1400px] px-10 py-20">
         <h2
           className="mb-4 text-[48px] leading-none text-black"
-          style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+          style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
         >
           30 Ways to Improve Your Mood
         </h2>
 
         <p
           className="mb-10 text-[24px] leading-[1.25] text-black"
-          style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+          style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
         >
           If you're looking for suggestions, you may find these helpful:
         </p>
@@ -77,7 +77,7 @@ export default function ImproveYourMood() {
 
           <div
             className="max-w-[720px] space-y-5 text-[20px] leading-[1.5] text-black"
-            style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+            style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
           >
             <p>
               1. Step back and self-reflect. Whenever you start feeling
@@ -144,7 +144,7 @@ export default function ImproveYourMood() {
         <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-[1fr_420px] lg:gap-14">
           <div
             className="max-w-[720px] space-y-5 text-[20px] leading-[1.5] text-black"
-            style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+            style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
           >
             <p>
               11. Prioritize. Sometimes we feel depressed when priorities are
@@ -237,7 +237,7 @@ export default function ImproveYourMood() {
 
           <div
             className="max-w-[720px] space-y-5 text-[20px] leading-[1.5] text-black"
-            style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+            style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
           >
             <p>
               21. Re-watch a funny or inspiring YouTube video. There are so many

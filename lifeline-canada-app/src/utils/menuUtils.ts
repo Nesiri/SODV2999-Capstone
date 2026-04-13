@@ -9,7 +9,7 @@ export const groupLinksByCategory = (links: any[]) => {
     groups[category].push(link);
     // console.log({category})
   });
- 
+
   return groups;
 };
 

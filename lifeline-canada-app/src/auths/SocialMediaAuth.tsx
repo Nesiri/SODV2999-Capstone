@@ -49,7 +49,7 @@ const SocialMediaAuth: React.FC<SocialMediaAuthProps> = ({
     <div className={className}>
       <div className="grid gap-3">
         {buttons.map((button, index) => {
-          const Icon = button.icon;
+          const Icon = button.icon as React.ComponentType<{ size: number }>;
           return (
             <button
               key={index}

@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import type { PatternItem } from "./patternData";
+import { Link } from 'react-router-dom';
+import type { PatternItem } from './patternData';
 
 type Props = {
   slug: string;
@@ -23,9 +23,7 @@ export default function PatternCard({ slug, item }: Props) {
           <h3 className="font-semibold text-gray-900 group-hover:text-indigo-600 transition">
             {item.title}
           </h3>
-          <p className="text-sm text-gray-500">
-            {item.description}
-          </p>
+          <p className="text-sm text-gray-500">{item.description}</p>
         </div>
       </div>
     </Link>

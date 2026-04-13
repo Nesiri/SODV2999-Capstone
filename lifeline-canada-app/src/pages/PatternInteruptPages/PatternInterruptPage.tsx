@@ -21,28 +21,27 @@ import NotFound from '../NotFound';
 // Map paths to components
 const components: Record<string, React.ComponentType> = {
   'improve-mood': ImproveYourMood,
-  'comedy': Comedy,
+  comedy: Comedy,
   'inspiring-videos': InspiringVideos,
   'emotional-support': EmotionalSupportVideos,
-  'music': UpliftingMusicVideos,
-  'books': LifeChangingBooks,
+  music: UpliftingMusicVideos,
+  books: LifeChangingBooks,
   'movies-inspiration': Moviesofinspiration,
   'helpful-movies': HelpfulMovies,
   'self-management': SelfManagement,
-  'coping': CopingMechanisms,
+  coping: CopingMechanisms,
   'interactive-mind': InteractiveMind,
-  'apps': MentalHealthApps,
+  apps: MentalHealthApps,
   'transform-thoughts': TransformNegativeThoughtsPage,
-  'wisdom': WordsOfWisdom,
-  'gallery': ImageGallery,
-  'kindness': ActsOfKindness,
-
+  wisdom: WordsOfWisdom,
+  gallery: ImageGallery,
+  kindness: ActsOfKindness,
 };
 
 export default function PatternInterruptPage() {
   const location = useLocation();
   const path = location.pathname.replace('/pattern-interrupt/', '');
   const Component = components[path];
-  
-  return Component ? <Component /> : <NotFound/>;
+
+  return Component ? <Component /> : <NotFound />;
 }

@@ -8,7 +8,6 @@ interface ResourceLink {
   path: string;
   icon?: string | React.ReactNode;
   category?: string;
-  featured?: boolean;
   emergency?: boolean;
 }
 
@@ -21,9 +20,7 @@ interface ResourcesDropdownProps {
   resourceLinks: ResourceLink[];
   triggerText: string;
   triggerPath: string;
- 
   icon?: React.ReactNode;
- 
 }
 
 function useDelayedClose(initialState = false, delay = 300) {
@@ -60,7 +57,6 @@ export default function ResourcesDropdown({
   triggerText,
   triggerPath,
   icon = null,
-
 }: ResourcesDropdownProps) {
   const { isOpen, open, close, setIsOpen } = useDelayedClose(false, 300);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -138,7 +134,7 @@ export default function ResourcesDropdown({
         className={`
           relative flex items-center px-4 py-2 font-medium 
           transition-colors duration-200 focus:outline-none
-          text-gray-800 hover:text-blue-600
+          text-gray-800 hover:text-[#89009B]
         `}
         aria-expanded={isOpen}
         aria-haspopup="true"
@@ -148,7 +144,7 @@ export default function ResourcesDropdown({
             {icon}
           </span>
         )}
-       <span className="text-[clamp(12px,1.2vw,16px)] whitespace-nowrap">
+        <span className="text-[clamp(12px,1.2vw,16px)] !text-[#89009B] whitespace-nowrap">
           {triggerText}
         </span>
         <ChevronDown
@@ -170,21 +166,21 @@ export default function ResourcesDropdown({
         >
           <div className="flex bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg overflow-hidden border border-gray-100 max-w-2xl min-h-[320px]">
             {/* Left Categories - Slimmer */}
-            <div className="w-[160px] bg-gradient-to-b from-blue-200 via-gray-200 to-pink-100 border-r border-gray-200/50">
-              <div className="p-3 border-b border-gray-200/60 bg-gradient-to-r from-white to-gray-50">
-               
-              </div>
+            <div className="w-[160px] bg-gradient-to-b from-purple-200 via-gray-200 to-purple-100 border-r border-gray-200/50">
+              <div className="p-3 border-b border-gray-200/60 bg-gradient-to-r from-white to-gray-50"></div>
               <div className="p-1.5 overflow-y-auto max-h-[280px]">
                 {groupedByCategory.map((group) => (
                   <button
                     key={group.category}
-                    onMouseEnter={() => handleCategoryMouseEnter(group.category)}
+                    onMouseEnter={() =>
+                      handleCategoryMouseEnter(group.category)
+                    }
                     className={`
                       w-full text-left px-3 py-2 rounded mb-1
                       transition-all duration-150 ease-out
                       ${
                         activeCategory === group.category
-                          ? 'bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 shadow-sm text-blue-700'
+                          ? '!bg-gradient-to-r from-purple-50 to-purple-50 border border-purple-100 shadow-sm text-[#89009B]'
                           : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50/70 border border-transparent hover:border-gray-200'
                       }
                     `}
@@ -192,8 +188,8 @@ export default function ResourcesDropdown({
                     <div className="flex items-center justify-between">
                       <span
                         className={`font-medium text-xs truncate ${
-                          activeCategory === group.category 
-                            ? 'text-blue-700' 
+                          activeCategory === group.category
+                            ? '!text-[#89009B]'
                             : 'text-gray-700'
                         }`}
                       >
@@ -204,13 +200,11 @@ export default function ResourcesDropdown({
                           text-[10px] px-1.5 py-0.5 rounded-full shrink-0
                           ${
                             activeCategory === group.category
-                              ? 'bg-blue-100 text-blue-600'
+                              ? '!bg-purple-100 text-[#89009B]'
                               : 'bg-gray-100 text-gray-500'
                           }
                         `}
-                      >
-                       
-                      </span>
+                      ></span>
                     </div>
                   </button>
                 ))}
@@ -222,10 +216,9 @@ export default function ResourcesDropdown({
               {activeCategory && (
                 <div className="p-4 h-full">
                   <div className="flex items-center justify-between mb-3">
-                    <h4 className="text-sm font-semibold text-gray-800 truncate">
+                    <h4 className="text-sm font-semibold !text-[#89009B]  truncate">
                       {activeCategory}
                     </h4>
-                   
                   </div>
                   <div className="grid grid-cols-2 gap-2 overflow-y-auto max-h-[300px] pr-1">
                     {groupedByCategory
@@ -235,16 +228,16 @@ export default function ResourcesDropdown({
                           key={link.path}
                           to={link.path}
                           className="group px-3 py-2.5 rounded-lg border border-gray-100 
-                                   hover:border-blue-200 hover:shadow-sm 
+                                   hover:border-purple-200 hover:shadow-sm 
                                    bg-gradient-to-r from-white to-gray-50/50
-                                   hover:from-blue-50/30 hover:to-white
+                                   hover:from-purple-50/30 hover:to-white
                                    transition-all duration-150"
                           onClick={handleLinkClick}
                         >
                           <div className="flex items-center min-w-0">
                             {link.icon && (
                               <span
-                                className="mr-2 text-gray-500 group-hover:text-blue-500 
+                                className="mr-2 text-gray-500 group-hover:text-[#89009B] 
                                            transition-colors duration-150 shrink-0 text-sm"
                               >
                                 {link.icon}
@@ -259,14 +252,6 @@ export default function ResourcesDropdown({
                                 {link.name}
                               </span>
                             </div>
-                            {link.featured && (
-                              <span
-                                className="ml-1.5 text-[10px] font-medium text-amber-600 
-                                           bg-amber-50 px-1.5 py-0.5 rounded-full shrink-0"
-                              >
-                                ★
-                              </span>
-                            )}
                           </div>
                         </Link>
                       ))}

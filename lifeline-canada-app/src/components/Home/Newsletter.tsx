@@ -18,7 +18,7 @@ export default function Newsletter() {
   const [email, setEmail] = useState('');
   const [isHovered, setIsHovered] = useState(false);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
- console.log({RECAPTCHA_SITE_KEY})
+  console.log({ RECAPTCHA_SITE_KEY });
   // Add a helpful error message if missing
   if (!RECAPTCHA_SITE_KEY) {
     console.error('RECAPTCHA_SITE_KEY is missing in environment variables');
@@ -58,15 +58,15 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0] py-16 lg:py-24 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-purple-50 via-purple-100/30 to-purple-200/20 py-16 lg:py-24 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg%20width=%2260%22%20height=%2260%22%20viewBox=%220%200%2060%2060%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg%20fill=%22none%22%20fill-rule=%22evenodd%22%3E%3Cg%20fill=%22%236b7280%22%20fill-opacity=%220.03%22%3E%3Cpath%20d=%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
 
-        {/* Soft gradient orbs - Calming colors */}
-        <div className="absolute top-20 -left-20 w-96 h-96 bg-[#a5d8ff]/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 -right-20 w-96 h-96 bg-[#b8c7e7]/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#d4e2f0]/20 rounded-full blur-3xl"></div>
+        {/* Soft gradient orbs - Purple theme */}
+        <div className="absolute top-20 -left-20 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 -right-20 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl"></div>
       </div>
 
       <div
@@ -76,18 +76,18 @@ export default function Newsletter() {
         <div className="max-w-3xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#2c3e50]/5 backdrop-blur-sm rounded-full border border-[#2c3e50]/10 mb-4">
-              <span className="text-sm text-[#2c3e50]">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100/50 backdrop-blur-sm rounded-full border border-purple-200/50 mb-4">
+              <span className="text-sm text-purple-700">
                 Never miss an update
               </span>
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-[#2c3e50] via-[#34495e] to-[#4a6b8a] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 bg-clip-text text-transparent">
                 Join Our Newsletter
               </span>
             </h2>
-            <p className="text-[#4a5568] text-lg">
+            <p className="text-purple-700 text-lg">
               Gentle reminders and helpful resources, delivered with care.
             </p>
           </div>
@@ -95,28 +95,28 @@ export default function Newsletter() {
           {/* Single Card */}
           <div className="relative group">
             {/* Soft glow effect */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-[#a5d8ff]/30 via-[#b8c7e7]/30 to-[#cbd5e1]/30 rounded-2xl blur-xl opacity-30 group-hover:opacity-40 transition duration-500"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-purple-300/30 via-purple-400/30 to-purple-500/30 rounded-2xl blur-xl opacity-30 group-hover:opacity-40 transition duration-500"></div>
 
             <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl border border-white/60 p-8 lg:p-10 shadow-xl">
               {/* Newsletter Subscription Title */}
               <div className="text-center mb-8">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#2c3e50]/5 rounded-full border border-[#2c3e50]/10">
-                  <Send className="w-4 h-4 text-[#2c3e50]" />
-                  <h3 className="text-lg font-semibold text-[#2c3e50]">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100/50 rounded-full border border-purple-200/50">
+                  <Send className="w-4 h-4 text-purple-600" />
+                  <h3 className="text-lg font-semibold text-purple-700">
                     Newsletter Subscription
                   </h3>
                 </div>
               </div>
 
               {/* reCAPTCHA Section */}
-              <div className="bg-[#f1f9ff] rounded-xl p-6 border border-[#a5d8ff]/30 mb-6">
+              <div className="bg-purple-50 rounded-xl p-6 border border-purple-200/50 mb-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <Shield className="w-5 h-5 text-[#2c3e50]" />
-                  <span className="text-sm font-medium text-[#2c3e50]">
+                  <Shield className="w-5 h-5 text-purple-600" />
+                  <span className="text-sm font-medium text-purple-700">
                     Security Verification
                   </span>
                   {captchaVerified && (
-                    <span className="text-xs bg-[#98c1d9]/20 text-[#2c3e50] px-2 py-1 rounded-full ml-auto">
+                    <span className="text-xs bg-purple-200 text-purple-700 px-2 py-1 rounded-full ml-auto">
                       Verified ✓
                     </span>
                   )}
@@ -124,26 +124,31 @@ export default function Newsletter() {
 
                 <div className="flex justify-center mb-4">
                   {/* Fix: Check if RECAPTCHA_SITE_KEY exists and is a string */}
-                  {RECAPTCHA_SITE_KEY && typeof RECAPTCHA_SITE_KEY === 'string' && RECAPTCHA_SITE_KEY.length > 0 && (
-                    <ReCAPTCHA
-                      ref={recaptchaRef}
-                      sitekey={RECAPTCHA_SITE_KEY}
-                      onChange={handleCaptchaChange}
-                      onExpired={handleCaptchaExpired}
-                      theme="light"
-                      className="scale-90 transform"
-                    />
-                  )}
+                  {RECAPTCHA_SITE_KEY &&
+                    typeof RECAPTCHA_SITE_KEY === 'string' &&
+                    RECAPTCHA_SITE_KEY.length > 0 && (
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={RECAPTCHA_SITE_KEY}
+                        onChange={handleCaptchaChange}
+                        onExpired={handleCaptchaExpired}
+                        theme="light"
+                        className="scale-90 transform"
+                      />
+                    )}
                   {/* Optional: Show a message when reCAPTCHA key is missing */}
-                  {(!RECAPTCHA_SITE_KEY || typeof RECAPTCHA_SITE_KEY !== 'string' || RECAPTCHA_SITE_KEY.length === 0) && (
+                  {(!RECAPTCHA_SITE_KEY ||
+                    typeof RECAPTCHA_SITE_KEY !== 'string' ||
+                    RECAPTCHA_SITE_KEY.length === 0) && (
                     <div className="text-amber-600 text-sm p-4 bg-amber-50 rounded-lg border border-amber-200">
-                      ⚠️ reCAPTCHA configuration is missing. Please check your environment variables.
+                      ⚠️ reCAPTCHA configuration is missing. Please check your
+                      environment variables.
                     </div>
                   )}
                 </div>
 
                 {!captchaVerified && RECAPTCHA_SITE_KEY && (
-                  <p className="text-xs text-[#64748b] text-center">
+                  <p className="text-xs text-purple-600 text-center">
                     Please complete verification to subscribe
                   </p>
                 )}
@@ -153,7 +158,7 @@ export default function Newsletter() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Name Input */}
                 <div className="relative">
-                  <User className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#64748b] w-5 h-5" />
+                  <User className="absolute left-4 top-1/2 transform -translate-y-1/2 text-purple-500 w-5 h-5" />
                   <input
                     type="text"
                     value={name}
@@ -163,13 +168,13 @@ export default function Newsletter() {
                     }
                     required
                     disabled={!captchaVerified}
-                    className="w-full pl-12 pr-4 py-4 bg-white border border-[#cbd5e1] rounded-xl text-[#1e293b] placeholder-[#94a3b8] focus:outline-none focus:border-[#2c3e50] focus:ring-2 focus:ring-[#2c3e50]/10 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full pl-12 pr-4 py-4 bg-white border border-purple-200 rounded-xl text-purple-900 placeholder-purple-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   />
                 </div>
 
                 {/* Email Input */}
                 <div className="relative">
-                  <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#64748b] w-5 h-5" />
+                  <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-purple-500 w-5 h-5" />
                   <input
                     type="email"
                     value={email}
@@ -181,17 +186,17 @@ export default function Newsletter() {
                     }
                     required
                     disabled={!captchaVerified}
-                    className="w-full pl-12 pr-4 py-4 bg-white border border-[#cbd5e1] rounded-xl text-[#1e293b] placeholder-[#94a3b8] focus:outline-none focus:border-[#2c3e50] focus:ring-2 focus:ring-[#2c3e50]/10 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full pl-12 pr-4 py-4 bg-white border border-purple-200 rounded-xl text-purple-900 placeholder-purple-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   />
                 </div>
 
-                {/* Subscribe Button */}
+                {/* Subscribe Button - Consistent Purple Button */}
                 <button
                   type="submit"
                   disabled={isEmailSubmitted || !captchaVerified}
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
-                  className="w-full px-6 py-4 bg-gradient-to-r from-[#2c3e50] to-[#4a6b8a] hover:from-[#34495e] hover:to-[#5d7ea3] text-white rounded-xl text-lg font-semibold transition-all flex items-center justify-center gap-3 disabled:opacity-50 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  className="w-full px-6 py-4 bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white rounded-xl text-lg font-semibold transition-all flex items-center justify-center gap-3 disabled:opacity-50 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
                   {isEmailSubmitted ? 'Sent!' : 'Subscribe to Newsletter'}
                   <ArrowRight
@@ -200,8 +205,8 @@ export default function Newsletter() {
                 </button>
 
                 {isEmailSubmitted && (
-                  <div className="flex items-center gap-2 text-[#2c3e50] bg-[#d4e2f0] p-4 rounded-lg animate-fadeIn">
-                    <CheckCircle className="w-5 h-5" />
+                  <div className="flex items-center gap-2 text-purple-700 bg-purple-100 p-4 rounded-lg animate-fadeIn">
+                    <CheckCircle className="w-5 h-5 text-purple-600" />
                     <span className="text-sm">
                       Thanks {name || 'for subscribing'}! Check your inbox.
                     </span>
@@ -209,9 +214,9 @@ export default function Newsletter() {
                 )}
               </form>
 
-              {/* Decorative Elements - Soft colors */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#a5d8ff]/20 to-[#b8c7e7]/20 rounded-full blur-2xl"></div>
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-br from-[#d4e2f0]/20 to-[#cbd5e1]/20 rounded-full blur-2xl"></div>
+              {/* Decorative Elements - Purple theme */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-300/20 to-purple-400/20 rounded-full blur-2xl"></div>
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-br from-purple-200/20 to-purple-300/20 rounded-full blur-2xl"></div>
             </div>
           </div>
         </div>

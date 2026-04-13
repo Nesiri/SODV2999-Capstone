@@ -9,19 +9,25 @@ import {
   getAllPatternInterruptLinks,
 } from '../../navigation/nav';
 
-
 export default function HeaderDesktop() {
   const resourceLinks = getAllResourceLinks();
   const patternInterruptLinks = getAllPatternInterruptLinks();
 
   return (
-    <nav className="hidden lg:flex items-center w-full relative xl:mr-10">
+    <nav 
+      className="hidden lg:flex items-center w-full relative xl:mr-10"
+      style={{ 
+        fontSize: '16px', // Fixed base font size
+       // color:'#89009B important' // Ensure text color is consistent
+      }}
+    >
       {/* Main nav items on left */}
-      <div className={`flex items-center flex-1
-                      lg:space-x-2 xl:space-x-4 2xl:space-x-5
-                     [@media(min-width:1024px)_and_(max-width:1280px)]:space-x-0">
-                   
-                  `}>
+      <div
+        className="flex items-center flex-1"
+        style={{
+          gap: '12px', // Fixed gap instead of responsive
+        }}
+      >
         {mainNavLinks.map((link) => {
           if (link.hasMegaMenu) {
             if (link.name === 'Resources') {
@@ -30,7 +36,7 @@ export default function HeaderDesktop() {
                   key={link.path}
                   resourceLinks={resourceLinks}
                   triggerText={link.name}
-                  triggerPath={link.path} // Pass the path for navigation
+                  triggerPath={link.path}
                   icon={link.icon}
                 />
               );
@@ -40,8 +46,7 @@ export default function HeaderDesktop() {
                   key={link.path}
                   resourceLinks={patternInterruptLinks}
                   triggerText={link.name}
-                  triggerPath={link.path} // Pass the path for navigation
-            
+                  triggerPath={link.path}
                   icon={link.icon}
                 />
               );
@@ -55,7 +60,6 @@ export default function HeaderDesktop() {
           dropdownLinks={dropdownNavLinks}
           triggerText="More"
         />
-
       </div>
     </nav>
   );

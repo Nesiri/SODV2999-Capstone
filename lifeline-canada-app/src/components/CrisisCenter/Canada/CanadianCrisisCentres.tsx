@@ -31,9 +31,9 @@ const CanadianCrisisCentres: React.FC = () => {
 
             {/* Sophisticated headline with elegant font pairing */}
             <div className="space-y-3">
-              <h1 className="text-5xl lg:text-6xl font-serif text-[#2A3B3C] leading-[1.1]">
+              <h1 className=" !text-3xl sm:!text-5xl font-serif !text-[#89009B] leading-[1.1]">
                 Canadian Crisis
-                <span className="block text-[#C89F9F]">Centres</span>
+                <span className="block !text-[#B266C9]">Centres</span>
               </h1>
               <div className="w-20 h-px bg-gradient-to-r from-[#C89F9F] to-transparent"></div>
             </div>

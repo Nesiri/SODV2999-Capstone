@@ -4,7 +4,7 @@ import {
   Phone,
   Heart,
   Shield,
-  ArrowRight,
+
   AlertCircle,
   ExternalLink,
 } from 'lucide-react';
@@ -35,17 +35,17 @@ const ResourcesSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-blue-50 via-white to-teal-50">
-      {/* Animated Background Elements - More calming colors */}
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#f5edf7] via-white to-[#e8dceb]">
+      {/* Animated Background Elements - Purple calming colors */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-200/30 to-teal-200/30 rounded-full blur-3xl animate-pulse hidden md:block"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-sage-200/30 to-blue-200/30 rounded-full blur-3xl animate-pulse delay-1000 hidden md:block"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-blue-50/20 to-transparent"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-[#89009B]/10 to-[#B266C9]/10 rounded-full blur-3xl animate-pulse hidden md:block"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-[#C77DDF]/10 to-[#89009B]/10 rounded-full blur-3xl animate-pulse delay-1000 hidden md:block"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-[#89009B]/5 to-transparent"></div>
       </div>
 
-      {/* Floating Orbs - More calming colors */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-blue-300/20 to-teal-300/20 rounded-full blur-xl animate-float hidden md:block"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-br from-sage-300/20 to-blue-300/20 rounded-full blur-xl animate-float-delayed hidden md:block"></div>
+      {/* Floating Orbs - Purple calming colors */}
+      <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-[#89009B]/10 to-[#B266C9]/10 rounded-full blur-xl animate-float hidden md:block"></div>
+      <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-br from-[#B266C9]/10 to-[#C77DDF]/10 rounded-full blur-xl animate-float-delayed hidden md:block"></div>
 
       <div
         ref={sectionRef}
@@ -54,72 +54,70 @@ const ResourcesSection = () => {
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-start">
           {/* Left Content */}
           <div className="space-y-4 sm:space-y-6 md:space-y-8 order-2 lg:order-1 w-full">
-            
-
-            {/* Main Heading with Gradient Animation */}
+            {/* Main Heading with Purple Gradient Animation */}
             <div className="space-y-2 sm:space-y-3 md:space-y-4">
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight">
-                <span className="bg-gradient-to-r from-slate-900 via-teal-700 to-slate-900 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
+                <span className="bg-gradient-to-r from-[#89009B] via-[#B266C9] to-[#89009B] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
                   Resources
                 </span>
               </h1>
-              <div className="w-16 sm:w-20 md:w-24 h-1 sm:h-1.5 bg-gradient-to-r from-teal-600 to-blue-600 rounded-full animate-expandWidth"></div>
+              <div className="w-16 sm:w-20 md:w-24 h-1 sm:h-1.5 bg-gradient-to-r from-[#89009B] to-[#B266C9] rounded-full animate-expandWidth"></div>
             </div>
 
             {/* Content Cards */}
             <div className="space-y-4 sm:space-y-5 md:space-y-6">
-              {/* Crisis Alert Card - More urgent but still calming */}
+              {/* Crisis Alert Card - Darker purple for urgency */}
               <div
-                className="group relative bg-white/70 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/50 hover:border-teal-200 animate-slideInUp"
+                className="group relative bg-white/70 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/50 hover:border-[#B266C9] animate-slideInUp"
                 style={{ animationDelay: '0.1s' }}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-teal-600/5 to-blue-600/5 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#89009B]/5 to-[#B266C9]/5 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative flex flex-col sm:flex-row items-start gap-3 sm:gap-4 md:gap-5">
                   <div className="flex-shrink-0">
                     <div className="relative">
-                      <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg sm:rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                      <div className="relative bg-gradient-to-br from-blue-500 to-purple-500 p-2 sm:p-3 md:p-4 rounded-lg sm:rounded-xl shadow-lg">
+                      <div className="absolute inset-0 bg-gradient-to-r from-[#89009B] to-[#B266C9] rounded-lg sm:rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                      <div className="relative bg-gradient-to-br from-[#89009B] to-[#B266C9] p-2 sm:p-3 md:p-4 rounded-lg sm:rounded-xl shadow-lg">
                         <Phone className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
                       </div>
                     </div>
                   </div>
                   <div className="flex-1">
                     <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-1 sm:mb-2 flex items-center gap-1 sm:gap-2 flex-wrap">
-                      <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-purple-500" />
+                      <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#89009B]" />
                       <span>In Crisis? Help is Available 24/7</span>
                     </h3>
                     <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-2 sm:mb-3 md:mb-4">
                       Call or Text{' '}
-                      <span className="inline-flex items-center gap-1 bg-gradient-to-r from-teal-600 to-blue-600 text-white px-2 sm:px-3 md:px-4 py-0.5 sm:py-1 md:py-1.5 rounded-full text-base sm:text-lg md:text-xl font-bold shadow-lg">
+                      <span className="inline-flex items-center gap-1 bg-gradient-to-r from-[#89009B] to-[#B266C9] text-white px-2 sm:px-3 md:px-4 py-0.5 sm:py-1 md:py-1.5 rounded-full text-base sm:text-lg md:text-xl font-bold shadow-lg">
                         988
                       </span>{' '}
                       — Canada's suicide prevention hotline
                     </p>
                     <p className="text-xs sm:text-sm md:text-base text-gray-600">
                       If you or someone you know is in immediate danger,{' '}
-                      <span className="font-bold text-purple-600">
+                      <span className="font-bold text-[#89009B]">
                         call 911 right now
                       </span>
                     </p>
                     <Link
                       to="/incrisisneedhelp"
-                      className="inline-flex items-center gap-1 sm:gap-2 mt-2 sm:mt-3 md:mt-4 text-sm sm:text-base text-teal-700 font-medium group-hover:gap-2 sm:group-hover:gap-3 transition-all"
+                      className="inline-flex items-center gap-1 sm:gap-2 mt-2 sm:mt-3 md:mt-4 text-sm sm:text-base !text-[#89009B] font-medium group-hover:gap-2 sm:group-hover:gap-3 transition-all"
                     >
                       Find local crisis support
-                      <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-1" />
+                     
                     </Link>
                   </div>
                 </div>
               </div>
 
-              {/* Information Card - Calming colors */}
+              {/* Information Card - Lighter purple */}
               <div
-                className="bg-white/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8 shadow-lg border border-gray-100 hover:border-teal-100 transition-all duration-300 animate-slideInUp"
+                className="bg-white/60 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8 shadow-lg border border-gray-100 hover:border-[#C77DDF] transition-all duration-300 animate-slideInUp"
                 style={{ animationDelay: '0.2s' }}
               >
                 <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
                   <div className="flex-shrink-0">
-                    <div className="bg-gradient-to-br from-teal-500 to-blue-500 p-2 sm:p-2.5 md:p-3 rounded-lg sm:rounded-xl shadow-md">
+                    <div className="bg-gradient-to-br from-[#B266C9] to-[#C77DDF] p-2 sm:p-2.5 md:p-3 rounded-lg sm:rounded-xl shadow-md">
                       <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                     </div>
                   </div>
@@ -133,19 +131,19 @@ const ResourcesSection = () => {
                 </div>
               </div>
 
-              {/* Important Note Card - Calming gradient */}
+              {/* Important Note Card - Medium purple gradient */}
               <div
-                className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8 shadow-lg border border-teal-100 animate-slideInUp"
+                className="bg-gradient-to-br from-[#f5edf7] to-[#e8dceb] rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8 shadow-lg border border-[#B266C9]/30 animate-slideInUp"
                 style={{ animationDelay: '0.3s' }}
               >
                 <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
                   <div className="flex-shrink-0">
-                    <div className="bg-gradient-to-br from-teal-600 to-blue-600 p-2 sm:p-2.5 md:p-3 rounded-lg sm:rounded-xl shadow-md">
+                    <div className="bg-gradient-to-br from-[#89009B] to-[#B266C9] p-2 sm:p-2.5 md:p-3 rounded-lg sm:rounded-xl shadow-md">
                       <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-bold text-sm sm:text-base md:text-lg text-gray-900 mb-1 sm:mb-2">
+                    <h4 className="font-bold text-sm sm:text-base md:text-lg text-[#89009B] mb-1 sm:mb-2">
                       Important
                     </h4>
                     <p className="text-xs sm:text-sm md:text-base text-gray-700">
@@ -163,7 +161,7 @@ const ResourcesSection = () => {
                 style={{ animationDelay: '0.4s' }}
               >
                 <div className="flex items-start gap-2 sm:gap-3 text-xs sm:text-sm text-gray-500 bg-gray-50/80 p-3 sm:p-4 md:p-5 rounded-lg sm:rounded-xl border border-gray-200">
-                  <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0 mt-0.5 text-gray-400" />
+                  <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0 mt-0.5 text-[#B266C9]" />
                   <p className="italic leading-relaxed">
                     The guides, tool kits and resources throughout this site
                     represent a compilation of curated suicide prevention
@@ -179,18 +177,18 @@ const ResourcesSection = () => {
 
           {/* Right Image */}
           <div
-            className="relative animate-slideInRight w-full order-1 lg:order-2 -mt-8 sm:-mt-6 md:-mt-4 lg:mt-0"
+            className="relative sm:top-10 animate-slideInRight w-full order-1 lg:order-2 -mt-8 sm:-mt-6 md:-mt-4 lg:mt-0"
             style={{ animationDelay: '0.3s' }}
           >
-            {/* Decorative elements - Calming colors */}
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-teal-400/20 to-blue-400/20 rounded-full blur-3xl hidden md:block"></div>
-            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-to-br from-sage-400/20 to-teal-400/20 rounded-full blur-3xl hidden md:block"></div>
+            {/* Decorative elements - Purple calming colors */}
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-[#89009B]/10 to-[#B266C9]/10 rounded-full blur-3xl hidden md:block"></div>
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-to-br from-[#B266C9]/10 to-[#C77DDF]/10 rounded-full blur-3xl hidden md:block"></div>
 
             {/* Main image container with 3D hover effect */}
             <div className="relative group perspective max-w-sm sm:max-w-md md:max-w-lg lg:max-w-none mx-auto">
-              <div className="absolute -inset-1 bg-gradient-to-r from-teal-600 to-blue-600 rounded-2xl sm:rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition-opacity duration-500"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#89009B] to-[#B266C9] rounded-2xl sm:rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition-opacity duration-500"></div>
               <div className="relative transform-gpu transition-all duration-700 group-hover:rotate-y-12 group-hover:scale-105">
-                <div className="absolute inset-0 bg-gradient-to-t from-teal-900/20 to-transparent rounded-2xl sm:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#89009B]/20 to-transparent rounded-2xl sm:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <img
                   src={resourceImg}
                   alt="Mental health resource directions sign"
@@ -198,10 +196,9 @@ const ResourcesSection = () => {
                 />
 
                 {/* Floating caption */}
-                <div className="absolute -bottom-6 -right-6 bg-white/90 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl shadow-xl border border-teal-100 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 hidden md:block">
+                <div className="absolute -bottom-6 -right-6 bg-white/90 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl shadow-xl border border-[#B266C9]/30 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 hidden md:block">
                   <p className="text-xs sm:text-sm font-medium text-gray-700">
-                    <span className="text-teal-600">✓</span> Verified
-                    Resources
+                    <span className="text-[#89009B]">✓</span> Verified Resources
                   </p>
                 </div>
               </div>

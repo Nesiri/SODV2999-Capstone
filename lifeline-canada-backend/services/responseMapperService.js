@@ -728,9 +728,9 @@ const chatbotResponses = [
   // PARENTS & FAMILY (Priority 6)
   {
     keywords: [
-      "parent", "family", "child", "kids", "son", "daughter", 
+      "parent", "family",  
       "mother", "father", "parenting", "mom", "dad", "parents",
-      "family support", "raising kids"
+      "family support", 
     ],
     response: "Here are resources for parents and families:",
     priority: 6,
@@ -930,7 +930,7 @@ const chatbotResponses = [
   response: "Sometimes it's easier to open up through text where you can compose your thoughts. Text chat support options are available.",
   priority: 4,
   links: [
-    { name: "Text Chat Support", path: "/in-crisis-help/text-chat-lines", description: "Free text-based crisis support" }
+    { name: "Text Chat Support", path: "/in-crisis-help/textchat", description: "Free text-based crisis support" }
   ]
 },
 // DONATE / CONTRIBUTE (Priority 6)
@@ -950,6 +950,26 @@ const chatbotResponses = [
   priority: 6,
   links: [
     { name: "Volunteer Opportunities", path: "/volunteers", description: "Join our team" }
+  ]
+},
+// KIDS TEXT SUPPORT (Priority 4)
+{
+  keywords: [
+    "kid help",
+    "help kid",
+    "kid crisis",
+    "crisis support kid",
+    "kid support",
+    "kid connect",
+    "kid text help",
+    "kid hotline",
+    "kid emergency help",
+    "child", "kids", "son", "daughter",
+  ],
+  response: "If you need immediate support, you can text Kids Help Phone. Text CONNECT for English or PARLER for French to 686868 to talk with a trained responder.",
+  priority: 4,
+  links: [
+    { name: "Text Support", path: "/in-crisis-help/textchat", description: "Start a confidential text conversation" }
   ]
 },
   // DEFAULT (Lowest Priority - Priority 0)

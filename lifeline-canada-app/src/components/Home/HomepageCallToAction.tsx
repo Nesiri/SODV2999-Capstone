@@ -45,10 +45,10 @@ const HomepageCallToAction = () => {
                 resources
               </p>
 
-              {/* Link - responsive */}
+              {/* Link - Consistent Purple Button */}
               <Link
                 to="/contribute"
-                className="w-full px-4 md:px-6 py-2.5 md:py-3 bg-gradient-to-r from-purple-600 to-purple-100 text-white font-semibold rounded-lg md:rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 relative overflow-hidden group/btn text-sm md:text-base flex items-center justify-center no-underline"
+                className="w-full px-4 md:px-6 py-2.5 md:py-3 !bg-gradient-to-r from-purple-600 to-purple-800 !text-white font-semibold rounded-lg md:rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 relative overflow-hidden group/btn text-sm md:text-base flex items-center justify-center no-underline"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   CONTRIBUTE
@@ -57,7 +57,7 @@ const HomepageCallToAction = () => {
                     className="md:w-5 md:h-5 group-hover/btn:translate-x-1 transition-transform"
                   />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-500 to-purple-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-purple-900 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
               </Link>
             </div>
           </div>
@@ -73,7 +73,7 @@ const HomepageCallToAction = () => {
               </div>
 
               {/* Title - smaller on mobile */}
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-purple-800 mb-2 md:mb-3 text-center md:text-left">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold !text-purple-800 mb-2 md:mb-3 text-center md:text-left">
                 Get Involved
               </h3>
 
@@ -82,10 +82,10 @@ const HomepageCallToAction = () => {
                 Volunteer your time and skills to support our community
               </p>
 
-              {/* Link - responsive */}
+              {/* Link - Consistent Purple Button */}
               <Link
                 to="/volunteers"
-                className="w-full px-4 md:px-6 py-2.5 md:py-3 bg-gradient-to-r from-purple-600 to-purple-100 text-white font-semibold rounded-lg md:rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 relative overflow-hidden group/btn text-sm md:text-base flex items-center justify-center no-underline"
+                className="w-full px-4 md:px-6 py-2.5 md:py-3 !bg-gradient-to-r from-purple-600 to-purple-800 !text-white font-semibold rounded-lg md:rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 relative overflow-hidden group/btn text-sm md:text-base flex items-center justify-center no-underline"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   VOLUNTEER
@@ -94,7 +94,7 @@ const HomepageCallToAction = () => {
                     className="md:w-5 md:h-5 group-hover/btn:translate-x-1 transition-transform"
                   />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 !bg-gradient-to-r from-purple-700 to-purple-900 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
               </Link>
             </div>
           </div>

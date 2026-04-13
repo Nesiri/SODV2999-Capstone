@@ -4,8 +4,6 @@ import { useAuth } from '../../hooks/useAuth'; // Import useAuth
 import MoodCheckin from '../../components/AppComponent/Dashboard/MoodCheckin';
 import BreathingCard from '../../components/AppComponent/Dashboard/BreathingCard';
 
-
-
 const DashboardPage: React.FC = () => {
   const { user } = useAuth(); // Get user from auth context
 
@@ -35,7 +33,6 @@ const DashboardPage: React.FC = () => {
       {/* Quick Access Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <BreathingCard />
-   
       </div>
 
       {/* Saved Resources - will be added later */}

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 type ResourceRow = {
   title: string;
@@ -11,57 +11,51 @@ type ResourceRow = {
 
 const appRows: ResourceRow[] = [
   {
-    title: "CogniFit — Brain Training",
-    image: "/images/pattern/interactive-mind/cognifit.jpg",
-    alt: "CogniFit app",
-    text:
-      "Improve cognitive abilities such as memory, attention, concentration, and problem-solving with brain-training games designed around neuroscience. CogniFit gives users personalized exercises, tracks progress, and provides insight into areas of strength and weakness. It is a strong option for people who want structured and measurable mental stimulation.",
-    button: "Download App",
-    href: "https://www.cognifit.com/",
+    title: 'CogniFit — Brain Training',
+    image: '/images/pattern/interactive-mind/cognifit.jpg',
+    alt: 'CogniFit app',
+    text: 'Improve cognitive abilities such as memory, attention, concentration, and problem-solving with brain-training games designed around neuroscience. CogniFit gives users personalized exercises, tracks progress, and provides insight into areas of strength and weakness. It is a strong option for people who want structured and measurable mental stimulation.',
+    button: 'Download App',
+    href: 'https://www.cognifit.com/',
   },
   {
-    title: "Happify",
-    image: "/images/pattern/interactive-mind/happify.jpg",
-    alt: "Happify app",
-    text:
-      "Train your brain to be happier through science-based activities that support gratitude, mindfulness, resilience, emotional awareness, and positive thinking. Happify combines interactive exercises, reflective prompts, and mood-building tools to help users build daily habits that support mental wellbeing.",
-    button: "Download App",
-    href: "https://www.happify.com/",
+    title: 'Happify',
+    image: '/images/pattern/interactive-mind/happify.jpg',
+    alt: 'Happify app',
+    text: 'Train your brain to be happier through science-based activities that support gratitude, mindfulness, resilience, emotional awareness, and positive thinking. Happify combines interactive exercises, reflective prompts, and mood-building tools to help users build daily habits that support mental wellbeing.',
+    button: 'Download App',
+    href: 'https://www.happify.com/',
   },
 ];
 
 const puzzleRows: ResourceRow[] = [
   {
-    title: "Word Brain Puzzles",
-    image: "/images/pattern/interactive-mind/word-brain-puzzles.jpg",
-    alt: "Word brain puzzles",
-    text:
-      "Face brain puzzles that challenge logic, vocabulary, focus, and reasoning skills. Word and logic puzzles can help sharpen attention while also giving your mind a healthy break from repetitive negative thought cycles.",
-    href: "https://www.mentalup.co/brain-teasers",
+    title: 'Word Brain Puzzles',
+    image: '/images/pattern/interactive-mind/word-brain-puzzles.jpg',
+    alt: 'Word brain puzzles',
+    text: 'Face brain puzzles that challenge logic, vocabulary, focus, and reasoning skills. Word and logic puzzles can help sharpen attention while also giving your mind a healthy break from repetitive negative thought cycles.',
+    href: 'https://www.mentalup.co/brain-teasers',
   },
   {
-    title: "SharpBrains.com",
-    image: "/images/pattern/interactive-mind/sharpbrains.jpg",
-    alt: "SharpBrains website",
-    text:
-      "Explore cognitive exercises, brain fitness tools, and articles about how the brain works. SharpBrains offers puzzles, games, and educational resources that support mental stimulation and lifelong brain health.",
-    href: "https://sharpbrains.com/",
+    title: 'SharpBrains.com',
+    image: '/images/pattern/interactive-mind/sharpbrains.jpg',
+    alt: 'SharpBrains website',
+    text: 'Explore cognitive exercises, brain fitness tools, and articles about how the brain works. SharpBrains offers puzzles, games, and educational resources that support mental stimulation and lifelong brain health.',
+    href: 'https://sharpbrains.com/',
   },
   {
-    title: "Math and Logic Puzzles",
-    image: "/images/pattern/interactive-mind/math-logic-puzzles.jpg",
-    alt: "Math and logic puzzles",
-    text:
-      "If you enjoy figuring things out, math and logic puzzles can be a great way to build concentration, patience, and reasoning. They encourage the brain to slow down, observe patterns, and solve step by step.",
-    href: "https://www.mathsisfun.com/puzzles/",
+    title: 'Math and Logic Puzzles',
+    image: '/images/pattern/interactive-mind/math-logic-puzzles.jpg',
+    alt: 'Math and logic puzzles',
+    text: 'If you enjoy figuring things out, math and logic puzzles can be a great way to build concentration, patience, and reasoning. They encourage the brain to slow down, observe patterns, and solve step by step.',
+    href: 'https://www.mathsisfun.com/puzzles/',
   },
   {
-    title: "Braingle.com",
-    image: "/images/pattern/interactive-mind/braingle.jpg",
-    alt: "Braingle website",
-    text:
-      "Braingle offers a large collection of brain teasers, trivia, riddles, games, and puzzles. It is useful for quick mental stimulation and can help redirect attention away from stress-heavy thinking.",
-    href: "https://www.braingle.com/",
+    title: 'Braingle.com',
+    image: '/images/pattern/interactive-mind/braingle.jpg',
+    alt: 'Braingle website',
+    text: 'Braingle offers a large collection of brain teasers, trivia, riddles, games, and puzzles. It is useful for quick mental stimulation and can help redirect attention away from stress-heavy thinking.',
+    href: 'https://www.braingle.com/',
   },
 ];
 
@@ -75,7 +69,9 @@ function ResourceRowItem({ row }: { row: ResourceRow }) {
           className="h-[86px] w-[132px] rounded-xl border border-slate-300 object-cover shadow-sm"
         />
 
-        <p className="mt-3 text-[17px] leading-5 text-violet-700">{row.title}</p>
+        <p className="mt-3 text-[17px] leading-5 text-violet-700">
+          {row.title}
+        </p>
 
         {row.button ? (
           <a
@@ -114,8 +110,8 @@ export default function InteractiveMind() {
         <div className="mb-6 text-sm text-slate-500">
           <Link to="/pattern" className="text-blue-600 hover:underline">
             Pattern Interrupts
-          </Link>{" "}
-          <span className="text-slate-400">/</span>{" "}
+          </Link>{' '}
+          <span className="text-slate-400">/</span>{' '}
           <span className="text-slate-700">Interactive Mind</span>
         </div>
 
@@ -170,7 +166,7 @@ export default function InteractiveMind() {
               {appRows.map((row, index) => (
                 <div
                   key={row.title}
-                  className={index !== 0 ? "border-t border-violet-200" : ""}
+                  className={index !== 0 ? 'border-t border-violet-200' : ''}
                 >
                   <ResourceRowItem row={row} />
                 </div>
@@ -189,7 +185,7 @@ export default function InteractiveMind() {
               {puzzleRows.map((row, index) => (
                 <div
                   key={row.title}
-                  className={index !== 0 ? "border-t border-violet-200" : ""}
+                  className={index !== 0 ? 'border-t border-violet-200' : ''}
                 >
                   <ResourceRowItem row={row} />
                 </div>

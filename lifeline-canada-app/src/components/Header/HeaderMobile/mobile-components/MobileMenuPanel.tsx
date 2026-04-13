@@ -3,7 +3,6 @@ import { mainNavLinks, dropdownNavLinks } from '../../../../navigation/nav';
 import { MenuItems } from './MenuItems';
 import { DropdownView } from './DropdownView';
 
-
 interface MobileMenuPanelProps {
   openDropdown: string | null;
 
@@ -38,7 +37,6 @@ export const MobileMenuPanel = ({
             onLinkClick={closeMenu}
             activeCategory={activeCategory}
             onCategoryToggle={handleCategoryToggle}
-       
           />
         )}
 
@@ -50,19 +48,17 @@ export const MobileMenuPanel = ({
             onLinkClick={closeMenu}
             activeCategory={activeCategory}
             onCategoryToggle={handleCategoryToggle}
-      
           />
         )}
 
         {openDropdown === 'More' && (
-           <DropdownView
+          <DropdownView
             title="More"
-            links={dropdownNavLinks} 
+            links={dropdownNavLinks}
             onBack={goBackToMenu}
             onLinkClick={closeMenu}
             activeCategory={null}
             onCategoryToggle={() => {}}
-   
           />
         )}
       </>
@@ -79,7 +75,7 @@ export const MobileMenuPanel = ({
       <div className="absolute top-4 right-4 z-50">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 text-blue-700 bg-gradient-to-b from-gray-100 via-yellow-200 to-purple-200 cursor-pointer"
+          className="w-6 h-6 text-purple-700 bg-gradient-to-b from-gray-100 via-yellow-200 to-purple-200 cursor-pointer"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -100,9 +96,7 @@ export const MobileMenuPanel = ({
           onDropdownClick={openDropdownWithAnimation}
           closeMenu={closeMenu}
         />
-       
       </div>
     </div>
   );
 };
-

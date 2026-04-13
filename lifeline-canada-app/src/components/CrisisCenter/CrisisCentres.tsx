@@ -7,7 +7,7 @@ const crisisData = [
     title: 'Canada',
     path: '/canadian-crisis-centres',
     image: '/assets/CrisisCenter/canadaHeart-300x272.webp',
-     helpline: '988',
+    helpline: '988',
     description: '24/7 Crisis Support',
   },
   {
@@ -92,24 +92,11 @@ const CrisisCentres = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
         {/* Header Section */}
         <div className="text-center mb-20">
-          {/* Animated badge - Softer colors */}
-          <div className="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-[#d9c9ff]/30 mb-6 animate-float">
-            <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#b19cd9] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#8a75b5]"></span>
-            </span>
-            <span className="text-sm font-semibold text-[#4a3f5a]">
-              24/7 Crisis Support Available
-            </span>
-          </div>
-
-          {/* Main heading with gradient - Softer purple gradient */}
-          <h1 className="relative">
-            <span className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#6b4f7a] via-[#8a75b5] to-[#b19cd9] animate-gradient-x">
+          {/* Main heading - Purple only, no underline */}
+          <h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-center">
+            <span className="!bg-[#89009B]  bg-clip-text text-transparent">
               Crisis Centres
             </span>
-            {/* Decorative underline - Matching */}
-            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1.5 bg-gradient-to-r from-[#8a75b5] to-[#b19cd9] rounded-full" />
           </h1>
         </div>
 
@@ -161,7 +148,11 @@ const CrisisCentres = () => {
                           className="absolute inset-0"
                           style={{
                             backgroundImage: `radial-gradient(circle at 2px 2px, ${
-                              item.id === 1 ? '#8a75b5' : item.id === 2 ? '#b19cd9' : '#d9c9ff'
+                              item.id === 1
+                                ? '#8a75b5'
+                                : item.id === 2
+                                  ? '#b19cd9'
+                                  : '#d9c9ff'
                             } 1px, transparent 0)`,
                             backgroundSize: '24px 24px',
                           }}
@@ -229,25 +220,23 @@ const CrisisCentres = () => {
                   </p>
 
                   {/* Learn More Link - Added for better UX */}
-                 <div className="w-full">
-  <span className="flex items-center justify-end gap-2 text-[#8a75b5] text-sm font-medium group-hover:text-[#6b4f7a] transition-colors">
-    
-    <svg
-      className="w-4 h-4"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M9 5l7 7-7 7"
-      />
-    </svg>
-
-  </span>
-</div>
+                  <div className="w-full">
+                    <span className="flex items-center justify-end gap-2 text-[#8a75b5] text-sm font-medium group-hover:text-[#6b4f7a] transition-colors">
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </span>
+                  </div>
                 </Link>
               </div>
             </div>

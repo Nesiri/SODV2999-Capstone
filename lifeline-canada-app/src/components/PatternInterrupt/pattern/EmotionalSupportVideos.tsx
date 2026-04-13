@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 type VideoRow = {
   title: string;
@@ -10,52 +10,46 @@ type VideoRow = {
 
 const videoRows: VideoRow[] = [
   {
-    title: "It Gets Better",
-    image: "/images/pattern/emotional-support-videos/it-gets-better.jpg",
-    alt: "It Gets Better",
-    text:
-      "Video campaign against LGTBQ bullying and suicide, with people creating and sharing stories of hope that life improves after high school. Many LGBT youth can't picture what their lives might be like as openly gay adults. They can't imagine a future for themselves. So let's show them what our lives are like, let's show them what the future may hold in store for them.",
-    href: "https://itgetsbetter.org/",
+    title: 'It Gets Better',
+    image: '/images/pattern/emotional-support-videos/it-gets-better.jpg',
+    alt: 'It Gets Better',
+    text: "Video campaign against LGTBQ bullying and suicide, with people creating and sharing stories of hope that life improves after high school. Many LGBT youth can't picture what their lives might be like as openly gay adults. They can't imagine a future for themselves. So let's show them what our lives are like, let's show them what the future may hold in store for them.",
+    href: 'https://itgetsbetter.org/',
   },
   {
-    title: "Suicidal? It’s ok. You can get through it. Please Talk",
-    image: "/images/pattern/emotional-support-videos/please-talk.jpg",
-    alt: "Please talk video",
-    text:
-      "Jonny was diagnosed with a combination of schizophrenia and depression. Since then he has had various relapses which he documented on this channel. He has produced and presented documentaries on BBC Three and Channel 4 on the subject of mental health.",
-    href: "https://youtu.be/VOjY2BM6JGA?si=Jho4MU0gW4oK0VWD",
+    title: 'Suicidal? It’s ok. You can get through it. Please Talk',
+    image: '/images/pattern/emotional-support-videos/please-talk.jpg',
+    alt: 'Please talk video',
+    text: 'Jonny was diagnosed with a combination of schizophrenia and depression. Since then he has had various relapses which he documented on this channel. He has produced and presented documentaries on BBC Three and Channel 4 on the subject of mental health.',
+    href: 'https://youtu.be/VOjY2BM6JGA?si=Jho4MU0gW4oK0VWD',
   },
   {
-    title: "Suicide and a Safety Plan",
-    image: "/images/pattern/emotional-support-videos/safety-plan.jpg",
-    alt: "Suicide and a safety plan",
-    text:
-      "The great thing about a safety plan is that we can create them with our therapist (if we are seeing one) or on our own. They need to be unique to us and realistic.",
-    href: "https://youtu.be/tfDruc0QDCc?si=Gti7_5e11fYtG9T5",
+    title: 'Suicide and a Safety Plan',
+    image: '/images/pattern/emotional-support-videos/safety-plan.jpg',
+    alt: 'Suicide and a safety plan',
+    text: 'The great thing about a safety plan is that we can create them with our therapist (if we are seeing one) or on our own. They need to be unique to us and realistic.',
+    href: 'https://youtu.be/tfDruc0QDCc?si=Gti7_5e11fYtG9T5',
   },
   {
-    title: "Suicidal? Take Some Pause For Thought",
-    image: "/images/pattern/emotional-support-videos/pause-for-thought.jpg",
-    alt: "Pause for thought",
-    text:
-      "Existential therapist Emmy van Deurzen speaks about suicide.",
-    href: "https://youtu.be/_IW4pyba3DE?si=6Lbr6VZ6_QpQXIBj",
+    title: 'Suicidal? Take Some Pause For Thought',
+    image: '/images/pattern/emotional-support-videos/pause-for-thought.jpg',
+    alt: 'Pause for thought',
+    text: 'Existential therapist Emmy van Deurzen speaks about suicide.',
+    href: 'https://youtu.be/_IW4pyba3DE?si=6Lbr6VZ6_QpQXIBj',
   },
   {
-    title: "The Laughing Heart written by Charles Bukowski",
-    image: "/images/pattern/emotional-support-videos/laughing-heart.jpg",
-    alt: "The Laughing Heart",
-    text:
-      "The animation is based on 'The Laughing Heart' written by Charles Bukowski and spoken by Tom Waits. I've interpreted Bukowski's words through a story of an aged man reflecting on his life.",
-    href: "https://youtu.be/nEbIuDuW7l8?si=LwEt4CoJvRxRr1HO",
+    title: 'The Laughing Heart written by Charles Bukowski',
+    image: '/images/pattern/emotional-support-videos/laughing-heart.jpg',
+    alt: 'The Laughing Heart',
+    text: "The animation is based on 'The Laughing Heart' written by Charles Bukowski and spoken by Tom Waits. I've interpreted Bukowski's words through a story of an aged man reflecting on his life.",
+    href: 'https://youtu.be/nEbIuDuW7l8?si=LwEt4CoJvRxRr1HO',
   },
   {
-    title: "IDrankTheSeaWater",
-    image: "/images/pattern/emotional-support-videos/idranktheseawater.jpg",
-    alt: "IDrankTheSeaWater",
-    text:
-      "I am a mental health and Tourette syndrome YouTuber. I raise awareness for Self-harm, Eating disorders, Suicide, OCD, PTSD, Maladaptive Daydreaming, Dissociative Identity Disorder...etc.",
-    href: "https://www.youtube.com/@IDrankTheSeaWater/about",
+    title: 'IDrankTheSeaWater',
+    image: '/images/pattern/emotional-support-videos/idranktheseawater.jpg',
+    alt: 'IDrankTheSeaWater',
+    text: 'I am a mental health and Tourette syndrome YouTuber. I raise awareness for Self-harm, Eating disorders, Suicide, OCD, PTSD, Maladaptive Daydreaming, Dissociative Identity Disorder...etc.',
+    href: 'https://www.youtube.com/@IDrankTheSeaWater/about',
   },
 ];
 
@@ -112,7 +106,7 @@ export default function EmotionalSupportVideos() {
         <div className="text-[12px] text-[#666]">
           <Link to="/pattern" className="text-[#4c7bd9] hover:underline">
             Pattern Interrupts
-          </Link>{" "}
+          </Link>{' '}
           / <span className="text-[#333]">Emotional Support Videos</span>
         </div>
       </div>
@@ -121,7 +115,7 @@ export default function EmotionalSupportVideos() {
         className="w-full"
         style={{
           background:
-            "linear-gradient(to right, #e8e4f2 0%, #e8e4f2 50%, #e8edf7 50%, #e8edf7 100%)",
+            'linear-gradient(to right, #e8e4f2 0%, #e8e4f2 50%, #e8edf7 50%, #e8edf7 100%)',
         }}
       >
         <div className="mx-auto max-w-[1200px] px-6 py-16">
