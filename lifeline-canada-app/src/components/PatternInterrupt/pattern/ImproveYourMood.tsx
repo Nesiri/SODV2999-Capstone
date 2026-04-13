@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function ImproveYourMood() {
   return (
@@ -9,7 +9,7 @@ export default function ImproveYourMood() {
           <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
             <div className="max-w-[700px]">
               <h1
-                className="mb-4 text-[48px] leading-none text-black"
+                className="mb-4 text-[48px] leading-none text-[#89009B]"
                 style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
               >
                 Improve Your Mood
@@ -17,19 +17,19 @@ export default function ImproveYourMood() {
 
               <p
                 className="mb-8 text-[24px] leading-[1.25] text-black"
-                style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+                style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
               >
                 Depression is hard. In many ways it is all up to you. And that
                 can be difficult, tiring, scary. One way to try to combat
                 depression is to find interruptions to the cycle that occurs. To
-                interrupt these patterns takes time, strength and perseverance.
-                A good place to start is by doing things that can change your
+                interrupt these patterns takes time, strength and perseverance. A
+                good place to start is by doing things that can change your
                 mood.
               </p>
 
               <p
                 className="text-[24px] leading-[1.25] text-black"
-                style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+                style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
               >
                 Studies show negative emotions – including anger, hostility and
                 pessimism – are linked to a higher risk of heart disease and
@@ -53,14 +53,14 @@ export default function ImproveYourMood() {
       <section className="mx-auto max-w-[1400px] px-10 py-20">
         <h2
           className="mb-4 text-[48px] leading-none text-black"
-          style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+          style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
         >
           30 Ways to Improve Your Mood
         </h2>
 
         <p
           className="mb-10 text-[24px] leading-[1.25] text-black"
-          style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+          style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
         >
           If you're looking for suggestions, you may find these helpful:
         </p>
@@ -77,7 +77,7 @@ export default function ImproveYourMood() {
 
           <div
             className="max-w-[720px] space-y-5 text-[20px] leading-[1.5] text-black"
-            style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+            style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
           >
             <p>
               1. Step back and self-reflect. Whenever you start feeling
@@ -141,10 +141,9 @@ export default function ImproveYourMood() {
         </div>
 
         {/* Block 2 — text LEFT, images RIGHT */}
-        <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-[1fr_420px] lg:gap-14">
-          <div
+          <div className="mt-16 grid grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_520px] lg:gap-14">          <div
             className="max-w-[720px] space-y-5 text-[20px] leading-[1.5] text-black"
-            style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+            style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
           >
             <p>
               11. Prioritize. Sometimes we feel depressed when priorities are
@@ -210,19 +209,20 @@ export default function ImproveYourMood() {
               lacking.
             </p>
           </div>
+      <div className="flex flex-col items-end justify-start gap-12 self-start">
 
-          <div className="flex flex-col items-center gap-8 lg:items-end lg:pt-1">
-            <img
-              src="/images/improve-your-mood/smile.webp"
-              alt="Smile"
-              className="w-full max-w-[400px] object-cover"
-            />
-            <img
-              src="/images/improve-your-mood/mood-2.jpg"
-              alt="Walking outdoors"
-              className="w-full max-w-[400px] object-cover"
-            />
-          </div>
+        <img
+        src="/images/improve-your-mood/smile.webp"
+        alt="Smile"
+        className="w-[500px] h-[480px] object-cover rounded-sm shadow-[0_6px_18px_rgba(0,0,0,0.2)]"
+        />
+
+        <img
+        src="/images/improve-your-mood/mood-2.jpg"
+        alt="Walking outdoors"
+        className="w-[500px] h-[480px] object-cover rounded-sm shadow-[0_6px_18px_rgba(0,0,0,0.2)]"
+        />
+        </div>
         </div>
 
         {/* Block 3 — image LEFT, text RIGHT */}
@@ -237,7 +237,7 @@ export default function ImproveYourMood() {
 
           <div
             className="max-w-[720px] space-y-5 text-[20px] leading-[1.5] text-black"
-            style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+            style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
           >
             <p>
               21. Re-watch a funny or inspiring YouTube video. There are so many
