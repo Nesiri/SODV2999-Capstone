@@ -191,7 +191,7 @@ function BookEntry({ book, isLast }: { book: Book; isLast: boolean }) {
           href={book.href}
           target="_blank"
           rel="noreferrer"
-          className="text-center text-xs font-medium text-purple-700 hover:text-purple-800 underline underline-offset-2 leading-snug"
+          className="text-center text-xs font-medium !text-purple-700 hover:text-purple-800 underline underline-offset-2 leading-snug"
         >
           View on Amazon
         </a>
@@ -203,7 +203,7 @@ function BookEntry({ book, isLast }: { book: Book; isLast: boolean }) {
           href={book.href}
           target="_blank"
           rel="noreferrer"
-          className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4 leading-snug block"
+          className="text-xl font-semibold !text-purple-700 hover:text-purple-800 underline underline-offset-4 leading-snug block"
         >
           {book.title}
         </a>
@@ -229,14 +229,6 @@ export default function LifeChangingBooks() {
 
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-
-          {/* Breadcrumb */}
-          <div className="text-sm text-gray-500 mb-4">
-            <Link to="/pattern" className="text-purple-700 hover:text-purple-800 hover:underline">
-              Pattern Interrupts
-            </Link>{" "}
-            / <span className="text-gray-700">Life Changing Books</span>
-          </div>
 
           {/* Page Title */}
           <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">

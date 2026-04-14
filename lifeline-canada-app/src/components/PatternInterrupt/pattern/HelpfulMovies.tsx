@@ -103,14 +103,6 @@ export default function HelpfulMovies() {
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
 
-          {/* Breadcrumb */}
-          <div className="text-sm text-gray-500 mb-4">
-            <Link to="/pattern" className="text-purple-700 hover:text-purple-800 hover:underline">
-              Pattern Interrupts
-            </Link>{" "}
-            / <span className="text-gray-700">Helpful Movies</span>
-          </div>
-
           {/* Page Title */}
           <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
             <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
@@ -152,7 +144,7 @@ export default function HelpfulMovies() {
 
           {/* Poster Grid */}
           <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-6 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700 mb-6 text-center">
               Helpful Movies
             </h2>
 

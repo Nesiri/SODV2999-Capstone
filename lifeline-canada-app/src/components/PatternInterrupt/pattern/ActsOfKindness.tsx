@@ -171,22 +171,13 @@ export default function ActsOfKindnes() {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12">
       <div className="mx-auto max-w-[1200px] px-6">
-        <div className="mb-4 text-sm text-gray-500">
-          <Link
-            to="/pattern"
-            className="text-purple-700 hover:text-purple-800 hover:underline"
-          >
-            Pattern Interrupts
-          </Link>{" "}
-          / <span className="text-gray-700">Acts of Kindness</span>
-        </div>
       </div>
 
       <HeroSection />
 
       <section className="mx-auto max-w-[1200px] rounded-2xl border border-purple-100 bg-white/90 px-6 py-14 shadow-sm backdrop-blur-sm">
         <div className="mx-auto max-w-[1100px]">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-purple-700">
             35 Small Acts of Kindness
           </h2>
 

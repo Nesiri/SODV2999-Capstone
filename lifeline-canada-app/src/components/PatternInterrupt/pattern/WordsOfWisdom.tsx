@@ -172,15 +172,7 @@ export default function WordsOfWisdom() {
     <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12">
       <div className="relative z-10">
         <div className="mx-auto max-w-[1200px] px-6">
-          <div className="mb-4 text-sm text-gray-500">
-            <Link
-              to="/pattern"
-              className="text-purple-700 hover:text-purple-800 hover:underline"
-            >
-              Pattern Interrupts
-            </Link>{" "}
-            / <span className="text-gray-700">Words of Wisdom</span>
-          </div>
+         
         </div>
 
         <main className="mx-auto max-w-[1200px] px-6">
@@ -217,7 +209,7 @@ export default function WordsOfWisdom() {
         </main>
 
         <section className="mx-auto mt-10 max-w-[1200px] px-6">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
             Inspirational Quotes
           </h2>
 

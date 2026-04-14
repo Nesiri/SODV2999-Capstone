@@ -1,4 +1,3 @@
-import React from "react";
 
 const comedyLinks = [
   {
@@ -93,7 +92,7 @@ export default function Comedy() {
 
           {/* Humor and Mental Health */}
           <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
               Humor and Mental Health
             </h2>
             <p className="mt-3 leading-relaxed">
@@ -174,7 +173,8 @@ export default function Comedy() {
           <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
             <div className={imageRowClassName}>
               <div className="flex-1">
-                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700
+                ">
                   Tips to Improve Your Sense of Humor
                 </h2>
                 <p className="mt-4 leading-relaxed">
@@ -225,28 +225,33 @@ export default function Comedy() {
 
           {/* Helpful Comedy Links */}
           <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
               Helpful Comedy Links
             </h2>
 
             <div className="mt-6 space-y-4 sm:space-y-5">
               {comedyLinks.map((item, index) => (
                 <div key={index} className={imageRowClassName}>
-                  <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
-                    <a href={item.href} target="_blank" rel="noreferrer">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className={sideImageClassName}
-                      />
-                    </a>
+                  <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full text-purple-700">
+                  <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-purple-700 hover:text-purple-800 transition-colors duration-200 inline-block"
+>
+  <img
+    src={item.image}
+    alt={item.title}
+    className={sideImageClassName}
+  />
+</a>
                   </div>
                   <div className="flex-1">
                     <a
                       href={item.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                      className="text-xl font-semibold !text-purple-700 hover:text-purple-800 underline underline-offset-4"
                     >
                       {item.title}
                     </a>

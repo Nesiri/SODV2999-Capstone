@@ -62,7 +62,7 @@ const videoRows: VideoRow[] = [
 function VideoItem({ row }: { row: VideoRow }) {
   return (
     <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-start">
-      <div className="sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
+      <div className="!text-purple-700 sm:w-[18vw] sm:max-w-[14rem] sm:flex-shrink-0 w-full">
         {row.href ? (
           <a href={row.href} target="_blank" rel="noreferrer">
             <img
@@ -86,7 +86,7 @@ function VideoItem({ row }: { row: VideoRow }) {
             href={row.href}
             target="_blank"
             rel="noreferrer"
-            className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+            className="text-xl font-semibold !text-purple-700 hover:text-purple-800 underline underline-offset-4"
           >
             {row.title}
           </a>
@@ -111,13 +111,8 @@ export default function EmotionalSupportVideos() {
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
 
-          {/* Breadcrumb */}
-          <div className="text-sm text-gray-500 mb-4">
-            <Link to="/pattern" className="text-purple-700 hover:text-purple-800 hover:underline">
-              Pattern Interrupts
-            </Link>{" "}
-            / <span className="text-gray-700">Emotional Support Videos</span>
-          </div>
+          
+          
 
           {/* Page Title */}
           <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">

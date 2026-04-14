@@ -178,7 +178,7 @@ function MovieCard({ movie }: { movie: Movie }) {
         href={`https://www.imdb.com/title/${movie.imdbId}/`}
         target="_blank"
         rel="noreferrer"
-        className="block overflow-hidden"
+        className="block overflow-hidden text-purple-700 hover:text-purple-800"
       >
         <img
           src={movie.image}
@@ -193,7 +193,7 @@ function MovieCard({ movie }: { movie: Movie }) {
           href={`https://www.imdb.com/title/${movie.imdbId}/`}
           target="_blank"
           rel="noreferrer"
-          className="text-sm font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-2 leading-snug"
+          className="text-sm font-semibold !text-purple-700 hover:text-purple-800 underline underline-offset-2 leading-snug"
         >
           {movie.title} ({movie.year})
         </a>
@@ -217,13 +217,6 @@ export default function MoviesOfInspiration() {
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
 
-          {/* Breadcrumb */}
-          <div className="text-sm text-gray-500 mb-4">
-            <Link to="/pattern" className="text-purple-700 hover:text-purple-800 hover:underline">
-              Pattern Interrupts
-            </Link>{" "}
-            / <span className="text-gray-700">Movies of Inspiration</span>
-          </div>
 
           {/* Page Title */}
           <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">

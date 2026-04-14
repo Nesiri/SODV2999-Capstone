@@ -246,7 +246,7 @@ export default function MentalHealthApps() {
           </main>
 
           <section className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+            <h2 className="text-2xl font-bold tracking-tight text-purple-700 sm:text-3xl">
               Apps by Category
             </h2>
 
@@ -258,7 +258,7 @@ export default function MentalHealthApps() {
           </section>
 
           <section className="mt-8 rounded-2xl border border-purple-100 bg-gradient-to-br from-white via-purple-50/70 to-white p-6 shadow-sm backdrop-blur-sm sm:p-8 text-center">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+            <h2 className="text-2xl font-bold tracking-tight text-purple-700 sm:text-3xl">
               Regarding Apps &amp; Privacy
             </h2>
 
@@ -280,7 +280,7 @@ export default function MentalHealthApps() {
           </section>
 
           <section id="suicide-prevention" className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+            <h2 className="text-2xl font-bold tracking-tight text-purple-700 sm:text-3xl">
               Suicide Prevention
             </h2>
             <div className="mt-6 space-y-4">
@@ -290,7 +290,7 @@ export default function MentalHealthApps() {
           </section>
 
           <section id="mood-tracking" className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+            <h2 className="text-2xl font-bold tracking-tight text-purple-700 sm:text-3xl">
               Mood Tracking
             </h2>
             <div className="mt-6 space-y-4">
@@ -300,7 +300,7 @@ export default function MentalHealthApps() {
           </section>
 
           <section id="depression-anxiety" className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+            <h2 className="text-2xl font-bold tracking-tight text-purple-700 sm:text-3xl">
               Depression &amp; Anxiety
             </h2>
             <div className="mt-6 space-y-4">
@@ -310,7 +310,7 @@ export default function MentalHealthApps() {
           </section>
 
           <section id="sleep-relax" className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+            <h2 className="text-2xl font-bold tracking-tight text-purple-700 sm:text-3xl">
               Sleep / Meditate / Relax
             </h2>
             <div className="mt-6 space-y-4">
@@ -320,7 +320,7 @@ export default function MentalHealthApps() {
           </section>
 
           <section id="journaling" className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+            <h2 className="text-2xl font-bold tracking-tight text-purple-700 sm:text-3xl">
               Journaling
             </h2>
             <div className="mt-6 text-[16px] leading-7 text-slate-700">
@@ -332,7 +332,7 @@ export default function MentalHealthApps() {
           </section>
 
           <section id="grounding-breathing" className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8 pb-20">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+            <h2 className="text-2xl font-bold tracking-tight text-purple-700 sm:text-3xl">
               Grounding &amp; Breathing
             </h2>
             <div className="mt-6 text-[16px] leading-7 text-slate-700">

@@ -104,7 +104,7 @@ function ResourceRowItem({ row }: { row: ResourceRow }) {
               href={row.href}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex text-sm font-medium text-purple-700 hover:underline"
+              className=" !text-purple-700 inline-flex text-sm font-medium text-purple-700 hover:underline"
             >
               Visit resource
             </a>
@@ -126,16 +126,6 @@ export default function InteractiveMind() {
 
       <div className="relative z-10 w-full px-6 sm:px-8 lg:px-12">
         <div className="mx-auto w-full lg:w-4/5">
-          {/* Breadcrumb */}
-          <div className="mb-4 text-sm text-gray-500">
-            <Link
-              to="/pattern"
-              className="text-purple-700 hover:text-purple-800 hover:underline"
-            >
-              Pattern Interrupts
-            </Link>{" "}
-            / <span className="text-gray-700">Interactive Mind</span>
-          </div>
 
           {/* Page Title */}
           <h1 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
@@ -189,7 +179,7 @@ export default function InteractiveMind() {
 
           {/* Interactive Apps */}
           <section className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+            <h2 className="text-2xl font-bold tracking-tight text-purple-700 sm:text-3xl">
               Interactive Apps
             </h2>
 

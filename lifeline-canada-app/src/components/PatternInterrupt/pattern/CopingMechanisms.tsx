@@ -159,16 +159,6 @@ export default function CopingMechanisms() {
 
       <div className="relative z-10 w-full px-6 sm:px-8 lg:px-12">
         <div className="mx-auto w-full lg:w-4/5">
-          {/* Breadcrumb */}
-          <div className="mb-4 text-sm text-gray-500">
-            <Link
-              to="/pattern"
-              className="text-purple-700 hover:text-purple-800 hover:underline"
-            >
-              Pattern Interrupts
-            </Link>{" "}
-            / <span className="text-gray-700">Coping Mechanisms</span>
-          </div>
 
           {/* Page Title */}
           <h1 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
@@ -220,7 +210,7 @@ export default function CopingMechanisms() {
           <section className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
             <div className="grid gap-10 md:grid-cols-2 md:items-start">
               <div>
-                <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+                <h2 className="text-2xl font-bold tracking-tight text-purple-700 sm:text-3xl">
                   Coping Mechanisms to Aid Your Recovery
                 </h2>
                 <p className="mt-3 text-sm italic text-purple-700">
@@ -289,7 +279,7 @@ export default function CopingMechanisms() {
 
           {/* Unhealthy Section */}
           <section className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl">
+            <h2 className="text-2xl font-bold tracking-tight text-purple-700 sm:text-3xl lg:text-4xl">
               Common Unhealthy Coping Mechanisms
             </h2>
 
@@ -308,7 +298,7 @@ export default function CopingMechanisms() {
 
           {/* Healthy Section */}
           <section className="mt-8 rounded-2xl border border-purple-100 bg-gradient-to-br from-white via-purple-50/70 to-white p-6 shadow-sm backdrop-blur-sm sm:p-8">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl">
+            <h2 className="text-2xl font-bold tracking-tight text-purple-700 sm:text-3xl lg:text-4xl">
               Common Healthy Coping Mechanisms
             </h2>
 
