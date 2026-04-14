@@ -25,12 +25,13 @@ export default function NavLink({ link, onClick }: NavLinkProps) {
         px-4 py-3 rounded-lg
         h-[45px]
 
-        bg-gray-50 !text-gray-600 font-bold
-        border border-gray-200
+        bg-gray-50 dark:!bg-gray-50 !text-gray-600 dark:!text-gray-600 font-bold
+        border border-gray-200 dark:!border-gray-200
 
         transition-all duration-200
 
-        hover:border-blue-600 hover:text-gray-800
+        hover:border-blue-600 dark:hover:!border-blue-600 hover:text-gray-800 dark:hover:!text-gray-800
+        hover:bg-gray-100 dark:hover:!bg-gray-100
 
       `}
     >
@@ -39,7 +40,7 @@ export default function NavLink({ link, onClick }: NavLinkProps) {
           {link.icon}
         </span>
       )}
-      <span className="text-[clamp(12px,1.2vw,16px)] !text-[#89009B]  whitespace-nowrap">
+      <span className="text-[clamp(12px,1.2vw,16px)] !text-[#89009B] dark:!text-[#89009B] whitespace-nowrap">
         {link.name}
       </span>
     </Link>

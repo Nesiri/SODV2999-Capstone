@@ -168,18 +168,18 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
           </label>
         </div>
 
-        {/* Submit Button */}
-        <button
-          type="submit"
-          disabled={!formData.agreedToTerms}
-          className="w-full bg-gradient-to-r from-[#89009B] to-[#B266C9] hover:from-[#7a0088] hover:to-[#a355b8] text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
-        >
-          <span>Sign Up</span>
-          <ArrowRight
-            size={18}
-            className="group-hover:translate-x-1 transition-transform"
-          />
-        </button>
+        {/* Submit Button - White text on purple background */}
+       <button
+  type="submit"
+  disabled={!formData.agreedToTerms}
+  className="w-full !bg-[#89009B] hover:bg-[#7a0088] text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+>
+  <span className="text-white">Sign Up</span>
+  <ArrowRight
+    size={18}
+    className="group-hover:translate-x-1 transition-transform text-white"
+  />
+</button>
       </form>
 
       {/* Info Box */}

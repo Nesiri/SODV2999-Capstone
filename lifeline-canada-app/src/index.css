@@ -1,19 +1,25 @@
 @import 'tailwindcss';
 
+/* DISABLE BROWSER DARK MODE INHERITANCE */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  /* background-color: #242424; */
-  background-color: #261235;
+  /* Force light mode only - disable dark mode */
+  color-scheme: light !important;
+  color: #213547 !important;
+  background-color: #ffffff !important;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Force all elements to ignore dark mode */
+* {
+  color-scheme: light !important;
 }
 
 a {
@@ -30,13 +36,17 @@ body {
   display: flex;
   place-items: center;
   overflow-x: hidden !important;
+  background-color: #ffffff !important;
+  color: #213547 !important;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: #213547 !important;
 }
 
+/* Force light backgrounds for all buttons - disable dark button backgrounds */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -44,16 +54,37 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #f9f9f9 !important;
+  color: #213547 !important;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
   border-color: #646cff;
+  background-color: #f9f9f9 !important;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Remove dark mode media query completely */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #213547 !important;
+    background-color: #ffffff !important;
+    color-scheme: light !important;
+  }
+  
+  body {
+    background-color: #ffffff !important;
+    color: #213547 !important;
+  }
+  
+  button {
+    background-color: #f9f9f9 !important;
+    color: #213547 !important;
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -69,6 +100,7 @@ button:focus-visible {
   }
 }
 
+/* Keep your animations */
 @keyframes slideInRight {
   from {
     transform: translateX(100%);

@@ -111,7 +111,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
           type="submit"
           className="w-full bg-gradient-to-r from-[#89009B] to-[#B266C9] hover:from-[#7a0088] hover:to-[#a355b8] text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300"
         >
-          <span>Login</span>
+          <span className="!text-white">Login</span>
           <ArrowRight size={18} />
         </button>
       </form>

@@ -134,7 +134,7 @@ export default function ResourcesDropdown({
         className={`
           relative flex items-center px-4 py-2 font-medium 
           transition-colors duration-200 focus:outline-none
-          text-gray-800 hover:text-[#89009B]
+          text-gray-800 dark:!text-gray-800 hover:text-[#89009B] dark:hover:!text-[#89009B]
         `}
         aria-expanded={isOpen}
         aria-haspopup="true"
@@ -144,7 +144,7 @@ export default function ResourcesDropdown({
             {icon}
           </span>
         )}
-        <span className="text-[clamp(12px,1.2vw,16px)] !text-[#89009B] whitespace-nowrap">
+        <span className="text-[clamp(12px,1.2vw,16px)] !text-[#89009B] dark:!text-[#89009B] whitespace-nowrap">
           {triggerText}
         </span>
         <ChevronDown
@@ -158,65 +158,63 @@ export default function ResourcesDropdown({
       {/* Hover Dropdown */}
       {isOpen && (
         <div
-          className="absolute left-0 top-full mt-1 z-50 w-[600px] bg-white 
-                   border border-gray-200 shadow-xl rounded-lg overflow-hidden
+          className="absolute left-0 top-full mt-1 z-50 w-[600px] bg-white dark:!bg-white 
+                   border border-gray-200 dark:!border-gray-200 shadow-xl rounded-lg overflow-hidden
                    animate-in slide-in-from-top-2 fade-in duration-150"
           onMouseEnter={open}
           onMouseLeave={handleDropdownMouseLeave}
         >
-          <div className="flex bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg overflow-hidden border border-gray-100 max-w-2xl min-h-[320px]">
+          <div className="flex bg-gradient-to-br from-gray-50 dark:!from-gray-50 to-white dark:!to-white rounded-xl shadow-lg overflow-hidden border border-gray-100 dark:!border-gray-100 max-w-2xl min-h-[320px]">
             {/* Left Categories - Slimmer */}
-            <div className="w-[160px] bg-gradient-to-b from-purple-200 via-gray-200 to-purple-100 border-r border-gray-200/50">
-              <div className="p-3 border-b border-gray-200/60 bg-gradient-to-r from-white to-gray-50"></div>
+            <div className="w-[160px] bg-gradient-to-b from-purple-200 dark:!from-purple-200 via-gray-200 dark:!via-gray-200 to-purple-100 dark:!to-purple-100 border-r border-gray-200/50 dark:!border-gray-200/50">
+              <div className="p-3 border-b border-gray-200/60 dark:!border-gray-200/60 bg-gradient-to-r from-white dark:!from-white to-gray-50 dark:!to-gray-50"></div>
               <div className="p-1.5 overflow-y-auto max-h-[280px]">
-                {groupedByCategory.map((group) => (
-                  <button
-                    key={group.category}
-                    onMouseEnter={() =>
-                      handleCategoryMouseEnter(group.category)
-                    }
-                    className={`
-                      w-full text-left px-3 py-2 rounded mb-1
-                      transition-all duration-150 ease-out
-                      ${
-                        activeCategory === group.category
-                          ? '!bg-gradient-to-r from-purple-50 to-purple-50 border border-purple-100 shadow-sm text-[#89009B]'
-                          : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50/70 border border-transparent hover:border-gray-200'
-                      }
-                    `}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span
-                        className={`font-medium text-xs truncate ${
-                          activeCategory === group.category
-                            ? '!text-[#89009B]'
-                            : 'text-gray-700'
-                        }`}
-                      >
-                        {group.category}
-                      </span>
-                      <span
-                        className={`
-                          text-[10px] px-1.5 py-0.5 rounded-full shrink-0
-                          ${
-                            activeCategory === group.category
-                              ? '!bg-purple-100 text-[#89009B]'
-                              : 'bg-gray-100 text-gray-500'
-                          }
-                        `}
-                      ></span>
-                    </div>
-                  </button>
-                ))}
+               {groupedByCategory.map((group) => (
+  <button
+    key={group.category}
+    onMouseEnter={() => handleCategoryMouseEnter(group.category)}
+    className={`
+      w-full text-left px-3 py-2 rounded mb-1
+      transition-all duration-150 ease-out
+      ${
+        activeCategory === group.category
+          ? '!bg-gray-100 dark:!bg-gray-100 border border-gray-200 dark:!border-gray-200 shadow-sm !text-[#89009B] dark:!text-[#89009B]'
+          : 'text-gray-600 dark:!text-gray-600 hover:text-gray-900 dark:hover:!text-gray-900 hover:bg-gray-50/70 dark:hover:!bg-gray-50/70 border border-transparent hover:border-gray-200 dark:hover:!border-gray-200'
+      }
+    `}
+  >
+    <div className="flex items-center justify-between">
+      <span
+        className={`font-medium text-xs truncate ${
+          activeCategory === group.category
+            ? '!text-[#89009B] dark:!text-[#89009B]'
+            : 'text-gray-700 dark:!text-gray-700'
+        }`}
+      >
+        {group.category}
+      </span>
+      <span
+        className={`
+          text-[10px] px-1.5 py-0.5 rounded-full shrink-0
+          ${
+            activeCategory === group.category
+              ? '!bg-gray-200 dark:!bg-gray-200 !text-[#89009B] dark:!text-[#89009B]'
+              : 'bg-gray-100 dark:!bg-gray-100 text-gray-500 dark:!text-gray-500'
+          }
+        `}
+      ></span>
+    </div>
+  </button>
+))}
               </div>
             </div>
 
             {/* Right Content - Compact */}
-            <div className="flex-1 bg-gradient-to-br from-white via-gray-500/30 to-white min-w-0">
+            <div className="flex-1 bg-gradient-to-br from-white dark:!from-white via-gray-500/30 dark:!via-gray-500/30 to-white dark:!to-white min-w-0">
               {activeCategory && (
                 <div className="p-4 h-full">
                   <div className="flex items-center justify-between mb-3">
-                    <h4 className="text-sm font-semibold !text-[#89009B]  truncate">
+                    <h4 className="text-sm font-semibold !text-[#89009B] dark:!text-[#89009B] truncate">
                       {activeCategory}
                     </h4>
                   </div>
@@ -227,17 +225,17 @@ export default function ResourcesDropdown({
                         <Link
                           key={link.path}
                           to={link.path}
-                          className="group px-3 py-2.5 rounded-lg border border-gray-100 
-                                   hover:border-purple-200 hover:shadow-sm 
-                                   bg-gradient-to-r from-white to-gray-50/50
-                                   hover:from-purple-50/30 hover:to-white
+                          className="group px-3 py-2.5 rounded-lg border border-gray-100 dark:!border-gray-100 
+                                   hover:border-purple-200 dark:hover:!border-purple-200 hover:shadow-sm 
+                                   bg-gradient-to-r from-white dark:!from-white to-gray-50/50 dark:!to-gray-50/50
+                                   hover:from-purple-50/30 dark:hover:!from-purple-50/30 hover:to-white dark:hover:!to-white
                                    transition-all duration-150"
                           onClick={handleLinkClick}
                         >
                           <div className="flex items-center min-w-0">
                             {link.icon && (
                               <span
-                                className="mr-2 text-gray-500 group-hover:text-[#89009B] 
+                                className="mr-2 text-gray-500 dark:!text-gray-500 group-hover:text-[#89009B] dark:group-hover:!text-[#89009B] 
                                            transition-colors duration-150 shrink-0 text-sm"
                               >
                                 {link.icon}
@@ -245,7 +243,7 @@ export default function ResourcesDropdown({
                             )}
                             <div className="flex-1 min-w-0">
                               <span
-                                className="text-xs text-gray-700 group-hover:text-gray-900 
+                                className="text-xs text-gray-700 dark:!text-gray-700 group-hover:text-gray-900 dark:group-hover:!text-gray-900 
                                            font-medium block truncate"
                                 title={link.name}
                               >

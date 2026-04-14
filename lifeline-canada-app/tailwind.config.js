@@ -35,5 +35,6 @@ export default {
      
     },
   },
+  darkMode: false, // ❌ disable completely
   plugins: [],
 }
