@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Heart, Mail, MapPin, Send } from 'lucide-react';
+import { Heart, Mail, MapPin} from 'lucide-react';
 import AboutUsBackground from '../Background/AboutUsBackground';
 
 type MyType = {
@@ -127,8 +127,9 @@ const TLCEmailContactForm = ({ title, subtitle }: MyType) => {
                   type="submit"
                   className="group relative w-full inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#89009B] to-[#B266C9] text-white px-8 py-4 rounded-2xl text-lg font-semibold shadow-xl shadow-[#89009B]/30 hover:shadow-2xl hover:shadow-[#B266C9]/40 transition-all duration-300 hover:scale-[1.02]"
                 >
-                  <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  <span className="relative z-10">Submit</span>
+                
+                  <span className="relative z-10 !text-white">Submit</span>
+                 
                   <div className="absolute inset-0 bg-gradient-to-r from-[#B266C9] to-[#C77DDF] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
                 </button>
               </div>

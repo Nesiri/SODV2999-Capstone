@@ -131,7 +131,7 @@ const MakeContribution: React.FC = () => {
             <div className="pt-8">
               <button className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#89009B] to-[#B266C9] hover:from-[#7a0088] hover:to-[#a355b8] text-white px-10 py-5 rounded-2xl text-xl font-bold shadow-xl shadow-[#89009B]/30 hover:shadow-2xl hover:shadow-[#B266C9]/40 transition-all duration-300 hover:scale-105">
                 <Heart className="w-6 h-6 fill-white/20 group-hover:scale-110 transition-transform" />
-                <span className="relative z-10">Make a Donation</span>
+                <span className="relative z-10 !text-white">Make a Donation</span>
                 <span className="relative z-10 group-hover:translate-x-1 transition-transform">
                   →
                 </span>

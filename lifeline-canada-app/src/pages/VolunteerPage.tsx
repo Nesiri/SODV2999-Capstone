@@ -5,7 +5,7 @@ import GetInvolvedSection from '../components/Volunteer/GetInvolvedSection';
 /*
 import MarketingManagerSection from '../components/Volunteer/MarketingManagerSection';
 import ProjectManagerSection from '../components/Volunteer/ProjectManagerSection';*/
-import VolunteerFormSection from '../components/Volunteer/VolunteerFormSection';
+
 import VolunteerOpportunitiesSection from '../components/Volunteer/VolunteerOpportunitiesSection';
 
 function VolunteerPage() {
@@ -13,7 +13,7 @@ function VolunteerPage() {
     <>
       <GetInvolvedSection />
       <VolunteerOpportunitiesSection />
-      <VolunteerFormSection />
+   
       {/* 
       <CommunicationsSpecialistSection />
       <AdministrationAssistantSection />

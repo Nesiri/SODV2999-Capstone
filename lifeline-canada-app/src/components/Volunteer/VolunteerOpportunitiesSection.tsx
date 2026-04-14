@@ -653,7 +653,7 @@ const VolunteerFormSection: React.FC = () => {
               type="submit"
               className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#89009B] to-[#B266C9] text-white px-12 py-5 rounded-2xl text-xl font-bold shadow-xl shadow-[#89009B]/30 hover:shadow-2xl hover:shadow-[#B266C9]/40 transition-all duration-300 hover:scale-105"
             >
-              <span className="relative z-10">Submit Application</span>
+              <span className="relative z-10 !text-white">Submit Application</span>
               <span className="relative z-10 group-hover:translate-x-1 transition-transform">
                 →
               </span>
