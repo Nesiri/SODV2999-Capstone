@@ -83,24 +83,17 @@ const kindnessBlocks: KindnessBlock[] = [
 
 function HeroSection() {
   return (
-    <section
-      className="w-full"
-      style={{
-        background:
-          "linear-gradient(to right, #e8e4f2 0%, #e8e4f2 50%, #e8edf7 50%, #e8edf7 100%)",
-      }}
-    >
-      <div className="mx-auto max-w-[1200px] px-6 py-16">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-16">
+      <div className="mx-auto max-w-[1200px] px-6">
         <div className="grid items-center gap-10 md:grid-cols-2">
           <div className="max-w-[620px]">
-            <h1
-              className="text-[48px] leading-none text-[#89009B] md:text-[64px]"
-              style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
-            >
-              Acts of Kindness
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+              <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
+                Acts of Kindness
+              </span>
             </h1>
 
-            <div className="mt-4 space-y-6 text-[17px] leading-[1.35] text-black md:text-[18px]">
+            <div className="mt-4 space-y-6 text-[16px] leading-7 text-slate-700">
               <p>
                 Stepping outside of oneself and focusing on the needs of others is
                 an excellent Pattern Interrupt. Not only do you stop focusing on
@@ -124,7 +117,7 @@ function HeroSection() {
             <img
               src="/images/pattern/acts-of-kindness/hero.jpg"
               alt="Acts of kindness"
-              className="w-full max-w-[580px] object-cover shadow-[0_10px_20px_rgba(0,0,0,0.18)]"
+              className="w-full max-w-[580px] rounded-xl object-cover shadow-[0_12px_30px_rgba(0,0,0,0.16)]"
             />
           </div>
         </div>
@@ -144,22 +137,22 @@ function KindnessListBlock({
       <img
         src={image}
         alt={alt}
-        className="w-full max-w-[370px] object-cover shadow-[0_8px_14px_rgba(0,0,0,0.15)]"
+        className="w-full max-w-[370px] rounded-xl object-cover shadow-[0_12px_30px_rgba(0,0,0,0.16)]"
       />
     </div>
   );
 
   const textContent = (
-<ol className="list-decimal pl-6 text-[15px] leading-[1.6] text-black max-w-[520px]">      {items.map((item, index) => (
-        <li key={index} className="mb-1">
-          {item}
-        </li>
+    <ol className="list-decimal pl-6 text-[16px] leading-7 text-slate-700 max-w-[520px] space-y-1">
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
       ))}
     </ol>
   );
 
   return (
-<div className="grid items-start gap-12 py-8 md:grid-cols-2">      {imageLeft ? (
+    <div className="grid items-start gap-12 py-8 md:grid-cols-2">
+      {imageLeft ? (
         <>
           <div>{imageContent}</div>
           <div>{textContent}</div>
@@ -176,29 +169,28 @@ function KindnessListBlock({
 
 export default function ActsOfKindnes() {
   return (
-    <div className="min-h-screen bg-[#f3f3f3]">
-      {/* optional breadcrumb */}
-      <div className="mx-auto max-w-[1200px] px-6 py-4">
-        <div className="text-[12px] text-[#666]">
-          <Link to="/pattern" className="text-[#4c7bd9] hover:underline">
+    <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12">
+      <div className="mx-auto max-w-[1200px] px-6">
+        <div className="mb-4 text-sm text-gray-500">
+          <Link
+            to="/pattern"
+            className="text-purple-700 hover:text-purple-800 hover:underline"
+          >
             Pattern Interrupts
           </Link>{" "}
-          / <span className="text-[#333]">Acts of Kindness</span>
+          / <span className="text-gray-700">Acts of Kindness</span>
         </div>
       </div>
 
       <HeroSection />
 
-      <section className="mx-auto max-w-[1200px] bg-white px-6 py-14">
+      <section className="mx-auto max-w-[1200px] rounded-2xl border border-purple-100 bg-white/90 px-6 py-14 shadow-sm backdrop-blur-sm">
         <div className="mx-auto max-w-[1100px]">
-          <h2
-            className="text-[44px] leading-none text-black md:text-[56px]"
-            style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
-          >
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900">
             35 Small Acts of Kindness
           </h2>
 
-          <p className="mt-3 text-[15px] text-black">
+          <p className="mt-3 text-[16px] text-slate-700">
             A small, thoughtful gesture can make someone else’s day.
           </p>
 
@@ -208,19 +200,19 @@ export default function ActsOfKindnes() {
             ))}
           </div>
 
-          <div className="mt-10 text-center text-[13px] text-black">
+          <div className="mt-10 text-center text-[14px] text-slate-700">
             More Acts of Kindness ideas click here{" "}
             <a
               href="https://www.randomactsofkindness.org/"
               target="_blank"
               rel="noreferrer"
-              className="font-bold uppercase tracking-wide text-red-600 hover:underline"
+              className="font-semibold uppercase tracking-wide text-purple-700 hover:underline"
             >
               Random Acts of Kindness Foundation
             </a>
           </div>
         </div>
       </section>
-    </div>
+    </section>
   );
 }

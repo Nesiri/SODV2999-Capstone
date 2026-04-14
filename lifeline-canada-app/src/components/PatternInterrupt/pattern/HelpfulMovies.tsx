@@ -71,11 +71,11 @@ const moviePosters: MoviePoster[] = [
 
 function PosterItem({ item }: { item: MoviePoster }) {
   const image = (
-    <div className="overflow-hidden shadow-[0_4px_8px_rgba(0,0,0,0.18)]">
+    <div className="overflow-hidden rounded-lg shadow-md">
       <img
         src={item.image}
         alt={item.alt}
-        className="w-full object-cover transition-transform duration-300 hover:scale-125"
+        className="w-full object-cover transition-transform duration-300 hover:scale-110"
       />
     </div>
   );
@@ -93,82 +93,78 @@ function PosterItem({ item }: { item: MoviePoster }) {
 
 export default function HelpfulMovies() {
   return (
-    <div className="min-h-screen bg-[#f2f2f2]">
-      <div className="mx-auto max-w-[1200px] px-6 py-4">
-        <div className="text-[12px] text-[#666]">
-          <Link to="/pattern" className="text-[#4c7bd9] hover:underline">
-            Pattern Interrupts
-          </Link>{" "}
-          / <span className="text-[#333]">Helpful Movies</span>
-        </div>
+    <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
+      {/* Decorative background orbs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
       </div>
 
-      <section
-        className="w-full"
-        style={{
-          background:
-            "linear-gradient(to right, #e8e4f2 0%, #e8e4f2 50%, #e8edf7 50%, #e8edf7 100%)",
-        }}
-      >
-        <div className="mx-auto max-w-[1200px] px-6 py-16">
-          <div className="grid items-center gap-10 md:grid-cols-2">
-            <div className="mx-auto max-w-[460px] text-center md:mx-0 md:max-w-[500px]">
-              <h1
-                className="text-[42px] leading-[0.95] text-[#89009B] md:text-[58px]"
-                style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
-              >
-                Helpful Movies
-              </h1>
+      <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="w-full lg:w-4/5 mx-auto">
 
-              <div className="mt-5 space-y-5 text-left text-[15px] leading-[1.28] text-black">
-                <p>
-                  Finding a non-triggering, positive or inspiring movie to watch
-                  is a great pattern interrupt. Alternatively sometimes you just
-                  need a pick-me-up, and the right film at the right time can do
-                  wonders to improve your mood. That’s the power of storytelling,
-                  especially on a feature-length scale, and there are plenty of
-                  helpful movies like that.
-                </p>
+          {/* Breadcrumb */}
+          <div className="text-sm text-gray-500 mb-4">
+            <Link to="/pattern" className="text-purple-700 hover:text-purple-800 hover:underline">
+              Pattern Interrupts
+            </Link>{" "}
+            / <span className="text-gray-700">Helpful Movies</span>
+          </div>
 
-                <p>
-                  Below, we’ve assembled a curated list of some appropriate
-                  pattern interrupt movies to watch, from comedies to
-                  blockbusters to little-seen indies. Of course, depending on
-                  what your triggers are, not every choice is right for every
-                  person.
-                </p>
-              </div>
+          {/* Page Title */}
+          <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
+              Helpful Movies
+            </span>
+          </h1>
+
+          <div className="flex items-center gap-4 mt-3 mb-1">
+            <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+          </div>
+
+          {/* Intro Card */}
+          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
+            <div className="flex-1">
+              <p className="leading-relaxed">
+                Finding a non-triggering, positive or inspiring movie to watch
+                is a great pattern interrupt. Alternatively sometimes you just
+                need a pick-me-up, and the right film at the right time can do
+                wonders to improve your mood. That's the power of storytelling,
+                especially on a feature-length scale, and there are plenty of
+                helpful movies like that.
+              </p>
+              <p className="mt-4 leading-relaxed">
+                Below, we've assembled a curated list of some appropriate
+                pattern interrupt movies to watch, from comedies to
+                blockbusters to little-seen indies. Of course, depending on
+                what your triggers are, not every choice is right for every
+                person.
+              </p>
             </div>
-
-            <div className="flex justify-center md:justify-start">
+            <div className="sm:w-[30vw] sm:max-w-[18rem] sm:flex-shrink-0 w-full">
               <img
                 src="/images/pattern/helpful-movies/hero.jpg"
                 alt="Helpful movies"
-                className="w-full max-w-[420px] object-cover shadow-[0_10px_16px_rgba(0,0,0,0.18)]"
+                className="w-full h-full object-cover object-top rounded-lg shadow-md"
               />
             </div>
-          </div>
-        </div>
-      </section>
+          </main>
 
-      <section className="w-full bg-[#efefef]">
-        <div className="mx-auto max-w-[1200px] px-6 py-14">
-          <div className="mx-auto max-w-[620px]">
-            <h2
-              className="mb-8 text-center text-[36px] leading-none text-black"
-              style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
-            >
-              Helpful movies
+          {/* Poster Grid */}
+          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-6 text-center">
+              Helpful Movies
             </h2>
 
-            <div className="grid grid-cols-5 gap-3 sm:grid-cols-6">
+            <div className="grid grid-cols-5 gap-3 sm:grid-cols-6 lg:grid-cols-8">
               {moviePosters.map((item, index) => (
                 <PosterItem key={index} item={item} />
               ))}
             </div>
           </div>
+
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

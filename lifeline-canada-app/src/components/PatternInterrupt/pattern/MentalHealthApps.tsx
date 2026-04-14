@@ -132,41 +132,50 @@ const appRows: AppRow[] = [
 
 function CategoryCardItem({ card }: { card: CategoryCard }) {
   return (
-    <a href={`#${card.target}`} className="block text-center">
-      <img
-        src={card.image}
-        alt={card.alt}
-        className="mx-auto h-[150px] w-[150px] rounded-[28px] object-cover shadow-[0_8px_18px_rgba(0,0,0,0.12)]"
-      /><p className="mt-4 text-[17px]" style={{ color: "#89009B" }}>
-  {card.title}
-</p>
+    <a href={`#${card.target}`} className="group block text-center">
+      <div className="overflow-hidden rounded-[28px] shadow-[0_8px_18px_rgba(0,0,0,0.12)] transition-transform duration-300 group-hover:scale-105">
+        <img
+          src={card.image}
+          alt={card.alt}
+          className="mx-auto h-[150px] w-[150px] object-cover"
+        />
+      </div>
+      <p className="mt-4 text-[17px] font-semibold text-purple-700">
+        {card.title}
+      </p>
     </a>
   );
 }
 
 function AppRowItem({ row }: { row: AppRow }) {
   return (
-    <div className="grid gap-6 py-7 md:grid-cols-[170px_1fr] md:items-start">
-      <div className="flex flex-col items-center text-center">
-        <img
-          src={row.image}
-          alt={row.alt}
-          className="h-[86px] w-[132px] rounded-xl border border-slate-300 object-cover shadow-sm"
-        />
-        <p className="mt-3 text-[17px] leading-5 text-violet-700">{row.title}</p>
-        <p className="mt-1 text-sm text-slate-500">{row.subtitle}</p>
-      </div>
+    <div className="group rounded-2xl border border-purple-100 bg-white/90 p-5 sm:p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
+      <div className="grid gap-5 md:grid-cols-[160px_1fr] md:items-start">
+        <div className="flex flex-col items-center text-center">
+          <div className="overflow-hidden rounded-xl shadow-md ring-1 ring-purple-100">
+            <img
+              src={row.image}
+              alt={row.alt}
+              className="h-[90px] w-[140px] object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
+          <p className="mt-3 text-[17px] font-semibold text-purple-700">
+            {row.title}
+          </p>
+          <p className="mt-1 text-sm text-slate-500">{row.subtitle}</p>
+        </div>
 
-      <div className="space-y-4">
-        <p className="text-[16px] leading-7 text-slate-800">{row.text}</p>
-        <a
-          href={row.href}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex rounded bg-violet-700 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white hover:bg-violet-800"
-        >
-          Visit App
-        </a>
+        <div className="space-y-4">
+          <p className="text-[16px] leading-7 text-slate-700">{row.text}</p>
+          <a
+            href={row.href}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex rounded-md bg-purple-700 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-purple-800"
+          >
+            Visit App
+          </a>
+        </div>
       </div>
     </div>
   );
@@ -174,59 +183,70 @@ function AppRowItem({ row }: { row: AppRow }) {
 
 export default function MentalHealthApps() {
   return (
-    <div className="min-h-screen bg-[#f5f3f8]">
-      <div className="mx-auto max-w-7xl px-6 py-10">
-        <div className="mb-6 text-sm text-slate-500">
-          <Link to="/pattern" className="text-blue-600 hover:underline">
-            Pattern Interrupts
-          </Link>{" "}
-          <span className="text-slate-400">/</span>{" "}
-          <span className="text-slate-700">Mental Health Apps</span>
-        </div>
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-purple-200/20 blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-purple-200/20 blur-3xl animate-pulse [animation-delay:1s]" />
+      </div>
 
-        <section className="bg-gradient-to-r from-[#efe7f7] to-[#e9eef9] px-10 py-16">
-          <div className="mx-auto grid max-w-4xl items-center gap-10 md:grid-cols-2">
-            <div>
-              <h1 className="text-4xl font-semibold leading-tight text-[#89009B] md:text-5xl">
-                Mental Health Apps
-              </h1>
-
-              <p className="mt-5 text-[17px] leading-8 text-slate-800">
-                Seeing a therapist or mental health professional regularly is not
-                always possible for everyone. Mobile apps can offer another way to
-                interact with supportive tools, build healthy routines, and access
-                activities that improve emotional wellbeing.
-              </p>
-
-              <p className="mt-5 text-[17px] leading-8 text-slate-800">
-                Studies and lived experience both suggest that mindfulness apps,
-                mood tracking tools, guided breathing, journaling, and structured
-                coping exercises can help reduce stress, anxiety, and feelings of
-                depression when used consistently.
-              </p>
-
-              <p className="mt-5 text-[17px] leading-8 text-slate-800">
-                The apps collected below are intended to be supportive resources.
-                They are not meant to replace professional medical or clinical
-                mental health care. Talking to a qualified professional is still
-                one of the most important steps on the road to healing and mental
-                wellbeing.
-              </p>
-            </div>
-
-            <div>
-              <img
-                src="/images/pattern/mental-health-apps/hero.jpg"
-                alt="Mental health apps"
-                className="w-full rounded-none object-cover shadow-[0_10px_18px_rgba(0,0,0,0.18)]"
-              />
-            </div>
+      <div className="relative z-10 w-full px-6 sm:px-8 lg:px-12">
+        <div className="mx-auto w-full lg:w-4/5">
+          <div className="mb-4 text-sm text-gray-500">
+            <Link
+              to="/pattern"
+              className="text-purple-700 hover:text-purple-800 hover:underline"
+            >
+              Pattern Interrupts
+            </Link>{" "}
+            / <span className="text-gray-700">Mental Health Apps</span>
           </div>
-        </section>
 
-        <section className="bg-white px-10 py-16">
-          <div className="mx-auto max-w-5xl">
-            <h2 className="text-[38px] leading-tight text-slate-900">
+          <h1 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
+            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
+              Mental Health Apps
+            </span>
+          </h1>
+
+          <div className="mt-3 mb-1 flex items-center gap-4">
+            <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+          </div>
+
+          <main className="mt-6 rounded-2xl border border-white/50 bg-white/70 p-6 text-gray-700 shadow-lg backdrop-blur-sm sm:p-8">
+            <div className="grid items-center gap-8 md:grid-cols-[1.2fr_0.8fr]">
+              <div>
+                <p className="leading-relaxed">
+                  Seeing a therapist or mental health professional regularly is not
+                  always possible for everyone. Mobile apps can offer another way to
+                  interact with supportive tools, build healthy routines, and access
+                  activities that improve emotional wellbeing.
+                </p>
+                <p className="mt-4 leading-relaxed">
+                  Studies and lived experience both suggest that mindfulness apps,
+                  mood tracking tools, guided breathing, journaling, and structured
+                  coping exercises can help reduce stress, anxiety, and feelings of
+                  depression when used consistently.
+                </p>
+                <p className="mt-4 leading-relaxed">
+                  The apps collected below are intended to be supportive resources.
+                  They are not meant to replace professional medical or clinical
+                  mental health care. Talking to a qualified professional is still
+                  one of the most important steps on the road to healing and mental
+                  wellbeing.
+                </p>
+              </div>
+
+              <div>
+                <img
+                  src="/images/pattern/mental-health-apps/hero.jpg"
+                  alt="Mental health apps"
+                  className="w-full rounded-xl object-cover shadow-[0_12px_30px_rgba(0,0,0,0.16)]"
+                />
+              </div>
+            </div>
+          </main>
+
+          <section className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
               Apps by Category
             </h2>
 
@@ -235,12 +255,10 @@ export default function MentalHealthApps() {
                 <CategoryCardItem key={card.title} card={card} />
               ))}
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section className="border-t-4 border-violet-300 bg-[linear-gradient(to_bottom,rgba(243,240,248,0.95),rgba(238,242,249,0.95))] px-10 py-20">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="text-[38px] leading-tight text-slate-900">
+          <section className="mt-8 rounded-2xl border border-purple-100 bg-gradient-to-br from-white via-purple-50/70 to-white p-6 shadow-sm backdrop-blur-sm sm:p-8 text-center">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
               Regarding Apps &amp; Privacy
             </h2>
 
@@ -259,93 +277,73 @@ export default function MentalHealthApps() {
                 app, take a moment to understand how your information is handled.
               </p>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section id="suicide-prevention" className="bg-white px-10 py-16">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="text-[34px] leading-tight text-slate-900">
+          <section id="suicide-prevention" className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
               Suicide Prevention
             </h2>
-            <div className="mt-8 border-t border-violet-200">
+            <div className="mt-6 space-y-4">
               <AppRowItem row={appRows[0]} />
-              <div className="border-t border-violet-200">
-                <AppRowItem row={appRows[1]} />
-              </div>
+              <AppRowItem row={appRows[1]} />
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section id="mood-tracking" className="bg-white px-10 py-4">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="text-[34px] leading-tight text-slate-900">
+          <section id="mood-tracking" className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
               Mood Tracking
             </h2>
-            <div className="mt-8 border-t border-violet-200">
+            <div className="mt-6 space-y-4">
               <AppRowItem row={appRows[2]} />
-              <div className="border-t border-violet-200">
-                <AppRowItem row={appRows[3]} />
-              </div>
+              <AppRowItem row={appRows[3]} />
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section id="depression-anxiety" className="bg-white px-10 py-16">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="text-[34px] leading-tight text-slate-900">
+          <section id="depression-anxiety" className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
               Depression &amp; Anxiety
             </h2>
-            <div className="mt-8 border-t border-violet-200">
+            <div className="mt-6 space-y-4">
               <AppRowItem row={appRows[4]} />
-              <div className="border-t border-violet-200">
-                <AppRowItem row={appRows[5]} />
-              </div>
+              <AppRowItem row={appRows[5]} />
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section id="sleep-relax" className="bg-white px-10 py-4">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="text-[34px] leading-tight text-slate-900">
+          <section id="sleep-relax" className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
               Sleep / Meditate / Relax
             </h2>
-            <div className="mt-8 border-t border-violet-200">
+            <div className="mt-6 space-y-4">
               <AppRowItem row={appRows[6]} />
-              <div className="border-t border-violet-200">
-                <AppRowItem row={appRows[7]} />
-              </div>
+              <AppRowItem row={appRows[7]} />
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section id="journaling" className="bg-white px-10 py-16">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="text-[34px] leading-tight text-slate-900">
+          <section id="journaling" className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
               Journaling
             </h2>
-            <div className="mt-6 text-[16px] leading-7 text-slate-800">
+            <div className="mt-6 text-[16px] leading-7 text-slate-700">
               Journaling apps and writing tools can help you process emotions,
               notice patterns, release stress, and reflect more clearly on what
               you are experiencing. Apps like Daylio and Moodfit can already
               support journaling habits through prompts and tracking.
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section id="grounding-breathing" className="bg-white px-10 py-4 pb-20">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="text-[34px] leading-tight text-slate-900">
+          <section id="grounding-breathing" className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8 pb-20">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
               Grounding &amp; Breathing
             </h2>
-            <div className="mt-6 text-[16px] leading-7 text-slate-800">
+            <div className="mt-6 text-[16px] leading-7 text-slate-700">
               Grounding and breathing tools help calm the nervous system during
               stress, panic, racing thoughts, and emotional overload. Apps like
               Calm Harm, Insight Timer, Smiling Mind, and Moodfit all include
               useful breathing, relaxation, and grounding-based support.
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

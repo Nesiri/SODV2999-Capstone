@@ -10,8 +10,6 @@ type QuoteImageCard = {
   alt: string;
 };
 
-// ── Quote groups ────────────────────────────────────────────────────────────
-
 const featuredQuotes: QuoteItem[] = [
   { quote: "There is hope, even when your brain tells you there isn't.", author: "John Green" },
   { quote: "Do the best you can until you know better. Then when you know better, do better.", author: "Maya Angelou" },
@@ -96,8 +94,6 @@ const mindsetQuotes: QuoteItem[] = [
   { quote: "The only person you are destined to become is the person you decide to be.", author: "Ralph Waldo Emerson" },
 ];
 
-// ── Image cards ──────────────────────────────────────────────────────────────
-
 const imageCards: QuoteImageCard[] = [
   { image: "/images/pattern/words-of-wisdom/hope-lives-here.jpg", alt: "Hope lives here" },
   { image: "/images/pattern/words-of-wisdom/john-green-hope.jpg", alt: "John Green hope quote" },
@@ -107,8 +103,6 @@ const imageCards: QuoteImageCard[] = [
   { image: "/images/pattern/words-of-wisdom/steve-jobs.jpg", alt: "Steve Jobs quote" },
 ];
 
-// ── Combine all quotes ───────────────────────────────────────────────────────
-
 const allQuotes: QuoteItem[] = [
   ...strengthQuotes,
   ...featuredQuotes,
@@ -117,8 +111,6 @@ const allQuotes: QuoteItem[] = [
   ...resilienceQuotes,
   ...mindsetQuotes,
 ];
-
-// ── Components ───────────────────────────────────────────────────────────────
 
 function QuoteBlock({
   items,
@@ -132,10 +124,10 @@ function QuoteBlock({
       {items.map((item, index) => (
         <p
           key={`${item.author}-${startNumber + index}`}
-          className="text-[15px] leading-8 text-black"
+          className="text-[16px] leading-8 text-slate-700"
         >
           {startNumber + index}. {item.quote}{" "}
-          <span className="text-[#555]">– {item.author}</span>
+          <span className="text-slate-500">– {item.author}</span>
         </p>
       ))}
     </div>
@@ -144,24 +136,20 @@ function QuoteBlock({
 
 function QuoteImage({ image, alt }: QuoteImageCard) {
   return (
-    <div className="my-8">
+    <div className="my-8 flex justify-center">
       <img
         src={image}
         alt={alt}
-        className="w-full max-w-[420px] object-cover shadow-[0_8px_16px_rgba(0,0,0,0.18)]"
+        className="w-full max-w-[420px] rounded-xl object-cover shadow-[0_12px_30px_rgba(0,0,0,0.16)]"
       />
     </div>
   );
 }
 
-// ── Page ─────────────────────────────────────────────────────────────────────
-
 export default function WordsOfWisdom() {
-  // Split all quotes into left (even index) and right (odd index) columns
   const leftQuotes = allQuotes.filter((_, i) => i % 2 === 0);
   const rightQuotes = allQuotes.filter((_, i) => i % 2 !== 0);
 
-  // Divide each column into 3 blocks so images can be interleaved between them
   const chunkSize = Math.ceil(leftQuotes.length / 3);
   const leftBlock1 = leftQuotes.slice(0, chunkSize);
   const leftBlock2 = leftQuotes.slice(chunkSize, chunkSize * 2);
@@ -172,7 +160,6 @@ export default function WordsOfWisdom() {
   const rightBlock2 = rightQuotes.slice(rChunkSize, rChunkSize * 2);
   const rightBlock3 = rightQuotes.slice(rChunkSize * 2);
 
-  // Quote numbers: left column = 1, 3, 5 ... right column = 2, 4, 6 ...
   const leftStart1 = 1;
   const leftStart2 = leftStart1 + leftBlock1.length * 2;
   const leftStart3 = leftStart2 + leftBlock2.length * 2;
@@ -182,79 +169,79 @@ export default function WordsOfWisdom() {
   const rightStart3 = rightStart2 + rightBlock2.length * 2;
 
   return (
-    <div className="min-h-screen bg-[#f2f2f2]">
-
-      {/* Breadcrumb */}
-      <div className="mx-auto max-w-[1200px] px-6 py-6">
-        <div className="text-[12px] text-[#666]">
-          <Link to="/pattern" className="text-[#4c7bd9] hover:underline">
-            Pattern Interrupts
-          </Link>{" "}
-          / <span className="text-[#333]">Words of Wisdom</span>
+    <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12">
+      <div className="relative z-10">
+        <div className="mx-auto max-w-[1200px] px-6">
+          <div className="mb-4 text-sm text-gray-500">
+            <Link
+              to="/pattern"
+              className="text-purple-700 hover:text-purple-800 hover:underline"
+            >
+              Pattern Interrupts
+            </Link>{" "}
+            / <span className="text-gray-700">Words of Wisdom</span>
+          </div>
         </div>
-      </div>
 
-      {/* Hero — split purple/blue gradient matching Lifeline Canada */}
-      <section className="w-full bg-[linear-gradient(to_right,#e7e3f3_0%,#e7e3f3_50%,#e8edf7_50%,#e8edf7_100%)]">
-        <div className="mx-auto grid max-w-[980px] items-center gap-10 px-6 py-16 md:grid-cols-2">
-          <div>
-            <h1 className="font-serif text-[34px] leading-tight text-[#89009B] md:text-[50px]">
-              Words of Wisdom
-            </h1>
-            <div className="mt-4 space-y-4 text-[15px] leading-7 text-black">
-              <p>
-                Words of wisdom are helpful to anyone looking to get inspired through words
-                that are as powerful as they are meaningful. They offer solace, clarity, and
-                profound insights into the art of living. Sometimes a great mind can put a
-                complex subject or feeling into a few succinct words to powerful effect.
-              </p>
-              <p>
-                Motivational quotes provide us with a quick and timely burst of wisdom to get
-                our focus back, offering the inspiration needed for the day or occasion. Often
-                a quote can offer inspiration for the week, and inspire us when our normal
-                motivation has lapsed.
-              </p>
+        <main className="mx-auto max-w-[1200px] px-6">
+          <div className="grid items-center gap-10 rounded-2xl border border-white/50 bg-white/70 p-6 shadow-lg backdrop-blur-sm md:grid-cols-[1.2fr_0.8fr]">
+            <div>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+                <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
+                  Words of Wisdom
+                </span>
+              </h1>
+              <div className="mt-4 space-y-4 text-[16px] leading-7 text-slate-700">
+                <p>
+                  Words of wisdom are helpful to anyone looking to get inspired through words
+                  that are as powerful as they are meaningful. They offer solace, clarity, and
+                  profound insights into the art of living. Sometimes a great mind can put a
+                  complex subject or feeling into a few succinct words to powerful effect.
+                </p>
+                <p>
+                  Motivational quotes provide us with a quick and timely burst of wisdom to get
+                  our focus back, offering the inspiration needed for the day or occasion. Often
+                  a quote can offer inspiration for the week, and inspire us when our normal
+                  motivation has lapsed.
+                </p>
+              </div>
+            </div>
+            <div className="flex justify-center md:justify-end">
+              <img
+                src="/images/pattern/words-of-wisdom/hero.jpg"
+                alt="Words of wisdom"
+                className="w-full max-w-[420px] rounded-xl object-cover shadow-[0_12px_30px_rgba(0,0,0,0.16)]"
+              />
             </div>
           </div>
+        </main>
 
-          <div className="flex justify-center md:justify-end">
-            <img
-              src="/images/pattern/words-of-wisdom/hero.jpg"
-              alt="Words of wisdom"
-              className="w-full max-w-[420px] object-cover shadow-[0_8px_16px_rgba(0,0,0,0.18)]"
-            />
+        <section className="mx-auto mt-10 max-w-[1200px] px-6">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+            Inspirational Quotes
+          </h2>
+
+          <div className="mt-8 grid items-start gap-x-10 md:grid-cols-2">
+            <div>
+              <QuoteBlock items={leftBlock1} startNumber={leftStart1} />
+              {imageCards[1] && <QuoteImage {...imageCards[1]} />}
+              <QuoteBlock items={leftBlock2} startNumber={leftStart2} />
+              {imageCards[2] && <QuoteImage {...imageCards[2]} />}
+              <QuoteBlock items={leftBlock3} startNumber={leftStart3} />
+              {imageCards[4] && <QuoteImage {...imageCards[4]} />}
+            </div>
+
+            <div className="mt-10 md:mt-0">
+              {imageCards[0] && <QuoteImage {...imageCards[0]} />}
+              <QuoteBlock items={rightBlock1} startNumber={rightStart1} />
+              {imageCards[3] && <QuoteImage {...imageCards[3]} />}
+              <QuoteBlock items={rightBlock2} startNumber={rightStart2} />
+              {imageCards[5] && <QuoteImage {...imageCards[5]} />}
+              <QuoteBlock items={rightBlock3} startNumber={rightStart3} />
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Quotes — two-column layout with images interleaved */}
-      <section className="mx-auto max-w-[980px] px-6 py-14">
-        <h2 className="text-[28px] text-black md:text-[34px]">Inspirational Quotes</h2>
-
-        <div className="mt-8 grid items-start gap-x-10 md:grid-cols-2">
-
-          {/* Left column */}
-          <div>
-            <QuoteBlock items={leftBlock1} startNumber={leftStart1} />
-            {imageCards[1] && <QuoteImage {...imageCards[1]} />}
-            <QuoteBlock items={leftBlock2} startNumber={leftStart2} />
-            {imageCards[2] && <QuoteImage {...imageCards[2]} />}
-            <QuoteBlock items={leftBlock3} startNumber={leftStart3} />
-            {imageCards[4] && <QuoteImage {...imageCards[4]} />}
-          </div>
-
-          {/* Right column */}
-          <div className="mt-10 md:mt-0">
-            {imageCards[0] && <QuoteImage {...imageCards[0]} />}
-            <QuoteBlock items={rightBlock1} startNumber={rightStart1} />
-            {imageCards[3] && <QuoteImage {...imageCards[3]} />}
-            <QuoteBlock items={rightBlock2} startNumber={rightStart2} />
-            {imageCards[5] && <QuoteImage {...imageCards[5]} />}
-            <QuoteBlock items={rightBlock3} startNumber={rightStart3} />
-          </div>
-
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </section>
   );
 }

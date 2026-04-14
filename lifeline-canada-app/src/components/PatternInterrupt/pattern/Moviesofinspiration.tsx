@@ -173,90 +173,104 @@ const movies: Movie[] = [
 
 function MovieCard({ movie }: { movie: Movie }) {
   return (
-    <div className="flex flex-col">
+    <div className="rounded-xl border border-gray-100 bg-white shadow-sm overflow-hidden flex flex-col">
       <a
         href={`https://www.imdb.com/title/${movie.imdbId}/`}
         target="_blank"
         rel="noreferrer"
-        className="block overflow-hidden rounded-sm shadow-[0_4px_14px_rgba(0,0,0,0.22)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.35)] transition-all duration-300"
+        className="block overflow-hidden"
       >
         <img
           src={movie.image}
           alt={`${movie.title} poster`}
-          className="w-full aspect-[2/3] object-cover transition-transform duration-300 hover:scale-110"
+          className="w-full aspect-[2/3] object-cover transition-transform duration-300 hover:scale-105"
           loading="lazy"
         />
       </a>
 
-     <a
-        href={`https://www.imdb.com/title/${movie.imdbId}/`}
-        target="_blank"
-        rel="noreferrer"
-        className="mt-3 text-center text-[14px] font-semibold hover:underline px-1"
-        style={{ color: "#89009B", textDecorationColor: "#89009B" }}
+      <div className="p-3 flex flex-col flex-1">
+        <a
+          href={`https://www.imdb.com/title/${movie.imdbId}/`}
+          target="_blank"
+          rel="noreferrer"
+          className="text-sm font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-2 leading-snug"
         >
-        {movie.title} ({movie.year})
-      </a>
-
-      <p className="mt-2 text-[13px] leading-6 text-[#333] px-1">
-        {movie.description}
-      </p>
+          {movie.title} ({movie.year})
+        </a>
+        <p className="mt-2 text-xs leading-relaxed text-gray-600">
+          {movie.description}
+        </p>
+      </div>
     </div>
   );
 }
 
 export default function MoviesOfInspiration() {
   return (
-    <div className="min-h-screen bg-[#f2f2f2]">
-
-      <div className="mx-auto max-w-[1200px] px-6 py-6">
-        <div className="text-[12px] text-[#666]">
-          <Link to="/pattern" className="text-[#4c7bd9] hover:underline">
-            Pattern Interrupts
-          </Link>{" "}
-          / <span className="text-[#333]">Movies of Inspiration</span>
-        </div>
+    <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
+      {/* Decorative background orbs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
       </div>
 
-      <section className="w-full bg-[linear-gradient(to_right,#e7e3f3_0%,#e7e3f3_50%,#e8edf7_50%,#e8edf7_100%)]">
-        <div className="mx-auto grid max-w-[980px] items-center gap-10 px-6 py-14 md:grid-cols-2">
-          <div>
-            <h1 className="font-serif text-[34px] md:text-[46px] text-[#89009B]">
-              Movies of Inspiration
-            </h1>
+      <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="w-full lg:w-4/5 mx-auto">
 
-            <div className="mt-4 space-y-4 text-[15px]">
-              <p>
+          {/* Breadcrumb */}
+          <div className="text-sm text-gray-500 mb-4">
+            <Link to="/pattern" className="text-purple-700 hover:text-purple-800 hover:underline">
+              Pattern Interrupts
+            </Link>{" "}
+            / <span className="text-gray-700">Movies of Inspiration</span>
+          </div>
+
+          {/* Page Title */}
+          <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
+              Movies of Inspiration
+            </span>
+          </h1>
+
+          <div className="flex items-center gap-4 mt-3 mb-1">
+            <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+          </div>
+
+          {/* Intro Card */}
+          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
+            <div className="flex-1">
+              <p className="leading-relaxed">
                 Our soul needs inspiration just like the body needs food. Good inspirational
                 movies uplift our soul and fill it with hope.
               </p>
-              <p>
+              <p className="mt-4 leading-relaxed">
                 These stories teach lessons, build courage, and help us move forward in life.
               </p>
             </div>
+            <div className="sm:w-[30vw] sm:max-w-[18rem] sm:flex-shrink-0 w-full">
+              <img
+                src="/images/pattern/movies-of-inspiration/hero.jpg"
+                alt="Movies"
+                className="w-full h-full object-cover object-top rounded-lg shadow-md"
+              />
+            </div>
+          </main>
+
+          {/* Movies Grid */}
+          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+              Inspirational Movies based on True Stories &amp; Events
+            </h2>
+
+            <div className="mt-6 grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-4">
+              {movies.map((movie) => (
+                <MovieCard key={movie.imdbId} movie={movie} />
+              ))}
+            </div>
           </div>
 
-          <div className="flex justify-center md:justify-end">
-            <img
-              src="/images/pattern/movies-of-inspiration/hero.jpg"
-              alt="Movies"
-              className="w-full max-w-[420px] object-cover shadow-lg"
-            />
-          </div>
         </div>
-      </section>
-
-      <section className="mx-auto max-w-[980px] px-6 py-14">
-        <h2 className="text-[28px] md:text-[34px]">
-          Inspirational Movies based on True Stories & Events
-        </h2>
-
-        <div className="mt-10 grid grid-cols-2 gap-5 md:grid-cols-4">
-          {movies.map((movie) => (
-            <MovieCard key={movie.imdbId} movie={movie} />
-          ))}
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

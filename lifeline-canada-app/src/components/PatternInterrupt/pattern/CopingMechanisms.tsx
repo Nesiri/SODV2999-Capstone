@@ -127,83 +127,107 @@ const healthyRows: CopingRow[] = [
 
 function RowItem({ row }: { row: CopingRow }) {
   return (
-    <div className="grid gap-6 py-7 md:grid-cols-[170px_1fr] md:items-start">
-      <div className="flex flex-col items-center text-center">
-        <img
-          src={row.image}
-          alt={row.alt}
-          className="h-[78px] w-[78px] rounded-2xl border border-slate-300 object-cover shadow-sm"
-        />
-        <p className="mt-3 text-[17px] leading-5 text-slate-900">{row.title}</p>
-      </div>
+    <div className="group rounded-2xl border border-violet-100 bg-white/85 p-5 sm:p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
+      <div className="grid gap-5 md:grid-cols-[140px_1fr] md:items-start">
+        <div className="flex flex-col items-center text-center">
+          <div className="overflow-hidden rounded-2xl shadow-md ring-1 ring-purple-100">
+            <img
+              src={row.image}
+              alt={row.alt}
+              className="h-[88px] w-[88px] object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
+          <p className="mt-3 text-[17px] font-semibold leading-5 text-slate-900">
+            {row.title}
+          </p>
+        </div>
 
-      <p className="text-[16px] leading-7 text-slate-800">{row.text}</p>
+        <p className="text-[16px] leading-7 text-slate-700">{row.text}</p>
+      </div>
     </div>
   );
 }
 
 export default function CopingMechanisms() {
   return (
-    <div className="min-h-screen bg-[#f5f3f8]">
-      <div className="mx-auto max-w-7xl px-6 py-10">
-        <div className="mb-6 text-sm text-slate-500">
-          <Link to="/pattern" className="text-blue-600 hover:underline">
-            Pattern Interrupts
-          </Link>{" "}
-          <span className="text-slate-400">/</span>{" "}
-          <span className="text-slate-700">Coping Mechanisms</span>
-        </div>
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12">
+      {/* Decorative background orbs */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-purple-200/20 blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-purple-200/20 blur-3xl animate-pulse [animation-delay:1s]" />
+      </div>
 
-        <section className="bg-gradient-to-r from-[#efe7f7] to-[#e9eef9] px-10 py-16">
-          <div className="mx-auto grid max-w-4xl items-center gap-10 md:grid-cols-2">
-            <div>
-              <h1 className="text-4xl font-semibold leading-tight text-[#89009B] md:text-5xl ">
-                Coping Mechanisms
-              </h1>
-
-              <p className="mt-5 text-[17px] leading-8 text-slate-800">
-                Life is filled with challenges, interpersonal conflict, physical
-                and emotional pain, loss, and stress. It does not matter who you
-                are — no one goes through life untouched.
-              </p>
-
-              <p className="mt-5 text-[17px] leading-8 text-slate-800">
-                Some people also experience significant trauma, difficult
-                relationships, deep fear, shame, abuse, or violence. Because of
-                this, many of us develop patterns for coping that may feel useful
-                in the moment but become harmful over time.
-              </p>
-
-              <p className="mt-5 text-[17px] leading-8 text-slate-800">
-                Recovery is not only about recognizing unhealthy coping
-                mechanisms. It is also about learning healthier ways to respond
-                to stress, pain, and emotional discomfort so that your coping
-                supports your wellbeing instead of damaging it.
-              </p>
-            </div>
-
-            <div>
-              <img
-                src="/images/pattern/coping-mechanisms/hero.jpg"
-                alt="Coping mechanisms"
-                className="w-full rounded-none object-cover shadow-[0_10px_18px_rgba(0,0,0,0.18)]"
-              />
-            </div>
+      <div className="relative z-10 w-full px-6 sm:px-8 lg:px-12">
+        <div className="mx-auto w-full lg:w-4/5">
+          {/* Breadcrumb */}
+          <div className="mb-4 text-sm text-gray-500">
+            <Link
+              to="/pattern"
+              className="text-purple-700 hover:text-purple-800 hover:underline"
+            >
+              Pattern Interrupts
+            </Link>{" "}
+            / <span className="text-gray-700">Coping Mechanisms</span>
           </div>
-        </section>
 
-        <section className="bg-white px-10 py-16">
-          <div className="mx-auto max-w-4xl">
+          {/* Page Title */}
+          <h1 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
+            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
+              Coping Mechanisms
+            </span>
+          </h1>
+
+          <div className="mt-3 mb-1 flex items-center gap-4">
+            <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+          </div>
+
+          {/* Hero Intro Card */}
+          <main className="mt-6 rounded-2xl border border-white/50 bg-white/70 p-6 text-gray-700 shadow-lg backdrop-blur-sm sm:p-8">
+            <div className="grid items-center gap-8 md:grid-cols-[1.2fr_0.8fr]">
+              <div>
+                <p className="leading-relaxed">
+                  Life is filled with challenges, interpersonal conflict, physical
+                  and emotional pain, loss, and stress. It does not matter who you
+                  are — no one goes through life untouched.
+                </p>
+
+                <p className="mt-4 leading-relaxed">
+                  Some people also experience significant trauma, difficult
+                  relationships, deep fear, shame, abuse, or violence. Because of
+                  this, many of us develop patterns for coping that may feel useful
+                  in the moment but become harmful over time.
+                </p>
+
+                <p className="mt-4 leading-relaxed">
+                  Recovery is not only about recognizing unhealthy coping
+                  mechanisms. It is also about learning healthier ways to respond
+                  to stress, pain, and emotional discomfort so that your coping
+                  supports your wellbeing instead of damaging it.
+                </p>
+              </div>
+
+              <div className="w-full">
+                <img
+                  src="/images/pattern/coping-mechanisms/hero.jpg"
+                  alt="Coping mechanisms"
+                  className="w-full rounded-xl object-cover shadow-[0_12px_30px_rgba(0,0,0,0.16)]"
+                />
+              </div>
+            </div>
+          </main>
+
+          {/* Recovery Section */}
+          <section className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
             <div className="grid gap-10 md:grid-cols-2 md:items-start">
               <div>
-                <h2 className="text-3xl font-medium text-slate-900">
+                <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
                   Coping Mechanisms to Aid Your Recovery
                 </h2>
-                <p className="mt-3 text-sm italic text-violet-700">
+                <p className="mt-3 text-sm italic text-purple-700">
                   Source: Promises Treatment Centre
                 </p>
 
-                <div className="mt-6 space-y-5 text-[16px] leading-7 text-slate-800">
+                <div className="mt-6 space-y-5 text-[16px] leading-7 text-slate-700">
                   <p>
                     Regardless of your past, your life story up until now, or the
                     details of what you have been through, what matters most is
@@ -230,18 +254,18 @@ export default function CopingMechanisms() {
               <img
                 src="/images/pattern/coping-mechanisms/recovery.jpg"
                 alt="Coping recovery"
-                className="w-full rounded-none object-cover shadow-[0_10px_18px_rgba(0,0,0,0.14)]"
+                className="w-full rounded-xl object-cover shadow-[0_12px_30px_rgba(0,0,0,0.12)]"
               />
             </div>
 
-            <div className="mt-16 grid gap-10 md:grid-cols-2 md:items-start">
+            <div className="mt-12 grid gap-10 md:grid-cols-2 md:items-start">
               <img
                 src="/images/pattern/coping-mechanisms/substance-use.jpg"
                 alt="Substance use and emotional avoidance"
-                className="w-full rounded-none object-cover shadow-[0_10px_18px_rgba(0,0,0,0.14)]"
+                className="order-2 w-full rounded-xl object-cover shadow-[0_12px_30px_rgba(0,0,0,0.12)] md:order-1"
               />
 
-              <div className="space-y-5 text-[16px] leading-7 text-slate-800">
+              <div className="order-1 space-y-5 text-[16px] leading-7 text-slate-700 md:order-2">
                 <p>
                   Sometimes people learn to use alcohol, drugs, emotional
                   shutdown, distraction, overworking, or other avoidant habits as
@@ -261,41 +285,34 @@ export default function CopingMechanisms() {
                 </p>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section className="bg-white px-10 py-8">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="text-[42px] leading-tight text-slate-900">
+          {/* Unhealthy Section */}
+          <section className="mt-8 rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl">
               Common Unhealthy Coping Mechanisms
             </h2>
 
-            <p className="mt-6 max-w-4xl text-[16px] leading-7 text-slate-800">
+            <p className="mt-6 max-w-4xl text-[16px] leading-7 text-slate-700">
               Following are some of the more common unhealthy coping mechanisms —
               the ones that can easily trip you up and make you more vulnerable to
               stress, relapse, conflict, and emotional disconnection.
             </p>
 
-            <div className="mt-8">
-              {unhealthyRows.map((row, index) => (
-                <div
-                  key={row.title}
-                  className={index !== 0 ? "border-t border-violet-200" : ""}
-                >
-                  <RowItem row={row} />
-                </div>
+            <div className="mt-8 space-y-4 sm:space-y-5">
+              {unhealthyRows.map((row) => (
+                <RowItem key={row.title} row={row} />
               ))}
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section className="bg-[#eee5f5] px-10 py-16">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="text-[42px] leading-tight text-slate-900">
+          {/* Healthy Section */}
+          <section className="mt-8 rounded-2xl border border-purple-100 bg-gradient-to-br from-white via-purple-50/70 to-white p-6 shadow-sm backdrop-blur-sm sm:p-8">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl">
               Common Healthy Coping Mechanisms
             </h2>
 
-            <div className="mt-6 space-y-5 text-[16px] leading-7 text-slate-800">
+            <div className="mt-6 space-y-5 text-[16px] leading-7 text-slate-700">
               <p>
                 There is a popular saying that nature abhors a vacuum. The same
                 tends to be true in psychology. When a person gives up an
@@ -315,19 +332,14 @@ export default function CopingMechanisms() {
               </p>
             </div>
 
-            <div className="mt-10">
-              {healthyRows.map((row, index) => (
-                <div
-                  key={row.title}
-                  className={index !== 0 ? "border-t border-violet-300" : ""}
-                >
-                  <RowItem row={row} />
-                </div>
+            <div className="mt-10 space-y-4 sm:space-y-5">
+              {healthyRows.map((row) => (
+                <RowItem key={row.title} row={row} />
               ))}
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

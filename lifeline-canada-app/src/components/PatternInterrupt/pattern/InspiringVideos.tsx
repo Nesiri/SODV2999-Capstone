@@ -10,7 +10,7 @@ const videos: VideoItem[] = [
   {
     title: "Be Phenomenal",
     description:
-      "This video is literally my battery pack. It recharges me when I’m tired. It brings me up when I’m down. It gives me inspiration and hope when I’m in doubt.",
+      "This video is literally my battery pack. It recharges me when I'm tired. It brings me up when I'm down. It gives me inspiration and hope when I'm in doubt.",
     youtubeUrl: "https://www.youtube.com/watch?v=e2Tq2gvGt80",
   },
   {
@@ -28,7 +28,7 @@ const videos: VideoItem[] = [
   {
     title: "Increasing Your Confidence",
     description:
-      "Paul Potts sings his heart out at Britain’s Got Talent Competition. He lacked belief in himself but later achieved great success.",
+      "Paul Potts sings his heart out at Britain's Got Talent Competition. He lacked belief in himself but later achieved great success.",
     youtubeUrl: "https://www.youtube.com/watch?v=ikAb-NYkseI",
   },
   {
@@ -146,91 +146,107 @@ export default function InspiringVideos() {
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
 
   return (
-    <main className="w-full bg-white">
-      {/* HERO */}
-<section
-  className="w-full"
-  style={{
-    background:
-      "linear-gradient(90deg, #e9e3f4 0%, #e6ecf7 60%, #eadff3 100%)",
-  }}
->
-  <div className="mx-auto max-w-[1180px] px-6 py-20">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-
-      {/* LEFT TEXT */}
-      <div className="max-w-[560px]">
-        <h1
-          className="text-[54px] mb-4 text-[#89009B]"
-          style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
-        >
-          Inspiring Videos
-        </h1>
-
-        <p className="text-[20px] leading-[1.3] mb-4">
-          There is so much positive mental health content to chose from on YouTube. An “Inspirational Videos” or “Inspiring Videos” search there will give you tons of great positive video suggestions.
-        </p>
-
-        <p className="text-[20px] leading-[1.3]">
-          Here are a few below to get you started. Remember there are usually suggestions for ‘more like this’ after the video which can bring you to wonderful new discoveries. Come back here if you get lost, there are some fantastic videos below.
-        </p>
+    <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
+      {/* Decorative background orbs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
       </div>
 
-      {/* RIGHT IMAGE */}
-      <div className="flex justify-end">
-        <img
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-          alt="Inspiring"
-          className="w-full max-w-[560px] shadow-md"
-        />
-      </div>
-    </div>
-  </div>
-</section>
+      <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="w-full lg:w-4/5 mx-auto">
 
-      {/* VIDEOS */}
-      <div className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid md:grid-cols-3 gap-10">
-          {videos.map((video, index) => {
-            const youtubeId = getYoutubeId(video.youtubeUrl);
-            const thumbnail = `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`;
+          {/* Page Title */}
+          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
+              Inspiring Videos
+            </span>
+          </h1>
 
-            return (
-              <div key={index}>
-                <div className="relative mb-2 aspect-video">
-                  {playingIndex === index ? (
-                    <iframe
-                      src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1`}
-                      className="w-full h-full"
-                      allowFullScreen
-                    />
-                  ) : (
-                    <button
-                      onClick={() => setPlayingIndex(index)}
-                      className="relative w-full h-full"
-                    >
-                      <img
-                        src={thumbnail}
-                        className="w-full h-full object-cover"
-                      />
+          <div className="flex items-center gap-4 mt-3 mb-1">
+            <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+          </div>
 
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                        <div className="bg-black px-4 py-2 text-white rounded">
-                          ▶
-                        </div>
-                      </div>
-                    </button>
-                  )}
-                </div>
+          {/* Intro Card */}
+          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
+            <div className="flex-1">
+              <p className="leading-relaxed">
+                There is so much positive mental health content to chose from on YouTube. An "Inspirational Videos" or "Inspiring Videos" search there will give you tons of great positive video suggestions.
+              </p>
+              <p className="mt-4 leading-relaxed">
+                Here are a few below to get you started. Remember there are usually suggestions for 'more like this' after the video which can bring you to wonderful new discoveries. Come back here if you get lost, there are some fantastic videos below.
+              </p>
+            </div>
+            <div className="sm:w-[30vw] sm:max-w-[18rem] sm:flex-shrink-0 w-full">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+                alt="Inspiring"
+                className="w-full h-full object-cover object-top rounded-lg shadow-md"
+              />
+            </div>
+          </main>
 
-                <p className="text-sm">
-                  <strong>{video.title}</strong> – {video.description}
-                </p>
-              </div>
-            );
-          })}
+          {/* Videos Grid */}
+          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {videos.map((video, index) => {
+                const youtubeId = getYoutubeId(video.youtubeUrl);
+                const thumbnail = `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`;
+
+                return (
+                  <div
+                    key={index}
+                    className="rounded-xl border border-gray-100 bg-white shadow-sm overflow-hidden flex flex-col"
+                  >
+                    {/* Video / Thumbnail */}
+                    <div className="relative aspect-video">
+                      {playingIndex === index ? (
+                        <iframe
+                          src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1`}
+                          className="w-full h-full"
+                          allowFullScreen
+                        />
+                      ) : (
+                        <button
+                          onClick={() => setPlayingIndex(index)}
+                          className="relative w-full h-full group"
+                        >
+                          <img
+                            src={thumbnail}
+                            alt={video.title}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+                            <div className="w-12 h-12 rounded-full bg-purple-700 flex items-center justify-center shadow-lg group-hover:bg-purple-800 transition-colors">
+                              <svg
+                                className="w-5 h-5 text-white ml-1"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path d="M8 5v14l11-7z" />
+                              </svg>
+                            </div>
+                          </div>
+                        </button>
+                      )}
+                    </div>
+
+                    {/* Caption */}
+                    <div className="p-3 flex-1">
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        <span className="font-semibold text-purple-700">{video.title}</span>
+                        {" – "}
+                        {video.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
         </div>
       </div>
-    </main>
+    </section>
   );
 }

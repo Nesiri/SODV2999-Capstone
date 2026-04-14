@@ -83,7 +83,6 @@ const books: Book[] = [
       "This poetic, evocative story presents the meditations of an ancient Anasazi tribesman who rejects his family and sets off on a journey through the desert. He walks seven paths, each teaching a lesson symbolized by an element of the natural world: light, wind, water, stone, plants, animals, and, finally, the unity of all beings with the Creator. The Seven Paths reveals a source of wisdom, restoration, and renewal familiar to native people but lost to the rest of us, seven elements among nature that combine to mend human hearts.",
     href: "https://www.amazon.ca/s?k=The+Seven+Paths+Anasazi",
     image: "/images/pattern/books/the-seven-paths.jpg",
-
   },
   {
     title: "Les Misérables",
@@ -160,137 +159,137 @@ const books: Book[] = [
   },
 ];
 
-// Open Library cover URL — free, no API key needed
 function coverUrl(isbn: string) {
   return `https://covers.openlibrary.org/b/isbn/${isbn}-L.jpg?default=false`;
 }
-// ── Book cover with automatic fallback ───────────────────────────────────────
+
 function BookCover({ book }: { book: Book }) {
   const primarySrc = book.image || coverUrl(book.isbn);
   const placeholderSrc = "/images/books/book-placeholder.jpg";
-
   const [imgSrc, setImgSrc] = useState<string>(primarySrc);
 
   return (
     <img
       src={imgSrc}
       alt={`${book.title} cover`}
-      className="w-full aspect-[2/3] rounded-sm shadow-[0_4px_12px_rgba(0,0,0,0.15)] ring-1 ring-black/5 object-cover"
+      className="w-full aspect-[2/3] rounded-lg shadow-md ring-1 ring-black/5 object-cover"
       loading="lazy"
       onError={() => {
-        if (imgSrc !== placeholderSrc) {
-          setImgSrc(placeholderSrc);
-        }
+        if (imgSrc !== placeholderSrc) setImgSrc(placeholderSrc);
       }}
     />
   );
-};
+}
 
-// ── Single book entry ─────────────────────────────────────────────────────────
-function BookEntry({ book, index }: { book: Book; index: number }) {
+function BookEntry({ book, isLast }: { book: Book; isLast: boolean }) {
   return (
-    <div>
-      <div className="grid grid-cols-[100px_1fr] gap-6 md:grid-cols-[140px_1fr] md:gap-10 items-start">
-
-        {/* Left: cover + amazon link */}
-        <div className="flex flex-col items-center gap-3">
-          <BookCover book={book} />
-          <a
+    <div className={`rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-start ${!isLast ? "mb-4 sm:mb-5" : ""}`}>
+      {/* Left: cover + amazon link */}
+      <div className="sm:w-[10rem] sm:flex-shrink-0 w-28 flex flex-col items-center gap-2">
+        <BookCover book={book} />
+        <a
           href={book.href}
           target="_blank"
           rel="noreferrer"
-          className="text-center text-[12px] font-medium hover:underline leading-snug"
-          style={{ color: "#89009B", textDecorationColor: "#89009B" }}
-          >
+          className="text-center text-xs font-medium text-purple-700 hover:text-purple-800 underline underline-offset-2 leading-snug"
+        >
           View on Amazon
-          </a>
-          </div>
-
-        {/* Right: title + author + description */}
-        <div className="pt-1">
-            <a
-            href={book.href}
-            target="_blank"
-            rel="noreferrer"
-            className="text-[18px] font-semibold hover:underline leading-snug block mb-1"
-            style={{ color: "#89009B", textDecorationColor: "#89009B" }}
-            >
-            {book.title}
-            </a>
-          <p className="text-[13px] text-[#888] italic mb-3">{book.author}</p>
-          {book.description.split("\n\n").map((para, i) => (
-            <p key={i} className="text-[15px] leading-7 text-[#333] mb-3 last:mb-0">
-              {para}
-            </p>
-          ))}
-        </div>
+        </a>
       </div>
 
-      {/* Divider between books */}
-      {index < books.length - 1 && (
-        <div className="my-10 border-t border-[#ddd]" />
-      )}
+      {/* Right: title + author + description */}
+      <div className="flex-1">
+        <a
+          href={book.href}
+          target="_blank"
+          rel="noreferrer"
+          className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4 leading-snug block"
+        >
+          {book.title}
+        </a>
+        <p className="text-sm text-gray-400 italic mt-0.5 mb-3">{book.author}</p>
+        {book.description.split("\n\n").map((para, i) => (
+          <p key={i} className="leading-relaxed text-gray-700 mb-3 last:mb-0">
+            {para}
+          </p>
+        ))}
+      </div>
     </div>
   );
 }
 
-// ── Page ──────────────────────────────────────────────────────────────────────
 export default function LifeChangingBooks() {
   return (
-    <div className="min-h-screen bg-[#f2f2f2]">
-
-      {/* Breadcrumb */}
-      <div className="mx-auto max-w-[1200px] px-6 py-6">
-        <div className="text-[12px] text-[#666]">
-          <Link to="/pattern" className="text-[#4c7bd9] hover:underline">
-            Pattern Interrupts
-          </Link>{" "}
-          / <span className="text-[#333]">Life Changing Books</span>
-        </div>
+    <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
+      {/* Decorative background orbs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
       </div>
 
-      {/* Hero */}
-      <section className="w-full bg-[linear-gradient(to_right,#e7e3f3_0%,#e7e3f3_50%,#e8edf7_50%,#e8edf7_100%)]">
-        <div className="mx-auto grid max-w-[980px] items-center gap-10 px-6 py-14 md:grid-cols-2">
-          <div>
-            <h1 className="font-serif text-[34px] leading-tight text-[#89009B] md:text-[46px]">
+      <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="w-full lg:w-4/5 mx-auto">
+
+          {/* Breadcrumb */}
+          <div className="text-sm text-gray-500 mb-4">
+            <Link to="/pattern" className="text-purple-700 hover:text-purple-800 hover:underline">
+              Pattern Interrupts
+            </Link>{" "}
+            / <span className="text-gray-700">Life Changing Books</span>
+          </div>
+
+          {/* Page Title */}
+          <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
               Life Changing Books
-            </h1>
-            <div className="mt-4 space-y-4 text-[15px] leading-7 text-black">
-              <p>
+            </span>
+          </h1>
+
+          <div className="flex items-center gap-4 mt-3 mb-1">
+            <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+          </div>
+
+          {/* Intro Card */}
+          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
+            <div className="flex-1">
+              <p className="leading-relaxed">
                 Reading allows you to learn new things and opens up the possibility of
                 letting these new things impact your life and change the way you see your
                 surroundings. Reading fosters your imagination and creativity. It requires
                 your brain to be active making you smarter, and because it requires focus,
                 improves your concentration.
               </p>
-              <p>
+              <p className="mt-4 leading-relaxed">
                 Reading, when done for pleasure, reduces your stress which is good for your
                 overall health and because it makes you think and apply what you've read,
                 actually improves your reasoning skills.
               </p>
-              <p className="font-medium">
+              <p className="mt-4 leading-relaxed font-medium text-gray-800">
                 Here are a few suggestions. Links take you to Amazon.com
               </p>
             </div>
+            <div className="sm:w-[30vw] sm:max-w-[18rem] sm:flex-shrink-0 w-full">
+              <img
+                src="/images/resources/life-changing-books.jpg"
+                alt="Life changing books"
+                className="w-full h-full object-cover object-top rounded-lg shadow-md"
+              />
+            </div>
+          </main>
+
+          {/* Book List */}
+          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8">
+            {books.map((book, index) => (
+              <BookEntry
+                key={book.title}
+                book={book}
+                isLast={index === books.length - 1}
+              />
+            ))}
           </div>
-          <div className="flex justify-center md:justify-end">
-            <img
-              src="/images/resources/life-changing-books.jpg"
-              alt="Life changing books"
-              className="w-full max-w-[420px] object-cover shadow-[0_8px_16px_rgba(0,0,0,0.18)]"
-            />
-          </div>
+
         </div>
-      </section>
-
-      {/* Book list */}
-      <section className="mx-auto max-w-[980px] px-6 py-14">
-        {books.map((book, index) => (
-          <BookEntry key={book.title} book={book} index={index} />
-        ))}
-      </section>
-
-    </div>
+      </div>
+    </section>
   );
 }

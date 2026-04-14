@@ -175,11 +175,11 @@ function GalleryCard({ item }: { item: GalleryItem }) {
       className="group mb-5 block break-inside-avoid"
       title={item.title}
     >
-      <div className="overflow-hidden border border-[#ddd] bg-white shadow-[0_4px_12px_rgba(0,0,0,0.12)] transition duration-300 group-hover:shadow-[0_8px_18px_rgba(0,0,0,0.18)]">
+      <div className="overflow-hidden rounded-2xl border border-purple-100 bg-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-md">
         <img
           src={item.image}
           alt={item.alt}
-          className={`w-full object-cover ${item.height || "h-[220px]"} transition duration-300 group-hover:scale-[1.02]`}
+          className={`w-full object-cover ${item.height || "h-[220px]"} transition-transform duration-300 group-hover:scale-105`}
         />
       </div>
     </a>
@@ -188,115 +188,122 @@ function GalleryCard({ item }: { item: GalleryItem }) {
 
 export default function ImageGallery() {
   return (
-    <div className="min-h-screen bg-[#f2f2f2]">
-      <div className="mx-auto max-w-[1200px] px-6 py-6">
-        <div className="mb-4 text-[12px] text-[#666]">
-          <Link to="/pattern" className="text-[#4c7bd9] hover:underline">
-            Pattern Interrupts
-          </Link>{" "}
-          / <span className="text-[#333]">Image Gallery</span>
+    <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12">
+      <div className="relative z-10">
+        <div className="mx-auto max-w-[1200px] px-6">
+          <div className="mb-4 text-sm text-gray-500">
+            <Link
+              to="/pattern"
+              className="text-purple-700 hover:text-purple-800 hover:underline"
+            >
+              Pattern Interrupts
+            </Link>{" "}
+            / <span className="text-gray-700">Image Gallery</span>
+          </div>
         </div>
+
+        <main className="mx-auto max-w-[1200px] px-6">
+          <div className="grid items-center gap-10 rounded-2xl border border-white/50 bg-white/70 p-6 shadow-lg backdrop-blur-sm md:grid-cols-[1.2fr_0.8fr]">
+            <div>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+                <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
+                  Image Gallery
+                </span>
+              </h1>
+
+              <p className="mt-4 max-w-[520px] text-[16px] leading-7 text-slate-700">
+                Interrupting negative patterns with calming, hopeful, and
+                supportive visuals can be powerful. Sometimes an image can say
+                something your mind needs to hear more quickly than a paragraph
+                can.
+              </p>
+
+              <p className="mt-4 max-w-[520px] text-[16px] leading-7 text-slate-700">
+                This gallery is designed as a visual reset. Browse slowly. Save
+                the images that speak to you. Use them as wallpapers, reminders,
+                journal inspiration, or something encouraging to share with
+                someone who needs a little light.
+              </p>
+            </div>
+
+            <div className="flex justify-center md:justify-end">
+              <img
+                src="/images/pattern/image-gallery/hero.jpg"
+                alt="Image gallery inspiration"
+                className="w-full max-w-[460px] rounded-xl object-cover shadow-[0_12px_30px_rgba(0,0,0,0.16)]"
+              />
+            </div>
+          </div>
+        </main>
+
+        <section className="mx-auto mt-10 max-w-[1200px] px-6">
+          <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+                Inspiration Wall
+              </h2>
+              <p className="mt-3 max-w-2xl text-[16px] leading-7 text-slate-700">
+                A visual collection of affirmations, reminders, encouragement,
+                self-compassion, and hope. Click any image to open it larger.
+              </p>
+            </div>
+
+            <div className="rounded-md border border-purple-100 bg-white px-4 py-3 text-[14px] text-slate-600 shadow-sm">
+              {galleryItems.length} images
+            </div>
+          </div>
+
+          <div className="columns-1 gap-5 sm:columns-2 lg:columns-3">
+            {galleryItems.map((item, index) => (
+              <GalleryCard key={index} item={item} />
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto mt-10 max-w-[1200px] rounded-2xl border border-purple-100 bg-white/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+            Ways to Use This Gallery
+          </h2>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-4">
+            <div className="rounded-xl border border-purple-100 bg-purple-50/50 px-5 py-4">
+              <p className="text-[18px] font-semibold text-gray-900">
+                Phone wallpaper
+              </p>
+              <p className="mt-2 text-[16px] leading-7 text-slate-700">
+                Keep a steady reminder with you every day.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-purple-100 bg-purple-50/50 px-5 py-4">
+              <p className="text-[18px] font-semibold text-gray-900">
+                Journal prompt
+              </p>
+              <p className="mt-2 text-[16px] leading-7 text-slate-700">
+                Write about why one image stood out to you.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-purple-100 bg-purple-50/50 px-5 py-4">
+              <p className="text-[18px] font-semibold text-gray-900">
+                Encourage a friend
+              </p>
+              <p className="mt-2 text-[16px] leading-7 text-slate-700">
+                Share one supportive image with someone you trust.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-purple-100 bg-purple-50/50 px-5 py-4">
+              <p className="text-[18px] font-semibold text-gray-900">
+                Mindful pause
+              </p>
+              <p className="mt-2 text-[16px] leading-7 text-slate-700">
+                Use one image as a visual breathing anchor.
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
-
-      <section className="w-full bg-[linear-gradient(to_right,#e7e3f3_0%,#e7e3f3_50%,#e8edf7_50%,#e8edf7_100%)]">
-        <div className="mx-auto grid max-w-[1200px] items-center gap-10 px-6 py-14 md:grid-cols-2">
-          <div className="pl-0 md:pl-10">
-            <h1 className="font-serif text-[34px] leading-tight text-[#89009B] md:text-[46px]">
-              Image Gallery
-            </h1>
-
-            <p className="mt-4 max-w-[520px] text-[15px] leading-7 text-black">
-              Interrupting negative patterns with calming, hopeful, and
-              supportive visuals can be powerful. Sometimes an image can say
-              something your mind needs to hear more quickly than a paragraph
-              can.
-            </p>
-
-            <p className="mt-4 max-w-[520px] text-[15px] leading-7 text-black">
-              This gallery is designed as a visual reset. Browse slowly. Save
-              the images that speak to you. Use them as wallpapers, reminders,
-              journal inspiration, or something encouraging to share with
-              someone who needs a little light.
-            </p>
-          </div>
-
-          <div className="flex justify-center md:justify-end">
-            <img
-              src="/images/pattern/image-gallery/hero.jpg"
-              alt="Image gallery inspiration"
-              className="w-full max-w-[460px] object-cover shadow-[0_8px_16px_rgba(0,0,0,0.18)]"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-[980px] px-6 py-14">
-        <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-          <div>
-            <h2 className="text-[30px] font-semibold text-black">
-              Inspiration Wall
-            </h2>
-            <p className="mt-3 max-w-2xl text-[15px] leading-7 text-[#333]">
-              A visual collection of affirmations, reminders, encouragement,
-              self-compassion, and hope. Click any image to open it larger.
-            </p>
-          </div>
-
-          <div className="border border-[#ddd] bg-white px-4 py-3 text-[14px] text-[#666]">
-            {galleryItems.length} images
-          </div>
-        </div>
-
-        <div className="columns-1 gap-5 sm:columns-2 lg:columns-3">
-          {galleryItems.map((item, index) => (
-            <GalleryCard key={index} item={item} />
-          ))}
-        </div>
-      </section>
-
-      <section className="mx-auto mt-4 max-w-[980px] border border-[#ddd] bg-white px-6 py-10">
-        <h2 className="text-[30px] font-semibold text-black">
-          Ways to Use This Gallery
-        </h2>
-
-        <div className="mt-6 grid gap-4 md:grid-cols-4">
-          <div className="border border-[#ddd] bg-[#fafafa] px-5 py-4">
-            <p className="text-[18px] font-medium text-black">
-              Phone wallpaper
-            </p>
-            <p className="mt-2 text-[15px] leading-7 text-[#333]">
-              Keep a steady reminder with you every day.
-            </p>
-          </div>
-
-          <div className="border border-[#ddd] bg-[#fafafa] px-5 py-4">
-            <p className="text-[18px] font-medium text-black">
-              Journal prompt
-            </p>
-            <p className="mt-2 text-[15px] leading-7 text-[#333]">
-              Write about why one image stood out to you.
-            </p>
-          </div>
-
-          <div className="border border-[#ddd] bg-[#fafafa] px-5 py-4">
-            <p className="text-[18px] font-medium text-black">
-              Encourage a friend
-            </p>
-            <p className="mt-2 text-[15px] leading-7 text-[#333]">
-              Share one supportive image with someone you trust.
-            </p>
-          </div>
-
-          <div className="border border-[#ddd] bg-[#fafafa] px-5 py-4">
-            <p className="text-[18px] font-medium text-black">
-              Mindful pause
-            </p>
-            <p className="mt-2 text-[15px] leading-7 text-[#333]">
-              Use one image as a visual breathing anchor.
-            </p>
-          </div>
-        </div>
-      </section>
-    </div>
+    </section>
   );
 }

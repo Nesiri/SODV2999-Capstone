@@ -135,23 +135,24 @@ const sections: ArticleSection[] = [
     ],
   },
 ];
+
 function SectionBlock({ section }: { section: ArticleSection }) {
   const textBlock = (
     <div className="max-w-[720px]">
-      <h2 className="text-[26px] leading-tight text-black md:text-[34px]">
+      <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
         {section.title}
       </h2>
 
-      {section.paragraphs && section.paragraphs.length > 0 && (
-        <div className="mt-4 space-y-4 text-[15px] leading-7 text-black">
+      {section.paragraphs && (
+        <div className="mt-4 space-y-4 text-[16px] leading-7 text-slate-700">
           {section.paragraphs.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
         </div>
       )}
 
-      {section.bullets && section.bullets.length > 0 && (
-        <ul className="mt-4 list-disc space-y-2 pl-5 text-[15px] leading-7 text-black">
+      {section.bullets && (
+        <ul className="mt-4 list-disc space-y-2 pl-5 text-[16px] leading-7 text-slate-700">
           {section.bullets.map((bullet, index) => (
             <li key={index}>{bullet}</li>
           ))}
@@ -160,18 +161,19 @@ function SectionBlock({ section }: { section: ArticleSection }) {
     </div>
   );
 
- const imageBlock = (
-  <div className="flex justify-center md:justify-center">
-    <img
-      src={section.image}
-      alt={section.imageAlt}
-      className="block w-full max-w-[520px] h-auto object-contain shadow-[0_8px_16px_rgba(0,0,0,0.18)]"
-    />
-  </div>
-);
+  const imageBlock = (
+    <div className="flex justify-center">
+      <img
+        src={section.image}
+        alt={section.imageAlt}
+        className="w-full max-w-[520px] rounded-xl object-contain shadow-[0_12px_30px_rgba(0,0,0,0.16)]"
+      />
+    </div>
+  );
+
   return (
-    <section className="py-16">
-      <div className="mx-auto grid max-w-[1200px] items-start gap-16 px-6 md:grid-cols-[1fr_520px]">
+    <section className="py-12">
+      <div className="mx-auto grid max-w-[1200px] items-start gap-12 px-6 md:grid-cols-[1fr_520px]">
         {section.reverse ? (
           <>
             <div className="md:order-2">{textBlock}</div>
@@ -187,49 +189,45 @@ function SectionBlock({ section }: { section: ArticleSection }) {
     </section>
   );
 }
+
 function SuggestedActionsBlock({ section }: { section: ArticleSection }) {
   const bullets = section.bullets || [];
   const firstHalf = bullets.slice(0, Math.ceil(bullets.length / 2));
   const secondHalf = bullets.slice(Math.ceil(bullets.length / 2));
 
   return (
-    <section className="py-16">
+    <section className="py-12">
       <div className="mx-auto max-w-[1200px] px-6">
-        <h2 className="text-[26px] leading-tight text-black md:text-[34px]">
+        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
           {section.title}
         </h2>
 
-        <div className="mt-10 grid items-start gap-16 md:grid-cols-[520px_1fr]">
-          <div className="flex justify-center md:justify-start self-start">
-            <img
+        <div className="mt-10 grid items-start gap-12 md:grid-cols-[520px_1fr]">
+          <img
             src={section.image}
             alt={section.imageAlt}
-            className="block w-full max-w-[520px] h-auto object-contain shadow-[0_8px_16px_rgba(0,0,0,0.18)]"
-            />
-          </div>
+            className="w-full max-w-[520px] rounded-xl object-contain shadow-[0_12px_30px_rgba(0,0,0,0.16)]"
+          />
 
-          <ul className="list-disc space-y-1 pl-5 text-[15px] leading-6 text-black">
+          <ul className="list-disc space-y-1 pl-5 text-[16px] leading-7 text-slate-700">
             {firstHalf.map((bullet, index) => (
               <li key={index}>{bullet}</li>
             ))}
           </ul>
         </div>
 
-        <div className="mt-12 grid items-start gap-16 md:grid-cols-[1fr_520px]">
-          <ul className="list-disc space-y-1 pl-5 text-[15px] leading-6 text-black">
+        <div className="mt-12 grid items-start gap-12 md:grid-cols-[1fr_520px]">
+          <ul className="list-disc space-y-1 pl-5 text-[16px] leading-7 text-slate-700">
             {secondHalf.map((bullet, index) => (
               <li key={index}>{bullet}</li>
             ))}
           </ul>
 
-          <div className="flex justify-center md:justify-end self-start">
-     
-   <img
-  src="/images/pattern/transform-negative/meditation.jpg"
-  alt="Meditation illustration"
-  className="block w-[320px] md:w-[420px] lg:w-[520px] h-auto shadow-[0_8px_16px_rgba(0,0,0,0.18)]"
-/>
-               </div>
+          <img
+            src="/images/pattern/transform-negative/meditation.jpg"
+            alt="Meditation illustration"
+            className="w-full max-w-[520px] rounded-xl object-contain shadow-[0_12px_30px_rgba(0,0,0,0.16)]"
+          />
         </div>
       </div>
     </section>
@@ -239,85 +237,101 @@ function SuggestedActionsBlock({ section }: { section: ArticleSection }) {
 export default function TransformNegativeThoughts() {
   const normalSections = sections.filter(
     (section) =>
-      section.title !== "Transform Negative Thoughts with these Suggested Actions:"
+      section.title !==
+      "Transform Negative Thoughts with these Suggested Actions:"
   );
 
   const suggestedActionsSection = sections.find(
     (section) =>
-      section.title === "Transform Negative Thoughts with these Suggested Actions:"
+      section.title ===
+      "Transform Negative Thoughts with these Suggested Actions:"
   );
 
   return (
-    <div className="min-h-screen bg-[#f2f2f2]">
-      <div className="mx-auto max-w-[1200px] px-6 py-6">
-        <div className="mb-4 text-[12px] text-[#666]">
-          <Link to="/pattern" className="text-[#4c7bd9] hover:underline">
-            Pattern Interrupts
-          </Link>{" "}
-          / <span className="text-[#333]">Transform Negative Thoughts</span>
-        </div>
-      </div>
-
-      <section className="w-full bg-[linear-gradient(to_right,#e7e3f3_0%,#e7e3f3_50%,#e8edf7_50%,#e8edf7_100%)]">
-        <div className="mx-auto grid max-w-[980px] items-center gap-8 px-6 py-16 md:grid-cols-2">
-          <div>
-            <h1 className="font-serif text-[34px] leading-tight text-[#89009B] md:text-[48px]">
+    <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12">
+      <div className="relative z-10">
+        <div className="mx-auto max-w-[1200px] px-6">
+          <div className="mb-4 text-sm text-gray-500">
+            <Link
+              to="/pattern"
+              className="text-purple-700 hover:text-purple-800 hover:underline"
+            >
+              Pattern Interrupts
+            </Link>{" "}
+            /{" "}
+            <span className="text-gray-700">
               Transform Negative Thoughts
-            </h1>
+            </span>
+          </div>
+        </div>
 
-            <div className="mt-4 space-y-4 text-[15px] leading-7 text-black">
-              <p>
-                By cultivating mindfulness, we can learn to identify the negative
-                thoughts that keep us trapped in feelings of self-doubt and shame,
-                and learn instead to embrace the peacefulness that stems from
-                living in the present moment.
-              </p>
+        <main className="mx-auto max-w-[1200px] px-6">
+          <div className="grid items-center gap-10 rounded-2xl border border-white/50 bg-white/70 p-6 shadow-lg backdrop-blur-sm md:grid-cols-[1.2fr_0.8fr]">
+            <div>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
+                <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
+                  Transform Negative Thoughts
+                </span>
+              </h1>
 
-              <p>
-                One of the easiest ways to be disconnected from our core selves is
-                through habitual negative thinking. It can be easy to feel like
-                negative or worrisome thoughts are capable of kidnapping our minds
-                and taking us out of the present moment; especially when we’re
-                stressed or anxious.
-              </p>
+              <div className="mt-4 space-y-4 text-[16px] leading-7 text-slate-700">
+                <p>
+                  By cultivating mindfulness, we can learn to identify the
+                  negative thoughts that keep us trapped in feelings of
+                  self-doubt and shame, and learn instead to embrace the
+                  peacefulness that stems from living in the present moment.
+                </p>
+                <p>
+                  One of the easiest ways to be disconnected from our core
+                  selves is through habitual negative thinking. It can be easy
+                  to feel like negative or worrisome thoughts are capable of
+                  kidnapping our minds and taking us out of the present moment;
+                  especially when we’re stressed or anxious.
+                </p>
+                <p>
+                  These unpleasant thoughts are often based on automatic thought
+                  processes that have been playing over and over in our heads,
+                  unchallenged, for years. These thought patterns can fall into
+                  three general categories: labeling, catastrophizing, and
+                  overgeneralization.
+                </p>
+              </div>
+            </div>
 
-              <p>
-                These unpleasant thoughts are often based on automatic thought
-                processes that have been playing over and over in our heads,
-                unchallenged, for years. These thought patterns can fall into
-                three general categories: labeling, catastrophizing, and
-                overgeneralization.
-              </p>
+            <div className="flex justify-center md:justify-end">
+              <img
+                src="/images/pattern/transform-negative/hero.jpg"
+                alt="Transform negative thoughts"
+                className="w-full max-w-[420px] rounded-xl object-cover shadow-[0_12px_30px_rgba(0,0,0,0.16)]"
+              />
             </div>
           </div>
+        </main>
 
-          <div className="flex justify-center md:justify-end">
-            <img
-              src="/images/pattern/transform-negative/hero.jpg"
-              alt="Transform negative thoughts"
-              className="w-full max-w-[420px] object-cover shadow-[0_8px_16px_rgba(0,0,0,0.18)]"
+        <div className="mt-10">
+          {normalSections
+            .filter(
+              (section) => section.title !== "A More Helpful Inner Voice"
+            )
+            .map((section) => (
+              <SectionBlock key={section.title} section={section} />
+            ))}
+
+          {suggestedActionsSection ? (
+            <SuggestedActionsBlock
+              section={suggestedActionsSection}
             />
-          </div>
+          ) : null}
+
+          {normalSections
+            .filter(
+              (section) => section.title === "A More Helpful Inner Voice"
+            )
+            .map((section) => (
+              <SectionBlock key={section.title} section={section} />
+            ))}
         </div>
-      </section>
-
-      <div className="py-6">
-        {normalSections
-          .filter((section) => section.title !== "A More Helpful Inner Voice")
-          .map((section) => (
-            <SectionBlock key={section.title} section={section} />
-          ))}
-
-        {suggestedActionsSection ? (
-          <SuggestedActionsBlock section={suggestedActionsSection} />
-        ) : null}
-
-        {normalSections
-          .filter((section) => section.title === "A More Helpful Inner Voice")
-          .map((section) => (
-            <SectionBlock key={section.title} section={section} />
-          ))}
       </div>
-    </div>
+    </section>
   );
 }
