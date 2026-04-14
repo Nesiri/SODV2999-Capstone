@@ -27,14 +27,14 @@ const CrisisSupportButton: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[#89009B] to-[#B266C9] rounded-full blur-md animate-pulse" />
 
           {/* Main button - calming purple with label inside */}
-          <div className="relative bg-white rounded-full shadow-xl border border-[#e0d8e2] hover:shadow-2xl transition-all duration-300 overflow-hidden">
+          <div className="relative bg-gradient-to-r from-[#89009B] to-[#B266C9] rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
             {/* Inner container with heart and label */}
             <div className="relative p-3 flex flex-col items-center justify-center min-w-[70px]">
-              <Heart className="w-5 h-5 text-[#89009B] fill-[#f5edf7]" />
-              <span className="text-[9px] font-bold text-[#89009B] mt-0.5 tracking-tight">
+              <Heart className="w-5 h-5 text-white fill-white/20" />
+              <span className="text-[9px] font-bold text-white mt-0.5 tracking-tight">
                 Crisis
               </span>
-              <span className="text-[8px] font-semibold text-[#B266C9] -mt-0.5">
+              <span className="text-[8px] font-semibold text-white/90 -mt-0.5">
                 Support
               </span>
             </div>
@@ -46,18 +46,18 @@ const CrisisSupportButton: React.FC = () => {
             // Main Menu
             <>
               {/* Header */}
-              <div className="bg-gradient-to-r from-[#f5edf7] to-[#e8dceb] px-5 py-4 border-b border-[#e0d8e2] flex items-center justify-between">
+              <div className="bg-gradient-to-r from-[#89009B] to-[#B266C9] px-5 py-4 flex items-center justify-between">
                 <div>
-                  <h3 className="font-semibold text-[#89009B]">
+                  <h3 className="font-semibold text-white">
                     Crisis Support
                   </h3>
-                  <p className="text-xs text-[#B266C9]">
+                  <p className="text-xs text-white/80">
                     24/7 • Free • Confidential
                   </p>
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="text-[#B266C9] hover:text-[#89009B] transition"
+                  className="text-white/70 hover:text-white transition"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -70,12 +70,12 @@ const CrisisSupportButton: React.FC = () => {
                   onClick={() => setShowChatbot(true)}
                   className="w-full bg-gradient-to-r from-[#89009B] to-[#A055B5] hover:from-[#7a0088] hover:to-[#8f44a3] text-white rounded-xl py-3 px-4 flex items-center gap-3 transition shadow-sm"
                 >
-                  <Bot className="w-5 h-5" />
+                  <Bot className="w-5 h-5 text-white" />
                   <div className="text-left">
-                    <div className="font-medium text-sm">
+                    <div className="font-medium text-sm text-white">
                       Chat with AI Assistant
                     </div>
-                    <div className="text-xs opacity-90">
+                    <div className="text-xs text-white/80">
                       Get immediate support
                     </div>
                   </div>
@@ -86,10 +86,10 @@ const CrisisSupportButton: React.FC = () => {
                   onClick={() => handleCall('988')}
                   className="w-full bg-gradient-to-r from-[#9B4DAB] to-[#B266C9] hover:from-[#8a3d9a] hover:to-[#a355b8] text-white rounded-xl py-3 px-4 flex items-center gap-3 transition shadow-sm"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-5 h-5 text-white" />
                   <div className="text-left">
-                    <div className="font-medium text-sm">Call 988</div>
-                    <div className="text-xs opacity-90">
+                    <div className="font-medium text-sm text-white">Call 988</div>
+                    <div className="text-xs text-white/80">
                       Suicide Crisis Helpline
                     </div>
                   </div>
@@ -100,10 +100,10 @@ const CrisisSupportButton: React.FC = () => {
                   onClick={() => handleText('988')}
                   className="w-full bg-gradient-to-r from-[#B266C9] to-[#C77DDF] hover:from-[#a355b8] hover:to-[#b56ccd] text-white rounded-xl py-3 px-4 flex items-center gap-3 transition shadow-sm"
                 >
-                  <MessageCircle className="w-5 h-5" />
+                  <MessageCircle className="w-5 h-5 text-white" />
                   <div className="text-left">
-                    <div className="font-medium text-sm">Text 988</div>
-                    <div className="text-xs opacity-90">24/7 Support</div>
+                    <div className="font-medium text-sm text-white">Text 988</div>
+                    <div className="text-xs text-white/80">24/7 Support</div>
                   </div>
                 </button>
 
@@ -112,10 +112,10 @@ const CrisisSupportButton: React.FC = () => {
                   onClick={() => handleText('686868')}
                   className="w-full bg-gradient-to-r from-[#7B2D8F] to-[#9B4DAB] hover:from-[#6a1d7e] hover:to-[#8a3d9a] text-white rounded-xl py-3 px-4 flex items-center gap-3 transition shadow-sm"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-5 h-5 text-white" />
                   <div className="text-left">
-                    <div className="font-medium text-sm">Kids Help Phone</div>
-                    <div className="text-xs opacity-90">
+                    <div className="font-medium text-sm text-white">Kids Help Phone</div>
+                    <div className="text-xs text-white/80">
                       Text CONNECT or PARLER to 686868
                     </div>
                   </div>
@@ -124,20 +124,20 @@ const CrisisSupportButton: React.FC = () => {
                 {/* Emergency 911 */}
                 <button
                   onClick={() => handleCall('911')}
-                  className="w-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white rounded-xl py-3 px-4 flex items-center gap-3 transition shadow-sm"
+                  className="w-full bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-600 hover:to-rose-700 text-white rounded-xl py-3 px-4 flex items-center gap-3 transition shadow-sm"
                 >
-                  <div className="w-5 h-5 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold">
+                  <div className="w-5 h-5 rounded-full border-2 border-white flex items-center justify-center text-xs font-bold text-white">
                     !
                   </div>
                   <div className="text-left">
-                    <div className="font-medium text-sm">Emergency 911</div>
-                    <div className="text-xs opacity-90">Immediate Danger</div>
+                    <div className="font-medium text-sm text-white">Emergency 911</div>
+                    <div className="text-xs text-white/80">Immediate Danger</div>
                   </div>
                 </button>
               </div>
 
               <div className="px-4 pb-4 text-center">
-                <p className="text-[10px] text-[#B266C9]">You are not alone</p>
+                <p className="text-[10px] text-[#89009B] font-medium">You are not alone 💜</p>
               </div>
             </>
           ) : (
