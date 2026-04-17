@@ -401,19 +401,12 @@ const WhatToExpect: React.FC = () => {
 
   return (
     <div className="max-w-5xl mx-auto mt-20 px-4">
-      {/* Header Section with animated gradient */}
+      {/* Header Section - REMOVED "KNOW WHAT TO EXPECT" */}
       <div className="text-center mb-12">
-        <div className="inline-block mb-4">
-          <div className="bg-gradient-to-r from-[#5f2d85]/10 to-[#C77DDF]/10 rounded-full px-4 py-1">
-            <span className="text-xs font-normal !text-[#5f2d85] tracking-wide">
-              KNOW WHAT TO EXPECT
-            </span>
-          </div>
-        </div>
-        <h2 className="!text-3xl sm:!text-5xl font-bold bg-gradient-to-r from-[#5f2d85] to-[#C77DDF] bg-clip-text text-transparent mb-4">
+        <h2 className="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-[#5f2d85] to-[#C77DDF] bg-clip-text text-transparent mb-4 leading-tight">
           What to Expect When Contacting a Helpline
         </h2>
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+        <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
           Reaching out for help is one of the bravest - and hardest - things to
           do when you're struggling.
         </p>

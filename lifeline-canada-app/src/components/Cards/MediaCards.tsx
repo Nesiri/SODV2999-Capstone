@@ -299,7 +299,7 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 !bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-[#5f2d85]/30 mb-6">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5f2d85] opacity-75"></span>
+              
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#5f2d85]"></span>
             </span>
             <span className="text-sm font-medium !text-[#5f2d85]">
@@ -354,10 +354,7 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(-20px); }
         }
-        .animate-float {
-          animation: float 8s ease-in-out infinite;
-        }
-        @keyframes shimmer {
+              @keyframes shimmer {
           0% { transform: translateX(-100%); }
           100% { transform: translateX(100%); }
         }

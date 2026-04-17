@@ -17,7 +17,7 @@ const GetInvolvedSection: React.FC = () => {
             {/* Cool badge with glow - using your purple colors */}
             <div className="inline-flex items-center gap-2 !bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full border border-[#5f2d85]/30 shadow-lg shadow-[#5f2d85]/10 hover:shadow-[#5f2d85]/20 transition-all">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5f2d85] opacity-75"></span>
+                
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#5f2d85]"></span>
               </span>
               <span className="text-sm font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] tracking-wider">

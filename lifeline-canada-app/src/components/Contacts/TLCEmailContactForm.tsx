@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Heart, Mail, MapPin } from 'lucide-react';
 import AboutUsBackground from '../Background/AboutUsBackground';
+import logo from '../../assets/logo.png'
 
 type MyType = {
   title: string;
@@ -142,7 +143,7 @@ const TLCEmailContactForm = ({ title, subtitle }: MyType) => {
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-gradient-to-br from-[#f5edf7] to-[#e8dceb] rounded-xl">
                 <img
-                  src="/src/assets/logo.png"
+                  src={logo}
                   alt="LifeLine Canada Foundation"
                   className="w-10 h-10 object-cover rounded-lg"
                 />

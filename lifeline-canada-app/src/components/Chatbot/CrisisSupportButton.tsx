@@ -1,6 +1,6 @@
 // components/CrisisButton.tsx
 import React, { useState } from 'react';
-import { Phone, MessageCircle, X, Heart, Bot } from 'lucide-react';
+import { Phone, MessageCircle, X, Heart, Bot, Mail } from 'lucide-react';
 import Chatbot from './Chatbot';
 
 const CrisisSupportButton: React.FC = () => {
@@ -13,6 +13,10 @@ const CrisisSupportButton: React.FC = () => {
 
   const handleText = (number: string) => {
     window.location.href = `sms:${number}`;
+  };
+
+  const handleMessaging = (url: string) => {
+    window.open(url, '_blank');
   };
 
   const resetToMenu = () => {
@@ -109,18 +113,50 @@ const CrisisSupportButton: React.FC = () => {
                   </div>
                 </button>
 
-                {/* Kids Help Phone Text Line */}
+                {/* Kids Help Phone - Call Option */}
                 <button
-                  onClick={() => handleText('686868')}
+                  onClick={() => handleCall('18006686868')}
                   className="w-full bg-gradient-to-r from-[#7B2D8F] to-[#9B4DAB] hover:from-[#6a1d7e] hover:to-[#8a3d9a] text-white rounded-xl py-3 px-4 flex items-center gap-3 transition shadow-sm"
                 >
                   <Phone className="w-5 h-5 text-white" />
                   <div className="text-left">
                     <div className="font-medium text-sm text-white">
-                      Kids Help Phone
+                      Kids Help Phone - Call
+                    </div>
+                    <div className="text-xs text-white/80">
+                      1-800-668-6868
+                    </div>
+                  </div>
+                </button>
+
+                {/* Kids Help Phone - Text Option */}
+                <button
+                  onClick={() => handleText('686868')}
+                  className="w-full bg-gradient-to-r from-[#7B2D8F] to-[#9B4DAB] hover:from-[#6a1d7e] hover:to-[#8a3d9a] text-white rounded-xl py-3 px-4 flex items-center gap-3 transition shadow-sm"
+                >
+                  <MessageCircle className="w-5 h-5 text-white" />
+                  <div className="text-left">
+                    <div className="font-medium text-sm text-white">
+                      Kids Help Phone - Text
                     </div>
                     <div className="text-xs text-white/80">
                       Text CONNECT or PARLER to 686868
+                    </div>
+                  </div>
+                </button>
+
+                {/* Kids Help Phone - Messaging/Chat Option */}
+                <button
+                  onClick={() => handleMessaging('https://kidshelpphone.ca/live-chat/')}
+                  className="w-full bg-gradient-to-r from-[#7B2D8F] to-[#9B4DAB] hover:from-[#6a1d7e] hover:to-[#8a3d9a] text-white rounded-xl py-3 px-4 flex items-center gap-3 transition shadow-sm"
+                >
+                  <Mail className="w-5 h-5 text-white" />
+                  <div className="text-left">
+                    <div className="font-medium text-sm text-white">
+                      Kids Help Phone - Live Chat
+                    </div>
+                    <div className="text-xs text-white/80">
+                      Online messaging support
                     </div>
                   </div>
                 </button>

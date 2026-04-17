@@ -48,7 +48,7 @@ const CrisisSupportBanner: React.FC = () => {
             </h3>
 
             <p className="inline-flex items-center gap-3 md:gap-4 px-6 md:px-10 py-3 md:py-5 !bg-[#5f2d85] hover:!bg-[#5f2d85] rounded-xl md:rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 group">
-              <span className="text-2xl md:!text-4xl lg:text-5xl font-black text-white drop-shadow-lg">
+              <span className="!text-2xl md:!text-4xl lg:text-5xl font-black text-white drop-shadow-lg">
                 911
               </span>
               <span className="!text-white/90 text-sm md:text-base lg:text-lg font-medium">

@@ -145,7 +145,7 @@ const VolunteerFormSection: React.FC = () => {
         <div className="text-center mb-12 animate-fadeInDown">
           <div className="inline-flex items-center gap-2 !bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-[#5f2d85]/30 shadow-lg mb-6">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5f2d85] opacity-75"></span>
+              
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#5f2d85]"></span>
             </span>
             <span className="text-sm font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#5f2d85] to-[#5f2d85]">

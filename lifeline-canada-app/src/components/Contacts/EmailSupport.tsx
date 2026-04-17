@@ -1,5 +1,5 @@
 import EmailImage from '../../assets/Email.jpg';
-import { Link } from 'react-router-dom';
+
 import AboutUsBackground from '../Background/AboutUsBackground';
 
 const EmailSupport = () => {
@@ -13,7 +13,7 @@ const EmailSupport = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 !bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-[#5f2d85]/30 shadow-lg">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5f2d85] opacity-75"></span>
+                
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#5f2d85]"></span>
               </span>
               <span className="text-sm font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#5f2d85] to-[#5f2d85]">
@@ -44,21 +44,7 @@ const EmailSupport = () => {
                 effective community resources.
               </p>
 
-              <p className="text-lg md:!text-xl leading-relaxed bg-[#f5edf7]/50 p-6 rounded-2xl border border-[#5f2d85]/20">
-                <span className="text-2xl !text-[#5f2d85] mr-1">💬</span>
-                <span className="italic !text-[#5f2d85] font-medium">
-                  Non-crisis
-                </span>{' '}
-                questions and comments or to contact The LifeLine Canada
-                Foundation about collaborating please{' '}
-                <Link
-                  to="/contact/contact-us"
-                  className="font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] hover:from-[#5f2d85] hover:to-[#5f2d85] transition-all duration-300 underline decoration-[#5f2d85]/50"
-                >
-                  click here
-                </Link>
-                .
-              </p>
+             
             </div>
           </div>
 

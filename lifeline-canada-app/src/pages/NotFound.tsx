@@ -150,10 +150,7 @@ const NotFound: React.FC = () => {
           50% { transform: translateY(-15px) translateX(-5px); }
           75% { transform: translateY(-5px) translateX(5px); }
         }
-        .animate-float {
-          animation: float 8s ease-in-out infinite;
-        }
-        .delay-700 {
+              .delay-700 {
           animation-delay: 0.7s;
         }
         .delay-500 {

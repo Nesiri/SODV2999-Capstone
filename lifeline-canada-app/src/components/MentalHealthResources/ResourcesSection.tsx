@@ -84,7 +84,7 @@ const ResourcesSection = () => {
                       <span className="inline-flex items-center gap-1 bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] text-white px-2 sm:px-3 md:px-4 py-0.5 sm:py-1 md:py-1.5 rounded-full text-base sm:text-lg md:!text-xl font-bold shadow-lg">
                         988
                       </span>{' '}
-                      — Canada's suicide prevention hotline
+                      Canada's suicide prevention hotline
                     </p>
                     <p className="text-xs sm:text-sm md:text-base text-gray-600">
                       If you or someone you know is in immediate danger,{' '}
@@ -187,13 +187,7 @@ const ResourcesSection = () => {
                   className="relative w-full rounded-2xl sm:rounded-3xl shadow-2xl border-2 sm:border-4 border-white/50 group-hover:border-white/80 transition-all duration-500"
                 />
 
-                {/* Floating caption */}
-                <div className="absolute -bottom-6 -right-6 !bg-white/90 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl shadow-xl border border-[#5f2d85]/30 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 hidden md:block">
-                  <p className="text-xs sm:text-sm font-medium text-gray-700">
-                    <span className="!text-[#5f2d85]">✓</span> Verified
-                    Resources
-                  </p>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -253,31 +247,16 @@ const ResourcesSection = () => {
         @keyframes gradient {
           0%, 100% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }
-        }
-        .animate-float {
-          animation: float 8s ease-in-out infinite;
-        }
-        .animate-float-delayed {
-          animation: float-delayed 12s ease-in-out infinite;
-        }
-        .animate-slideIn {
+        }        .animate-slideIn {
           animation: slideIn 0.8s ease-out forwards;
         }
-        .animate-slideInUp {
-          opacity: 0;
-          animation: slideInUp 0.8s ease-out forwards;
-        }
+       
         .animate-slideInRight {
           opacity: 0;
           animation: slideInRight 0.8s ease-out forwards;
         }
-        .animate-expandWidth {
-          animation: expandWidth 1s ease-out forwards;
-        }
-        .animate-gradient {
-          background-size: 200% auto;
-          animation: gradient 3s linear infinite;
-        }
+       
+       
         .perspective {
           perspective: 2000px;
         }

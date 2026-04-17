@@ -119,28 +119,13 @@ const InternationalCrisisCentres: React.FC = () => {
         @keyframes gradient {
           0%, 100% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }
-        }
-        .animate-float {
-          animation: float 8s ease-in-out infinite;
-        }
-        .animate-float-delayed {
-          animation: float-delayed 12s ease-in-out infinite;
-        }
-        .animate-slideInUp {
-          opacity: 0;
-          animation: slideInUp 0.8s ease-out forwards;
-        }
+        }       
         .animate-slideInRight {
           opacity: 0;
           animation: slideInRight 0.8s ease-out forwards;
         }
-        .animate-expandWidth {
-          animation: expandWidth 1s ease-out forwards;
-        }
-        .animate-gradient {
-          background-size: 200% auto;
-          animation: gradient 3s linear infinite;
-        }
+       
+       
         .perspective {
           perspective: 2000px;
         }
