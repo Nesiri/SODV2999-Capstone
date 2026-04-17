@@ -67,10 +67,10 @@ const Settings: React.FC = () => {
       {/* Page Header with Soothing Elements */}
       <div className="mb-6 sm:mb-8">
         <div className="flex items-center justify-start gap-2 mb-2">
-          <div className="p-1.5 sm:p-2 bg-emerald-50 rounded-full flex-shrink-0">
-            <Leaf className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-500" />
+          <div className="p-1.5 sm:p-2 bg-[#5f2d85]/10 rounded-full flex-shrink-0">
+            <Leaf className="w-5 h-5 sm:w-6 sm:h-6 text-[#5f2d85]" />
           </div>
-          <h1 className="!text-xl sm:text-2xl md:text-3xl font-light text-gray-700 break-words">
+          <h1 className="!text-xl sm:!text-2xl md!:text-3xl font-light text-gray-700 break-words">
             Your Space
           </h1>
         </div>
@@ -81,23 +81,23 @@ const Settings: React.FC = () => {
       </div>
 
       {/* Account Information - Gentle Card */}
-      <div className="!bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-sm border border-emerald-100 p-4 sm:p-6 mb-4 sm:mb-6 hover:shadow-md transition-all duration-500 w-full">
+      <div className="!bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-sm border border-[#5f2d85]/20 p-4 sm:p-6 mb-4 sm:mb-6 hover:shadow-md transition-all duration-500 w-full">
         <div className="flex items-center gap-2 mb-4 sm:mb-6">
-          <div className="p-1.5 sm:p-2 bg-emerald-50 rounded-full flex-shrink-0">
-            <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-500" />
+          <div className="p-1.5 sm:p-2 bg-[#5f2d85]/10 rounded-full flex-shrink-0">
+            <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-[#5f2d85]" />
           </div>
-          <h2 className="text-base sm:text-lg font-medium text-gray-700 break-words">
+          <h2 className="!text-base sm:!text-lg font-medium text-gray-700 break-words">
             About You
           </h2>
         </div>
 
         <div className="space-y-3 sm:space-y-4">
-          <div className="flex items-center gap-3 p-3 bg-emerald-50/50 rounded-xl w-full">
-            <div className="p-1.5 bg-emerald-100 rounded-full flex-shrink-0">
-              <User className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
+          <div className="flex items-center gap-3 p-3 bg-[#5f2d85]/5 rounded-xl w-full">
+            <div className="p-1.5 bg-[#5f2d85]/20 rounded-full flex-shrink-0">
+              <User className="w-4 h-4 sm:w-5 sm:h-5 text-[#5f2d85]" />
             </div>
             <div className="flex-1 min-w-0">
-              <label className="block text-xs text-emerald-600 mb-0.5">
+              <label className="block text-xs text-[#5f2d85] mb-0.5">
                 Your Name
               </label>
               <p className="text-sm sm:text-base text-gray-700 truncate">
@@ -106,12 +106,12 @@ const Settings: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 p-3 bg-emerald-50/50 rounded-xl w-full">
-            <div className="p-1.5 bg-emerald-100 rounded-full flex-shrink-0">
-              <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
+          <div className="flex items-center gap-3 p-3 bg-[#5f2d85]/5 rounded-xl w-full">
+            <div className="p-1.5 bg-[#5f2d85]/20 rounded-full flex-shrink-0">
+              <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-[#5f2d85]" />
             </div>
             <div className="flex-1 min-w-0">
-              <label className="block text-xs text-emerald-600 mb-0.5">
+              <label className="block text-xs text-[#5f2d85] mb-0.5">
                 Email Address
               </label>
               <p className="text-sm sm:text-base text-gray-700 truncate">
@@ -123,31 +123,31 @@ const Settings: React.FC = () => {
       </div>
 
       {/* Preferences - Gentle Settings */}
-      <div className="!bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-sm border border-emerald-100 p-4 sm:p-6 mb-4 sm:mb-6 w-full">
+      <div className="!bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-sm border border-[#5f2d85]/20 p-4 sm:p-6 mb-4 sm:mb-6 w-full">
         <div className="flex items-center gap-2 mb-4 sm:mb-6">
-          <div className="p-1.5 sm:p-2 bg-emerald-50 rounded-full flex-shrink-0">
-            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-500" />
+          <div className="p-1.5 sm:p-2 bg-[#5f2d85]/10 rounded-full flex-shrink-0">
+            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#5f2d85]" />
           </div>
-          <h2 className="text-base sm:text-lg font-medium text-gray-700 break-words">
+          <h2 className="!text-base sm:!text-lg font-medium text-gray-700 break-words">
             Your Comfort Preferences
           </h2>
         </div>
 
         <div className="space-y-3 sm:space-y-4">
           {/* Gentle Reminders */}
-          <div className="flex items-center justify-between p-3 bg-emerald-50/50 rounded-xl w-full gap-2">
+          <div className="flex items-center justify-between p-3 bg-[#5f2d85]/5 rounded-xl w-full gap-2">
             <div className="flex items-center gap-3 flex-1 min-w-0">
-              <div className="p-1.5 bg-emerald-100 rounded-full flex-shrink-0">
-                <Bell className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
+              <div className="p-1.5 bg-[#5f2d85]/20 rounded-full flex-shrink-0">
+                <Bell className="w-4 h-4 sm:w-5 sm:h-5 text-[#5f2d85]" />
               </div>
-              <span className="text-sm sm:text-base text-gray-700 truncate">
+              <span className="!text-sm sm:!text-base text-gray-700 truncate">
                 Gentle Reminders
               </span>
             </div>
             <button
               onClick={() => setReminders(!reminders)}
               className={`relative w-12 h-6 rounded-full transition-colors duration-300 flex-shrink-0 ${
-                reminders ? 'bg-emerald-400' : 'bg-gray-300'
+                reminders ? 'bg-[#5f2d85]' : 'bg-gray-300'
               }`}
               aria-label="Toggle reminders"
             >
@@ -160,19 +160,19 @@ const Settings: React.FC = () => {
           </div>
 
           {/* Calm Mode */}
-          <div className="flex items-center justify-between p-3 bg-emerald-50/50 rounded-xl w-full gap-2">
+          <div className="flex items-center justify-between p-3 bg-[#5f2d85]/5 rounded-xl w-full gap-2">
             <div className="flex items-center gap-3 flex-1 min-w-0">
-              <div className="p-1.5 bg-emerald-100 rounded-full flex-shrink-0">
-                <Moon className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
+              <div className="p-1.5 bg-[#5f2d85]/20 rounded-full flex-shrink-0">
+                <Moon className="w-4 h-4 sm:w-5 sm:h-5 text-[#5f2d85]" />
               </div>
-              <span className="text-sm sm:text-base text-gray-700 truncate">
+              <span className="!text-sm sm:!text-base text-gray-700 truncate">
                 Calm Mode
               </span>
             </div>
             <button
               onClick={() => setDarkMode(!darkMode)}
               className={`relative w-12 h-6 rounded-full transition-colors duration-300 flex-shrink-0 ${
-                darkMode ? 'bg-emerald-400' : 'bg-gray-300'
+                darkMode ? 'bg-[#5f2d85]' : 'bg-gray-300'
               }`}
               aria-label="Toggle dark mode"
             >
@@ -185,19 +185,19 @@ const Settings: React.FC = () => {
           </div>
 
           {/* Soothing Notifications */}
-          <div className="flex items-center justify-between p-3 bg-emerald-50/50 rounded-xl w-full gap-2">
+          <div className="flex items-center justify-between p-3 bg-[#5f2d85]/5 rounded-xl w-full gap-2">
             <div className="flex items-center gap-3 flex-1 min-w-0">
-              <div className="p-1.5 bg-emerald-100 rounded-full flex-shrink-0">
-                <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
+              <div className="p-1.5 bg-[#5f2d85]/20 rounded-full flex-shrink-0">
+                <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-[#5f2d85]" />
               </div>
-              <span className="text-sm sm:text-base text-gray-700 truncate">
+              <span className="!text-sm sm:!text-base text-gray-700 truncate">
                 Soothing Notifications
               </span>
             </div>
             <button
               onClick={() => setNotifications(!notifications)}
               className={`relative w-12 h-6 rounded-full transition-colors duration-300 flex-shrink-0 ${
-                notifications ? 'bg-emerald-400' : 'bg-gray-300'
+                notifications ? 'bg-[#5f2d85]' : 'bg-gray-300'
               }`}
               aria-label="Toggle notifications"
             >
@@ -212,12 +212,12 @@ const Settings: React.FC = () => {
       </div>
 
       {/* Delete Account Section - Gentle and Supportive */}
-      <div className="!bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-sm border border-rose-100 p-4 sm:p-6 w-full">
+      <div className="!bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-sm border border-[#5f2d85]/20 p-4 sm:p-6 w-full">
         <div className="flex items-center gap-2 mb-3 sm:mb-4">
-          <div className="p-1.5 sm:p-2 bg-rose-50 rounded-full flex-shrink-0">
-            <Leaf className="w-4 h-4 sm:w-5 sm:h-5 text-rose-400" />
+          <div className="p-1.5 sm:p-2 bg-[#5f2d85]/10 rounded-full flex-shrink-0">
+            <Leaf className="w-4 h-4 sm:w-5 sm:h-5 text-[#5f2d85]" />
           </div>
-          <h2 className="text-base sm:text-lg font-medium text-rose-600 break-words">
+          <h2 className="!text-base sm:!text-lg font-medium text-[#5f2d85] break-words">
             Taking a Break
           </h2>
         </div>
@@ -231,7 +231,7 @@ const Settings: React.FC = () => {
         {!showDeleteForm ? (
           <button
             onClick={() => setShowDeleteForm(true)}
-            className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 sm:px-6 py-3 bg-rose-50 text-rose-600 rounded-xl hover:bg-rose-100 active:bg-rose-200 transition-all duration-300 border border-rose-200 text-sm sm:text-base"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 sm:px-6 py-3 bg-[#5f2d85]/10 text-[#5f2d85] rounded-xl hover:bg-[#5f2d85]/20 active:bg-[#5f2d85]/30 transition-all duration-300 border border-[#5f2d85]/30 text-sm sm:text-base"
           >
             <Trash2 size={18} className="flex-shrink-0" />
             <span className="truncate">I need some time away</span>
@@ -239,9 +239,9 @@ const Settings: React.FC = () => {
         ) : (
           <form
             onSubmit={handleDeleteAccount}
-            className="bg-rose-50/50 rounded-xl p-4 sm:p-6 border border-rose-100 w-full"
+            className="bg-[#5f2d85]/5 rounded-xl p-4 sm:p-6 border border-[#5f2d85]/20 w-full"
           >
-            <h3 className="font-medium text-rose-700 mb-3 text-sm sm:text-base break-words">
+            <h3 className="font-medium text-[#5f2d85] mb-3 text-sm sm:text-base break-words">
               This is a big decision
             </h3>
 
@@ -250,8 +250,8 @@ const Settings: React.FC = () => {
               type your email address:
             </p>
 
-            <div className="mb-4 p-3 bg-rose-100/50 rounded-lg w-full">
-              <p className="text-xs sm:text-sm text-rose-700 font-medium break-all">
+            <div className="mb-4 p-3 bg-[#5f2d85]/10 rounded-lg w-full">
+              <p className="text-xs sm:text-sm text-[#5f2d85] font-medium break-all">
                 {user?.email}
               </p>
             </div>
@@ -261,22 +261,22 @@ const Settings: React.FC = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email here..."
-              className="w-full px-4 py-3 !bg-white border border-rose-200 rounded-xl mb-4 focus:outline-none focus:ring-2 focus:ring-rose-300 focus:border-transparent transition-all text-sm sm:text-base"
+              className="w-full px-4 py-3 !bg-white border border-[#5f2d85]/30 rounded-xl mb-4 focus:outline-none focus:ring-2 focus:ring-[#5f2d85]/50 focus:border-transparent transition-all text-sm sm:text-base"
               disabled={isDeleting || success !== null}
               required
             />
 
             {error && (
-              <div className="flex items-start gap-2 text-rose-600 text-xs sm:text-sm mb-4 bg-rose-100 p-3 rounded-xl w-full">
+              <div className="flex items-start gap-2 text-[#5f2d85] text-xs sm:text-sm mb-4 bg-[#5f2d85]/10 p-3 rounded-xl w-full">
                 <AlertCircle size={16} className="mt-0.5 flex-shrink-0" />
                 <span className="flex-1 break-words">{error}</span>
               </div>
             )}
 
             {success && (
-              <div className="text-emerald-600 text-xs sm:text-sm mb-4 bg-emerald-100 p-4 rounded-xl text-center w-full">
+              <div className="text-[#5f2d85] text-xs sm:text-sm mb-4 bg-[#5f2d85]/10 p-4 rounded-xl text-center w-full">
                 <p className="mb-2 break-words">✨ {success}</p>
-                <p className="text-xs text-emerald-500 break-words">
+                <p className="text-xs text-[#5f2d85]/70 break-words">
                   Take all the time you need. We'll be here.
                 </p>
               </div>
@@ -286,11 +286,11 @@ const Settings: React.FC = () => {
               <button
                 type="submit"
                 disabled={isDeleting || success !== null}
-                className={`w-full sm:flex-1 px-4 py-3 bg-rose-400 !text-[#5f2d85] rounded-xl text-sm sm:text-base
+                className={`w-full sm:flex-1 px-4 py-3 bg-[#5f2d85] text-white rounded-xl text-sm sm:text-base
                   ${
                     isDeleting || success !== null
                       ? 'opacity-50 cursor-not-allowed'
-                      : 'hover:bg-rose-500 active:bg-rose-600 hover:shadow-md'
+                      : 'hover:bg-[#4a1f6e] active:bg-[#3a1858] hover:shadow-md'
                   } transition-all duration-300`}
               >
                 <span className="block truncate">

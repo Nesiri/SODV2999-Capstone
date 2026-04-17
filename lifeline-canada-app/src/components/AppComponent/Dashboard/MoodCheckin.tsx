@@ -209,19 +209,19 @@ const MoodCheckin: React.FC<MoodCheckinProps> = ({
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
-        className="relative overflow-hidden bg-gradient-to-br from-white via-indigo-50/20 to-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl border border-indigo-100/50 p-4 sm:p-6 md:p-8"
+        className="relative overflow-hidden bg-gradient-to-br from-white via-[#5f2d85]/5 to-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl border border-[#5f2d85]/20 p-4 sm:p-6 md:p-8"
       >
         {/* Gentle breathing background - responsive size */}
         <div className="absolute inset-0 overflow-hidden">
           <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-gradient-to-r from-indigo-100/20 to-purple-100/20 rounded-full blur-2xl sm:blur-3xl"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-gradient-to-r from-[#5f2d85]/10 to-[#5f2d85]/10 rounded-full blur-2xl sm:blur-3xl"
             style={{ animation: 'breathe 8s ease-in-out infinite' }}
           />
         </div>
 
         {/* Header with validation - responsive text */}
         <div className="relative mb-6 sm:mb-8">
-          <h2 className="text-lg sm:!text-xl md:text-2xl font-light text-slate-700 tracking-wide mb-1 sm:mb-2">
+          <h2 className="!text-lg sm:!text-xl md:!text-2xl font-light text-slate-700 tracking-wide mb-1 sm:mb-2">
             How are you feeling?
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 font-light italic">
@@ -238,7 +238,7 @@ const MoodCheckin: React.FC<MoodCheckinProps> = ({
         <div className="space-y-4 sm:space-y-6 relative">
           {/* Pleasant feelings */}
           <div>
-            <h3 className="text-xs text-slate-400 uppercase tracking-wider mb-2 sm:mb-3 font-light px-1">
+            <h3 className="!text-lg text-slate-400 uppercase tracking-wider mb-2 sm:mb-3 font-light px-1">
               Pleasant feelings
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
@@ -260,7 +260,7 @@ const MoodCheckin: React.FC<MoodCheckinProps> = ({
 
           {/* Neutral feelings */}
           <div>
-            <h3 className="text-xs text-slate-400 uppercase tracking-wider mb-2 sm:mb-3 font-light px-1">
+            <h3 className="!text-lg text-slate-400 uppercase tracking-wider mb-2 sm:mb-3 font-light px-1">
               Neutral
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
@@ -282,7 +282,7 @@ const MoodCheckin: React.FC<MoodCheckinProps> = ({
 
           {/* Challenging feelings */}
           <div>
-            <h3 className="text-xs text-slate-400 uppercase tracking-wider mb-2 sm:mb-3 font-light px-1">
+            <h3 className="!text-lg text-slate-400 uppercase tracking-wider mb-2 sm:mb-3 font-light px-1">
               Challenging feelings
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
@@ -314,15 +314,15 @@ const MoodCheckin: React.FC<MoodCheckinProps> = ({
               transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
               className="relative mt-6 sm:mt-8 overflow-hidden"
             >
-              <div className="relative !bg-white/60 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-indigo-100 p-4 sm:p-6">
+              <div className="relative !bg-white/60 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-[#5f2d85]/20 p-4 sm:p-6">
                 {/* Therapeutic affirmation - responsive text */}
-                <p className="text-xs sm:text-sm text-indigo-600 mb-3 sm:mb-4 font-light italic">
+                <p className="text-xs sm:text-sm text-[#5f2d85] mb-3 sm:mb-4 font-light italic">
                   {getAffirmation(selectedMood.category)}
                 </p>
 
                 {/* Intensity slider - mobile friendly */}
                 <div className="mb-4 sm:mb-5">
-                  <label className="block text-xs text-slate-500 mb-2 font-light">
+                  <label className="block !text-lg text-slate-500 mb-2 font-light">
                     How intense is this feeling? ({intensity + '/' + 10})
                   </label>
                   <input
@@ -331,7 +331,7 @@ const MoodCheckin: React.FC<MoodCheckinProps> = ({
                     max="10"
                     value={intensity}
                     onChange={(e) => setIntensity(parseInt(e.target.value))}
-                    className="w-full h-2 sm:h-1 bg-indigo-100 rounded-lg appearance-none cursor-pointer accent-indigo-400 touch-pan-y"
+                    className="w-full h-2 sm:h-1 bg-[#5f2d85]/20 rounded-lg appearance-none cursor-pointer accent-[#5f2d85] touch-pan-y"
                     style={{
                       WebkitAppearance: 'none',
                       height: isMobile ? '32px' : '8px',
@@ -343,15 +343,15 @@ const MoodCheckin: React.FC<MoodCheckinProps> = ({
                   </div>
                 </div>
 
-                <div className="pl-3 sm:pl-4 border-l-2 border-indigo-200">
-                  <label className="block text-xs text-indigo-400 uppercase tracking-wider mb-2 font-light">
+                <div className="pl-3 sm:pl-4 border-l-2 border-[#5f2d85]/30">
+                  <label className="block !text-lg text-[#5f2d85] uppercase tracking-wider mb-2 font-light">
                     Would you like to reflect?
                   </label>
                   <textarea
                     value={note}
                     onChange={(e) => setNote(e.target.value)}
                     placeholder="What's contributing to this feeling? Noticing is enough..."
-                    className="w-full p-3 sm:p-4 text-sm !bg-white/80 border border-indigo-100 rounded-lg sm:rounded-xl focus:outline-none focus:border-indigo-300 focus:ring-1 focus:ring-indigo-200 transition-all duration-300 placeholder:text-slate-400 font-light resize-none"
+                    className="w-full p-3 sm:p-4 text-sm !bg-white/80 border border-[#5f2d85]/20 rounded-lg sm:rounded-xl focus:outline-none focus:border-[#5f2d85]/50 focus:ring-1 focus:ring-[#5f2d85]/30 transition-all duration-300 placeholder:text-slate-400 font-light resize-none"
                     rows={isMobile ? 2 : 3}
                     autoFocus={!isMobile} // Only auto-focus on desktop
                   />
@@ -362,7 +362,7 @@ const MoodCheckin: React.FC<MoodCheckinProps> = ({
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={handleClose}
-                      className="px-4 sm:px-5 py-3 sm:py-2 text-xs text-slate-500 hover:text-slate-700 transition-colors font-light border border-slate-200 sm:border-0 rounded-lg sm:rounded-none"
+                      className="px-4 sm:px-5 py-3 sm:py-2 !text-xs text-slate-500 hover:text-slate-700 transition-colors font-light border border-slate-200 sm:border-0 rounded-lg sm:rounded-none"
                     >
                       Not right now
                     </motion.button>
@@ -371,7 +371,7 @@ const MoodCheckin: React.FC<MoodCheckinProps> = ({
                       whileTap={{ scale: 0.98 }}
                       onClick={handleSave}
                       disabled={isSaved}
-                      className="relative px-5 sm:px-6 py-3 sm:py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-xs rounded-xl hover:from-indigo-600 hover:to-[#5f2d85] transition-all duration-300 shadow-sm hover:shadow font-light overflow-hidden touch-manipulation"
+                      className="relative px-5 sm:px-6 py-3 sm:py-2 !bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] !text-white !text-xs rounded-xl hover:from-[#4a1f6e] hover:to-[#4a1f6e] transition-all duration-300 shadow-sm hover:shadow font-light overflow-hidden touch-manipulation"
                     >
                       <span className="relative z-10">
                         {isSaved ? '✨ Saved' : 'Check in with kindness'}
@@ -420,8 +420,8 @@ const MoodButton: React.FC<{
       ${isDisabled ? 'opacity-40 cursor-not-allowed' : 'active:scale-95 sm:hover:scale-100 sm:hover:shadow-md cursor-pointer'}
       ${
         isSelected
-          ? 'bg-gradient-to-br from-indigo-50 to-purple-50 ring-2 ring-indigo-200/70 ring-offset-2'
-          : '!bg-white/70 backdrop-blur-sm active:!bg-white sm:hover:!bg-white border border-indigo-100/50'
+          ? 'bg-gradient-to-br from-[#5f2d85]/10 to-[#5f2d85]/10 ring-2 ring-[#5f2d85]/30 ring-offset-2'
+          : '!bg-white/70 backdrop-blur-sm active:!bg-white sm:hover:!bg-white border border-[#5f2d85]/20'
       }
     `}
     style={{

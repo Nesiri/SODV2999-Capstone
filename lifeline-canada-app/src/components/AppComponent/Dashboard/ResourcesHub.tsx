@@ -263,15 +263,15 @@ const ResourcesHub: React.FC = () => {
 
   const getCategoryColor = useCallback((category?: string) => {
     const colors: Record<string, string> = {
-      'Mental Health Topics': 'from-blue-400 to-cyan-400',
-      Survivors: 'from-purple-400 to-pink-400',
-      Communities: 'from-emerald-400 to-teal-400',
-      Professionals: 'from-indigo-400 to-blue-400',
-      insights: 'from-gray-400 to-slate-400',
-      'Mood & Inspiration': 'from-amber-400 to-orange-400',
-      'Self Help & Tools': 'from-teal-400 to-emerald-400',
+      'Mental Health Topics': 'from-[#5f2d85] to-[#7b3fa0]',
+      Survivors: 'from-[#5f2d85] to-[#7b3fa0]',
+      Communities: 'from-[#5f2d85] to-[#7b3fa0]',
+      Professionals: 'from-[#5f2d85] to-[#7b3fa0]',
+      insights: 'from-[#5f2d85] to-[#7b3fa0]',
+      'Mood & Inspiration': 'from-[#5f2d85] to-[#7b3fa0]',
+      'Self Help & Tools': 'from-[#5f2d85] to-[#7b3fa0]',
     };
-    return colors[category || ''] || 'from-teal-400 to-emerald-400';
+    return colors[category || ''] || 'from-[#5f2d85] to-[#7b3fa0]';
   }, []);
 
   // Pre-compute stats to avoid recalculation
@@ -288,11 +288,11 @@ const ResourcesHub: React.FC = () => {
   const getCardGradient = (featured: boolean, isHovered: boolean) => {
     if (featured) {
       return isHovered
-        ? 'bg-gradient-to-br from-white via-amber-50/30 to-amber-100/20'
-        : 'bg-gradient-to-br from-white to-amber-50/10';
+        ? 'bg-gradient-to-br from-white via-[#5f2d85]/5 to-[#7b3fa0]/10'
+        : 'bg-gradient-to-br from-white to-[#5f2d85]/5';
     }
     return isHovered
-      ? 'bg-gradient-to-br from-white via-teal-50/20 to-emerald-50/20'
+      ? 'bg-gradient-to-br from-white via-[#5f2d85]/5 to-[#7b3fa0]/5'
       : '!bg-white';
   };
 
@@ -301,7 +301,7 @@ const ResourcesHub: React.FC = () => {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-500 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#5f2d85] mx-auto mb-4"></div>
           <p className="text-slate-500">Loading resources...</p>
         </div>
       </div>
@@ -317,7 +317,7 @@ const ResourcesHub: React.FC = () => {
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.9 }}
-            className="fixed bottom-4 left-3 right-3 sm:left-auto sm:right-6 z-50 bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-3 sm:px-6 py-2.5 sm:py-3 rounded-xl shadow-lg flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base"
+            className="fixed bottom-4 left-3 right-3 sm:left-auto sm:right-6 z-50 bg-gradient-to-r from-[#5f2d85] to-[#7b3fa0] text-white px-3 sm:px-6 py-2.5 sm:py-3 rounded-xl shadow-lg flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base"
           >
             <Heart size={14} fill="white" className="sm:w-4 sm:h-4" />
             <span className="truncate text-sm sm:text-base">
@@ -334,7 +334,7 @@ const ResourcesHub: React.FC = () => {
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.9 }}
-            className="fixed bottom-20 left-3 right-3 sm:left-auto sm:right-6 z-50 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 sm:px-6 py-2.5 sm:py-3 rounded-xl shadow-lg flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base"
+            className="fixed bottom-20 left-3 right-3 sm:left-auto sm:right-6 z-50 bg-gradient-to-r from-[#5f2d85] to-[#7b3fa0] text-white px-3 sm:px-6 py-2.5 sm:py-3 rounded-xl shadow-lg flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base"
           >
             <CheckCircle size={14} className="sm:w-4 sm:h-4" />
             <span className="truncate text-sm sm:text-base">
@@ -349,13 +349,13 @@ const ResourcesHub: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 bg-gradient-to-r from-teal-50 to-emerald-50 rounded-full mb-2 sm:mb-3 md:mb-4"
+          className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 bg-gradient-to-r from-[#5f2d85]/10 to-[#7b3fa0]/10 rounded-full mb-2 sm:mb-3 md:mb-4"
         >
           <Feather
             size={12}
-            className="text-teal-600 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4"
+            className="text-[#5f2d85] sm:w-3.5 sm:h-3.5 md:w-4 md:h-4"
           />
-          <span className="text-[11px] sm:text-xs md:text-sm text-teal-600 font-medium">
+          <span className="text-[11px] sm:text-xs md:text-sm text-[#5f2d85] font-medium">
             Gentle Guidance
           </span>
         </motion.div>
@@ -366,7 +366,7 @@ const ResourcesHub: React.FC = () => {
           className="!text-xl sm:!text-2xl md:!text-3xl lg:!text-4xl xl:text-5xl font-light text-slate-800 mb-1.5 sm:mb-2 md:mb-4 px-2"
         >
           Nurture Your{' '}
-          <span className="bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent block sm:inline">
+          <span className="bg-gradient-to-r from-[#5f2d85] to-[#7b3fa0] bg-clip-text text-transparent block sm:inline">
             Inner Peace
           </span>
         </motion.h1>
@@ -388,58 +388,58 @@ const ResourcesHub: React.FC = () => {
         transition={{ delay: 0.3 }}
         className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-6 md:mb-8"
       >
-        <div className="bg-gradient-to-br from-teal-50/50 to-emerald-50/50 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 border border-teal-100/50 hover:shadow-md transition-all duration-300">
+        <div className="bg-gradient-to-br from-[#5f2d85]/5 to-[#7b3fa0]/5 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 border border-[#5f2d85]/20 hover:shadow-md transition-all duration-300">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[10px] sm:text-xs md:text-sm text-teal-600 mb-0.5 sm:mb-1">
+              <p className="!text-[10px] sm:!text-xs md:!text-sm text-[#5f2d85] mb-0.5 sm:mb-1">
                 Resources Available
               </p>
-              <p className="!text-xl sm:text-2xl md:text-3xl font-light text-slate-800">
+              <p className="!text-xl sm:!text-2xl md:!text-3xl font-light text-slate-800">
                 {stats.total}
               </p>
             </div>
             <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 !bg-white/60 rounded-lg sm:rounded-xl flex items-center justify-center">
               <BookOpen
                 size={16}
-                className="text-teal-500 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                className="text-[#5f2d85] sm:w-5 sm:h-5 md:w-6 md:h-6"
               />
             </div>
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-rose-50/50 to-pink-50/50 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 border border-rose-100/50 hover:shadow-md transition-all duration-300">
+        <div className="bg-gradient-to-br from-[#5f2d85]/5 to-[#7b3fa0]/5 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 border border-[#5f2d85]/20 hover:shadow-md transition-all duration-300">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[10px] sm:text-xs md:text-sm text-rose-600 mb-0.5 sm:mb-1">
+              <p className="!text-[10px] sm:!text-xs md:!text-sm text-[#5f2d85] mb-0.5 sm:mb-1">
                 Saved for Later
               </p>
-              <p className="!text-xl sm:text-2xl md:text-3xl font-light text-slate-800">
+              <p className="!text-xl sm:!text-2xl md:!text-3xl font-light text-slate-800">
                 {stats.saved}
               </p>
             </div>
             <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 !bg-white/60 rounded-lg sm:rounded-xl flex items-center justify-center">
               <Heart
                 size={16}
-                className="text-rose-400 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                className="text-[#5f2d85] sm:w-5 sm:h-5 md:w-6 md:h-6"
               />
             </div>
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-indigo-50/50 to-purple-50/50 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 border border-indigo-100/50 hover:shadow-md transition-all duration-300">
+        <div className="bg-gradient-to-br from-[#5f2d85]/5 to-[#7b3fa0]/5 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-5 border border-[#5f2d85]/20 hover:shadow-md transition-all duration-300">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[10px] sm:text-xs md:text-sm text-indigo-600 mb-0.5 sm:mb-1">
+              <p className="!text-[10px] sm:!text-xs md:!text-sm text-[#5f2d85] mb-0.5 sm:mb-1">
                 Marked as Read
               </p>
-              <p className="!text-xl sm:text-2xl md:text-3xl font-light text-slate-800">
+              <p className="!text-xl sm:!text-2xl md:!text-3xl font-light text-slate-800">
                 {stats.read}
               </p>
             </div>
             <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 !bg-white/60 rounded-lg sm:rounded-xl flex items-center justify-center">
               <Eye
                 size={16}
-                className="text-indigo-400 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                className="text-[#5f2d85] sm:w-5 sm:h-5 md:w-6 md:h-6"
               />
             </div>
           </div>
@@ -465,7 +465,7 @@ const ResourcesHub: React.FC = () => {
             value={searchTerm}
             onChange={handleSearchChange}
             className="w-full pl-8 sm:pl-9 md:pl-12 pr-8 sm:pr-9 md:pr-12 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl md:rounded-2xl !bg-white/80 backdrop-blur-sm border border-slate-200 
-                       focus:border-teal-300 focus:ring-2 sm:focus:ring-4 focus:ring-teal-100 focus:outline-none
+                       focus:border-[#5f2d85] focus:ring-2 sm:focus:ring-4 focus:ring-[#5f2d85]/20 focus:outline-none
                        transition-all duration-300 text-slate-700 placeholder:text-slate-400 text-sm sm:text-base"
           />
           {searchTerm && (
@@ -483,7 +483,7 @@ const ResourcesHub: React.FC = () => {
           <select
             value={selectedCategory}
             onChange={(e) => handleCategoryChange(e.target.value)}
-            className="w-full px-3 py-2.5 !bg-white/80 backdrop-blur-sm border border-slate-200 rounded-lg text-slate-600 appearance-none cursor-pointer focus:border-teal-300 focus:ring-2 focus:ring-teal-100 focus:outline-none transition-all text-sm"
+            className="w-full px-3 py-2.5 !bg-white/80 backdrop-blur-sm border border-slate-200 rounded-lg text-slate-600 appearance-none cursor-pointer focus:border-[#5f2d85] focus:ring-2 focus:ring-[#5f2d85]/20 focus:outline-none transition-all text-sm"
             style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
               backgroundRepeat: 'no-repeat',
@@ -555,7 +555,7 @@ const ResourcesHub: React.FC = () => {
               flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 rounded-full font-medium transition-all duration-300 text-xs sm:text-sm
               ${
                 savedView
-                  ? '!bg-gradient-to-r from-rose-400 to-pink-400 text-white shadow-md'
+                  ? '!bg-gradient-to-r from-[#5f2d85] to-[#7b3fa0] text-white shadow-md'
                   : '!bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-slate-50 border border-slate-200'
               }
             `}
@@ -600,28 +600,28 @@ const ResourcesHub: React.FC = () => {
                   relative h-full flex flex-col rounded-xl sm:rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 
                   border border-slate-100 overflow-hidden
                   ${getCardGradient(resource.featured || false, hoveredCard === resource.path)}
-                  ${isRead ? 'ring-1 ring-indigo-200 bg-indigo-50/5' : ''}
+                  ${isRead ? 'ring-1 ring-[#5f2d85]/30' : ''}
                 `}
                 >
                   {/* Read indicator overlay */}
                   {isRead && (
                     <div className="absolute top-3 right-3 z-10">
-                      <div className="bg-indigo-100 rounded-full p-1">
-                        <CheckCircle size={14} className="!text-indigo-600" />
+                      <div className="bg-[#5f2d85] rounded-full p-1">
+                        <CheckCircle size={14} className="!text-white" />
                       </div>
                     </div>
                   )}
 
                   {/* Calming Background Pattern */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                    <div className="absolute inset-0 !bg-gradient-to-br from-teal-50/30 to-emerald-50/30" />
+                    <div className="absolute inset-0 !bg-gradient-to-br from-[#5f2d85]/5 to-[#7b3fa0]/5" />
                   </div>
 
                   {/* Subtle Border Glow */}
                   <div
                     className={`
                     absolute inset-0 rounded-xl sm:rounded-2xl pointer-events-none transition-opacity duration-300
-                    ${hoveredCard === resource.path ? 'ring-2 ring-teal-300/50 ring-offset-1' : ''}
+                    ${hoveredCard === resource.path ? 'ring-2 ring-[#5f2d85]/30 ring-offset-1' : ''}
                   `}
                   />
 
@@ -652,8 +652,8 @@ const ResourcesHub: React.FC = () => {
                           p-1.5 sm:p-2 rounded-full transition-all duration-300
                           ${
                             isSaved
-                              ? 'bg-rose-100 text-rose-500 hover:bg-rose-200'
-                              : 'bg-slate-50 text-slate-400 hover:bg-rose-50 hover:text-rose-500'
+                              ? 'bg-[#5f2d85]/10 text-[#5f2d85] hover:bg-[#5f2d85]/20'
+                              : 'bg-slate-50 text-slate-400 hover:bg-[#5f2d85]/10 hover:text-[#5f2d85]'
                           }
                         `}
                       >
@@ -665,7 +665,7 @@ const ResourcesHub: React.FC = () => {
                   {/* Content Section */}
                   <div className="relative flex-1 px-4 sm:px-5 md:px-6 pb-3 sm:pb-4">
                     <h3
-                      className={`text-base sm:text-lg md:!text-xl font-medium mb-2 group-hover:text-teal-700 transition-colors line-clamp-2 min-h-[3.5rem] ${isRead ? 'text-slate-600' : 'text-slate-800'}`}
+                      className={`!text-xs sm:!text-sm md:!text-base font-medium mb-2 group-hover:text-[#5f2d85] transition-colors line-clamp-2 min-h-[3.5rem] ${isRead ? 'text-slate-600' : 'text-slate-800'}`}
                     >
                       {resource.name}
                     </h3>
@@ -684,8 +684,8 @@ const ResourcesHub: React.FC = () => {
                             flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-300
                             ${
                               isRead
-                                ? '!bg-indigo-100 text-indigo-700 cursor-default'
-                                : '!bg-indigo-500 !text-white shadow-md hover:shadow-lg'
+                                ? '!bg-[#5f2d85]/10 text-[#5f2d85] cursor-default'
+                                : '!bg-[#5f2d85] !text-white shadow-md hover:shadow-lg'
                             }
                           `}
                         >
@@ -726,7 +726,7 @@ const ResourcesHub: React.FC = () => {
               ${
                 currentPage === 1
                   ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
-                  : '!bg-white text-slate-600 hover:bg-teal-50 hover:text-teal-600 border border-slate-200'
+                  : '!bg-white text-slate-600 hover:bg-[#5f2d85]/10 hover:text-[#5f2d85] border border-slate-200'
               }
             `}
           >
@@ -754,7 +754,7 @@ const ResourcesHub: React.FC = () => {
                     w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-lg font-medium transition-all duration-300 text-xs sm:text-sm
                     ${
                       currentPage === pageNum
-                        ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-white shadow-md'
+                        ? 'bg-gradient-to-r from-[#5f2d85] to-[#7b3fa0] text-white shadow-md'
                         : '!bg-white text-slate-600 hover:bg-slate-50 border border-slate-200'
                     }
                   `}
@@ -773,7 +773,7 @@ const ResourcesHub: React.FC = () => {
               ${
                 currentPage === totalPages
                   ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
-                  : '!bg-white text-slate-600 hover:bg-teal-50 hover:text-teal-600 border border-slate-200'
+                  : '!bg-white text-slate-600 hover:bg-[#5f2d85]/10 hover:text-[#5f2d85] border border-slate-200'
               }
             `}
           >
@@ -807,7 +807,7 @@ const ResourcesHub: React.FC = () => {
           {savedView && stats.saved === 0 && (
             <button
               onClick={handleSavedViewToggle}
-              className="mt-5 sm:mt-6 px-5 sm:px-6 py-2 sm:py-2.5 bg-gradient-to-r from-teal-500 to-emerald-500 text-white rounded-full hover:shadow-lg transition-all text-sm sm:text-base"
+              className="mt-5 sm:mt-6 px-5 sm:px-6 py-2 sm:py-2.5 bg-gradient-to-r from-[#5f2d85] to-[#7b3fa0] text-white rounded-full hover:shadow-lg transition-all text-sm sm:text-base"
             >
               Return to All Resources
             </button>

@@ -64,9 +64,9 @@ const BreathingExercises: React.FC = () => {
     rest: 4,
     hold: 4,
     patternStyle: 'box',
-    color: 'from-emerald-400 to-teal-500',
-    customColor: '#10b981',
-    fromColor: 'emerald-400',
+    color: 'from-[#5f2d85] to-[#7b3fa0]',
+    customColor: '#5f2d85',
+    fromColor: '[#5f2d85]',
   });
   const [tempCustomConfig, setTempCustomConfig] =
     useState<CustomConfig>(customConfig);
@@ -83,7 +83,7 @@ const BreathingExercises: React.FC = () => {
         name: '4-8 Calming',
         description: 'Deep relaxation and stress relief',
         icon: <Moon size={20} />,
-        color: 'from-indigo-400 to-purple-500',
+        color: 'from-[#5f2d85] to-[#7b3fa0]',
         patternStyle: 'linear',
       },
       box: {
@@ -94,7 +94,7 @@ const BreathingExercises: React.FC = () => {
         name: 'Balanced Breathing',
         description: 'Focus and clarity',
         icon: <Activity size={20} />,
-        color: 'from-emerald-400 to-teal-500',
+        color: 'from-[#5f2d85] to-[#7b3fa0]',
         patternStyle: 'box',
       },
       calm: {
@@ -104,7 +104,7 @@ const BreathingExercises: React.FC = () => {
         name: 'Gentle Waves',
         description: 'Natural rhythm',
         icon: <Wind size={20} />,
-        color: 'from-sky-400 to-blue-500',
+        color: 'from-[#5f2d85] to-[#7b3fa0]',
         patternStyle: 'linear',
       },
       custom: {
@@ -295,6 +295,7 @@ const BreathingExercises: React.FC = () => {
   const adjustColor = (color: string) => {
     return color;
   };
+  
   // Add this useEffect near your other useEffects (around line 200)
   useEffect(() => {
     // Save cycle count to localStorage whenever a cycle completes
@@ -315,12 +316,12 @@ const BreathingExercises: React.FC = () => {
   }, [cycles]); // Dependency on cycles
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50/30 flex items-center justify-center p-4 relative overflow-x-hidden overflow-y-auto">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-[#5f2d85]/10 flex items-center justify-center p-4 relative overflow-x-hidden overflow-y-auto">
       {/* Animated Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-200/30 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-teal-200/20 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-100/20 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#5f2d85]/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#5f2d85]/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#5f2d85]/10 rounded-full blur-3xl" />
       </div>
 
       <div className="relative max-w-5xl w-full z-10">
@@ -331,10 +332,10 @@ const BreathingExercises: React.FC = () => {
           className="text-center mb-6"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 !bg-white/60 backdrop-blur-sm rounded-full mb-4 shadow-sm">
-            <Heart size={16} className="text-rose-500" />
+            <Heart size={16} className="text-[#5f2d85]" />
             <span className="!text-sm text-slate-600">Mindful Breathing</span>
           </div>
-          <h1 className="!text-2xl sm:!text-4xl font-light bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-3">
+          <h1 className="!text-2xl sm:!text-4xl font-light bg-gradient-to-r from-[#5f2d85] to-[#7b3fa0] bg-clip-text text-transparent mb-3">
             Find Your Rhythm
           </h1>
           <p className="!text-slate-500 max-w-md mx-auto">
@@ -498,7 +499,7 @@ const BreathingExercises: React.FC = () => {
     ${
       isActive
         ? '!bg-rose-500 hover:bg-rose-600 text-white'
-        : '!bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white'
+        : '!bg-gradient-to-r from-[#5f2d85] to-[#7b3fa0] hover:from-[#4a1f6e] hover:to-[#4a1f6e] text-white'
     }
   `}
           >
@@ -533,7 +534,7 @@ const BreathingExercises: React.FC = () => {
         >
           <div className="inline-flex items-center gap-4 px-6 py-3 !bg-white/60 backdrop-blur-sm rounded-full shadow-sm">
             <div className="flex items-center gap-2">
-              <Activity size={16} className="text-teal-500" />
+              <Activity size={16} className="text-[#5f2d85]" />
               <span className="text-slate-600">
                 <span className="font-normal text-slate-800">{cycles}</span>{' '}
                 complete {cycles === 1 ? 'cycle' : 'cycles'}
@@ -595,7 +596,7 @@ const BreathingExercises: React.FC = () => {
                         }}
                         className={`flex-1 px-4 py-2 rounded-xl transition-all ${
                           tempCustomConfig.patternStyle === 'box'
-                            ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md'
+                            ? 'bg-gradient-to-r from-[#5f2d85] to-[#7b3fa0] text-white shadow-md'
                             : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                         }`}
                       >
@@ -612,7 +613,7 @@ const BreathingExercises: React.FC = () => {
                         }}
                         className={`flex-1 px-4 py-2 rounded-xl transition-all ${
                           tempCustomConfig.patternStyle === 'linear'
-                            ? 'bg-gradient-to-r from-rose-500 to-orange-500 text-white shadow-md'
+                            ? 'bg-gradient-to-r from-[#5f2d85] to-[#7b3fa0] text-white shadow-md'
                             : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                         }`}
                       >
@@ -684,6 +685,12 @@ const BreathingExercises: React.FC = () => {
                     <div className="grid grid-cols-4 gap-2 mb-3">
                       {[
                         {
+                          from: 'from-[#5f2d85]',
+                          to: 'to-[#7b3fa0]',
+                          name: 'Purple',
+                          color: '#5f2d85',
+                        },
+                        {
                           from: 'from-rose-400',
                           to: 'to-orange-500',
                           name: 'Sunset',
@@ -754,12 +761,12 @@ const BreathingExercises: React.FC = () => {
                     <div className="flex items-center gap-2">
                       <input
                         type="color"
-                        value={tempCustomConfig.customColor || '#10b981'}
+                        value={tempCustomConfig.customColor || '#5f2d85'}
                         onChange={(e) =>
                           setTempCustomConfig((prev) => ({
                             ...prev,
                             customColor: e.target.value,
-                            color: `from-${prev.fromColor || 'emerald-400'} to-${e.target.value.slice(1)}`,
+                            color: `from-${prev.fromColor || '[#5f2d85]'} to-${e.target.value.slice(1)}`,
                           }))
                         }
                         className="w-10 h-10 rounded-lg cursor-pointer border border-slate-200"
@@ -771,11 +778,11 @@ const BreathingExercises: React.FC = () => {
                           setTempCustomConfig((prev) => ({
                             ...prev,
                             customColor: e.target.value,
-                            color: `from-${prev.fromColor || 'emerald-400'} to-${e.target.value.slice(1)}`,
+                            color: `from-${prev.fromColor || '[#5f2d85]'} to-${e.target.value.slice(1)}`,
                           }))
                         }
                         placeholder="Hex color code"
-                        className="flex-1 px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-rose-400"
+                        className="flex-1 px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#5f2d85]"
                       />
                     </div>
                   </div>
@@ -790,7 +797,7 @@ const BreathingExercises: React.FC = () => {
                   </button>
                   <button
                     onClick={handleSaveCustomPattern}
-                    className="flex-1 px-4 py-2.5 bg-gradient-to-r from-rose-500 to-orange-500 text-white rounded-xl font-medium hover:shadow-lg transition-all"
+                    className="flex-1 px-4 py-2.5 bg-gradient-to-r from-[#5f2d85] to-[#7b3fa0] text-white rounded-xl font-medium hover:shadow-lg transition-all"
                   >
                     Apply Pattern
                   </button>

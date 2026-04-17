@@ -332,10 +332,10 @@ const CrisisCenterDirectory: React.FC = () => {
                       {/* Country Header */}
                       <div className="flex items-center space-x-2 sticky top-0 !bg-white/90 backdrop-blur-sm py-2 z-10">
                         <MapPin className="w-4 h-4 text-gray-500" />
-                        <h2 className="font-bold !text-gray-700 text-md uppercase tracking-wide">
+                        <h2 className="!text-lg font-bold !text-gray-700 text-md uppercase tracking-wide">
                           {country.country}
                         </h2>
-                        <span className="text-xs bg-gray-200 px-2 py-1 rounded-full">
+                        <span className="!text-xs bg-gray-200 px-2 py-1 rounded-full">
                           {country.services.length}
                         </span>
                       </div>
@@ -348,12 +348,12 @@ const CrisisCenterDirectory: React.FC = () => {
                         >
                           <div className="flex items-start justify-between">
                             <div className="flex-1">
-                              <h3 className="font-normal text-gray-800 text-sm mb-2 line-clamp-2 pr-2">
+                              <h3 className="!text-lg font-normal text-gray-800 text-sm mb-2 line-clamp-2 pr-2">
                                 {service.name}
                               </h3>
                               <div className="inline-flex items-center space-x-2 text-blue-600">
                                 <Phone className="w-4 h-4 !text-[#5f2d85]" />
-                                <span className="text-sm !text-[#5f2d85] font-mono bg-blue-50 px-3 py-1 rounded-full">
+                                <span className="!text-sm !text-[#5f2d85] font-mono bg-blue-50 px-3 py-1 rounded-full">
                                   {service.phone}
                                 </span>
                               </div>

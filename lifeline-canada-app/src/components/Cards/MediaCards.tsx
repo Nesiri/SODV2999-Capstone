@@ -18,7 +18,7 @@ const getHoverOverlayIcon = (category: string = '') => {
     return (
       <svg
         className="w-8 h-8 !text-[#5f2d85] translate-x-0.5"
-        fill="#f5f1f7"
+        fill="#5f2d85"
         viewBox="0 0 24 24"
       >
         <path d="M8 5v14l11-7z" />
@@ -31,7 +31,7 @@ const getHoverOverlayIcon = (category: string = '') => {
     return (
       <svg
         className="w-8 h-8 !text-[#5f2d85]"
-        fill="#f5f1f7"
+        fill="#5f2d85"
         viewBox="0 0 24 24"
       >
         <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -44,7 +44,7 @@ const getHoverOverlayIcon = (category: string = '') => {
     return (
       <svg
         className="w-8 h-8 !text-[#5f2d85]"
-        fill="#f5f1f7"
+        fill="#5f2d85"
         viewBox="0 0 24 24"
       >
         <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -57,7 +57,7 @@ const getHoverOverlayIcon = (category: string = '') => {
     return (
       <svg
         className="w-8 h-8 !text-[#5f2d85]"
-        fill="#f5f1f7"
+        fill="#5f2d85"
         viewBox="0 0 24 24"
       >
         <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -67,7 +67,7 @@ const getHoverOverlayIcon = (category: string = '') => {
 
   // Default explore icon
   return (
-    <svg className="w-8 h-8 !text-[#5f2d85]" fill="#f5f1f7" viewBox="0 0 24 24">
+    <svg className="w-8 h-8 !text-[#5f2d85]" fill="#5f2d85" viewBox="0 0 24 24">
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
     </svg>
   );
@@ -89,7 +89,7 @@ const OptimizedCardImage = memo(
     return (
       <>
         {!isLoaded && (
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-shimmer" />
+          <div className="absolute inset-0 !bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-shimmer" />
         )}
         <img
           src={src.startsWith('/') ? src : `/${src}`}
@@ -175,7 +175,7 @@ const MediaCardItem = memo(
           ${isHovered ? 'ring-4 ring-[#5f2d85]/30' : ''}
         `}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-[#5f2d85]/0 via-[#5f2d85]/0 to-[#C77DDF]/0 group-hover:from-[#5f2d85]/10 group-hover:via-[#5f2d85]/10 group-hover:to-[#C77DDF]/10 transition-all duration-500" />
+          <div className="absolute inset-0 !bg-gradient-to-br from-[#5f2d85]/0 via-[#5f2d85]/0 to-[#C77DDF]/0 group-hover:from-[#5f2d85]/10 group-hover:via-[#5f2d85]/10 group-hover:to-[#C77DDF]/10 transition-all duration-500" />
 
           {/* Image Container */}
           <div className="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
@@ -202,7 +202,7 @@ const MediaCardItem = memo(
               {card.title}
             </h3>
 
-            <div className="w-12 h-0.5 bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] rounded-full mb-3 transform origin-left group-hover:scale-x-150 transition-transform duration-300" />
+            <div className="w-12 h-0.5 !bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] rounded-full mb-3 transform origin-left group-hover:scale-x-150 transition-transform duration-300" />
 
             <div className="flex items-center justify-between text-sm mt-auto">
               <span className="text-gray-500 capitalize">

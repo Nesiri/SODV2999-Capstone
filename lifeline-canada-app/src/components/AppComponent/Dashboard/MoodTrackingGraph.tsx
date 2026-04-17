@@ -252,9 +252,9 @@ const MoodTrackingGraph: React.FC = () => {
 
   const getTrendIcon = () => {
     if (statistics.trend === 'up')
-      return <TrendingUp size={20} className="!text-emerald-600" />;
+      return <TrendingUp size={20} className="!text-[#5f2d85]" />;
     if (statistics.trend === 'down')
-      return <TrendingDown size={20} className="!text-rose-600" />;
+      return <TrendingDown size={20} className="!text-[#5f2d85]" />;
     return <Minus size={20} className="!text-slate-500" />;
   };
 
@@ -279,7 +279,7 @@ const MoodTrackingGraph: React.FC = () => {
                 onClick={() => setTimeRange(range)}
                 className={`px-2 sm:px-3 py-1 rounded !text-xs sm:!text-sm transition-all ${
                   timeRange === range
-                    ? '!bg-teal-500 !text-white shadow-sm'
+                    ? '!bg-[#5f2d85] !text-white shadow-sm'
                     : '!bg-slate-100 !text-slate-700 hover:!bg-slate-200'
                 }`}
               >
@@ -297,7 +297,7 @@ const MoodTrackingGraph: React.FC = () => {
               onClick={() => setSelectedMetric(metric)}
               className={`flex-1 py-2 rounded-lg !text-xs sm:!text-sm !font-medium transition-all ${
                 selectedMetric === metric
-                  ? '!bg-teal-500 !text-white shadow-sm'
+                  ? '!bg-[#5f2d85] !text-white shadow-sm'
                   : '!bg-slate-100 !text-slate-700 hover:!bg-slate-200'
               }`}
             >
@@ -324,7 +324,7 @@ const MoodTrackingGraph: React.FC = () => {
           <>
             {/* Stats Cards */}
             <div className="grid grid-cols-2 gap-3 mb-4">
-              <div className="!bg-gradient-to-br from-teal-100 to-emerald-100 rounded-xl p-3 text-center">
+              <div className="!bg-gradient-to-br from-[#5f2d85]/10 to-[#7b3fa0]/10 rounded-xl p-3 text-center">
                 <p className="!text-xs !text-slate-600 mb-1">Average</p>
                 <p className="!text-2xl !font-light !text-slate-800">
                   {selectedMetric === 'mood'
@@ -356,11 +356,11 @@ const MoodTrackingGraph: React.FC = () => {
             </div>
 
             {/* Compassionate Insight */}
-            <div className="!bg-indigo-100 rounded-xl p-4 mb-4 border !border-indigo-200">
+            <div className="!bg-[#5f2d85]/10 rounded-xl p-4 mb-4 border !border-[#5f2d85]/20">
               <div className="flex items-start gap-2">
                 <Heart
                   size={16}
-                  className="!text-rose-500 mt-0.5 flex-shrink-0"
+                  className="!text-[#5f2d85] mt-0.5 flex-shrink-0"
                 />
                 <p className="!text-xs sm:!text-sm !text-slate-700 leading-relaxed">
                   {statistics.insight}
@@ -397,10 +397,10 @@ const MoodTrackingGraph: React.FC = () => {
                             <div
                               className={`h-full rounded-full transition-all ${
                                 selectedMetric === 'mood'
-                                  ? '!bg-teal-500'
+                                  ? '!bg-[#5f2d85]'
                                   : selectedMetric === 'cycles'
-                                    ? '!bg-purple-500'
-                                    : '!bg-orange-500'
+                                    ? '!bg-[#5f2d85]'
+                                    : '!bg-[#5f2d85]'
                               }`}
                               style={{
                                 width: `${Math.min(100, (value / (selectedMetric === 'mood' ? 10 : 20)) * 100)}% 

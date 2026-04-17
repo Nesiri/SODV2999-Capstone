@@ -15,7 +15,7 @@ const QuickExitButton: React.FC = () => {
     <button
       onClick={handleExit}
       className={`fixed z-[9999] !bg-[#5f2d85] hover:bg-[#7a0088] !text-white text-sm font-medium transition-colors duration-300 flex items-center gap-1.5 px-3 py-1.5 rounded-full shadow-md hover:shadow-lg ${
-        isDashboard ? 'bottom-4 left-35' : 'bottom-8 left-8'
+        isDashboard ? 'bottom-15 left-35' : 'bottom-15 left-8'
       }`}
     >
       <svg
