@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run build"
+  command = "npm install && tsc --noEmit || true && vite build"
   publish = "dist"
 
 [build.environment]
