@@ -21,7 +21,7 @@ const hopeCards = '/assets/AdditionalResourceImages/hopeCards.webp';
 
 const MentalHealthSurvivorsAttempt: React.FC = () => {
   const imageRowClassName =
-    'rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-start';
+    'rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-start';
   const sideImageClassName =
     'w-full h-auto object-cover object-top rounded-lg shadow-md';
   const coverImageClassName =
@@ -36,17 +36,15 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
       </div>
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-              Attempt Survivors
-            </span>
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">Attempt Survivors</span>
           </h1>
 
           <div className="flex items-center gap-4 mt-3 mb-1">
             <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
           </div>
 
-          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
+          <main className="mt-6 !bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
             <div className="flex-1">
               <p className="leading-relaxed">
                 Suicidal behaviour can be very distressing for both the person
@@ -74,8 +72,8 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
             </div>
           </main>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               After a Suicide Attempt: What Now?
             </h2>
 
@@ -90,7 +88,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
             <div className="mt-6 grid grid-cols-1 gap-4 sm:gap-5">
               <div className={imageRowClassName}>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-purple-700">
+                  <h3 className="!text-xl font-normal !text-[#5f2d85]">
                     Short-Term Planning
                   </h3>
                   <p className="mt-3 leading-relaxed">
@@ -157,7 +155,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
 
               <div className={imageRowClassName}>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-purple-700">
+                  <h3 className="!text-xl font-normal !text-[#5f2d85]">
                     Let Them Talk
                   </h3>
                   <p className="mt-3 leading-relaxed">
@@ -182,8 +180,8 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-                <h3 className="text-xl font-semibold text-purple-700">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
+                <h3 className="!text-xl font-normal !text-[#5f2d85]">
                   Therapy Should Be First on the List
                 </h3>
                 <p className="mt-3 leading-relaxed">
@@ -209,7 +207,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
 
               <div className={imageRowClassName}>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-purple-700">
+                  <h3 className="!text-xl font-normal !text-[#5f2d85]">
                     Make Important Lifestyle Changes
                   </h3>
                   <p className="mt-3 leading-relaxed">
@@ -276,7 +274,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
 
               <div className={imageRowClassName}>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-purple-700">
+                  <h3 className="!text-xl font-normal !text-[#5f2d85]">
                     Be Alert for Suicide Warning Signs
                   </h3>
                   <p className="mt-3 leading-relaxed">
@@ -333,7 +331,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
 
           <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5">
             <div className="rounded-xl border border-green-200 bg-green-50/70 p-4 sm:p-5 shadow-sm">
-              <h3 className="text-xl font-semibold text-green-800">
+              <h3 className="!text-xl font-normal text-green-800">
                 Things To Do:
               </h3>
               <ul className="list-disc ml-6 mt-3 space-y-2 text-base text-green-900">
@@ -375,7 +373,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
             </div>
 
             <div className="rounded-xl border border-red-200 bg-red-50/70 p-4 sm:p-5 shadow-sm">
-              <h3 className="text-xl font-semibold text-red-800">
+              <h3 className="!text-xl font-normal text-red-800">
                 Things Not To Do:
               </h3>
               <ul className="list-disc ml-6 mt-3 space-y-2 text-base text-red-900">
@@ -409,11 +407,11 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
             <div className="grid grid-cols-1 gap-4 sm:gap-5">
               <div className={imageRowClassName}>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-purple-700">
+                  <h3 className="!text-xl font-normal !text-[#5f2d85]">
                     Making a Survivor Kit or Box:
                   </h3>
                   <p className="mt-3 leading-relaxed">
@@ -438,7 +436,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
 
               <div className={imageRowClassName}>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-purple-700">
+                  <h3 className="!text-xl font-normal !text-[#5f2d85]">
                     Hope Cards:
                   </h3>
                   <p className="mt-3 leading-relaxed">
@@ -468,8 +466,8 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Resources &amp; Guides for Suicide Attempt Survivors &amp; their
               Families
             </h2>
@@ -486,7 +484,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
                 <div className="flex-1">
                   <a
                     href="https://hughumanity.org"
-                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="!text-xl font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     For Survivors Of An Attempt
                   </a>
@@ -530,7 +528,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
                 <div className="flex-1">
                   <a
                     href={CASPpdf}
-                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="!text-xl font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     After A Suicide Attempt: A Guide For Family and Friends
                   </a>
@@ -584,7 +582,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
                 <div className="flex-1">
                   <a
                     href={SAMHSApdf}
-                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="!text-xl font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     A Journey Towards Health and Hope
                   </a>
@@ -617,7 +615,7 @@ const MentalHealthSurvivorsAttempt: React.FC = () => {
                 <div className="flex-1">
                   <a
                     href={ActionAlliancepdf}
-                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="!text-xl font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     The Way Forward: Pathways to Hope, Recovery &amp; Wellness
                   </a>

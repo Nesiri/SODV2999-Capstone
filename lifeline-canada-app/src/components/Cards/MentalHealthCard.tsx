@@ -22,7 +22,7 @@ const OptimizedImage = memo(({ src, alt }: { src: string; alt: string }) => {
       {/* CHANGED: h-full → h-80 */}
       {!isLoaded && (
         <div className="w-full h-full flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
+          <div className="w-8 h-8 border-2 border-[#5f2d85] border-t-transparent rounded-full animate-spin"></div>
         </div>
       )}
       <img
@@ -59,28 +59,28 @@ export const MentalHealthCard = memo(
         case 'compact':
           return {
             container:
-              'group relative bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-200 overflow-hidden border border-gray-100',
+              'group relative !bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-200 overflow-hidden border border-gray-100',
             image: 'w-full h-48 object-cover',
             content: 'p-5',
-            title: 'text-lg font-bold text-gray-900 mb-2 line-clamp-1',
+            title: '!text-lg font-bold !text-[#5f2d85] mb-2 line-clamp-1',
             subtitle: 'text-gray-600 text-sm line-clamp-2',
           };
         case 'featured':
           return {
             container:
-              'group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-200 overflow-hidden border-2 border-purple-200',
+              'group relative !bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-200 overflow-hidden border-2 border-purple-200',
             image: 'w-full', // CHANGED: aspect-square → w-full
             content: 'p-6',
-            title: 'text-2xl font-bold text-gray-900 mb-3 line-clamp-2',
-            subtitle: 'text-gray-700 text-base line-clamp-3',
+            title: '!text-2xl font-bold !text-[#5f2d85] mb-3 line-clamp-2',
+            subtitle: 'text-gray-700 !text-base line-clamp-3',
           };
         default:
           return {
             container:
-              'group relative bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-200 overflow-hidden border border-gray-100',
+              'group relative !bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-200 overflow-hidden border border-gray-100',
             image: 'w-full', // CHANGED: aspect-square → w-full
             content: 'p-6',
-            title: 'text-xl font-bold text-gray-900 mb-2 line-clamp-2',
+            title: '!text-xl font-bold !text-[#5f2d85] mb-2 line-clamp-2',
             subtitle: 'text-gray-600 line-clamp-2',
           };
       }
@@ -107,11 +107,11 @@ export const MentalHealthCard = memo(
           <p className={styles.subtitle}>{card.subtitle}</p>
 
           {/* Simplified Learn More Link - NO BLUE */}
-          <div className="flex justify-end items-center text-purple-600 font-medium mt-4 group/link">
+          <div className="flex justify-end items-center !text-[#5f2d85] font-medium mt-4 group/link">
             <svg
               className="w-4 h-4 ml-1 transition-transform duration-200 group-hover/link:translate-x-1"
               fill="none"
-              stroke="currentColor"
+              stroke="#5f2d85"
               viewBox="0 0 24 24"
             >
               <path

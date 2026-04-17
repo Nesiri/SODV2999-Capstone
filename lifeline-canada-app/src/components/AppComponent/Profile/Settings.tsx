@@ -70,7 +70,7 @@ const Settings: React.FC = () => {
           <div className="p-1.5 sm:p-2 bg-emerald-50 rounded-full flex-shrink-0">
             <Leaf className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-500" />
           </div>
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-light text-gray-700 break-words">
+          <h1 className="!text-xl sm:text-2xl md:text-3xl font-light text-gray-700 break-words">
             Your Space
           </h1>
         </div>
@@ -81,7 +81,7 @@ const Settings: React.FC = () => {
       </div>
 
       {/* Account Information - Gentle Card */}
-      <div className="bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-sm border border-emerald-100 p-4 sm:p-6 mb-4 sm:mb-6 hover:shadow-md transition-all duration-500 w-full">
+      <div className="!bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-sm border border-emerald-100 p-4 sm:p-6 mb-4 sm:mb-6 hover:shadow-md transition-all duration-500 w-full">
         <div className="flex items-center gap-2 mb-4 sm:mb-6">
           <div className="p-1.5 sm:p-2 bg-emerald-50 rounded-full flex-shrink-0">
             <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-500" />
@@ -123,7 +123,7 @@ const Settings: React.FC = () => {
       </div>
 
       {/* Preferences - Gentle Settings */}
-      <div className="bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-sm border border-emerald-100 p-4 sm:p-6 mb-4 sm:mb-6 w-full">
+      <div className="!bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-sm border border-emerald-100 p-4 sm:p-6 mb-4 sm:mb-6 w-full">
         <div className="flex items-center gap-2 mb-4 sm:mb-6">
           <div className="p-1.5 sm:p-2 bg-emerald-50 rounded-full flex-shrink-0">
             <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-500" />
@@ -152,7 +152,7 @@ const Settings: React.FC = () => {
               aria-label="Toggle reminders"
             >
               <span
-                className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow-sm transition-transform duration-300 ${
+                className={`absolute top-1 left-1 w-4 h-4 !bg-white rounded-full shadow-sm transition-transform duration-300 ${
                   reminders ? 'translate-x-6' : ''
                 }`}
               />
@@ -177,7 +177,7 @@ const Settings: React.FC = () => {
               aria-label="Toggle dark mode"
             >
               <span
-                className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow-sm transition-transform duration-300 ${
+                className={`absolute top-1 left-1 w-4 h-4 !bg-white rounded-full shadow-sm transition-transform duration-300 ${
                   darkMode ? 'translate-x-6' : ''
                 }`}
               />
@@ -202,7 +202,7 @@ const Settings: React.FC = () => {
               aria-label="Toggle notifications"
             >
               <span
-                className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow-sm transition-transform duration-300 ${
+                className={`absolute top-1 left-1 w-4 h-4 !bg-white rounded-full shadow-sm transition-transform duration-300 ${
                   notifications ? 'translate-x-6' : ''
                 }`}
               />
@@ -212,7 +212,7 @@ const Settings: React.FC = () => {
       </div>
 
       {/* Delete Account Section - Gentle and Supportive */}
-      <div className="bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-sm border border-rose-100 p-4 sm:p-6 w-full">
+      <div className="!bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-sm border border-rose-100 p-4 sm:p-6 w-full">
         <div className="flex items-center gap-2 mb-3 sm:mb-4">
           <div className="p-1.5 sm:p-2 bg-rose-50 rounded-full flex-shrink-0">
             <Leaf className="w-4 h-4 sm:w-5 sm:h-5 text-rose-400" />
@@ -261,7 +261,7 @@ const Settings: React.FC = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email here..."
-              className="w-full px-4 py-3 bg-white border border-rose-200 rounded-xl mb-4 focus:outline-none focus:ring-2 focus:ring-rose-300 focus:border-transparent transition-all text-sm sm:text-base"
+              className="w-full px-4 py-3 !bg-white border border-rose-200 rounded-xl mb-4 focus:outline-none focus:ring-2 focus:ring-rose-300 focus:border-transparent transition-all text-sm sm:text-base"
               disabled={isDeleting || success !== null}
               required
             />
@@ -286,7 +286,7 @@ const Settings: React.FC = () => {
               <button
                 type="submit"
                 disabled={isDeleting || success !== null}
-                className={`w-full sm:flex-1 px-4 py-3 bg-rose-400 text-purple-700 rounded-xl text-sm sm:text-base
+                className={`w-full sm:flex-1 px-4 py-3 bg-rose-400 !text-[#5f2d85] rounded-xl text-sm sm:text-base
                   ${
                     isDeleting || success !== null
                       ? 'opacity-50 cursor-not-allowed'

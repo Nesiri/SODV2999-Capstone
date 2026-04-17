@@ -293,7 +293,7 @@ const ResourcesHub: React.FC = () => {
     }
     return isHovered
       ? 'bg-gradient-to-br from-white via-teal-50/20 to-emerald-50/20'
-      : 'bg-white';
+      : '!bg-white';
   };
 
   // Loading state
@@ -394,11 +394,11 @@ const ResourcesHub: React.FC = () => {
               <p className="text-[10px] sm:text-xs md:text-sm text-teal-600 mb-0.5 sm:mb-1">
                 Resources Available
               </p>
-              <p className="text-xl sm:text-2xl md:text-3xl font-light text-slate-800">
+              <p className="!text-xl sm:text-2xl md:text-3xl font-light text-slate-800">
                 {stats.total}
               </p>
             </div>
-            <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/60 rounded-lg sm:rounded-xl flex items-center justify-center">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 !bg-white/60 rounded-lg sm:rounded-xl flex items-center justify-center">
               <BookOpen
                 size={16}
                 className="text-teal-500 sm:w-5 sm:h-5 md:w-6 md:h-6"
@@ -413,11 +413,11 @@ const ResourcesHub: React.FC = () => {
               <p className="text-[10px] sm:text-xs md:text-sm text-rose-600 mb-0.5 sm:mb-1">
                 Saved for Later
               </p>
-              <p className="text-xl sm:text-2xl md:text-3xl font-light text-slate-800">
+              <p className="!text-xl sm:text-2xl md:text-3xl font-light text-slate-800">
                 {stats.saved}
               </p>
             </div>
-            <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/60 rounded-lg sm:rounded-xl flex items-center justify-center">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 !bg-white/60 rounded-lg sm:rounded-xl flex items-center justify-center">
               <Heart
                 size={16}
                 className="text-rose-400 sm:w-5 sm:h-5 md:w-6 md:h-6"
@@ -432,11 +432,11 @@ const ResourcesHub: React.FC = () => {
               <p className="text-[10px] sm:text-xs md:text-sm text-indigo-600 mb-0.5 sm:mb-1">
                 Marked as Read
               </p>
-              <p className="text-xl sm:text-2xl md:text-3xl font-light text-slate-800">
+              <p className="!text-xl sm:text-2xl md:text-3xl font-light text-slate-800">
                 {stats.read}
               </p>
             </div>
-            <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/60 rounded-lg sm:rounded-xl flex items-center justify-center">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 !bg-white/60 rounded-lg sm:rounded-xl flex items-center justify-center">
               <Eye
                 size={16}
                 className="text-indigo-400 sm:w-5 sm:h-5 md:w-6 md:h-6"
@@ -464,7 +464,7 @@ const ResourcesHub: React.FC = () => {
             placeholder="Search by title or topic..."
             value={searchTerm}
             onChange={handleSearchChange}
-            className="w-full pl-8 sm:pl-9 md:pl-12 pr-8 sm:pr-9 md:pr-12 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl md:rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200 
+            className="w-full pl-8 sm:pl-9 md:pl-12 pr-8 sm:pr-9 md:pr-12 py-2.5 sm:py-3 md:py-4 rounded-lg sm:rounded-xl md:rounded-2xl !bg-white/80 backdrop-blur-sm border border-slate-200 
                        focus:border-teal-300 focus:ring-2 sm:focus:ring-4 focus:ring-teal-100 focus:outline-none
                        transition-all duration-300 text-slate-700 placeholder:text-slate-400 text-sm sm:text-base"
           />
@@ -483,7 +483,7 @@ const ResourcesHub: React.FC = () => {
           <select
             value={selectedCategory}
             onChange={(e) => handleCategoryChange(e.target.value)}
-            className="w-full px-3 py-2.5 bg-white/80 backdrop-blur-sm border border-slate-200 rounded-lg text-slate-600 appearance-none cursor-pointer focus:border-teal-300 focus:ring-2 focus:ring-teal-100 focus:outline-none transition-all text-sm"
+            className="w-full px-3 py-2.5 !bg-white/80 backdrop-blur-sm border border-slate-200 rounded-lg text-slate-600 appearance-none cursor-pointer focus:border-teal-300 focus:ring-2 focus:ring-teal-100 focus:outline-none transition-all text-sm"
             style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
               backgroundRepeat: 'no-repeat',
@@ -505,7 +505,7 @@ const ResourcesHub: React.FC = () => {
             {categories.length > 5 && (
               <button
                 onClick={() => scrollCategories('left')}
-                className="flex-shrink-0 bg-white/80 backdrop-blur-sm rounded-full shadow-sm p-1.5 hover:bg-slate-50 transition-colors border border-slate-200"
+                className="flex-shrink-0 !bg-white/80 backdrop-blur-sm rounded-full shadow-sm p-1.5 hover:bg-slate-50 transition-colors border border-slate-200"
                 aria-label="Scroll categories left"
               >
                 <ChevronLeft size={18} />
@@ -526,7 +526,7 @@ const ResourcesHub: React.FC = () => {
                     ${
                       selectedCategory === cat.name
                         ? `bg-gradient-to-r ${getCategoryColor(cat.name === 'all' ? undefined : cat.name)} text-white shadow-md`
-                        : 'bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-slate-50 border border-slate-200'
+                        : '!bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-slate-50 border border-slate-200'
                     }
                   `}
                 >
@@ -538,7 +538,7 @@ const ResourcesHub: React.FC = () => {
             {categories.length > 5 && (
               <button
                 onClick={() => scrollCategories('right')}
-                className="flex-shrink-0 bg-white/80 backdrop-blur-sm rounded-full shadow-sm p-1.5 hover:bg-slate-50 transition-colors border border-slate-200"
+                className="flex-shrink-0 !bg-white/80 backdrop-blur-sm rounded-full shadow-sm p-1.5 hover:bg-slate-50 transition-colors border border-slate-200"
                 aria-label="Scroll categories right"
               >
                 <ChevronRight size={18} />
@@ -630,7 +630,7 @@ const ResourcesHub: React.FC = () => {
                     <div className="flex items-start justify-between">
                       <motion.div
                         className={`
-                          w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center text-2xl sm:text-3xl md:text-4xl
+                          w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center text-2xl sm:text-3xl md:!text-4xl
                           bg-gradient-to-br ${resource.color || getCategoryColor(resource.category)}
                           shadow-md group-hover:scale-110 transition-all duration-500
                           ${isRead ? 'opacity-75' : ''}
@@ -657,10 +657,7 @@ const ResourcesHub: React.FC = () => {
                           }
                         `}
                       >
-                        <Heart
-                          size={16}
-                          fill={isSaved ? 'currentColor' : 'none'}
-                        />
+                        <Heart size={16} fill={isSaved ? '#5f2d85' : 'none'} />
                       </motion.button>
                     </div>
                   </div>
@@ -668,7 +665,7 @@ const ResourcesHub: React.FC = () => {
                   {/* Content Section */}
                   <div className="relative flex-1 px-4 sm:px-5 md:px-6 pb-3 sm:pb-4">
                     <h3
-                      className={`text-base sm:text-lg md:text-xl font-medium mb-2 group-hover:text-teal-700 transition-colors line-clamp-2 min-h-[3.5rem] ${isRead ? 'text-slate-600' : 'text-slate-800'}`}
+                      className={`text-base sm:text-lg md:!text-xl font-medium mb-2 group-hover:text-teal-700 transition-colors line-clamp-2 min-h-[3.5rem] ${isRead ? 'text-slate-600' : 'text-slate-800'}`}
                     >
                       {resource.name}
                     </h3>
@@ -729,7 +726,7 @@ const ResourcesHub: React.FC = () => {
               ${
                 currentPage === 1
                   ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
-                  : 'bg-white text-slate-600 hover:bg-teal-50 hover:text-teal-600 border border-slate-200'
+                  : '!bg-white text-slate-600 hover:bg-teal-50 hover:text-teal-600 border border-slate-200'
               }
             `}
           >
@@ -758,7 +755,7 @@ const ResourcesHub: React.FC = () => {
                     ${
                       currentPage === pageNum
                         ? 'bg-gradient-to-r from-teal-500 to-emerald-500 text-white shadow-md'
-                        : 'bg-white text-slate-600 hover:bg-slate-50 border border-slate-200'
+                        : '!bg-white text-slate-600 hover:bg-slate-50 border border-slate-200'
                     }
                   `}
                 >
@@ -776,7 +773,7 @@ const ResourcesHub: React.FC = () => {
               ${
                 currentPage === totalPages
                   ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
-                  : 'bg-white text-slate-600 hover:bg-teal-50 hover:text-teal-600 border border-slate-200'
+                  : '!bg-white text-slate-600 hover:bg-teal-50 hover:text-teal-600 border border-slate-200'
               }
             `}
           >
@@ -799,7 +796,7 @@ const ResourcesHub: React.FC = () => {
               <Compass size={28} className="text-slate-400" />
             )}
           </div>
-          <h3 className="text-lg sm:text-xl md:text-2xl font-light text-slate-600 mb-2 sm:mb-3">
+          <h3 className="text-lg sm:!text-xl md:text-2xl font-light text-slate-600 mb-2 sm:mb-3">
             {savedView ? 'Your collection is resting' : 'Gently wandering...'}
           </h3>
           <p className="text-sm sm:text-base text-slate-400 max-w-md mx-auto px-4">

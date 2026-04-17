@@ -24,17 +24,15 @@ const MentalHealthResourcesCareGivers: React.FC = () => {
       </div>
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-              Care Givers
-            </span>
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">Care Givers</span>
           </h1>
 
           <div className="flex items-center gap-4 mt-3 mb-1">
             <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
           </div>
 
-          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+          <main className="mt-6 !bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
             <div className="flex flex-col sm:flex-row sm:items-start gap-6">
               <div className="flex-1">
                 <p className="leading-relaxed">
@@ -62,13 +60,13 @@ const MentalHealthResourcesCareGivers: React.FC = () => {
             </div>
           </main>
 
-          <div className="mt-6 sm:mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-4 sm:p-6 md:p-8 text-gray-700">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-gray-900">
+          <div className="mt-6 sm:mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-4 sm:p-6 md:p-8 text-gray-700">
+            <h2 className="!text-xl sm:text-2xl md:text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Guides &amp; Toolkits for Care Givers
             </h2>
 
             <div className="mt-4 sm:mt-6 grid gap-4 sm:gap-5">
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <div className="flex flex-col sm:flex-row sm:gap-6">
                   <img
                     src={mentalHealthCaregiverGuideImage}
@@ -78,7 +76,7 @@ const MentalHealthResourcesCareGivers: React.FC = () => {
                   <div className="flex-1">
                     <a
                       href={MentalHealthCaregiverGuide}
-                      className="text-base sm:text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4 inline-block"
+                      className="text-base sm:text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4 inline-block"
                     >
                       Mental Health Caregiver Guide
                     </a>
@@ -114,7 +112,7 @@ const MentalHealthResourcesCareGivers: React.FC = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <div className="flex flex-col sm:flex-row sm:gap-6">
                   <img
                     src={theWayForwardImage}
@@ -124,7 +122,7 @@ const MentalHealthResourcesCareGivers: React.FC = () => {
                   <div className="flex-1">
                     <a
                       href={TheWayForward}
-                      className="text-base sm:text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4 inline-block"
+                      className="text-base sm:text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4 inline-block"
                     >
                       The Way Forward: Pathways to Hope, Recovery and Wellness
                     </a>
@@ -153,13 +151,13 @@ const MentalHealthResourcesCareGivers: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-6 sm:mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-4 sm:p-6 md:p-8 text-gray-700">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-gray-900">
+          <div className="mt-6 sm:mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-4 sm:p-6 md:p-8 text-gray-700">
+            <h2 className="!text-xl sm:text-2xl md:text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Resources &amp; Links for Care Givers
             </h2>
 
             <div className="mt-4 sm:mt-6 grid gap-4 sm:gap-5">
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <div className="flex flex-col sm:flex-row sm:gap-6">
                   <img
                     src={thrirtyResourcesToHelpCaregivers}
@@ -169,7 +167,7 @@ const MentalHealthResourcesCareGivers: React.FC = () => {
                   <div className="flex-1">
                     <a
                       href="https://www.senioradvisor.com/blog/2017/04/30-resources-to-help-caregivers/"
-                      className="text-base sm:text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4 inline-block"
+                      className="text-base sm:text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4 inline-block"
                     >
                       30 Resources to Help Caregivers
                     </a>
@@ -189,7 +187,7 @@ const MentalHealthResourcesCareGivers: React.FC = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <div className="flex flex-col sm:flex-row sm:gap-6">
                   <img
                     src={acknowledgeAcceptHelp}
@@ -199,7 +197,7 @@ const MentalHealthResourcesCareGivers: React.FC = () => {
                   <div className="flex-1">
                     <a
                       href="https://www.youtube.com/watch?v=n7HkQT1CKxQ"
-                      className="text-base sm:text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4 inline-block"
+                      className="text-base sm:text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4 inline-block"
                     >
                       Acknowledge &amp; Accept Help
                     </a>

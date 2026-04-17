@@ -22,7 +22,7 @@ export const LinkItem = ({
   <Link
     to={link.path}
     onClick={onClick}
-    className={`group block p-4 rounded-2xl bg-white/80 hover:bg-white backdrop-blur-sm 
+    className={`group block p-4 rounded-2xl !bg-white/80 hover:!bg-white backdrop-blur-sm 
       border border-gray-100 hover:border-blue-200 hover:shadow-xl 
       transition-all duration-500 hover:-translate-y-1 active:scale-[0.98]
       focus:outline-none focus:ring-2 focus:ring-blue-500/30 ${className}`}
@@ -41,7 +41,7 @@ export const LinkItem = ({
       )}
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2">
-          <span className="font-semibold !text-[#89009B]  group-hover:text-gray-900 truncate transition-colors">
+          <span className="font-normal !text-[#5f2d85]  group-hover:!text-[#5f2d85] truncate transition-colors">
             {link.name}
           </span>
         </div>

@@ -93,8 +93,8 @@ const CrisisCentres = () => {
         {/* Header Section */}
         <div className="text-center mb-20">
           {/* Main heading - Purple only, no underline */}
-          <h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-center">
-            <span className="!bg-[#89009B]  bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-5xl font-normal tracking-tight text-center">
+            <span className="!bg-[#5f2d85]  bg-clip-text text-transparent">
               Crisis Centres
             </span>
           </h1>
@@ -115,7 +115,7 @@ const CrisisCentres = () => {
               {/* Card Container */}
               <div
                 className={`
-                relative bg-white/90 backdrop-blur-md rounded-3xl 
+                relative !bg-white/90 backdrop-blur-md rounded-3xl 
                 shadow-[0_20px_50px_-15px_rgba(106,79,122,0.3)] 
                 hover:shadow-[0_30px_60px_-15px_rgba(106,79,122,0.5)]
                 transition-all duration-700 ease-out
@@ -168,8 +168,8 @@ const CrisisCentres = () => {
 
                       {/* Floating badge */}
                       <div className="absolute top-4 right-4 z-20">
-                        <div className="bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 shadow-lg border border-[#d9c9ff]/50">
-                          <span className="text-xs font-semibold text-[#4a3f5a]">
+                        <div className="!bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 shadow-lg border border-[#d9c9ff]/50">
+                          <span className="text-xs font-normal text-[#4a3f5a]">
                             24/7
                           </span>
                         </div>
@@ -198,7 +198,7 @@ const CrisisCentres = () => {
                       <svg
                         className="w-4 h-4 text-[#8a75b5]"
                         fill="none"
-                        stroke="currentColor"
+                        stroke="#5f2d85"
                         viewBox="0 0 24 24"
                       >
                         <path
@@ -208,7 +208,7 @@ const CrisisCentres = () => {
                           d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                         />
                       </svg>
-                      <span className="font-mono font-semibold text-[#4a3f5a]">
+                      <span className="font-mono font-normal text-[#4a3f5a]">
                         {item.helpline}
                       </span>
                     </div>
@@ -225,7 +225,7 @@ const CrisisCentres = () => {
                       <svg
                         className="w-4 h-4"
                         fill="none"
-                        stroke="currentColor"
+                        stroke="#5f2d85"
                         viewBox="0 0 24 24"
                       >
                         <path

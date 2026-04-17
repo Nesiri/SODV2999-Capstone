@@ -269,7 +269,7 @@ const MoodTrackingGraph: React.FC = () => {
       <div className="w-full max-w-full overflow-hidden !bg-white rounded-2xl shadow-lg p-3 sm:p-4">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-          <h3 className="!text-sm sm:!text-base !font-semibold !text-slate-800">
+          <h3 className="!text-sm sm:!text-base !font-normal !text-slate-800">
             Your Journey
           </h3>
           <div className="flex gap-1">

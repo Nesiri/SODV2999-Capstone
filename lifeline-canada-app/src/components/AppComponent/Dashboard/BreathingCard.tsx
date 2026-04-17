@@ -40,7 +40,7 @@ const BreathingCard: React.FC<BreathingCardProps> = ({
       <p className="text-sm text-gray-600 mb-4">{description}</p>
       <button
         onClick={handleClick}
-        className="w-full bg-white text-blue-600 font-medium py-2 rounded-lg hover:bg-blue-50 transition-colors"
+        className="w-full !bg-white text-blue-600 font-medium py-2 rounded-lg hover:bg-blue-50 transition-colors"
       >
         {buttonText}
       </button>

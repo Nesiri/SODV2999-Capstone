@@ -20,7 +20,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
   const [formError, setFormError] = useState<string | null>(null);
   const [info, setInfo] = useState('');
   const [rememberMe, setRememberMe] = useState(() => {
-    return !!localStorage.getItem('rememberedEmail');
+    return !localStorage.getItem('rememberedEmail');
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -87,7 +87,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B266C9] focus:border-[#89009B]"
+              className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f2d85] focus:border-[#5f2d85]"
               placeholder="you@example.com"
               required
             />
@@ -101,7 +101,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
               type="checkbox"
               checked={rememberMe}
               onChange={handleRememberMeChange}
-              className="w-4 h-4 text-[#89009B] rounded border-gray-300 focus:ring-[#B266C9]"
+              className="w-4 h-4 !text-[#5f2d85] rounded border-gray-300 focus:ring-[#5f2d85]"
             />
             <span className="ml-2 text-sm text-gray-600">Remember me</span>
           </label>
@@ -109,10 +109,10 @@ const LoginForm: React.FC<LoginFormProps> = ({
 
         <button
           type="submit"
-          className="w-full bg-gradient-to-r from-[#89009B] to-[#B266C9] hover:from-[#7a0088] hover:to-[#a355b8] text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300"
+          className="w-full bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] hover:from-[#7a0088] hover:to-[#a355b8] text-white font-normal py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300"
         >
           <span className="!text-white">Login</span>
-          <ArrowRight size={18} />
+          <ArrowRight size={18} className="!text-white" />
         </button>
       </form>
 
@@ -121,7 +121,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
           Don't have an account?{' '}
           <button
             onClick={onSwitchToSignup}
-            className="text-[#89009B] hover:text-[#B266C9] font-medium hover:underline transition-colors"
+            className="!text-[#5f2d85] hover:!text-[#5f2d85] font-medium hover:underline transition-colors"
           >
             Sign up
           </button>

@@ -15,7 +15,7 @@ const SocialMediaAuth: React.FC<SocialMediaAuthProps> = ({
       icon: FcGoogle,
       label: 'Google',
       color: 'text-gray-700',
-      bgColor: 'bg-white',
+      bgColor: '!bg-white',
       borderColor: 'border-gray-300',
       hoverBg: 'hover:bg-gray-50',
     },
@@ -86,7 +86,7 @@ const SocialMediaAuth: React.FC<SocialMediaAuthProps> = ({
             <div className="w-full border-t border-gray-300"></div>
           </div>
           <div className="relative flex justify-center text-sm">
-            <span className="px-4 bg-white text-gray-500">
+            <span className="px-4 !bg-white text-gray-500">
               or continue with email
             </span>
           </div>

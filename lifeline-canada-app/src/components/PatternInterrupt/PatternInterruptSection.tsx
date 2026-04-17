@@ -50,13 +50,13 @@ const PatternInterruptSection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-[#89009B] to-[#B266C9]"
+      className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-[#5f2d85] to-[#5f2d85]"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         {/* Floating gradient orbs */}
-        <div className="absolute top-20 left-20 w-72 h-72 bg-[#89009B]/40 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#B266C9]/40 rounded-full blur-3xl animate-pulse-slower" />
+        <div className="absolute top-20 left-20 w-72 h-72 bg-[#5f2d85]/40 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#5f2d85]/40 rounded-full blur-3xl animate-pulse-slower" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#C77DDF]/30 rounded-full blur-3xl animate-pulse" />
 
         {/* Grid overlay */}
@@ -71,7 +71,7 @@ const PatternInterruptSection: React.FC = () => {
         {floatingParticles.map((particle, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-white/40 rounded-full animate-float"
+            className="absolute w-1 h-1 !bg-white/40 rounded-full animate-float"
             style={{
               top: particle.top,
               left: particle.left,
@@ -93,9 +93,9 @@ const PatternInterruptSection: React.FC = () => {
             `}
           >
             {/* Animated badge */}
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 mb-8">
+            <div className="inline-flex items-center gap-2 !bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 mb-8">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#B266C9] opacity-75"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5f2d85] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#C77DDF]"></span>
               </span>
               <span className="text-sm font-medium text-white/90 tracking-wide">
@@ -105,25 +105,25 @@ const PatternInterruptSection: React.FC = () => {
 
             {/* Main heading with gradient - using your purple colors */}
             <h1 className="relative mb-8">
-              <span className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#C77DDF] via-[#B266C9] to-[#C77DDF] animate-gradient-x">
+              <span className="text-4xl sm:text-5xl font-black tracking-tight bg-clip-text text-transparent !bg-white/90">
                 Pattern
               </span>
               <br />
-              <span className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white relative">
+              <span className="text-4xl sm:text-5xl font-black tracking-tight text-white relative">
                 Interruptions
                 {/* Decorative underline - using your purple colors */}
-                <span className="absolute -bottom-4 left-0 w-32 h-1.5 bg-gradient-to-r from-[#B266C9] to-[#C77DDF] rounded-full" />
+                <span className="absolute -bottom-4 left-0 w-32 h-1.5 bg-gradient-to-r from-[#5f2d85] to-[#C77DDF] rounded-full" />
               </span>
             </h1>
 
             {/* Feature cards */}
             <div className="space-y-6 mb-8">
               <div className="flex items-start gap-4 group">
-                <div className="flex-shrink-0 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300">
+                <div className="flex-shrink-0 w-12 h-12 !bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20 group-hover:scale-110 group-hover:!bg-white/20 transition-all duration-300">
                   <svg
-                    className="w-6 h-6 text-[#B266C9]"
+                    className="w-6 h-6 !text-[#5f2d85]"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="#f8f4fc"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -135,7 +135,7 @@ const PatternInterruptSection: React.FC = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <h3 className="!text-xl font-bold text-white mb-2">
                     Break Negative Habits
                   </h3>
                   <p className="text-white/70 leading-relaxed">
@@ -146,11 +146,11 @@ const PatternInterruptSection: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-4 group">
-                <div className="flex-shrink-0 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300">
+                <div className="flex-shrink-0 w-12 h-12 !bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20 group-hover:scale-110 group-hover:!bg-white/20 transition-all duration-300">
                   <svg
-                    className="w-6 h-6 text-[#B266C9]"
+                    className="w-6 h-6 !text-[#5f2d85]"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="#f8f4fc"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -162,7 +162,7 @@ const PatternInterruptSection: React.FC = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <h3 className="!text-xl font-bold text-white mb-2">
                     Regain Control
                   </h3>
                   <p className="text-white/70 leading-relaxed">
@@ -174,11 +174,11 @@ const PatternInterruptSection: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-4 group">
-                <div className="flex-shrink-0 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300">
+                <div className="flex-shrink-0 w-12 h-12 !bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20 group-hover:scale-110 group-hover:!bg-white/20 transition-all duration-300">
                   <svg
-                    className="w-6 h-6 text-[#B266C9]"
+                    className="w-6 h-6 !text-[#5f2d85]"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="#f8f4fc"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -190,7 +190,7 @@ const PatternInterruptSection: React.FC = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <h3 className="!text-xl font-bold text-white mb-2">
                     Create New Pathways
                   </h3>
                   <p className="text-white/70 leading-relaxed">
@@ -213,7 +213,7 @@ const PatternInterruptSection: React.FC = () => {
             {/* Main image container */}
             <div className="relative group">
               {/* Glow effect - using your purple colors */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#89009B] to-[#B266C9] rounded-3xl opacity-20 group-hover:opacity-30 blur-2xl transition-opacity duration-700" />
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] rounded-3xl opacity-20 group-hover:opacity-30 blur-2xl transition-opacity duration-700" />
 
               {/* Image frame */}
               <div className="relative rounded-3xl overflow-hidden">
@@ -225,20 +225,20 @@ const PatternInterruptSection: React.FC = () => {
                 />
 
                 {/* Overlay gradient - using your purple colors */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#89009B]/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#5f2d85]/80 via-transparent to-transparent" />
 
                 {/* Animated dots */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                   <div className="relative w-20 h-20">
                     <div className="absolute inset-0 border-2 border-white/30 rounded-full animate-ping" />
                     <div className="absolute inset-2 border-2 border-white/50 rounded-full animate-pulse" />
-                    <div className="absolute inset-4 bg-white/20 rounded-full backdrop-blur-sm" />
+                    <div className="absolute inset-4 !bg-white/20 rounded-full backdrop-blur-sm" />
                   </div>
                 </div>
               </div>
 
               {/* Decorative corner accents - using your purple colors */}
-              <div className="absolute -top-4 -left-4 w-16 h-16 border-t-4 border-l-4 border-[#B266C9]/50 rounded-tl-3xl" />
+              <div className="absolute -top-4 -left-4 w-16 h-16 border-t-4 border-l-4 border-[#5f2d85]/50 rounded-tl-3xl" />
               <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b-4 border-r-4 border-[#C77DDF]/50 rounded-br-3xl" />
             </div>
           </div>

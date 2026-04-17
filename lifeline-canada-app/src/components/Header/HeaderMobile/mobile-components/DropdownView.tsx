@@ -32,7 +32,7 @@ export const DropdownView = ({
     >
       {/* Back Arrow on Top-Left - White block style */}
       <div
-        className="absolute top-4 left-4 z-20 bg-white rounded-lg shadow-md border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 cursor-pointer"
+        className="absolute top-4 left-4 z-20 !bg-white rounded-lg shadow-md border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-200 cursor-pointer"
         onClick={onBack}
         aria-label="Go back"
       >
@@ -50,7 +50,7 @@ export const DropdownView = ({
                 key={link.path}
                 link={link}
                 onClick={onLinkClick}
-                className="!text-[#89009B] "
+                className="!text-[#5f2d85] "
               />
             ))}
           </div>

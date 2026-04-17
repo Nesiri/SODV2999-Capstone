@@ -15,17 +15,15 @@ const MentalHealthResourcesMediaProfessionals: React.FC = () => {
       </div>
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-              Media Professionals
-            </span>
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">Media Professionals</span>
           </h1>
 
           <div className="flex items-center gap-4 mt-3 mb-1">
             <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
           </div>
 
-          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row-reverse sm:items-start gap-6">
+          <main className="mt-6 !bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row-reverse sm:items-start gap-6">
             <img
               src={coverPhoto}
               alt="Media Professionals"
@@ -44,13 +42,13 @@ const MentalHealthResourcesMediaProfessionals: React.FC = () => {
             </p>
           </main>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Resources &amp; Guides for Media Professionals
             </h2>
 
             <div className="mt-6 grid gap-4 sm:gap-5">
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                 <img
                   src={preventingSuicideImage}
                   alt="Preventing Suicide - A Resource for Media Professionals"
@@ -59,7 +57,7 @@ const MentalHealthResourcesMediaProfessionals: React.FC = () => {
                 <div className="flex-1">
                   <a
                     href={PreventingSuicide}
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Preventing Suicide - A Resource for Media Professionals
                   </a>

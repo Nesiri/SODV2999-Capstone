@@ -57,17 +57,15 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
       </div>
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-              Teens &amp; Youth
-            </span>
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">Teens &amp; Youth</span>
           </h1>
 
           <div className="flex items-center gap-4 mt-3 mb-1">
             <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
           </div>
 
-          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+          <main className="mt-6 !bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
             <div className="flex flex-col sm:flex-row sm:items-start gap-6">
               <div className="flex-1">
                 <p className="leading-relaxed">
@@ -101,8 +99,8 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
             </div>
           </main>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Information for Youth
             </h2>
 
@@ -113,13 +111,13 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
             />
 
             <p className="mt-4 leading-relaxed">
-              <span className="font-semibold text-purple-700">
+              <span className="font-normal !text-[#5f2d85]">
                 If You Are Feeling Suicidal:
               </span>{' '}
               Tell someone right away. Contact a{' '}
               <a
                 href="/incrisisneedhelp"
-                className="text-purple-700 underline underline-offset-4 hover:text-purple-800"
+                className="!text-[#5f2d85] underline underline-offset-4 hover:!text-[#5f2d85]"
               >
                 crisis line
               </a>{' '}
@@ -129,7 +127,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
             </p>
 
             <p className="mt-4 leading-relaxed">
-              <span className="font-semibold text-purple-700">Stigma:</span> For
+              <span className="font-normal !text-[#5f2d85]">Stigma:</span> For
               many young people the thought of being different from their
               friends or social group can be frightening. The importance of
               fitting in is one of the main reasons a person does not seek help
@@ -139,7 +137,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
             </p>
 
             <p className="mt-4 leading-relaxed">
-              <span className="font-semibold text-purple-700">
+              <span className="font-normal !text-[#5f2d85]">
                 What Is Stigma?
               </span>{' '}
               Stigma is a negative stereotype you may hold about someone,
@@ -150,7 +148,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
             </p>
 
             <p className="mt-4 leading-relaxed">
-              <span className="font-semibold text-purple-700">
+              <span className="font-normal !text-[#5f2d85]">
                 What effect does this have on the person(s) being stigmatized?
               </span>{' '}
               When we hold negative attitudes toward someone it frequently
@@ -165,7 +163,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               By{' '}
               <a
                 href="https://www.suicideinfo.ca"
-                className="text-purple-700 underline underline-offset-4 hover:text-purple-800"
+                className="!text-[#5f2d85] underline underline-offset-4 hover:!text-[#5f2d85]"
               >
                 Centre for Suicide Prevention
               </a>
@@ -175,7 +173,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               Download a Free Copy{' '}
               <a
                 href={youthAtRisk}
-                className="text-purple-700 underline underline-offset-4 hover:text-purple-800"
+                className="!text-[#5f2d85] underline underline-offset-4 hover:!text-[#5f2d85]"
               >
                 Youth at Risk – Youth Information
               </a>
@@ -183,8 +181,8 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
 
             <div className="clear-both" />
 
-            <div className="mt-6 rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
-              <h3 className="text-lg font-semibold text-purple-700">
+            <div className="mt-6 rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
+              <h3 className="text-lg font-normal !text-[#5f2d85]">
                 What Can You Do?
               </h3>
 
@@ -195,7 +193,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               />
 
               <p className="mt-3 leading-relaxed">
-                <span className="font-semibold text-purple-700">
+                <span className="font-normal !text-[#5f2d85]">
                   Examine Your Own Attitude:
                 </span>{' '}
                 Ask yourself – Do I stereotype people who are different? Do I
@@ -207,7 +205,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </p>
 
               <p className="mt-4 leading-relaxed">
-                <span className="font-semibold text-purple-700">
+                <span className="font-normal !text-[#5f2d85]">
                   Where Did My Attitude Come From?
                 </span>{' '}
                 Many of the images and views we hold about people who have
@@ -218,7 +216,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </p>
 
               <p className="mt-4 leading-relaxed">
-                <span className="font-semibold text-purple-700">
+                <span className="font-normal !text-[#5f2d85]">
                   How Can I Change Things?
                 </span>{' '}
                 Get informed! The best way to counteract the stigma of mental
@@ -239,7 +237,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 Download Free:{' '}
                 <a
                   href={youthAtRisk}
-                  className="text-purple-700 underline underline-offset-4 hover:text-purple-800"
+                  className="!text-[#5f2d85] underline underline-offset-4 hover:!text-[#5f2d85]"
                 >
                   Youth at Risk – Youth Information
                 </a>
@@ -249,7 +247,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 By{' '}
                 <a
                   href="https://www.suicideinfo.ca"
-                  className="text-purple-700 underline underline-offset-4 hover:text-purple-800"
+                  className="!text-[#5f2d85] underline underline-offset-4 hover:!text-[#5f2d85]"
                 >
                   Centre for Suicide Prevention
                 </a>
@@ -258,7 +256,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-center text-gray-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-center text-gray-700">
             <p className="leading-relaxed">
               Remember, normal is a state that really doesn't exist. We are all
               human - interesting, flawed, talented..... different. The thing to
@@ -269,14 +267,14 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
           </div>
 
           {/* Resources for Youth in Crisis */}
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Resources for Youth in Crisis
             </h2>
 
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {/* Kids Help Phone */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={kidsHelpPhone}
                   alt="Kids Help Phone"
@@ -284,7 +282,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://kidshelpphone.ca"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Kids Help Phone
                 </a>
@@ -299,7 +297,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Arctic Children & Youth Foundation */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={arcticChildrenYouthFoundation}
                   alt="Arctic Children & Youth Foundation"
@@ -307,7 +305,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://acyf.ca"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Arctic Children &amp; Youth Foundation
                 </a>
@@ -322,7 +320,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Kelty Mental Health */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={keltyMentalHealth}
                   alt="Kelty Mental Health"
@@ -330,7 +328,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://keltymentalhealth.ca"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Kelty Mental Health
                 </a>
@@ -344,7 +342,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Youth in BC */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={youthInBC}
                   alt="Youth in BC"
@@ -352,7 +350,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://www.youthinbc.com"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Youth in BC
                 </a>
@@ -366,7 +364,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* LGBT Youthline */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={lgbtYouthline}
                   alt="LGBT Youthline"
@@ -374,7 +372,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://www.youthline.ca"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   LGBT Youthline
                 </a>
@@ -387,7 +385,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Foundry */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={foundry}
                   alt="Foundry"
@@ -395,7 +393,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://foundrybc.ca"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Foundry
                 </a>
@@ -407,7 +405,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Tel-jeunes */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={telJeunes}
                   alt="Tel-jeunes"
@@ -415,7 +413,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://teljeunes.com"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Tel-jeunes
                 </a>
@@ -428,7 +426,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Teen Mental Health */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={teenMentalHealth}
                   alt="Teen Mental Health"
@@ -436,7 +434,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://mentalhealthliteracy.org"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Teen Mental Health
                 </a>
@@ -449,7 +447,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Parent's Guide: Teen Online Safety */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={parentsGuideTeenOnlineSafety}
                   alt="Parent's Guide: Teen Online Safety"
@@ -457,7 +455,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://www.mytutor.co.uk/blog/parents/the-parents-guide-to-teaching-your-teen-online-safety/"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Parent's Guide: Teen Online Safety
                 </a>
@@ -471,7 +469,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Open Mind */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={openMind}
                   alt="Open Mind"
@@ -479,7 +477,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://openmindbc.ca"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Open Mind
                 </a>
@@ -492,7 +490,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Jack.org */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={jackOrg}
                   alt="Jack.org"
@@ -500,7 +498,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://www.jack.org"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Jack.org
                 </a>
@@ -513,7 +511,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Mind Check */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={mindCheck}
                   alt="Mind Check"
@@ -521,7 +519,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://www.aetna.com/individuals-families/mental-emotional-health.html"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Mind Check
                 </a>
@@ -535,7 +533,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* ConnecTeen */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={connecTeen}
                   alt="ConnecTeen"
@@ -543,7 +541,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://calgaryconnecteen.com"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   ConnecTeen
                 </a>
@@ -556,7 +554,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* YouthSpace */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={youthSpace}
                   alt="YouthSpace"
@@ -564,7 +562,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://www.need2.ca"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   YouthSpace
                 </a>
@@ -575,7 +573,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Kootenay Family Place */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={kootenayFamilyPlace}
                   alt="Kootenay Family Place"
@@ -583,7 +581,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://kootenayfamilyplace.org/#"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Kootenay Family Place
                 </a>
@@ -596,7 +594,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Mind Your Mind */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={mindYourMind}
                   alt="Mind Your Mind"
@@ -604,7 +602,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://mindyourmind.ca"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Mind Your Mind
                 </a>
@@ -617,7 +615,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Teen Suicide */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={teenSuicide}
                   alt="Teen Suicide"
@@ -625,7 +623,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="http://www.teensuicide.us"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Teen Suicide
                 </a>
@@ -638,7 +636,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Reason to Live */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={reasonToLive}
                   alt="Reason to Live"
@@ -646,7 +644,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://reasontolive.ca"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Reason to Live
                 </a>
@@ -658,7 +656,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Kids Health */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={kidsHealth}
                   alt="Kids Health"
@@ -666,7 +664,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://kidshealth.org"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Kids Health
                 </a>
@@ -680,7 +678,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Teen Depression */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={teenDepression}
                   alt="Teen Depression"
@@ -688,7 +686,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="http://www.teendepression.org"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Teen Depression
                 </a>
@@ -698,7 +696,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* The Balanced Mind */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={theBalancedMind}
                   alt="The Balanced Mind"
@@ -706,7 +704,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://www.dbsalliance.org/support/for-friends-family/for-parents/"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   The Balanced Mind
                 </a>
@@ -718,7 +716,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* The Yellow Ribbon Campaign */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={yellowRibbonCampaign}
                   alt="The Yellow Ribbon Campaign"
@@ -726,7 +724,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://yellowribbon.org"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   The Yellow Ribbon Campaign
                 </a>
@@ -738,7 +736,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Trevor Project */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={trevorProject}
                   alt="Trevor Project"
@@ -746,7 +744,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://www.thetrevorproject.org"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Trevor Project
                 </a>
@@ -769,14 +767,14 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
           </div>
 
           {/* Addiction Resources for Youth */}
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Addiction Resources for Youth
             </h2>
 
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {/* Alcohol and Suicide */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={alcoholAwareness}
                   alt="Alcohol and Suicide"
@@ -784,7 +782,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://alcoholawareness.org"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Alcohol and Suicide
                 </a>
@@ -799,7 +797,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Rehab Center */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={rehabCenter}
                   alt="Rehab Center"
@@ -807,7 +805,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://www.rehabcenter.net/prevent-students-experimenting-drugs-alcohol/"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Rehab Center
                 </a>
@@ -820,7 +818,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* DrugRehab.com */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={drugRehab}
                   alt="DrugRehab.com"
@@ -828,7 +826,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://www.drugrehab.com"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   DrugRehab.com
                 </a>
@@ -845,14 +843,14 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
           </div>
 
           {/* Bullying & Cyber-Bullying Resources */}
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Bullying &amp; Cyber-Bullying Resources
             </h2>
 
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Cyber Bullying: The Complete Guide */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={cyberBullyingGuide}
                   alt="Cyber Bullying: The Complete Guide"
@@ -860,7 +858,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://backgroundchecks.org/cyber-bullying-helping-the-bullied-stopping-the-bullies.html#Introduction"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Cyber Bullying: The Complete Guide
                 </a>
@@ -871,7 +869,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* Kids HelpPhone */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={kidsHelpPhoneImg}
                   alt="Kids HelpPhone"
@@ -879,7 +877,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://kidshelpphone.ca"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Kids HelpPhone
                 </a>
@@ -890,7 +888,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* The Impact! */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={theImpact}
                   alt="The Impact!"
@@ -898,7 +896,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://impact.mediasmarts.ca/en/students"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   The Impact!
                 </a>
@@ -911,7 +909,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
               </div>
 
               {/* NeedHelpNow */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={needHelpNow}
                   alt="NeedHelpNow"
@@ -919,7 +917,7 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                 />
                 <a
                   href="https://needhelpnow.ca/en/"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   NeedHelpNow
                 </a>
@@ -934,21 +932,21 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
           </div>
 
           {/* International Youth Resources */}
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               International Youth Resources
             </h2>
 
             {/* United States */}
             <div className="mt-6">
-              <h3 className="text-xl font-bold text-purple-700 mb-4">
+              <h3 className="!text-xl font-bold !text-[#5f2d85] mb-4">
                 United States
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                   <a
                     href="https://commongroundhelps.org"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Common Ground
                   </a>
@@ -958,10 +956,10 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                   <a
                     href="https://ithacacrisis.org"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Suicide Prevention and Crisis Service (New York)
                   </a>
@@ -975,10 +973,10 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                   <a
                     href="https://www.crisistextline.org"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Crisis Text Line
                   </a>
@@ -989,10 +987,10 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                   <a
                     href="https://didihirsch.org/teenline/"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Teen Line
                   </a>
@@ -1003,10 +1001,10 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                   <a
                     href="https://www.canvashealth.org/contact-us/"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Canvas Health
                   </a>
@@ -1017,10 +1015,10 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                   <a
                     href="https://www.yourlifeyourvoice.org/Pages/home.aspx"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Your Life, Your Voice
                   </a>
@@ -1035,14 +1033,14 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
 
             {/* Australia */}
             <div className="mt-8">
-              <h3 className="text-xl font-bold text-purple-700 mb-4">
+              <h3 className="!text-xl font-bold !text-[#5f2d85] mb-4">
                 Australia
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                   <a
                     href="https://kidshelpline.com.au"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Kids Helpline
                   </a>
@@ -1053,10 +1051,10 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                   <a
                     href="https://au.reachout.com"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Reach Out
                   </a>
@@ -1069,14 +1067,14 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
 
             {/* New Zealand */}
             <div className="mt-8">
-              <h3 className="text-xl font-bold text-purple-700 mb-4">
+              <h3 className="!text-xl font-bold !text-[#5f2d85] mb-4">
                 New Zealand
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                   <a
                     href="https://www.thelowdown.co.nz"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     The Lowdown
                   </a>
@@ -1089,10 +1087,10 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                   <a
                     href="https://youthline.co.nz"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Youthline
                   </a>
@@ -1106,14 +1104,14 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
 
             {/* United Kingdom */}
             <div className="mt-8">
-              <h3 className="text-xl font-bold text-purple-700 mb-4">
+              <h3 className="!text-xl font-bold !text-[#5f2d85] mb-4">
                 United Kingdom
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                   <a
                     href="https://www.childline.org.uk"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Childline
                   </a>
@@ -1123,10 +1121,10 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                   <a
                     href="https://www.themix.org.uk/get-support/"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     The Mix
                   </a>
@@ -1139,10 +1137,10 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                   <a
                     href="https://mindout.org.uk"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     MindOut (LGBTQ)
                   </a>
@@ -1153,10 +1151,10 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                   <a
                     href="https://turn2me.ie"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Turn2Me
                   </a>
@@ -1166,10 +1164,10 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                   <a
                     href="https://thegoodlimbo.com"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     TheGoodLimbo
                   </a>
@@ -1185,12 +1183,14 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
 
             {/* Global */}
             <div className="mt-8">
-              <h3 className="text-xl font-bold text-purple-700 mb-4">Global</h3>
+              <h3 className="!text-xl font-bold !text-[#5f2d85] mb-4">
+                Global
+              </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                   <a
                     href="https://www.7cups.com"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     7 Cups
                   </a>
@@ -1202,10 +1202,10 @@ const MentalHealthResourcesCommunitiesTeensYouth: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+                <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                   <a
                     href="https://forum.emptyclosets.com/index.php"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Empty Closets (LGBTQ)
                   </a>

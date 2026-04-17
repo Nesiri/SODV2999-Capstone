@@ -7,7 +7,7 @@ const TermsOfService: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#f5edf7] to-[#e8dceb]">
       {/* Mobile-Responsive Header */}
-      <div className="bg-white/70 backdrop-blur-sm border-b border-[#B266C9]/20 sticky top-0 z-10">
+      <div className="!bg-white/70 backdrop-blur-sm border-b border-[#5f2d85]/20 sticky top-0 z-10">
         <div className="max-w-4xl mx-auto px-3 sm:px-4 py-2 sm:py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-1.5 sm:space-x-2">
@@ -29,13 +29,13 @@ const TermsOfService: React.FC = () => {
 
       {/* Single Card */}
       <div className="max-w-2xl mx-auto px-3 sm:px-4 py-4 sm:py-6 md:py-8">
-        <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border border-[#B266C9]/20 overflow-hidden">
+        <div className="!bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border border-[#5f2d85]/20 overflow-hidden">
           {/* Card Header - Reduced Height */}
-          <div className="bg-gradient-to-r from-[#89009B] to-[#B266C9] px-4 sm:px-6 py-4 sm:py-5 text-white">
+          <div className="bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] px-4 sm:px-6 py-4 sm:py-5 text-white">
             <div className="flex items-start gap-2 sm:gap-3">
               <Heart className="w-8 h-8 sm:w-10 sm:h-10 opacity-90 flex-shrink-0" />
               <div className="min-w-0 flex-1">
-                <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-0.5 sm:mb-1 truncate">
+                <h1 className="!text-xl sm:text-2xl md:text-3xl font-bold mb-0.5 sm:mb-1 truncate">
                   Terms of Service
                 </h1>
                 <p className="text-xs sm:text-sm text-[#C77DDF] truncate">
@@ -60,8 +60,8 @@ const TermsOfService: React.FC = () => {
               {/* Account Section */}
               <div className="space-y-2 sm:space-y-3">
                 <div className="flex items-center space-x-1.5 sm:space-x-2">
-                  <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#89009B] flex-shrink-0" />
-                  <User className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#89009B] flex-shrink-0" />
+                  <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 !text-[#5f2d85] flex-shrink-0" />
+                  <User className="w-3.5 h-3.5 sm:w-4 sm:h-4 !text-[#5f2d85] flex-shrink-0" />
                   <span className="text-sm sm:text-base font-medium text-gray-700">
                     Your Account
                   </span>
@@ -76,8 +76,8 @@ const TermsOfService: React.FC = () => {
               {/* Your Data Section */}
               <div className="space-y-2 sm:space-y-3">
                 <div className="flex items-center space-x-1.5 sm:space-x-2">
-                  <Activity className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#89009B] flex-shrink-0" />
-                  <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#89009B] flex-shrink-0" />
+                  <Activity className="w-3.5 h-3.5 sm:w-4 sm:h-4 !text-[#5f2d85] flex-shrink-0" />
+                  <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4 !text-[#5f2d85] flex-shrink-0" />
                   <span className="text-sm sm:text-base font-medium text-gray-700">
                     What We Track
                   </span>
@@ -89,15 +89,15 @@ const TermsOfService: React.FC = () => {
                 </p>
                 <ul className="text-xs sm:text-sm text-gray-600 pl-6 sm:pl-7 space-y-1 sm:space-y-1.5">
                   <li className="flex items-center space-x-1.5 sm:space-x-2">
-                    <span className="w-1 h-1 bg-[#B266C9] rounded-full flex-shrink-0"></span>
+                    <span className="w-1 h-1 bg-[#5f2d85] rounded-full flex-shrink-0"></span>
                     <span>Mood tracking entries</span>
                   </li>
                   <li className="flex items-center space-x-1.5 sm:space-x-2">
-                    <span className="w-1 h-1 bg-[#B266C9] rounded-full flex-shrink-0"></span>
+                    <span className="w-1 h-1 bg-[#5f2d85] rounded-full flex-shrink-0"></span>
                     <span>Exercise logs and activities</span>
                   </li>
                   <li className="flex items-center space-x-1.5 sm:space-x-2">
-                    <span className="w-1 h-1 bg-[#B266C9] rounded-full flex-shrink-0"></span>
+                    <span className="w-1 h-1 bg-[#5f2d85] rounded-full flex-shrink-0"></span>
                     <span>Saved resources and favorites</span>
                   </li>
                 </ul>
@@ -106,7 +106,7 @@ const TermsOfService: React.FC = () => {
               {/* Privacy Promise */}
               <div className="space-y-2 sm:space-y-3">
                 <div className="flex items-center space-x-1.5 sm:space-x-2">
-                  <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#89009B] flex-shrink-0" />
+                  <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 !text-[#5f2d85] flex-shrink-0" />
                   <span className="text-sm sm:text-base font-medium text-gray-700">
                     Our Promise
                   </span>
@@ -139,7 +139,7 @@ const TermsOfService: React.FC = () => {
           </div>
 
           {/* Footer with Action - More compact on mobile */}
-          <div className="p-3 sm:p-6 bg-gray-50 border-t border-[#B266C9]/20">
+          <div className="p-3 sm:p-6 bg-gray-50 border-t border-[#5f2d85]/20">
             <p className="text-[10px] sm:text-xs text-gray-400 text-center mt-2 sm:mt-3">
               By using The LifeLine Canada Foundation, you agree to these terms
             </p>
@@ -156,7 +156,7 @@ const TermsOfService: React.FC = () => {
           border-radius: 20px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: linear-gradient(to bottom, #89009B, #B266C9);
+          background: linear-gradient(to bottom, #5f2d85, #5f2d85);
           border-radius: 20px;
         }
         @media (max-width: 380px) {

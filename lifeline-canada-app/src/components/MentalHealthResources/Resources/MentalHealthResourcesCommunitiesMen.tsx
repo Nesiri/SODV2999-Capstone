@@ -31,17 +31,15 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
       </div>
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-              Men
-            </span>
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">Men</span>
           </h1>
 
           <div className="flex items-center gap-4 mt-3 mb-1">
             <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
           </div>
 
-          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row-reverse sm:items-start gap-6">
+          <main className="mt-6 !bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row-reverse sm:items-start gap-6">
             <img
               src={coverPhoto}
               alt="Men's Mental Health"
@@ -73,21 +71,21 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
             </div>
           </main>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               For Men. About Men. Health Strategies for Managing and Preventing
               Depression
             </h2>
 
             <div className="mt-6 grid gap-4 sm:gap-5">
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row-reverse sm:items-start gap-4">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row-reverse sm:items-start gap-4">
                 <img
                   src={waysToLookAfterMentalHealth}
                   alt="Ways to look after your mental health"
                   className="w-full h-40 sm:w-[22vw] sm:max-w-[18rem] sm:h-auto sm:shrink-0 rounded-xl shadow-md object-cover"
                 />
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-gray-900">
+                  <h3 className="text-lg font-normal !text-[#5f2d85]">
                     Some Ways to Look After Your Mental Health
                   </h3>
 
@@ -105,7 +103,7 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row-reverse sm:items-start gap-4">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row-reverse sm:items-start gap-4">
                 <img
                   src={manDistress}
                   alt="Distress in men"
@@ -122,7 +120,7 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row-reverse sm:items-start gap-4">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row-reverse sm:items-start gap-4">
                 <img
                   src={manFactors}
                   alt="Risk factors for men"
@@ -148,7 +146,7 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row-reverse sm:items-start gap-4">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row-reverse sm:items-start gap-4">
                 <img
                   src={emotionallyDistressed}
                   alt="Emotionally distressed"
@@ -176,7 +174,7 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
                       href="https://ca.movember.com/mens-health/mental-health"
                       target="_blank"
                       rel="noreferrer"
-                      className="text-purple-700 underline underline-offset-4 hover:text-purple-800"
+                      className="!text-[#5f2d85] underline underline-offset-4 hover:!text-[#5f2d85]"
                     >
                       Movember Canada
                     </a>
@@ -186,13 +184,13 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Depression is a Thief
             </h2>
 
             <div className="mt-6 grid gap-4 sm:gap-5">
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row-reverse sm:items-start gap-4">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row-reverse sm:items-start gap-4">
                 <img
                   src={notASignOfWeakness}
                   alt="Not a sign of weakness"
@@ -219,7 +217,7 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row-reverse sm:items-start gap-4">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row-reverse sm:items-start gap-4">
                 <img
                   src={manyMisconceptions}
                   alt="Many misconceptions about depression"
@@ -245,7 +243,7 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row-reverse sm:items-start gap-4">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row-reverse sm:items-start gap-4">
                 <img
                   src={moreAndMoreMen}
                   alt="More and more men"
@@ -285,7 +283,7 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
                       href="https://headsupguys.org"
                       target="_blank"
                       rel="noreferrer"
-                      className="text-purple-700 underline underline-offset-4 hover:text-purple-800"
+                      className="!text-[#5f2d85] underline underline-offset-4 hover:!text-[#5f2d85]"
                     >
                       Heads Up Guys
                     </a>
@@ -295,13 +293,13 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Additional Resources for Men
             </h2>
 
             <div className="mt-6 grid gap-4 sm:gap-5">
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                 <img
                   src={manTherapy}
                   alt="Man Therapy"
@@ -310,7 +308,7 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
                 <div className="flex-1">
                   <a
                     href="https://mantherapy.org"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Man Therapy
                   </a>
@@ -332,7 +330,7 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                 <img
                   src={menGetDepressionImg}
                   alt="Men Get Depression"
@@ -341,7 +339,7 @@ const MentalHealthResourcesCommunitiesMen: React.FC = () => {
                 <div className="flex-1">
                   <a
                     href={menGetDepression}
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Men Get Depression
                   </a>

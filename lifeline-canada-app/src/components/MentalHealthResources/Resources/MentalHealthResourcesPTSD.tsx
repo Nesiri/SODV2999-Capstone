@@ -17,7 +17,7 @@ const HomecomingVets = '/assets/AdditionalResourceImages/HomecomingVets.png';
 
 const MentalHealthResourcesPTSD: React.FC = () => {
   const sectionClassName =
-    'rounded-xl border border-slate-200 bg-white p-5 sm:p-6 text-slate-700';
+    'rounded-xl border border-slate-200 !bg-white p-5 sm:p-6 text-slate-700';
 
   return (
     <section className="relative w-full bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 overflow-hidden">
@@ -28,8 +28,8 @@ const MentalHealthResourcesPTSD: React.FC = () => {
       </div>
       <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-8 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">
               Post Traumatic Stress Disorder
             </span>
           </h1>
@@ -57,7 +57,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
               </p>
             </div>
 
-            <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm max-h-52 lg:max-h-64">
+            <div className="overflow-hidden rounded-xl border border-slate-200 !bg-white shadow-sm max-h-52 lg:max-h-64">
               <img
                 src={coverPhoto}
                 alt="Post traumatic stress disorder support"
@@ -68,7 +68,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
           </div>
 
           <div className="mt-6 rounded-xl border border-rose-200 bg-rose-50 p-4 text-rose-900">
-            <p className="font-semibold">Emergency:</p>
+            <p className="font-normal">Emergency:</p>
             <p className="mt-1">
               If you feel at risk of harming yourself, call 911 immediately and
               stay with a trusted person.
@@ -77,7 +77,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
 
           <div className="mt-6 space-y-4">
             <div className={sectionClassName}>
-              <h2 className="text-lg font-semibold text-purple-700">
+              <h2 className="text-lg font-normal !text-[#5f2d85]">
                 What is PTSD?
               </h2>
               <div className="mt-4 space-y-4">
@@ -105,7 +105,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
 
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 flex flex-col sm:flex-row sm:items-start gap-4">
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-slate-900">
+                    <h3 className="text-lg font-normal !text-[#5f2d85]">
                       PTSD Signs &amp; Symptoms
                     </h3>
                     <ul className="mt-3 list-disc space-y-1 pl-5 leading-relaxed">
@@ -150,7 +150,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
 
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 flex flex-col sm:flex-row sm:items-start gap-4">
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-slate-900">
+                    <h3 className="text-lg font-normal !text-[#5f2d85]">
                       Here are some strategies to help with PTSD
                     </h3>
                     <ul className="mt-3 list-disc space-y-1 pl-5 leading-relaxed">
@@ -187,7 +187,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-semibold text-purple-700">
+              <h2 className="text-lg font-normal !text-[#5f2d85]">
                 Resources for PTSD
               </h2>
               <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -201,7 +201,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                     href="https://www.ptsdassociation.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-lg font-semibold text-purple-700 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] underline underline-offset-4"
                   >
                     PTSD Association of Canada
                   </a>
@@ -222,7 +222,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                     href="https://www.ptsd.va.gov/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-lg font-semibold text-purple-700 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] underline underline-offset-4"
                   >
                     US National Centre for PTSD
                   </a>
@@ -241,7 +241,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                     href="https://www.ptsd.va.gov/understand/related/suicide_ptsd.asp"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-lg font-semibold text-purple-700 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] underline underline-offset-4"
                   >
                     PTSD and Suicide
                   </a>
@@ -261,7 +261,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                     href="https://lop.parl.ca/staticfiles/PublicWebsite/Home/ResearchPublications/BackgroundPapers/PDF/2011-97-e.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-lg font-semibold text-purple-700 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] underline underline-offset-4"
                   >
                     PTSD and Mental Health of Military
                   </a>
@@ -281,7 +281,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                     href="https://ptsdresolution.org/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-lg font-semibold text-purple-700 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] underline underline-offset-4"
                   >
                     PTSD Resolution
                   </a>
@@ -301,7 +301,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                     href="https://www.youtube.com/watch?v=EqDs-2qvd_Y"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-lg font-semibold text-purple-700 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] underline underline-offset-4"
                   >
                     Hope for Recovery
                   </a>
@@ -320,7 +320,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                     href="https://homecomingvets.wordpress.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-lg font-semibold text-purple-700 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] underline underline-offset-4"
                   >
                     Homecoming Vets and the Crossroads of Humanity
                   </a>

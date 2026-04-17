@@ -4,22 +4,22 @@ const ABCrisisCentres: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-[#e9e3ea] via-[#f2ecf3] to-[#e0d8e2] py-12 px-4 sm:py-16 sm:px-6 md:py-20 md:px-8 lg:px-12 overflow-hidden">
       {/* Decorative background elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-white/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#89009B]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 !bg-white/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#5f2d85]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-12">
           {/* Text Container */}
           <div className="flex-1 text-center sm:text-left space-y-3 sm:space-y-4">
             <div className="inline-block sm:block mx-auto sm:mx-0">
-              <span className="hidden sm:inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-white/40 backdrop-blur-sm rounded-full text-xs sm:text-sm font-semibold text-[#B266C9] border border-white/60 shadow-sm mb-2 sm:mb-3">
+              <span className="hidden sm:inline-block px-3 sm:px-4 py-1.5 sm:py-2 !bg-white/40 backdrop-blur-sm rounded-full text-xs sm:text-sm font-normal !text-[#5f2d85] border border-white/60 shadow-sm mb-2 sm:mb-3">
                 🇨🇦 ALberta
               </span>
             </div>
 
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl font-serif font-medium leading-tight !text-[#89009B]">
+            <h1 className="text-3xl xs:!text-4xl sm:text-5xl font-serif font-medium leading-tight !text-[#5f2d85]">
               <span className="block">Alberta</span>
-              <span className="block text-transparent bg-[#B266C9] bg-clip-text text-3xl xs:text-5xl sm:text-5xl  mt-1 sm:mt-2">
+              <span className="block text-transparent bg-[#5f2d85] bg-clip-text text-3xl xs:text-5xl sm:text-5xl  mt-1 sm:mt-2">
                 Crisis Centres
               </span>
             </h1>
@@ -29,11 +29,11 @@ const ABCrisisCentres: React.FC = () => {
           <div className="flex-1 flex justify-center sm:justify-end mt-4 sm:mt-0">
             <div className="relative group w-fit">
               {/* Animated glow effect */}
-              <div className="absolute -inset-3 bg-gradient-to-r from-[#89009B]/20 via-[#B266C9]/20 to-[#89009B]/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition duration-700 animate-pulse"></div>
+              <div className="absolute -inset-3 bg-gradient-to-r from-[#5f2d85]/20 via-[#5f2d85]/20 to-[#5f2d85]/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition duration-700 animate-pulse"></div>
 
               {/* Image frame with gradient border */}
-              <div className="relative p-1 bg-gradient-to-r from-[#89009B]/30 to-[#B266C9]/30 rounded-2xl shadow-2xl">
-                <div className="overflow-hidden rounded-xl bg-white/50 backdrop-blur-sm">
+              <div className="relative p-1 bg-gradient-to-r from-[#5f2d85]/30 to-[#5f2d85]/30 rounded-2xl shadow-2xl">
+                <div className="overflow-hidden rounded-xl !bg-white/50 backdrop-blur-sm">
                   <img
                     src="assets/flags/alth_1024x1024-300x149.webp"
                     alt="Alberta Flag"
@@ -43,8 +43,8 @@ const ABCrisisCentres: React.FC = () => {
               </div>
 
               {/* Decorative corner accents */}
-              <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-[#89009B]/30 rounded-tr-lg"></div>
-              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-[#89009B]/30 rounded-bl-lg"></div>
+              <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-[#5f2d85]/30 rounded-tr-lg"></div>
+              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-[#5f2d85]/30 rounded-bl-lg"></div>
             </div>
           </div>
         </div>

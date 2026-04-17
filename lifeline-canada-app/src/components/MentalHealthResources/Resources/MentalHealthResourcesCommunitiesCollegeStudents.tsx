@@ -44,17 +44,15 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
       </div>
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-              College Students
-            </span>
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">College Students</span>
           </h1>
 
           <div className="flex items-center gap-4 mt-3 mb-1">
             <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
           </div>
 
-          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+          <main className="mt-6 !bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
             <div className="flex flex-col sm:flex-row sm:items-start gap-6">
               <div className="flex-1">
                 <p className="leading-relaxed">
@@ -81,8 +79,8 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
           </main>
 
           {/* Student Guide To Coping With Emotional Crisis */}
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Student Guide To Coping With Emotional Crisis
             </h2>
             <p className="mt-2 text-sm text-gray-500 italic">
@@ -114,8 +112,8 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
 
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Emotional Responses */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col">
-                <h3 className="text-lg font-semibold text-purple-700">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col">
+                <h3 className="text-lg font-normal !text-[#5f2d85]">
                   Emotional Responses
                 </h3>
                 <ul className="mt-3 space-y-1 list-disc list-inside text-sm leading-relaxed">
@@ -138,8 +136,8 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
               </div>
 
               {/* Cognitive Responses */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col">
-                <h3 className="text-lg font-semibold text-purple-700">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col">
+                <h3 className="text-lg font-normal !text-[#5f2d85]">
                   Cognitive Responses
                 </h3>
                 <ul className="mt-3 space-y-1 list-disc list-inside text-sm leading-relaxed">
@@ -160,8 +158,8 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
               </div>
 
               {/* Physical Responses */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col">
-                <h3 className="text-lg font-semibold text-purple-700">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col">
+                <h3 className="text-lg font-normal !text-[#5f2d85]">
                   Physical Responses
                 </h3>
                 <ul className="mt-3 space-y-1 list-disc list-inside text-sm leading-relaxed">
@@ -183,8 +181,8 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
               </div>
 
               {/* Behavioral Responses */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col">
-                <h3 className="text-lg font-semibold text-purple-700">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col">
+                <h3 className="text-lg font-normal !text-[#5f2d85]">
                   Behavioral Responses
                 </h3>
                 <ul className="mt-3 space-y-1 list-disc list-inside text-sm leading-relaxed">
@@ -219,7 +217,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                 href={studentCopingGuide}
                 target="_blank"
                 rel="noreferrer"
-                className="text-purple-700 underline underline-offset-4 hover:text-purple-800 font-medium"
+                className="!text-[#5f2d85] underline underline-offset-4 hover:!text-[#5f2d85] font-medium"
               >
                 Continue Reading: Student Guide to Coping with Emotional Crisis
               </a>
@@ -227,8 +225,8 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
           </div>
 
           {/* Students Returning to School After a Suicide Attempt */}
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Students Returning to School After a Suicide Attempt
             </h2>
             <p className="mt-4 leading-relaxed">
@@ -245,7 +243,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
 
             <div className="mt-6 space-y-4">
               {/* Sub-div 1: School faculty and staff */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={howSchoolStaffCanHelp}
                   alt="How school staff can help"
@@ -263,7 +261,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                   mental illness, may be the most compassionate.
                 </p>
                 <p className="mt-4 leading-relaxed">
-                  <span className="font-semibold text-purple-700">
+                  <span className="font-normal !text-[#5f2d85]">
                     How school staff can help:
                   </span>{' '}
                   Coming back to school after a traumatic absence is difficult
@@ -283,7 +281,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
               </div>
 
               {/* Sub-div 2: Consent and safety net */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={returningToSchool}
                   alt="Returning to school"
@@ -313,13 +311,13 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
               </div>
 
               {/* Sub-div 3: Ideas for staff */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={discussMissedWork}
                   alt="Discuss missed work"
                   className="float-right ml-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
                 />
-                <p className="font-semibold text-purple-700 mb-3">
+                <p className="font-normal !text-[#5f2d85] mb-3">
                   Here are some ideas:
                 </p>
                 <ul className="space-y-2 list-disc list-inside leading-relaxed">
@@ -374,14 +372,14 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
           </div>
 
           {/* Guides for College & University Students */}
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Guides for College &amp; University Students
             </h2>
 
             <div className="mt-6">
               {/* Suicide Prevention for Students */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={suicidePreventionForStudents}
                   alt="Suicide Prevention for Students"
@@ -390,7 +388,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                 <div className="overflow-hidden">
                   <a
                     href="https://www.psychology.org/resources/"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Suicide Prevention for Students
                   </a>
@@ -411,14 +409,14 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
           </div>
 
           {/* Additional Resources for College & University Students */}
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Additional Resources for College &amp; University Students
             </h2>
 
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {/* Here2Talk */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={here2talk}
                   alt="Here2Talk"
@@ -426,7 +424,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                 />
                 <a
                   href="https://here2talk.ca/main"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Here2Talk
                 </a>
@@ -440,7 +438,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
               </div>
 
               {/* Active Minds on Campus */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={activeMinds}
                   alt="Active Minds on Campus"
@@ -448,7 +446,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                 />
                 <a
                   href="https://activeminds.org"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Active Minds on Campus
                 </a>
@@ -460,7 +458,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
               </div>
 
               {/* Jack.org */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={jackOrg}
                   alt="Jack.org"
@@ -468,7 +466,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                 />
                 <a
                   href="https://www.jack.org"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Jack.org
                 </a>
@@ -481,7 +479,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
               </div>
 
               {/* ULifeLine */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={uLifeLine}
                   alt="ULifeLine"
@@ -489,7 +487,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                 />
                 <a
                   href="https://jedfoundation.org/ulifeline-transition/"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   ULifeLine
                 </a>
@@ -502,7 +500,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
               </div>
 
               {/* Centre for Online Education */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={centreForOnlineEducation}
                   alt="Centre for Online Education"
@@ -510,7 +508,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                 />
                 <a
                   href="https://www.onlinecolleges.net/for-students/mental-health-resources/"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Centre for Online Education
                 </a>
@@ -523,7 +521,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
               </div>
 
               {/* Centre for Innovation in Campus Mental Health */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={centreForInnovation}
                   alt="Centre for Innovation in Campus Mental Health"
@@ -531,7 +529,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                 />
                 <a
                   href="https://campusmentalhealth.ca/external-resources/"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Centre for Innovation in Campus Mental Health
                 </a>
@@ -542,7 +540,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
               </div>
 
               {/* American College Health Association */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={americanCollegeHealthAssociation}
                   alt="American College Health Association"
@@ -550,7 +548,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                 />
                 <a
                   href="https://www.acha.org"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   American College Health Association
                 </a>
@@ -564,7 +562,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
               </div>
 
               {/* Beyond OCD */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={beyondOCD}
                   alt="Beyond OCD"
@@ -572,7 +570,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                 />
                 <a
                   href="http://beyondocd.org/information-for-college-students"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Beyond OCD: Overcoming OCD – The College Student's Guide
                 </a>
@@ -584,7 +582,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
               </div>
 
               {/* Kognito's At-Risk on Campus */}
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={kognito}
                   alt="Kognito's At-Risk on Campus"
@@ -592,7 +590,7 @@ const MentalHealthResourcesCommunitiesCollegeStudents: React.FC = () => {
                 />
                 <a
                   href="https://kognito.com/?markets=Higher%20Ed"
-                  className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Kognito's At-Risk on Campus
                 </a>

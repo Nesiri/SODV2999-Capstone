@@ -116,9 +116,9 @@ const TextChatSupportHub = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600/10 to-blue-500/10 text-black">
+      <div className="bg-gradient-to-r from-[#5f2d85]/10 to-blue-500/10 text-black">
         <div className="flex flex-col justify-center items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h5 className="text-4xl md:text-5xl font-normal mb-4">
+          <h5 className="!text-4xl md:text-5xl font-normal mb-4">
             Crisis Support & Helplines
           </h5>
         </div>
@@ -134,8 +134,8 @@ const TextChatSupportHub = () => {
               onClick={() => setSelectedCountry(country)}
               className={`px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 transform hover:scale-105 ${
                 selectedCountry === country
-                  ? '!bg-purple-600 text-white shadow-lg shadow-purple-200'
-                  : 'bg-white text-gray-700 hover:!bg-purple-50 border border-gray-200'
+                  ? '!bg-[#5f2d85] text-white shadow-lg shadow-purple-200'
+                  : '!bg-white text-gray-700 hover:!bg-purple-50 border border-gray-200'
               }`}
             >
               {country}
@@ -149,7 +149,7 @@ const TextChatSupportHub = () => {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-purple-200"
+                className="!bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-purple-200"
               >
                 <div className="flex flex-row">
                   {/* Image Section - Clickable */}
@@ -160,7 +160,7 @@ const TextChatSupportHub = () => {
                     className="w-1/3 bg-gradient-to-br from-purple-500 to-blue-400 p-6 flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity"
                   >
                     <div className="relative w-full h-40">
-                      <span className="absolute top-0 left-0 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs font-medium border border-white/30 z-10">
+                      <span className="absolute top-0 left-0 px-3 py-1 !bg-white/20 backdrop-blur-sm rounded-full text-white text-xs font-medium border border-white/30 z-10">
                         {center.country}
                       </span>
                       <img
@@ -179,7 +179,7 @@ const TextChatSupportHub = () => {
                       rel="noopener noreferrer"
                       className="inline-block group"
                     >
-                      <h3 className="text-xl font-bold text-gray-800 mb-3 transition-colors group-hover:text-purple-600 group-hover:underline">
+                      <h3 className="!text-xl font-bold text-gray-800 mb-3 transition-colors group-hover:!text-[#5f2d85] group-hover:underline">
                         {center.name}
                       </h3>
                     </Link>

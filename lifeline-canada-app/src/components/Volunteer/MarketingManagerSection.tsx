@@ -15,7 +15,7 @@ const MarketingManagerSection: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* LEFT COLUMN */}
           <div className="space-y-8 animate-fadeInLeft">
-            <h2 className="!text-2xl md:text-4xl lg:text-5xl font-black mb-4">
+            <h2 className="!text-2xl md:!text-4xl lg:text-5xl font-black mb-4">
               <span className="text-black">Marketing</span>
               <br />
               <span className="text-gray-800 relative">
@@ -30,7 +30,7 @@ const MarketingManagerSection: React.FC = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500" />
 
               {/* Image container */}
-              <div className="relative bg-white/80 backdrop-blur-sm p-2 rounded-2xl overflow-hidden">
+              <div className="relative !bg-white/80 backdrop-blur-sm p-2 rounded-2xl overflow-hidden">
                 <div className="relative overflow-hidden rounded-xl">
                   <img
                     src={marketingManagerImage}
@@ -50,15 +50,13 @@ const MarketingManagerSection: React.FC = () => {
                 "
               </div>
               <div className="space-y-4">
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed italic font-light">
+                <p className="text-lg md:!text-xl text-gray-700 leading-relaxed italic font-light">
                   Our Marketing Manager will focus on promoting TLC's and
                   Companion Paws' brand and services to new clients, volunteers
                   and partners.
                 </p>
                 <p className="text-gray-700 leading-relaxed bg-gradient-to-r from-blue-50/50 to-purple-50/50 p-4 rounded-xl border border-blue-100">
-                  <span className="font-semibold text-blue-600">
-                    Role focus:
-                  </span>{' '}
+                  <span className="font-normal text-blue-600">Role focus:</span>{' '}
                   This manager would be a member of the marketing and
                   fundraising team who is responsible for managing the
                   Foundation's digital and non-digital marketing programs.
@@ -97,7 +95,7 @@ const MarketingManagerSection: React.FC = () => {
                     <span className="text-blue-500 mt-1 text-lg group-hover:text-purple-500 transition-colors">
                       ✦
                     </span>
-                    <span className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors">
+                    <span className="text-gray-700 leading-relaxed group-hover:!text-[#5f2d85] transition-colors">
                       {item}
                     </span>
                   </li>
@@ -135,7 +133,7 @@ const MarketingManagerSection: React.FC = () => {
                     <span className="text-purple-500 mt-1 group-hover:scale-110 transition-transform">
                       •
                     </span>
-                    <span className="text-gray-700 group-hover:text-gray-900 text-sm md:text-base">
+                    <span className="text-gray-700 group-hover:!text-[#5f2d85] text-sm md:text-base">
                       {item}
                     </span>
                   </li>

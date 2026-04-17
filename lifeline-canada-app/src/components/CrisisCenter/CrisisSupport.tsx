@@ -15,18 +15,18 @@ const CrisisSupport: React.FC = () => {
       <div className="relative w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-20 md:py-28">
         {/* HEADER - CENTERED ON SCREEN */}
         <div className="mb-16">
-          <div className="inline-flex items-center gap-2 bg-white/30 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/40 mb-8">
-            <div className="w-2 h-2 rounded-full bg-purple-600 animate-pulse" />
+          <div className="inline-flex items-center gap-2 !bg-white/30 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/40 mb-8">
+            <div className="w-2 h-2 rounded-full bg-[#5f2d85] animate-pulse" />
             <span className="text-xs font-medium tracking-[0.2em] text-purple-900 uppercase">
               24/7 CRISIS SUPPORT
             </span>
           </div>
 
-          <h1 className="!text-3xl md:!text-5xl  font-bold leading-[1.1]">
-            <span className="!bg-[#89009B]  bg-clip-text text-transparent">
+          <h1 className="!text-3xl md:!text-5xl font-bold leading-[1.1]">
+            <span className="!bg-[#5f2d85] bg-clip-text text-transparent">
               In Crisis?
             </span>{' '}
-            <span className="!bg-[#89009B]  bg-clip-text text-transparent">
+            <span className="!bg-[#5f2d85] bg-clip-text text-transparent">
               Need Help?
             </span>
           </h1>
@@ -39,40 +39,44 @@ const CrisisSupport: React.FC = () => {
             {/* Boxed paragraph - Modern glass card with darker text for contrast */}
             <div className="relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur opacity-0 group-hover:opacity-50 transition duration-500" />
-              <div className="relative bg-white/40 backdrop-blur-xl rounded-2xl p-8 border border-white/50 shadow-2xl">
-                <p className="text-purple-950 leading-relaxed space-y-4">
-                  <span className="block text-lg font-semibold">
-                    In Crisis? Call or Text{' '}
-                    <span className="text-4xl font-bold bg-gradient-to-r from-purple-700 to-pink-700 bg-clip-text text-transparent">
-                      988
-                    </span>{' '}
-                    Canada's new suicide prevention hotline.
-                  </span>
-                  <span className="block font-medium">
+              <div className="relative !bg-white/40 backdrop-blur-xl rounded-2xl p-8 border border-white/50 shadow-2xl">
+                <div className="space-y-5">
+                  <p className="text-purple-950 leading-relaxed text-base">
+                    <span className="block font-normal text-lg mb-2">
+                      In Crisis? Call or Text{' '}
+                      <span className="!text-xl font-extrabold bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] bg-clip-text text-transparent">
+                        988
+                      </span>{' '}
+                      Canada's suicide prevention hotline.
+                    </span>
+                  </p>
+
+                  <p className="text-purple-950 leading-relaxed font-medium">
                     If you or someone you know is in danger of hurting
                     themselves or others, call{' '}
-                    <span className="text-4xl font-bold bg-gradient-to-r from-purple-700 to-pink-700 bg-clip-text text-transparent">
+                    <span className="!text-xl font-extrabold bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] bg-clip-text text-transparent">
                       911
                     </span>{' '}
                     immediately.
-                  </span>
-                  <span className="block">
+                  </p>
+
+                  <p className="text-purple-950 leading-relaxed">
                     <a
                       href="#local-crisis-support"
-                      className="inline-flex items-center gap-2 !text-purple-800 font-bold border-b border-purple-600/50 hover:border-purple-800 transition-all group/link"
+                      className="inline-flex items-center gap-2 !text-[#5f2d85] font-bold border-b border-[#5f2d85]/50 hover:border-[#5f2d85] transition-all group/link"
                     >
                       See our directory of mental health crisis support
                     </a>{' '}
                     in your area below.
-                  </span>
-                </p>
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Disclaimer */}
             <div className="flex items-start gap-4">
               <div className="w-px h-12 bg-gradient-to-b from-purple-500 to-transparent" />
-              <p className="text-sm text-purple-800/70 leading-relaxed font-medium">
+              <p className="text-sm !text-[#5f2d85]/70 leading-relaxed font-medium">
                 Seek the advice of an appropriately qualified healthcare
                 professional before making decisions about your circumstances.
               </p>

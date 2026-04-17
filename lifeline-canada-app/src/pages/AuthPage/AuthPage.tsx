@@ -78,7 +78,7 @@ const AuthPage: React.FC = () => {
 
   return (
     <>
-      <div className="bg-white rounded-2xl shadow-xl p-8">
+      <div className="!bg-white rounded-2xl shadow-xl p-8">
         <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
           {isLogin ? (
             <>

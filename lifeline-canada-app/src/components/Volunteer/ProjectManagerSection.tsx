@@ -15,7 +15,7 @@ const ProjectManagerSection: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* LEFT COLUMN */}
           <div className="space-y-8 animate-fadeInLeft">
-            <h2 className="!text-2xl md:text-4xl lg:text-5xl font-black mb-4">
+            <h2 className="!text-2xl md:!text-4xl lg:text-5xl font-black mb-4">
               <span className="text-black">Project</span>
               <br />
               <span className="text-gray-800 relative">
@@ -30,7 +30,7 @@ const ProjectManagerSection: React.FC = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500" />
 
               {/* Image container */}
-              <div className="relative bg-white/80 backdrop-blur-sm p-2 rounded-2xl overflow-hidden">
+              <div className="relative !bg-white/80 backdrop-blur-sm p-2 rounded-2xl overflow-hidden">
                 <div className="relative overflow-hidden rounded-xl">
                   <img
                     src={projectManagerImage}
@@ -50,13 +50,13 @@ const ProjectManagerSection: React.FC = () => {
                 "
               </div>
               <div className="space-y-4">
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed italic font-light">
+                <p className="text-lg md:!text-xl text-gray-700 leading-relaxed italic font-light">
                   As we expand and enhance our programs, we seek one or more
                   project managers who will be responsible for providing project
                   planning and management support to our project teams.
                 </p>
                 <p className="text-gray-700 leading-relaxed bg-gradient-to-r from-blue-50/50 to-purple-50/50 p-4 rounded-xl border border-blue-100">
-                  <span className="font-semibold text-blue-600">
+                  <span className="font-normal text-blue-600">
                     Current priority:
                   </span>{' '}
                   Our current first priority is planning for development of our
@@ -83,7 +83,7 @@ const ProjectManagerSection: React.FC = () => {
                   <span className="text-blue-500 mt-1 text-lg group-hover:text-purple-500 transition-colors">
                     ✦
                   </span>
-                  <span className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors">
+                  <span className="text-gray-700 leading-relaxed group-hover:!text-[#5f2d85] transition-colors">
                     Work with TLC management and volunteer team members, and
                     closely with the designated Team Lead (if applicable) to
                     guide a key project
@@ -94,7 +94,7 @@ const ProjectManagerSection: React.FC = () => {
                   <span className="text-blue-500 mt-1 text-lg group-hover:text-purple-500 transition-colors">
                     ✦
                   </span>
-                  <span className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors">
+                  <span className="text-gray-700 leading-relaxed group-hover:!text-[#5f2d85] transition-colors">
                     Oversee the process of the project from planning to
                     implementation. This includes:
                     <ul className="mt-2 space-y-1 ml-6">
@@ -134,7 +134,7 @@ const ProjectManagerSection: React.FC = () => {
                     <span className="text-blue-500 mt-1 text-lg group-hover:text-purple-500 transition-colors">
                       ✦
                     </span>
-                    <span className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors">
+                    <span className="text-gray-700 leading-relaxed group-hover:!text-[#5f2d85] transition-colors">
                       {item}
                     </span>
                   </li>
@@ -167,7 +167,7 @@ const ProjectManagerSection: React.FC = () => {
                     <span className="text-purple-500 mt-1 group-hover:scale-110 transition-transform">
                       •
                     </span>
-                    <span className="text-gray-700 group-hover:text-gray-900">
+                    <span className="text-gray-700 group-hover:!text-[#5f2d85]">
                       {item}
                     </span>
                   </li>

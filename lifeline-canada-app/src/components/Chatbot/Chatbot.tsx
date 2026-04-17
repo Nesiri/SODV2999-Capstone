@@ -164,7 +164,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-sm font-medium text-purple-700">
+                    <span className="text-sm font-medium !text-[#5f2d85]">
                       {link.name}
                     </span>
                     {link.description && (
@@ -173,7 +173,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
                       </p>
                     )}
                   </div>
-                  <ExternalLink className="w-4 h-4 text-purple-400 group-hover:text-purple-600" />
+                  <ExternalLink className="w-4 h-4 text-purple-400 group-hover:!text-[#5f2d85]" />
                 </div>
               </a>
             );
@@ -194,7 +194,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-sm font-medium !text-purple-700">
+                    <span className="text-sm font-medium !text-[#5f2d85]">
                       {link.name}
                     </span>
                     {link.description && (
@@ -203,7 +203,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
                       </p>
                     )}
                   </div>
-                  <ArrowRight className="w-4 h-4 !text-purple-400 group-hover:text-purple-600" />
+                  <ArrowRight className="w-4 h-4 !text-purple-400 group-hover:!text-[#5f2d85]" />
                 </div>
               </Link>
             );
@@ -233,11 +233,11 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
   return (
     <>
       {/* Chatbot Header */}
-      <div className="!bg-[#89009B] px-5 py-4 flex items-center justify-between">
+      <div className="!bg-[#5f2d85] px-5 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Bot className="w-5 h-5 !text-white" />
           <div>
-            <h3 className="font-semibold !text-white text-sm">
+            <h3 className="font-normal !text-white text-sm">
               Support AI Assistant
             </h3>
           </div>
@@ -308,7 +308,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
       </div>
 
       {/* Input */}
-      <div className="p-4 border-t !border-gray-100 bg-white">
+      <div className="p-4 border-t !border-gray-100 !bg-white">
         <div className="flex gap-2">
           <input
             type="text"
@@ -321,7 +321,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose, onCrisisDetected }) => {
           <button
             onClick={handleSendMessage}
             disabled={!inputMessage.trim()}
-            className="!bg-purple-500 hover:bg-purple-600 text-white p-2 rounded-xl transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="!bg-purple-500 hover:bg-[#5f2d85] text-white p-2 rounded-xl transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Send className="w-5 h-5" />
           </button>

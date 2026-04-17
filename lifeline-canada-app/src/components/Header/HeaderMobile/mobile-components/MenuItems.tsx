@@ -35,12 +35,12 @@ export const MenuItems = ({
           focus:outline-none focus:ring-2 focus:ring-pink-500/30"
       >
         <div className="p-3.5 rounded-xl bg-gradient-to-br from-pink-90 via-gray-100 to-white  transition-all duration-300">
-          <span className="!text-[#89009B]  transition-all duration-300 text-2xl">
+          <span className="!text-[#5f2d85]  transition-all duration-300 text-2xl">
             ⋯
           </span>
         </div>
         <div className="flex-1 text-left">
-          <span className="font-bold !text-[#89009B]  transition-colors">
+          <span className="font-bold !text-[#5f2d85]  transition-colors">
             More
           </span>
         </div>
@@ -83,7 +83,7 @@ const MenuItem = ({ link, index, onDropdownClick, closeMenu }: any) => (
             <span
               className={`font-bold
                 
-                  !text-[#89009B]  group-hover:text-pink-600
+                  !text-[#5f2d85]  group-hover:text-pink-600
                transition-colors`}
             >
               {link.name}
@@ -111,7 +111,7 @@ const MenuItem = ({ link, index, onDropdownClick, closeMenu }: any) => (
           </span>
         </div>
         <div className="flex-1">
-          <span className="font-bold !text-[#89009B]  group-hover:text-pink-600 transition-colors">
+          <span className="font-bold !text-[#5f2d85]  group-hover:text-pink-600 transition-colors">
             {link.name}
           </span>
           {link.emergency && (

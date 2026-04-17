@@ -12,7 +12,7 @@ const historicalFactors =
 
 const MentalHealthResourcesWarningSigns: React.FC = () => {
   const sectionClassName =
-    'rounded-xl border border-slate-200 bg-white p-5 sm:p-6 text-slate-700';
+    'rounded-xl border border-slate-200 !bg-white p-5 sm:p-6 text-slate-700';
 
   return (
     <section className="relative w-full bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 overflow-hidden">
@@ -23,17 +23,15 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
       </div>
       <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-8 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-              Warning Signs
-            </span>
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">Warning Signs</span>
           </h1>
 
           <div className="flex items-center gap-4 mt-3 mb-1">
             <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
           </div>
 
-          <div className="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-white">
+          <div className="mt-4 overflow-hidden rounded-xl border border-slate-200 !bg-white">
             <div className="grid grid-cols-1 items-stretch lg:grid-cols-[1fr_300px]">
               <div className="h-full p-3 text-slate-700 lg:border-r lg:border-slate-200">
                 <p className="leading-relaxed">
@@ -63,7 +61,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
           </div>
 
           <div className="mt-6 rounded-xl border border-rose-200 bg-rose-50 p-4 text-rose-900">
-            <p className="font-semibold">Emergency:</p>
+            <p className="font-normal">Emergency:</p>
             <p className="mt-1">
               If the person has a plan, means, and intent, call 911 immediately
               and stay with them.
@@ -72,12 +70,12 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
 
           <div className="mt-6 space-y-4">
             <div className={sectionClassName}>
-              <h2 className="text-lg font-semibold text-purple-700">
+              <h2 className="text-lg font-normal !text-[#5f2d85]">
                 Suicide Warning Signs
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white mb-3">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white mb-3">
                     <img
                       src={talkingAbout}
                       alt="Talking about suicide"
@@ -85,7 +83,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
                       loading="lazy"
                     />
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-900">
+                  <h3 className="text-lg font-normal !text-[#5f2d85]">
                     If a person talks about
                   </h3>
                   <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
@@ -98,7 +96,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
                 </div>
 
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white mb-3">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white mb-3">
                     <img
                       src={behaviour}
                       alt="Behaviour changes"
@@ -106,7 +104,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
                       loading="lazy"
                     />
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-900">
+                  <h3 className="text-lg font-normal !text-[#5f2d85]">
                     Behavior changes to watch for
                   </h3>
                   <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
@@ -121,7 +119,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
                 </div>
 
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white mb-3">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white mb-3">
                     <img
                       src={mood}
                       alt="Common crisis moods"
@@ -129,7 +127,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
                       loading="lazy"
                     />
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-900">
+                  <h3 className="text-lg font-normal !text-[#5f2d85]">
                     Common crisis moods
                   </h3>
                   <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
@@ -144,12 +142,12 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-semibold text-purple-700">
+              <h2 className="text-lg font-normal !text-[#5f2d85]">
                 Suicide Risk Factors
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white mb-3">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white mb-3">
                     <img
                       src={healthFactors}
                       alt="Health factors"
@@ -157,7 +155,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
                       loading="lazy"
                     />
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-900">
+                  <h3 className="text-lg font-normal !text-[#5f2d85]">
                     Health Factors
                   </h3>
                   <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
@@ -172,7 +170,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
                 </div>
 
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white mb-3">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white mb-3">
                     <img
                       src={environmentalFactors}
                       alt="Environmental factors"
@@ -180,7 +178,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
                       loading="lazy"
                     />
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-900">
+                  <h3 className="text-lg font-normal !text-[#5f2d85]">
                     Environmental Factors
                   </h3>
                   <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
@@ -197,7 +195,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
                 </div>
 
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white mb-3">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white mb-3">
                     <img
                       src={historicalFactors}
                       alt="Historical factors"
@@ -205,7 +203,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
                       loading="lazy"
                     />
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-900">
+                  <h3 className="text-lg font-normal !text-[#5f2d85]">
                     Historical Factors
                   </h3>
                   <ul className="mt-2 list-disc space-y-2 pl-5 leading-relaxed">
@@ -222,21 +220,21 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
               For further helpful information see our{' '}
               <a
                 href="/resources/how-to-help"
-                className="text-purple-700 font-medium underline"
+                className="!text-[#5f2d85] font-medium underline"
               >
                 How Can I Help Someone
               </a>{' '}
               and other resources on our{' '}
               <a
                 href="/resources"
-                className="text-purple-700 font-medium underline"
+                className="!text-[#5f2d85] font-medium underline"
               >
                 Resources page
               </a>
               .
             </p>
 
-            <p className="max-w-3xl mx-auto text-center italic text-xl font-semibold text-red-600 mb-6">
+            <p className="max-w-3xl mx-auto text-center italic !text-xl font-normal text-red-600 mb-6">
               If you, or someone you know is in crisis, call 911 immediately!
             </p>
 
@@ -248,7 +246,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
               <a
                 href="/incrisisneedhelp"
                 style={{ color: '#ffffff' }}
-                className="inline-block px-6 sm:px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:scale-[1.02] transform transition"
+                className="inline-block px-6 sm:px-8 py-3 bg-gradient-to-r from-[#5f2d85] to-pink-500 text-white font-normal rounded-full shadow-lg hover:scale-[1.02] transform transition"
               >
                 CRISIS LINES
               </a>

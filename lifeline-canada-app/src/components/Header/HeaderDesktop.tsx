@@ -18,7 +18,7 @@ export default function HeaderDesktop() {
       className="hidden lg:flex items-center w-full relative xl:mr-10"
       style={{
         fontSize: '16px', // Fixed base font size
-        // color:'#89009B important' // Ensure text color is consistent
+        // color:'#5f2d85 important' // Ensure text color is consistent
       }}
     >
       {/* Main nav items on left */}

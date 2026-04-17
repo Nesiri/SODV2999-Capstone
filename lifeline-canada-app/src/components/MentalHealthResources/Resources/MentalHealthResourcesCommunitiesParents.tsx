@@ -32,17 +32,15 @@ const MentalHealthResourcesCommunitiesParents: React.FC = () => {
       </div>
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-              Parents
-            </span>
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">Parents</span>
           </h1>
 
           <div className="flex items-center gap-4 mt-3 mb-1">
             <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
           </div>
 
-          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+          <main className="mt-6 !bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
             <div className="flex flex-col sm:flex-row sm:items-start gap-6">
               <div className="flex-1">
                 <p className="leading-relaxed">
@@ -84,13 +82,13 @@ const MentalHealthResourcesCommunitiesParents: React.FC = () => {
             </div>
           </main>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Communicating With Your Child About Suicide
             </h2>
 
             <div className="mt-6 grid gap-4 sm:gap-5">
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start">
                   <div>
                     <p className="leading-relaxed">
@@ -142,14 +140,14 @@ const MentalHealthResourcesCommunitiesParents: React.FC = () => {
                   </div>
 
                   <div className="space-y-3">
-                    <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+                    <div className="overflow-hidden rounded-xl border border-slate-200 !bg-white">
                       <img
                         src={communicatingWithATeenager}
                         alt="Communicating with a teenager"
                         className="h-full w-full min-h-[120px] object-cover"
                       />
                     </div>
-                    <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+                    <div className="overflow-hidden rounded-xl border border-slate-200 !bg-white">
                       <img
                         src={beforeBeginningTheConversation}
                         alt="Before beginning the conversation"
@@ -160,13 +158,13 @@ const MentalHealthResourcesCommunitiesParents: React.FC = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={skills}
                   alt="Skills"
                   className="float-right ml-6 mb-4 w-48 sm:w-64 rounded-xl shadow-md object-cover"
                 />
-                <h3 className="text-lg font-semibold text-gray-900">Skills</h3>
+                <h3 className="text-lg font-normal !text-[#5f2d85]">Skills</h3>
 
                 <p className="mt-2 leading-relaxed">
                   Good communication requires both talking and active listening.
@@ -219,7 +217,7 @@ const MentalHealthResourcesCommunitiesParents: React.FC = () => {
                   </li>
                 </ul>
 
-                <p className="mt-4 font-semibold text-gray-900">
+                <p className="mt-4 font-normal !text-[#5f2d85]">
                   Where your child is coming from...
                 </p>
 
@@ -261,12 +259,12 @@ const MentalHealthResourcesCommunitiesParents: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700 text-center">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight !text-[#5f2d85] text-center">
               Safety Tip
             </h2>
 
-            <div className="mt-6 rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+            <div className="mt-6 rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm text-center">
               <p className="leading-relaxed">
                 If you feel you cannot have this conversation, please seek help
                 from an outside source - another family member, your family
@@ -274,7 +272,7 @@ const MentalHealthResourcesCommunitiesParents: React.FC = () => {
                 counsellor or a teacher. You could also call a{' '}
                 <a
                   href="/incrisisneedhelp"
-                  className="text-purple-700 underline underline-offset-4 hover:text-purple-800"
+                  className="!text-[#5f2d85] underline underline-offset-4 hover:!text-[#5f2d85]"
                 >
                   Crisis Line
                 </a>{' '}
@@ -292,20 +290,20 @@ const MentalHealthResourcesCommunitiesParents: React.FC = () => {
 
               <a
                 href={youthAtRisk}
-                className="mt-5 inline-flex items-center rounded-lg bg-purple-700 px-4 py-2 text-sm font-semibold !text-white transition-colors hover:bg-purple-800 hover:!text-white"
+                className="mt-5 inline-flex items-center rounded-lg bg-[#5f2d85] px-4 py-2 text-sm font-normal !text-white transition-colors hover:bg-[#5f2d85] hover:!text-white"
               >
                 Download
               </a>
             </div>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Additional Resources for Parents
             </h2>
 
             <div className="mt-6 grid gap-4 sm:gap-5">
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={childHasMentalHealthChallenges}
                   alt="Coping When Your Child Has Mental Health Challenges"
@@ -314,7 +312,7 @@ const MentalHealthResourcesCommunitiesParents: React.FC = () => {
                 <div className="overflow-hidden">
                   <a
                     href={childMentalHealth}
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Coping When Your Child Has Mental Health Challenges A Guide
                     for Parents
@@ -338,7 +336,7 @@ const MentalHealthResourcesCommunitiesParents: React.FC = () => {
                 <div className="clear-both" />
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={helpingKidsNavigateCyberbullying}
                   alt="Helping Our Kids Navigate Cyberbullying"
@@ -347,7 +345,7 @@ const MentalHealthResourcesCommunitiesParents: React.FC = () => {
                 <div className="overflow-hidden">
                   <a
                     href={navigatingCyberbullying}
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Helping Our Kids Navigate Cyberbullying: A Parent&apos;s
                     Guide
@@ -372,7 +370,7 @@ const MentalHealthResourcesCommunitiesParents: React.FC = () => {
                 <div className="clear-both" />
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={teenBodyImage}
                   alt="Teen Body Image and Self-Esteem"
@@ -381,7 +379,7 @@ const MentalHealthResourcesCommunitiesParents: React.FC = () => {
                 <div className="overflow-hidden">
                   <a
                     href="https://www.freederm.co.uk/body-image-and-self-esteem/"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Teen Body Image and Self-Esteem - A Practical Guide for
                     Parents

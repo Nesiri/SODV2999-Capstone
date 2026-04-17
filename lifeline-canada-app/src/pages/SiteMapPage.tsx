@@ -172,15 +172,7 @@ const SiteMapPage = () => {
 
   // Create a reusable link className
   const linkClassName =
-    '!text-[#89009B]  inline-block transition-all duration-300 hover:!underline hover:!underline-offset-4 hover:!decoration-2 hover:!decoration-pink-400 dark:text-purple-400';
-
-  // Font size classes using clamp with halved scaling
-  const fontSizes = {
-    mainTitle: 'clamp(1rem, 2.5vw, 2.5rem)', // Main site title
-    categoryTitle: 'clamp(1.5rem, 2vw, 2rem)', // Category headers
-    mainLink: 'clamp(1rem, 1.25vw, 1.5rem)', // Main navigation links
-    subLink: 'clamp(0.875rem, 0.9vw, 1.25rem)', // Submenu/child links
-  };
+    '!text-[#5f2d85] !text-2xl inline-block transition-all duration-300 hover:!underline hover:!underline-offset-4 hover:!decoration-2 hover:!decoration-pink-400 dark:text-purple-400';
 
   const handleClick =
     (link: (typeof aboutLinks)[0]) => (e: React.MouseEvent) => {
@@ -226,10 +218,7 @@ const SiteMapPage = () => {
     <div className="w-full min-h-screen bg-gradient-to-br from-purple-50 via-purple-100/50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
         {/* Header with pink/blue/purple gradient */}
-        <h1
-          className="relative top-10 mb-12 md:mb-16 cursor-pointer transition-all duration-300 tracking-tight border-l-4 border-pink-400 pl-4"
-          style={{ fontSize: fontSizes.mainTitle }}
-        >
+        <h1 className="relative top-10 mb-12 md:mb-16 cursor-pointer transition-all duration-300 tracking-tight ">
           <Link to="/" className={linkClassName}>
             The LifeLine Canada
           </Link>
@@ -242,11 +231,7 @@ const SiteMapPage = () => {
               key={idx}
               className="mb-2 md:mb-3 cursor-pointer transition-all duration-300 font-medium"
             >
-              <Link
-                to={link.path}
-                className={linkClassName}
-                style={{ fontSize: fontSizes.mainLink }}
-              >
+              <Link to={link.path} className={linkClassName}>
                 {link.name}
               </Link>
             </li>
@@ -254,10 +239,7 @@ const SiteMapPage = () => {
         </ul>
 
         {/* Section 2 with gradient */}
-        <h2
-          className="font-normal mt-10 md:mt-14 mb-4 md:mb-6 cursor-pointer transition-all duration-300 border-l-4 border-pink-400 pl-4"
-          style={{ fontSize: fontSizes.categoryTitle }}
-        >
+        <h2 className="font-normal mt-10 md:mt-14 mb-4 md:mb-6 cursor-pointer transition-all duration-300 ">
           <Link to="/about-us" className={linkClassName}>
             About Us
           </Link>
@@ -266,13 +248,12 @@ const SiteMapPage = () => {
           {aboutLinks.map((link, idx) => (
             <li
               key={idx}
-              className="mb-2 md:mb-3 cursor-pointer transition-all duration-300 font-medium"
+              className=" mb-2 md:mb-3 cursor-pointer transition-all duration-300 font-medium"
             >
               <Link
                 to={link.path}
                 onClick={handleClick(link)}
                 className={linkClassName}
-                style={{ fontSize: fontSizes.mainLink }}
               >
                 {link.name}
               </Link>
@@ -281,10 +262,7 @@ const SiteMapPage = () => {
         </ul>
 
         {/* Section 3 - Crisis with gradient */}
-        <h2
-          className="font-normal mt-10 md:mt-14 mb-4 md:mb-6 cursor-pointer transition-all duration-300 border-l-4 border-pink-400 pl-4"
-          style={{ fontSize: fontSizes.categoryTitle }}
-        >
+        <h2 className="font-normal mt-10 md:mt-14 mb-4 md:mb-6 cursor-pointer transition-all duration-300 ">
           <Link to="/incrisisneedhelp" className={linkClassName}>
             In Crisis?
           </Link>
@@ -300,10 +278,6 @@ const SiteMapPage = () => {
                   <Link
                     to={link.path}
                     className={linkClassName.replace('inline-block', 'block')}
-                    style={{
-                      fontSize: fontSizes.mainLink,
-                      marginBottom: '0.5rem',
-                    }}
                   >
                     {link.name}
                   </Link>
@@ -313,11 +287,7 @@ const SiteMapPage = () => {
                         key={pIdx}
                         className="mb-1.5 md:mb-2 cursor-pointer transition-all duration-300"
                       >
-                        <Link
-                          to={province.path}
-                          className={linkClassName}
-                          style={{ fontSize: fontSizes.subLink }}
-                        >
+                        <Link to={province.path} className={linkClassName}>
                           {province.name}
                         </Link>
                       </li>
@@ -325,11 +295,7 @@ const SiteMapPage = () => {
                   </ul>
                 </>
               ) : (
-                <Link
-                  to={link.path}
-                  className={linkClassName}
-                  style={{ fontSize: fontSizes.mainLink }}
-                >
+                <Link to={link.path} className={linkClassName}>
                   {link.name}
                 </Link>
               )}
@@ -338,10 +304,7 @@ const SiteMapPage = () => {
         </ul>
 
         {/* Section 4 - Resources with gradient */}
-        <h2
-          className="font-normal mt-10 md:mt-14 mb-4 md:mb-6 cursor-pointer transition-all duration-300 border-l-4 border-pink-400 pl-4"
-          style={{ fontSize: fontSizes.categoryTitle }}
-        >
+        <h2 className="font-normal mt-10 md:mt-14 mb-4 md:mb-6 cursor-pointer transition-all duration-300 ">
           <Link to="/resources" className={linkClassName}>
             Resources
           </Link>
@@ -353,11 +316,7 @@ const SiteMapPage = () => {
                 key={idx}
                 className="mb-2 md:mb-3 cursor-pointer transition-all duration-300 font-medium"
               >
-                <Link
-                  to={item.path}
-                  className={linkClassName}
-                  style={{ fontSize: fontSizes.mainLink }}
-                >
+                <Link to={item.path} className={linkClassName}>
                   {item.name}
                 </Link>
               </li>
@@ -366,10 +325,7 @@ const SiteMapPage = () => {
         </ul>
 
         {/* Section 5 - Pattern Interrupts with gradient */}
-        <h2
-          className="font-normal mt-10 md:mt-14 mb-4 md:mb-6 cursor-pointer transition-all duration-300 border-l-4 border-pink-400 pl-4"
-          style={{ fontSize: fontSizes.categoryTitle }}
-        >
+        <h2 className="font-normal mt-10 md:mt-14 mb-4 md:mb-6 cursor-pointer transition-all duration-300 ">
           <Link to="/pattern-interrupts" className={linkClassName}>
             Pattern Interrupts
           </Link>
@@ -381,22 +337,14 @@ const SiteMapPage = () => {
                 key={idx}
                 className="mb-2 md:mb-3 cursor-pointer transition-all duration-300 font-medium"
               >
-                <Link
-                  to={item.path}
-                  className={linkClassName}
-                  style={{ fontSize: fontSizes.mainLink }}
-                >
+                <Link to={item.path} className={linkClassName}>
                   {item.name}
                 </Link>
               </li>
             );
           })}
           <li className="mb-2 md:mb-3 cursor-pointer transition-all duration-300 font-medium">
-            <Link
-              to="/pattern-interrupt/apps"
-              className={linkClassName}
-              style={{ fontSize: fontSizes.mainLink }}
-            >
+            <Link to="/pattern-interrupt/apps" className={linkClassName}>
               Mental Health Apps
             </Link>
           </li>
@@ -410,7 +358,6 @@ const SiteMapPage = () => {
                   to={app.path}
                   onClick={handleScrollToSection(app.path, app.id)}
                   className={linkClassName}
-                  style={{ fontSize: fontSizes.subLink }}
                 >
                   {app.name}
                 </Link>
@@ -423,11 +370,7 @@ const SiteMapPage = () => {
                 key={idx}
                 className="mb-2 md:mb-3 cursor-pointer transition-all duration-300 font-medium"
               >
-                <Link
-                  to={item.path}
-                  className={linkClassName}
-                  style={{ fontSize: fontSizes.mainLink }}
-                >
+                <Link to={item.path} className={linkClassName}>
                   {item.name}
                 </Link>
               </li>
@@ -439,8 +382,7 @@ const SiteMapPage = () => {
         {finalLinks.map((link, idx) => (
           <h2
             key={idx}
-            className="font-normal mt-10 md:mt-14 mb-4 md:mb-6 cursor-pointer transition-all duration-300 border-l-4 border-pink-400 pl-4"
-            style={{ fontSize: fontSizes.categoryTitle }}
+            className="font-normal mt-10 md:mt-14 mb-4 md:mb-6 cursor-pointer transition-all duration-300 "
           >
             <Link
               to={link.path}

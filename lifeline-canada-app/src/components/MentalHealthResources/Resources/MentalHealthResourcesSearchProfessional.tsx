@@ -20,17 +20,15 @@ const MentalHealthResourcesSearchProfessional: React.FC = () => {
       </div>
       <div className="w-full px-6 sm:px-8 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-              Search for a Professional
-            </span>
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">Search for a Professional</span>
           </h1>
 
           <div className="flex items-center gap-4 mt-3 mb-1">
             <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
           </div>
 
-          <div className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+          <div className="mt-6 !bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
             <div className="flex flex-col sm:flex-row sm:items-start gap-6">
               <div className="flex-1">
                 <p className="leading-relaxed">
@@ -57,14 +55,14 @@ const MentalHealthResourcesSearchProfessional: React.FC = () => {
             </div>
 
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="p-5 bg-white rounded-lg shadow-sm border border-gray-100 flex items-start gap-4">
+              <div className="p-5 !bg-white rounded-lg shadow-sm border border-gray-100 flex items-start gap-4">
                 <img
                   src={eMentalHealth}
                   alt="eMentalHealth.ca"
                   className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain"
                 />
                 <div>
-                  <h3 className="font-semibold text-lg">eMentalHealth.ca</h3>
+                  <h3 className="font-normal !text-2xl">eMentalHealth.ca</h3>
                   <p className="mt-2 text-gray-600">
                     eMentalHealth.ca provides anonymous, confidential and
                     trustworthy information, 24 hours a day, 365 days a year.
@@ -73,21 +71,21 @@ const MentalHealthResourcesSearchProfessional: React.FC = () => {
                     href="https://www.ementalhealth.ca"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-block text-purple-700 font-medium underline"
+                    className="mt-3 inline-block !text-[#5f2d85] font-medium underline"
                   >
                     Visit Site
                   </a>
                 </div>
               </div>
 
-              <div className="p-5 bg-white rounded-lg shadow-sm border border-gray-100 flex items-start gap-4">
+              <div className="p-5 !bg-white rounded-lg shadow-sm border border-gray-100 flex items-start gap-4">
                 <img
                   src={bcPsychologicalAssociation}
                   alt="BC Psychological Association"
                   className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain"
                 />
                 <div>
-                  <h3 className="font-semibold text-lg">
+                  <h3 className="font-normal !text-2xl">
                     BC Psychological Association
                   </h3>
                   <p className="mt-2 text-gray-600">
@@ -98,21 +96,21 @@ const MentalHealthResourcesSearchProfessional: React.FC = () => {
                     href="https://psychologists.bc.ca"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-block text-purple-700 font-medium underline"
+                    className="mt-3 inline-block !text-[#5f2d85] font-medium underline"
                   >
                     Visit Site
                   </a>
                 </div>
               </div>
 
-              <div className="p-5 bg-white rounded-lg shadow-sm border border-gray-100 flex items-start gap-4">
+              <div className="p-5 !bg-white rounded-lg shadow-sm border border-gray-100 flex items-start gap-4">
                 <img
                   src={theravive}
                   alt="Theravive"
                   className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain"
                 />
                 <div>
-                  <h3 className="font-semibold text-lg">Theravive</h3>
+                  <h3 className="font-normal !text-2xl">Theravive</h3>
                   <p className="mt-2 text-gray-600">
                     A network of licensed clinical counsellors, therapists, and
                     psychologists who uphold compassionate therapy for effective
@@ -122,21 +120,21 @@ const MentalHealthResourcesSearchProfessional: React.FC = () => {
                     href="https://www.theravive.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-block text-purple-700 font-medium underline"
+                    className="mt-3 inline-block !text-[#5f2d85] font-medium underline"
                   >
                     Visit Site
                   </a>
                 </div>
               </div>
 
-              <div className="p-5 bg-white rounded-lg shadow-sm border border-gray-100 flex items-start gap-4">
+              <div className="p-5 !bg-white rounded-lg shadow-sm border border-gray-100 flex items-start gap-4">
                 <img
                   src={centerForMentalHealthServices}
                   alt="Center for Mental Health Services"
                   className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain"
                 />
                 <div>
-                  <h3 className="font-semibold text-lg">
+                  <h3 className="font-normal !text-2xl">
                     Center for Mental Health Services
                   </h3>
                   <p className="mt-2 text-gray-600">
@@ -147,21 +145,21 @@ const MentalHealthResourcesSearchProfessional: React.FC = () => {
                     href="https://www.samhsa.gov/find-help"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-block text-purple-700 font-medium underline"
+                    className="mt-3 inline-block !text-[#5f2d85] font-medium underline"
                   >
                     Visit Site
                   </a>
                 </div>
               </div>
 
-              <div className="p-5 bg-white rounded-lg shadow-sm border border-gray-100 flex items-start gap-4">
+              <div className="p-5 !bg-white rounded-lg shadow-sm border border-gray-100 flex items-start gap-4">
                 <img
                   src={helpPROTherapistFinder}
                   alt="HelpPRO Therapist Finder"
                   className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain"
                 />
                 <div>
-                  <h3 className="font-semibold text-lg">
+                  <h3 className="font-normal !text-2xl">
                     HelpPRO Therapist Finder
                   </h3>
                   <p className="mt-2 text-gray-600">
@@ -172,21 +170,21 @@ const MentalHealthResourcesSearchProfessional: React.FC = () => {
                     href="https://www.onlinetherapy.com/therapists/suicidal-thoughts/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-block text-purple-700 font-medium underline"
+                    className="mt-3 inline-block !text-[#5f2d85] font-medium underline"
                   >
                     Visit Site
                   </a>
                 </div>
               </div>
 
-              <div className="p-5 bg-white rounded-lg shadow-sm border border-gray-100 flex items-start gap-4">
+              <div className="p-5 !bg-white rounded-lg shadow-sm border border-gray-100 flex items-start gap-4">
                 <img
                   src={americanAddictionCenters}
                   alt="American Addiction Centers"
                   className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain"
                 />
                 <div>
-                  <h3 className="font-semibold text-lg">
+                  <h3 className="font-normal !text-2xl">
                     American Addiction Centers
                   </h3>
                   <p className="mt-2 text-gray-600">
@@ -197,7 +195,7 @@ const MentalHealthResourcesSearchProfessional: React.FC = () => {
                     href="https://americanaddictioncenters.org/virtual-meetings"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-block text-purple-700 font-medium underline"
+                    className="mt-3 inline-block !text-[#5f2d85] font-medium underline"
                   >
                     Visit Site
                   </a>

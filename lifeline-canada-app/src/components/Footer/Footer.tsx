@@ -94,8 +94,8 @@ const Footer: React.FC = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6 md:px-10">
         {/* Left Links */}
-        <div className="flex flex-col items-center md:items-start space-y-4 text-base md:text-lg lg:text-xl font-medium">
-          <h3 className="text-sm uppercase tracking-wider text-[#9F7AEA]/70 font-semibold mb-2">
+        <div className="flex flex-col items-center md:items-start space-y-4 text-base md:text-lg lg:!text-xl font-medium">
+          <h3 className="!text-sm uppercase tracking-wider !text-[#9F7AEA]/70 font-normal mb-6">
             Navigation
           </h3>
           {LEFT_LINKS.map((link, index) => (
@@ -115,7 +115,7 @@ const Footer: React.FC = () => {
 
         {/* Social Icons */}
         <div className="flex flex-col items-center">
-          <h3 className="text-sm uppercase tracking-wider !text-[#9F7AEA]/70 font-semibold mb-6">
+          <h3 className="!text-sm uppercase tracking-wider !text-[#9F7AEA]/70 font-normal mb-6">
             Connect
           </h3>
           <div className="flex justify-center items-start gap-4 md:gap-6">
@@ -126,9 +126,9 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 target="_blank"
                 aria-label={item.label}
-                className="bg-white/10 backdrop-blur-sm !text-white p-3 md:p-4 rounded-lg hover:bg-gradient-to-r hover:from-[#9F7AEA] hover:to-[#6B46C1] hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg border border-white/10"
+                className="!bg-white/10 backdrop-blur-sm !text-white p-3 md:p-4 rounded-lg hover:bg-gradient-to-r hover:from-[#9F7AEA] hover:to-[#6B46C1] hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg border border-white/10"
               >
-                <span className="text-lg md:text-xl">{item.icon}</span>
+                <span className="text-lg md:!text-xl">{item.icon}</span>
               </a>
             ))}
           </div>
@@ -139,8 +139,8 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Right Links */}
-        <div className="flex flex-col items-center md:items-end space-y-4 text-base md:text-lg lg:text-xl font-medium">
-          <h3 className="text-sm uppercase tracking-wider text-[#9F7AEA]/70 font-semibold mb-2">
+        <div className="flex flex-col items-center md:items-end space-y-4 text-base md:text-lg lg:!text-xl font-medium">
+          <h3 className="!text-sm uppercase tracking-wider !text-[#9F7AEA]/70 font-normal mb-6">
             Get Involved
           </h3>
           {RIGHT_LINKS.map((link, index) => (

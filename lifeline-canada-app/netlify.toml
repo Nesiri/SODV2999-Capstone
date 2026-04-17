@@ -1,18 +1,25 @@
 [build]
-  command = "tsc --noEmit || true && vite build"
+  command = "npm run build"
   publish = "dist"
 
 [build.environment]
   CI = "false"
   NODE_OPTIONS = "--max-old-space-size=4096"
+  NODE_ENV = "production"
 
-# Keep assets rule (optional)
+# Ensure proper asset caching
+[headers]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Keep assets rule
 [[redirects]]
   from = "/assets/*"
   to = "/assets/:splat"
   status = 200
 
-# ADD THIS (MOST IMPORTANT)
+# SPA fallback
 [[redirects]]
   from = "/*"
   to = "/index.html"

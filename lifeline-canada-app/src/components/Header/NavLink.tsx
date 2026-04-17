@@ -40,7 +40,7 @@ export default function NavLink({ link, onClick }: NavLinkProps) {
           {link.icon}
         </span>
       )}
-      <span className="text-[clamp(12px,1.2vw,16px)] !text-[#89009B] dark:!text-[#89009B] whitespace-nowrap">
+      <span className="text-[clamp(12px,1.2vw,16px)] !text-[#5f2d85] dark:!text-[#5f2d85] whitespace-nowrap">
         {link.name}
       </span>
     </Link>

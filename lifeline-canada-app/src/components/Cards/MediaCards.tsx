@@ -17,8 +17,8 @@ const getHoverOverlayIcon = (category: string = '') => {
   if (PLAYABLE_CATEGORIES.includes(category)) {
     return (
       <svg
-        className="w-8 h-8 text-[#89009B] translate-x-0.5"
-        fill="currentColor"
+        className="w-8 h-8 !text-[#5f2d85] translate-x-0.5"
+        fill="#f5f1f7"
         viewBox="0 0 24 24"
       >
         <path d="M8 5v14l11-7z" />
@@ -30,8 +30,8 @@ const getHoverOverlayIcon = (category: string = '') => {
   if (category === 'books') {
     return (
       <svg
-        className="w-8 h-8 text-[#89009B]"
-        fill="currentColor"
+        className="w-8 h-8 !text-[#5f2d85]"
+        fill="#f5f1f7"
         viewBox="0 0 24 24"
       >
         <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -43,8 +43,8 @@ const getHoverOverlayIcon = (category: string = '') => {
   if (category === 'gallery') {
     return (
       <svg
-        className="w-8 h-8 text-[#89009B]"
-        fill="currentColor"
+        className="w-8 h-8 !text-[#5f2d85]"
+        fill="#f5f1f7"
         viewBox="0 0 24 24"
       >
         <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -56,8 +56,8 @@ const getHoverOverlayIcon = (category: string = '') => {
   if (category === 'kindness' || category === 'mood') {
     return (
       <svg
-        className="w-8 h-8 text-[#89009B]"
-        fill="currentColor"
+        className="w-8 h-8 !text-[#5f2d85]"
+        fill="#f5f1f7"
         viewBox="0 0 24 24"
       >
         <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -67,11 +67,7 @@ const getHoverOverlayIcon = (category: string = '') => {
 
   // Default explore icon
   return (
-    <svg
-      className="w-8 h-8 text-[#89009B]"
-      fill="currentColor"
-      viewBox="0 0 24 24"
-    >
+    <svg className="w-8 h-8 !text-[#5f2d85]" fill="#f5f1f7" viewBox="0 0 24 24">
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
     </svg>
   );
@@ -170,16 +166,16 @@ const MediaCardItem = memo(
       >
         <div
           className={`
-          relative w-full max-w-[320px] mx-auto bg-white/80 backdrop-blur-sm rounded-2xl 
+          relative w-full max-w-[320px] mx-auto !bg-white/80 backdrop-blur-sm rounded-2xl 
           shadow-xl hover:shadow-2xl 
           transition-all duration-500 ease-out
           transform-gpu hover:scale-105 hover:-translate-y-2
           border border-white/50
           overflow-hidden
-          ${isHovered ? 'ring-4 ring-[#B266C9]/30' : ''}
+          ${isHovered ? 'ring-4 ring-[#5f2d85]/30' : ''}
         `}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-[#89009B]/0 via-[#B266C9]/0 to-[#C77DDF]/0 group-hover:from-[#89009B]/10 group-hover:via-[#B266C9]/10 group-hover:to-[#C77DDF]/10 transition-all duration-500" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#5f2d85]/0 via-[#5f2d85]/0 to-[#C77DDF]/0 group-hover:from-[#5f2d85]/10 group-hover:via-[#5f2d85]/10 group-hover:to-[#C77DDF]/10 transition-all duration-500" />
 
           {/* Image Container */}
           <div className="relative w-full aspect-[4/3] overflow-hidden bg-gray-100">
@@ -194,7 +190,7 @@ const MediaCardItem = memo(
 
             {/* Hover Overlay */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-100 scale-90">
-              <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-2xl">
+              <div className="w-16 h-16 !bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-2xl">
                 {hoverIcon}
               </div>
             </div>
@@ -202,21 +198,21 @@ const MediaCardItem = memo(
 
           {/* Content */}
           <div className="relative p-6 h-[140px] flex flex-col">
-            <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#89009B] group-hover:to-[#B266C9] transition-all duration-300">
+            <h3 className="!text-lg font-bold !text-[#5f2d85] mb-2 line-clamp-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#5f2d85] group-hover:to-[#5f2d85] transition-all duration-300">
               {card.title}
             </h3>
 
-            <div className="w-12 h-0.5 bg-gradient-to-r from-[#89009B] to-[#B266C9] rounded-full mb-3 transform origin-left group-hover:scale-x-150 transition-transform duration-300" />
+            <div className="w-12 h-0.5 bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] rounded-full mb-3 transform origin-left group-hover:scale-x-150 transition-transform duration-300" />
 
             <div className="flex items-center justify-between text-sm mt-auto">
               <span className="text-gray-500 capitalize">
                 {card.category?.replace('-', ' ')}
               </span>
-              <span className="text-[#89009B] font-semibold flex items-center gap-1">
+              <span className="!text-[#5f2d85] font-normal flex items-center gap-1">
                 <svg
                   className="w-4 h-4 group-hover:translate-x-1 transition-transform"
                   fill="none"
-                  stroke="currentColor"
+                  stroke="#5f2d85"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -232,10 +228,10 @@ const MediaCardItem = memo(
 
           {/* Corner accents */}
           <div className="absolute top-0 left-0 w-12 h-12">
-            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#B266C9]/30 rounded-tl-xl group-hover:border-[#89009B] transition-colors duration-500" />
+            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#5f2d85]/30 rounded-tl-xl group-hover:border-[#5f2d85] transition-colors duration-500" />
           </div>
           <div className="absolute bottom-0 right-0 w-12 h-12">
-            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#B266C9]/30 rounded-br-xl group-hover:border-[#89009B] transition-colors duration-500" />
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#5f2d85]/30 rounded-br-xl group-hover:border-[#5f2d85] transition-colors duration-500" />
           </div>
         </div>
       </Link>
@@ -272,8 +268,8 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
     <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-[#f5edf7] via-white to-[#e8dceb]">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-[#89009B]/10 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#B266C9]/10 rounded-full blur-3xl animate-pulse-slower" />
+        <div className="absolute top-20 left-20 w-72 h-72 bg-[#5f2d85]/10 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#5f2d85]/10 rounded-full blur-3xl animate-pulse-slower" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#C77DDF]/10 rounded-full blur-3xl animate-pulse" />
 
         <div
@@ -287,7 +283,7 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
         {[...Array(20)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1.5 h-1.5 bg-gradient-to-r from-[#89009B] to-[#B266C9] rounded-full opacity-20 animate-float"
+            className="absolute w-1.5 h-1.5 bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] rounded-full opacity-20 animate-float"
             style={{
               top: `${(i * 5) % 100}%`,
               left: `${(i * 7) % 100}%`,
@@ -301,18 +297,18 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
       <div className="relative max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-[#B266C9]/30 mb-6">
+          <div className="inline-flex items-center gap-2 !bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-[#5f2d85]/30 mb-6">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#89009B] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#B266C9]"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5f2d85] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#5f2d85]"></span>
             </span>
-            <span className="text-sm font-medium text-[#89009B]">
+            <span className="text-sm font-medium !text-[#5f2d85]">
               Break the Pattern
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#89009B] via-[#B266C9] to-[#89009B]">
+          <h2 className="!text-4xl md:text-5xl lg:text-6xl font-black mb-6">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#5f2d85] via-[#5f2d85] to-[#5f2d85]">
               {title}
             </span>
           </h2>
@@ -321,7 +317,7 @@ const MediaCardsSection: React.FC<MediaCardsSectionProps> = ({
             {description}
           </p>
 
-          <div className="w-24 h-1 bg-gradient-to-r from-[#89009B] to-[#B266C9] rounded-full mx-auto mt-8" />
+          <div className="w-24 h-1 bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] rounded-full mx-auto mt-8" />
         </div>
 
         {/* Cards Grid */}

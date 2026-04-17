@@ -78,17 +78,15 @@ const MentalHealthResourcesMythsFacts: React.FC = () => {
       </div>
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-              Myths &amp; Facts
-            </span>
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">Myths &amp; Facts</span>
           </h1>
 
           <div className="flex items-center gap-4 mt-3 mb-1">
             <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
           </div>
 
-          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+          <main className="mt-6 !bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6 lg:gap-8 items-start">
               <div>
                 <p className="leading-relaxed">
@@ -122,7 +120,7 @@ const MentalHealthResourcesMythsFacts: React.FC = () => {
             </div>
           </main>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_260px] gap-4 lg:gap-6 lg:items-start">
               <div>
                 <p className="leading-relaxed">
@@ -153,16 +151,16 @@ const MentalHealthResourcesMythsFacts: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Suicide Myths vs Facts
             </h2>
 
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 [&_strong]:font-bold [&_strong]:text-purple-700">
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 [&_strong]:font-bold [&_strong]:!text-[#5f2d85]">
               {mythsVsFacts.map((item, index) => (
                 <div
                   key={index}
-                  className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm"
+                  className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm"
                 >
                   <details className="rounded-lg border border-purple-100 bg-purple-50/40 p-3">
                     <summary className="cursor-pointer leading-relaxed">
@@ -186,9 +184,9 @@ const MentalHealthResourcesMythsFacts: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
             <details open className="group">
-              <summary className="cursor-pointer text-lg font-semibold text-purple-700">
+              <summary className="cursor-pointer text-lg font-normal !text-[#5f2d85]">
                 Facts About Mental Illness and Suicide
               </summary>
 
@@ -258,7 +256,7 @@ const MentalHealthResourcesMythsFacts: React.FC = () => {
                       href="https://www.samhsa.gov"
                       target="_blank"
                       rel="noreferrer"
-                      className="font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-2"
+                      className="font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-2"
                     >
                       SAMHSA
                     </a>

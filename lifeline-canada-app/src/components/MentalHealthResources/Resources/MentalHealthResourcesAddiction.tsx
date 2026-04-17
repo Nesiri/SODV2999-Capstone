@@ -21,7 +21,7 @@ const canadianCentreForAddictions =
 
 const MentalHealthResourcesAddiction: React.FC = () => {
   const resourceLinkClassName =
-    'text-lg font-semibold !text-purple-700 hover:!text-purple-800 focus:!text-purple-700 active:!text-purple-800 visited:!text-purple-700 underline underline-offset-4';
+    'text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] focus:!text-[#5f2d85] active:!text-[#5f2d85] visited:!text-[#5f2d85] underline underline-offset-4';
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 py-12 overflow-hidden">
@@ -32,17 +32,15 @@ const MentalHealthResourcesAddiction: React.FC = () => {
       </div>
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-              Addiction
-            </span>
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="">Addiction</span>
           </h1>
 
           <div className="flex items-center gap-4 mt-3 mb-1">
             <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
           </div>
 
-          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+          <main className="mt-6 !bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
             <div className="flex flex-col sm:flex-row sm:items-start gap-6">
               <div className="flex-1">
                 <p className="leading-relaxed">
@@ -73,13 +71,13 @@ const MentalHealthResourcesAddiction: React.FC = () => {
             </div>
           </main>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Canadian Addiction Helplines
             </h2>
 
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={alberta}
                   alt="Alberta Health Services"
@@ -98,7 +96,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={britishColumbia}
                   alt="British Columbia"
@@ -117,7 +115,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={manitoba}
                   alt="Manitoba"
@@ -138,7 +136,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={newBrunswick}
                   alt="New Brunswick"
@@ -153,7 +151,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 <p className="mt-2 leading-relaxed">1-866-355-5550</p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={newfoundland}
                   alt="Newfoundland & Labrador"
@@ -172,7 +170,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={northwestTerritories}
                   alt="Northwest Territories"
@@ -191,7 +189,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={novaScotia}
                   alt="Nova Scotia"
@@ -210,7 +208,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={nunavut}
                   alt="Nunavut"
@@ -229,7 +227,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={ontario}
                   alt="Ontario"
@@ -244,7 +242,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 <p className="mt-2 leading-relaxed">1-866-531-2600</p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={princeEdwardIsland}
                   alt="Prince Edward Island"
@@ -263,7 +261,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={quebec}
                   alt="Quebec"
@@ -279,7 +277,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={saskatchewan}
                   alt="Saskatchewan"
@@ -298,7 +296,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={yukon}
                   alt="Yukon"
@@ -321,7 +319,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <img
                   src={canadianCentreForAddictions}
                   alt="Canadian Centre for Addictions"
@@ -344,13 +342,13 @@ const MentalHealthResourcesAddiction: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-purple-700">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               US Addiction Centres
             </h2>
 
             <div className="mt-6 grid gap-4 sm:gap-5">
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <a
                   href="https://www.addictioncenter.com"
                   target="_blank"
@@ -367,7 +365,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <a
                   href="https://www.therecoveryvillage.com"
                   target="_blank"
@@ -386,7 +384,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <a
                   href="https://www.alcoholhelp.com"
                   target="_blank"
@@ -403,7 +401,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <a
                   href="https://www.alternativetomeds.com/"
                   target="_blank"
@@ -423,7 +421,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <a
                   href="https://www.rehabspot.com"
                   target="_blank"
@@ -441,7 +439,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <a
                   href="https://monarchshores.com"
                   target="_blank"
@@ -467,7 +465,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <a
                   href="https://rehabnet.com"
                   target="_blank"
@@ -484,7 +482,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <a
                   href="https://sunshinebehavioralhealth.com"
                   target="_blank"
@@ -501,7 +499,7 @@ const MentalHealthResourcesAddiction: React.FC = () => {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm">
                 <a
                   href="https://asanarecovery.com"
                   target="_blank"

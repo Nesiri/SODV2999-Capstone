@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 
 type Movie = {
   title: string;
@@ -10,175 +10,170 @@ type Movie = {
 
 const movies: Movie[] = [
   {
-    title: "The Theory of Everything",
+    title: 'The Theory of Everything',
     year: 2014,
-    imdbId: "tt2980516",
-    image: "/images/pattern/movies-of-inspiration/the-theory-of-everything.jpg",
+    imdbId: 'tt2980516',
+    image: '/images/pattern/movies-of-inspiration/the-theory-of-everything.jpg',
     description:
       "Based on the life of Stephen Hawking, the Theory Of Everything is a story about Stephen Hawking and his wife Jane Wilde. At 21, Stephen realizes that he has motor neuron disease which is not curable, but he doesn't give up.",
   },
   {
-    title: "42",
+    title: '42',
     year: 2013,
-    imdbId: "tt0453562",
-    image: "/images/pattern/movies-of-inspiration/42.jpg",
+    imdbId: 'tt0453562',
+    image: '/images/pattern/movies-of-inspiration/42.jpg',
     description:
-      "When talent silences all critics. Branch Rickey hires Jackie Robinson against all odds. Criticism follows, but talent proves everything.",
+      'When talent silences all critics. Branch Rickey hires Jackie Robinson against all odds. Criticism follows, but talent proves everything.',
   },
   {
-    title: "Lincoln",
+    title: 'Lincoln',
     year: 2012,
-    imdbId: "tt0443272",
-    image: "/images/pattern/movies-of-inspiration/lincoln.jpg",
+    imdbId: 'tt0443272',
+    image: '/images/pattern/movies-of-inspiration/lincoln.jpg',
     description:
       "The story of Abraham Lincoln's fight to abolish slavery during the American Civil War using political and moral leadership.",
   },
   {
-    title: "Intouchables",
+    title: 'Intouchables',
     year: 2011,
-    imdbId: "tt1675434",
-    image: "/images/pattern/movies-of-inspiration/intouchables.jpg",
+    imdbId: 'tt1675434',
+    image: '/images/pattern/movies-of-inspiration/intouchables.jpg',
     description:
-      "A wealthy quadriplegic man forms an unlikely friendship with his caretaker from a completely different background.",
+      'A wealthy quadriplegic man forms an unlikely friendship with his caretaker from a completely different background.',
   },
   {
-    title: "Moneyball",
+    title: 'Moneyball',
     year: 2011,
-    imdbId: "tt1210166",
-    image: "/images/pattern/movies-of-inspiration/moneyball.jpg",
+    imdbId: 'tt1210166',
+    image: '/images/pattern/movies-of-inspiration/moneyball.jpg',
     description:
-      "A baseball coach challenges traditional methods and rebuilds his team using data-driven strategies.",
+      'A baseball coach challenges traditional methods and rebuilds his team using data-driven strategies.',
   },
   {
-    title: "Invictus",
+    title: 'Invictus',
     year: 2009,
-    imdbId: "tt1057500",
-    image: "/images/pattern/movies-of-inspiration/invictus.jpg",
+    imdbId: 'tt1057500',
+    image: '/images/pattern/movies-of-inspiration/invictus.jpg',
     description:
-      "Nelson Mandela uses rugby to unite a divided South Africa after apartheid.",
+      'Nelson Mandela uses rugby to unite a divided South Africa after apartheid.',
   },
   {
-    title: "The Blind Side",
+    title: 'The Blind Side',
     year: 2009,
-    imdbId: "tt0878804",
-    image: "/images/pattern/movies-of-inspiration/the-blind-side.jpg",
+    imdbId: 'tt0878804',
+    image: '/images/pattern/movies-of-inspiration/the-blind-side.jpg',
     description:
-      "A homeless teenager is taken in by a caring family and discovers his potential.",
+      'A homeless teenager is taken in by a caring family and discovers his potential.',
   },
   {
-    title: "Into the Wild",
+    title: 'Into the Wild',
     year: 2007,
-    imdbId: "tt0758758",
-    image: "/images/pattern/movies-of-inspiration/into-the-wild.jpg",
+    imdbId: 'tt0758758',
+    image: '/images/pattern/movies-of-inspiration/into-the-wild.jpg',
     description:
-      "A young man abandons his conventional life to explore nature and discover himself.",
+      'A young man abandons his conventional life to explore nature and discover himself.',
   },
   {
-    title: "Freedom Writers",
+    title: 'Freedom Writers',
     year: 2007,
-    imdbId: "tt0463998",
-    image: "/images/pattern/movies-of-inspiration/freedom-writers.jpg",
+    imdbId: 'tt0463998',
+    image: '/images/pattern/movies-of-inspiration/freedom-writers.jpg',
     description:
-      "A teacher inspires her students to express themselves and pursue education.",
+      'A teacher inspires her students to express themselves and pursue education.',
   },
   {
-    title: "October Sky",
+    title: 'October Sky',
     year: 1999,
-    imdbId: "tt0132477",
-    image: "/images/pattern/movies-of-inspiration/october-sky.jpg",
+    imdbId: 'tt0132477',
+    image: '/images/pattern/movies-of-inspiration/october-sky.jpg',
     description:
       "A boy dreams of building rockets despite his father's opposition.",
   },
   {
-    title: "Patch Adams",
+    title: 'Patch Adams',
     year: 1998,
-    imdbId: "tt0129290",
-    image: "/images/pattern/movies-of-inspiration/patch-adams.jpg",
+    imdbId: 'tt0129290',
+    image: '/images/pattern/movies-of-inspiration/patch-adams.jpg',
     description:
-      "A doctor believes in treating patients with humor and compassion.",
+      'A doctor believes in treating patients with humor and compassion.',
   },
   {
-    title: "Glory Road",
+    title: 'Glory Road',
     year: 2006,
-    imdbId: "tt0425591",
-    image: "/images/pattern/movies-of-inspiration/glory-road.jpg",
+    imdbId: 'tt0425591',
+    image: '/images/pattern/movies-of-inspiration/glory-road.jpg',
     description:
-      "A basketball coach breaks racial barriers by focusing on talent.",
+      'A basketball coach breaks racial barriers by focusing on talent.',
   },
   {
-    title: "The Pursuit of Happyness",
+    title: 'The Pursuit of Happyness',
     year: 2006,
-    imdbId: "tt0454921",
-    image: "/images/pattern/movies-of-inspiration/the-pursuit-of-happyness.jpg",
+    imdbId: 'tt0454921',
+    image: '/images/pattern/movies-of-inspiration/the-pursuit-of-happyness.jpg',
     description:
-      "A struggling father works hard to build a better life for his son.",
+      'A struggling father works hard to build a better life for his son.',
   },
   {
-    title: "Rescue Dawn",
+    title: 'Rescue Dawn',
     year: 2006,
-    imdbId: "tt0462504",
-    image: "/images/pattern/movies-of-inspiration/rescue-dawn.jpg",
-    description:
-      "A war prisoner fights to survive and escape captivity.",
+    imdbId: 'tt0462504',
+    image: '/images/pattern/movies-of-inspiration/rescue-dawn.jpg',
+    description: 'A war prisoner fights to survive and escape captivity.',
   },
   {
     title: "The World's Fastest Indian",
     year: 2005,
-    imdbId: "tt0412080",
-    image: "/images/pattern/movies-of-inspiration/the-worlds-fastest-indian.jpg",
-    description:
-      "A man pursues his dream of breaking a world speed record.",
+    imdbId: 'tt0412080',
+    image:
+      '/images/pattern/movies-of-inspiration/the-worlds-fastest-indian.jpg',
+    description: 'A man pursues his dream of breaking a world speed record.',
   },
   {
-    title: "Coach Carter",
+    title: 'Coach Carter',
     year: 2005,
-    imdbId: "tt0393162",
-    image: "/images/pattern/movies-of-inspiration/coach-carter.jpg",
-    description:
-      "A coach prioritizes education alongside sports success.",
+    imdbId: 'tt0393162',
+    image: '/images/pattern/movies-of-inspiration/coach-carter.jpg',
+    description: 'A coach prioritizes education alongside sports success.',
   },
   {
-    title: "The Aviator",
+    title: 'The Aviator',
     year: 2004,
-    imdbId: "tt0338751",
-    image: "/images/pattern/movies-of-inspiration/the-aviator.jpg",
-    description:
-      "The rise and struggles of aviation pioneer Howard Hughes.",
+    imdbId: 'tt0338751',
+    image: '/images/pattern/movies-of-inspiration/the-aviator.jpg',
+    description: 'The rise and struggles of aviation pioneer Howard Hughes.',
   },
   {
-    title: "Hotel Rwanda",
+    title: 'Hotel Rwanda',
     year: 2004,
-    imdbId: "tt0395169",
-    image: "/images/pattern/movies-of-inspiration/hotel-rwanda.jpg",
-    description:
-      "A hotel manager saves lives during the Rwanda genocide.",
+    imdbId: 'tt0395169',
+    image: '/images/pattern/movies-of-inspiration/hotel-rwanda.jpg',
+    description: 'A hotel manager saves lives during the Rwanda genocide.',
   },
   {
-    title: "Catch Me If You Can",
+    title: 'Catch Me If You Can',
     year: 2002,
-    imdbId: "tt0264464",
-    image: "/images/pattern/movies-of-inspiration/catch-me-if-you-can.jpg",
-    description:
-      "A master con artist stays ahead of the FBI.",
+    imdbId: 'tt0264464',
+    image: '/images/pattern/movies-of-inspiration/catch-me-if-you-can.jpg',
+    description: 'A master con artist stays ahead of the FBI.',
   },
   {
-    title: "A Beautiful Mind",
+    title: 'A Beautiful Mind',
     year: 2001,
-    imdbId: "tt0268978",
-    image: "/images/pattern/movies-of-inspiration/a-beautiful-mind.jpg",
+    imdbId: 'tt0268978',
+    image: '/images/pattern/movies-of-inspiration/a-beautiful-mind.jpg',
     description:
-      "The journey of mathematician John Nash through brilliance and struggle.",
+      'The journey of mathematician John Nash through brilliance and struggle.',
   },
 ];
 
 function MovieCard({ movie }: { movie: Movie }) {
   return (
-    <div className="rounded-xl border border-gray-100 bg-white shadow-sm overflow-hidden flex flex-col">
+    <div className="rounded-xl border border-gray-100 !bg-white shadow-sm overflow-hidden flex flex-col">
       <a
         href={`https://www.imdb.com/title/${movie.imdbId}/`}
         target="_blank"
         rel="noreferrer"
-        className="block overflow-hidden text-purple-700 hover:text-purple-800"
+        className="block overflow-hidden !text-[#5f2d85] hover:!text-[#5f2d85]"
       >
         <img
           src={movie.image}
@@ -193,7 +188,7 @@ function MovieCard({ movie }: { movie: Movie }) {
           href={`https://www.imdb.com/title/${movie.imdbId}/`}
           target="_blank"
           rel="noreferrer"
-          className="text-sm font-semibold !text-purple-700 hover:text-purple-800 underline underline-offset-2 leading-snug"
+          className="text-sm font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-2 leading-snug"
         >
           {movie.title} ({movie.year})
         </a>
@@ -216,13 +211,9 @@ export default function MoviesOfInspiration() {
 
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-
-
           {/* Page Title */}
-          <h1 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-              Movies of Inspiration
-            </span>
+          <h1 className="mt-2 text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">Movies of Inspiration</span>
           </h1>
 
           <div className="flex items-center gap-4 mt-3 mb-1">
@@ -230,14 +221,15 @@ export default function MoviesOfInspiration() {
           </div>
 
           {/* Intro Card */}
-          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
+          <main className="mt-6 !bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
             <div className="flex-1">
               <p className="leading-relaxed">
-                Our soul needs inspiration just like the body needs food. Good inspirational
-                movies uplift our soul and fill it with hope.
+                Our soul needs inspiration just like the body needs food. Good
+                inspirational movies uplift our soul and fill it with hope.
               </p>
               <p className="mt-4 leading-relaxed">
-                These stories teach lessons, build courage, and help us move forward in life.
+                These stories teach lessons, build courage, and help us move
+                forward in life.
               </p>
             </div>
             <div className="sm:w-[30vw] sm:max-w-[18rem] sm:flex-shrink-0 w-full">
@@ -250,8 +242,8 @@ export default function MoviesOfInspiration() {
           </main>
 
           {/* Movies Grid */}
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Inspirational Movies based on True Stories &amp; Events
             </h2>
 
@@ -261,7 +253,6 @@ export default function MoviesOfInspiration() {
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>

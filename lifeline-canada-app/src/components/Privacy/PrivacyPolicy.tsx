@@ -7,7 +7,7 @@ const PrivacyPolicy: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#f5edf7] to-[#e8dceb]">
       {/* Mobile-Responsive Header */}
-      <div className="bg-white/70 backdrop-blur-sm border-b border-[#B266C9]/20 sticky top-0 z-10">
+      <div className="!bg-white/70 backdrop-blur-sm border-b border-[#5f2d85]/20 sticky top-0 z-10">
         <div className="max-w-4xl mx-auto px-3 sm:px-4 py-2 sm:py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-1.5 sm:space-x-2">
@@ -29,13 +29,13 @@ const PrivacyPolicy: React.FC = () => {
 
       {/* Single Card */}
       <div className="max-w-2xl mx-auto px-3 sm:px-4 py-4 sm:py-6 md:py-8">
-        <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border border-[#B266C9]/20 overflow-hidden">
+        <div className="!bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border border-[#5f2d85]/20 overflow-hidden">
           {/* Card Header - Reduced Height */}
-          <div className="bg-gradient-to-r from-[#89009B] to-[#B266C9] px-4 sm:px-6 py-4 sm:py-5 text-white">
+          <div className="bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] px-4 sm:px-6 py-4 sm:py-5 text-white">
             <div className="flex items-start gap-2 sm:gap-3">
               <Shield className="w-8 h-8 sm:w-10 sm:h-10 opacity-90 flex-shrink-0" />
               <div className="min-w-0 flex-1">
-                <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-0.5 sm:mb-1 truncate">
+                <h1 className="!text-xl sm:text-2xl md:text-3xl font-bold mb-0.5 sm:mb-1 truncate">
                   Privacy Policy
                 </h1>
                 <p className="text-xs sm:text-sm text-[#C77DDF] truncate">
@@ -63,7 +63,7 @@ const PrivacyPolicy: React.FC = () => {
               {/* What We Collect */}
               <div className="space-y-2 sm:space-y-3">
                 <div className="flex items-center space-x-1.5 sm:space-x-2">
-                  <Eye className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#89009B] flex-shrink-0" />
+                  <Eye className="w-3.5 h-3.5 sm:w-4 sm:h-4 !text-[#5f2d85] flex-shrink-0" />
                   <span className="text-sm sm:text-base font-medium text-gray-700">
                     What We Collect
                   </span>
@@ -73,19 +73,19 @@ const PrivacyPolicy: React.FC = () => {
                 </p>
                 <ul className="text-xs sm:text-sm text-gray-600 pl-5 sm:pl-6 space-y-1.5 sm:space-y-2">
                   <li className="flex items-start space-x-1.5 sm:space-x-2">
-                    <span className="w-1 h-1 bg-[#B266C9] rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></span>
+                    <span className="w-1 h-1 bg-[#5f2d85] rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></span>
                     <span>Your name and email address (for your account)</span>
                   </li>
                   <li className="flex items-start space-x-1.5 sm:space-x-2">
-                    <span className="w-1 h-1 bg-[#B266C9] rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></span>
+                    <span className="w-1 h-1 bg-[#5f2d85] rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></span>
                     <span>Mood entries you choose to record</span>
                   </li>
                   <li className="flex items-start space-x-1.5 sm:space-x-2">
-                    <span className="w-1 h-1 bg-[#B266C9] rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></span>
+                    <span className="w-1 h-1 bg-[#5f2d85] rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></span>
                     <span>Exercise activities you log</span>
                   </li>
                   <li className="flex items-start space-x-1.5 sm:space-x-2">
-                    <span className="w-1 h-1 bg-[#B266C9] rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></span>
+                    <span className="w-1 h-1 bg-[#5f2d85] rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></span>
                     <span>Resources you save for later</span>
                   </li>
                 </ul>
@@ -94,7 +94,7 @@ const PrivacyPolicy: React.FC = () => {
               {/* How We Use It */}
               <div className="space-y-2 sm:space-y-3">
                 <div className="flex items-center space-x-1.5 sm:space-x-2">
-                  <Heart className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#89009B] flex-shrink-0" />
+                  <Heart className="w-3.5 h-3.5 sm:w-4 sm:h-4 !text-[#5f2d85] flex-shrink-0" />
                   <span className="text-sm sm:text-base font-medium text-gray-700">
                     How We Use Your Data
                   </span>
@@ -121,25 +121,25 @@ const PrivacyPolicy: React.FC = () => {
               {/* What We DON'T Do */}
               <div className="space-y-2 sm:space-y-3">
                 <div className="flex items-center space-x-1.5 sm:space-x-2">
-                  <Lock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#89009B] flex-shrink-0" />
+                  <Lock className="w-3.5 h-3.5 sm:w-4 sm:h-4 !text-[#5f2d85] flex-shrink-0" />
                   <span className="text-sm sm:text-base font-medium text-gray-700">
                     What We DON'T Do
                   </span>
                 </div>
                 <div className="bg-[#f5edf7] rounded-lg sm:rounded-xl p-3 sm:p-4 space-y-1.5 sm:space-y-2">
-                  <p className="text-xs sm:text-sm text-[#89009B] flex items-start sm:items-center">
+                  <p className="text-xs sm:text-sm !text-[#5f2d85] flex items-start sm:items-center">
                     <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2 flex-shrink-0 mt-0.5 sm:mt-0" />
                     <span>Never share your data with anyone</span>
                   </p>
-                  <p className="text-xs sm:text-sm text-[#89009B] flex items-start sm:items-center">
+                  <p className="text-xs sm:text-sm !text-[#5f2d85] flex items-start sm:items-center">
                     <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2 flex-shrink-0 mt-0.5 sm:mt-0" />
                     <span>Never sell your personal information</span>
                   </p>
-                  <p className="text-xs sm:text-sm text-[#89009B] flex items-start sm:items-center">
+                  <p className="text-xs sm:text-sm !text-[#5f2d85] flex items-start sm:items-center">
                     <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2 flex-shrink-0 mt-0.5 sm:mt-0" />
                     <span>No social features - your journey is private</span>
                   </p>
-                  <p className="text-xs sm:text-sm text-[#89009B] flex items-start sm:items-center">
+                  <p className="text-xs sm:text-sm !text-[#5f2d85] flex items-start sm:items-center">
                     <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2 flex-shrink-0 mt-0.5 sm:mt-0" />
                     <span>No third-party tracking for ads</span>
                   </p>
@@ -149,7 +149,7 @@ const PrivacyPolicy: React.FC = () => {
               {/* Your Control */}
               <div className="space-y-2 sm:space-y-3">
                 <div className="flex items-center space-x-1.5 sm:space-x-2">
-                  <Trash2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#89009B] flex-shrink-0" />
+                  <Trash2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 !text-[#5f2d85] flex-shrink-0" />
                   <span className="text-sm sm:text-base font-medium text-gray-700">
                     You're in Control
                   </span>
@@ -175,12 +175,12 @@ const PrivacyPolicy: React.FC = () => {
           </div>
 
           {/* Footer with Contact - More compact on mobile */}
-          <div className="p-3 sm:p-6 bg-gray-50 border-t border-[#B266C9]/20">
+          <div className="p-3 sm:p-6 bg-gray-50 border-t border-[#5f2d85]/20">
             <p className="text-[10px] sm:text-xs text-gray-500 text-center">
               Questions? <span className="hidden xs:inline">Email us at </span>
               <a
                 href="mailto:privacy@thelifelinecanada.ca"
-                className="text-[#89009B] hover:text-[#B266C9] hover:underline transition-colors"
+                className="!text-[#5f2d85] hover:!text-[#5f2d85] hover:underline transition-colors"
               >
                 privacy@thelifelinecanada.ca
               </a>
@@ -202,7 +202,7 @@ const PrivacyPolicy: React.FC = () => {
           border-radius: 20px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: linear-gradient(to bottom, #89009B, #B266C9);
+          background: linear-gradient(to bottom, #5f2d85, #5f2d85);
           border-radius: 20px;
         }
         /* For very small screens */

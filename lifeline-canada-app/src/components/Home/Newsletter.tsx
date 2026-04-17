@@ -77,17 +77,17 @@ export default function Newsletter() {
           {/* Section Header */}
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100/50 backdrop-blur-sm rounded-full border border-purple-200/50 mb-4">
-              <span className="text-sm text-purple-700">
+              <span className="text-sm !text-[#5f2d85]">
                 Never miss an update
               </span>
             </div>
 
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 bg-clip-text text-transparent">
+            <h2 className="text-3xl lg:!text-4xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-[#5f2d85] via-[#5f2d85] to-[#5f2d85] bg-clip-text text-transparent">
                 Join Our Newsletter
               </span>
             </h2>
-            <p className="text-purple-700 text-lg">
+            <p className="!text-[#5f2d85] text-lg">
               Gentle reminders and helpful resources, delivered with care.
             </p>
           </div>
@@ -97,12 +97,12 @@ export default function Newsletter() {
             {/* Soft glow effect */}
             <div className="absolute -inset-1 bg-gradient-to-r from-purple-300/30 via-purple-400/30 to-purple-500/30 rounded-2xl blur-xl opacity-30 group-hover:opacity-40 transition duration-500"></div>
 
-            <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl border border-white/60 p-8 lg:p-10 shadow-xl">
+            <div className="relative !bg-white/80 backdrop-blur-sm rounded-2xl border border-white/60 p-8 lg:p-10 shadow-xl">
               {/* Newsletter Subscription Title */}
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100/50 rounded-full border border-purple-200/50">
-                  <Send className="w-4 h-4 text-purple-600" />
-                  <h3 className="text-lg font-semibold text-purple-700">
+                  <Send className="w-4 h-4 !text-[#5f2d85]" />
+                  <h3 className="text-lg font-normal !text-[#5f2d85]">
                     Newsletter Subscription
                   </h3>
                 </div>
@@ -111,12 +111,12 @@ export default function Newsletter() {
               {/* reCAPTCHA Section */}
               <div className="bg-purple-50 rounded-xl p-6 border border-purple-200/50 mb-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <Shield className="w-5 h-5 text-purple-600" />
-                  <span className="text-sm font-medium text-purple-700">
+                  <Shield className="w-5 h-5 !text-[#5f2d85]" />
+                  <span className="text-sm font-medium !text-[#5f2d85]">
                     Security Verification
                   </span>
                   {captchaVerified && (
-                    <span className="text-xs bg-purple-200 text-purple-700 px-2 py-1 rounded-full ml-auto">
+                    <span className="text-xs bg-purple-200 !text-[#5f2d85] px-2 py-1 rounded-full ml-auto">
                       Verified ✓
                     </span>
                   )}
@@ -148,7 +148,7 @@ export default function Newsletter() {
                 </div>
 
                 {!captchaVerified && RECAPTCHA_SITE_KEY && (
-                  <p className="text-xs text-purple-600 text-center">
+                  <p className="text-xs !text-[#5f2d85] text-center">
                     Please complete verification to subscribe
                   </p>
                 )}
@@ -168,7 +168,7 @@ export default function Newsletter() {
                     }
                     required
                     disabled={!captchaVerified}
-                    className="w-full pl-12 pr-4 py-4 bg-white border border-purple-200 rounded-xl text-purple-900 placeholder-purple-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full pl-12 pr-4 py-4 !bg-white border border-purple-200 rounded-xl text-purple-900 placeholder-purple-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   />
                 </div>
 
@@ -186,7 +186,7 @@ export default function Newsletter() {
                     }
                     required
                     disabled={!captchaVerified}
-                    className="w-full pl-12 pr-4 py-4 bg-white border border-purple-200 rounded-xl text-purple-900 placeholder-purple-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full pl-12 pr-4 py-4 !bg-white border border-purple-200 rounded-xl text-purple-900 placeholder-purple-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   />
                 </div>
 
@@ -196,7 +196,7 @@ export default function Newsletter() {
                   disabled={isEmailSubmitted || !captchaVerified}
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
-                  className="w-full px-6 py-4 bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 !text-white rounded-xl text-lg font-semibold transition-all flex items-center justify-center gap-3 disabled:opacity-50 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  className="w-full px-6 py-4 bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] hover:from-[#5f2d85] hover:to-purple-900 !text-white rounded-xl text-lg font-normal transition-all flex items-center justify-center gap-3 disabled:opacity-50 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
                   {isEmailSubmitted ? 'Sent!' : 'Subscribe to Newsletter'}
                   <ArrowRight
@@ -205,8 +205,8 @@ export default function Newsletter() {
                 </button>
 
                 {isEmailSubmitted && (
-                  <div className="flex items-center gap-2 text-purple-700 bg-purple-100 p-4 rounded-lg animate-fadeIn">
-                    <CheckCircle className="w-5 h-5 text-purple-600" />
+                  <div className="flex items-center gap-2 !text-[#5f2d85] bg-purple-100 p-4 rounded-lg animate-fadeIn">
+                    <CheckCircle className="w-5 h-5 !text-[#5f2d85]" />
                     <span className="text-sm">
                       Thanks {name || 'for subscribing'}! Check your inbox.
                     </span>

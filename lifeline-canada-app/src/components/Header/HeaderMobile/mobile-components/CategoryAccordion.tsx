@@ -39,19 +39,19 @@ export const CategoryAccordion = ({
                 className="p-2.5 rounded-lg bg-gradient-to-br from-white to-gray-50 
                 group-hover:from-blue-100/30 group-hover:to-indigo-100/30"
               >
-                <span className="text-lg !text-[#89009B] ">
+                <span className="text-lg !text-[#5f2d85] ">
                   {getCategoryIcon(category)}
                 </span>
               </div>
               <div className="text-left">
-                <span className="font-bold !text-[#89009B]  group-hover:text-blue-700">
+                <span className="font-bold !text-[#5f2d85]  group-hover:text-blue-700">
                   {category}
                 </span>
               </div>
             </div>
             <ChevronRight
               className={`w-5 h-5 text-gray-400 transition-all duration-500
-                ${activeCategory === category ? 'rotate-90 !text-[#89009B] ' : 'group-hover:text-blue-500'}`}
+                ${activeCategory === category ? 'rotate-90 !text-[#5f2d85] ' : 'group-hover:text-blue-500'}`}
             />
           </button>
 
@@ -64,7 +64,7 @@ export const CategoryAccordion = ({
                   to={link.path}
                   onClick={onLinkClick}
                   className="group/link flex items-center gap-3 p-3.5 rounded-lg
-                    border border-gray-200 hover:border-blue-300 hover:bg-white hover:shadow-md
+                    border border-gray-200 hover:border-blue-300 hover:!bg-white hover:shadow-md
                     transition-all duration-300"
                   style={{ animationDelay: `${linkIndex * 30}ms` }}
                 >
@@ -73,7 +73,7 @@ export const CategoryAccordion = ({
                       {typeof link.icon === 'string' ? link.icon : link.icon}
                     </span>
                   )}
-                  <span className="text-gray-700 group-hover/link:text-gray-900 flex-1">
+                  <span className="text-gray-700 group-hover/link:!text-[#5f2d85] flex-1">
                     {link.name}
                   </span>
                   <ArrowRight

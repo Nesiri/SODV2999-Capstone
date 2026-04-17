@@ -25,17 +25,15 @@ const MentalHealthResourcesAnxiety: React.FC = () => {
       </div>
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-              Anxiety
-            </span>
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">Anxiety</span>
           </h1>
 
           <div className="flex items-center gap-4 mt-3 mb-1">
             <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
           </div>
 
-          <main className="mt-6 flex flex-col sm:flex-row items-start gap-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
+          <main className="mt-6 flex flex-col sm:flex-row items-start gap-6 !bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700">
             <div className="flex-1">
               <p className="leading-relaxed">
                 It's normal to feel anxious when facing a challenging situation,
@@ -61,15 +59,15 @@ const MentalHealthResourcesAnxiety: React.FC = () => {
             </div>
           </main>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               What you can do:
             </h2>
 
             <div className="mt-6 grid gap-4 sm:gap-5">
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row items-start gap-4">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row items-start gap-4">
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-purple-700">
+                  <h3 className="!text-xl font-normal !text-[#5f2d85]">
                     Emotional Symptoms
                   </h3>
                   <ul className="list-disc ml-6 mt-3 space-y-2 text-base text-gray-700">
@@ -103,9 +101,9 @@ const MentalHealthResourcesAnxiety: React.FC = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row items-start gap-4">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row items-start gap-4">
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-purple-700">
+                  <h3 className="!text-xl font-normal !text-[#5f2d85]">
                     What’s the difference between normal stress and anxiety?
                   </h3>
                   <p className="mt-3 leading-relaxed">
@@ -127,7 +125,7 @@ const MentalHealthResourcesAnxiety: React.FC = () => {
                       href="https://www.helpguide.org/mental-health/anxiety"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-purple-700 font-medium underline"
+                      className="!text-[#5f2d85] font-medium underline"
                     >
                       HelpGuide.org
                     </a>
@@ -144,8 +142,8 @@ const MentalHealthResourcesAnxiety: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Support Organizations for Anxiety Disorders
             </h2>
 
@@ -160,7 +158,7 @@ const MentalHealthResourcesAnxiety: React.FC = () => {
                   href="https://bouncebackbc.ca/what-is-bounceback/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xl font-medium text-purple-700 hover:text-purple-800 underline underline-offset-4 text-center leading-tight"
+                  className="!text-xl font-medium !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4 text-center leading-tight"
                 >
                   BounceBack
                 </a>
@@ -180,7 +178,7 @@ const MentalHealthResourcesAnxiety: React.FC = () => {
                   href="https://www.nami.org/nami-helpline/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xl font-medium text-purple-700 hover:text-purple-800 underline underline-offset-4 text-center leading-tight"
+                  className="!text-xl font-medium !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4 text-center leading-tight"
                 >
                   National Alliance on Mental Illness
                 </a>
@@ -200,7 +198,7 @@ const MentalHealthResourcesAnxiety: React.FC = () => {
                   href="https://findyourtherapist.adaa.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xl font-medium text-purple-700 hover:text-purple-800 underline underline-offset-4 text-center leading-tight"
+                  className="!text-xl font-medium !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4 text-center leading-tight"
                 >
                   Find a Therapist
                 </a>
@@ -220,7 +218,7 @@ const MentalHealthResourcesAnxiety: React.FC = () => {
                   href="https://adaa.org/educational-resources"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xl font-medium text-purple-700 hover:text-purple-800 underline underline-offset-4 text-center leading-tight"
+                  className="!text-xl font-medium !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4 text-center leading-tight"
                 >
                   Support Groups
                 </a>
@@ -239,7 +237,7 @@ const MentalHealthResourcesAnxiety: React.FC = () => {
                   href="https://www.nimh.nih.gov/health/topics/anxiety-disorders"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xl font-medium text-purple-700 hover:text-purple-800 underline underline-offset-4 text-center leading-tight"
+                  className="!text-xl font-medium !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4 text-center leading-tight"
                 >
                   Anxiety Disorders
                 </a>
@@ -259,7 +257,7 @@ const MentalHealthResourcesAnxiety: React.FC = () => {
                   href="https://www.betterhealth.vic.gov.au/conditionsandtreatments/anxiety"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xl font-medium text-purple-700 hover:text-purple-800 underline underline-offset-4 text-center leading-tight"
+                  className="!text-xl font-medium !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4 text-center leading-tight"
                 >
                   Anxiety Treatment Options
                 </a>
@@ -279,7 +277,7 @@ const MentalHealthResourcesAnxiety: React.FC = () => {
                   href="https://www.lundbeck.com/global/our-science/medical-education/lundbeck-institute"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xl font-medium text-purple-700 hover:text-purple-800 underline underline-offset-4 text-center leading-tight"
+                  className="!text-xl font-medium !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4 text-center leading-tight"
                 >
                   Anxiety Disorders: Comorbidity
                 </a>
@@ -300,7 +298,7 @@ const MentalHealthResourcesAnxiety: React.FC = () => {
                   href="https://pubmed.ncbi.nlm.nih.gov/12063146/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xl font-medium text-purple-700 hover:text-purple-800 underline underline-offset-4 text-center leading-tight"
+                  className="!text-xl font-medium !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4 text-center leading-tight"
                 >
                   Suicide risk in patients with anxiety disorders
                 </a>

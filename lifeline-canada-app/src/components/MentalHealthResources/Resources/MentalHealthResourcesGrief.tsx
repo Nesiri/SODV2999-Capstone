@@ -19,17 +19,15 @@ const MentalHealthResourcesGrief: React.FC = () => {
       </div>
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-              Grief
-            </span>
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">Grief</span>
           </h1>
 
           <div className="flex items-center gap-4 mt-3 mb-1">
             <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
           </div>
 
-          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row sm:items-start gap-6">
+          <main className="mt-6 !bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row sm:items-start gap-6">
             <div className="flex-1">
               <p className="leading-relaxed">
                 Although we all know that death is a part of everyone’s life,
@@ -58,19 +56,19 @@ const MentalHealthResourcesGrief: React.FC = () => {
             />
           </main>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Resources for Managing Grief
             </h2>
 
             <div className="mt-6 grid gap-4 sm:gap-5">
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                 <div className="flex-1">
                   <a
                     href="https://www.aftertalk.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     After Talk
                   </a>
@@ -97,13 +95,13 @@ const MentalHealthResourcesGrief: React.FC = () => {
                 />
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                 <div className="flex-1">
                   <a
                     href="https://whatsyourgrief.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     What’s Your Grief?
                   </a>
@@ -127,13 +125,13 @@ const MentalHealthResourcesGrief: React.FC = () => {
                 />
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                 <div className="flex-1">
                   <a
                     href="https://www.homeadvisor.com/cost/cleaning-services/estate-cleanout/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-lg font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="text-lg font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Decluttering Your Home after the Loss of a Loved One
                   </a>
@@ -162,20 +160,20 @@ const MentalHealthResourcesGrief: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Grief Apps
             </h2>
 
             <div className="mt-6 grid gap-4 sm:gap-5">
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                 <img
                   src={GriefRefuge}
                   alt="Grief Refuge"
                   className="w-28 h-auto object-contain rounded-lg sm:shrink-0"
                 />
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-purple-700">
+                  <h3 className="text-lg font-normal !text-[#5f2d85]">
                     Grief Refuge
                   </h3>
                   <p className="mt-2 leading-relaxed">
@@ -194,7 +192,7 @@ const MentalHealthResourcesGrief: React.FC = () => {
                       href="https://play.google.com/store/apps/details?id=com.q85fa9ea2552.app"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-md border border-purple-200 bg-white px-4 py-2 text-sm font-medium text-purple-700 hover:bg-purple-50"
+                      className="inline-flex items-center justify-center rounded-md border border-purple-200 !bg-white px-4 py-2 text-sm font-medium !text-[#5f2d85] hover:bg-purple-50"
                     >
                       Google Play
                     </a>
@@ -202,7 +200,7 @@ const MentalHealthResourcesGrief: React.FC = () => {
                       href="https://apps.apple.com/us/app/grief-refuge/id1561406623"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-md border border-purple-200 bg-white px-4 py-2 text-sm font-medium text-purple-700 hover:bg-purple-50"
+                      className="inline-flex items-center justify-center rounded-md border border-purple-200 !bg-white px-4 py-2 text-sm font-medium !text-[#5f2d85] hover:bg-purple-50"
                     >
                       Apple Store
                     </a>
@@ -210,14 +208,14 @@ const MentalHealthResourcesGrief: React.FC = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row sm:items-start gap-4">
                 <img
                   src={GriefWorks}
                   alt="Grief Works"
                   className="w-28 h-auto object-contain rounded-lg sm:shrink-0"
                 />
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-purple-700">
+                  <h3 className="text-lg font-normal !text-[#5f2d85]">
                     Grief Works
                   </h3>
                   <p className="mt-2 leading-relaxed">
@@ -238,7 +236,7 @@ const MentalHealthResourcesGrief: React.FC = () => {
                       href="https://www.griefworks.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="ml-1 text-purple-700 font-medium underline"
+                      className="ml-1 !text-[#5f2d85] font-medium underline"
                     >
                       here
                     </a>
@@ -250,7 +248,7 @@ const MentalHealthResourcesGrief: React.FC = () => {
                       href="https://play.google.com/store/apps/details?id=uk.co.psyt.gw&hl=en_GB&gl=US"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-md border border-purple-200 bg-white px-4 py-2 text-sm font-medium text-purple-700 hover:bg-purple-50"
+                      className="inline-flex items-center justify-center rounded-md border border-purple-200 !bg-white px-4 py-2 text-sm font-medium !text-[#5f2d85] hover:bg-purple-50"
                     >
                       Google Play
                     </a>
@@ -258,7 +256,7 @@ const MentalHealthResourcesGrief: React.FC = () => {
                       href="https://apps.apple.com/us/app/grief-works-self-care-love/id1558867513"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-md border border-purple-200 bg-white px-4 py-2 text-sm font-medium text-purple-700 hover:bg-purple-50"
+                      className="inline-flex items-center justify-center rounded-md border border-purple-200 !bg-white px-4 py-2 text-sm font-medium !text-[#5f2d85] hover:bg-purple-50"
                     >
                       Apple Store
                     </a>
@@ -268,9 +266,9 @@ const MentalHealthResourcesGrief: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700 flex flex-col sm:flex-row sm:items-start gap-6">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700 flex flex-col sm:flex-row sm:items-start gap-6">
             <div className="flex-1">
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+              <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
                 Recommended Reading
               </h2>
 
@@ -287,7 +285,7 @@ const MentalHealthResourcesGrief: React.FC = () => {
                 href="https://heatherstang.com/heather-stang/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center justify-center rounded-md border border-purple-200 bg-white px-4 py-2 text-sm font-medium text-purple-700 hover:bg-purple-50"
+                className="mt-5 inline-flex items-center justify-center rounded-md border border-purple-200 !bg-white px-4 py-2 text-sm font-medium !text-[#5f2d85] hover:bg-purple-50"
               >
                 Read Now
               </a>

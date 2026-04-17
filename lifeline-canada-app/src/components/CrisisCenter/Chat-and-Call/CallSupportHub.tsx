@@ -278,7 +278,7 @@ const CrisisCenterDirectory: React.FC = () => {
             className="w-10 h-10 text-rose-400"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="currentColor"
+            stroke="#5f2d85"
             strokeWidth="1.5"
           >
             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
@@ -295,7 +295,7 @@ const CrisisCenterDirectory: React.FC = () => {
             className="group relative transform transition-all duration-500 hover:-translate-y-2"
           >
             {/* Card */}
-            <div className="relative h-full bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden border border-white/50">
+            <div className="relative h-full !bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden border border-white/50">
               {/* Image Section */}
               <div className="relative h-48 overflow-hidden">
                 <div
@@ -313,7 +313,7 @@ const CrisisCenterDirectory: React.FC = () => {
                   <span className="text-3xl filter drop-shadow-lg">
                     {getGroupIcon(group.group)}
                   </span>
-                  <span className="px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-lg font-bold text-gray-800 shadow-lg">
+                  <span className="px-4 py-2 !bg-white/90 backdrop-blur-sm rounded-full text-lg font-bold text-gray-800 shadow-lg">
                     {group.group}
                   </span>
                 </div>
@@ -330,7 +330,7 @@ const CrisisCenterDirectory: React.FC = () => {
                   {group.countries.map((country, countryIndex) => (
                     <div key={countryIndex} className="space-y-3">
                       {/* Country Header */}
-                      <div className="flex items-center space-x-2 sticky top-0 bg-white/90 backdrop-blur-sm py-2 z-10">
+                      <div className="flex items-center space-x-2 sticky top-0 !bg-white/90 backdrop-blur-sm py-2 z-10">
                         <MapPin className="w-4 h-4 text-gray-500" />
                         <h2 className="font-bold !text-gray-700 text-md uppercase tracking-wide">
                           {country.country}
@@ -348,12 +348,12 @@ const CrisisCenterDirectory: React.FC = () => {
                         >
                           <div className="flex items-start justify-between">
                             <div className="flex-1">
-                              <h3 className="font-semibold text-gray-800 text-sm mb-2 line-clamp-2 pr-2">
+                              <h3 className="font-normal text-gray-800 text-sm mb-2 line-clamp-2 pr-2">
                                 {service.name}
                               </h3>
                               <div className="inline-flex items-center space-x-2 text-blue-600">
-                                <Phone className="w-4 h-4 text-purple-600" />
-                                <span className="text-sm text-purple-600 font-mono bg-blue-50 px-3 py-1 rounded-full">
+                                <Phone className="w-4 h-4 !text-[#5f2d85]" />
+                                <span className="text-sm !text-[#5f2d85] font-mono bg-blue-50 px-3 py-1 rounded-full">
                                   {service.phone}
                                 </span>
                               </div>
@@ -380,19 +380,12 @@ const CrisisCenterDirectory: React.FC = () => {
                 </div>
               </div>
             </div>
-
-            {/* Decorative Elements */}
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-purple-500 rounded-3xl opacity-0 group-hover:opacity-30 blur transition-opacity duration-500 -z-10" />
           </div>
         ))}
       </div>
 
       {/* Emergency Footer */}
-      <div className="max-w-7xl mx-auto mt-12 text-center">
-        <div className="inline-block p-4 bg-gradient-to-r from-red-500 to-pink-500 rounded-2xl shadow-xl">
-          <p className="text-white font-semibold"></p>
-        </div>
-      </div>
+      <div className="max-w-7xl mx-auto mt-12 text-center"></div>
 
       <style>{`
         .custom-scrollbar::-webkit-scrollbar {

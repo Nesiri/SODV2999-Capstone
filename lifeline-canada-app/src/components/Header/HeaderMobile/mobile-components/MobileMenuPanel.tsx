@@ -75,10 +75,10 @@ export const MobileMenuPanel = ({
       <div className="absolute top-4 right-4 z-50">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 text-purple-700 bg-gradient-to-b from-gray-100 via-yellow-200 to-purple-200 cursor-pointer"
+          className="w-6 h-6 !text-[#5f2d85] bg-gradient-to-b from-gray-100 via-yellow-200 to-purple-200 cursor-pointer"
           fill="none"
           viewBox="0 0 24 24"
-          stroke="currentColor"
+          stroke="#5f2d85"
           strokeWidth={2}
           onClick={closeMenu}
         >

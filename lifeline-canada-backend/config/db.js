@@ -7,7 +7,7 @@ dotenv.config();
 const { Pool } = pkg;
 
 console.log("Attempting to connect to Neon...");
-console.log("Database URL exists:", !!process.env.DATABASE_URL);
+console.log("Database URL exists:", !process.env.DATABASE_URL);
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,

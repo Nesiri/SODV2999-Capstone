@@ -58,9 +58,9 @@ const MentalHealthHero: React.FC = () => {
           <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-16">
             {/* Left Content - Mobile optimized */}
             <div className="flex-1 text-center lg:text-left order-2 lg:order-1">
-              <h1 className="font-bold text-gray-900 leading-tight mb-3 sm:mb-6 px-2 sm:px-0">
+              <h1 className="font-bold !text-[#5f2d85] leading-tight mb-3 sm:mb-6 px-2 sm:px-0">
                 {/* First line – SMALL on mobile */}
-                <span className="block text-base xs:!text-lg sm:!text-3xl md:!text-4xl lg:!text-5xl !text-[#89009B] ">
+                <span className="block text-base xs:!text-lg sm:!text-3xl md:!text-4xl lg:!text-5xl !text-[#5f2d85] ">
                   Mental Health Resources
                 </span>
 
@@ -68,13 +68,13 @@ const MentalHealthHero: React.FC = () => {
                 <span
                   className="block sm:inline
        !text-base xs:!text-lg sm:!text-2xl md:!text-3xl lg:!text-4xl
-       text-transparent bg-clip-text !bg-[#B266C9]"
+       text-transparent bg-clip-text !bg-[#5f2d85]"
                 >
                   At Your Fingertips
                 </span>
               </h1>
 
-              <div className="space-y-3 sm:space-y-4 text-gray-700 text-sm xs:text-base sm:text-lg md:text-xl max-w-2xl mx-auto lg:mx-0 px-4 sm:px-0">
+              <div className="space-y-3 sm:space-y-4 text-gray-700 text-sm xs:text-base sm:text-lg md:!text-xl max-w-2xl mx-auto lg:mx-0 px-4 sm:px-0">
                 <p className="leading-relaxed">
                   Do you or someone you care about struggle with thoughts of
                   suicide or other mental health issues? We're here to help. The

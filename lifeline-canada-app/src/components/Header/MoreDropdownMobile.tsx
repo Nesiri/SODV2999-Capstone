@@ -48,12 +48,12 @@ export default function MoreDropdownMobile({
             className="p-3.5 rounded-xl bg-gradient-to-br from-purple-50/80 to-pink-50/80 
             group-hover:from-purple-100 group-hover:to-pink-100 transition-all duration-500"
           >
-            <span className="text-purple-600 group-hover:scale-110 transition-transform duration-500">
+            <span className="!text-[#5f2d85] group-hover:scale-110 transition-transform duration-500">
               ⋯
             </span>
           </div>
           <div className="text-left">
-            <span className="font-bold text-gray-800 group-hover:text-purple-700 transition-colors">
+            <span className="font-bold text-gray-800 group-hover:!text-[#5f2d85] transition-colors">
               {triggerText}
             </span>
             <p className="text-sm text-gray-500 mt-1">
@@ -63,12 +63,12 @@ export default function MoreDropdownMobile({
         </div>
         {isOpen ? (
           <ChevronUp
-            className="w-5 h-5 text-gray-400 group-hover:text-purple-600 
+            className="w-5 h-5 text-gray-400 group-hover:!text-[#5f2d85] 
             transition-all duration-500"
           />
         ) : (
           <ChevronRight
-            className="w-5 h-5 text-gray-400 group-hover:text-purple-600 
+            className="w-5 h-5 text-gray-400 group-hover:!text-[#5f2d85] 
             group-hover:translate-x-2 transition-all duration-500"
           />
         )}
@@ -82,7 +82,7 @@ export default function MoreDropdownMobile({
               key={link.path}
               to={link.path}
               onClick={handleLinkClick}
-              className="group block p-4 rounded-2xl bg-white/80 hover:bg-white backdrop-blur-sm 
+              className="group block p-4 rounded-2xl !bg-white/80 hover:!bg-white backdrop-blur-sm 
                 border border-gray-100 hover:border-purple-200 hover:shadow-lg 
                 transition-all duration-500 hover:-translate-y-0.5 active:scale-[0.98]
                 focus:outline-none focus:ring-2 focus:ring-purple-500/30"
@@ -100,7 +100,7 @@ export default function MoreDropdownMobile({
                   </div>
                 )}
                 <span
-                  className="font-semibold text-gray-800 group-hover:text-purple-700 
+                  className="font-normal text-gray-800 group-hover:!text-[#5f2d85] 
                   transition-colors flex-1"
                 >
                   {link.name}

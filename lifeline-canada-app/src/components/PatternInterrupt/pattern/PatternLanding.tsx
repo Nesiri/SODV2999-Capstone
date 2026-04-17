@@ -1,20 +1,20 @@
-import { patternData } from "./patternData";
-import PatternCard from "./PatternCard";
+import { patternData } from './patternData';
+import PatternCard from './PatternCard';
 
 export default function PatternLanding() {
   const moodItems = Object.entries(patternData).filter(
-    ([, item]) => item.category === "Mood & Inspiration"
+    ([, item]) => item.category === 'Mood & Inspiration'
   );
 
   const selfHelpItems = Object.entries(patternData).filter(
-    ([, item]) => item.category === "Self Help & Tools"
+    ([, item]) => item.category === 'Self Help & Tools'
   );
 
   return (
     <div className="bg-[#F5F0FA] min-h-screen py-12">
       <div className="max-w-6xl mx-auto px-6 space-y-16">
         <div>
-          <h2 className="text-2xl font-semibold text-[#5A2D82] mb-8">
+          <h2 className="text-2xl font-normal text-[#5A2D82] mb-8">
             Mood & Inspiration
           </h2>
 
@@ -26,7 +26,7 @@ export default function PatternLanding() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold text-[#5A2D82] mb-8">
+          <h2 className="text-2xl font-normal text-[#5A2D82] mb-8">
             Self Help & Tools
           </h2>
 

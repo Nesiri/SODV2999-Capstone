@@ -14,12 +14,12 @@ const CommunicationsSpecialistSection: React.FC = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12 animate-fadeInDown">
-          <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-200/50 shadow-lg mb-4">
+          <div className="inline-flex items-center gap-2 !bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-200/50 shadow-lg mb-4">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
-            <span className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+            <span className="text-sm font-normal text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-[#5f2d85]">
               ✦ Presently Seeking: ✦
             </span>
           </div>
@@ -28,7 +28,7 @@ const CommunicationsSpecialistSection: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* LEFT COLUMN */}
           <div className="space-y-8 animate-fadeInLeft">
-            <h2 className="!text-2xl md:text-4xl lg:text-5xl font-black mb-4">
+            <h2 className="!text-2xl md:!text-4xl lg:text-5xl font-black mb-4">
               <span className="text-black">Communications</span>
               <br />
               <span className="text-gray-800 relative">
@@ -42,7 +42,7 @@ const CommunicationsSpecialistSection: React.FC = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500" />
 
               {/* Image container */}
-              <div className="relative bg-white/80 backdrop-blur-sm p-2 rounded-2xl overflow-hidden">
+              <div className="relative !bg-white/80 backdrop-blur-sm p-2 rounded-2xl overflow-hidden">
                 <div className="relative overflow-hidden rounded-xl">
                   <img
                     src={communicationImage}
@@ -61,7 +61,7 @@ const CommunicationsSpecialistSection: React.FC = () => {
               <div className="absolute -top-3 -left-3 text-3xl text-blue-400 opacity-30">
                 "
               </div>
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed italic font-light">
+              <p className="text-lg md:!text-xl text-gray-700 leading-relaxed italic font-light">
                 We are looking for an enthusiastic Communications Specialist,
                 managing our external communications. You will promote a
                 positive public image and control the dissemination of
@@ -101,7 +101,7 @@ const CommunicationsSpecialistSection: React.FC = () => {
                     <span className="text-blue-500 mt-1 text-lg group-hover:text-purple-500 transition-colors">
                       ✦
                     </span>
-                    <span className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors">
+                    <span className="text-gray-700 leading-relaxed group-hover:!text-[#5f2d85] transition-colors">
                       {item}
                     </span>
                   </li>
@@ -136,7 +136,7 @@ const CommunicationsSpecialistSection: React.FC = () => {
                     <span className="text-purple-500 mt-1 group-hover:scale-110 transition-transform">
                       •
                     </span>
-                    <span className="text-gray-700 group-hover:text-gray-900">
+                    <span className="text-gray-700 group-hover:!text-[#5f2d85]">
                       {item}
                     </span>
                   </li>

@@ -26,12 +26,12 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
   // Variant configurations using your two purple colors
   const variantConfig = {
     peaceful: {
-      gradient: 'from-[#89009B] via-[#9B4DAB] to-[#B266C9]',
+      gradient: 'from-[#5f2d85] via-[#9B4DAB] to-[#5f2d85]',
       light: 'from-[#f5edf7] via-[#f9f2fb] to-[#e8dceb]',
       button:
-        'bg-gradient-to-r from-[#89009B] to-[#B266C9] hover:from-[#7a0088] hover:to-[#a355b8]',
-      accent: 'border-[#B266C9]/30',
-      shadow: 'shadow-[#B266C9]/20',
+        'bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] hover:from-[#7a0088] hover:to-[#a355b8]',
+      accent: 'border-[#5f2d85]/30',
+      shadow: 'shadow-[#5f2d85]/20',
       icon: (
         <path
           strokeLinecap="round"
@@ -41,12 +41,12 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
       ),
     },
     hopeful: {
-      gradient: 'from-[#89009B] via-[#B266C9] to-[#C77DDF]',
+      gradient: 'from-[#5f2d85] via-[#5f2d85] to-[#C77DDF]',
       light: 'from-[#f5edf7] via-[#f0e6f2] to-[#e8dceb]',
       button:
-        'bg-gradient-to-r from-[#89009B] to-[#B266C9] hover:from-[#7a0088] hover:to-[#a355b8]',
-      accent: 'border-[#B266C9]/30',
-      shadow: 'shadow-[#B266C9]/20',
+        'bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] hover:from-[#7a0088] hover:to-[#a355b8]',
+      accent: 'border-[#5f2d85]/30',
+      shadow: 'shadow-[#5f2d85]/20',
       icon: (
         <path
           strokeLinecap="round"
@@ -56,12 +56,12 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
       ),
     },
     energetic: {
-      gradient: 'from-[#7B2D8F] via-[#89009B] to-[#B266C9]',
+      gradient: 'from-[#7B2D8F] via-[#5f2d85] to-[#5f2d85]',
       light: 'from-[#f0e6f2] via-[#f5edf7] to-[#e8dceb]',
       button:
-        'bg-gradient-to-r from-[#7B2D8F] to-[#89009B] hover:from-[#6a1d7e] hover:to-[#7a0088]',
-      accent: 'border-[#89009B]/30',
-      shadow: 'shadow-[#89009B]/20',
+        'bg-gradient-to-r from-[#7B2D8F] to-[#5f2d85] hover:from-[#6a1d7e] hover:to-[#7a0088]',
+      accent: 'border-[#5f2d85]/30',
+      shadow: 'shadow-[#5f2d85]/20',
       icon: (
         <path
           strokeLinecap="round"
@@ -71,10 +71,10 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
       ),
     },
     calm: {
-      gradient: 'from-[#B266C9] via-[#C77DDF] to-[#D494E5]',
+      gradient: 'from-[#5f2d85] via-[#C77DDF] to-[#D494E5]',
       light: 'from-[#f9f2fb] via-[#fdf5ff] to-[#f0e6f2]',
       button:
-        'bg-gradient-to-r from-[#B266C9] to-[#C77DDF] hover:from-[#a355b8] hover:to-[#b56ccd]',
+        'bg-gradient-to-r from-[#5f2d85] to-[#C77DDF] hover:from-[#a355b8] hover:to-[#b56ccd]',
       accent: 'border-[#C77DDF]/30',
       shadow: 'shadow-[#C77DDF]/20',
       icon: (
@@ -188,7 +188,7 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
                 />
 
                 {/* Healing light effect */}
-                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover/image:opacity-100 transition-opacity duration-700" />
+                <div className="absolute inset-0 !bg-white/20 opacity-0 group-hover/image:opacity-100 transition-opacity duration-700" />
               </div>
 
               {/* Decorative elements - scaled for full width */}
@@ -213,7 +213,7 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
                 <div
                   className={`w-1 h-8 lg:h-10 bg-gradient-to-b ${config.gradient} rounded-full animate-pulse`}
                 />
-                <span className="text-sm lg:text-base font-semibold tracking-wider text-[#B266C9] uppercase">
+                <span className="text-sm lg:text-base font-normal tracking-wider !text-[#5f2d85] uppercase">
                   Healing Journey
                 </span>
               </div>
@@ -221,7 +221,7 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
               <h2 className="relative">
                 <span
                   className={`
-                  text-4xl lg:text-5xl xl:text-6xl font-black leading-tight
+                  !text-4xl lg:text-5xl xl:text-6xl font-black leading-tight
                   bg-clip-text text-transparent 
                   bg-gradient-to-r ${config.gradient}
                   animate-gradient-x
@@ -244,21 +244,21 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
 
             {/* Description with empathetic typography */}
             <div className="relative">
-              <p className="text-gray-700 leading-relaxed text-base lg:text-lg xl:text-xl italic max-w-3xl">
+              <p className="text-gray-700 leading-relaxed text-base lg:text-lg xl:!text-xl italic max-w-3xl">
                 "{description}"
               </p>
 
               {/* Quotation marks - scaled for full width */}
-              <div className="absolute -top-4 -left-4 text-6xl lg:text-7xl text-[#B266C9]/20 select-none">
+              <div className="absolute -top-4 -left-4 text-6xl !text-[#5f2d85]/20 select-none">
                 "
               </div>
-              <div className="absolute -bottom-8 lg:-bottom-10 -right-4 text-6xl lg:text-7xl text-[#B266C9]/20 select-none rotate-180">
+              <div className="absolute -bottom-8 lg:-bottom-10 -right-4 text-6xl !text-[#5f2d85]/20 select-none rotate-180">
                 "
               </div>
             </div>
 
             {/* Key insight section - enhanced for full width */}
-            <div className="bg-white/60 backdrop-blur-sm rounded-2xl lg:rounded-3xl p-5 lg:p-6 border border-white/60 shadow-inner max-w-2xl">
+            <div className="!bg-white/60 backdrop-blur-sm rounded-2xl lg:rounded-3xl p-5 lg:p-6 border border-white/60 shadow-inner max-w-2xl">
               <div className="flex items-start gap-4 lg:gap-5">
                 <div
                   className={`
@@ -270,14 +270,14 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
                   <svg
                     className="w-6 h-6 lg:w-7 lg:h-7 text-white"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="white"
                     viewBox="0 0 24 24"
                   >
                     {config.icon}
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-1 lg:mb-2 text-base lg:text-lg">
+                  <h4 className="font-normal !text-[#5f2d85] mb-1 lg:mb-2 text-base lg:text-lg">
                     Interrupt the Pattern
                   </h4>
                   <p className="text-sm lg:text-base text-gray-600">
@@ -288,14 +288,14 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
               </div>
             </div>
 
-            {/* Action link with therapeutic message - FIXED LINK STYLING */}
-            <div className="pt-4 lg:pt-6">
+            {/* Action link with therapeutic message - CENTERED BUTTON */}
+            <div className="pt-4 lg:pt-6 flex flex-col items-center">
               <Link
                 to={buttonLink}
                 className={`
                   group/btn relative inline-flex items-center justify-center
-                  w-full sm:w-auto px-6 sm:px-8 lg:px-10 py-3 lg:py-4
-                  ${config.button} text-white font-bold text-sm lg:text-base
+                  w-full sm:w-auto px-8 sm:px-10 lg:px-12 py-3 lg:py-4
+                  ${config.button} !text-white font-bold text-sm lg:text-base
                   rounded-xl lg:rounded-2xl overflow-hidden
                   transition-all duration-500
                   hover:scale-105 hover:shadow-2xl
@@ -303,16 +303,16 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
                   cursor-pointer
                   no-underline
                   before:absolute before:inset-0
-                  before:bg-white/30 before:skew-x-12
+                  before:!bg-white/30 before:skew-x-12
                   before:translate-x-[-200%] hover:before:translate-x-[200%]
                   before:transition-transform before:duration-1000
                 `}
               >
                 <span className="relative z-10 flex items-center justify-center gap-3">
                   <svg
-                    className="w-5 h-5 animate-pulse"
+                    className="w-5 h-5 text-white"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="white"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -324,9 +324,9 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
                   </svg>
                   {buttonText}
                   <svg
-                    className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform"
+                    className="w-5 h-5 text-white group-hover/btn:translate-x-1 transition-transform"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="white"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -340,7 +340,7 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
               </Link>
 
               {/* Supportive message */}
-              <p className="text-sm lg:text-base text-gray-500 mt-4 text-center lg:text-left">
+              <p className="text-sm lg:text-base text-gray-500 mt-4 text-center">
                 ✨ Every step forward matters. You've got this.
               </p>
             </div>
@@ -349,10 +349,10 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
 
         {/* Healing corner decorations - using your purple colors */}
         <div className="absolute bottom-0 left-0 w-24 lg:w-32 h-24 lg:h-32">
-          <div className="absolute bottom-0 left-0 w-16 lg:w-20 h-16 lg:h-20 border-l-4 border-b-4 border-[#B266C9]/20 rounded-bl-3xl lg:rounded-bl-[2rem]" />
+          <div className="absolute bottom-0 left-0 w-16 lg:w-20 h-16 lg:h-20 border-l-4 border-b-4 border-[#5f2d85]/20 rounded-bl-3xl lg:rounded-bl-[2rem]" />
         </div>
         <div className="absolute top-0 right-0 w-24 lg:w-32 h-24 lg:h-32">
-          <div className="absolute top-0 right-0 w-16 lg:w-20 h-16 lg:h-20 border-r-4 border-t-4 border-[#89009B]/20 rounded-tr-3xl lg:rounded-tr-[2rem]" />
+          <div className="absolute top-0 right-0 w-16 lg:w-20 h-16 lg:h-20 border-r-4 border-t-4 border-[#5f2d85]/20 rounded-tr-3xl lg:rounded-tr-[2rem]" />
         </div>
       </div>
 

@@ -51,11 +51,11 @@ const VerifyEmail: React.FC = () => {
 
   return (
     <>
-      <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center">
+      <div className="max-w-md w-full !bg-white rounded-2xl shadow-xl p-8 text-center">
         {status === 'verifying' && (
           <>
             <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Loader className="w-8 h-8 text-purple-600 animate-spin" />
+              <Loader className="w-8 h-8 !text-[#5f2d85] animate-spin" />
             </div>
             <h2 className="text-2xl font-bold text-gray-800 mb-2">
               Verifying Your Email
@@ -80,7 +80,7 @@ const VerifyEmail: React.FC = () => {
             </p>
             <button
               onClick={() => navigate('/app?mode=login')}
-              className="mt-4 text-purple-600 hover:text-purple-700 font-medium"
+              className="mt-4 !text-[#5f2d85] hover:!text-[#5f2d85] font-medium"
             >
               Go to Login Now
             </button>
@@ -101,7 +101,7 @@ const VerifyEmail: React.FC = () => {
             </p>
             <button
               onClick={() => navigate('/app?mode=login')}
-              className="text-purple-600 hover:text-purple-700 font-medium"
+              className="!text-[#5f2d85] hover:!text-[#5f2d85] font-medium"
             >
               Back to Sign in
             </button>

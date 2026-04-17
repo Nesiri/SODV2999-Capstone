@@ -109,7 +109,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
               name="fullName"
               value={formData.fullName}
               onChange={handleChange}
-              className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B266C9] focus:border-[#89009B]"
+              className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f2d85] focus:border-[#5f2d85]"
               placeholder="Your name"
               required
             />
@@ -131,7 +131,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B266C9] focus:border-[#89009B]"
+              className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5f2d85] focus:border-[#5f2d85]"
               placeholder="you@example.com"
               required
             />
@@ -146,21 +146,21 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
               name="agreedToTerms"
               checked={formData.agreedToTerms}
               onChange={handleChange}
-              className="w-4 h-4 text-[#89009B] rounded border-gray-300 focus:ring-[#B266C9] mt-1 flex-shrink-0"
+              className="w-4 h-4 !text-[#5f2d85] rounded border-gray-300 focus:ring-[#5f2d85] mt-1 flex-shrink-0"
               required
             />
             <span className="text-sm text-gray-600">
               I agree to the{' '}
               <Link
                 to="/privacy?mode=termsofservice"
-                className="text-[#89009B] hover:text-[#B266C9] hover:underline transition-colors"
+                className="!text-[#5f2d85] hover:!text-[#5f2d85] hover:underline transition-colors"
               >
                 Terms of Service
               </Link>{' '}
               and{' '}
               <Link
                 to="/privacy?mode=privacy"
-                className="text-[#89009B] hover:text-[#B266C9] hover:underline transition-colors"
+                className="!text-[#5f2d85] hover:!text-[#5f2d85] hover:underline transition-colors"
               >
                 Privacy Policy
               </Link>
@@ -169,22 +169,22 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
         </div>
 
         {/* Submit Button - White text on purple background */}
-       <button
-  type="submit"
-  disabled={!formData.agreedToTerms}
-  className="w-full !bg-[#89009B] hover:bg-[#7a0088] text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
->
-  <span className="text-white">Sign Up</span>
-  <ArrowRight
-    size={18}
-    className="group-hover:translate-x-1 transition-transform text-white"
-  />
-</button>
+        <button
+          type="submit"
+          disabled={!formData.agreedToTerms}
+          className="w-full !bg-[#5f2d85] hover:bg-[#7a0088] text-white font-normal py-3 px-4 rounded-lg flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+        >
+          <span className="text-white">Sign Up</span>
+          <ArrowRight
+            size={18}
+            className="group-hover:translate-x-1 transition-transform text-white"
+          />
+        </button>
       </form>
 
       {/* Info Box */}
       <div className="mt-6 bg-[#f5edf7] rounded-lg p-4">
-        <p className="text-xs text-[#89009B] flex items-start gap-2">
+        <p className="text-xs !text-[#5f2d85] flex items-start gap-2">
           <Shield className="w-4 h-4 flex-shrink-0 mt-0.5" />
           <span>
             <strong>No password needed!</strong> We'll email you a secure
@@ -200,7 +200,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
           Already have an account?{' '}
           <button
             onClick={onSwitchToLogin}
-            className="text-[#89009B] hover:text-[#B266C9] font-medium hover:underline transition-colors"
+            className="!text-[#5f2d85] hover:!text-[#5f2d85] font-medium hover:underline transition-colors"
           >
             Sign in
           </button>

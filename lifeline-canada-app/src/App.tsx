@@ -34,6 +34,7 @@ import { AuthProvider } from './context/AuthProvider';
 import PatternInterruptRoutes from './routes/PatternInterruptRoutes';
 import { CenteredLayout } from './layouts/CenterLayout';
 import CrisisSupportButton from './components/Chatbot/CrisisSupportButton';
+import QuickExitButton from './components/Chatbot/QuickExitButton';
 
 export default function App() {
   return (
@@ -144,6 +145,7 @@ export default function App() {
         />
       </Routes>
       <CrisisSupportButton />
+      <QuickExitButton />
     </>
   );
 }

@@ -330,7 +330,7 @@ const BreathingExercises: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-6"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full mb-4 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 !bg-white/60 backdrop-blur-sm rounded-full mb-4 shadow-sm">
             <Heart size={16} className="text-rose-500" />
             <span className="!text-sm text-slate-600">Mindful Breathing</span>
           </div>
@@ -362,7 +362,7 @@ const BreathingExercises: React.FC = () => {
             ? `bg-gradient-to-r ${patterns[key].color} shadow-lg text-white`
             : selectedPattern === 'custom' && key === 'custom'
               ? `bg-gradient-to-r ${patterns[key].color} shadow-lg text-white`
-              : 'bg-white/60 backdrop-blur-sm hover:bg-white/80 text-slate-700'
+              : '!bg-white/60 backdrop-blur-sm hover:!bg-white/80 text-slate-700'
         }
       `}
             >
@@ -370,7 +370,7 @@ const BreathingExercises: React.FC = () => {
                 <div
                   className={`
           p-1 sm:p-1.5 rounded-lg transition-colors
-          ${selectedPattern === key || (selectedPattern === 'custom' && key === 'custom') ? 'bg-white/20' : 'bg-slate-100'}
+          ${selectedPattern === key || (selectedPattern === 'custom' && key === 'custom') ? '!bg-white/20' : 'bg-slate-100'}
         `}
                 >
                   {patterns[key].icon}
@@ -451,7 +451,7 @@ const BreathingExercises: React.FC = () => {
                 }
               >
                 {/* Inner Ring */}
-                <div className="absolute inset-4 rounded-full bg-white/10 backdrop-blur-sm" />
+                <div className="absolute inset-4 rounded-full !bg-white/10 backdrop-blur-sm" />
 
                 {/* Content */}
                 <div className="text-center z-10">
@@ -464,10 +464,10 @@ const BreathingExercises: React.FC = () => {
                       transition={{ duration: 0.2 }}
                       className="text-white"
                     >
-                      <div className="text-4xl md:text-5xl font-light mb-2 font-mono">
+                      <div className="!text-4xl md:text-5xl font-light mb-2 font-mono">
                         {count}
                       </div>
-                      <div className="text-lg md:text-xl font-medium mb-1">
+                      <div className="text-lg md:!text-xl font-medium mb-1">
                         {getPhaseText()}
                       </div>
                       <div className="text-xs md:text-sm opacity-90 max-w-[160px] mx-auto">
@@ -517,7 +517,7 @@ const BreathingExercises: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleReset}
-            className="px-3 sm:px-6 py-2 sm:py-3 rounded-full bg-white/60 backdrop-blur-sm !text-slate-700 hover:bg-white/80 transition-all shadow-sm flex items-center gap-1.5 sm:gap-2 z-20 relative text-sm sm:text-base"
+            className="px-3 sm:px-6 py-2 sm:py-3 rounded-full !bg-white/60 backdrop-blur-sm !text-slate-700 hover:!bg-white/80 transition-all shadow-sm flex items-center gap-1.5 sm:gap-2 z-20 relative text-sm sm:text-base"
           >
             <RotateCcw size={14} className="sm:w-[18px] sm:h-[18px]" />
             <span className="hidden xs:inline">Reset</span>
@@ -531,11 +531,11 @@ const BreathingExercises: React.FC = () => {
           transition={{ delay: 0.4 }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-4 px-6 py-3 bg-white/60 backdrop-blur-sm rounded-full shadow-sm">
+          <div className="inline-flex items-center gap-4 px-6 py-3 !bg-white/60 backdrop-blur-sm rounded-full shadow-sm">
             <div className="flex items-center gap-2">
               <Activity size={16} className="text-teal-500" />
               <span className="text-slate-600">
-                <span className="font-semibold text-slate-800">{cycles}</span>{' '}
+                <span className="font-normal text-slate-800">{cycles}</span>{' '}
                 complete {cycles === 1 ? 'cycle' : 'cycles'}
               </span>
             </div>
@@ -557,7 +557,7 @@ const BreathingExercises: React.FC = () => {
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
-                className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 max-h-[90vh] overflow-y-auto"
+                className="!bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 max-h-[90vh] overflow-y-auto"
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="flex justify-between items-center mb-6">

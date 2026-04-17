@@ -27,7 +27,7 @@ const funeralDirectors = '/assets/AdditionalResourceImages/SAMHSA.png';
 
 const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
   const imageRowClassName =
-    'rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-start';
+    'rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row gap-5 items-start';
   const sideImageClassName =
     'w-full h-auto object-cover object-top rounded-lg shadow-md';
   const coverImageClassName =
@@ -44,17 +44,15 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
       </div>
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-              After a Suicide Loss
-            </span>
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">After a Suicide Loss</span>
           </h1>
 
           <div className="flex items-center gap-4 mt-3 mb-1">
             <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
           </div>
 
-          <main className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
+          <main className="mt-6 !bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50 text-gray-700 flex flex-col sm:flex-row gap-6 items-start">
             <div className="flex-1">
               <p className="leading-relaxed">
                 Immediately after a death by suicide, there are many practical
@@ -81,8 +79,8 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
             </div>
           </main>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="!text-2xl sm:!text-3xl font-bold tracking-tight !text-[#5f2d85]">
               Guides &amp; Toolkits for After a Suicide Loss
             </h2>
 
@@ -100,7 +98,7 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                     href={HopeAndHealing}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="!text-xl font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     Hope &amp; Healing: A Practical Guide for Survivors of
                     Suicide, Family &amp; Friends
@@ -142,7 +140,7 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                     href={Klinic}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="!text-xl font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     After a Suicide: A Practical &amp; Personal Guide for
                     Survivors of Suicide Loss
@@ -192,7 +190,7 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                     href={SPRC}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="!text-xl font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     After a Suicide: A Toolkit for Schools
                   </a>
@@ -232,7 +230,7 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                     href={Winnipeg}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                    className="!text-xl font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                   >
                     A Guide for Early Responders Supporting Survivors Bereaved
                     by Suicide
@@ -272,7 +270,7 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                   />
                 </div>
                 <div className="flex-1">
-                  <span className="text-xl font-semibold text-indigo-500">
+                  <span className="!text-xl font-normal text-indigo-500">
                     For Funeral Directors: Supporting Survivors of Suicide Loss
                   </span>
                   <p className="mt-3 leading-relaxed">
@@ -312,7 +310,7 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                       href={CanadianVer}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center text-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold !text-white hover:bg-indigo-600 transition-colors"
+                      className="inline-flex items-center justify-center text-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-normal !text-white hover:bg-indigo-600 transition-colors"
                     >
                       CANADIAN GUIDE
                     </a>
@@ -320,7 +318,7 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                       href={USAVer}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center text-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold !text-white hover:bg-indigo-600 transition-colors"
+                      className="inline-flex items-center justify-center text-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-normal !text-white hover:bg-indigo-600 transition-colors"
                     >
                       AMERICAN GUIDE
                     </a>
@@ -330,13 +328,13 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-purple-100 bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-6 text-center">
+          <div className="mt-8 rounded-2xl border border-purple-100 !bg-white/90 backdrop-blur-sm shadow-sm p-6 sm:p-8 text-gray-700">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight !text-[#5f2d85] mb-6 text-center">
               Additional Links of Interest on this Site
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm text-center">
                 <img
                   src={bereavedSupport}
                   alt="Bereaved Support"
@@ -344,13 +342,13 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                 />
                 <a
                   href="/resources/bereaved-support"
-                  className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="!text-xl font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Bereaved Support
                 </a>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm text-center">
                 <img
                   src={survivorsOfSuicideLoss}
                   alt="Survivors of Suicide Loss"
@@ -358,13 +356,13 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                 />
                 <a
                   href="/resources/suicide-loss"
-                  className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="!text-xl font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Survivors of Suicide Loss
                 </a>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm text-center">
+              <div className="rounded-xl border border-gray-100 !bg-white p-4 sm:p-5 shadow-sm text-center">
                 <img
                   src={resourceOrganizations}
                   alt="Resource Organizations"
@@ -372,7 +370,7 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                 />
                 <a
                   href="/resources/organizations"
-                  className="text-xl font-semibold text-purple-700 hover:text-purple-800 underline underline-offset-4"
+                  className="!text-xl font-normal !text-[#5f2d85] hover:!text-[#5f2d85] underline underline-offset-4"
                 >
                   Resource Organizations
                 </a>

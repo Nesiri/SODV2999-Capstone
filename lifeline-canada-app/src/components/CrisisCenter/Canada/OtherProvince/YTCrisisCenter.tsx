@@ -14,7 +14,7 @@ const YTCrisisCentres: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-[#e9e3ea] via-[#f2ecf3] to-[#e0d8e2] py-12 px-4 sm:py-16 sm:px-6 md:py-20 md:px-8 lg:px-12 overflow-hidden">
       {/* Decorative background elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-white/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 !bg-white/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#4a6fa5]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -23,14 +23,14 @@ const YTCrisisCentres: React.FC = () => {
           {/* Text Container */}
           <div className="flex-1 text-center sm:text-left space-y-3 sm:space-y-4">
             <div className="inline-block sm:block mx-auto sm:mx-0">
-              <span className="hidden sm:inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-white/40 backdrop-blur-sm rounded-full text-xs sm:text-sm font-semibold text-[#B266C9] border border-white/60 shadow-sm mb-2 sm:mb-3">
+              <span className="hidden sm:inline-block px-3 sm:px-4 py-1.5 sm:py-2 !bg-white/40 backdrop-blur-sm rounded-full text-xs sm:text-sm font-normal !text-[#5f2d85] border border-white/60 shadow-sm mb-2 sm:mb-3">
                 🇨🇦 Yukon
               </span>
             </div>
 
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl font-serif font-medium leading-tight !text-[#89009B]">
+            <h1 className="text-3xl xs:!text-4xl sm:text-5xl font-serif font-medium leading-tight !text-[#5f2d85]">
               <span className="block">Yukon</span>
-              <span className="block text-transparent bg-[#B266C9] bg-clip-text text-3xl xs:text-5xl sm:text-5xl mt-1 sm:mt-2">
+              <span className="block text-transparent bg-[#5f2d85] bg-clip-text text-3xl xs:text-5xl sm:text-5xl mt-1 sm:mt-2">
                 Crisis Centres
               </span>
             </h1>
@@ -44,7 +44,7 @@ const YTCrisisCentres: React.FC = () => {
 
               {/* Image frame with gradient border */}
               <div className="relative p-1 bg-gradient-to-r from-[#4a6fa5]/30 to-[#6b8cbc]/30 rounded-2xl shadow-2xl">
-                <div className="overflow-hidden rounded-xl bg-white/50 backdrop-blur-sm">
+                <div className="overflow-hidden rounded-xl !bg-white/50 backdrop-blur-sm">
                   <img
                     src="/assets/flags/yuth_1024x1024-e1687406771897-300x149.webp"
                     alt="Yukon Flag"
@@ -70,10 +70,10 @@ const YTCrisisCentres: React.FC = () => {
                   to={centre.path}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border border-white/50 cursor-pointer"
+                  className="group relative !bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border border-white/50 cursor-pointer"
                 >
                   {/* Gradient top bar */}
-                  <div className="h-2 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600"></div>
+                  <div className="h-2 bg-gradient-to-r from-[#5f2d85] via-pink-600 to-[#5f2d85]"></div>
 
                   {/* Image Container */}
                   <div className="relative h-48 overflow-hidden">
@@ -90,11 +90,11 @@ const YTCrisisCentres: React.FC = () => {
                     />
 
                     {/* Arrow indicator */}
-                    <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1">
+                    <div className="absolute top-3 right-3 !bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1">
                       <svg
-                        className="w-4 h-4 text-purple-600"
+                        className="w-4 h-4 !text-[#5f2d85]"
                         fill="none"
-                        stroke="currentColor"
+                        stroke="#5f2d85"
                         viewBox="0 0 24 24"
                       >
                         <path
@@ -115,7 +115,7 @@ const YTCrisisCentres: React.FC = () => {
                 </Link>
 
                 {/* Lines Section - Outside Link, Below Card */}
-                <div className="mt-1 p-5 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 hover:shadow-xl transition-all duration-300">
+                <div className="mt-1 p-5 !bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 hover:shadow-xl transition-all duration-300">
                   <div className="space-y-2">
                     <h3 className="text-2xl font-medium text-gray-800 border-b-2 border-purple-500 pb-2 inline-block">
                       {centre.title1}
@@ -136,9 +136,9 @@ const YTCrisisCentres: React.FC = () => {
                           }`}
                         >
                           <svg
-                            className="w-4 h-4 text-purple-600 mr-2 flex-shrink-0"
+                            className="w-4 h-4 !text-[#5f2d85] mr-2 flex-shrink-0"
                             fill="none"
-                            stroke="currentColor"
+                            stroke="#5f2d85"
                             viewBox="0 0 24 24"
                           >
                             <path

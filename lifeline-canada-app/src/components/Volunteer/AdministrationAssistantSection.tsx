@@ -15,7 +15,7 @@ const AdministrationAssistantSection: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* LEFT COLUMN */}
           <div className="space-y-8 animate-fadeInLeft">
-            <h2 className="!text-2xl md:text-4xl lg:text-5xl font-black mb-4">
+            <h2 className="!text-2xl md:!text-4xl lg:text-5xl font-black mb-4">
               <span className="text-black">Administration</span>
               <br />
               <span className="text-gray-800 relative">
@@ -30,7 +30,7 @@ const AdministrationAssistantSection: React.FC = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500" />
 
               {/* Image container */}
-              <div className="relative bg-white/80 backdrop-blur-sm p-2 rounded-2xl overflow-hidden">
+              <div className="relative !bg-white/80 backdrop-blur-sm p-2 rounded-2xl overflow-hidden">
                 <div className="relative overflow-hidden rounded-xl">
                   <img
                     src={adminImage}
@@ -50,7 +50,7 @@ const AdministrationAssistantSection: React.FC = () => {
                 "
               </div>
               <div className="space-y-4">
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed italic font-light">
+                <p className="text-lg md:!text-xl text-gray-700 leading-relaxed italic font-light">
                   Become part of our small and mighty Administrative Team
                   supporting the exciting and growing programs and activities of
                   TLC.
@@ -63,7 +63,7 @@ const AdministrationAssistantSection: React.FC = () => {
                   abilities, and interests.
                 </p>
                 <div className="inline-block bg-gradient-to-r from-blue-50 to-purple-50 px-4 py-2 rounded-full">
-                  <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                  <span className="font-normal text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-[#5f2d85]">
                     ⏰ We seek those who can commit to at least 4 hours per week
                   </span>
                 </div>
@@ -102,7 +102,7 @@ const AdministrationAssistantSection: React.FC = () => {
                     <span className="text-blue-500 mt-1 text-lg group-hover:text-purple-500 transition-colors">
                       ✦
                     </span>
-                    <span className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors">
+                    <span className="text-gray-700 leading-relaxed group-hover:!text-[#5f2d85] transition-colors">
                       {item}
                     </span>
                   </li>
@@ -136,7 +136,7 @@ const AdministrationAssistantSection: React.FC = () => {
                     <span className="text-purple-500 mt-1 group-hover:scale-110 transition-transform">
                       •
                     </span>
-                    <span className="text-gray-700 group-hover:text-gray-900">
+                    <span className="text-gray-700 group-hover:!text-[#5f2d85]">
                       {item}
                     </span>
                   </li>

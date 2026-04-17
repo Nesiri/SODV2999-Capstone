@@ -185,37 +185,37 @@ const InternationalNationWide: React.FC = () => {
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#B266C9] to-transparent mx-auto"></div>
         </div>
 
-        {/* Card grid - Using crisisData array */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
+        {/* Card grid - Reorganized for better layout and fit */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {crisisData.map((countryData, index) => (
             <div
               key={index}
               className="block group relative transform hover:-translate-y-2 transition-all duration-500"
             >
               {/* Card shadow layers */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-[#C89F9F]/20 to-[#B28B8B]/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute -inset-2 bg-gradient-to-r from-[#5f2d85]/20 to-[#5f2d85]/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               {/* Main card - VERTICAL LAYOUT */}
-              <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-6 shadow-xl border border-white/60 hover:border-white/80 transition-all duration-300">
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-5 shadow-xl border border-white/60 hover:border-[#5f2d85]/30 transition-all duration-300 h-full flex flex-col">
                 {/* Country name as header */}
-                <div className="mb-4 pb-3 border-b border-[#E8DFE8]">
-                  <h2 className="text-2xl font-serif text-[#2A3B3C] group-hover:text-[#C89F9F] transition-colors duration-300">
+                <div className="mb-3 pb-2 border-b border-[#E8DFE8]">
+                  <h2 className="!text-xl font-serif !text-[#2A3B3C] group-hover:text-[#5f2d85] transition-colors duration-300">
                     {countryData.country}
                   </h2>
                 </div>
 
                 {/* Services list */}
-                <div className="flex-grow space-y-3 max-h-96 overflow-y-auto pr-2 custom-scrollbar">
+                <div className="flex-grow space-y-3 max-h-80 overflow-y-auto pr-1 custom-scrollbar">
                   {countryData.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="group/service">
-                      <h3 className="text-sm font-medium text-[#4A5A5C] mb-1">
+                      <h3 className="!text-sm font-medium !text-[#4A5A5C] mb-1">
                         {service.name}
                       </h3>
-                      <div className="flex items-start gap-2 text-sm">
-                        <span className="text-[#C89F9F] mt-1 flex-shrink-0">
+                      <div className="flex items-start gap-2">
+                        <span className="!text-[#5f2d85] mt-0.5 flex-shrink-0 !text-base">
                           📞
                         </span>
-                        <span className="text-[#6B7A7C] font-light break-all">
+                        <span className="!text-[#5f2d85] !font-normal !break-all !text-base hover:text-[#5f2d85] transition-colors duration-200">
                           {service.phone}
                         </span>
                       </div>
@@ -224,15 +224,15 @@ const InternationalNationWide: React.FC = () => {
                 </div>
 
                 {/* Service count indicator */}
-                <div className="mt-4 pt-3 border-t border-[#E8DFE8] text-xs text-[#B28B8B]">
+                <div className="mt-3 pt-2 border-t border-[#E8DFE8] text-xs text-[#5f2d85]">
                   {countryData.services.length}{' '}
                   {countryData.services.length === 1 ? 'service' : 'services'}{' '}
                   available
                 </div>
 
                 {/* Subtle decorative element */}
-                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-[#C89F9F]/30 text-4xl font-serif">
+                <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-[#5f2d85]/30 text-3xl font-serif">
                     ✦
                   </span>
                 </div>
@@ -245,18 +245,18 @@ const InternationalNationWide: React.FC = () => {
       {/* Add custom scrollbar styles */}
       <style>{`
         .custom-scrollbar::-webkit-scrollbar {
-          width: 4px;
+          width: 3px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
           background: #F0E9F0;
           border-radius: 10px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #C89F9F;
+          background: #5f2d85;
           border-radius: 10px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: #B28B8B;
+          background: #5f2d85;
         }
       `}</style>
     </section>

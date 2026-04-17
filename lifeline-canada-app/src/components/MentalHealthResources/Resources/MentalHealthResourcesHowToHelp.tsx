@@ -25,7 +25,7 @@ const ifYouReceieveSuicidalPhoneCall =
 
 const MentalHealthResourcesHowToHelp: React.FC = () => {
   const sectionClassName =
-    'rounded-xl border border-slate-200 bg-white p-5 sm:p-6';
+    'rounded-xl border border-slate-200 !bg-white p-5 sm:p-6';
 
   return (
     <section className="relative w-full bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 overflow-hidden">
@@ -36,10 +36,8 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
       </div>
       <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-8 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-              How Can I Help Someone?
-            </span>
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">How Can I Help Someone?</span>
           </h1>
 
           <div className="flex items-center gap-4 mt-3 mb-1">
@@ -68,7 +66,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
               </p>
             </div>
 
-            <div className="overflow-hidden rounded-xl border border-slate-200 bg-white max-h-52 lg:max-h-64">
+            <div className="overflow-hidden rounded-xl border border-slate-200 !bg-white max-h-52 lg:max-h-64">
               <img
                 src={coverPhoto}
                 alt="How to help someone in crisis"
@@ -79,7 +77,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
           </div>
 
           <div className="mt-6 rounded-xl border border-rose-200 bg-rose-50 p-4 text-rose-900">
-            <p className="font-semibold">Emergency:</p>
+            <p className="font-normal">Emergency:</p>
             <p className="mt-1 text-sm sm:text-base">
               If the person has a plan, means, and intent, call 911 immediately
               and stay with them.
@@ -88,7 +86,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
 
           <div className="mt-8 space-y-4">
             <div className={sectionClassName}>
-              <h2 className="text-lg font-semibold text-purple-700">
+              <h2 className="text-lg font-normal !text-[#5f2d85]">
                 Understanding Suicide
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
@@ -104,7 +102,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                     one.
                   </p>
                 </div>
-                <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+                <div className="overflow-hidden rounded-xl border border-slate-200 !bg-white">
                   <img
                     src={understandingSuicide}
                     alt="Understanding suicide"
@@ -116,7 +114,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-semibold text-purple-700">
+              <h2 className="text-lg font-normal !text-[#5f2d85]">
                 Warning Signs to Watch For
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
@@ -144,7 +142,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                     </a>
                   </p>
                 </div>
-                <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+                <div className="overflow-hidden rounded-xl border border-slate-200 !bg-white">
                   <img
                     src={warning}
                     alt="Warning signs illustration"
@@ -156,7 +154,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-semibold text-purple-700">
+              <h2 className="text-lg font-normal !text-[#5f2d85]">
                 How to Talk to Someone You're Worried About
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
@@ -187,7 +185,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                     </a>
                   </p>
                 </div>
-                <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+                <div className="overflow-hidden rounded-xl border border-slate-200 !bg-white">
                   <img
                     src={talkingToSomeone}
                     alt="Talking to someone about suicidal feelings"
@@ -199,7 +197,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-semibold text-purple-700">
+              <h2 className="text-lg font-normal !text-[#5f2d85]">
                 Quick Risk Questions
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
@@ -213,7 +211,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                     <li>Who can we contact right now for support?</li>
                   </ul>
                 </div>
-                <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+                <div className="overflow-hidden rounded-xl border border-slate-200 !bg-white">
                   <img
                     src={phone}
                     alt="Phone crisis support"
@@ -225,7 +223,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-semibold text-purple-700">
+              <h2 className="text-lg font-normal !text-[#5f2d85]">
                 If You Receive a Suicidal Phone Call
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
@@ -247,7 +245,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+                <div className="overflow-hidden rounded-xl border border-slate-200 !bg-white">
                   <img
                     src={ifYouReceieveSuicidalPhoneCall}
                     alt="Receiving a suicidal phone call"
@@ -259,14 +257,14 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-semibold text-purple-700">
+              <h2 className="text-lg font-normal !text-[#5f2d85]">
                 After a Suicide Attempt: What to Do Next
               </h2>
               <div className="mt-4 space-y-4 text-slate-700">
                 {/* Let Them Talk */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Let Them Talk
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -282,7 +280,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                       that you will withdraw your love.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={letThemTalk}
                       alt="Let them talk"
@@ -295,7 +293,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Making a Survivor Kit or Box */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Making a Survivor Kit or Box
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -310,7 +308,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                       future.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={survivorKit}
                       alt="Survivor kit or box"
@@ -323,7 +321,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Therapy Should Be First on the List */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Therapy Should Be First on the List
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -346,7 +344,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                       treatment as well.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={therapy}
                       alt="Therapy and counseling"
@@ -359,7 +357,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Things Not To Do */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Things Not To Do
                     </h3>
                     <ul className="mt-2 list-disc space-y-1 pl-5 leading-relaxed">
@@ -391,7 +389,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                       </li>
                     </ul>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={notToDo}
                       alt="Things not to do"
@@ -404,7 +402,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Make Important Lifestyle Changes */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Make Important Lifestyle Changes
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -459,7 +457,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                       loved one won't be ready for that for quite a while.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={lifestyleChanges}
                       alt="Lifestyle changes"
@@ -472,7 +470,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Short-Term Planning */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Short-Term Planning
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -528,7 +526,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                       are seriously malnourished.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={shortTermPlans}
                       alt="Short-term planning"
@@ -541,7 +539,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Be Alert for Suicide Warning Signs */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Be Alert for Suicide Warning Signs
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -598,7 +596,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                       .
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={beAlert}
                       alt="Be alert for warning signs"
@@ -611,7 +609,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Should You Worry? */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Should You Worry?
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -646,7 +644,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                       helping your loved one on the road to recovery.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={shouldYouWorry}
                       alt="Should you worry"
@@ -659,7 +657,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Things To Do */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Things To Do
                     </h3>
                     <ul className="mt-2 list-disc space-y-1 pl-5 leading-relaxed">
@@ -701,7 +699,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                       </li>
                     </ul>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={whatToDo}
                       alt="Things to do"
@@ -714,9 +712,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Hope Cards */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
-                      Hope Cards
-                    </h3>
+                    <h3 className="font-normal !text-[#5f2d85]">Hope Cards</h3>
                     <p className="mt-1 leading-relaxed">
                       Consider making hope cards, which are simply index cards.
                       The attempt survivor and a supportive person sit down and
@@ -734,7 +730,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                       or her feelings.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={hopeCards}
                       alt="Hope cards"
@@ -747,7 +743,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Resources and Help */}
                 <div className="grid grid-cols-1 gap-3 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Resources and Help
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -765,7 +761,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                       attempt by their loved one.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={resourcesHelp}
                       alt="Resources and help"
@@ -778,7 +774,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-10 rounded-xl border border-slate-200 bg-white p-6 text-center sm:p-8">
+          <div className="mt-10 rounded-xl border border-slate-200 !bg-white p-6 text-center sm:p-8">
             <p className="mx-auto max-w-3xl text-center text-lg italic text-slate-700 sm:text-2xl">
               The most important pain-coping resource is the help of a trained
               mental health professional. A person who feels suicidal, should
@@ -788,7 +784,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             <div className="mt-8">
               <a
                 href="/resources/search-professional"
-                className="inline-block rounded-full bg-purple-700 px-6 py-3 font-semibold !text-white transition hover:bg-purple-800 hover:!text-white focus:!text-white visited:!text-white sm:px-8"
+                className="inline-block rounded-full bg-[#5f2d85] px-6 py-3 font-normal !text-white transition hover:bg-[#5f2d85] hover:!text-white focus:!text-white visited:!text-white sm:px-8"
               >
                 SEARCH FOR A PROFESSIONAL
               </a>

@@ -66,7 +66,7 @@ export default function ResourcesDropdownMobile({
           ${
             emergency
               ? 'bg-gradient-to-br from-red-400 via-red-500 to-red-600 hover:from-red-500 hover:via-red-600 hover:to-red-700 text-white border-2 border-red-300'
-              : 'bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600 hover:from-purple-500 hover:via-purple-600 hover:to-purple-700 text-white border-2 border-purple-300'
+              : 'bg-gradient-to-br from-purple-400 via-purple-500 to-[#5f2d85] hover:from-purple-500 hover:via-[#5f2d85] hover:to-[#5f2d85] text-white border-2 border-purple-300'
           }`}
         aria-expanded={isOpen}
       >
@@ -74,8 +74,8 @@ export default function ResourcesDropdownMobile({
           <div
             className={`p-3.5 rounded-2xl ${
               emergency
-                ? 'bg-white text-red-600 shadow-lg'
-                : 'bg-white text-purple-600 shadow-lg'
+                ? '!bg-white text-red-600 shadow-lg'
+                : '!bg-white !text-[#5f2d85] shadow-lg'
             }`}
           >
             <span className="text-3xl">
@@ -84,13 +84,13 @@ export default function ResourcesDropdownMobile({
           </div>
 
           <div className="text-left">
-            <h3 className="text-xl font-black mb-1 !text-[#89009B] ">
+            <h3 className="!text-xl font-black mb-1 !text-[#5f2d85] ">
               {triggerText}
             </h3>
             <div className="flex items-center gap-3">
               {emergency && (
                 <span
-                  className="px-3 py-1 text-xs font-black bg-white/30 
+                  className="px-3 py-1 text-xs font-black !bg-white/30 
                   backdrop-blur-sm rounded-full flex items-center gap-1"
                 >
                   <Zap className="w-3 h-3" />
@@ -108,7 +108,7 @@ export default function ResourcesDropdownMobile({
 
       {/* Dropdown with purple color scheme */}
       {isOpen && (
-        <div className="mt-3 bg-white rounded-2xl shadow-2xl border-2 border-gray-300 overflow-hidden">
+        <div className="mt-3 !bg-white rounded-2xl shadow-2xl border-2 border-gray-300 overflow-hidden">
           {/* Header with purple gradient */}
           <div
             className={`px-5 py-4 ${
@@ -118,10 +118,10 @@ export default function ResourcesDropdownMobile({
             }`}
           >
             <div className="flex items-center justify-between">
-              <h4 className="font-bold text-lg !text-[#89009B]">
+              <h4 className="font-bold text-lg !text-[#5f2d85]">
                 {triggerText}
               </h4>
-              <span className="px-3 py-1.5 bg-white rounded-full font-bold text-sm shadow">
+              <span className="px-3 py-1.5 !bg-white rounded-full font-bold text-sm shadow">
                 {resourceLinks.length}
               </span>
             </div>
@@ -144,7 +144,7 @@ export default function ResourcesDropdownMobile({
                   className={`p-3.5 rounded-xl shadow-md ${
                     link.emergency
                       ? 'bg-gradient-to-r from-red-200 to-red-300 text-red-700'
-                      : 'bg-gradient-to-r from-purple-200 to-purple-300 text-purple-700'
+                      : 'bg-gradient-to-r from-purple-200 to-purple-300 !text-[#5f2d85]'
                   }`}
                 >
                   <span className="text-2xl">
@@ -156,7 +156,7 @@ export default function ResourcesDropdownMobile({
 
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="font-bold !text-[#89009B] text-base truncate">
+                    <span className="font-bold !text-[#5f2d85] text-base truncate">
                       {link.name}
                     </span>
                   </div>
@@ -178,7 +178,7 @@ export default function ResourcesDropdownMobile({
                   className={`p-2 rounded-full ${
                     link.emergency
                       ? 'bg-red-100 text-red-600'
-                      : 'bg-purple-100 text-purple-600'
+                      : 'bg-purple-100 !text-[#5f2d85]'
                   }`}
                 >
                   <ChevronDown className="w-4 h-4 rotate-90" />

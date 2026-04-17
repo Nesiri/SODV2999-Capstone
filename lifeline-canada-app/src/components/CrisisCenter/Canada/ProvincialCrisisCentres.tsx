@@ -99,9 +99,9 @@ const ProvincialCrisisCentres: React.FC = () => {
           <span className="text-xs tracking-[0.3em] text-[#7C9EB2] uppercase font-light block mb-4">
             — Support Across Canada —
           </span>
-          <h1 className="!text-3xl sm:!text-5xl font-serif !text-[#89009B] leading-[1.1] mb-4">
+          <h1 className="!text-3xl sm:!text-5xl font-serif !text-[#5f2d85] leading-[1.1] mb-4">
             Provincial Crisis
-            <span className="block !text-[#B266C9]">Centres</span>
+            <span className="block !text-[#5f2d85]">Centres</span>
           </h1>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#B18F9E] to-transparent mx-auto"></div>
           <p className="text-[#3C5A6F] text-lg font-light max-w-2xl mx-auto mt-6">
@@ -109,40 +109,45 @@ const ProvincialCrisisCentres: React.FC = () => {
           </p>
         </div>
 
-        {/* Modern card grid */}
+        {/* Modern card grid - ALL CARDS EQUAL SIZE */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 lg:gap-8">
           {provinces.map((province) => (
             <Link
               key={province.name}
               to={province.path}
-              className="group relative transform hover:-translate-y-2 transition-all duration-500"
+              className="group relative transform hover:-translate-y-2 transition-all duration-500 h-full"
               style={{ textDecoration: 'none' }}
             >
               {/* Card shadow layers */}
               <div className="absolute -inset-2 bg-gradient-to-r from-[#B18F9E]/20 to-[#7C9EB2]/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-              {/* Main card */}
-              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-white/60 hover:border-white/80 transition-all duration-300">
-                {/* Image container with modern frame */}
-                <div className="relative rounded-xl overflow-hidden mb-4">
+              {/* Main card - EQUAL HEIGHT using flex flex-col */}
+              <div className="relative !bg-white/90 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-white/60 hover:border-white/80 transition-all duration-300 flex flex-col h-full">
+                {/* Image container - FIXED SIZE WITH CONTAIN FIT */}
+                <div
+                  className="relative rounded-xl overflow-hidden mb-4 flex-shrink-0 bg-gray-50 flex items-center justify-center"
+                  style={{ height: '100px' }}
+                >
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1F3A4F]/30 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <img
                     src={province.image}
                     alt={province.name}
-                    className="w-full h-28 sm:h-32 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-700 p-2"
                   />
                   {/* Elegant overlay border */}
                   <div className="absolute inset-0 border border-white/20 rounded-xl pointer-events-none"></div>
                 </div>
 
-                {/* Province name with elegant styling */}
-                <h3 className="text-center font-serif text-base sm:text-lg text-[#1F3A4F] group-hover:text-[#B18F9E] transition-colors duration-300">
-                  {province.name}
-                </h3>
+                {/* Province name - PUSHES TO BOTTOM with flex-grow */}
+                <div className="flex-grow flex items-center justify-center">
+                  <h3 className="text-center font-serif text-base sm:text-lg text-[#1F3A4F] group-hover:text-[#B18F9E] transition-colors duration-300">
+                    {province.name}
+                  </h3>
+                </div>
 
                 {/* Subtle decorative element */}
                 <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-[#B18F9E]/40 text-xl">✦</span>
+                  <span className="text-[#B18F9E]/40 !text-xl">✦</span>
                 </div>
               </div>
             </Link>

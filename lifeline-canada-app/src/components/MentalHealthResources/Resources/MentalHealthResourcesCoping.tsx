@@ -31,7 +31,7 @@ const copingPdf = '/pdfs/Coping-With-Suicidal-Thoughts.pdf';
 
 const MentalHealthResourcesCoping: React.FC = () => {
   const sectionClassName =
-    'rounded-xl border border-slate-200 bg-white p-5 sm:p-6';
+    'rounded-xl border border-slate-200 !bg-white p-5 sm:p-6';
 
   return (
     <section className="relative w-full bg-gradient-to-br from-[#f8f5ff] via-white to-purple-50 overflow-hidden">
@@ -42,8 +42,8 @@ const MentalHealthResourcesCoping: React.FC = () => {
       </div>
       <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-8 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">
               Coping with Suicidal Thoughts
             </span>
           </h1>
@@ -87,7 +87,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="overflow-hidden rounded-xl border border-slate-200 bg-white max-h-52 lg:max-h-64">
+                <div className="overflow-hidden rounded-xl border border-slate-200 !bg-white max-h-52 lg:max-h-64">
                   <img
                     src={copingMain}
                     alt="Coping support illustration"
@@ -101,12 +101,12 @@ const MentalHealthResourcesCoping: React.FC = () => {
 
           <div className="mt-8 space-y-4">
             <div className={sectionClassName}>
-              <h2 className="text-lg font-semibold text-purple-700">
+              <h2 className="!text-lg font-semibold !text-[#5f2d85]">
                 I'm seriously thinking about suicide. What should I do?
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
                 <div className="space-y-3">
-                  <p className="font-medium text-purple-700">
+                  <p className="font-medium !text-[#5f2d85]">
                     What to do right now
                   </p>
                   <ul className="list-disc space-y-2 pl-5 leading-relaxed">
@@ -129,7 +129,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                   </ul>
                 </div>
 
-                <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+                <div className="overflow-hidden rounded-xl border border-slate-200 !bg-white">
                   <img
                     src={copingThinking}
                     alt="Person thinking with support"
@@ -141,7 +141,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-semibold text-purple-700">
+              <h2 className="text-lg font-normal !text-[#5f2d85]">
                 Safety Plan
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
@@ -167,7 +167,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                   </ol>
                 </div>
 
-                <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+                <div className="overflow-hidden rounded-xl border border-slate-200 !bg-white">
                   <img
                     src={safetyPlanImg}
                     alt="Safety plan illustration"
@@ -179,13 +179,13 @@ const MentalHealthResourcesCoping: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-semibold text-purple-700">
+              <h2 className="text-lg font-normal !text-[#5f2d85]">
                 What else can I do to decrease thoughts of suicide?
               </h2>
               <div className="mt-4 space-y-4 text-slate-700">
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Problem Solve
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -193,7 +193,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                       with one small, manageable step.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white h-32">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white h-32">
                     <img
                       src={problemSolve}
                       alt="Problem solving"
@@ -204,7 +204,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Think of Reasons for Living
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -212,7 +212,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                       read it when distress rises.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white h-32">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white h-32">
                     <img
                       src={reasonsLiving}
                       alt="Reasons for living"
@@ -223,7 +223,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Remember Things That Have Helped in the Past
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -231,7 +231,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                       someone, journaling, or following your safety plan.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white h-32">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white h-32">
                     <img
                       src={pastThings}
                       alt="Helpful things from the past"
@@ -242,7 +242,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Get Treatment for Mental Health Problems
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -250,7 +250,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                       current care is not helping enough.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white h-32">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white h-32">
                     <img
                       src={getTreatment}
                       alt="Get treatment support"
@@ -261,7 +261,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Do The Opposite of How You Feel
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -269,7 +269,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                       texting someone or stepping outside.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white h-32">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white h-32">
                     <img
                       src={oppositeEmotion}
                       alt="Opposite emotion strategy"
@@ -280,7 +280,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Talk To Someone
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -288,7 +288,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                       plan to hurt yourself.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white h-32">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white h-32">
                     <img
                       src={talkToSomeone}
                       alt="Talk to someone"
@@ -301,12 +301,12 @@ const MentalHealthResourcesCoping: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-semibold text-purple-700">
+              <h2 className="text-lg font-normal !text-[#5f2d85]">
                 Some common problems and solution ideas
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                  <h3 className="font-semibold text-purple-700">
+                  <h3 className="font-normal !text-[#5f2d85]">
                     Problem: Depressed Mood
                   </h3>
                   <p className="mt-2 text-sm font-medium text-slate-700">
@@ -329,7 +329,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                   </ul>
                 </div>
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                  <h3 className="font-semibold text-purple-700">
+                  <h3 className="font-normal !text-[#5f2d85]">
                     Problem: End of Relationship
                   </h3>
                   <p className="mt-2 text-sm font-medium text-slate-700">
@@ -345,14 +345,14 @@ const MentalHealthResourcesCoping: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-semibold text-purple-700">
+              <h2 className="text-lg font-normal !text-[#5f2d85]">
                 How can I decrease chances that I will feel suicidal in the
                 future?
               </h2>
               <div className="mt-4 space-y-4 text-slate-700">
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Get Professional Support
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -361,7 +361,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                       referral doesn't work for you, ask for another.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={professionalSupport}
                       alt="Professional support"
@@ -372,7 +372,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Identify high-risk triggers or situations
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -384,7 +384,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                       friends who drink.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={highRiskTriggers}
                       alt="High-risk triggers"
@@ -395,7 +395,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">Self Care</h3>
+                    <h3 className="font-normal !text-[#5f2d85]">Self Care</h3>
                     <p className="mt-1 leading-relaxed">
                       Taking good care of yourself is important to feel better.
                       It is important to do the following:
@@ -410,7 +410,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                       </li>
                     </ul>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={selfCare}
                       alt="Self care"
@@ -421,7 +421,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Follow Through with Prescribed Medications
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -436,7 +436,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                       doctor if you are feeling worse.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={prescriptions}
                       alt="Prescribed medications"
@@ -447,7 +447,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Structure & Routine
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -465,7 +465,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                       <li>Continue to go to work or school</li>
                     </ul>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={structureRoutine}
                       alt="Structure and routine"
@@ -476,7 +476,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Do Things You Enjoy
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -489,7 +489,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                       it's for a short time.
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={doThingsEnjoy}
                       alt="Do things you enjoy"
@@ -500,7 +500,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-semibold text-purple-700">
+                    <h3 className="font-normal !text-[#5f2d85]">
                       Think of Personal Goals
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -518,7 +518,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                       <li>Start a family</li>
                     </ul>
                   </div>
-                  <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  <div className="overflow-hidden rounded-lg border border-slate-200 !bg-white">
                     <img
                       src={personalGoals}
                       alt="Personal goals"

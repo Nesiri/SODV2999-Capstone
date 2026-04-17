@@ -26,17 +26,15 @@ const MentalHealthResourcesECounselling: React.FC = () => {
       </div>
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-purple-700 via-purple-500 to-purple-700 bg-clip-text text-transparent">
-              E-Counselling
-            </span>
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <span className="!text-[#5f2d85]">E-Counselling</span>
           </h1>
 
           <div className="flex items-center gap-4 mt-3 mb-1">
             <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
           </div>
 
-          <div className="mt-6 bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50">
+          <div className="mt-6 !bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/50">
             <div className="mt-4 flex flex-col sm:flex-row items-center gap-6">
               <div className="flex-1">
                 <p className="text-base text-gray-700 leading-relaxed">
@@ -66,8 +64,8 @@ const MentalHealthResourcesECounselling: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-6 bg-white/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-white/50">
-            <h2 className="text-2xl font-bold text-gray-900">
+          <div className="mt-6 !bg-white/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-white/50">
+            <h2 className="text-2xl font-bold !text-[#5f2d85]">
               What Is Counselling?
             </h2>
 
@@ -78,7 +76,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                   alt="Counselling Is"
                   className="w-full h-40 object-cover rounded-lg mb-4"
                 />
-                <h3 className="text-xl font-semibold text-purple-700">
+                <h3 className="!text-xl font-normal !text-[#5f2d85]">
                   Counselling Is:
                 </h3>
                 <ul className="list-disc ml-6 mt-3 space-y-2 text-base text-gray-700 leading-relaxed">
@@ -109,7 +107,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                   alt="Counselling Is Not"
                   className="w-full h-40 object-cover rounded-lg mb-4"
                 />
-                <h3 className="text-xl font-semibold text-purple-700">
+                <h3 className="!text-xl font-normal !text-[#5f2d85]">
                   Counselling Is Not:
                 </h3>
                 <ul className="list-disc ml-6 mt-3 space-y-2 text-base text-gray-700 leading-relaxed">
@@ -131,7 +129,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
           </div>
 
           <div className="mt-8 max-w-4xl mx-auto bg-gradient-to-r from-indigo-50 to-purple-50 p-8 sm:p-10 rounded-2xl shadow-xl border border-purple-200 text-center">
-            <p className="text-lg sm:text-xl text-gray-800 leading-relaxed font-medium">
+            <p className="text-lg sm:!text-xl text-gray-800 leading-relaxed font-medium">
               The counsellor may encourage the client to examine parts of their
               lives that they may have found difficult or impossible to face
               before. There may be some exploration of early childhood
@@ -144,25 +142,25 @@ const MentalHealthResourcesECounselling: React.FC = () => {
             </p>
           </div>
 
-          <div className="mt-8 bg-white/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-white/50">
-            <h2 className="text-2xl font-bold text-gray-900">
+          <div className="mt-8 !bg-white/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-white/50">
+            <h2 className="text-2xl font-bold !text-[#5f2d85]">
               E-Counselling Resources
             </h2>
 
             <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
                 <img
                   src={talkspace}
                   alt="Talkspace"
                   className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain"
                 />
                 <div>
-                  <h3 className="text-xl font-semibold text-purple-700">
+                  <h3 className="!text-xl font-normal !text-[#5f2d85]">
                     <a
                       href="https://www.talkspace.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:text-purple-800 transition-colors"
+                      className="underline hover:!text-[#5f2d85] transition-colors"
                     >
                       Talkspace
                     </a>
@@ -176,19 +174,19 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                 </div>
               </div>
 
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
                 <img
                   src={sevenCups}
                   alt="7 Cups"
                   className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain"
                 />
                 <div>
-                  <h3 className="text-xl font-semibold text-purple-700">
+                  <h3 className="!text-xl font-normal !text-[#5f2d85]">
                     <a
                       href="https://www.7cups.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:text-purple-800 transition-colors"
+                      className="underline hover:!text-[#5f2d85] transition-colors"
                     >
                       7 Cups
                     </a>
@@ -201,19 +199,19 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                 </div>
               </div>
 
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
                 <img
                   src={wellin5}
                   alt="Wellin5"
                   className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain"
                 />
                 <div>
-                  <h3 className="text-xl font-semibold text-purple-700">
+                  <h3 className="!text-xl font-normal !text-[#5f2d85]">
                     <a
                       href="https://wellin5.ca"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:text-purple-800 transition-colors"
+                      className="underline hover:!text-[#5f2d85] transition-colors"
                     >
                       Wellin5
                     </a>
@@ -227,19 +225,19 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                 </div>
               </div>
 
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
                 <img
                   src={betterHelp}
                   alt="BetterHelp"
                   className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain"
                 />
                 <div>
-                  <h3 className="text-xl font-semibold text-purple-700">
+                  <h3 className="!text-xl font-normal !text-[#5f2d85]">
                     <a
                       href="https://www.betterhelp.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:text-purple-800 transition-colors"
+                      className="underline hover:!text-[#5f2d85] transition-colors"
                     >
                       BetterHelp
                     </a>
@@ -252,19 +250,19 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                 </div>
               </div>
 
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
                 <img
                   src={accessCBT}
                   alt="Access CBT"
                   className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain"
                 />
                 <div>
-                  <h3 className="text-xl font-semibold text-purple-700">
+                  <h3 className="!text-xl font-normal !text-[#5f2d85]">
                     <a
                       href="https://www.accesscbt.co.uk"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:text-purple-800 transition-colors"
+                      className="underline hover:!text-[#5f2d85] transition-colors"
                     >
                       Access CBT
                     </a>
@@ -277,19 +275,19 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                 </div>
               </div>
 
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
                 <img
                   src={counsellingGroup}
                   alt="Counselling Group"
                   className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain"
                 />
                 <div>
-                  <h3 className="text-xl font-semibold text-purple-700">
+                  <h3 className="!text-xl font-normal !text-[#5f2d85]">
                     <a
                       href="https://thecounsellinggroup.com/e-counselling/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:text-purple-800 transition-colors"
+                      className="underline hover:!text-[#5f2d85] transition-colors"
                     >
                       Counselling Group
                     </a>
@@ -303,19 +301,19 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                 </div>
               </div>
 
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
                 <img
                   src={blahTherapy}
                   alt="BlahTherapy"
                   className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain"
                 />
                 <div>
-                  <h3 className="text-xl font-semibold text-purple-700">
+                  <h3 className="!text-xl font-normal !text-[#5f2d85]">
                     <a
                       href="https://blahtherapy.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:text-purple-800 transition-colors"
+                      className="underline hover:!text-[#5f2d85] transition-colors"
                     >
                       BlahTherapy
                     </a>
@@ -333,19 +331,19 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                 </div>
               </div>
 
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm flex items-start gap-4">
                 <img
                   src={breakingFreeOnline}
                   alt="Breaking Free Online"
                   className="w-20 sm:w-24 flex-shrink-0 rounded-lg object-contain"
                 />
                 <div>
-                  <h3 className="text-xl font-semibold text-purple-700">
+                  <h3 className="!text-xl font-normal !text-[#5f2d85]">
                     <a
                       href="https://www.breakingfreeonline.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:text-purple-800 transition-colors"
+                      className="underline hover:!text-[#5f2d85] transition-colors"
                     >
                       Breaking Free Online
                     </a>
@@ -364,19 +362,19 @@ const MentalHealthResourcesECounselling: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-8 bg-white/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-white/50">
-            <h2 className="text-2xl font-bold text-gray-900">
+          <div className="mt-8 !bg-white/60 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-white/50">
+            <h2 className="text-2xl font-bold !text-[#5f2d85]">
               Additional E-Counselling Resources
             </h2>
 
             <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                <h3 className="text-xl font-semibold text-purple-700">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
+                <h3 className="!text-xl font-normal !text-[#5f2d85]">
                   <a
                     href="https://dbtpath.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:text-purple-800 transition-colors"
+                    className="underline hover:!text-[#5f2d85] transition-colors"
                   >
                     DBT Path
                   </a>
@@ -390,13 +388,13 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                <h3 className="text-xl font-semibold text-purple-700">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
+                <h3 className="!text-xl font-normal !text-[#5f2d85]">
                   <a
                     href="https://focusmentalwellness.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:text-purple-800 transition-colors"
+                    className="underline hover:!text-[#5f2d85] transition-colors"
                   >
                     Focus Mental Wellness
                   </a>
@@ -410,13 +408,13 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                <h3 className="text-xl font-semibold text-purple-700">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
+                <h3 className="!text-xl font-normal !text-[#5f2d85]">
                   <a
                     href="https://www.helppro.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:text-purple-800 transition-colors"
+                    className="underline hover:!text-[#5f2d85] transition-colors"
                   >
                     HelpPRO Suicide Prevention Therapist Finder. (U.S)
                   </a>
@@ -431,13 +429,13 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                <h3 className="text-xl font-semibold text-purple-700">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
+                <h3 className="!text-xl font-normal !text-[#5f2d85]">
                   <a
                     href="https://www.learntolive.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:text-purple-800 transition-colors"
+                    className="underline hover:!text-[#5f2d85] transition-colors"
                   >
                     Learn to Live
                   </a>
@@ -447,13 +445,13 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                <h3 className="text-xl font-semibold text-purple-700">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
+                <h3 className="!text-xl font-normal !text-[#5f2d85]">
                   <a
                     href="https://www.counsellors-online.co.uk"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:text-purple-800 transition-colors"
+                    className="underline hover:!text-[#5f2d85] transition-colors"
                   >
                     Online Counselling, Online Therapy and Life Coaching with
                     Paul Parkin (U.K.)
@@ -467,13 +465,13 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                <h3 className="text-xl font-semibold text-purple-700">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
+                <h3 className="!text-xl font-normal !text-[#5f2d85]">
                   <a
                     href="https://psychcentral.com/health/find-help"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:text-purple-800 transition-colors"
+                    className="underline hover:!text-[#5f2d85] transition-colors"
                   >
                     PsychCentral
                   </a>
@@ -486,13 +484,13 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                <h3 className="text-xl font-semibold text-purple-700">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
+                <h3 className="!text-xl font-normal !text-[#5f2d85]">
                   <a
                     href="https://www.supportgroups.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:text-purple-800 transition-colors"
+                    className="underline hover:!text-[#5f2d85] transition-colors"
                   >
                     SupportGroups
                   </a>
@@ -506,13 +504,13 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                <h3 className="text-xl font-semibold text-purple-700">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
+                <h3 className="!text-xl font-normal !text-[#5f2d85]">
                   <a
                     href="https://slaterandassociates.ca"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:text-purple-800 transition-colors"
+                    className="underline hover:!text-[#5f2d85] transition-colors"
                   >
                     Slater and Associates
                   </a>
@@ -525,13 +523,13 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                <h3 className="text-xl font-semibold text-purple-700">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
+                <h3 className="!text-xl font-normal !text-[#5f2d85]">
                   <a
                     href="https://www.metanoia.org/imhs/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:text-purple-800 transition-colors"
+                    className="underline hover:!text-[#5f2d85] transition-colors"
                   >
                     Talk to a Therapist Online
                   </a>
@@ -544,13 +542,13 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
-                <h3 className="text-xl font-semibold text-purple-700">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm">
+                <h3 className="!text-xl font-normal !text-[#5f2d85]">
                   <a
                     href="https://therapieland.nl"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:text-purple-800 transition-colors"
+                    className="underline hover:!text-[#5f2d85] transition-colors"
                   >
                     Therapieland (Dutch)
                   </a>
@@ -564,13 +562,13 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm md:col-span-2">
-                <h3 className="text-xl font-semibold text-purple-700">
+              <div className="!bg-white/80 p-5 rounded-lg border border-white/60 shadow-sm md:col-span-2">
+                <h3 className="!text-xl font-normal !text-[#5f2d85]">
                   <a
                     href="https://www.therapywithpromise.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:text-purple-800 transition-colors"
+                    className="underline hover:!text-[#5f2d85] transition-colors"
                   >
                     Therapy With Promise
                   </a>

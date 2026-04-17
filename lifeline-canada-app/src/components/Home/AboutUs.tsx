@@ -13,56 +13,56 @@ const AboutUs: React.FC = () => {
           {/* Left Content - Text */}
           <div className="space-y-8 animate-fadeInLeft">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-[#B266C9]/30 shadow-lg">
+            <div className="inline-flex items-center gap-2 !bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-[#5f2d85]/30 shadow-lg">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#B266C9] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#89009B]"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5f2d85] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#5f2d85]"></span>
               </span>
-              <span className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#89009B] to-[#B266C9]">
+              <span className="text-sm font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#5f2d85] to-[#5f2d85]">
                 ✦ OUR STORY ✦
               </span>
             </div>
 
             {/* Heading - Single line like Contribute */}
-            <h1 className="!text-4xl md:text-6xl lg:text-7xl font-black leading-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#89009B] via-[#B266C9] to-[#89009B]">
+            <h1 className="!text-4xl   font-black leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5f2d85] via-[#5f2d85] to-[#5f2d85]">
                 About Us
               </span>
             </h1>
 
             {/* Description paragraphs like Contribute */}
             <div className="space-y-6 text-gray-700">
-              <p className="text-lg md:text-xl leading-relaxed">
-                <span className="text-2xl text-[#89009B] mr-1">🌟</span>
+              <p className="text-lg md:!text-xl leading-relaxed">
+                <span className="text-2xl !text-[#5f2d85] mr-1">🌟</span>
                 The LifeLine Canada Foundation (or TLC) is a registered
                 nonprofit, committed to positive mental health and suicide
                 prevention & awareness and is constantly developing new
                 initiatives in support of these goals.
               </p>
 
-              <div className="bg-[#f5edf7]/50 p-6 rounded-2xl border border-[#B266C9]/20">
-                <p className="text-lg md:text-xl leading-relaxed">
-                  <span className="text-2xl text-[#B266C9] mr-1">💜</span>
+              <div className="bg-[#f5edf7]/50 p-6 rounded-2xl border border-[#5f2d85]/20">
+                <p className="text-lg md:!text-xl leading-relaxed">
+                  <span className="text-2xl !text-[#5f2d85] mr-1">💜</span>
                   The LifeLine Canada Foundation is{' '}
-                  <span className="font-semibold text-[#89009B]">
+                  <span className="font-normal !text-[#5f2d85]">
                     not a crisis hotline
                   </span>
                   . If in Crisis, call or text{' '}
-                  <span className="font-bold text-[#89009B] text-xl md:text-2xl">
+                  <span className="font-bold !text-[#5f2d85] !text-xl md:text-2xl">
                     988
                   </span>{' '}
                   for Canada's suicide prevention hotline. If you or someone you
                   know is in immediate danger, call{' '}
-                  <span className="font-bold text-[#89009B] text-xl md:text-2xl">
+                  <span className="font-bold !text-[#5f2d85] !text-xl md:text-2xl">
                     911
                   </span>
                   .
                 </p>
               </div>
 
-              <p className="text-lg md:text-xl leading-relaxed">
-                <span className="text-2xl text-[#89009B] mr-1">✨</span>
-                <span className="font-semibold text-[#89009B]">
+              <p className="text-lg md:!text-xl leading-relaxed">
+                <span className="text-2xl !text-[#5f2d85] mr-1">✨</span>
+                <span className="font-normal !text-[#5f2d85]">
                   Our Mission:
                 </span>{' '}
                 To aid in suicide reduction across Canada by raising awareness
@@ -72,11 +72,11 @@ const AboutUs: React.FC = () => {
                 all.
               </p>
 
-              <p className="text-lg md:text-xl leading-relaxed">
-                <span className="text-2xl text-[#B266C9] mr-1">📞</span>
+              <p className="text-lg md:!text-xl leading-relaxed">
+                <span className="text-2xl !text-[#5f2d85] mr-1">📞</span>
                 <NavLink
                   to="/incrisisneedhelp"
-                  className="font-semibold text-transparent !bg-clip-text bg-[#89009B] hover:from-[#B266C9] hover:to-[#89009B] transition-all duration-300 underline decoration-[#B266C9]/50"
+                  className="font-normal text-transparent !bg-clip-text bg-[#5f2d85] hover:from-[#5f2d85] hover:to-[#5f2d85] transition-all duration-300 underline decoration-[#5f2d85]/50"
                 >
                   See our directory of mental health crisis support
                 </NavLink>
@@ -88,10 +88,10 @@ const AboutUs: React.FC = () => {
           <div className="flex justify-center lg:justify-end animate-fadeInRight">
             <div className="relative group">
               {/* Glowing background */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#89009B] via-[#B266C9] to-[#89009B] rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#5f2d85] via-[#5f2d85] to-[#5f2d85] rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500" />
 
               {/* Image container */}
-              <div className="relative bg-white/80 backdrop-blur-sm p-2 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative !bg-white/80 backdrop-blur-sm p-2 rounded-2xl overflow-hidden shadow-2xl">
                 <div className="relative overflow-hidden rounded-xl">
                   <img
                     src={aboutImage}
@@ -100,11 +100,11 @@ const AboutUs: React.FC = () => {
                   />
 
                   {/* Overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#89009B]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#5f2d85]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
                 {/* Floating badge */}
-                <div className="absolute -bottom-3 -right-3 bg-gradient-to-r from-[#89009B] to-[#B266C9] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="absolute -bottom-3 -right-3 bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] text-white px-4 py-2 rounded-full text-sm font-normal shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   Hope & Healing ✦
                 </div>
               </div>

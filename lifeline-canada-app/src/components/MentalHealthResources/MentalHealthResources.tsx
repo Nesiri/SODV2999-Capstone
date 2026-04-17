@@ -19,15 +19,15 @@ const MentalHealthResources: React.FC = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold !text-[#89009B]  mb-6">
+          <h2 className="!text-4xl md:text-5xl font-bold !text-[#5f2d85]  mb-6">
             What Can We{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5f2d85] to-[#5f2d85]">
               Help You
             </span>{' '}
             With?
           </h2>
           <div className="flex justify-center gap-2 mb-6">
-            <div className="w-16 h-1 bg-purple-600 rounded-full"></div>
+            <div className="w-16 h-1 bg-[#5f2d85] rounded-full"></div>
             <div className="w-16 h-1 bg-purple-400 rounded-full"></div>
           </div>
           <p className="text-gray-700 text-lg max-w-2xl mx-auto">
@@ -46,11 +46,11 @@ const MentalHealthResources: React.FC = () => {
           <div className="relative inline-flex group">
             <Link
               to="/resources"
-              className="relative px-10 py-5 !bg-[#89009B]  hover:!bg-purple-700 !text-white text-xl font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-3"
+              className="relative px-10 py-5 !bg-[#5f2d85] hover:!bg-[#5f2d85] !text-white !text-xl font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-3"
             >
               <span>View More</span>
               <svg
-                className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200"
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200 text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
