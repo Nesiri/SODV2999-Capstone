@@ -25,9 +25,9 @@ const CrisisCentres: React.FC = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h1 className="text-3xl sm:!text-4xl lg:text-5xl font-bold font-serif !text-[#5f2d85] px-4">
+          <h1 className="!text-3xl sm:!text-4xl lg:!text-5xl font-bold font-serif !text-[#5f2d85] px-4">
             Alberta Province
-            <span className="block text-transparent bg-[#5f2d85] bg-clip-text text-2xl sm:text-3xl lg:!text-4xl mt-2">
+            <span className="block text-transparent bg-[#5f2d85] bg-clip-text !text-2xl sm:!text-3xl lg:!text-4xl mt-2">
               Wide Crisis Centres
             </span>
           </h1>
@@ -90,7 +90,7 @@ const CrisisCentres: React.FC = () => {
                 {/* Lines Section - Outside Link, Below Card */}
                 <div className="mt-1 p-5 !bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 hover:shadow-xl transition-all duration-300">
                   <div className="space-y-2">
-                    <h3 className="text-2xl font-medium text-gray-800 border-b-2 border-purple-500 pb-2 inline-block">
+                    <h3 className="!text-2xl font-medium text-gray-800 border-b-2 border-purple-500 pb-2 inline-block">
                       {centre.title}
                     </h3>
                     <h4 className="!text-xl font-medium text-gray-600 mt-2">

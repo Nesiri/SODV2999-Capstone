@@ -21,7 +21,7 @@ const MBWideCrisisCentres: React.FC = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header - responsive typography */}
         <div className="text-center mb-10 sm:mb-12 md:mb-16 lg:mb-20">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-serif text-[#5f2d85] px-4">
+          <h1 className="!text-3xl md:!text-4xl lg:!text-5xl font-bold font-serif text-[#5f2d85] px-4">
             Manitoba Province
             <span className="block text-transparent bg-gradient-to-r from-[#5f2d85] to-[#8b3d9e] bg-clip-text text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-2">
               Wide Crisis Centres
@@ -90,7 +90,7 @@ const MBWideCrisisCentres: React.FC = () => {
                 {/* Lines Section - Below Card */}
                 <div className="mt-1 p-4 sm:p-5 md:p-6 bg-white/80 backdrop-blur-sm rounded-b-2xl shadow-lg border border-white/50 hover:shadow-xl transition-all duration-300">
                   <div className="space-y-2 sm:space-y-3">
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-800 border-b-2 border-purple-500 pb-2 inline-block break-words">
+                    <h3 className="!text-xl sm:!text-2xl md:!text-3xl font-medium text-gray-800 border-b-2 border-purple-500 pb-2 inline-block break-words">
                       {centre.title}
                     </h3>
 

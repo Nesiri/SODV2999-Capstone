@@ -122,7 +122,7 @@ const NSCrisisCentres: React.FC = () => {
                 {/* Lines Section - Below Card */}
                 <div className="mt-1 p-4 sm:p-5 md:p-6 bg-white/80 backdrop-blur-sm rounded-b-2xl shadow-lg border border-white/50 hover:shadow-xl transition-all duration-300">
                   <div className="space-y-2 sm:space-y-3">
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-800 border-b-2 border-purple-500 pb-2 inline-block break-words">
+                    <h3 className="!text-xl sm:!text-2xl md:!text-3xl font-medium text-gray-800 border-b-2 border-purple-500 pb-2 inline-block break-words">
                       {centre.title1}
                     </h3>
 

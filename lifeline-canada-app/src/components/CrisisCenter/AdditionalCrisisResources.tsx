@@ -10,7 +10,7 @@ const AdditionalCrisisResources: React.FC = () => {
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-20 md:py-24">
         {/* Centered Purple Heading - No underline */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-normal !bg-[#5f2d85]  bg-clip-text text-transparent">
+          <h2 className="!text-3xl md:!text-5xl font-normal !bg-[#5f2d85]  bg-clip-text text-transparent">
             Additional Crisis Resources
           </h2>
         </div>

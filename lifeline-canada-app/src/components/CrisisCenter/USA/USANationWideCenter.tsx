@@ -105,7 +105,7 @@ const USANationwide: React.FC = () => {
           <span className="text-xs tracking-[0.3em] !text-[#5f2d85] uppercase font-light block mb-4">
             — You Are Not Alone —
           </span>
-          <h1 className="text-3xl xs:!text-4xl sm:text-5xl font-serif font-medium leading-tight !text-[#5f2d85] mb-4">
+          <h1 className="!text-3xl xs:!text-4xl sm:!text-5xl font-serif font-medium leading-tight !text-[#5f2d85] mb-4">
             USA Nationwide
             <span className="block text-transparent bg-[#5f2d85] bg-clip-text text-3xl xs:text-5xl sm:text-5xl mt-1 sm:mt-2">
               Crisis Centres

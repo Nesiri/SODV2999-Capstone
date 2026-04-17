@@ -23,7 +23,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
       </div>
       <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:px-8 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
-          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:!text-5xl font-black tracking-tight">
             <span className="!text-[#5f2d85]">Warning Signs</span>
           </h1>
 

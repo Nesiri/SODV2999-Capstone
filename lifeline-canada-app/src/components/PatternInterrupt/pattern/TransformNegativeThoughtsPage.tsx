@@ -254,7 +254,7 @@ export default function TransformNegativeThoughts() {
         <main className="mx-auto max-w-[1200px] px-6">
           <div className="grid items-center gap-10 rounded-2xl border border-white/50 !bg-white/70 p-6 shadow-lg backdrop-blur-sm md:grid-cols-[1.2fr_0.8fr]">
             <div>
-              <h1 className="text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+              <h1 className="!text-3xl sm:!text-4xl lg:!text-5xl font-black tracking-tight">
                 <span className="!text-[#5f2d85]">
                   Transform Negative Thoughts
                 </span>

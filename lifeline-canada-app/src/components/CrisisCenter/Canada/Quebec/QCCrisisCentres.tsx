@@ -17,7 +17,7 @@ const QCCrisisCentres: React.FC = () => {
               </span>
             </div>
 
-            <h1 className="text-3xl xs:!text-4xl sm:text-5xl font-serif font-medium leading-tight !text-[#5f2d85]">
+            <h1 className="!text-3xl xs:!text-4xl sm:!text-5xl font-serif font-medium leading-tight !text-[#5f2d85]">
               <span className="block">Quebec</span>
               <span className="block text-transparent bg-[#5f2d85] bg-clip-text text-3xl xs:text-5xl sm:text-5xl mt-1 sm:mt-2">
                 Crisis Centres

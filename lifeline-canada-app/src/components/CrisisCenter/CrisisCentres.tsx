@@ -93,7 +93,7 @@ const CrisisCentres = () => {
         {/* Header Section */}
         <div className="text-center mb-20">
           {/* Main heading - Purple only, no underline */}
-          <h1 className="text-3xl md:text-5xl font-normal tracking-tight text-center">
+          <h1 className="!text-3xl md:!text-5xl font-normal tracking-tight text-center">
             <span className="!bg-[#5f2d85]  bg-clip-text text-transparent">
               Crisis Centres
             </span>

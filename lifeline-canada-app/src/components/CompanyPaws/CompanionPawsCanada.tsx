@@ -323,7 +323,7 @@ const CompanionPawsCanada: React.FC = () => {
               />
             </div>
 
-            <h1 className="text-3xl sm:!text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 px-2">
+            <h1 className="!text-3xl sm:!text-4xl md:!text-5xl  font-bold mb-4 sm:mb-6 px-2">
               <span className="bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] text-transparent bg-clip-text">
                 Companion Paws
               </span>
@@ -335,7 +335,7 @@ const CompanionPawsCanada: React.FC = () => {
               <div className="w-12 sm:w-14 md:w-16 h-1 bg-[#5f2d85] rounded-full"></div>
             </div>
 
-            <p className="text-gray-600 text-sm sm:text-base md:text-lg lg:!text-xl max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
+            <p className="text-gray-600 !text-sm sm:!text-base md:!text-lg  max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
               <span className="!text-[#5f2d85] font-normal">
                 Certifying compassion.
               </span>{' '}
@@ -360,11 +360,11 @@ const CompanionPawsCanada: React.FC = () => {
                 </span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl md:!text-4xl font-bold !text-[#5f2d85] mb-6 sm:mb-8">
+              <h2 className="!text-2xl sm:!text-3xl  font-bold !text-[#5f2d85] mb-6 sm:mb-8">
                 Healing Hearts,{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] block sm:inline">
+                
                   One Paw
-                </span>{' '}
+               
                 at a Time
               </h2>
 
@@ -381,7 +381,7 @@ const CompanionPawsCanada: React.FC = () => {
                     onMouseLeave={() => setActiveProgram(null)}
                   >
                     <div
-                      className={`absolute inset-0 bg-gradient-to-r ${program.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                      className={`absolute inset-0 !bg-gradient-to-r ${program.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
                     ></div>
 
                     <div className="relative p-4 sm:p-6">
@@ -392,7 +392,7 @@ const CompanionPawsCanada: React.FC = () => {
                         </div>
 
                         <div className="flex-1 min-w-0">
-                          <h3 className="text-base sm:text-lg md:!text-xl font-bold !text-[#5f2d85] mb-1 sm:mb-2 group-hover:!text-[#5f2d85] transition-all duration-300">
+                          <h3 className="!text-base sm:!text-lg md:!text-xl font-bold !text-[#5f2d85] mb-1 sm:mb-2 group-hover:!text-[#5f2d85] transition-all duration-300">
                             {program.title}
                           </h3>
                           <p className="text-gray-600 text-xs sm:text-sm mb-2 sm:mb-3">
@@ -406,7 +406,7 @@ const CompanionPawsCanada: React.FC = () => {
                             {program.features.map((feature, idx) => (
                               <span
                                 key={idx}
-                                className="px-2 sm:px-3 py-0.5 sm:py-1 bg-gray-100 rounded-full text-[10px] sm:text-xs font-medium text-gray-700 shadow-sm"
+                                className="px-2 sm:px-3 py-0.5 sm:py-1 !bg-gray-100 rounded-full text-[10px] sm:text-xs font-medium !text-gray-700 shadow-sm"
                               >
                                 ✓ {feature}
                               </span>
@@ -420,7 +420,7 @@ const CompanionPawsCanada: React.FC = () => {
                         >
                           <svg
                             className={`w-3 h-3 sm:w-4 sm:h-4 transition-colors duration-300 ${activeProgram === program.id ? 'text-white' : '!text-[#5f2d85]'}`}
-                            fill="none"
+                            fill="#5f2d85"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
                           >

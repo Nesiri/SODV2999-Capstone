@@ -118,7 +118,7 @@ const TextChatSupportHub = () => {
       {/* Header */}
       <div className="bg-gradient-to-r from-[#5f2d85]/10 to-blue-500/10 text-black">
         <div className="flex flex-col justify-center items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h5 className="!text-4xl md:text-5xl font-normal mb-4">
+          <h5 className="!text-3xl sm:!text-5xl font-normal mb-4">
             Crisis Support & Helplines
           </h5>
         </div>

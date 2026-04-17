@@ -95,7 +95,7 @@ const ONWideCrisisCentres: React.FC = () => {
               {/* Lines Section - Below Card with equal height */}
               <div className="mt-1 p-4 sm:p-5 md:p-6 bg-white/80 backdrop-blur-sm rounded-b-2xl shadow-lg border border-white/50 hover:shadow-xl transition-all duration-300 flex-1">
                 <div className="space-y-2 sm:space-y-3">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-medium text-gray-800 border-b-2 border-purple-500 pb-2 inline-block break-words">
+                  <h3 className="!text-lg sm:!text-xl md:!text-2xl font-medium text-gray-800 border-b-2 border-purple-500 pb-2 inline-block break-words">
                     {centre.title}
                   </h3>
 

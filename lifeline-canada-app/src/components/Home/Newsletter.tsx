@@ -82,7 +82,7 @@ export default function Newsletter() {
               </span>
             </div>
 
-            <h2 className="text-3xl lg:!text-4xl font-bold mb-4">
+            <h2 className="!text-3xl lg:!text-4xl font-bold mb-4">
               <span className="bg-gradient-to-r from-[#5f2d85] via-[#5f2d85] to-[#5f2d85] bg-clip-text text-transparent">
                 Join Our Newsletter
               </span>
@@ -102,7 +102,7 @@ export default function Newsletter() {
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100/50 rounded-full border border-purple-200/50">
                   <Send className="w-4 h-4 !text-[#5f2d85]" />
-                  <h3 className="text-lg font-normal !text-[#5f2d85]">
+                  <h3 className="!text-sm font-normal !text-[#5f2d85]">
                     Newsletter Subscription
                   </h3>
                 </div>
@@ -112,11 +112,11 @@ export default function Newsletter() {
               <div className="bg-purple-50 rounded-xl p-6 border border-purple-200/50 mb-6">
                 <div className="flex items-center gap-2 mb-4">
                   <Shield className="w-5 h-5 !text-[#5f2d85]" />
-                  <span className="text-sm font-medium !text-[#5f2d85]">
+                  <span className="!text-sm font-medium !text-[#5f2d85]">
                     Security Verification
                   </span>
                   {captchaVerified && (
-                    <span className="text-xs bg-purple-200 !text-[#5f2d85] px-2 py-1 rounded-full ml-auto">
+                    <span className="!text-xs bg-purple-200 !text-[#5f2d85] px-2 py-1 rounded-full ml-auto">
                       Verified ✓
                     </span>
                   )}
@@ -148,7 +148,7 @@ export default function Newsletter() {
                 </div>
 
                 {!captchaVerified && RECAPTCHA_SITE_KEY && (
-                  <p className="text-xs !text-[#5f2d85] text-center">
+                  <p className="!text-xs !text-[#5f2d85] text-center">
                     Please complete verification to subscribe
                   </p>
                 )}
@@ -196,7 +196,7 @@ export default function Newsletter() {
                   disabled={isEmailSubmitted || !captchaVerified}
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
-                  className="w-full px-6 py-4 bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] hover:from-[#5f2d85] hover:to-purple-900 !text-white rounded-xl text-lg font-normal transition-all flex items-center justify-center gap-3 disabled:opacity-50 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  className="w-full px-6 py-4 bg-gradient-to-r from-[#5f2d85] to-[#5f2d85] hover:from-[#5f2d85] hover:to-purple-900 !text-white rounded-xl !text-sm font-normal transition-all flex items-center justify-center gap-3 disabled:opacity-50 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
                   {isEmailSubmitted ? 'Sent!' : 'Subscribe to Newsletter'}
                   <ArrowRight
@@ -207,7 +207,7 @@ export default function Newsletter() {
                 {isEmailSubmitted && (
                   <div className="flex items-center gap-2 !text-[#5f2d85] bg-purple-100 p-4 rounded-lg animate-fadeIn">
                     <CheckCircle className="w-5 h-5 !text-[#5f2d85]" />
-                    <span className="text-sm">
+                    <span className="!text-sm">
                       Thanks {name || 'for subscribing'}! Check your inbox.
                     </span>
                   </div>

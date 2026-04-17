@@ -410,7 +410,7 @@ const WhatToExpect: React.FC = () => {
             </span>
           </div>
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#5f2d85] to-[#C77DDF] bg-clip-text text-transparent mb-4">
+        <h2 className="!text-3xl sm:!text-5xl font-bold bg-gradient-to-r from-[#5f2d85] to-[#C77DDF] bg-clip-text text-transparent mb-4">
           What to Expect When Contacting a Helpline
         </h2>
         <p className="text-gray-600 text-lg max-w-2xl mx-auto">

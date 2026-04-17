@@ -87,7 +87,7 @@ function HeroSection() {
       <div className="mx-auto max-w-[1200px] px-6">
         <div className="grid items-center gap-10 md:grid-cols-2">
           <div className="max-w-[620px]">
-            <h1 className="text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+            <h1 className="!text-3xl sm:!text-4xl lg:!text-5xl font-black tracking-tight">
               <span className="!text-[#5f2d85]">Acts of Kindness</span>
             </h1>
 
@@ -174,7 +174,7 @@ export default function ActsOfKindnes() {
 
       <section className="mx-auto max-w-[1200px] rounded-2xl border border-purple-100 !bg-white/90 px-6 py-14 shadow-sm backdrop-blur-sm">
         <div className="mx-auto max-w-[1100px]">
-          <h2 className="text-2xl sm:text-3xl lg:!text-4xl font-bold tracking-tight !text-[#5f2d85]">
+          <h2 className="!text-2xl sm:!text-3xl lg:!text-4xl font-bold tracking-tight !text-[#5f2d85]">
             35 Small Acts of Kindness
           </h2>
 

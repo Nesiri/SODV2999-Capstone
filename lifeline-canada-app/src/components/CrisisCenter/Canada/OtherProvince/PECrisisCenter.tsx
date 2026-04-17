@@ -31,7 +31,7 @@ const PECrisisCentres: React.FC = () => {
               </span>
             </div>
 
-            <h1 className="text-3xl xs:!text-4xl sm:text-5xl font-serif font-medium leading-tight !text-[#5f2d85]">
+            <h1 className="!text-3xl xs:!text-4xl sm:!text-5xl font-serif font-medium leading-tight !text-[#5f2d85]">
               <span className="block">Prince Edward Island</span>
               <span className="block text-transparent bg-[#5f2d85] bg-clip-text text-3xl xs:text-5xl sm:text-5xl mt-1 sm:mt-2">
                 Crisis Centres
@@ -120,7 +120,7 @@ const PECrisisCentres: React.FC = () => {
                 {/* Lines Section - Outside Link, Below Card */}
                 <div className="mt-1 p-5 !bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 hover:shadow-xl transition-all duration-300">
                   <div className="space-y-2">
-                    <h3 className="text-2xl font-medium text-gray-800 border-b-2 border-purple-500 pb-2 inline-block">
+                    <h3 className="!text-2xl font-medium text-gray-800 border-b-2 border-purple-500 pb-2 inline-block">
                       {centre.title1}
                     </h3>
 

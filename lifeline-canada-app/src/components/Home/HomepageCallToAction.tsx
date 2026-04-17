@@ -13,7 +13,7 @@ const HomepageCallToAction = () => {
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Section Header - Mobile optimized */}
         <div className="text-center mb-10 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:!text-4xl lg:text-5xl font-bold bg-[#5f2d85] bg-clip-text text-transparent mb-3 md:mb-4 px-2">
+          <h2 className="!text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl font-bold bg-[#5f2d85] bg-clip-text text-transparent mb-3 md:mb-4 px-2">
             Make a Difference Today
           </h2>
           <p className="!text-[#5f2d85]/80 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
@@ -35,7 +35,7 @@ const HomepageCallToAction = () => {
               </div>
 
               {/* Title - smaller on mobile */}
-              <h3 className="text-lg sm:!text-xl md:text-2xl font-bold !text-[#5f2d85] mb-2 md:mb-3 text-center md:text-left">
+              <h3 className="!text-lg sm:!text-xl md:!text-2xl font-bold !text-[#5f2d85] mb-2 md:mb-3 text-center md:text-left">
                 Make a Contribution
               </h3>
 
@@ -49,7 +49,7 @@ const HomepageCallToAction = () => {
               <div className="relative inline-flex w-full justify-center">
                 <Link
                   to="/contribute"
-                  className="relative px-8 md:px-10 py-3 md:py-4 !bg-[#5f2d85] hover:!bg-[#5f2d85] !text-white text-sm md:text-base font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2 md:gap-3 w-full sm:w-auto"
+                  className="relative px-8 md:px-10 py-3 md:py-4 !bg-[#5f2d85] hover:!bg-[#5f2d85] !text-white !text-sm md:!text-base font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2 md:gap-3 w-full sm:w-auto"
                 >
                   <span>CONTRIBUTE</span>
                   <ArrowRight
@@ -72,7 +72,7 @@ const HomepageCallToAction = () => {
               </div>
 
               {/* Title - smaller on mobile */}
-              <h3 className="text-lg sm:!text-xl md:text-2xl font-bold !text-[#5f2d85] mb-2 md:mb-3 text-center md:text-left">
+              <h3 className="!text-lg sm:!text-xl md:!text-2xl font-bold !text-[#5f2d85] mb-2 md:mb-3 text-center md:text-left">
                 Get Involved
               </h3>
 
@@ -86,7 +86,7 @@ const HomepageCallToAction = () => {
               <div className="relative inline-flex w-full justify-center">
                 <Link
                   to="/volunteers"
-                  className="relative px-8 md:px-10 py-3 md:py-4 !bg-[#5f2d85] hover:!bg-[#5f2d85] !text-white text-sm md:text-base font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2 md:gap-3 w-full sm:w-auto"
+                  className="relative px-8 md:px-10 py-3 md:py-4 !bg-[#5f2d85] hover:!bg-[#5f2d85] !text-white !text-sm md:!text-base font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2 md:gap-3 w-full sm:w-auto"
                 >
                   <span>VOLUNTEER</span>
                   <ArrowRight

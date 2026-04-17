@@ -149,7 +149,7 @@ const ABRegionalCrisisCentres: React.FC = () => {
               {/* Lines Section - Beautiful Card Below */}
               <div className="mt-1 p-4 sm:p-5 bg-white/95 backdrop-blur-sm rounded-b-2xl shadow-lg border border-white/50 hover:shadow-xl transition-all duration-300 flex-1">
                 <div className="space-y-2 sm:space-y-2.5">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-medium text-gray-800 border-b-2 border-purple-500 pb-2 inline-block">
+                  <h3 className="!text-lg sm:!text-xl md:!text-2xl font-medium text-gray-800 border-b-2 border-purple-500 pb-2 inline-block">
                     {centre.title}
                   </h3>
                   {centre.lines.map((line, i) => {

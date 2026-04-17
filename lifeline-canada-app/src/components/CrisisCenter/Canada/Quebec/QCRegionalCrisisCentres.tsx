@@ -261,7 +261,7 @@ const QCRegionalCrisisCentres: React.FC = () => {
               {/* Lines Section - Equal height with flex */}
               <div className="mt-1 p-4 sm:p-5 bg-white/95 backdrop-blur-sm rounded-b-2xl shadow-lg border border-white/50 hover:shadow-xl transition-all duration-300 flex-1 flex flex-col">
                 <div className="space-y-2 sm:space-y-2.5 flex-1">
-                  <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl font-normal text-gray-800 border-b-2 border-purple-500 pb-2 inline-block break-words">
+                  <h4 className="!text-base sm:!text-lg md:!text-xl lg:!text-2xl font-normal text-gray-800 border-b-2 border-purple-500 pb-2 inline-block break-words">
                     {centre.title}
                   </h4>
                   <div className="space-y-1.5 sm:space-y-2">

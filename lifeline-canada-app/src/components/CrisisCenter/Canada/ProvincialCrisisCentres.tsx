@@ -99,9 +99,9 @@ const ProvincialCrisisCentres: React.FC = () => {
           <span className="text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] text-[#7C9EB2] uppercase font-light block mb-3 sm:mb-4">
             — Support Across Canada —
           </span>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-[#5f2d85] leading-[1.2] sm:leading-[1.15] lg:leading-[1.1] mb-3 sm:mb-4">
+          <h1 className="!text-3xl md:!text-4xl lg:!text-5xl font-serif !text-[#5f2d85] leading-[1.2] sm:leading-[1.15] lg:leading-[1.1] mb-3 sm:mb-4">
             Provincial Crisis
-            <span className="block text-[#5f2d85]">Centres</span>
+            <span className="block !text-[#5f2d85]">Centres</span>
           </h1>
           <div className="w-16 sm:w-20 md:w-24 h-px bg-gradient-to-r from-transparent via-[#B18F9E] to-transparent mx-auto"></div>
           <p className="text-sm sm:text-base md:text-lg text-[#3C5A6F] font-light max-w-2xl mx-auto mt-4 sm:mt-5 md:mt-6 px-4">

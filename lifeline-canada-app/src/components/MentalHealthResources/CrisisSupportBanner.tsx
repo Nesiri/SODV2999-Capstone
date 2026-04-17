@@ -42,7 +42,7 @@ const CrisisSupportBanner: React.FC = () => {
 
           {/* Emergency 911 section - mobile optimized */}
           <div className="relative mb-8 md:mb-12 p-6 md:p-8 !bg-white/5 backdrop-blur-md rounded-2xl md:rounded-3xl border border-white/10 max-w-4xl mx-4 md:mx-auto">
-            <h3 className="w-full text-base md:!text-xl lg:text-2xl !text-[#5f2d85] mb-3 md:mb-4 font-light">
+            <h3 className="w-full !text-base md:!text-xl lg:!text-2xl !text-[#5f2d85] mb-3 md:mb-4 font-light">
               If you or someone you know is in danger of hurting themselves or
               others
             </h3>
@@ -82,7 +82,7 @@ const CrisisSupportBanner: React.FC = () => {
                     d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
                   />
                 </svg>
-                <span>SUPPORT SERVICES</span>
+                <span className='!text-sm '>SUPPORT SERVICES</span>
                 <svg
                   className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200 text-white"
                   fill="none"

@@ -465,7 +465,7 @@ const BreathingExercises: React.FC = () => {
                       transition={{ duration: 0.2 }}
                       className="text-white"
                     >
-                      <div className="!text-4xl md:text-5xl font-light mb-2 font-mono">
+                      <div className="!text-3xl sm:!text-5xl font-light mb-2 font-mono">
                         {count}
                       </div>
                       <div className="text-lg md:!text-xl font-medium mb-1">

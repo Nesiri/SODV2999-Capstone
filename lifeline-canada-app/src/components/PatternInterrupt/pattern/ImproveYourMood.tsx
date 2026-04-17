@@ -17,7 +17,7 @@ export default function ImproveYourMood() {
       <div className="w-full px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="w-full lg:w-4/5 mx-auto">
           {/* Page Title */}
-          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:text-5xl font-black tracking-tight">
+          <h1 className="!text-[#5f2d85] mt-4 !text-3xl sm:!text-4xl lg:!text-5xl font-black tracking-tight">
             <span className="!text-[#5f2d85]">Improve Your Mood</span>
           </h1>
 
