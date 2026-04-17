@@ -129,24 +129,6 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
           />
         </div>
 
-        {/* Floating particles for healing effect - increased for full width */}
-        <div className="absolute inset-0 pointer-events-none">
-          {[...Array(12)].map((_, i) => (
-            <div
-              key={i}
-              className={`
-                absolute w-2 h-2 bg-gradient-to-r ${config.gradient} 
-                rounded-full opacity-20 animate-float
-              `}
-              style={{
-                top: `${(i * 8) % 100}%`,
-                left: `${(i * 13) % 100}%`,
-                animationDelay: `${i * 0.2}s`,
-              }}
-            />
-          ))}
-        </div>
-
         {/* Content container - optimized for full width */}
         <div className="relative px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-8 md:py-12 lg:py-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-16">
           {/* Image Section - adjusted proportions for full width */}
@@ -368,13 +350,6 @@ const PatternInterruptCard: React.FC<PatternInterruptCardProps> = ({
         }
         .animation-delay-2000 {
           animation-delay: 2s;
-        }
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
-        }
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
         }
         @keyframes pulse-slow {
           0%, 100% { opacity: 0.2; }
