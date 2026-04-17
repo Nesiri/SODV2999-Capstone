@@ -86,7 +86,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
 
           <div className="mt-8 space-y-4">
             <div className={sectionClassName}>
-              <h2 className="text-lg font-normal !text-[#5f2d85]">
+              <h2 className="!text-lg font-normal !text-[#5f2d85]">
                 Understanding Suicide
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
@@ -114,7 +114,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-normal !text-[#5f2d85]">
+              <h2 className="!text-lg font-normal !text-[#5f2d85]">
                 Warning Signs to Watch For
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
@@ -154,7 +154,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-normal !text-[#5f2d85]">
+              <h2 className="!text-lg font-normal !text-[#5f2d85]">
                 How to Talk to Someone You're Worried About
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
@@ -197,7 +197,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-normal !text-[#5f2d85]">
+              <h2 className="!text-lg font-normal !text-[#5f2d85]">
                 Quick Risk Questions
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
@@ -223,7 +223,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-normal !text-[#5f2d85]">
+              <h2 className="!text-lg font-normal !text-[#5f2d85]">
                 If You Receive a Suicidal Phone Call
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
@@ -257,7 +257,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-normal !text-[#5f2d85]">
+              <h2 className="!text-lg font-normal !text-[#5f2d85]">
                 After a Suicide Attempt: What to Do Next
               </h2>
               <div className="mt-4 space-y-4 text-slate-700">

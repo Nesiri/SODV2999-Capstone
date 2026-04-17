@@ -141,7 +141,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-normal !text-[#5f2d85]">
+              <h2 className="!text-lg font-normal !text-[#5f2d85]">
                 Safety Plan
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-[1fr_220px] lg:items-start text-slate-700">
@@ -179,7 +179,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-normal !text-[#5f2d85]">
+              <h2 className="!text-lg font-normal !text-[#5f2d85]">
                 What else can I do to decrease thoughts of suicide?
               </h2>
               <div className="mt-4 space-y-4 text-slate-700">
@@ -301,7 +301,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-normal !text-[#5f2d85]">
+              <h2 className="!text-lg font-normal !text-[#5f2d85]">
                 Some common problems and solution ideas
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -345,7 +345,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-normal !text-[#5f2d85]">
+              <h2 className="!text-lg font-normal !text-[#5f2d85]">
                 How can I decrease chances that I will feel suicidal in the
                 future?
               </h2>

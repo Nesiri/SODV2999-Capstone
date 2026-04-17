@@ -77,7 +77,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
 
           <div className="mt-6 space-y-4">
             <div className={sectionClassName}>
-              <h2 className="text-lg font-normal !text-[#5f2d85]">
+              <h2 className="!text-lg font-normal !text-[#5f2d85]">
                 What is PTSD?
               </h2>
               <div className="mt-4 space-y-4">
@@ -187,7 +187,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-normal !text-[#5f2d85]">
+              <h2 className="!text-lg font-normal !text-[#5f2d85]">
                 Resources for PTSD
               </h2>
               <div className="mt-4 grid gap-4 sm:grid-cols-2">

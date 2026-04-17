@@ -70,7 +70,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
 
           <div className="mt-6 space-y-4">
             <div className={sectionClassName}>
-              <h2 className="text-lg font-normal !text-[#5f2d85]">
+              <h2 className="!text-lg font-normal !text-[#5f2d85]">
                 Suicide Warning Signs
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
@@ -142,7 +142,7 @@ const MentalHealthResourcesWarningSigns: React.FC = () => {
             </div>
 
             <div className={sectionClassName}>
-              <h2 className="text-lg font-normal !text-[#5f2d85]">
+              <h2 className="!text-lg font-normal !text-[#5f2d85]">
                 Suicide Risk Factors
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
