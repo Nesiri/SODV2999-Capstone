@@ -77,7 +77,7 @@ const provinces: Province[] = [
 
 const ProvincialCrisisCentres: React.FC = () => {
   return (
-    <section className="relative w-full bg-gradient-to-br from-[#F0F5FA] via-[#E8F0F7] to-[#E0EAF2] py-24 overflow-hidden">
+    <section className="relative w-full bg-gradient-to-br from-[#F0F5FA] via-[#E8F0F7] to-[#E0EAF2] py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
       {/* Modern geometric pattern overlay */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div
@@ -89,28 +89,28 @@ const ProvincialCrisisCentres: React.FC = () => {
         ></div>
       </div>
 
-      {/* Soft luminous gradients */}
-      <div className="absolute top-20 -left-20 w-[500px] h-[500px] bg-[#A6C1D9]/20 rounded-full blur-[120px]"></div>
-      <div className="absolute bottom-20 -right-20 w-[500px] h-[500px] bg-[#D4B8C5]/20 rounded-full blur-[120px]"></div>
+      {/* Soft luminous gradients - responsive positioning */}
+      <div className="absolute top-20 -left-20 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] bg-[#A6C1D9]/20 rounded-full blur-[80px] sm:blur-[100px] lg:blur-[120px]"></div>
+      <div className="absolute bottom-20 -right-20 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] bg-[#D4B8C5]/20 rounded-full blur-[80px] sm:blur-[100px] lg:blur-[120px]"></div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header with elegant typography */}
-        <div className="text-center mb-16">
-          <span className="text-xs tracking-[0.3em] text-[#7C9EB2] uppercase font-light block mb-4">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
+          <span className="text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] text-[#7C9EB2] uppercase font-light block mb-3 sm:mb-4">
             — Support Across Canada —
           </span>
-          <h1 className="!text-3xl sm:!text-5xl font-serif !text-[#5f2d85] leading-[1.1] mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-[#5f2d85] leading-[1.2] sm:leading-[1.15] lg:leading-[1.1] mb-3 sm:mb-4">
             Provincial Crisis
-            <span className="block !text-[#5f2d85]">Centres</span>
+            <span className="block text-[#5f2d85]">Centres</span>
           </h1>
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#B18F9E] to-transparent mx-auto"></div>
-          <p className="text-[#3C5A6F] text-lg font-light max-w-2xl mx-auto mt-6">
+          <div className="w-16 sm:w-20 md:w-24 h-px bg-gradient-to-r from-transparent via-[#B18F9E] to-transparent mx-auto"></div>
+          <p className="text-sm sm:text-base md:text-lg text-[#3C5A6F] font-light max-w-2xl mx-auto mt-4 sm:mt-5 md:mt-6 px-4">
             Find immediate support in your province or territory
           </p>
         </div>
 
-        {/* Modern card grid - ALL CARDS EQUAL SIZE */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 lg:gap-8">
+        {/* Modern card grid - FULLY RESPONSIVE */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-5 md:gap-6 lg:gap-8">
           {provinces.map((province) => (
             <Link
               key={province.name}
@@ -118,36 +118,37 @@ const ProvincialCrisisCentres: React.FC = () => {
               className="group relative transform hover:-translate-y-2 transition-all duration-500 h-full"
               style={{ textDecoration: 'none' }}
             >
-              {/* Card shadow layers */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-[#B18F9E]/20 to-[#7C9EB2]/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {/* Card shadow layers - responsive blur */}
+              <div className="absolute -inset-1 sm:-inset-2 bg-gradient-to-r from-[#B18F9E]/20 to-[#7C9EB2]/20 rounded-xl sm:rounded-2xl lg:rounded-3xl blur-lg sm:blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               {/* Main card - EQUAL HEIGHT using flex flex-col */}
-              <div className="relative !bg-white/90 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-white/60 hover:border-white/80 transition-all duration-300 flex flex-col h-full">
-                {/* Image container - FIXED SIZE WITH CONTAIN FIT */}
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-5 shadow-md sm:shadow-lg border border-white/60 hover:border-white/80 transition-all duration-300 flex flex-col h-full">
+                {/* Image container - RESPONSIVE SIZING */}
                 <div
-                  className="relative rounded-xl overflow-hidden mb-4 flex-shrink-0 bg-gray-50 flex items-center justify-center"
-                  style={{ height: '100px' }}
+                  className="relative rounded-lg sm:rounded-xl overflow-hidden mb-3 sm:mb-4 flex-shrink-0 bg-gray-50 flex items-center justify-center"
+                  style={{ height: '80px' }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1F3A4F]/30 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <img
                     src={province.image}
                     alt={province.name}
-                    className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-700 p-2"
+                    className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-700 p-1 sm:p-2"
+                    loading="lazy"
                   />
                   {/* Elegant overlay border */}
-                  <div className="absolute inset-0 border border-white/20 rounded-xl pointer-events-none"></div>
+                  <div className="absolute inset-0 border border-white/20 rounded-lg sm:rounded-xl pointer-events-none"></div>
                 </div>
 
-                {/* Province name - PUSHES TO BOTTOM with flex-grow */}
+                {/* Province name - RESPONSIVE TYPOGRAPHY */}
                 <div className="flex-grow flex items-center justify-center">
-                  <h3 className="text-center font-serif text-base sm:text-lg text-[#1F3A4F] group-hover:text-[#B18F9E] transition-colors duration-300">
+                  <h3 className="text-center font-serif !text-xs sm:!text-sm md:!text-base lg:!text-lg text-[#1F3A4F] group-hover:text-[#B18F9E] transition-colors duration-300 leading-tight sm:leading-normal px-1">
                     {province.name}
                   </h3>
                 </div>
 
-                {/* Subtle decorative element */}
-                <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-[#B18F9E]/40 !text-xl">✦</span>
+                {/* Subtle decorative element - hidden on mobile */}
+                <div className="absolute top-2 sm:top-3 right-2 sm:right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:block">
+                  <span className="text-[#B18F9E]/40 text-base sm:text-xl">✦</span>
                 </div>
               </div>
             </Link>
