@@ -264,7 +264,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Let Them Talk */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Let Them Talk
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -293,7 +293,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Making a Survivor Kit or Box */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Making a Survivor Kit or Box
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -321,7 +321,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Therapy Should Be First on the List */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Therapy Should Be First on the List
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -357,7 +357,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Things Not To Do */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Things Not To Do
                     </h3>
                     <ul className="mt-2 list-disc space-y-1 pl-5 leading-relaxed">
@@ -402,7 +402,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Make Important Lifestyle Changes */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Make Important Lifestyle Changes
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -470,7 +470,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Short-Term Planning */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Short-Term Planning
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -539,7 +539,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Be Alert for Suicide Warning Signs */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Be Alert for Suicide Warning Signs
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -609,7 +609,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Should You Worry? */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Should You Worry?
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -657,7 +657,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Things To Do */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Things To Do
                     </h3>
                     <ul className="mt-2 list-disc space-y-1 pl-5 leading-relaxed">
@@ -712,7 +712,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Hope Cards */}
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">Hope Cards</h3>
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">Hope Cards</h3>
                     <p className="mt-1 leading-relaxed">
                       Consider making hope cards, which are simply index cards.
                       The attempt survivor and a supportive person sit down and
@@ -743,7 +743,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                 {/* Resources and Help */}
                 <div className="grid grid-cols-1 gap-3 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Resources and Help
                     </h3>
                     <p className="mt-1 leading-relaxed">

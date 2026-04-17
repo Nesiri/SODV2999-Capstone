@@ -185,7 +185,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
               <div className="mt-4 space-y-4 text-slate-700">
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Problem Solve
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -204,7 +204,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Think of Reasons for Living
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -223,7 +223,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Remember Things That Have Helped in the Past
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -242,7 +242,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Get Treatment for Mental Health Problems
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -261,7 +261,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Do The Opposite of How You Feel
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -280,7 +280,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-stretch">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Talk To Someone
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -306,7 +306,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
               </h2>
               <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                  <h3 className="font-normal !text-[#5f2d85]">
+                  <h3 className="!text-lg font-normal !text-[#5f2d85]">
                     Problem: Depressed Mood
                   </h3>
                   <p className="mt-2 text-sm font-medium text-slate-700">
@@ -329,7 +329,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                   </ul>
                 </div>
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                  <h3 className="font-normal !text-[#5f2d85]">
+                  <h3 className="!text-lg font-normal !text-[#5f2d85]">
                     Problem: End of Relationship
                   </h3>
                   <p className="mt-2 text-sm font-medium text-slate-700">
@@ -352,7 +352,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
               <div className="mt-4 space-y-4 text-slate-700">
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Get Professional Support
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -372,7 +372,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Identify high-risk triggers or situations
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -395,7 +395,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">Self Care</h3>
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">Self Care</h3>
                     <p className="mt-1 leading-relaxed">
                       Taking good care of yourself is important to feel better.
                       It is important to do the following:
@@ -421,7 +421,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Follow Through with Prescribed Medications
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -447,7 +447,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Structure & Routine
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -476,7 +476,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Do Things You Enjoy
                     </h3>
                     <p className="mt-1 leading-relaxed">
@@ -500,7 +500,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-1 gap-3 pb-3 border-b border-purple-200 md:grid-cols-[1fr_180px] md:items-start">
                   <div>
-                    <h3 className="font-normal !text-[#5f2d85]">
+                    <h3 className="!text-lg font-normal !text-[#5f2d85]">
                       Think of Personal Goals
                     </h3>
                     <p className="mt-1 leading-relaxed">
