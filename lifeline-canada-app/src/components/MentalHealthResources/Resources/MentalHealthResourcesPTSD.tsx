@@ -171,7 +171,7 @@ const MentalHealthResourcesPTSD: React.FC = () => {
                         href="https://www.brainline.org/topic/post-traumatic-stress-disorder-ptsd"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-medium text-blue-700 underline underline-offset-2"
+                        className="font-medium text-[#5f2d85] underline underline-offset-2"
                       >
                         Brainline.org
                       </a>

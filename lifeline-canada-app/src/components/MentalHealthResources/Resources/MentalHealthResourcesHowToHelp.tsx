@@ -136,7 +136,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                       href="https://www.helpguide.org/mental-health/suicide-self-harm/suicide-prevention-tips"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-medium text-blue-700 underline underline-offset-2"
+                      className="font-medium text-[#5f2d85] underline underline-offset-2"
                     >
                       Helpguide.org
                     </a>
@@ -179,7 +179,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                       href="https://panow.com/2014/09/12/how-to-talk-about-suicide-with-the-person-you-are-worried-about-2/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-medium text-blue-700 underline underline-offset-2"
+                      className="font-medium text-[#5f2d85] underline underline-offset-2"
                     >
                       Parkland Ambulance
                     </a>
@@ -589,7 +589,7 @@ const MentalHealthResourcesHowToHelp: React.FC = () => {
                       someone urgently.{' '}
                       <a
                         href="/incrisisneedhelp"
-                        className="font-medium text-blue-700 underline underline-offset-2"
+                        className="font-medium text-[#5f2d85] underline underline-offset-2"
                       >
                         Click here for Crisis Lines
                       </a>

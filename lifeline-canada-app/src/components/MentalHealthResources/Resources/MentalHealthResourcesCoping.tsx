@@ -74,7 +74,7 @@ const MentalHealthResourcesCoping: React.FC = () => {
                     href={copingPdf}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 inline-block font-medium text-blue-700 underline underline-offset-2"
+                    className="mt-4 inline-block font-medium text-[#5f2d85] underline underline-offset-2"
                   >
                     Download Coping With Suicidal Thoughts PDF
                   </a>

@@ -160,7 +160,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                       href="https://www.talkspace.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:!text-[#5f2d85] transition-colors"
+                      className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                     >
                       Talkspace
                     </a>
@@ -186,7 +186,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                       href="https://www.7cups.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:!text-[#5f2d85] transition-colors"
+                      className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                     >
                       7 Cups
                     </a>
@@ -211,7 +211,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                       href="https://wellin5.ca"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:!text-[#5f2d85] transition-colors"
+                      className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                     >
                       Wellin5
                     </a>
@@ -237,7 +237,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                       href="https://www.betterhelp.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:!text-[#5f2d85] transition-colors"
+                      className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                     >
                       BetterHelp
                     </a>
@@ -262,7 +262,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                       href="https://www.accesscbt.co.uk"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:!text-[#5f2d85] transition-colors"
+                      className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                     >
                       Access CBT
                     </a>
@@ -287,7 +287,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                       href="https://thecounsellinggroup.com/e-counselling/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:!text-[#5f2d85] transition-colors"
+                      className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                     >
                       Counselling Group
                     </a>
@@ -313,7 +313,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                       href="https://blahtherapy.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:!text-[#5f2d85] transition-colors"
+                      className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                     >
                       BlahTherapy
                     </a>
@@ -343,7 +343,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                       href="https://www.breakingfreeonline.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline hover:!text-[#5f2d85] transition-colors"
+                      className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                     >
                       Breaking Free Online
                     </a>
@@ -374,7 +374,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                     href="https://dbtpath.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:!text-[#5f2d85] transition-colors"
+                    className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                   >
                     DBT Path
                   </a>
@@ -394,7 +394,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                     href="https://focusmentalwellness.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:!text-[#5f2d85] transition-colors"
+                    className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                   >
                     Focus Mental Wellness
                   </a>
@@ -414,7 +414,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                     href="https://www.helppro.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:!text-[#5f2d85] transition-colors"
+                    className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                   >
                     HelpPRO Suicide Prevention Therapist Finder. (U.S)
                   </a>
@@ -435,7 +435,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                     href="https://www.learntolive.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:!text-[#5f2d85] transition-colors"
+                    className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                   >
                     Learn to Live
                   </a>
@@ -451,7 +451,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                     href="https://www.counsellors-online.co.uk"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:!text-[#5f2d85] transition-colors"
+                    className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                   >
                     Online Counselling, Online Therapy and Life Coaching with
                     Paul Parkin (U.K.)
@@ -471,7 +471,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                     href="https://psychcentral.com/health/find-help"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:!text-[#5f2d85] transition-colors"
+                    className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                   >
                     PsychCentral
                   </a>
@@ -490,7 +490,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                     href="https://www.supportgroups.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:!text-[#5f2d85] transition-colors"
+                    className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                   >
                     SupportGroups
                   </a>
@@ -510,7 +510,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                     href="https://slaterandassociates.ca"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:!text-[#5f2d85] transition-colors"
+                    className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                   >
                     Slater and Associates
                   </a>
@@ -529,7 +529,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                     href="https://www.metanoia.org/imhs/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:!text-[#5f2d85] transition-colors"
+                    className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                   >
                     Talk to a Therapist Online
                   </a>
@@ -548,7 +548,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                     href="https://therapieland.nl"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:!text-[#5f2d85] transition-colors"
+                    className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                   >
                     Therapieland (Dutch)
                   </a>
@@ -568,7 +568,7 @@ const MentalHealthResourcesECounselling: React.FC = () => {
                     href="https://www.therapywithpromise.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:!text-[#5f2d85] transition-colors"
+                    className="!text-[#5f2d85] underline hover:!text-[#5f2d85] transition-colors"
                   >
                     Therapy With Promise
                   </a>

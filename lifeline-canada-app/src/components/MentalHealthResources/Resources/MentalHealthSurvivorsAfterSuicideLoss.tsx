@@ -270,7 +270,7 @@ const MentalHealthSurvivorsAfterSuicideLoss: React.FC = () => {
                   />
                 </div>
                 <div className="flex-1">
-                  <span className="!text-xl font-normal text-indigo-500">
+                  <span className="!text-xl font-normal text-[#5f2d85]">
                     For Funeral Directors: Supporting Survivors of Suicide Loss
                   </span>
                   <p className="mt-3 leading-relaxed">

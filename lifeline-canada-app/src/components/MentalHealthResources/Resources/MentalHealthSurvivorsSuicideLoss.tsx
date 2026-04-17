@@ -591,7 +591,7 @@ const MentalHealthSurvivorsSuicideLoss: React.FC = () => {
                 />
               </div>
               <div className="flex-1">
-                <span className="!text-xl font-normal text-indigo-500">
+                <span className="!text-xl font-normal text-[#5f2d85]">
                   How to Talk to your Child about a Suicide Attempt in Your
                   Family
                 </span>
